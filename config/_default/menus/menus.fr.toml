@@ -2,41 +2,41 @@
 #   name = "Prologue"
 #   weight = 10
 #   identifier = "prologue"
-#   url = "/en/docs/prologue/"
+#   url = "/docs/prologue/"
 
 # [[docs]]
 #   name = "Help"
 #   weight = 60
 #   identifier = "help"
-#   url = "/en/docs/help/"
+#   url = "/docs/help/"
 
 # [[docs]]
 #   name = "Lorem"
 #   weight = 70
 #   identifier = "lorem"
-#   url = "/en/docs/lorem/"
+#   url = "/docs/lorem/"
 
 [[guide]]
   name = "Lorem"
   weight = 10
   identifier = "lorem"
-  url = "/en/guide/lorem/"
+  url = "/guide/lorem/"
 
 [[tutorial]]
   name = "Lorem"
   weight = 10
   identifier = "lorem"
-  url = "/en/tutorial/lorem/"
+  url = "/tutorial/lorem/"
 
 [[main]]
   name = "Docs"
-  url = "/en/docs/guides/example-guide/"
-# url = "/en/docs/1.0/prologue/introduction/"
+  url = "/docs/guides/example-guide/"
+# url = "/docs/1.0/prologue/introduction/"
   weight = 10
 
 [[main]]
   name = "Blog"
-  url = "/en/blog/"
+  url = "/blog/"
   weight = 30
 
 # [[social]]
@@ -60,10 +60,10 @@
 
 [[footer]]
   name = "Privacy Policy"
-  url = "/en/privacy/"
+  url = "/privacy/"
   weight = 10
 
 # [[footer]]
 #   name = "Terms of Service"
-#   url = "/en/terms/"
+#   url = "/terms/"
 #   weight = 20
