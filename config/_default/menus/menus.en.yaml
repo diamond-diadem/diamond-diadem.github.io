@@ -1,0 +1,22 @@
+main:
+  - name: About
+    url: /about/
+    weight: 10
+  - name: Codes
+    url: /codes/
+    weight: 20
+  - name: Workflows
+    url: /workflows/
+    weight: 30
+  - name: Data
+    url: /data/
+    weight: 40
+  - name: Documentation
+    url: /docs/
+    weight: 50
+  - name: News
+    url: /news/
+    weight: 60
+  - name: Contact
+    url: /contact/
+    weight: 70
