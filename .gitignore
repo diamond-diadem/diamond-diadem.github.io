@@ -1,0 +1,7 @@
+resources/
+node_modules/
+public/
+themes/
+getdoks.org/
+.hugo_build.lock
+package-lock.json
