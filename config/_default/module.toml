@@ -31,10 +31,10 @@
   target = "assets"
 
 ## content
-[[mounts]]
-  source = "content"
-  target = "content"
-
+# [[mounts]]
+#  source = "content"
+#  target = "content"
+ 
 ## data
 [[mounts]]
   source = "node_modules/@hyas/doks-core/data"
