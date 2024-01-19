@@ -1,10 +1,10 @@
 # Hugo
-title = "My Docs"
-description = "Congrats on setting up a new Doks project!"
+title = "DIAMOND"
+description = "Plateforme numérique du PEPR DIAMOND"
 images = ["cover.png"]
 
 # mainSections
-mainSections = ["docs"]
+mainSections = ["about","codes","documentation"]
 
 [social]
   twitter = "getdoks"
@@ -44,7 +44,7 @@ mainSections = ["docs"]
   bootstrapJavascript = false # false (default) or true
 
   # Nav
-  sectionNav = ["docs"] # ["docs"] (default) or list of sections (e.g. ["docs", "guides"])
+  sectionNav = ["codes","documentation"] # ["docs"] (default) or list of sections (e.g. ["docs", "guides"])
   toTopButton = false # false (default) or true
   breadcrumbTrail = false # false (default) or true
   headlineHash = true # true (default) or false
@@ -60,7 +60,7 @@ mainSections = ["docs"]
 
   # UX
   headerBar = false # true (default) or false
-  backgroundDots = true # true (default) or false
+  backgroundDots = false # true (default) or false
 
   # Homepage
   sectionFooter = false # false (default) or true

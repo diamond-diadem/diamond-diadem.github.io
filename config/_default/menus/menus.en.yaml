@@ -12,7 +12,7 @@ main:
     url: en/data/
     weight: 40
   - name: Documentation
-    url: en/docs/
+    url: en/documentation/
     weight: 50
   - name: News
     url: en/news/
