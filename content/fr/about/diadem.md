@@ -1,7 +1,10 @@
 ---
-title: À propos de DIAMOND
-lead: À propos de DIAMOND
+title: À propos de DIADEM
 layout: docs
+menu:
+    docs:
+        parent: "about"
+weight: 100
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed volutpat nisl, vitae maximus erat. Sed vel magna vulputate, ullamcorper sapien et, dapibus dolor. Duis sit amet fringilla augue. Duis at magna eros. In feugiat justo vitae felis consequat, nec rutrum lorem sodales. Nulla dignissim consequat facilisis. Quisque at velit a nulla rhoncus sodales eget ut quam. Praesent egestas orci vel dolor hendrerit, a molestie libero aliquet.

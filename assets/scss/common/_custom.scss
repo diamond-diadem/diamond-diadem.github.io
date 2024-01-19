@@ -1,5 +1,70 @@
 // Put your custom SCSS code here
 
-h1 {
-    text-align: center;
+.default-page-title{
+    text-align: right;
+}
+
+
+
+.dropdown-languages {
+    width: 80px;
+}
+
+
+.dropdown-languages .btn .dropdown-caret {
+    // color: $body-color-dark;
+    font-weight: 500;
+    min-height: 0;
+}
+
+.dropdown-languages .btn .dropdown-caret:hover {
+    // color: $body-color-dark;
+    font-weight: 500;
+    color: $link-color;
+}
+
+@include color-mode(dark) {
+    .dropdown-languages .btn .dropdown-caret:hover {
+        // color: $body-color-dark;
+        color: $link-color-dark
+    }
+}
+
+.dropdown-languages .dropdown-menu {
+    // min-width: 0;
+    min-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border: 0;
+    // background-color: $body-bg-dark;
+    border-radius: 0;
+    background-color: transparent;
+    margin-top: 0;
+}
+
+.dropdown-languages .dropdown-menu .dropdown-item {
+    // color: $body-color-dark;
+    font-weight: 500;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    position: relative;
+    top: -5px;
+}
+
+.dropdown-languages .dropdown-menu .dropdown-item:hover {
+    background-color: transparent;
+}
+
+.dropdown-menu-dark {
+    background-color: $body-bg-dark;
+}
+
+.nav-logo {
+    height: 30px;
+}
+
+.current-language-display {
+    display: inline-block;
+    width: 20px;
 }

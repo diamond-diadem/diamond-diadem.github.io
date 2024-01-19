@@ -20,3 +20,34 @@ main:
   - name: Contact
     url: fr/contact/
     weight: 70
+
+docs:
+  - name: À propos
+    url: fr/about/
+    weight: 10
+  - name: Codes
+    url: fr/codes/
+    weight: 20
+  - name: Workflows
+    url: fr/workflows/
+    weight: 30
+  - name: Données
+    url: fr/data/
+    weight: 40
+  - name: Documentation
+    url: fr/documentation/
+    weight: 50
+
+# docs:
+#   - name: DIADEM
+#     weight: 10
+#     identifier: diadem-fr
+#     url: fr/about/diadem/
+#   - name: Conteneurs
+#     weight: 20
+#     identifier: containers-fr
+#     url: fr/about/containers/
+#   - name: DIADEM
+#     weight: 30
+#     identifier: apptainer-fr
+#     url: fr/about/apptainer/

@@ -31,8 +31,13 @@
   target = "assets"
 
 ## content
+
 # [[mounts]]
-#  source = "content"
+#  source = "content/en"
+#  target = "content"
+
+# [[mounts]]
+#  source = "content/fr"
 #  target = "content"
  
 ## data

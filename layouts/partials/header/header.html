@@ -18,7 +18,7 @@
   {{ end -}}
 
     <!-- Site title -->
-    <a class="navbar-brand me-auto me-lg-3" href="{{ relLangURL "" }}"> <img src="/images/diamond.png" height="40px"/> {{ .Site.Title }}</a>
+    <a class="navbar-brand me-auto me-lg-3" href="{{ relLangURL "" }}"> <img class="nav-logo" src="/images/diamond.svg"/> {{ .Site.Title }}</a>
 
     <!-- FlexSearch mobile -->
     {{ partial "main/showFlexSearch" . }}
@@ -152,7 +152,7 @@
         <!-- Language dropdown -->
         {{ if eq site.Params.doks.multilingualMode true -}}
 
-        <div class="dropdown mt-1 order-lg-2">
+        <div class="dropdown dropdown-languages mt-1 order-lg-2">
           <button class="btn btn-dropdown dropdown-toggle" id="doks-languages" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
             <span class="dropdown-caret">
               <!-- <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -163,14 +163,14 @@
                 <path d="M12 20l4 -9l4 9"></path>
                 <path d="M19.1 18h-6.2"></path>
               </svg> -->
-              <span id="doks-language-current">{{ .Site.Language.LanguageName }}</span>
+              <span class="current-language-display" id="doks-language-current">{{ .Site.Language.LanguageName }}</span>
               <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                 <path d="M6 9l6 6l6 -6"></path>
               </svg>
             </span>
           </button>
-          <ul class="dropdown-menu dropdown-menu-lg-end me-lg-2 shadow rounded border-0" aria-labelledby="doks-languages">
+          <ul class="dropdown-menu dropdown-menu-lg me-lg-2" aria-labelledby="doks-languages">
 
             <!-- <li><span class="dropdown-item current" aria-current="true">{{ .Site.Language.LanguageName }}</span></li>
 

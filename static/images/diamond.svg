@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   width="100"
-   height="100"
-   viewBox="0 0 75 75"
+   width="86.03006"
+   height="57.791862"
+   viewBox="0 0 64.522545 43.343897"
    version="1.1"
    id="svg4281"
    sodipodi:docname="diamond.svg"
@@ -25,12 +25,12 @@
      showgrid="false"
      showguides="true"
      inkscape:zoom="2.6222222"
-     inkscape:cx="149.11017"
-     inkscape:cy="30.889831"
-     inkscape:window-width="1466"
-     inkscape:window-height="891"
-     inkscape:window-x="70"
-     inkscape:window-y="32"
+     inkscape:cx="142.62712"
+     inkscape:cy="9.9152543"
+     inkscape:window-width="1610"
+     inkscape:window-height="981"
+     inkscape:window-x="1150"
+     inkscape:window-y="902"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg4281" />
   <defs
@@ -8888,7 +8888,7 @@
      fill="#2f5597"
      fill-opacity="1"
      id="g4105"
-     transform="translate(-315.87692,-249.71995)">
+     transform="translate(-321.11565,-265.548)">
     <use
        xlink:href="#glyph-1-5"
        x="349.3093"
@@ -8899,7 +8899,7 @@
      fill="#2f5597"
      fill-opacity="1"
      id="g4113"
-     transform="translate(-315.87692,-249.71995)">
+     transform="translate(-321.11565,-265.548)">
     <use
        xlink:href="#glyph-1-5"
        x="361.20743"
@@ -8910,7 +8910,7 @@
      fill="#2f5597"
      fill-opacity="1"
      id="g4185"
-     transform="translate(-315.87692,-249.71995)">
+     transform="translate(-321.11565,-265.548)">
     <use
        xlink:href="#glyph-2-6"
        x="469.01761"
@@ -8921,10 +8921,10 @@
      fill="#2f5597"
      fill-opacity="1"
      id="g4057"
-     transform="translate(-315.87692,-197.21995)" />
+     transform="translate(-321.11565,-213.048)" />
   <g
      id="g6672"
-     transform="matrix(0.43471433,0,0,0.43471433,-18.564887,-16.566841)">
+     transform="matrix(0.43471433,0,0,0.43471433,-23.803616,-32.394892)">
     <g
        id="g73"
        transform="matrix(0.99999998,0,0,-0.99999998,-260.91989,417.55999)">
