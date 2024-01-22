@@ -29,7 +29,7 @@ main:
     url: fr/data/
     weight: 40
   - name: Documentation
-    url: fr/documentation/
+    url: fr/docs/
     weight: 50
   - name: Actualités
     url: fr/news/
@@ -37,6 +37,26 @@ main:
   - name: Contact
     url: fr/contact/
     weight: 70
+
+
+codes:
+    - name: Codes
+      weight: 10
+      identifier: codes-fr
+      parent: ""
+      url: fr/codes/
+    - name : Scientific computing
+      weight : 10
+      identifier: scientific-computing-fr
+      parent: codes-fr
+      url: fr/codes/scientific-computing/
+    - name : Visualisation
+      weight : 20
+      identifier: visualisation-fr
+      parent: codes-fr
+      url: fr/codes/visualisation/
+
+
 
 # docs:
 #   - name: À propos
