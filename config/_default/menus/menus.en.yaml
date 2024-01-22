@@ -2,6 +2,23 @@ main:
   - name: About
     url: en/about/
     weight: 10
+    identifier: about-en
+  - name: DIAMOND
+    url: en/about/diamond/
+    weight: 11
+    parent: about-en
+  - name: DIADEM
+    url: en/about/diadem/
+    weight: 12
+    parent: about-en
+  - name: Containers
+    url: en/about/containers/
+    weight: 13
+    parent: about-en
+  - name: Apptainer
+    url: en/about/apptainer/
+    weight: 14
+    parent: about-en
   - name: Codes
     url: en/codes/
     weight: 20
