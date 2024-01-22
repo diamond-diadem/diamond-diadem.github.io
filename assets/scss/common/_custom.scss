@@ -1,8 +1,8 @@
 // Put your custom SCSS code here
 
-.default-page-title{
-    text-align: right;
-}
+// .default-page-title{
+//     text-align: right;
+// }
 
 
 
@@ -28,19 +28,25 @@
         // color: $body-color-dark;
         color: $link-color-dark
     }
+
+    .navbar {
+        border-bottom: 1px solid $white;
+      }
 }
 
 .dropdown-languages .dropdown-menu {
-    // min-width: 0;
-    min-height: 0;
-    padding-top: 0;
-    padding-bottom: 0;
+    min-width: 80px;
+    // min-height: 0;
+    // padding-top: 0;
+    // padding-bottom: 0;
     border: 0;
     // background-color: $body-bg-dark;
-    border-radius: 0;
-    background-color: transparent;
-    margin-top: 0;
+    background-color: $body-bg;
+    margin-top: -5;
+//     position: relative;
+//     top: -5px;
 }
+
 
 .dropdown-languages .dropdown-menu .dropdown-item {
     // color: $body-color-dark;
@@ -48,23 +54,48 @@
     padding-top: 0;
     padding-bottom: 0;
     margin-top: 0;
-    position: relative;
-    top: -5px;
-}
+}    
 
 .dropdown-languages .dropdown-menu .dropdown-item:hover {
     background-color: transparent;
 }
 
-.dropdown-menu-dark {
-    background-color: $body-bg-dark;
-}
+// .dropdown-menu-dark {
+//     background-color: $body-bg-dark;
+// }
 
 .nav-logo {
-    height: 30px;
+    height: 25px;
 }
 
 .current-language-display {
     display: inline-block;
     width: 20px;
+}
+
+// .dropdown-toggle-split {
+// } 
+// 
+
+.nav-item.dropdown {
+    margin-right: -11px;    
+}
+
+.nav-link {
+    font-weight: 500;
+}
+
+.about-lead {
+    font-weight: 500;
+}
+
+
+.navbar {
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid $black;
+
+  /*
+  margin-top: 4px;
+  */
 }
