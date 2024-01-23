@@ -1,6 +1,6 @@
 ---
 title: Calcul scientifique
 type: docs
-toc: true
+weight: 2
 ---
 

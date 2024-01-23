@@ -101,3 +101,58 @@
   margin-top: 4px;
   */
 }
+
+@include media-breakpoint-up(lg) {
+    .docs-sidebar {
+      order: 0;
+      border-right: 1px dashed $black;
+    }
+    .footer {
+        border-top: 1px solid $black;
+    }
+    @include color-mode(dark) {
+        .docs-sidebar {
+            border-right: 1px dashed $white;
+        }
+        .footer {
+            border-top: 1px solid $white;
+        }
+    }
+}
+
+h2:hover .anchor,
+h3:hover .anchor,
+h4:hover .anchor,
+h5:hover .anchor,
+h6:hover .anchor {
+    visibility: hidden;
+}
+
+u {
+    text-underline-offset: 6px;
+}
+
+.icon-lammps {
+    background-image: url('/images/lammps-icon.svg');
+    background-size: 20px 20px;
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    margin-right: 5px;
+    margin-left: 0px;
+    position: relative;
+    top: 3px; left: 0px;
+  }
+  
+.icon-ovito {
+    background-image: url('/images/ovito-icon.png');
+    background-size: 20px 20px;
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    margin-right: 3px;
+    margin-left: 0px;
+    position: relative;
+    top: 4px; left: 0px;
+  }
+  

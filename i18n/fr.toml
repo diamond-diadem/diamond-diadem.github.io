@@ -27,7 +27,7 @@ one = "minute"
 other = "minutes"
 
 [on_this_page]
-other = "On this page"
+other = "Sur cette page"
 
 [reading_time]
 other = "Estimated reading time"
@@ -36,16 +36,25 @@ other = "Estimated reading time"
 other = "Loading search index…"
 
 [search_no_recent]
-other = "No recent searches"
+other = "Pas de recherches récentes"
 
 [search_no_results]
-other = "No results"
+other = "Pas de résultats pour"
 
 [search_placeholder]
-other = "Search"
+other = "Recherchez sur ce site"
 
 [search_title]
 other = "Search"
+
+[search_select]
+other = "sélectionner"
+
+[search_navigate]
+other = "parcourir"
+
+[search_close]
+other = "fermer"
 
 [video_unsupported]
 other = "Your browser doesn't support embedded videos, but don't worry, you can <a href=\"{{ .RelPermalink }}\">download it</a> and watch it with your favorite video player!"

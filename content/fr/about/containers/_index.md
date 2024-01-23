@@ -1,14 +1,23 @@
 ---
 title: À propos des conteneurs
-layout: docs
-menu:
-    docs:
-        parent: "about"
-weight: 200
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed volutpat nisl, vitae maximus erat. Sed vel magna vulputate, ullamcorper sapien et, dapibus dolor. Duis sit amet fringilla augue. Duis at magna eros. In feugiat justo vitae felis consequat, nec rutrum lorem sodales. Nulla dignissim consequat facilisis. Quisque at velit a nulla rhoncus sodales eget ut quam. Praesent egestas orci vel dolor hendrerit, a molestie libero aliquet.
+<h3 class="about-lead text-center">Environnements légers et isolés permettant d'exécuter des applications et leurs dépendances. Ils sont devenus incontournables dans le domaine de l'informatique en raison de leur flexibilité et de leur efficacité.</h3> 
 
-Nunc nec faucibus leo, non finibus justo. Sed ac nibh consectetur, egestas eros ut, ullamcorper mauris. Nullam ultricies mi ac nisl imperdiet ornare. Aenean cursus porta lorem at blandit. Duis eget pretium ante. Mauris aliquet aliquam congue. Nam vel quam consectetur, efficitur risus sit amet, euismod turpis. Nullam ornare justo vitae ullamcorper egestas.
+<br/>
 
-Praesent a auctor magna. Ut ornare velit in felis bibendum, vel mollis dolor imperdiet. Maecenas tincidunt egestas metus, eu viverra sem eleifend vel. Morbi ac odio pretium, efficitur leo nec, tempor velit. Nam volutpat id velit sit amet pellentesque. Etiam sapien risus, tempor ac volutpat et, rutrum eget dolor. Donec in tortor nec arcu maximus facilisis sit amet ac ligula. Praesent ut aliquet nibh. Praesent sit amet leo a nibh bibendum varius. Vestibulum vitae massa sed justo ornare sollicitudin a eu libero. Maecenas placerat tincidunt nibh ut volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non ligula elit.
+Voici une description détaillée de ce qu'ils sont et de leur intérêt :
+
+**Définition des Conteneurs :**
+- Les conteneurs sont des unités d'exécution autonomes qui encapsulent une application, ses bibliothèques et ses dépendances.
+- Ils fournissent un environnement isolé, garantissant que les applications fonctionnent de manière cohérente quel que soit l'hôte sur lequel elles sont déployées.
+  
+
+**Intérêt des Conteneurs :**
+- **Portabilité :** Les conteneurs encapsulent tout ce dont une application a besoin pour fonctionner, ce qui les rend indépendants du système d'exploitation et portables entre les environnements de développement, de test et de production.
+- **Isolation :** Chaque conteneur est isolé des autres et de l'hôte, évitant les conflits entre les dépendances et assurant la sécurité de l'application.
+- **Rapidité de Déploiement :** Les conteneurs peuvent être créés, déployés et démantelés rapidement, facilitant ainsi le déploiement continu et les mises à jour fréquentes.
+- **Évolutivité :** Les conteneurs peuvent être mis à l'échelle horizontalement, ce qui signifie qu'il est facile d'ajuster la capacité en ajoutant ou en retirant des instances de conteneurs en fonction de la charge de travail.
+- **Gestion des Ressources :** Les conteneurs partagent le même noyau du système d'exploitation, ce qui les rend plus légers par rapport aux machines virtuelles, et ils nécessitent moins de ressources système.
+
+En résumé, les conteneurs offrent une solution puissante pour le déploiement d'applications, améliorant la flexibilité, la portabilité et l'efficacité des processus de développement et de déploiement.

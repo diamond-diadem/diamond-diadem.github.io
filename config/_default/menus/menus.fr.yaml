@@ -20,7 +20,7 @@ main:
     weight: 14
     parent: about-fr
   - name: Codes
-    url: fr/codes/
+    url: fr/codes/start-here/home/
     weight: 20
   - name: Workflows
     url: fr/workflows/
@@ -29,7 +29,7 @@ main:
     url: fr/data/
     weight: 40
   - name: Documentation
-    url: fr/docs/
+    url: fr/docs/start-here/parcourez-la-documentation/
     weight: 50
   - name: Actualités
     url: fr/news/
@@ -39,22 +39,22 @@ main:
     weight: 70
 
 
-codes:
-    - name: Codes
-      weight: 10
-      identifier: codes-fr
-      parent: ""
-      url: fr/codes/
-    - name : Scientific computing
-      weight : 10
-      identifier: scientific-computing-fr
-      parent: codes-fr
-      url: fr/codes/scientific-computing/
-    - name : Visualisation
-      weight : 20
-      identifier: visualisation-fr
-      parent: codes-fr
-      url: fr/codes/visualisation/
+# codes:
+#     - name: Codes
+#       weight: 10
+#       identifier: codes-fr
+#       parent: ""
+#       url: fr/codes/
+#     - name : Scientific computing
+#       weight : 10
+#       identifier: scientific-computing-fr
+#       parent: codes-fr
+#       url: fr/codes/scientific-computing/
+#     - name : Visualisation
+#       weight : 20
+#       identifier: visualisation-fr
+#       parent: codes-fr
+#       url: fr/codes/visualisation/
 
 
 

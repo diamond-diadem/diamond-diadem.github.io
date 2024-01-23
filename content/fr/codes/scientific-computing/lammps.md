@@ -1,6 +1,4 @@
 ---
 title: LAMMPS
-lead: lipsum orem
+type: docs
 ---
-
-bullshit

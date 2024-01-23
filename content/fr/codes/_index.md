@@ -1,5 +1,4 @@
 ---
 title: Codes
-type: docs
 ---
 

@@ -1,6 +1,5 @@
 ---
-title: Comment utiliser l'image Apptainer de LAMMPS ?
-menuTitle: Tutoriel LAMMPS
+title: Tutoriel LAMMPS
 type: docs
 ---
 

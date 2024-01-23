@@ -2,8 +2,50 @@
 title: À propos d'Apptainer
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed volutpat nisl, vitae maximus erat. Sed vel magna vulputate, ullamcorper sapien et, dapibus dolor. Duis sit amet fringilla augue. Duis at magna eros. In feugiat justo vitae felis consequat, nec rutrum lorem sodales. Nulla dignissim consequat facilisis. Quisque at velit a nulla rhoncus sodales eget ut quam. Praesent egestas orci vel dolor hendrerit, a molestie libero aliquet.
+<h3 class="about-lead text-center">Apptainer (anciennement Singularity) simplifie la création et l'exécution de conteneurs, garantissant que les composants logiciels sont encapsulés pour assurer leur portabilité et leur reproductibilité.</h2>
 
-Nunc nec faucibus leo, non finibus justo. Sed ac nibh consectetur, egestas eros ut, ullamcorper mauris. Nullam ultricies mi ac nisl imperdiet ornare. Aenean cursus porta lorem at blandit. Duis eget pretium ante. Mauris aliquet aliquam congue. Nam vel quam consectetur, efficitur risus sit amet, euismod turpis. Nullam ornare justo vitae ullamcorper egestas.
+<br/>
 
-Praesent a auctor magna. Ut ornare velit in felis bibendum, vel mollis dolor imperdiet. Maecenas tincidunt egestas metus, eu viverra sem eleifend vel. Morbi ac odio pretium, efficitur leo nec, tempor velit. Nam volutpat id velit sit amet pellentesque. Etiam sapien risus, tempor ac volutpat et, rutrum eget dolor. Donec in tortor nec arcu maximus facilisis sit amet ac ligula. Praesent ut aliquet nibh. Praesent sit amet leo a nibh bibendum varius. Vestibulum vitae massa sed justo ornare sollicitudin a eu libero. Maecenas placerat tincidunt nibh ut volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non ligula elit.
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create two unequal columns that floats next to each other */
+.column {
+  float: left;
+}
+
+.left {
+  width: 25%;
+}
+
+.right {
+  width: 75%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+<div class="row">
+<div class="column left">
+<img src="/images/apptainer-logo.svg" width=100%/>
+</div>
+<div class="column right">
+<div align="justify">
+
+Apptainer est un programme informatique gratuit et open source qui effectue une virtualisation au niveau du système d'exploitation, également appelée conteneurisation. Il est similaire au logiciel Docker.
+
+Apptainer apporte une solution de conteneurisation permettant de la reproductibilité au calcul scientifique et au monde du calcul haute performance (HPC).
+
+Le besoin de reproductibilité nécessite la capacité de déplacer des applications d'un système à l'autre et pour cela l'utilisation des conteneurs est intéressante.
+
+Grâce aux conteneurs Apptainer, les développeurs peuvent travailler dans des environnements reproductibles de leur choix et ces environnements complets peuvent facilement être copiés et exécutés sur d'autres plateformes. L'utilisateur peut par exemple créer un conteneur sur son ordinateur personnel et l'exécuter sur une grille de calcul haute performance.
+
+</div>
+</div>
+</div>
