@@ -1,6 +1,10 @@
 {{ define "main" }}
-<h1 class="text-center">{{ .Title }}</h1>
-{{ .Content }}
+	<div class="row">
+		<div class="col-default-page">
+			<h1 class="text-center">{{ .Title }}</h1>
+			{{ .Content }}
+		</div>
+	</div>
 <!-- <div class="card-list">
 	{{ $currentSection := .CurrentSection }}
 	{{ range where .Site.RegularPages.ByTitle "Section" .Section }}
