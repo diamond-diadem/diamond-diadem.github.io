@@ -154,5 +154,19 @@ u {
     margin-left: 0px;
     position: relative;
     top: 4px; left: 0px;
-  }
-  
+}
+
+.content .svg-inline {
+    margin-bottom: 0.5rem;
+}
+
+.logo-ovito {
+    content: url('/images/ovito-logo-light.png');
+}
+
+
+@include color-mode(dark) {
+    .logo-ovito {
+        content: url('/images/ovito-logo-dark.png');
+    }   
+}

@@ -24,7 +24,7 @@ defaultMarkdownHandler = "goldmark"
   lineNumbersInTable = false
   noClasses = false
   noHl = false
-  style = 'monokai'
+  style = 'nord'
   tabWidth = 2
 
 [tableOfContents]

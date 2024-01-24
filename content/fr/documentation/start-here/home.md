@@ -1,5 +1,7 @@
 ---
 title: Parcourez la documentation
+type: docs
+toc: false
 ---
 
 ## Tutoriels : 

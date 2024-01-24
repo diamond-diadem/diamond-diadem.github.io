@@ -29,7 +29,7 @@ main:
     url: fr/data/
     weight: 40
   - name: Documentation
-    url: fr/docs/start-here/parcourez-la-documentation/
+    url: fr/documentation/start-here/home/
     weight: 50
   - name: Actualités
     url: fr/news/
