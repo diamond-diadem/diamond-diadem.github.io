@@ -1,5 +1,6 @@
 ---
-title: Codes
+title: CODES CONTENEURISÉS
+linkTitle: Accueil
 toc: false
 weight: 1
 ---
@@ -12,9 +13,14 @@ Dans cette section, vous pourrez télécharger les images Apptainer des codes di
 
 {{< callout context="tip" title="" icon="question-mark" >}}
 
-Mais pour commencer, si vous n'êtes pas encore passé par cette étape et si vous n'êtes pas familiers avec l'utilisation d'Apptainer, suivez [ces liens](/fr/codes/start-here/useful-links/) pour apprendre comment installer Apptainer et interagir avec des images.
+Mais pour commencer, si vous n'êtes pas encore passé par cette étape et si vous n'êtes pas familiers avec l'utilisation d'Apptainer, suivez les liens ci-dessous pour apprendre comment installer Apptainer et interagir avec des images.
 
 {{< /callout >}}
+
+### <u>LIENS UTILES :</u>
+
+- ##### <a href="/docs/install-apptainer/comment-installer-apptainer/">Installez Apptainer</a>
+- ##### <a href="/docs/use-apptainer-image/comment-interagir-avec-une-image-apptainer/">Apprenez comment utiliser un conteneur</a>
 
 
 ### <u>CODES DISPONIBLES :</u> 

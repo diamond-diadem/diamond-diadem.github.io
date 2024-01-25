@@ -1,9 +1,9 @@
 ---
-title: Ovito
+linkTitle: Ovito
 toc: false
 ---
 
-<a href="https://www.ovito.org/" target="_blank"><img class="logo-ovito" width="600px"/></a>
+<a href="https://www.ovito.org/" target="_blank"><img class="logo-ovito" width="500px"/></a>
 
 <div align="justify">
 
