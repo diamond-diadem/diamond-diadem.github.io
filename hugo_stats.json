@@ -44,7 +44,6 @@
       "pre",
       "script",
       "section",
-      "source",
       "span",
       "strong",
       "style",
@@ -59,8 +58,7 @@
       "title",
       "tr",
       "u",
-      "ul",
-      "video"
+      "ul"
     ],
     "classes": [
       "DocSearch-Label",
@@ -312,10 +310,8 @@
       "installation-redhat-fedora-centos",
       "installation-sans-droits-superutilisateur",
       "isolation-partielle-ou-isolation-totale",
-      "lien-de-téléchargement-direct--hahahugoshortcode29s0hbhb-lammps",
-      "lien-de-téléchargement-direct--hahahugoshortcode31s0hbhb-ovito",
-      "lien-de-téléchargement-direct--hahahugoshortcode588s0hbhb-lammps",
-      "lien-de-téléchargement-direct--hahahugoshortcode595s0hbhb-ovito",
+      "lien-de-téléchargement-direct--hahahugoshortcode417s0hbhb-lammps",
+      "lien-de-téléchargement-direct--hahahugoshortcode419s0hbhb-ovito",
       "offcanvasNavMain",
       "offcanvasNavMainLabel",
       "offcanvasNavSection",
