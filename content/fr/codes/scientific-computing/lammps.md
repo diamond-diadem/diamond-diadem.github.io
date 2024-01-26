@@ -26,7 +26,7 @@ Le <a href="https://www.lammps.org/" target="_blank">site web de LAMMPS</a> offr
 
 ### Récupérez ce conteneur avec Apptainer :
 
-```bash {frame="none"}
+```sh
 # LOGIN
 apptainer remote login -u <your-login> oras://gricad-registry.univ-grenoble-alpes.fr
 

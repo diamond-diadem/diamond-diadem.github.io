@@ -17,7 +17,7 @@ Ovito est développé, distribué, et pris en charge par OVITO GmbH, une start-u
 
 ### Récupérez ce conteneur avec Apptainer :
 
-```bash {frame="none"}
+```sh
 # LOGIN
 apptainer remote login -u <your-login> oras://gricad-registry.univ-grenoble-alpes.fr
 

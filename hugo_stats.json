@@ -27,6 +27,7 @@
       "header",
       "html",
       "i",
+      "iframe",
       "img",
       "input",
       "kbd",
@@ -43,6 +44,7 @@
       "pre",
       "script",
       "section",
+      "source",
       "span",
       "strong",
       "style",
@@ -57,7 +59,8 @@
       "title",
       "tr",
       "u",
-      "ul"
+      "ul",
+      "video"
     ],
     "classes": [
       "DocSearch-Label",
@@ -165,6 +168,7 @@
       "icon-tabler-sun",
       "icon-tabler-x",
       "info-circle",
+      "is-terminal",
       "justify-content-between",
       "justify-content-center",
       "lead",
@@ -310,6 +314,8 @@
       "isolation-partielle-ou-isolation-totale",
       "lien-de-téléchargement-direct--hahahugoshortcode29s0hbhb-lammps",
       "lien-de-téléchargement-direct--hahahugoshortcode31s0hbhb-ovito",
+      "lien-de-téléchargement-direct--hahahugoshortcode588s0hbhb-lammps",
+      "lien-de-téléchargement-direct--hahahugoshortcode595s0hbhb-ovito",
       "offcanvasNavMain",
       "offcanvasNavMainLabel",
       "offcanvasNavSection",
