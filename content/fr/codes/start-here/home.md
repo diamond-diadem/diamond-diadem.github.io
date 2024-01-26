@@ -19,8 +19,8 @@ Mais pour commencer, si vous n'êtes pas encore passé par cette étape et si vo
 
 ### <u>LIENS UTILES :</u>
 
-- ##### <a href="/docs/install-apptainer/comment-installer-apptainer/">Installez Apptainer</a>
-- ##### <a href="/docs/use-apptainer-image/comment-interagir-avec-une-image-apptainer/">Apprenez comment utiliser un conteneur</a>
+- ##### <a href="/fr/documentation/install-apptainer/howto/">Installez Apptainer</a>
+- ##### <a href="/fr/documentation/use-apptainer-image/howto/">Apprenez comment utiliser un conteneur</a>
 
 
 ### <u>CODES DISPONIBLES :</u> 

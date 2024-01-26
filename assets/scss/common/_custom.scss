@@ -191,3 +191,22 @@ u {
 //     margin-top: auto;
 // }
 
+// .docs-links h3,
+// .page-links h3 {
+//   text-transform: uppercase;
+//   font-size: $font-size-base;
+//   margin: 1.25rem 0 0.5rem;
+//   padding: 1.5rem 0 0;
+// }
+
+// @include media-breakpoint-up(lg) {
+//   .docs-links h3,
+//   .page-links h3 {
+//     margin: 1.125rem 1.5rem 0.75rem 0;
+//     padding: 1.375rem 0 0;
+//   }
+// }
+
+.docs-sidebar {
+    min-width: 330px;
+}
