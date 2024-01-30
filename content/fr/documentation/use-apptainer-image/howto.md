@@ -1,6 +1,5 @@
 ---
 title: Comment interagir avec une image Apptainer ?
-type: docs
 ---
 
 

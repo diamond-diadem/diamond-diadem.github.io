@@ -1,6 +1,5 @@
 ---
 title: Tutoriel LAMMPS
-type: docs
 ---
 
 {{< callout context="note" title="" icon="info-circle" >}}

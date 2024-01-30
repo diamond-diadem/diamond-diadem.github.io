@@ -1,6 +1,5 @@
 ---
 title: Comment installer Apptainer ?
-type: docs
 ---
 
 

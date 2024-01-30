@@ -4,7 +4,7 @@ description = "Plateforme numérique du PEPR DIAMOND"
 images = ["cover.png"]
 
 # mainSections
-mainSections = ["about","codes","docs"]
+mainSections = ["about","codes","documentation"]
 
 [social]
   twitter = "getdoks"

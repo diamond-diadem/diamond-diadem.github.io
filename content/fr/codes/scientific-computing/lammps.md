@@ -1,6 +1,5 @@
 ---
 linkTitle: LAMMPS
-type: docs
 toc: false
 ---
 
