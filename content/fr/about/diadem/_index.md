@@ -18,11 +18,11 @@ title: À propos de DIADEM
 }
 
 .left {
-  width: 30%;
+  width: 28%;
 }
 
 .right {
-  width: 70%;
+  width: 72%;
 }
 
 /* Clear floats after the columns */
@@ -31,17 +31,26 @@ title: À propos de DIADEM
   display: table;
   clear: both;
 }
+
 </style>
 <div class="row">
 <div class="column left">
 <img src="/images/diadem-logo.png" width=100%/>
 </div>
 <div class="column right">
-<div align="justify">
+<div align="justify" class="text-x-large">
 
-Mauris vitae neque feugiat nibh tempus imperdiet in id nisi. Aenean porttitor magna vel lectus consectetur vulputate. Curabitur accumsan orci ut libero finibus, eu pellentesque urna finibus. Nunc odio tortor, pellentesque fringilla lacus in, aliquam bibendum dolor. Quisque a leo felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse potenti. Pellentesque interdum mi id vestibulum lobortis. Maecenas non orci interdum, vestibulum lectus ac, vestibulum diam. Duis vel ante tellus.
+Le Programme et Équipements Prioritaires de Recherche (PEPR) DIADEM fait partie des lauréats de la 1ère vague de l’appel à projets des PEPR exploratoires. Financé par France 2030, il vise à accélérer la conception et l’arrivée sur le marché de matériaux plus performants et plus durables, notamment grâce à l’intelligence artificielle. Son budget de 85M€ doit lui permettre de mettre en place en France un réseau de quatre plateformes de haut niveau distribuées sur le territoire et coordonnées. Trois appels à projets, auxquels pourra répondre l’ensemble de la large communauté française concernée par les matériaux et l’intelligence artificielle et un appel à manifestations dédié à la formation initiale et continue des scientifiques français viennent compléter le dispositif.
 
-Sed feugiat, mauris ut bibendum fermentum, diam leo pellentesque quam, non sagittis odio nunc vitae magna. Nunc iaculis luctus leo at malesuada. Etiam convallis odio non viverra finibus. Donec ut lorem vel purus sollicitudin laoreet sed at turpis. Curabitur a accumsan sem, vitae aliquet nisi. Suspendisse potenti. Phasellus rhoncus nec nulla non ultrices. Nullam a elit pretium, facilisis tellus in, congue nisi. Nulla feugiat metus nec magna gravida fermentum. Suspendisse fringilla sapien a odio mattis dapibus. Praesent augue urna, pharetra non pharetra ut, pulvinar in lectus.
 </div>
 </div>
+
+
+<br/>
+Afin de piloter ce programme et de garantir la neutralité, la qualité et la transparence des travaux, une gouvernance à plusieurs niveaux a été définie :
+
+- Un Comité Stratégique Institutionnel (CSI), composé des représentants des institutions qui participent au programme, en charge du pilotage stratégique et de la validation des orientations du Programme ;  
+- Un Comité de pilotage Opérationnel (COMOP), composé des directeurs du programme, des responsables des projets ciblés et des managers de projet, en charge d’animer et coordonner le programme, prendre les décisions relatives à son fonctionnement ;
+- Un Conseil Scientifique International, constitué de personnalités scientifiques qui auront un regard extérieur sur le bon fonctionnement du programme.
+
 </div>

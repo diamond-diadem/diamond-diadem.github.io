@@ -17,11 +17,11 @@ title: À propos de DIAMOND
 }
 
 .left {
-  width: 30%;
+  width: 28%;
 }
 
 .right {
-  width: 70%;
+  width: 72%;
 }
 
 /* Clear floats after the columns */
@@ -36,11 +36,18 @@ title: À propos de DIAMOND
 <img src="/images/logo-diamond-cropped.svg" width=100%/>
 </div>
 <div class="column right">
+<div class="text-x-large" align="justify">
+
+L’objectif principal de ce projet ciblé est de mettre en place une infrastructure numérique pour accélérer le développement des matériaux. Elle est basée d’une part sur une plateforme dédiée aux codes de simulation aux différentes échelles et aux workflows pour l’automatisation de séries de calculs, dont les calculs à haut débit et le traitement des résultats par intelligence artificielle (IA) et d’autre part sur une infrastructure de bases de données venant à la fois des expériences et des simulations. 
+
+</div>
+</div>
+</div>
+
+<br/>
+
 <div align="justify">
 
-Mauris vitae neque feugiat nibh tempus imperdiet in id nisi. Aenean porttitor magna vel lectus consectetur vulputate. Curabitur accumsan orci ut libero finibus, eu pellentesque urna finibus. Nunc odio tortor, pellentesque fringilla lacus in, aliquam bibendum dolor. Quisque a leo felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse potenti. Pellentesque interdum mi id vestibulum lobortis. Maecenas non orci interdum, vestibulum lectus ac, vestibulum diam. Duis vel ante tellus.
+Pour chacune de ces infrastructures, des cas d’usage issus des projets ciblés en cours ont été identifiés pour servir d’exemple et s’assurer de l’adéquation avec les besoins des utilisateurs, ils concernent les projets MOFsLEARNING, ESRF et FastNano. Un démonstrateur utilisant ces deux infrastructures sera également développé, il sera consacré au développement par apprentissage machine de potentiels interatomiques pour les simulations à l’échelle atomique. Les cahiers des charges de ces infrastructures et ce démonstrateur seront établis en s’appuyant sur des groupes de travail avec des représentants des principaux laboratoires concernés. La plateforme codes et workflows sera développée et déployée au meso-centre de calcul GRICAD et l’infrastructure de bases de données sera déployée au TGCC.
 
-Sed feugiat, mauris ut bibendum fermentum, diam leo pellentesque quam, non sagittis odio nunc vitae magna. Nunc iaculis luctus leo at malesuada. Etiam convallis odio non viverra finibus. Donec ut lorem vel purus sollicitudin laoreet sed at turpis. Curabitur a accumsan sem, vitae aliquet nisi. Suspendisse potenti. Phasellus rhoncus nec nulla non ultrices. Nullam a elit pretium, facilisis tellus in, congue nisi. Nulla feugiat metus nec magna gravida fermentum. Suspendisse fringilla sapien a odio mattis dapibus. Praesent augue urna, pharetra non pharetra ut, pulvinar in lectus.
-</div>
-</div>
 </div>
