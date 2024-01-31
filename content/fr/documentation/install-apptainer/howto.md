@@ -109,7 +109,7 @@ sudo yum install -y https://github.com/apptainer/apptainer/releases/download/v1.
 Les paquets sont également disponibles via EPEL (Extra Packages for Enterprise Linux).
 Sous RedHat, il est préalablement nécessaire de pouvoir accéder aux dépôts EPEL :
 
-```qh
+```sh
 sudo yum install -y epel-release
 ```
 

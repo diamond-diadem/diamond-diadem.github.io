@@ -20,7 +20,7 @@ main:
     weight: 14
     parent: about-en
   - name: Codes
-    url: en/codes/
+    url: en/codes/start-here/home/
     weight: 20
   - name: Workflows
     url: en/workflows/
@@ -29,7 +29,7 @@ main:
     url: en/data/
     weight: 40
   - name: Documentation
-    url: en/documentation/
+    url: en/documentation/start-here/home/
     weight: 50
   - name: News
     url: en/news/

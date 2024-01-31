@@ -171,6 +171,30 @@ u {
     }   
 }
 
+
+.logo-apptainer {
+    content: url('/images/apptainer-logo.svg');
+}
+
+
+@include color-mode(dark) {
+    .logo-apptainer {
+        content: url('/images/apptainer-logo-dark.svg');
+    }   
+}
+
+.logo-diamond {
+    content: url('/images/logo-diamond-cropped.svg');
+}
+
+
+@include color-mode(dark) {
+    .logo-diamond {
+        content: url('/images/logo-diamond-cropped-dark.svg');
+    }   
+}
+
+
 .col-default-page {
     min-height: 100vh;
     display: flex;
@@ -208,13 +232,13 @@ u {
 // }
 
 .docs-sidebar {
-    min-width: 330px;
+    min-width: 360px;
 }
 
 .section-title-lead-landing-page {
     min-width: 100%;
-    background-image: url(/images/background.jpg);
-    background-size: auto 100%;
+    background-image: url(/images/c-diamond-light.png);
+    background-size: 100% auto;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -222,8 +246,8 @@ u {
 .container-h1-default-page {
     min-width: 100%;
     min-height: 170px;
-    background-image: url(/images/background.jpg);
-    background-size:100% auto;
+    background-image: url(/images/c-diamond-light.png);
+    background-size: 100% auto;
     background-repeat: no-repeat;
     background-position: top;
 
@@ -232,7 +256,7 @@ u {
 @include color-mode(dark) {
     .section-title-lead-landing-page,
     .container-h1-default-page {
-        background-image: url(/images/background-dark.jpg);
+        background-image: url(/images/c-diamond-dark.png);
     }
 }
 
@@ -246,3 +270,11 @@ u {
     // font-size: calc(1.875rem + 1.5vw);
     // margin-top: -1rem;
 }
+
+.lead {
+    font-weight: 500;
+}
+
+// iframe {
+//     margin-bottom: 20px;
+// }

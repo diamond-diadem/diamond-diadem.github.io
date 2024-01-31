@@ -2,7 +2,7 @@
 title: À propos d'Apptainer
 ---
 
-<h3 class="about-lead text-center">Apptainer (anciennement Singularity) simplifie la création et l'exécution de conteneurs, garantissant que les composants logiciels sont encapsulés pour assurer leur portabilité et leur reproductibilité.</h2>
+<h2 class="about-lead text-center">Apptainer (anciennement Singularity) simplifie la création et l'exécution de conteneurs, garantissant que les composants logiciels sont encapsulés pour assurer leur portabilité et leur reproductibilité.</h2>
 
 <br/>
 
@@ -33,7 +33,7 @@ title: À propos d'Apptainer
 </style>
 <div class="row">
 <div class="column left">
-<img src="/images/apptainer-logo.svg" width=100%/>
+<img class="logo-apptainer" width=100%/>
 </div>
 <div class="column right">
 <div align="justify">

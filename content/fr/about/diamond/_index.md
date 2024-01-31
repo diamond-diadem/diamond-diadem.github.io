@@ -33,7 +33,7 @@ title: À propos de DIAMOND
 </style>
 <div class="row">
 <div class="column left">
-<img src="/images/logo-diamond-cropped.svg" width=100%/>
+<img class="logo-diamond" width=100%/>
 </div>
 <div class="column right">
 <div class="text-x-large" align="justify">

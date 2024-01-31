@@ -5,7 +5,7 @@ toc: false
 
 <br/>
 
-<a href="https://www.lammps.org/" target="_blank"><img src="/images/lammps-logo.png" width="450px"></a>
+<a href="https://www.lammps.org/" target="_blank"><img src="/images/lammps-logo.png" width="500px"></a>
 
 <br/>
 
@@ -33,7 +33,7 @@ apptainer remote login -u <your-login> oras://gricad-registry.univ-grenoble-alpe
 apptainer pull lammps.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/hugo-files/lammps.sif:latest
 ```
 
-### <a href="/docs/by-container/lammps">Comment utiliser ce conteneur</a>
+### <a href="/fr/documentation/by-container/lammps">Comment utiliser ce conteneur</a>
 
 ### Documentation LAMMPS :
 

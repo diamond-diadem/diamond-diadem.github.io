@@ -2,6 +2,8 @@
 title: About Apptainer
 ---
 
+<h2 class="about-lead text-center">Apptainer (formerly Singularity) simplifies the creation and execution of containers, ensuring that software components are encapsulated to ensure their portability and reproducibility.</h2>
+
 <br/>
 
 <style>
@@ -31,14 +33,19 @@ title: About Apptainer
 </style>
 <div class="row">
 <div class="column left">
-<img src="/images/apptainer-logo.svg" width=100%/>
+<img class="logo-apptainer" width=100%/>
 </div>
 <div class="column right">
 <div align="justify">
 
-Mauris vitae neque feugiat nibh tempus imperdiet in id nisi. Aenean porttitor magna vel lectus consectetur vulputate. Curabitur accumsan orci ut libero finibus, eu pellentesque urna finibus. Nunc odio tortor, pellentesque fringilla lacus in, aliquam bibendum dolor. Quisque a leo felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse potenti. Pellentesque interdum mi id vestibulum lobortis. Maecenas non orci interdum, vestibulum lectus ac, vestibulum diam. Duis vel ante tellus.
+Apptainer is a free and open-source computer program that performs operating system-level virtualization, also known as containerization. It is similar to Docker software.
 
-Sed feugiat, mauris ut bibendum fermentum, diam leo pellentesque quam, non sagittis odio nunc vitae magna. Nunc iaculis luctus leo at malesuada. Etiam convallis odio non viverra finibus. Donec ut lorem vel purus sollicitudin laoreet sed at turpis. Curabitur a accumsan sem, vitae aliquet nisi. Suspendisse potenti. Phasellus rhoncus nec nulla non ultrices. Nullam a elit pretium, facilisis tellus in, congue nisi. Nulla feugiat metus nec magna gravida fermentum. Suspendisse fringilla sapien a odio mattis dapibus. Praesent augue urna, pharetra non pharetra ut, pulvinar in lectus.
+Apptainer provides a containerization solution that enhances reproducibility in scientific computing and the high-performance computing (HPC) domain.
+
+The need for reproducibility requires the ability to move applications from one system to another, and containers prove valuable in achieving this goal.
+
+With Apptainer containers, developers can work in reproducible environments of their choice, and these complete environments can easily be copied and run on other platforms. For instance, a user can create a container on their personal computer and run it on a high-performance computing grid.
+
 </div>
 </div>
 </div>

@@ -17,11 +17,11 @@ title: About DIAMOND
 }
 
 .left {
-  width: 30%;
+  width: 28%;
 }
 
 .right {
-  width: 70%;
+  width: 72%;
 }
 
 /* Clear floats after the columns */
@@ -33,14 +33,17 @@ title: About DIAMOND
 </style>
 <div class="row">
 <div class="column left">
-<img src="/images/logo-diamond-cropped.svg" width=100%/>
+<img class="logo-diamond" width=100%/>
 </div>
 <div class="column right">
-<div align="justify">
+<div class="text-x-large" align="justify">
 
-Mauris vitae neque feugiat nibh tempus imperdiet in id nisi. Aenean porttitor magna vel lectus consectetur vulputate. Curabitur accumsan orci ut libero finibus, eu pellentesque urna finibus. Nunc odio tortor, pellentesque fringilla lacus in, aliquam bibendum dolor. Quisque a leo felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse potenti. Pellentesque interdum mi id vestibulum lobortis. Maecenas non orci interdum, vestibulum lectus ac, vestibulum diam. Duis vel ante tellus.
+The main objective of this targeted project is to establish a digital infrastructure to accelerate the development of materials. It is based on one hand on a platform dedicated to simulation codes at various scales and workflows for the automation of calculation series, including high-throughput calculations, and the processing of results through artificial intelligence (AI). On the other hand, it relies on a database infrastructure derived from both experiments and simulations.
 
-Sed feugiat, mauris ut bibendum fermentum, diam leo pellentesque quam, non sagittis odio nunc vitae magna. Nunc iaculis luctus leo at malesuada. Etiam convallis odio non viverra finibus. Donec ut lorem vel purus sollicitudin laoreet sed at turpis. Curabitur a accumsan sem, vitae aliquet nisi. Suspendisse potenti. Phasellus rhoncus nec nulla non ultrices. Nullam a elit pretium, facilisis tellus in, congue nisi. Nulla feugiat metus nec magna gravida fermentum. Suspendisse fringilla sapien a odio mattis dapibus. Praesent augue urna, pharetra non pharetra ut, pulvinar in lectus.
+
 </div>
 </div>
 </div>
+
+<br/>
+For each of these infrastructures, use cases from ongoing targeted projects have been identified to serve as examples and ensure alignment with user needs. These projects include MOFsLEARNING, ESRF, and FastNano. A demonstrator utilizing these two infrastructures will also be developed, focusing on machine learning-based development of interatomic potentials for atomic-scale simulations. The specifications for these infrastructures and the demonstrator will be established through working groups involving representatives from the main relevant laboratories. The code and workflow platform will be developed and deployed at the GRICAD meso-center of computation, and the database infrastructure will be deployed at TGCC.
