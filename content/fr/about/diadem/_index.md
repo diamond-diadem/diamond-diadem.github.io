@@ -35,7 +35,7 @@ title: À propos de DIADEM
 </style>
 <div class="row">
 <div class="column left">
-<img src="/images/diadem-logo.png" width=100%/>
+<img src="/website-doks/images/diadem-logo.png" width=100%/>
 </div>
 <div class="column right">
 <div align="justify" class="text-x-large">
