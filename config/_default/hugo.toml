@@ -14,8 +14,6 @@ summarylength = 20 # 70 (default)
 
 
 # Multilingual
-
-
 defaultContentLanguage = "fr"
 defaultContentLanguageInSubdir = true
 
