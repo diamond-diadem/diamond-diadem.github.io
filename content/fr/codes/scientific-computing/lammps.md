@@ -5,7 +5,7 @@ toc: false
 
 <br/>
 
-<a href="https://www.lammps.org/" target="_blank"><img src="/website-doks/images/lammps-logo.png" width="500px"></a>
+<a href="https://www.lammps.org/" target="_blank"><img src="/images/lammps-logo.png" width="500px"></a>
 
 <br/>
 
