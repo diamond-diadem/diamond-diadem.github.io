@@ -4,6 +4,7 @@
   source = "node_modules/@hyas/doks-core/archetypes"
   target = "archetypes"
 
+
 [[mounts]]
   source = "archetypes"
   target = "archetypes"
