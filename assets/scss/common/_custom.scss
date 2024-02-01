@@ -133,7 +133,7 @@ u {
 }
 
 .icon-lammps {
-    background-image: url('/images/lammps-icon.svg');
+    background-image: url('/website-doks/images/lammps-icon.svg');
     background-size: 20px 20px;
     height: 20px;
     width: 20px;
@@ -145,7 +145,7 @@ u {
   }
   
 .icon-ovito {
-    background-image: url('/images/ovito-icon.png');
+    background-image: url('/website-doks/images/ovito-icon.png');
     background-size: 20px 20px;
     height: 20px;
     width: 20px;
@@ -161,36 +161,36 @@ u {
 }
 
 .logo-ovito {
-    content: url('/images/ovito-logo-light.png');
+    content: url('/website-doks/images/ovito-logo-light.png');
 }
 
 
 @include color-mode(dark) {
     .logo-ovito {
-        content: url('/images/ovito-logo-dark.png');
+        content: url('/website-doks/images/ovito-logo-dark.png');
     }   
 }
 
 
 .logo-apptainer {
-    content: url('/images/apptainer-logo.svg');
+    content: url('/website-doks/images/apptainer-logo.svg');
 }
 
 
 @include color-mode(dark) {
     .logo-apptainer {
-        content: url('/images/apptainer-logo-dark.svg');
+        content: url('/website-doks/images/apptainer-logo-dark.svg');
     }   
 }
 
 .logo-diamond {
-    content: url('/images/logo-diamond-cropped.svg');
+    content: url('/website-doks/images/logo-diamond-cropped.svg');
 }
 
 
 @include color-mode(dark) {
     .logo-diamond {
-        content: url('/images/logo-diamond-cropped-dark.svg');
+        content: url('/website-doks/images/logo-diamond-cropped-dark.svg');
     }   
 }
 
@@ -237,7 +237,7 @@ u {
 
 .section-title-lead-landing-page {
     min-width: 100%;
-    background-image: url(/images/c-diamond-light.png);
+    background-image: url(/website-doks/images/c-diamond-light.png);
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-position: center;
@@ -246,7 +246,7 @@ u {
 .container-h1-default-page {
     min-width: 100%;
     min-height: 170px;
-    background-image: url(/images/c-diamond-light.png);
+    background-image: url(/website-doks/images/c-diamond-light.png);
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-position: top;
@@ -256,7 +256,7 @@ u {
 @include color-mode(dark) {
     .section-title-lead-landing-page,
     .container-h1-default-page {
-        background-image: url(/images/c-diamond-dark.png);
+        background-image: url(/website-doks/images/c-diamond-dark.png);
     }
 }
 
