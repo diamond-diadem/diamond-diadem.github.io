@@ -9,7 +9,7 @@ default:
   before_script:
     - apk add --no-cache git go npm brotli
     - npm install postcss-cli autoprefixer --save-dev
-    - npm install @hyas/doks-core@latest
+    - npm install @hyas/doks-core@latest --save-dev
     # https://www.npmjs.com/package/hugo-extended
 
 
