@@ -1,6 +1,6 @@
 title = "DIAMOND"
 baseurl = "https://diamond.gricad-pages.univ-grenoble-alpes.fr/website-doks"
-canonifyURLs = false
+canonifyURLs = true
 disableAliases = true
 disableHugoGeneratorInject = true
 # disableKinds = ["taxonomy", "term"]
