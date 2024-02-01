@@ -10,6 +10,7 @@ default:
 #    - apk add --no-cache git go npm brotli
 #    - npm install postcss-cli autoprefixer --save-dev
     - npm ci
+    - npm install flexsearch
 #    - npm install @hyas/doks-core@latest --save-dev
 #    - npm install --save-dev
     # https://www.npmjs.com/package/hugo-extended
