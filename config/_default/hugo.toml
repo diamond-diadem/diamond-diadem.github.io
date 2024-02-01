@@ -12,7 +12,6 @@ paginate = 10
 rssLimit = 10
 summarylength = 20 # 70 (default)
 
-
 # Multilingual
 defaultContentLanguage = "fr"
 defaultContentLanguageInSubdir = true
