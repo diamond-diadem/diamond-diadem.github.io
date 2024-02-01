@@ -1,14 +1,14 @@
 # https://gitlab.com/pages/hugo/-/blob/main/.gitlab-ci.yml
-image: registry.gitlab.com/pages/hugo/hugo_extended:latest
+image: node:lts # registry.gitlab.com/pages/hugo/hugo_extended:latest
 ###image: registry.gitlab.com/pages/hugo/hugo_extended:0.100.2
 
-variables:
-  HUGO_ENV: production
+#variables:
+#  HUGO_ENV: production
 
 default:
   before_script:
-    - apk add --no-cache git go npm brotli
-    - npm install postcss-cli autoprefixer --save-dev
+#    - apk add --no-cache git go npm brotli
+#    - npm install postcss-cli autoprefixer --save-dev
     - npm ci
 #    - npm install @hyas/doks-core@latest --save-dev
 #    - npm install --save-dev
