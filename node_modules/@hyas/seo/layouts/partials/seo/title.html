@@ -1,0 +1,5 @@
+{{- .Scratch.Set "title" (printf "%s%s%s" .Title .Site.Params.seo.title.separator (.Site.Params.seo.title.suffix | default .Site.Title)) }}
+{{- if .Page.Params.seo.title }}
+  {{ .Scratch.Set "title" .Page.Params.seo.title }}
+{{- end }}
+<title>{{ .Scratch.Get "title" }}</title>

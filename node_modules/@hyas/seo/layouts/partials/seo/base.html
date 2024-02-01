@@ -1,0 +1,4 @@
+{{- if or (eq site.BaseURL "/") (eq site.BaseURL "http://localhost:1313/") }}
+{{- else }}
+  <base href="{{ .Permalink }}">
+{{- end }}
