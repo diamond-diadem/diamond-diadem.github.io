@@ -1,4 +1,6 @@
 ---
+title: LAMMPS
+title_visible: false
 linkTitle: LAMMPS
 toc: false
 ---
