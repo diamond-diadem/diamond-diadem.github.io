@@ -1,5 +1,5 @@
 title = "DIAMOND"
-baseurl = "https://diamond.gricad-pages.univ-grenoble-alpes.fr/website-doks"
+baseurl = "dmartincalle@github.io"
 canonifyURLs = true
 disableAliases = true
 disableHugoGeneratorInject = true
