@@ -1,5 +1,5 @@
 ---
-title: À propos
+title: About
 toc: false
 ---
 
