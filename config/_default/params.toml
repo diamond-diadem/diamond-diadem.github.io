@@ -136,3 +136,4 @@ mainSections = ["about","codes","documentation"]
     newsArticle = [] # NewsArticle sections
     blogPosting = ["blog"] # BlogPosting sections
     product = [] # Product sections
+

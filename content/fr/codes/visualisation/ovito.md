@@ -1,4 +1,6 @@
 ---
+title: Ovito
+title_visible: false
 linkTitle: Ovito
 toc: false
 ---
