@@ -3,6 +3,7 @@ title: LAMMPS
 title_visible: false
 linkTitle: LAMMPS
 toc: false
+weight: 1
 ---
 
 <br/>
