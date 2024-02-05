@@ -1,5 +1,6 @@
 ---
 title: About DIAMOND
+linkTitle: DIAMOND
 ---
 
 <h2 class="text-center about-lead"><b>D</b>ata management and <b>I</b>nfrastructures for <b>A</b>rtificial intelligence, <b>M</b>odelling, <b>O</b>ptimization and <b>N</b>umerical <b>D</b>esign</h2>
