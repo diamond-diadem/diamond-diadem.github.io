@@ -6,6 +6,9 @@ images = ["cover.png"]
 # mainSections
 mainSections = ["about","codes","documentation"]
 
+# dropdownSections
+dropdownSections = ["about"]
+
 [social]
   twitter = "getdoks"
 
