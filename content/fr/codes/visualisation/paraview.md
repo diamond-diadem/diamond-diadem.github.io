@@ -8,7 +8,7 @@ weight: 2
 
 <br/>
 
-<a href="https://www.paraview.org/" target="_blank"><img class="logo-paraview" width="500px"/></a>
+<a href="https://www.paraview.org/" target="_blank"><img class="logo-paraview" width="550px"/></a>
 
 <br/>
 

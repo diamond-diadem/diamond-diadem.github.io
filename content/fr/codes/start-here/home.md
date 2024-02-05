@@ -27,7 +27,7 @@ Mais pour commencer, si vous n'êtes pas encore passé par cette étape et si vo
 | Calcul scientifique                              | Visualisation                           |
 | ------------------------------------------------ | --------------------------------------- |
 | [<i class="icon-lammps"></i>LAMMPS](/fr/codes/scientific-computing/lammps/) | [<i class="icon-ovito"></i>Ovito](/fr/codes/visualisation/ovito/) |
-| [<i class="icon-quantum-espresso"></i>Quantum Espresso](/fr/codes/scientific-computing/quantum-espresso/)                                 |                                         |
+| [<i class="icon-quantum-espresso"></i>Quantum Espresso](/fr/codes/scientific-computing/quantum-espresso/) | [<i class="icon-paraview"></i>ParaView](/fr/codes/visualisation/paraview/) |
 
 
 <!-- <div class="row">
