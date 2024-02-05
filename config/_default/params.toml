@@ -8,8 +8,8 @@ mainSections = ["about","codes","documentation"]
 
 # dropdownSections
 
-# [perso]
-#  dropdownSections = ["about"]
+ [perso]
+  dropdownSections = ["about"]
 
 [social]
   twitter = "getdoks"
