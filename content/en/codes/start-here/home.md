@@ -28,7 +28,7 @@ But to begin with, if you haven't gone through this step yet and if you're not f
 | Scientific computing                              | Visualisation                           |
 | ------------------------------------------------ | --------------------------------------- |
 | [<i class="icon-lammps"></i>LAMMPS](/en/codes/scientific-computing/lammps/) | [<i class="icon-ovito"></i>Ovito](/en/codes/visualisation/ovito/) |
-| [<i class="icon-quantum-espresso"></i>Quantum Espresso](/en/codes/scientific-computing/quantum-espresso/)                                 |                                         |
+| [<i class="icon-quantum-espresso"></i>Quantum Espresso](/en/codes/scientific-computing/quantum-espresso/) | [<i class="icon-paraview"></i>ParaView](/en/codes/visualisation/paraview/) |
 
 
 <!-- <div class="row">
