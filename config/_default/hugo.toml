@@ -55,6 +55,7 @@ copyRight = "Copyright (c) 2020-2024 Hyas"
   category = "categories"
   tag = "tags"
 
+
 [permalinks]
 #  blog = "/blog/:slug/"
 #  docs = "/docs/:sections[1:]/:slug/"
