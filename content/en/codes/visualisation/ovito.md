@@ -3,6 +3,7 @@ title: Ovito
 title_visible: false
 linkTitle: Ovito
 toc: false
+weight: 1
 ---
 
 <a href="https://www.ovito.org/" target="_blank"><img class="logo-ovito" width="500px"/></a>
