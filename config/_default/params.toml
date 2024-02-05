@@ -8,7 +8,7 @@ mainSections = ["about","codes","documentation"]
 
 # dropdownSections
 
- [perso]
+[perso]
   dropdownSections = ["about"]
 
 [social]
