@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="Layer_2"
+   viewBox="0 0 724.21 113.8"
+   version="1.1"
+   sodipodi:docname="paraview-logo-light.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1533" />
+  <sodipodi:namedview
+     id="namedview1531"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="1.8571961"
+     inkscape:cx="399.79624"
+     inkscape:cy="57.075288"
+     inkscape:window-width="1610"
+     inkscape:window-height="981"
+     inkscape:window-x="1150"
+     inkscape:window-y="902"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Layer_2" />
+  <g
+     id="g1519"
+     style="fill:#a2d9ff;fill-opacity:1">
+    <path
+       d="m 235.6,10.38 c 24.65,0 33.88,11.68 33.88,28.83 0,17.15 -9.52,28.83 -33.88,28.83 h -21.48 v 33.45 H 203.16 V 10.38 Z m -21.48,10.24 v 37.19 h 21.48 c 17.3,0 22.92,-6.92 22.92,-18.6 0,-11.68 -5.77,-18.6 -22.92,-18.6 h -21.48 z"
+       style="fill:#a2d9ff;fill-opacity:1"
+       id="path1503" />
+    <path
+       d="m 329.6,98.61 c -6.49,2.31 -16.72,4.04 -26.38,4.04 -16.72,0 -27.82,-5.62 -27.82,-21.34 0,-15.72 11.1,-21.48 29.99,-21.48 h 13.7 v -6.78 c 0,-9.51 -6.63,-12.54 -17.59,-12.54 -8.07,0 -14.71,1.44 -19.03,3.03 l -1.59,-9.66 c 5.62,-1.59 12.69,-3.03 21.05,-3.03 15.86,0 27.68,5.77 27.68,23.07 V 98.61 Z M 319.08,68.19 h -13.55 c -12.83,0 -19.61,3.17 -19.61,12.98 0,9.81 6.78,12.4 17.01,12.4 5.05,0 11.68,-0.58 16.15,-2.02 z"
+       style="fill:#a2d9ff;fill-opacity:1"
+       id="path1505" />
+    <path
+       d="M 345.14,34.89 C 349.75,32.73 358.4,31 366.91,31 c 5.48,0 10.09,0.58 13.84,1.73 l -2.02,9.8 c -2.16,-0.86 -6.49,-1.59 -11.53,-1.59 -5.91,0 -9.08,0.72 -11.53,1.87 v 58.68 h -10.52 v -66.6 z"
+       style="fill:#a2d9ff;fill-opacity:1"
+       id="path1507" />
+    <path
+       d="m 439.86,98.61 c -6.49,2.31 -16.72,4.04 -26.38,4.04 -16.72,0 -27.82,-5.62 -27.82,-21.34 0,-15.72 11.1,-21.48 29.99,-21.48 h 13.7 v -6.78 c 0,-9.51 -6.63,-12.54 -17.59,-12.54 -8.07,0 -14.7,1.44 -19.03,3.03 l -1.59,-9.66 c 5.62,-1.59 12.69,-3.03 21.05,-3.03 15.86,0 27.68,5.77 27.68,23.07 V 98.61 Z M 429.34,68.19 h -13.55 c -12.83,0 -19.61,3.17 -19.61,12.98 0,9.81 6.78,12.4 17.01,12.4 5.05,0 11.68,-0.58 16.15,-2.02 z"
+       style="fill:#a2d9ff;fill-opacity:1"
+       id="path1509" />
+    <path
+       d="M 487.2,101.49 H 475.81 L 441.78,10.38 h 11.25 l 28.4,77.13 28.55,-77.13 h 11.24 z"
+       style="fill:#a2d9ff;fill-opacity:1"
+       id="path1511" />
+    <path
+       d="m 535.83,1.29 c 3.75,0 6.78,3.17 6.78,6.92 0,3.75 -3.03,6.78 -6.78,6.78 -3.75,0 -6.92,-3.03 -6.92,-6.78 0,-3.75 3.03,-6.92 6.92,-6.92 z M 530.5,32 h 10.52 v 69.49 H 530.5 Z"
+       style="fill:#a2d9ff;fill-opacity:1"
+       id="path1513" />
+    <path
+       d="m 612.27,70.93 h -47.43 v 0.58 c 0,14.71 8.51,21.19 22.92,21.19 8.07,0 16.58,-2.02 21.77,-4.76 l 1.59,9.95 c -6.78,3.03 -14.99,4.76 -23.5,4.76 -22.2,0 -33.45,-11.1 -33.45,-35.75 0,-20.04 7.35,-36.04 30.13,-36.04 18.31,0 29.12,10.24 29.12,30.42 0,2.88 -0.29,6.63 -1.15,9.66 z m -47.43,-8.94 h 38.49 v -0.87 c 0,-14.85 -7.5,-20.9 -19.32,-20.9 -11.82,0 -19.17,5.91 -19.17,20.9 z"
+       style="fill:#a2d9ff;fill-opacity:1"
+       id="path1515" />
+    <path
+       d="M 646.07,87.22 664.96,32 h 10.67 L 694.52,87.22 713.41,32 h 10.81 L 700,101.49 h -10.81 l -18.89,-53.2 -18.89,53.2 H 640.6 L 616.38,32 h 10.81 l 18.89,55.22 z"
+       style="fill:#a2d9ff;fill-opacity:1"
+       id="path1517" />
+  </g>
+  <polygon
+     points="36.59,113.8 0,113.8 30.08,0 66.67,0 "
+     style="fill:#f32735"
+     id="polygon1521" />
+  <polygon
+     points="81.86,113.8 45.26,113.8 75.34,0 111.94,0 "
+     style="fill:#3eae2b"
+     id="polygon1523" />
+  <polygon
+     points="127.12,113.8 90.53,113.8 120.61,0 157.2,0 "
+     style="fill:#0068c7"
+     id="polygon1525" />
+</svg>
