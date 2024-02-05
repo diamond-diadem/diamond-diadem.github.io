@@ -112,7 +112,9 @@
             {{- $active = or $active (eq .Name $current.Title) -}}
             {{- $active = or $active (and (eq .Name ($section | humanize)) (eq $current.Section $section)) -}}
             {{- $active = or $active (and (eq .Name "Blog") (eq $current.Section "blog" "authors")) -}}
-            {{- $active = or $active (in .Identifier $section) -}}
+            {{ if $section }}
+              {{- $active = or $active (in .Identifier $section) -}}
+            {{ end }}
             {{ if .HasChildren -}}
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
