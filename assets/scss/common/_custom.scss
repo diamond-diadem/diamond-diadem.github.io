@@ -278,3 +278,13 @@ u {
 // iframe {
 //     margin-bottom: 20px;
 // }
+
+.header-dropdown-text.active {
+    color: $link-color;
+}
+
+@include color-mode(dark) {
+    .header-dropdown-text.active {
+        color: $link-color-dark;
+    }   
+}
