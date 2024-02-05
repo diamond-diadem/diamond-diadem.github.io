@@ -1,5 +1,7 @@
 ---
 title: Comment installer Apptainer ?
+weight: 1
+toc: true
 ---
 
 
