@@ -1,5 +1,6 @@
 ---
 title: About DIADEM
+linkTitle: DIADEM
 ---
 
 <h2 class="text-center about-lead"><b>DI</b>scovery <b>A</b>cceleration for the <b>D</b>eployment of <b>E</b>merging <b>M</b>aterials</h2>

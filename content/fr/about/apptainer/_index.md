@@ -1,5 +1,6 @@
 ---
 title: À propos d'Apptainer
+linkTitle: Apptainer
 ---
 
 <h2 class="about-lead text-center">Apptainer (anciennement Singularity) simplifie la création et l'exécution de conteneurs, garantissant que les composants logiciels sont encapsulés pour assurer leur portabilité et leur reproductibilité.</h2>

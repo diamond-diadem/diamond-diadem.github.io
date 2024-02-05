@@ -1,5 +1,6 @@
 ---
 title: About Containers
+linkTitle: Containers
 ---
 
 <h2 class="about-lead text-center">Lightweight and isolated environments enabling the execution of applications and their dependencies have become essential in the field of computing due to their flexibility and efficiency.</h2>

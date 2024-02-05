@@ -1,5 +1,6 @@
 ---
 title: À propos des conteneurs
+linkTitle: Conteneurs
 ---
 
 <h2 class="about-lead text-center">Environnements légers et isolés permettant d'exécuter des applications et leurs dépendances. Ils sont devenus incontournables dans le domaine de l'informatique en raison de leur flexibilité et de leur efficacité.</h2> 
