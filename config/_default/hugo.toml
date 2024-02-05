@@ -1,5 +1,5 @@
 title = "DIAMOND"
-baseurl = "diamond-diadem@github.io"
+baseurl = "diamond-diadem@github.io/fr"
 canonifyURLs = true
 disableAliases = true
 disableHugoGeneratorInject = true
