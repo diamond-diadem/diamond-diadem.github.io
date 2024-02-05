@@ -194,6 +194,19 @@ u {
     }   
 }
 
+.logo-quantum-espresso {
+    content: url('/images/quantum-espresso-logo-light.png');
+}
+
+@include color-mode(dark) {
+    .logo-quantum-espresso {
+        content: url('/images/quantum-espresso-logo-dark.png');
+    }
+        
+}
+
+
+
 
 .col-default-page {
     min-height: 100vh;

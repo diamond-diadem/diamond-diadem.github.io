@@ -3,6 +3,7 @@ title: LAMMPS
 title_visible: false
 linkTitle: LAMMPS
 toc: false
+weight: 1
 ---
 
 <br/>
@@ -23,9 +24,9 @@ Le <a href="https://www.lammps.org/" target="_blank">site web de LAMMPS</a> offr
 
 </div>
 
-### Lien de téléchargement direct : {{< inline-svg src="paperclip" height="32px" width="32px" class="svg-inline-custom" >}} LAMMPS
+### Lien de téléchargement direct : {{< inline-svg src="paperclip" height="32px" width="32px" class="svg-inline-custom" >}} LAMMPS _(à venir)_
 
-### Récupérez ce conteneur avec Apptainer :
+### Récupérez l'image Apptainer :
 
 ```sh
 # LOGIN
@@ -35,7 +36,7 @@ apptainer remote login -u <your-login> oras://gricad-registry.univ-grenoble-alpe
 apptainer pull lammps.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/hugo-files/lammps.sif:latest
 ```
 
-### <a href="/fr/documentation/by-container/lammps">Comment utiliser ce conteneur</a>
+### <a href="/fr/documentation/by-container/lammps">Comment utiliser cette image de conteneur</a>
 
 ### Documentation LAMMPS :
 
@@ -43,4 +44,4 @@ apptainer pull lammps.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/
 
 - ##### <a href="https://docs.lammps.org/" target="_blank">Documentation officielle</a>
 
-- ##### Exemples : fichiers d'entrée
+- ##### Exemples : fichiers d'entrée _(à venir)_
