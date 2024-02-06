@@ -3,7 +3,7 @@ title: À propos d'Apptainer
 linkTitle: Apptainer
 ---
 
-<h2 class="about-lead text-center">Apptainer (anciennement Singularity) simplifie la création et l'exécution de conteneurs, garantissant que les composants logiciels sont encapsulés pour assurer leur portabilité et leur reproductibilité.</h2>
+<h2 class="about-lead text-center">Apptainer (anciennement Singularity) est une solution de création et de gestion de conteneurs orientée vers le calcul haute performance. En proposant des conteneurs empaquetant à la fois un outil logiciel et toutes les dépendances externes nécessaires à son application, il garantit leur portabilité et leur reproductibilité.</h2>
 
 <br/>
 
@@ -39,13 +39,11 @@ linkTitle: Apptainer
 <div class="column right">
 <div align="justify">
 
-Apptainer est un programme informatique gratuit et open source qui effectue une virtualisation au niveau du système d'exploitation, également appelée conteneurisation. Il est similaire au logiciel Docker.
+Apptainer est un logiciel informatique gratuit et open-source qui facilite le déploiement d'outils numériques à travers la conteneurisation. L'idée générale est d'inclure un code ou une application avec toutes les dépendances (environnement logiciel, librairies externes, ...) nécessaires à son exécution au sein d'un objet nommé conteneur, autonome et indépendant de la machine sur laquelle on l'exécute. Le principal intérêt des conteneurs réside dans leur relative légerté : on ne virtualise pas de système d'exploitation entier (lourd), mais uniquement les éléments indispensables à l'exécution, et on délègue au noyau de la machine hôte (quelle qu'elle soit) la responsabilité de communiquer avec son système d'exploitation et le hardware.
 
-Apptainer apporte une solution de conteneurisation permettant de la reproductibilité au calcul scientifique et au monde du calcul haute performance (HPC).
+En un sens, Apptainer est une alternative au logiciel Docker. Là où ce dernier est de plus en plus populaire dans le développement et le maintien d'applications conteneurisées orientées web et service, Apptainer propose un contrepoint très intéressant pour le calcul haute performance, avec une forte emphase sur la portabilité et la reproductibilité des résultats.
 
-Le besoin de reproductibilité nécessite la capacité de déplacer des applications d'un système à l'autre et pour cela l'utilisation des conteneurs est intéressante.
-
-Grâce aux conteneurs Apptainer, les développeurs peuvent travailler dans des environnements reproductibles de leur choix et ces environnements complets peuvent facilement être copiés et exécutés sur d'autres plateformes. L'utilisateur peut par exemple créer un conteneur sur son ordinateur personnel et l'exécuter sur une grille de calcul haute performance.
+Ce mode de fonctionnement présente un avantage majeur, pour les personnes utilisant les codes comme pour celles et ceux qui les développent. En empaquetant au sein d'un unique fichier immuable et facile à transmettre tout ce qui est requis pour exécuter une application, il est très aisé de distribuer tout outil en s'affranchissant des installations fasidieuses et des incompatibilités de librairies. Ce dernier point en particulier est intéressant du point de vue de la reproductibilité : comme un conteneur est immuable, on a l'assurance que la même application fonctionnera de manière rigoureusement identique dans le temps et sur d'autres machines. En d'autre terme, il n'est plus nécessaire de craindre que la moindre modification (changement de machine ou de cluster de calcul, mise à jour de librairies, ...) affecte le bon fonctionnement de vos codes.
 
 </div>
 </div>
