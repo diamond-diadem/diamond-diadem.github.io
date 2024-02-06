@@ -6,7 +6,6 @@ images = ["cover.png"]
 # mainSections
 mainSections = ["about","codes","documentation"]
 
-
 [diamond]
   enableNews = false
 
