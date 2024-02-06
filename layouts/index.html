@@ -47,6 +47,32 @@
       </div>
     </div>
   </section>
+  {{ if site.Params.diamond.enableNews -}}
+    <section class="section section-md section-features">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          {{ $i := 0}}
+          {{ range where .Site.Pages "Section" "news" }}
+            {{ if .Params.Homepage }}
+              {{ $i = add $i 1 }}
+            {{ end }}
+          {{ end }}
+          {{ if (ge $i 1) }}
+            <h2><u>Actualités</u></h3>
+          {{ end }}
+          {{ range where .Site.Pages "Section" "news" }}
+            {{ if .Params.Homepage }}  
+              <div class="col-lg-5"> 
+                <h4>{{ .Title }}</h4> 
+                <p>{{ .Summary }}</p> 
+                <a href="{{ .Permalink }}">Apprenez-en plus</a> 
+              </div>
+            {{ end }}
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  {{end -}}  
   {{ end }}
   {{ if eq $.Site.Language.LanguageName "EN" }}
   <section class="section section-md section-features">
@@ -71,7 +97,33 @@
       </div>
     </div>
   </section>
-  {{ end }}
+  {{ if site.Params.diamond.enableNews -}}
+    <section class="section section-md section-features">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          {{ $i := 0}}
+          {{ range where .Site.Pages "Section" "news" }}
+            {{ if .Params.Homepage }}
+              {{ $i = add $i 1 }}
+            {{ end }}
+          {{ end }}
+          {{ if (ge $i 1) }}
+            <h2><u><a href="/en/news/">News</a></u></h3>
+          {{ end }}
+          {{ range where .Site.Pages "Section" "news" }}
+            {{ if .Params.Homepage }}  
+              <div class="col-lg-5"> 
+                <h4>{{ .Title }}</h4> 
+                <p>{{ .Summary }}</p> 
+                <a href="{{ .Permalink }}">Read more</a> 
+              </div>
+            {{ end }}
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  {{ end -}}  
+  {{ end }}  
 {{ end }}
 
 {{ define "sidebar-prefooter" }}

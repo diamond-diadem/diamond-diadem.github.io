@@ -31,9 +31,9 @@ main:
   - name: Documentation
     url: fr/documentation/start-here/home/
     weight: 50
-  - name: Actualités
-    url: fr/news/
-    weight: 60
+  # - name: Actualités
+  #   url: fr/news/
+  #   weight: 60
   - name: Contact
     url: fr/contact/
     weight: 70
