@@ -7,7 +7,7 @@ images = ["cover.png"]
 mainSections = ["about","codes","documentation"]
 
 [diamond]
-  enableNews = true
+  enableNews = false
 
 [social]
   twitter = "getdoks"
