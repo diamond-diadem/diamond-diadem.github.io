@@ -1,10 +1,10 @@
 ---
 title: "Meeting"
 description: ""
-summary: ""
+summary: "Zoom meeting on the 8th of February"
 date: 2024-02-06T09:24:27+01:00
 lastmod: 2024-02-06T09:24:27+01:00
-expiryDays: 30
+expiryDate: 2024-03-06T09:24:27+01:00
 draft: false
 weight: 50
 categories: []

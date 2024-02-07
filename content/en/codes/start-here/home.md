@@ -7,7 +7,7 @@ weight: 1
 
 {{< callout context="note" title="" icon="info-circle" >}}
 
-In this section, you will be able to download Apptainer images for codes available from this website. For scientific computing as well as data visualisation
+In this section, you will be able to download Apptainer images for codes available on this website. For scientific computing as well as data visualisation
 
 {{< /callout >}}
 
