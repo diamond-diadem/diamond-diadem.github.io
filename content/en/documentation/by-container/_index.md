@@ -1,4 +1,4 @@
 ---
-title: Tutorials by container
+title: Tutorials by image
 weight: 4
 ---
