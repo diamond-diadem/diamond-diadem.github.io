@@ -3,7 +3,7 @@
 const topButton = document.getElementById('toTop');
 
 if (topButton !== null) {
-  topButton.classList.remove('fade');
+//   topButton.classList.remove('fade');
   window.onscroll = function() {
     scrollFunction()
   };
