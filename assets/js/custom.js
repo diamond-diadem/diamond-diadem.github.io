@@ -2,14 +2,14 @@
 
 const topButton = document.getElementById('toTop');
 
-if (topButton !== null) {
-//   topButton.classList.remove('fade');
+// if (topButton !== null) {
+  topButton.classList.remove('fade');
   window.onscroll = function() {
     scrollFunction()
   };
 
   topButton.addEventListener('click', topFunction);
-}
+// }
 
 function scrollFunction() {
   if (document.body.scrollTop > 270 || document.documentElement.scrollTop > 270) {
