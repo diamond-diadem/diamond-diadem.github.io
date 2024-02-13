@@ -2,7 +2,6 @@
 title: CONTAINERIZED CODES
 linkTitle: Home
 toc: false
-weight: 1
 ---
 
 {{< callout context="note" title="" icon="info-circle" >}}
@@ -17,13 +16,13 @@ But to begin with, if you haven't gone through this step yet and if you're not f
 
 {{< /callout >}}
 
-### <u>USEFUL LINKS :</u>
+<h3><u>USEFUL LINKS :</u></h3>
 
-- ##### <a href="/en/documentation/install-apptainer/howto/">Install Apptainer</a>
-- ##### <a href="/en/documentation/use-apptainer-image/howto/">Learn how to use a container</a>
+- <h5><a href="/en/documentation/install-apptainer/howto/">Install Apptainer</a></h5>
+- <h5><a href="/en/documentation/use-apptainer-image/howto/">Learn how to use a container</a></h5>
 
 
-### <u>AVAILABLE CODES:</u> 
+<h3><u>AVAILABLE CODES:</u></h3> 
 
 | Scientific computing                              | Visualisation                           |
 | ------------------------------------------------ | --------------------------------------- |

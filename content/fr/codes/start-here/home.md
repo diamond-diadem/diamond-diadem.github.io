@@ -2,7 +2,6 @@
 title: CODES CONTENEURISÉS
 linkTitle: Accueil
 toc: false
-weight: 1
 ---
 
 {{< callout context="note" title="" icon="info-circle" >}}
@@ -17,13 +16,14 @@ Mais pour commencer, si vous n'êtes pas encore passé par cette étape et si vo
 
 {{< /callout >}}
 
-### <u>LIENS UTILES :</u>
+<h3><u>LIENS UTILES :</u></h3>
 
-- ##### <a href="/fr/documentation/install-apptainer/howto/">Installez Apptainer</a>
-- ##### <a href="/fr/documentation/use-apptainer-image/howto/">Apprenez comment utiliser un conteneur</a>
+- <h5><a href="/fr/documentation/install-apptainer/howto/">Installez Apptainer</a></h5>
+- <h5><a href="/fr/documentation/use-apptainer-image/howto/">Apprenez comment utiliser un conteneur</a></h5>
 
 
-### <u>CODES DISPONIBLES :</u> 
+<h3><u>CODES DISPONIBLES :</u></h3> 
+
 | Calcul scientifique                              | Visualisation                           |
 | ------------------------------------------------ | --------------------------------------- |
 | [<i class="icon-lammps"></i>LAMMPS](/fr/codes/scientific-computing/lammps/) | [<i class="icon-ovito"></i>Ovito](/fr/codes/visualisation/ovito/) |
