@@ -10,7 +10,7 @@ if (topButton !== null) {
 }
 
 function scrollFunction() {
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+  if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
     topButton.classList.add('fade');
   } else {
     topButton.classList.remove('fade');
