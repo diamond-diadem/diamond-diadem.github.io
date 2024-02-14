@@ -15,8 +15,8 @@
     {{ block "sidebar-footer" . }}{{ end }}
     {{ partial "footer/footer" . }}
     {{ partial "footer/script-footer" . }}
-    {{ if eq site.Params.doks.toTopButton true -}}
+    {{ if site.Params.doks.toTopButton -}}
       {{ partial "footer/to-top" . }}
-    {{ end }}
+    {{ end -}}
   </body>
 </html>
