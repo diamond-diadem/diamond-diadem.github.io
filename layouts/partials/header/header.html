@@ -104,7 +104,7 @@
       </div> -->
      
       <div class="offcanvas-body d-flex flex-column flex-lg-row justify-content-between">
-        <ul class="navbar-nav flex-grow-1">
+        <ul class="navbar-nav flex-grow-1 align-self-center">
           {{- $current := . -}}
           {{- $section := $current.Section -}}
           {{ range .Site.Menus.main -}}
@@ -141,6 +141,9 @@
           {{ end -}}
         </ul>
 
+        <!-- Logo "France 2030 : Matériaux émergents" -->
+        <img class="logo-france2030">
+
         <!-- FlexSearch desktop -->
         {{ partial "main/showFlexSearch" . }}
         {{ $showFlexSearch := .Scratch.Get "showFlexSearch" -}}
@@ -157,7 +160,7 @@
         <!-- Language dropdown -->
         {{ if eq site.Params.doks.multilingualMode true -}}
 
-        <div class="dropdown dropdown-languages mt-1 order-lg-2">
+        <div class="dropdown dropdown-languages mt-1 order-lg-2 align-self-center">
           <button class="btn btn-dropdown dropdown-toggle" id="doks-languages" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
             <span class="dropdown-caret">
               <!-- <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
