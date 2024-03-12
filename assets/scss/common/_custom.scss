@@ -260,6 +260,18 @@ u {
     }
 }
 
+@include media-breakpoint-down(xl) {
+    .logo-france2030 {
+        height : 60px;
+    }
+
+    // .nav-item {
+    //     font-size: $font-size-base;
+
+
+    // }
+}
+
 
 .col-default-page {
     min-height: 100vh;
@@ -353,4 +365,22 @@ u {
     .header-dropdown-text.active {
         color: $link-color-dark;
     }   
+}
+
+// @include media-breakpoint-down(md) {
+
+//     .navbar .offcanvas.offcanvas-start,
+//     .navbar .offcanvas.offcanvas-end {
+//       width: 80vw;
+//     }
+//   }
+
+@include media-breakpoint-down(xl) {
+    .navbar-brand {
+        font-size: $font-size-md;
+    }
+
+    .nav-item {
+        font-size: $font-size-base;
+    }
 }
