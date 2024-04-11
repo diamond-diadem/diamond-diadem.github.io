@@ -5,9 +5,9 @@ title: Comment interagir avec une image Apptainer ?
 
 {{< callout context="note" title="" icon="info-circle" >}}
 
-En préalable de ces explications, il est nécessaire d'avoir installé Apptainer sur votre machine ; voir [ce lien](/fr/documentation/install-apptainer/howto/) pour plus de détails.
+En préalable de ces explications, il est nécessaire d'avoir installé Apptainer sur votre machine ; voir [ce lien](/documentation/install-apptainer/howto/) pour plus de détails.
 
-Ce tutoriel explicite les principales commandes permettant d'interagir avec une image Apptainer pour générer et manipuler des conteneurs. Les instructions présentées ici sont en principe valables pour tout conteneur Apptainer. Une image sur mesure dédiée à la mise en pratique de ce tutoriel est disponible à [cette adresse](/fr/codes/scientific-computing/lammps/). En suivant ce lien, vous récupérez une image Apptainer (format de fichier `.sif`) qui vous permettra de créer des conteneurs.
+Ce tutoriel explicite les principales commandes permettant d'interagir avec une image Apptainer pour générer et manipuler des conteneurs. Les instructions présentées ici sont en principe valables pour tout conteneur Apptainer. Une image sur mesure dédiée à la mise en pratique de ce tutoriel est disponible à [cette adresse](/codes/scientific-computing/lammps/). En suivant ce lien, vous récupérez une image Apptainer (format de fichier `.sif`) qui vous permettra de créer des conteneurs.
 
 <!-- Ce tutoriel détaille l'utilisation de l'image de conteneur du code LAMMPS téléchargeable à [cette adresse](/fr/codes/scientific-computing/lammps/). En suivant ce lien, vous récupérez une image Apptainer (format de fichier `.sif`) qui vous permattra de créer des conteneurs à même de faire tourner LAMMPS.
 
