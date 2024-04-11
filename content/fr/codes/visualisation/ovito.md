@@ -25,7 +25,7 @@ Ovito est développé, distribué, et pris en charge par OVITO GmbH, une start-u
 apptainer remote login -u <your-login> oras://gricad-registry.univ-grenoble-alpes.fr
 
 # PULL
-apptainer pull ovito.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/hugo-files/ovito.sif:latest
+apptainer pull ovito.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/ovito.sif:latest
 ```
 
 ### Comment utiliser ce conteneur _(à venir)_

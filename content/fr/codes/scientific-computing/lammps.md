@@ -33,7 +33,7 @@ Le <a href="https://www.lammps.org/" target="_blank">site web de LAMMPS</a> offr
 apptainer remote login -u <your-login> oras://gricad-registry.univ-grenoble-alpes.fr
 
 # PULL
-apptainer pull lammps.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/hugo-files/lammps.sif:latest
+apptainer pull lammps.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/lammps.sif:latest
 ```
 
 ### <a href="/fr/documentation/by-container/lammps">Comment utiliser cette image de conteneur</a>

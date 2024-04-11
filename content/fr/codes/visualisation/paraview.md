@@ -29,7 +29,7 @@ Ce logiciel repose sur une architecture modulaire, ce qui permet aux utilisateur
 apptainer remote login -u <your-login> oras://gricad-registry.univ-grenoble-alpes.fr
 
 # PULL
-apptainer pull paraview.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/hugo-files/paraview.sif:latest
+apptainer pull paraview.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/paraview.sif:latest
 ```
 
 ### Comment utiliser ce conteneur _(à venir)_
