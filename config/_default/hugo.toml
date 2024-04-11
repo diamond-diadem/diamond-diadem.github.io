@@ -15,7 +15,7 @@ summarylength = 20 # 70 (default)
 
 # Multilingual
 defaultContentLanguage = "fr"
-defaultContentLanguageInSubdir = true
+defaultContentLanguageInSubdir = false
 
 copyRight = "Copyright (c) 2020-2024 Hyas"
 

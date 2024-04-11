@@ -1,41 +1,41 @@
 main:
   - name: À propos
-    url: fr/about/
+    url: about/
     weight: 10
     identifier: about-fr
   - name: DIAMOND
-    url: fr/about/diamond/
+    url: about/diamond/
     weight: 11
     parent: about-fr
   - name: DIADEM
-    url: fr/about/diadem/
+    url: about/diadem/
     weight: 12
     parent: about-fr
   - name: Conteneurs
-    url: fr/about/containers/
+    url: about/containers/
     weight: 13
     parent: about-fr
   - name: Apptainer
-    url: fr/about/apptainer/
+    url: about/apptainer/
     weight: 14
     parent: about-fr
   - name: Codes
-    url: fr/codes/start-here/home/
+    url: codes/start-here/home/
     weight: 20
   - name: Workflows
-    url: fr/workflows/
+    url: workflows/
     weight: 30
   - name: Données
-    url: fr/data/
+    url: data/
     weight: 40
   - name: Documentation
-    url: fr/documentation/start-here/home/
+    url: documentation/start-here/home/
     weight: 50
   # - name: Actualités
   #   url: fr/news/
   #   weight: 60
   - name: Contact
-    url: fr/contact/
+    url: contact/
     weight: 70
 
 
