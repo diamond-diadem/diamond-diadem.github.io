@@ -29,7 +29,7 @@ Le logiciel prend en charge une variété de méthodes de calcul, telles que la 
 apptainer remote login -u <your-login> oras://gricad-registry.univ-grenoble-alpes.fr
 
 # PULL
-apptainer pull quantum-espresso.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/hugo-files/quantum-espresso.sif:latest
+apptainer pull quantum-espresso.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/quantum-espresso.sif:latest
 ```
 
 ### Comment utiliser cette image de conteneur _(à venir)_

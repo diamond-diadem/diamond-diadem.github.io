@@ -33,7 +33,7 @@ The [LAMMPS website](https://www.lammps.org/) provides a variety of information 
 apptainer remote login -u <your-login> oras://gricad-registry.univ-grenoble-alpes.fr
 
 # PULL
-apptainer pull lammps.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/hugo-files/lammps.sif:latest
+apptainer pull lammps.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/lammps.sif:latest
 ```
 
 ### <a href="/en/documentation/by-container/lammps">Learn how to use this specific container</a>

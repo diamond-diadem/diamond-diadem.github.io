@@ -29,7 +29,7 @@ The software supports various calculation methods, such as plane wave methods, q
 apptainer remote login -u <your-login> oras://gricad-registry.univ-grenoble-alpes.fr
 
 # PULL
-apptainer pull quantum-espresso.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/hugo-files/quantum-espresso.sif:latest
+apptainer pull quantum-espresso.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/quantum-espresso.sif:latest
 ```
 
 ### Learn how to use this specific container _(to be added)_
