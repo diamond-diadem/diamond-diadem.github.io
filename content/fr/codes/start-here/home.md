@@ -18,16 +18,16 @@ Mais pour commencer, si vous n'êtes pas encore passé par cette étape et si vo
 
 <h3><u>LIENS UTILES :</u></h3>
 
-- <h5><a href="/fr/documentation/install-apptainer/howto/">Installez Apptainer</a></h5>
-- <h5><a href="/fr/documentation/use-apptainer-image/howto/">Apprenez comment utiliser un conteneur</a></h5>
+- <h5><a href="/documentation/install-apptainer/howto/">Installez Apptainer</a></h5>
+- <h5><a href="/documentation/use-apptainer-image/howto/">Apprenez comment utiliser un conteneur</a></h5>
 
 
 <h3><u>CODES DISPONIBLES :</u></h3> 
 
 | Calcul scientifique                              | Visualisation                           |
 | ------------------------------------------------ | --------------------------------------- |
-| [<i class="icon-lammps"></i>LAMMPS](/fr/codes/scientific-computing/lammps/) | [<i class="icon-ovito"></i>Ovito](/fr/codes/visualisation/ovito/) |
-| [<i class="icon-quantum-espresso"></i>Quantum Espresso](/fr/codes/scientific-computing/quantum-espresso/) | [<i class="icon-paraview"></i>ParaView](/fr/codes/visualisation/paraview/) |
+| [<i class="icon-lammps"></i>LAMMPS](/codes/scientific-computing/lammps/) | [<i class="icon-ovito"></i>Ovito](/codes/visualisation/ovito/) |
+| [<i class="icon-quantum-espresso"></i>Quantum Espresso](/codes/scientific-computing/quantum-espresso/) | [<i class="icon-paraview"></i>ParaView](/codes/visualisation/paraview/) |
 
 
 <!-- <div class="row">
