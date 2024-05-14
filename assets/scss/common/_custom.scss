@@ -4,8 +4,11 @@
 //     text-align: right;
 // }
 
-
-
+@include color-mode(dark) {
+    .dropdown-menu {
+        background-color: $body-bg-dark;
+    }
+}
 .dropdown-languages {
     width: 80px;
 }
@@ -27,7 +30,7 @@
 
 @include color-mode(dark) {
     .dropdown-languages .btn .dropdown-caret:hover {
-        // color: $body-color-dark;
+        // background-color: $body-bg-dark;
         color: $link-color-dark
     }
 
