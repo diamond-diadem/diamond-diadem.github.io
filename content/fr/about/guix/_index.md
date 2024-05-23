@@ -26,16 +26,19 @@ Dans le cadre du projet DIAMOND, imposant des exigences fortes relatives à la r
 
 /* Create two unequal columns that floats next to each other */
 .column {
-  float: left;
+  
 }
 
 .left {
-  width: 25%;
-  padding: 30px 10px; 
+  float: right;
+  width: 20%;
+  padding: 20px 20px;
 }
 
 .right {
-  width: 75%;
+  float: left;
+  width: 80%;
+  
 }
 
 /* Clear floats after the columns */
