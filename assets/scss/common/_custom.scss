@@ -251,6 +251,20 @@ u {
         
 }
 
+
+.logo-guix {
+    content: url('/images/guix-logo-light.svg');
+}
+
+@include color-mode(dark) {
+    .logo-guix {
+        content: url('/images/guix-logo-dark.svg');
+    }
+}
+
+
+
+
 .logo-france2030 {
     content: url('/images/france-2030-couleurs.png');
     height: 90px;
