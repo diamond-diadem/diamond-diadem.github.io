@@ -30,14 +30,15 @@ Dans le cadre du projet DIAMOND, imposant des exigences fortes relatives à la r
 }
 
 .left {
-  float: right;
-  width: 20%;
-  padding: 20px 20px;
+  /* float: right; */
+  width: 75%;
+  /* padding: 20px 20px; */
 }
 
 .right {
-  float: left;
-  width: 80%;
+  /* float: left; */
+  width: 25%;
+  padding: 20px 0;
   
 }
 
@@ -50,16 +51,18 @@ Dans le cadre du projet DIAMOND, imposant des exigences fortes relatives à la r
 </style>
 <div class="row">
 <div class="column left">
-<a href="https://guix.gnu.org" target="_blank"><img src="/images/guix.svg" width=100%/></a>
-
-</div>
-<div class="column right">
-<!-- <div class="text-x-large" align="justify"> -->
 
 * il est utilisable sur n'importe quelle distribution Linux (incontournables dans le milieu académique et sur les centres de calcul scientifique), sans pour autant entrer en concurrence avec les autres gestionnaires installés.
 * il est construit pour correspondre aux exigences de la reproductibilté scientifique, permettant d'assurer l'intégrité des exécutables bit-à-bit.
 * il facilite la gestion de l'environnement de l'utilisation de versions différentes de librairies, que l'on rencontre souvent lorsque deux outils requièrent chacun une version spécifique d'une librairie donnée.
 * il s'agit d'un outil open-source, prinicpalement développé au sein du milieu académique français.
+
+</div>
+<div class="column right">
+<!-- <div class="text-x-large" align="justify"> -->
+<a href="https://guix.gnu.org" target="_blank"><img class="logo-guix" width=100%/></a>
+
+
 <!-- </div> -->
 </div>
 </div>
