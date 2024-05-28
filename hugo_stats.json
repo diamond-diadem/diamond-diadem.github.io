@@ -344,6 +344,7 @@
       "détail-des-étapes-1",
       "détail-dutilisation-du-conteneur-lammps",
       "détail-dutilisation-du-conteneur-ovito",
+      "détail-dutilisation-du-conteneur-quantum-espresso",
       "environment-variables",
       "examples-input-files",
       "examples-input-files-_to-be-added_",
@@ -433,6 +434,8 @@
       "using-the-lammps-container-for-sequential-runs",
       "utiliser-le-conteneur-lammps-en-parallèle",
       "utiliser-le-conteneur-lammps-en-séquentiel",
+      "utiliser-le-conteneur-quantum-espresso-en-parallèle",
+      "utiliser-le-conteneur-quantum-espresso-en-séquentiel",
       "variables-denvironnement",
       "à-propos-des-paquets"
     ]
