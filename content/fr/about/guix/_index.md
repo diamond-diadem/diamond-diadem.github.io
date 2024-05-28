@@ -13,7 +13,7 @@ Type d'archive contenant un programme informatique (sous-forme de source ou d'ex
 * Pour les utilisateurs, ce choix permet d'automatiser la gestion de l'environnement logiciel sur une machine afin de pouvoir se concentrer sur l'utilisation de l'outil installé.
 * Pour les développeurs, ce choix permet de faciliter la distribution des outils produits.
 
-### La solution choisie dans DIAMOND.
+### La solution choisie pour DIAMOND.
 
 De nombreux gestionnaires de paquets existent : certains comme `apt` ou `rpm` sont spécifiques à des systèmes d'exploitations spécifiques, d'autres comme `pip` sont spécifiques à des lanagages de programmation. Il est d'ailleurs fréquent d'en employer plusieurs simultanément, et l'on choisit en fonction du contexte d'utiliser tel outil parce qu'il propose une large gamme de solutions, tel autre pour des raisons de sécurité car il est mieux maintenu , etc.
 
