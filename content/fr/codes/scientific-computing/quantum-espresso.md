@@ -20,14 +20,11 @@ Le logiciel prend en charge une variété de méthodes de calcul, telles que la 
 
 </div>
 
-### Lien de téléchargement direct : {{< inline-svg src="paperclip" height="32px" width="32px" class="svg-inline-custom" >}} Quantum ESPRESSO _(à venir)_
+<!-- ### Lien de téléchargement direct : {{< inline-svg src="paperclip" height="32px" width="32px" class="svg-inline-custom" >}} Quantum ESPRESSO _(à venir)_ -->
 
 ### Récupérez l'image Apptainer :
 
 ```sh
-# LOGIN
-apptainer remote login -u <your-login> oras://gricad-registry.univ-grenoble-alpes.fr
-
 # PULL
 apptainer pull quantum-espresso.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/quantum-espresso.sif:latest
 ```

@@ -24,14 +24,11 @@ Le <a href="https://www.lammps.org/" target="_blank">site web de LAMMPS</a> offr
 
 </div>
 
-### Lien de téléchargement direct : {{< inline-svg src="paperclip" height="32px" width="32px" class="svg-inline-custom" >}} LAMMPS _(à venir)_
+<!-- ### Lien de téléchargement direct : {{< inline-svg src="paperclip" height="32px" width="32px" class="svg-inline-custom" >}} LAMMPS _(à venir)_ -->
 
 ### Récupérez l'image Apptainer :
 
 ```sh
-# LOGIN
-apptainer remote login -u <your-login> oras://gricad-registry.univ-grenoble-alpes.fr
-
 # PULL
 apptainer pull lammps.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/lammps.sif:latest
 ```

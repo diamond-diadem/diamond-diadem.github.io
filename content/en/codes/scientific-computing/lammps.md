@@ -24,14 +24,11 @@ The [LAMMPS website](https://www.lammps.org/) provides a variety of information 
 
 </div>
 
-### Direct download link : {{< inline-svg src="paperclip" height="32px" width="32px" class="svg-inline-custom" >}} LAMMPS
+<!-- ### Direct download link : {{< inline-svg src="paperclip" height="32px" width="32px" class="svg-inline-custom" >}} LAMMPS -->
 
 ### Retrieve this container using Apptainer:
 
 ```sh
-# LOGIN
-apptainer remote login -u <your-login> oras://gricad-registry.univ-grenoble-alpes.fr
-
 # PULL
 apptainer pull lammps.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/lammps.sif:latest
 ```

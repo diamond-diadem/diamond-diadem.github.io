@@ -16,14 +16,11 @@ Ovito is developed, distributed, and supported by OVITO GmbH, a German startup. 
 
 </div>
 
-### Direct download link: {{< inline-svg src="paperclip" height="32px" width="32px" class="svg-inline-custom" >}} Ovito
+<!-- ### Direct download link: {{< inline-svg src="paperclip" height="32px" width="32px" class="svg-inline-custom" >}} Ovito -->
 
 ### Retrieve this container using Apptainer:
 
 ```sh
-# LOGIN
-apptainer remote login -u <your-login> oras://gricad-registry.univ-grenoble-alpes.fr
-
 # PULL
 apptainer pull ovito.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/ovito.sif:latest
 ```
