@@ -20,14 +20,11 @@ Ce logiciel repose sur une architecture modulaire, ce qui permet aux utilisateur
 
 </div>
 
-### Lien de téléchargement direct : {{< inline-svg src="paperclip" height="32px" width="32px" class="svg-inline-custom" >}} ParaView _(à venir)_
+<!-- ### Lien de téléchargement direct : {{< inline-svg src="paperclip" height="32px" width="32px" class="svg-inline-custom" >}} ParaView _(à venir)_ -->
 
 ### Récupérez ce conteneur avec Apptainer :
 
 ```sh
-# LOGIN
-apptainer remote login -u <your-login> oras://gricad-registry.univ-grenoble-alpes.fr
-
 # PULL
 apptainer pull paraview.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/paraview.sif:latest
 ```
