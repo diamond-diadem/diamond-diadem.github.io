@@ -15,7 +15,15 @@ Si l'image Apptainer que vous voulez utiliser supporte le calcul parallèle, alo
 
 ## Exemple pratique : image avec OpenMPI 
 
- Une image sur mesure dédiée à la mise en pratique de ce tutoriel est disponible à [cette adresse](https://www.apptainer-images.diamond.fr/tutorial-openmpi). En suivant ce lien, vous récupérez une image Apptainer (format de fichier `.sif`). Cette image est un fichier relocalisable et renommable, qu'il est recommandé de placer dans un répertoire dédié pour facilement la retrouver ; celui-ci peut-être quelconque, et dans le cadre de ce tutoriel nous assumerons que vous l'avez placée dans un répertoire nommé `$HOME/apptainer-images` :
+ Une image sur mesure dédiée à la mise en pratique de ce tutoriel est disponible en tapant la commande suivante :
+
+
+ ```sh
+ # PULL
+ apptainer pull tutorial-openmpi.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/tutorial-openmpi.sif:latest
+ ``` 
+ 
+Ainsi, vous récupérez une image Apptainer (format de fichier `.sif`). Cette image est un fichier relocalisable et renommable, qu'il est recommandé de placer dans un répertoire dédié pour facilement la retrouver ; celui-ci peut-être quelconque, et dans le cadre de ce tutoriel nous assumerons que vous l'avez placée dans un répertoire nommé `$HOME/apptainer-images` :
 
 ```bash
 mkdir -p $HOME/apptainer-images
