@@ -13,6 +13,8 @@ weight: 1
 
 - <h3><a href="/documentation/use-apptainer-image/howto/">Utilisation d'une image Apptainer</a></h3>
 
+- <h3><a href="/documentation/apptainer-parallel/howto/">Apptainer en parallèle</a></h3>
+
 - <h3>Tutoriels spécifiques par image</h3>
    
    - <h4><a href="/documentation/by-container/lammps/">LAMMPS</a></h4>
