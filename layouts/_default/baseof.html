@@ -16,7 +16,8 @@
     {{ partial "footer/footer" . }}
     {{ partial "footer/script-footer" . }}
     {{ if site.Params.doks.toTopButton -}}
-      {{ partial "footer/to-top" . }}
+    {{ partial "footer/to-top" . }}
     {{ end -}}
+    {{ partial "footer/custom-to-top" . }}
   </body>
 </html>
