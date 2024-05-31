@@ -8,7 +8,7 @@ import '@hyas/core/assets/js/core.js';
 import 'js/clipboard.js';
 
 // // Import to-top.js
-import 'js/to-top.js';
+// import 'js/to-top.js';
 
 // Import tabs.js
 import 'js/tabs.js';
