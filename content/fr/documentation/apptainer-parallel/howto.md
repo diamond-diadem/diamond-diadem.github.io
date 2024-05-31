@@ -2,7 +2,7 @@
 title: Utiliser Apptainer en parallèle ?
 linktitle: Utiliser Apptainer en parallèle ?
 weight: 1
-toc: true
+# toc: true
 ---
 
 Si l'image Apptainer que vous voulez utiliser supporte le calcul parallèle, alors OpenMPI fait partie des librairies inclues au sein du conteneur. Dans ce cas, il est intéressant d'utiliser cette solution de parallélisation pour accélèrer votre calcul. Si on se réfère à la [documentation](https://apptainer.org/docs/user/latest/mpi.html) officielle d'Apptainer, il existe deux modes d'utilisation d'OpenMPI avec Apptainer : le mode hybride et le mode de liaison. Ces modes sont plébiscités lorsque lorsque le conteneur est utilisé sur des infrastructures de type HPC. Cependant, un troisième mode peut être employé si le conteneur est lancé sur une machine personnelle : le mode embarqué. Dans cette documentation, nous détaillerons :
