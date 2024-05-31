@@ -1,4 +1,4 @@
 ---
-title: Codes for Visualisation
+title: Visualisation Codes
 weight: 3
 ---

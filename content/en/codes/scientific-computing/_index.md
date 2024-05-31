@@ -1,5 +1,5 @@
 ---
-title: Codes for Scientific Computing
+title: Scientific Computing Codes
 weight: 2
 ---
 
