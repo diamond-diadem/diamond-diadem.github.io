@@ -1,7 +1,7 @@
 const topButton = document.getElementById('totopbutton');
 
 if (topButton !== null) {
-  topButton.classList.remove('show');
+  topButton.classList.remove('fade');
   window.onscroll = function() {
     scrollFunction()
   };
@@ -10,10 +10,10 @@ if (topButton !== null) {
 }
 
 function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    topButton.classList.add('show');
+  if (document.body.scrollTop > 270 || document.documentElement.scrollTop > 270) {
+    topButton.classList.remove('fade');
   } else {
-    topButton.classList.remove('show');
+    topButton.classList.add('fade');
   }
 }
 
