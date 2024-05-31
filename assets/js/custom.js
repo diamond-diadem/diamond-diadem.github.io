@@ -10,7 +10,7 @@ let topButton = document.getElementById("toTop");
 
 window.onscroll = function() {scrollFunction()};
 
-topButton.addEventListener('click', topFunction);
+// topButton.addEventListener('click', topFunction);
 
 //   topButton.addEventListener('click', topFunction);
 // }
