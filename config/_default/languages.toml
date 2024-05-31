@@ -16,7 +16,7 @@
   [en.params]
     languageISO = "EN"
     languageTag = "en-US"
-    footer = 'Brought to you by <a class="text-muted" href="https://gethyas.com/">Hyas</a>'
+    footer = 'This work was supported by a grant from the French government managed by the National Research Agency under the France 2030 program with reference ANR-22-PEXD-0015.'
     alertText = '<a class="alert-link stretched-link fw-normal" href="/blog/example-post/">Doks version 1.0 just shipped!</a>'
     description = "Digital platform for PEPR DIADEM"
 #[de]
