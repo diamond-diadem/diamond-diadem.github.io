@@ -1,15 +1,19 @@
 // Put your custom JS code here
 
-let topButton = document.getElementById('toTop');
+let topButton = document.getElementById("toTop");
 
-if (topButton !== null) {
-  topButton.classList.remove('fade');
-  window.onscroll = function() {
-    scrollFunction()
-  };
+// if (topButton !== null) {
+//   topButton.classList.remove('fade');
+//   window.onscroll = function() {
+//     scrollFunction()
+//   };
 
-  topButton.addEventListener('click', topFunction);
-}
+window.onscroll = function() {scrollFunction()};
+
+topButton.addEventListener('click', topFunction);
+
+//   topButton.addEventListener('click', topFunction);
+// }
 
 function scrollFunction() {
   if (document.body.scrollTop > 270 || document.documentElement.scrollTop > 270) {
