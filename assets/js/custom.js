@@ -1,6 +1,6 @@
 // Put your custom JS code here
 
-const topButton = document.getElementById('toTop');
+const topButton = document.getElementById("toTop");
 
 if (topButton !== null) {
   topButton.classList.remove('fade');
