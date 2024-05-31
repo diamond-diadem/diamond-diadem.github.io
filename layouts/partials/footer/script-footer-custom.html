@@ -12,4 +12,6 @@
 {{ end -}}
 */}}
 
-{{ partial "footer/esbuild" (dict "src" "js/to-top.js" "load" "async" "transpile" false) -}}
+{{ if eq (hugo.Environment) "production" -}}
+  {{ partial "footer/esbuild" (dict "src" "js/to-top.js" "load" "async" "transpile" false) -}}
+{{ end -}}
