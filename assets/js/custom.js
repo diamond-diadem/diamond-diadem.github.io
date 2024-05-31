@@ -1,5 +1,3 @@
-// Put your custom JS code here
-
 const topButton = document.getElementById("topbutton");
 
 if (topButton !== null) {
@@ -13,9 +11,9 @@ if (topButton !== null) {
 
 function scrollFunction() {
   if (document.body.scrollTop > 270 || document.documentElement.scrollTop > 270) {
-    topButton.classList.add('fade');
-  } else {
     topButton.classList.remove('fade');
+  } else {
+    topButton.classList.add('fade');
   }
 }
 
