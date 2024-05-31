@@ -31,13 +31,13 @@
   source = "node_modules/@tabler/icons/icons"
   target = "assets/svgs/tabler-icons"
 
-  [[mounts]]
-   source = "assets"
-   target = "assets"
+[[mounts]]
+  source = "assets"
+  target = "assets"
 
-#  [[mounts]]
-#   source = "assets/js"
-#   target = "assets/js"  
+[[mounts]]
+  source = "assets/js"
+  target = "assets/js"  
 
 ## content
 
