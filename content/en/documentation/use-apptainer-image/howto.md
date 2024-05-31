@@ -1,5 +1,5 @@
 ---
-title: How to interact with an Apptainer image ?
+title: "How to interact with an Apptainer \n image ?"
 ---
 
 
