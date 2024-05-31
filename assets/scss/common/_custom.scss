@@ -408,3 +408,12 @@ u {
         background-color: rgba(44, 44, 44, 0.95);
     }
 }
+
+#totopbutton {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+  
+#totopbutton.fade {
+    opacity: 1;
+  }
