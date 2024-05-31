@@ -416,4 +416,24 @@ u {
   
 #totopbutton.fade {
     opacity: 1;
-  }
+}
+
+
+// @supports ((position:-webkit-sticky) or (position:sticky)) {
+//     .docs-toc {
+//       position: -webkit-sticky;
+//       position: sticky;
+//       top: 4.25rem;
+//       height: calc(100vh - 4.25rem);
+//       overflow-y: auto;
+//     }
+  
+//     .docs-toc-offset {
+//       top: 4.5rem;
+//       height: calc(100vh - 4.5rem);
+//     }
+  
+//     .docs-toc-top {
+//       position: relative;
+//     }
+// }

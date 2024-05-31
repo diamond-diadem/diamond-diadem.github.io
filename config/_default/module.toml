@@ -38,7 +38,11 @@
 
 [[mounts]]
   source = "assets/js"
-  target = "assets/js"  
+  target = "assets/js"
+
+[[mounts]]
+  source = "assets/scss"
+  target = "assets/scss"  
 
 ## content
 
