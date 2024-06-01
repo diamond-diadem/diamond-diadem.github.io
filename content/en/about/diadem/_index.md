@@ -41,7 +41,7 @@ linkTitle: DIADEM
 <div class="column right">
 <div align="justify" class="text-x-large">
 
-The DIADEM Priority Research Program and Equipment (PEPR) is one of the winners of the 1st wave of the exploratory PEPR call for projects. Funded by France 2030, it aims to accelerate the design and arrival on the market of more efficient and more sustainable materials, in particular thanks to artificial intelligence. Its budget of €85M should allow it to set up in France a network of four high-level platforms distributed across the territory and coordinated. Three calls for projects, to which the entire large French scientific community concerned by materials and artificial intelligence can respond, and a call for events dedicated to the initial and continuing training of French scientists complete the system.
+The <a href="https://pepr-diadem.fr" target="_blank">DIADEM</a> Priority Research Program and Equipment (PEPR) is one of the winners of the 1st wave of the exploratory PEPR call for projects. Funded by France 2030, it aims to accelerate the design and arrival on the market of more efficient and more sustainable materials, in particular thanks to artificial intelligence. Its budget of €85M should allow it to set up in France a network of four high-level platforms distributed across the territory and coordinated. Three calls for projects, to which the entire large French scientific community concerned by materials and artificial intelligence can respond, and a call for events dedicated to the initial and continuing training of French scientists complete the system.
 
 </div>
 </div>
