@@ -377,7 +377,7 @@ u {
 @include media-breakpoint-down(sm) {
     .section-title-lead-landing-page,
     .container-h1-default-page {
-        background-size: 100% auto;
+        background-size: auto 100%;
         background-position: top;
     }
     
