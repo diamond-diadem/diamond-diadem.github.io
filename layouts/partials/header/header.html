@@ -98,7 +98,7 @@
         {{ if eq site.Params.doks.multilingualMode true -}}
           {{ $currentLanguageName := .Language.LanguageName }}
           {{ range .Translations }}
-            <a class="nav-link" rel="alternate" href="{{ .RelPermalink }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">{{ $currentLanguageName }}</a>
+            <a class="btn btn-link nav-link" type="button" rel="alternate" href="{{ .RelPermalink }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavMain" aria-controls="offcanvasNavMain">{{ $currentLanguageName }}</a>
           {{ end }}
         {{ end -}}
         
