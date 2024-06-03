@@ -323,17 +323,37 @@ u {
     // }
 }
 
-@include media-breakpoint-down(sm){
+
+
+
+@include media-breakpoint-down(md){
     .logo-france2030{
         height: 90px;
         margin-right: 0px;
         // text-align: center;
         // position: center auto;
     }
-    .anchor-france2030{
+    .anchor-france2030-mobile {
         text-align: center;
+        visibility: visible;
+    }
+    .anchor-france2030-desktop{
+        visibility: collapse;
+    }
+    
+}
+
+@include media-breakpoint-up(lg){
+    .anchor-france2030-mobile {
+        // text-align: center;
+        visibility: collapse;
+    }
+    .anchor-france2030-desktop{
+        visibility: visible;
     }
 }
+
+
 
 
 .col-default-page {
