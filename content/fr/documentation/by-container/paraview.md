@@ -35,7 +35,7 @@ tar -xzf paraview-tutorial-inputs.tar.gz # Extrait le contenu de l'archive, cré
 cd ./tutorial
 ```
 
-## TL; DR Commande en une ligne
+##  Commande en une ligne
 Pour les personnes pressées, voici comment lancer l'outil de visualisation ParaView en utilisant l'image de conteneur (téléchargée au préalable et située à `$HOME/apptainer-images/paraview.sif`). Dans le cas où le répertoire courant contient un fichier d'entrée lisible par ParaView :
 
 ```sh

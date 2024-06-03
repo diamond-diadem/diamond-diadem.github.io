@@ -48,7 +48,7 @@ tar -xzf DIAMOND-tutorial.tar.gz # Extracts the content of the archive, creates 
 cd ./tutorial
 ```
 
-## TL; DR One liner command
+##  One liner command
 For impatient folks, here is how to launch a parallel LAMMPS computation using the container image (previously downloaded and stored in `$HOME/apptainer-images/lammps.sif`). In the case where the current directory contains all  mandatory LAMMPS input files :
 
 ```sh

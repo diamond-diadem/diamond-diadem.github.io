@@ -35,7 +35,7 @@ tar -xzf ovito-tutorial-inputs.tar.gz # Extracts the content of the archive, cre
 cd ./tutorial
 ```
 
-## TL; DR One liner command
+##  One liner command
 For those in a hurry, here's how to launch the Ovito visualization tool using the container image (previously downloaded and located at `$HOME/apptainer-images/ovito.sif`).  In case the current directory contains an input file readable by Ovito:
 
 ```sh

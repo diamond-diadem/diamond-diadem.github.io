@@ -47,7 +47,7 @@ tar -xzf DIAMOND-tutorial.tar.gz # Extrait le contenu de l'archive, créée ./tu
 cd ./tutorial
 ```
 
-## TL; DR Commande en une ligne
+##  Commande en une ligne
 Pour les personnes pressées, voici comment lancer un calcul LAMMPS parallèle en utilisant l'image de conteneur (téléchargée au préalable et située à `$HOME/apptainer-images/lammps.sif`). Dans le cas où le répertoire courant contient les fichiers d'entrée nécessaires pour LAMMPS :
 
 ```sh
