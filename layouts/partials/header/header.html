@@ -98,7 +98,7 @@
         {{ if eq site.Params.doks.multilingualMode true -}}
           {{ $currentLanguageName := .Language.LanguageName }}
           {{ range .Translations }}
-            <a class="button" href="{{ .RelPermalink }}">{{ $currentLanguageName }}</a>
+            <a class="button" rel="alternate" href="{{ .RelPermalink }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">{{ $currentLanguageName }}</a>
           {{ end }}
         {{ end -}}
         
