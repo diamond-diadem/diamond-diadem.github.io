@@ -241,6 +241,26 @@ u {
     }   
 }
 
+.logo-diamond-homepage {
+    content: url('/images/logo-diamond-new-light.png');
+    width: 38%;
+}
+
+
+@include color-mode(dark) {
+    .logo-diamond-homepage {
+        content: url('/images/logo-diamond-new-dark.png');
+    }   
+}
+
+@include media-breakpoint-down(sm) {
+    .logo-diamond-homepage {
+        width: 90%;
+    }
+}
+
+
+
 .logo-quantum-espresso {
     content: url('/images/quantum-espresso-logo-light.png');
 }
