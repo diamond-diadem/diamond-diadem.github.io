@@ -466,3 +466,11 @@ u {
         border-right: none;
     }
 }
+
+@include media-breakpoint-down(sm) {
+    .navbar .offcanvas.offcanvas-start,
+    .navbar .offcanvas.offcanvas-end {
+      width: 95vw;
+    }
+  }
+  
