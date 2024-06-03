@@ -56,4 +56,3 @@ Afin de piloter ce programme et de garantir la neutralité, la qualité et la tr
 
 </div>
 
-### Site officiel
