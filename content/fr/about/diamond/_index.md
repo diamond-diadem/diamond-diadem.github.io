@@ -18,11 +18,12 @@ linkTitle: DIAMOND
 }
 
 .left {
-  width: 28%;
+  width: 25%;
 }
 
 .right {
-  width: 72%;
+  width: 75%;
+  padding: 20px 0;
 }
 
 /* Clear floats after the columns */
