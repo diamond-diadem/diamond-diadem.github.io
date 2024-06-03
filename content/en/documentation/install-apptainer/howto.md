@@ -14,7 +14,7 @@ Apptainer works on any modern Linux distribution ; however, it is not compatible
 
 ## Install Ubuntu packages
 
-### TL; DR One liner command
+###  One liner command
 You can run the following commands to directly install Ubuntu packages :
 
 ```sh
@@ -44,7 +44,7 @@ sudo apt install -y apptainer
 ```
 
 ##  Install Debian packages
-### TL; DR One liner command
+###  One liner command
 You can run the following commands to directly install Debian packages :
 
 ```sh

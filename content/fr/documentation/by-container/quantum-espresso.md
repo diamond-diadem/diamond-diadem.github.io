@@ -37,7 +37,7 @@ cd ./tutorial
 **Remarque**
 > Les commandes présentées ici sont pour l'utilisation de l'exécutable `pw.x` de Quantum Espresso. Il s'agit aussi de l'exécutable appelé par défaut par la commande `apptainer run`. Dans le cas où l'on veut appeler un autre exécutable, il est nécessaire d'utiliser `apptainer exec <options> <image> <nom-de-l-executable>`.
 
-## TL; DR Commande en une ligne
+##  Commande en une ligne
 Pour les personnes pressées, voici comment lancer un calcul Quantum Espresso parallèle en utilisant l'image de conteneur (téléchargée au préalable et située à `$HOME/apptainer-images/quantum-espresso.sif`). Dans le cas où le répertoire courant contient les fichiers d'entrée nécessaires pour Quantum Espresso :
 
 ```sh

@@ -31,7 +31,7 @@ Le logiciel fonctionne sur toute distribution Linux moderne ; il ne tourne pas d
 
 ## Installation de paquets Ubuntu
 
-### TL; DR Commande en une ligne
+###  Commande en une ligne
 Les commandes à lancer pour l'installation des paquets Ubuntu sont les suivantes :
 
 ```sh
@@ -63,7 +63,7 @@ sudo apt install -y apptainer
 
 ##  Installation de paquets Debian
 
-### TL; DR Commande en une ligne
+###  Commande en une ligne
 Les commandes à lancer pour l'installation des paquets Debian sont les suivantes :
 
 ```sh
