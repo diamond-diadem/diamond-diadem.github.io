@@ -96,16 +96,9 @@
         </button>
         {{ end -}}
         {{ if eq site.Params.doks.multilingualMode true -}}
-          {{ if .IsTranslated }}
-            {{ range .Translations }}
-              <a class="button is-small is-danger is-rounded" href="{{ .Permalink }}">{{ .Site.Language.LanguageName }}</a>
-            {{ end }}
-          {{ else }}
-            {{ if eq .Site.Language.Lang "FR" }}
-              <a class="button is-small is-danger is-rounded" href="{{ .URL }}"><b>EN</b></a>
-            {{ else }}
-              <a class="button is-small is-danger is-rounded" href="{{ .URL }}"><b>FR</b></a>
-            {{ end }}
+          {{ $currentLanguageName := .Language.LanguageName }}
+          {{ range .Translations }}
+            <a class="button" href="{{ .Permalink }}">{{ $currentLanguageName }}</a>
           {{ end }}
         {{ end -}}
         
