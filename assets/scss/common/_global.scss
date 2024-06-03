@@ -175,21 +175,21 @@ body {
 @include media-breakpoint-up(lg) {
   .docs-sidebar {
     order: 0;
-    border-right: 1px solid $gray-200;
+    // border-right: 1px solid $gray-200;
   }
 
   @supports ((position:-webkit-sticky) or (position:sticky)) {
     .docs-sidebar {
       position: -webkit-sticky;
       position: sticky;
-      top: 4.25rem;
+      top: 6.75rem;
       z-index: 1000;
-      height: calc(100vh - 4.25rem);
+      height: calc(85vh - 4.25rem);
     }
 
     .docs-sidebar-offset {
-      top: 4.5rem;
-      height: calc(100vh - 4.5rem);
+      top: 7rem;
+      height: calc(85vh - 4.5rem);
     }
 
     .docs-sidebar-top {
@@ -221,7 +221,7 @@ body {
   .docs-links {
     display: block;
     width: auto;
-    margin-right: -1.5rem;
+    margin-right: 0.25rem;
     padding-bottom: 4rem;
   }
 }
@@ -235,13 +235,13 @@ body {
     position: -webkit-sticky;
     position: sticky;
     top: 6.75rem;
-    height: calc(75vh - 6.75rem);
+    height: calc(85vh - 6.75rem);
     overflow-y: auto;
   }
 
   .docs-toc-offset {
     top: 7rem;
-    height: calc(75vh - 7rem);
+    height: calc(55vh - 7rem);
   }
 
   .docs-toc-top {
