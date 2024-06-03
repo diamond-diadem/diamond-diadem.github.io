@@ -231,13 +231,13 @@ u {
 }
 
 .logo-diamond {
-    content: url('/images/logo-diamond-cropped.svg');
+    content: url('/images/logo-diamond-new-light.png');
 }
 
 
 @include color-mode(dark) {
     .logo-diamond {
-        content: url('/images/logo-diamond-cropped-dark.svg');
+        content: url('/images/logo-diamond-new-dark.png');
     }   
 }
 
