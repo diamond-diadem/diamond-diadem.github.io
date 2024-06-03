@@ -379,7 +379,12 @@ u {
     .container-h1-default-page {
         background-image: none;
     }
-    
+    @include color-mode(dark) {
+        .section-title-lead-landing-page,
+        .container-h1-default-page {
+            background-image: none;
+        }   
+    }    
 }
 
 
