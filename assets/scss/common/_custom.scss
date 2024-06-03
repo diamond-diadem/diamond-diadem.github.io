@@ -70,9 +70,16 @@
 // }
 
 .nav-logo {
-    height: 25px;
-    position: relative;
-    top: -3px;
+    height: 55px;
+    // position: relative;
+    // top: -3px;
+    content: url('/images/diamond-new-light.png');
+}
+
+@include color-mode(dark) {
+    .nav-logo {
+        content: url('/images/diamond-new-dark.png');
+    }
 }
 
 .current-language-display {
