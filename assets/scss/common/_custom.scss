@@ -566,3 +566,10 @@ u {
     }
   }
   
+@include media-breakpoint-down(md) {
+    .switch-language-desktop,
+    .switch-color-mode-desktop {
+        display: none;
+    }
+
+}
