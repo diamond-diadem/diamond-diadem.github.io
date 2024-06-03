@@ -255,7 +255,7 @@ u {
 
 @include media-breakpoint-down(sm) {
     .logo-diamond-homepage {
-        width: 80vw;
+        width: 100%;
         position: relative;
         top: -35px;
     }
@@ -321,6 +321,14 @@ u {
 
 
     // }
+}
+
+@include media-breakpoint-down(sm){
+    .logo-france2030{
+        height: 90px;
+        margin-right: 0px;
+        align-self: center;
+    }
 }
 
 
