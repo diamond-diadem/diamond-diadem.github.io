@@ -142,7 +142,7 @@
         </ul>
 
         <!-- Logo "France 2030 : Matériaux émergents" -->
-        <a class="anchor-france2030-desktop" href="https://pepr-diadem.fr" target="_blank"><img class="logo-france2030"></a>
+        <a class="anchor-france2030-desktop" href="https://pepr-diadem.fr" target="_blank"><img class="logo-france2030-desktop"></a>
 
         <!-- FlexSearch desktop -->
         {{ partial "main/showFlexSearch" . }}
@@ -160,7 +160,7 @@
         <!-- Language dropdown -->
         {{ if eq site.Params.doks.multilingualMode true -}}
 
-        <div class="dropdown dropdown-languages mt-1 order-lg-2 align-self-center">
+        <div class="dropdown dropdown-languages mt-1 order-lg-2 align-self-center switch-language-desktop">
           <button class="btn btn-dropdown dropdown-toggle" id="doks-languages" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
             <span class="dropdown-caret">
               <!-- <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -234,7 +234,7 @@
 
         <!-- Color mode toggler -->
         {{ if and (eq site.Params.doks.colorMode "auto") site.Params.doks.colorModeToggler -}}
-        <button id="buttonColorMode" class="btn btn-link mx-auto nav-link p-0 ms-lg-2 me-lg-1" type="button" aria-label="Toggle theme">
+        <button id="buttonColorMode" class="btn btn-link mx-auto nav-link p-0 ms-lg-2 me-lg-1 switch-color-mode-desktop" type="button" aria-label="Toggle theme">
           <svg data-bs-theme-value="dark" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
             <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
@@ -258,7 +258,7 @@
         {{ end -}}
 
         
-        <a class="anchor-france2030-mobile" href="https://pepr-diadem.fr" target="_blank"><img class="logo-france2030"></a>
+        <a class="anchor-france2030-mobile" href="https://pepr-diadem.fr" target="_blank"><img class="logo-france2030-mobile"></a>
 
         <!-- Navbar button mobile -->
         {{ if site.Params.doks.navBarButton -}}
