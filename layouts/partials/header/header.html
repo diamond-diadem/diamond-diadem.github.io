@@ -102,9 +102,9 @@
             {{ end }}
           {{ else }}
             {{ if eq .Site.Language.Lang "FR" }}
-              <a class="button is-small is-danger is-rounded" href="./"><b>EN</b></a>
+              <a class="button is-small is-danger is-rounded" href="{{ .URL }}"><b>EN</b></a>
             {{ else }}
-              <a class="button is-small is-danger is-rounded" href="./"><b>FR</b></a>
+              <a class="button is-small is-danger is-rounded" href="{{ .URL }}"><b>FR</b></a>
             {{ end }}
           {{ end }}
         {{ end -}}
