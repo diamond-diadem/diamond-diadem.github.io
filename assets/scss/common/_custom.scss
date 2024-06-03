@@ -297,22 +297,32 @@ u {
 }
 
 
-
-
-.logo-france2030 {
+.logo-france2030-desktop,
+.logo-france2030-mobile {
     content: url('/images/france-2030-couleurs.png');
+}
+
+@include color-mode(dark) {
+    .logo-france2030-desktop,
+    .logo-france2030-mobile {
+    content: url('/images/france-2030-blanc.png');
+    }   
+}
+
+.logo-france2030-desktop {
+    // content: url('/images/france-2030-couleurs.png');
     height: 90px;
     margin-right: 20px;
 }
 
-@include color-mode(dark) {
-    .logo-france2030 {
-        content: url('/images/france-2030-blanc.png');
-    }
-}
+// @include color-mode(dark) {
+//     .logo-france2030 {
+//         content: url('/images/france-2030-blanc.png');
+//     }
+// }
 
 @include media-breakpoint-down(xl) {
-    .logo-france2030 {
+    .logo-france2030-desktop {
         height : 60px;
     }
 
@@ -323,34 +333,41 @@ u {
     // }
 }
 
-
+.logo-france2030-mobile{
+    height: 90px;
+    // text-align: center;
+    // position: center auto;
+}
 
 
 @include media-breakpoint-down(md){
-    .logo-france2030{
-        height: 90px;
-        margin-right: 0px;
-        // text-align: center;
-        // position: center auto;
-    }
-    .anchor-france2030-mobile {
-        text-align: center;
-        visibility: visible;
-    }
-    .anchor-france2030-desktop{
-        visibility: collapse;
+    
+    // .anchor-france2030-mobile,
+    // .logo-france2030-mobile {
+    //     text-align: center;
+    //     visibility: visible;
+    // }
+    // .anchor-france2030-desktop,
+    .logo-france2030-desktop{
+        display: none;
     }
     
 }
 
 @include media-breakpoint-up(lg){
-    .anchor-france2030-mobile {
-        // text-align: center;
-        visibility: collapse;
+    // .anchor-france2030-mobile {
+    //     visibility: collapse;
+    // }
+
+    .logo-france2030-mobile {
+        display: none;
     }
-    .anchor-france2030-desktop{
-        visibility: visible;
-    }
+
+
+    // .anchor-france2030-desktop,
+    // .logo-france2030-desktop {
+    //     visibility: visible;
+    // }
 }
 
 
