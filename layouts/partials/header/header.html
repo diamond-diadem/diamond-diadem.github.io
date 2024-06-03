@@ -96,52 +96,17 @@
         </button>
         {{ end -}}
         {{ if eq site.Params.doks.multilingualMode true -}}
-        <div class="dropdown dropdown-languages mt-1 order-lg-2 align-self-center switch-language-mobile">
-          <button class="btn btn-dropdown dropdown-toggle" id="doks-languages" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
-            <span class="dropdown-caret">
-              <!-- <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                <path d="M4 5h7"></path>
-                <path d="M9 3v2c0 4.418 -2.239 8 -5 8"></path>
-                <path d="M5 9c0 2.144 2.952 3.908 6.7 4"></path>
-                <path d="M12 20l4 -9l4 9"></path>
-                <path d="M19.1 18h-6.2"></path>
-              </svg> -->
-              <span class="current-language-display" id="doks-language-current">{{ .Site.Language.LanguageName }}</span>
-              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                <path d="M6 9l6 6l6 -6"></path>
-              </svg>
-            </span>
-          </button>
-          <ul class="dropdown-menu dropdown-menu-lg me-lg-2 shadow rounded" aria-labelledby="doks-languages">
-
-            <!-- <li><span class="dropdown-item current" aria-current="true">{{ .Site.Language.LanguageName }}</span></li>
-
-            <li><hr class="dropdown-divider"></li> -->
-
-            {{ if site.Params.doks.showMissingLanguages -}}
-              {{ $translatedLangs := slice -}}
-              {{ range .Translations -}}
-                {{ $translatedLangs = $translatedLangs | append .Lang }}
-              {{- end }}
-              {{ range site.Languages -}}
-                {{ if and (ne $.Lang .Lang) (not (in $.Params.skipTranslations .Lang)) -}}
-                  {{ $isTranslated := in $translatedLangs .Lang -}}
-                  <li><a class="dropdown-item {{ if not $isTranslated }}untranslated{{ end }}" rel="alternate" href="{{ if $isTranslated }}{{ (index (where $.Translations "Lang" .Lang) 0).RelPermalink }}{{ else }}{{ .Lang | relURL }}{{ end }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">{{ .LanguageName }}</a></li>
-                {{- end }}
-              {{- end }}
-            {{ else -}}
-              {{ range .Translations -}}
-                <li><a class="dropdown-item" rel="alternate" href="{{ .RelPermalink }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">{{ .Language.LanguageName }}</a></li>
-              {{- end }}
-            {{- end }}
-              <!--
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="/docs/contributing/how-to-contribute/">Help Translate</a></li>
-              -->
-          </ul>
-        </div>
+          {{ if .IsTranslated }}
+            {{ range .Translations }}
+              <a class="button is-small is-danger is-rounded" href="{{ .Permalink }}">{{ .Site.Language.LanguageName }}</a>
+            {{ end }}
+          {{ else }}
+            {{ if eq .Site.Language.Lang "FR" }}
+              <a class="button is-small is-danger is-rounded" href="/"><b>EN</b></a>
+            {{ else }}
+              <a class="button is-small is-danger is-rounded" href="/"><b>FR</b></a>
+            {{ end }}
+          {{ end }}
         {{ end -}}
         
         <button type="button" class="btn btn-link nav-link p-0" data-bs-dismiss="offcanvas" aria-label="Close">
