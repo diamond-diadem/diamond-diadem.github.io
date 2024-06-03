@@ -108,15 +108,20 @@
 }
 
 @include media-breakpoint-up(lg) {
+    .diamond-docs-sidebar-container{
+        border-right: 1px dashed $black;
+    }
+
     .docs-sidebar {
       order: 0;
-      border-right: 1px dashed $black;
+    //   border-right: 1px solid $black;
+      
     }
     .footer {
         border-top: 1px solid $black;
     }
     @include color-mode(dark) {
-        .docs-sidebar {
+        .diamond-docs-sidebar-container {
             border-right: 1px dashed $white;
         }
         .footer {
@@ -326,9 +331,15 @@ u {
 //   }
 // }
 
-.docs-sidebar {
-    min-width: 330px;
+.diamond-docs-sidebar-container {
+    width: 331px;
 }
+
+.docs-sidebar {
+    width: 307px;
+}
+
+
 
 .section-title-lead-landing-page {
     min-width: 100%;
@@ -437,3 +448,14 @@ u {
 //       position: relative;
 //     }
 // }
+
+
+.docs-sidebar {
+    border-right: none;
+}
+
+@include color-mode(dark) {
+    .docs-sidebar {
+        border-right: none;
+    }
+}

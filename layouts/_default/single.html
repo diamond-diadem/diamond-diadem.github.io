@@ -1,10 +1,12 @@
 {{ define "main" }}
 	<div class="row flex-xl-nowrap">
 		{{ if (in site.Params.doks.sectionNav .Section) -}}
-		<div class="col-lg-5 col-xl-4 docs-sidebar{{ if ne site.Params.doks.navbarSticky true }} docs-sidebar-top{{ end }}{{ if site.Params.doks.headerBar }} docs-sidebar-offset{{ end }} d-none d-lg-block">
-			<nav {{ if eq site.Params.doks.menu.section.collapsibleSidebar false }}id="sidebar-default" {{ end }}class="docs-links" aria-label="Main navigation">
-				{{ partial "sidebar/docs-menu.html" . }}
-			</nav>
+		<div class="col-lg-5 col-xl-4 diamond-docs-sidebar-container d-none d-lg-block">
+			<div class="col-lg-5 col-xl-4 docs-sidebar{{ if ne site.Params.doks.navbarSticky true }} docs-sidebar-top{{ end }}{{ if site.Params.doks.headerBar }} docs-sidebar-offset{{ end }} d-none d-lg-block">
+				<nav {{ if eq site.Params.doks.menu.section.collapsibleSidebar false }}id="sidebar-default" {{ end }}class="docs-links" aria-label="Main navigation">
+					{{ partial "sidebar/docs-menu.html" . }}
+				</nav>
+			</div>
 		</div>
 		{{ end -}}
 		{{ if and (eq site.Params.doks.containerBreakpoint "fluid") (in .Site.Params.mainSections .Type) }}
