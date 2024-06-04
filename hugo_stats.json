@@ -61,6 +61,7 @@
       "ul"
     ],
     "classes": [
+      ".apptainer-logo-about",
       "DocSearch-Label",
       "about",
       "about-lead",
@@ -191,6 +192,7 @@
       "justify-content-center",
       "lead",
       "left",
+      "left-about-apptainer-en",
       "left-about-apptainer-fr",
       "left-about-diadem-en",
       "left-about-diadem-fr",
@@ -279,6 +281,7 @@
       "query-no-results",
       "question-mark",
       "right",
+      "right-about-apptainer-en",
       "right-about-apptainer-fr",
       "right-about-diadem-en",
       "right-about-diadem-fr",

@@ -18,13 +18,13 @@ linkTitle: DIADEM
   float: left;
 }
 
-.left {
+/* .left {
   width: 25%;
 }
 
 .right {
   width: 75%;
-}
+} */
 
 /* Clear floats after the columns */
 .row:after {
