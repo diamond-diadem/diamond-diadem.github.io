@@ -898,3 +898,42 @@ u {
     }
   
 }
+
+@include media-breakpoint-up(lg){
+
+    .left-about-guix-fr {
+        width: 100%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+  
+    .right-about-guix-fr {
+        width: 100%;
+   }
+
+    .guix-logo-about {
+        width: 100%;
+        padding: 0 20%;
+    }
+
+}
+
+
+
+@include media-breakpoint-up(xl){
+
+    .left-about-guix-fr {
+        width: 100%;
+    }
+  
+    .right-about-guix-fr {
+        width: 100%;
+        // padding: 20px 0;
+    }
+
+    .guix-logo-about {
+        width: 100%;
+        padding: 0 30%;
+    }
+
+}
