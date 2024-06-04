@@ -461,7 +461,7 @@ u {
     
 }
 
-@include media-breakpoint-down(sm) {
+@include media-breakpoint-down(md) {
     .nav-logo{
         height: 40px;
     }
