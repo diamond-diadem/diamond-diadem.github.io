@@ -33,7 +33,7 @@ Le <a href="https://www.lammps.org/" target="_blank">site web de LAMMPS</a> offr
 apptainer pull lammps.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/lammps.sif:latest
 ```
 
-### <a href="/fr/documentation/by-container/lammps">Comment utiliser cette image de conteneur</a>
+### <a href="/documentation/by-container/lammps">Comment utiliser cette image de conteneur</a>
 
 ### Documentation LAMMPS :
 
