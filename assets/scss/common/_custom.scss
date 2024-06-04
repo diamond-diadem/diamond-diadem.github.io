@@ -258,7 +258,7 @@ u {
     }   
 }
 
-@include media-breakpoint-down(sm) {
+@include media-breakpoint-down(md) {
     .logo-diamond-homepage {
         width: 100%;
         position: relative;
