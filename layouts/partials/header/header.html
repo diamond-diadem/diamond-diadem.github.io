@@ -19,8 +19,16 @@
 
     <!-- Site title -->
     <a class="navbar-brand me-auto me-lg-3" href="{{ relLangURL "" }}"> <img class="nav-logo"/> {{ .Site.Title }}</a>
+    
+    
+    {{/*  {{ if eq site.Params.doks.multilingualMode true -}}
+      {{ $currentLanguageName := .Language.LanguageName }}
+      {{ range .Translations }}
+        <a class="btn btn-link nav-link switch-language-mobile" type="button" rel="alternate" href="{{ .RelPermalink }}">{{ .Language.LanguageName }}</a>
+      {{ end }}
+    {{ end -}}  */}}
 
-    <!-- FlexSearch mobile -->
+    {{/*  <!-- FlexSearch mobile -->
     {{ partial "main/showFlexSearch" . }}
     {{ $showFlexSearch := .Scratch.Get "showFlexSearch" -}}
     {{ if $showFlexSearch -}}
@@ -31,7 +39,7 @@
         <line x1="21" y1="21" x2="15" y2="15"></line>
       </svg>
     </button>
-    {{ end -}}
+    {{ end -}}  */}}
 
     <!-- Section navigation -->
     {{ if (in site.Params.doks.sectionNav .Section) -}}
@@ -68,13 +76,22 @@
     {{ end -}}
 
     <!-- Main navigation button -->
-    <button class="btn btn-link nav-link mx-2 order-3 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavMain" aria-controls="offcanvasNavMain" aria-label="Open main navigation menu">
+    <button class="btn btn-link nav-link mx-2 order-2 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavMain" aria-controls="offcanvasNavMain" aria-label="Open main navigation menu">
       <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
         <line x1="4" y1="8" x2="20" y2="8"></line>
         <line x1="4" y1="16" x2="20" y2="16"></line>
       </svg>
     </button>
+
+    {{ if eq site.Params.doks.multilingualMode true -}}
+      {{ $currentLanguageName := .Language.LanguageName }}
+      {{ range .Translations }}
+        <a class="btn btn-link nav-link order-3 switch-language-mobile" type="button" rel="alternate" href="{{ .RelPermalink }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">{{ .Language.LanguageName }}</a>
+      {{ end }}
+    {{ end -}}
+
+    
 
     <!-- Main navigation -->
     <div class="offcanvas offcanvas-end h-auto" tabindex="-1" id="offcanvasNavMain" aria-labelledby="offcanvasNavMainLabel">
@@ -83,26 +100,30 @@
       {{ end -}}
       <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="offcanvasNavMainLabel">{{ site.Title }}</h5>
-        {{ if and (eq site.Params.doks.colorMode "auto") site.Params.doks.colorModeToggler -}}
-        <button id="buttonColorMode" class="btn btn-link nav-link switch-color-mode-mobile" type="button" aria-label="Toggle theme">
-          <svg data-bs-theme-value="dark" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <!-- FlexSearch mobile -->
+        {{ partial "main/showFlexSearch" . }}
+        {{ $showFlexSearch := .Scratch.Get "showFlexSearch" -}}
+        {{ if $showFlexSearch -}}
+        <button type="button" id="searchToggleMobile" class="btn btn-link nav-link" aria-label="Search website">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search align-self-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
-          </svg>
-          <svg data-bs-theme-value="light" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0m-5 0h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"></path>
+            <circle cx="10" cy="10" r="7"></circle>
+            <line x1="21" y1="21" x2="15" y2="15"></line>
           </svg>
         </button>
-        {{ end -}}
-        {{ if eq site.Params.doks.multilingualMode true -}}
-          {{/*  {{ $currentLanguageName := .Language.LanguageName }}  */}}
-          {{ range .Translations }}
-            {{/*  <a class="btn btn-link nav-link switch-language-mobile" type="button" rel="alternate" href="{{ .RelPermalink }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">{{ $currentLanguageName }}</a>  */}}
-            <a class="btn btn-link nav-link switch-language-mobile" type="button" rel="alternate" href="{{ .RelPermalink }}">{{ .Language.LanguageName }}</a>
-          {{ end }}
-        {{ end -}}
-        
+        {{ end -}}   
+        {{ if and (eq site.Params.doks.colorMode "auto") site.Params.doks.colorModeToggler -}}
+          <button id="buttonColorMode" class="btn btn-link nav-link switch-color-mode-mobile" type="button" aria-label="Toggle theme">
+            <svg data-bs-theme-value="dark" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
+            </svg>
+            <svg data-bs-theme-value="light" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0m-5 0h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"></path>
+            </svg>
+          </button>
+        {{ end -}}     
         <button type="button" class="btn btn-link nav-link p-0" data-bs-dismiss="offcanvas" aria-label="Close">
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -111,7 +132,9 @@
          </svg>
         </button>
       </div>
+
       
+    
       <!-- <div class="offcanvas-header">
         <h5 class="offcanvas-title fw-bold" id="offcanvasNavMainLabel">{{ .Site.Params.Title }}</h5>
         <button class="btn btn-link nav-link ms-auto" type="button" data-bs-dismiss="offcanvas" aria-label="Close menu">

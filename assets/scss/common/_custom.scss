@@ -460,7 +460,7 @@ u {
 
 @include media-breakpoint-down(sm) {
     .nav-logo{
-        height: 45px;
+        height: 40px;
     }
 }
 
@@ -576,9 +576,9 @@ u {
 
 
 .switch-language-mobile {
-    text-align: center;
+    text-align: right;
 }
 
 .switch-color-mode-mobile {
-    align-self: right;
+    text-align: right;
 }
