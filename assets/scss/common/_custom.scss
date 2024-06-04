@@ -446,16 +446,19 @@ u {
 
 
 @include media-breakpoint-down(sm) {
-    .section-title-lead-landing-page,
-    .container-h1-default-page {
+    .section-title-lead-landing-page {
         background-image: none;
     }
     @include color-mode(dark) {
-        .section-title-lead-landing-page,
-        .container-h1-default-page {
+        .section-title-lead-landing-page {
             background-image: none;
         }   
-    }    
+    }
+    
+    .container-h1-default-page {
+        background-size: auto 100%;
+    }
+    
 }
 
 @include media-breakpoint-down(sm) {
@@ -574,6 +577,16 @@ u {
 
 }
 
+@include media-breakpoint-up(lg) {
+    .switch-language-mobile,
+    .switch-color-mode-mobile {
+        display: none;
+    }
+
+}
+
+
+
 
 .switch-language-mobile {
     text-align: right;
@@ -586,4 +599,44 @@ u {
 .tuto-video {
     width: 100%;
     aspect-ratio: 48 / 27;
+}
+
+
+@include media-breakpoint-up(lg){
+    .left-about-diamond {
+        width: 32%;
+        margin-top: 3%;
+    }
+
+    .right-about-diamond {
+        width: 68%;
+        // padding: 20px 0;
+    }
+}
+
+@include media-breakpoint-up(xl){
+    .left-about-diamond {
+        width: 25%;
+        margin-top: 0;
+    }
+
+    .right-about-diamond {
+        width: 75%;
+        padding: 20px 0;
+    }
+}
+
+
+@include media-breakpoint-down(md) {
+    .left-about-diamond {
+      width: 100%;
+      margin-top: 5%;
+    }
+  
+    .right-about-diamond {
+      width: 100%;
+      margin-top: 10%;
+    //   padding: 0;
+    }
+  
 }
