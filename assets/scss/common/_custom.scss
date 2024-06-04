@@ -709,12 +709,12 @@ u {
 @include media-breakpoint-up(xl) {
     .left-about-diadem-fr {
         width: 28%;
-        margin-top: 0;
+        margin-top: 1%;
         margin-bottom: 0;
     }
 
     .diadem-logo-about{
-        padding: 0%;
+        padding: 10% 0;
     }
 
     .right-about-diadem-fr {
@@ -730,6 +730,56 @@ u {
     }
   
     .right-about-diadem-fr {
+      width: 100%;
+      margin-top: 10%;
+    }
+  
+}
+
+@include media-breakpoint-up(lg) {
+    .left-about-diadem-en {
+        width: 100%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+
+    .diadem-logo-about {
+        width: 100%;
+        padding: 0 25%;
+    }
+
+    .right-about-diadem-en {
+        width: 100%;
+        margin-bottom: 5%;
+    }
+
+}
+
+
+@include media-breakpoint-up(xl) {
+    .left-about-diadem-en {
+        width: 28%;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .diadem-logo-about{
+        padding: 0 5%;
+    }
+
+    .right-about-diadem-en {
+        width: 72%;
+        margin-bottom: 0;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .left-about-diadem-en {
+      width: 100%;
+      margin-top: 5%;
+    }
+  
+    .right-about-diadem-en {
       width: 100%;
       margin-top: 10%;
     }
