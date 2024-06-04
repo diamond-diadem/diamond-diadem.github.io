@@ -99,7 +99,7 @@
           {{ $currentLanguageName := .Language.LanguageName }}
           {{ range .Translations }}
             {{/*  <a class="btn btn-link nav-link switch-language-mobile" type="button" rel="alternate" href="{{ .RelPermalink }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">{{ $currentLanguageName }}</a>  */}}
-            <a class="btn btn-link nav-link switch-language-mobile" type="button" rel="alternate" lang="{{ .Lang }}">{{ $currentLanguageName }}</a>
+            <a class="btn btn-link nav-link switch-language-mobile" type="button" rel="alternate" hreflang="{{ .Lang }}" lang="{{ .Lang }}">{{ $currentLanguageName }}</a>
           {{ end }}
         {{ end -}}
         
