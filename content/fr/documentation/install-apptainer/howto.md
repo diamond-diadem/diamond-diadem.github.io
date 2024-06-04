@@ -20,7 +20,7 @@ Le logiciel fonctionne sur toute distribution Linux moderne ; il ne tourne pas d
   <source src="https://www.youtube.com/embed/YDOH-mapNgo?si=A3SE_pXO4ty2aaL-" autoplay="false"/>
 </video> -->
 
-<iframe width="480" height="270" src="https://www.youtube.com/embed/YDOH-mapNgo?si=A3SE_pXO4ty2aaL-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe class="tuto-video" src="https://www.youtube.com/embed/YDOH-mapNgo?si=A3SE_pXO4ty2aaL-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 <br/>
 <br/>

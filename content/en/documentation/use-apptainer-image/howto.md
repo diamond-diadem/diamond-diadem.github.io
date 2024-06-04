@@ -14,7 +14,7 @@ This tutorial explains the main ways to interact with an Apptainer image in orde
 
 <br/>
 
-<iframe width="480" height="270" src="https://www.youtube.com/embed/tbHy7m1hOwM?si=sJXWIGunSeC4IJ1Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe class="tuto-video" src="https://www.youtube.com/embed/tbHy7m1hOwM?si=sJXWIGunSeC4IJ1Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 <br/>
 <br/> 

@@ -10,7 +10,7 @@ Apptainer works on any modern Linux distribution ; however, it is not compatible
 
 {{< /callout >}}
 
-<iframe width="480" height="270" src="https://www.youtube.com/embed/pwwVRjyGKe4?si=seC749ija5Hinbce" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe class="tuto-video" src="https://www.youtube.com/embed/pwwVRjyGKe4?si=seC749ija5Hinbce" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## Install Ubuntu packages
 

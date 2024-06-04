@@ -19,7 +19,7 @@ Pour rapidement s'approprier les principales commandes d'Apptainer, vous pouvez 
 
 <br/>
 
-<iframe width="480" height="270" src="https://www.youtube.com/embed/szy4ukD5jIw?si=24wHKGR7VhakkizR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe class="tuto-video" src="https://www.youtube.com/embed/szy4ukD5jIw?si=24wHKGR7VhakkizR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 <!-- <video controls width="50%">
   <source src="/videos/fr/use-lammps-apptainer/utiliser-lammps-apptainer-stfr.mp4" type="video/mp4" autoplay="false"/>
 </video> -->
