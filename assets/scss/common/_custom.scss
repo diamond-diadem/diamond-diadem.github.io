@@ -445,7 +445,7 @@ u {
 }
 
 
-@include media-breakpoint-down(sm) {
+@include media-breakpoint-down(md) {
     .section-title-lead-landing-page {
         background-image: none;
     }
