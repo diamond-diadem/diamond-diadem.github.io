@@ -124,18 +124,23 @@
     //   border-right: 1px solid $black;
       
     }
-    .footer {
-        border-top: 1px solid $black;
-    }
     @include color-mode(dark) {
         .diamond-docs-sidebar-container {
             border-right: 1px dashed $white;
         }
-        .footer {
-            border-top: 1px solid $white;
-        }
     }
 }
+
+.footer {
+    border-top: 1px solid $black;
+}
+
+@include color-mode(dark) {
+    .footer {
+        border-top: 1px solid $white;
+    }
+}
+
 
 h2:hover .anchor,
 h3:hover .anchor,
@@ -590,6 +595,7 @@ u {
 
 .switch-language-mobile {
     text-align: right;
+    margin-right: 2%;
 }
 
 .switch-color-mode-mobile {
@@ -603,24 +609,24 @@ u {
 
 
 @include media-breakpoint-up(lg){
-    .left-about-diamond {
+    .left-about-diamond-fr {
         width: 32%;
         margin-top: 3%;
     }
 
-    .right-about-diamond {
+    .right-about-diamond-fr {
         width: 68%;
         // padding: 20px 0;
     }
 }
 
 @include media-breakpoint-up(xl){
-    .left-about-diamond {
+    .left-about-diamond-fr {
         width: 25%;
         margin-top: 0;
     }
 
-    .right-about-diamond {
+    .right-about-diamond-fr {
         width: 75%;
         padding: 20px 0;
     }
@@ -628,12 +634,51 @@ u {
 
 
 @include media-breakpoint-down(md) {
-    .left-about-diamond {
+    .left-about-diamond-fr {
       width: 100%;
       margin-top: 5%;
     }
   
-    .right-about-diamond {
+    .right-about-diamond-fr {
+      width: 100%;
+      margin-top: 10%;
+    //   padding: 0;
+    }
+  
+}
+
+@include media-breakpoint-up(lg){
+    .left-about-diamond-en {
+        width: 32%;
+        margin-top: 2%;
+    }
+
+    .right-about-diamond-en {
+        width: 68%;
+        // padding: 20px 0;
+    }
+}
+
+@include media-breakpoint-up(xl){
+    .left-about-diamond-en {
+        width: 25%;
+        margin-top: 0;
+    }
+
+    .right-about-diamond-en {
+        width: 75%;
+        padding: 35px 0;
+    }
+}
+
+
+@include media-breakpoint-down(md) {
+    .left-about-diamond-en {
+      width: 100%;
+      margin-top: 5%;
+    }
+  
+    .right-about-diamond-en {
       width: 100%;
       margin-top: 10%;
     //   padding: 0;
