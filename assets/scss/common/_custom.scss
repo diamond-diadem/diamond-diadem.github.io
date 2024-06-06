@@ -291,13 +291,13 @@ u {
 }
 
 .logo-vesta {
-    content: url('/images/vesta-logo-light.svg');
+    content: url('/images/vesta-logo-light.png');
     width: 100%;
 }
 
 @include color-mode(dark) {
     .logo-vesta {
-        content: url('/images/vesta-logo-dark.svg');
+        content: url('/images/vesta-logo-dark.png');
     }
 }
 
