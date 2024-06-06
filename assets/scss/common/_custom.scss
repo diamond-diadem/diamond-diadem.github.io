@@ -290,6 +290,16 @@ u {
         
 }
 
+.logo-vesta {
+    content: url('/images/vesta-logo-light.svg');
+    width: 100%;
+}
+
+@include color-mode(dark) {
+    .logo-vesta {
+        content: url('/images/vesta-logo-dark.svg');
+    }
+}
 
 .logo-guix {
     content: url('/images/guix-logo-light.svg');
