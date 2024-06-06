@@ -21,45 +21,54 @@ Mais pour commencer, si vous n'êtes pas encore passé par cette étape et si vo
 - <h5><a href="/documentation/install-apptainer/howto/">Installez Apptainer</a></h5>
 - <h5><a href="/documentation/use-apptainer-image/howto/">Apprenez comment utiliser un conteneur</a></h5>
 
-
-<h3><u>CODES DISPONIBLES :</u></h3> 
+<h3><u>CODES DISPONIBLES :</u></h3>
 
 | Calcul scientifique                              | Visualisation                           |
 | ------------------------------------------------ | --------------------------------------- |
 | [<i class="icon-lammps"></i>LAMMPS](/codes/scientific-computing/lammps/) | [<i class="icon-ovito"></i>Ovito](/codes/visualisation/ovito/) |
 | [<i class="icon-quantum-espresso"></i>Quantum ESPRESSO](/codes/scientific-computing/quantum-espresso/) | [<i class="icon-paraview"></i>ParaView](/codes/visualisation/paraview/) |
 
+<h3> Raccourci : choississez votre code et obtenez la commande Apptainer pour le récupérer</h3>
 
-<!-- <div class="row">
+{{< tabs "retrieve-apptainer-image" >}}
+{{< tab "LAMMPS" >}}
 
-<div class="col right-border">
+```bash
+# PULL
+apptainer pull lammps.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/lammps.sif:latest
+```
 
-<div align="center">
+{{< /tab >}}
+{{< tab "Quantum ESPRESSO" >}}
 
-### Calcul scientifique
+```bash
+# PULL
+apptainer pull quantum-espresso.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/quantum-espresso.sif:latest
+```
 
-<ul>
-    <li><h4>LAMMPS</h4></li>
-</ul>
+{{< /tab >}}
+{{< tab "Ovito" >}}
 
-</div>
+```bash
+# PULL
+apptainer pull ovito.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/ovito.sif:latest
+```
 
-</div>
+{{< /tab >}}
+{{< tab "ParaView" >}}
 
-<div class="col">
+```bash
+# PULL
+apptainer pull paraview.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/paraview.sif:latest
+```
 
-<div align="center">
+{{< /tab >}}
+{{< tab "VESTA" >}}
 
-### Visualisation
+```bash
+# PULL
+apptainer pull vesta.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/vesta.sif:latest
+```
 
-<ul>
-    <li><h4>Ovito</h4></li>
-</ul>
-
-- #### Ovito
-
-</div>
-
-</div>
-
-</div> -->
+{{< /tab >}}
+{{< /tabs >}}

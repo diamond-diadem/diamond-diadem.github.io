@@ -29,37 +29,47 @@ But to begin with, if you haven't gone through this step yet and if you're not f
 | [<i class="icon-lammps"></i>LAMMPS](/en/codes/scientific-computing/lammps/) | [<i class="icon-ovito"></i>Ovito](/en/codes/visualisation/ovito/) |
 | [<i class="icon-quantum-espresso"></i>Quantum ESPRESSO](/en/codes/scientific-computing/quantum-espresso/) | [<i class="icon-paraview"></i>ParaView](/en/codes/visualisation/paraview/) |
 
+<h3> Shortcode : choose your code and get the Apptainer command to retrieve it</h3>
 
-<!-- <div class="row">
+{{< tabs "retrieve-apptainer-image" >}}
+{{< tab "LAMMPS" >}}
 
-<div class="col right-border">
+```bash
+# PULL
+apptainer pull lammps.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/lammps.sif:latest
+```
 
-<div align="center">
+{{< /tab >}}
+{{< tab "Quantum ESPRESSO" >}}
 
-### Calcul scientifique
+```bash
+# PULL
+apptainer pull quantum-espresso.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/quantum-espresso.sif:latest
+```
 
-<ul>
-    <li><h4>LAMMPS</h4></li>
-</ul>
+{{< /tab >}}
+{{< tab "Ovito" >}}
 
-</div>
+```bash
+# PULL
+apptainer pull ovito.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/ovito.sif:latest
+```
 
-</div>
+{{< /tab >}}
+{{< tab "ParaView" >}}
 
-<div class="col">
+```bash
+# PULL
+apptainer pull paraview.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/paraview.sif:latest
+```
 
-<div align="center">
+{{< /tab >}}
+{{< tab "VESTA" >}}
 
-### Visualisation
+```bash
+# PULL
+apptainer pull vesta.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/vesta.sif:latest
+```
 
-<ul>
-    <li><h4>Ovito</h4></li>
-</ul>
-
-- #### Ovito
-
-</div>
-
-</div>
-
-</div> -->
+{{< /tab >}}
+{{< /tabs >}}
