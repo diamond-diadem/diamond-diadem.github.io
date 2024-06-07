@@ -21,15 +21,14 @@ But to begin with, if you haven't gone through this step yet and if you're not f
 - <h5><a href="/en/documentation/install-apptainer/howto/">Install Apptainer</a></h5>
 - <h5><a href="/en/documentation/use-apptainer-image/howto/">Learn how to use a container</a></h5>
 
-
-<h3><u>AVAILABLE CODES:</u></h3> 
+<h3><u>AVAILABLE CODES:</u></h3>  
 
 | Scientific computing                              | Visualisation                           |
 | ------------------------------------------------ | --------------------------------------- |
 | [<i class="icon-lammps"></i>LAMMPS](/en/codes/scientific-computing/lammps/) | [<i class="icon-ovito"></i>Ovito](/en/codes/visualisation/ovito/) |
 | [<i class="icon-quantum-espresso"></i>Quantum ESPRESSO](/en/codes/scientific-computing/quantum-espresso/) | [<i class="icon-paraview"></i>ParaView](/en/codes/visualisation/paraview/) |
 
-<h3> Shortcode : choose your code and get the Apptainer command to retrieve it</h3>
+<h3> Shortcut : choose your code and get the Apptainer command to retrieve it</h3>
 
 {{< tabs "retrieve-apptainer-image" >}}
 {{< tab "LAMMPS" >}}
