@@ -324,11 +324,20 @@ u {
     }   
 }
 
-.logo-france2030-desktop {
-    // content: url('/images/france-2030-couleurs.png');
-    height: 90px;
-    margin-right: 20px;
+@include media-breakpoint-only(lg) {
+    .logo-france2030-desktop {
+        // content: url('/images/france-2030-couleurs.png');
+        height: 60px;
+        margin-right: 0px;
+    }
+
+    .nav-item{
+        margin: 0;
+    }
 }
+
+
+
 
 // @include color-mode(dark) {
 //     .logo-france2030 {
@@ -336,16 +345,18 @@ u {
 //     }
 // }
 
-@include media-breakpoint-down(xl) {
+@include media-breakpoint-up(xl) {
     .logo-france2030-desktop {
-        height : 60px;
+        height : 90px;
+        margin-right: 30px;
     }
 
-    // .nav-item {
-    //     font-size: $font-size-base;
+    .nav-item {
+        font-size: $font-size-base;
+        
 
 
-    // }
+    }
 }
 
 .logo-france2030-mobile{
@@ -601,17 +612,12 @@ u {
 }
 
 
-
-
 .switch-language-mobile {
     text-align: right;
     margin-right: 3%;
     margin-left: 2%;
 }
 
-.switch-color-mode-mobile {
-    text-align: right;
-}
 
 .tuto-video {
     width: 100%;
@@ -948,3 +954,20 @@ u {
 
 }
 
+.switch-color-mode-mobile {
+    margin-left:auto;
+    display:block;
+}
+
+
+
+.search-mobile {
+    margin-right: 3%;
+    margin-left:auto;
+    display:block;
+}
+
+.close-button-mobile {
+    margin-left: 3%;
+    display: block;
+}
