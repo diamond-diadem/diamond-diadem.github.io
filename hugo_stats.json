@@ -287,8 +287,6 @@
       "rounded",
       "rounded-circle",
       "row",
-      "scroll-menu",
-      "scrollmenu",
       "search-form",
       "search-input",
       "search-loading",
@@ -336,7 +334,6 @@
     ],
     "ids": [
       "-visualization-for-electronic-and-structural-analysis-",
-      "_-to-be-added-_",
       "a-hrefdocumentationby-containerlammpscomment-utiliser-cette-image-de-conteneura",
       "a-hrefdocumentationby-containerovitocomment-utiliser-cette-image-de-conteneura",
       "a-hrefdocumentationby-containerparaviewcomment-utiliser-cette-image-de-conteneura",
@@ -427,9 +424,7 @@
       "lancer-le-conteneur-ovito-avec-apptainer",
       "lancer-le-conteneur-paraview-avec-apptainer",
       "launching-the-ovito-container-with-apptainer",
-      "learn-how-to-use-this-specific-container",
       "learn-how-to-use-this-specific-container--_-to-be-added-_",
-      "learn-how-to-use-this-specific-container-_-to-be-added-_",
       "learn-how-to-use-this-specific-container-_to-be-added_",
       "nav-tab",
       "nav-tabContent",
@@ -488,12 +483,6 @@
       "tabs-retrieve-apptainer-image-3-tab",
       "tabs-retrieve-apptainer-image-4",
       "tabs-retrieve-apptainer-image-4-tab",
-      "tabs-retrieve-apptainer-image-5",
-      "tabs-retrieve-apptainer-image-5-tab",
-      "tabs-retrieve-apptainer-image-6",
-      "tabs-retrieve-apptainer-image-6-tab",
-      "tabs-retrieve-apptainer-image-7",
-      "tabs-retrieve-apptainer-image-7-tab",
       "third-exercice",
       "toc",
       "totopbutton",
@@ -506,7 +495,6 @@
       "utiliser-le-conteneur-quantum-espresso-en-séquentiel",
       "variables-denvironnement",
       "vesta-documentation",
-      "visualization-for-electronic-and-structural-analysis",
       "à-propos-des-paquets"
     ]
   }
