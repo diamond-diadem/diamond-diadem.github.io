@@ -450,10 +450,37 @@ u {
 
 .section-title-lead-landing-page {
     min-width: 100%;
+    min-height: 250px;
     background-image: url(/images/c-diamond-light.png);
-    background-size: 85% auto;
+    background-size: 100% auto;
     background-repeat: no-repeat;
-    background-position: 50% 70%;
+    // background-position: 50% 70%;
+    background-position-y: center;
+    background-position-x: center;
+}
+
+@include media-breakpoint-down(md) {
+    .section-title-lead-landing-page .row h1 {    
+        min-width: 100%;
+        min-height: 170px;
+        background-image: url(/images/c-diamond-light.png);
+        height: 170px;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        // background-position: 50% 70%;
+        background-position-y: 80%;
+        background-position-x: 60%;
+        display: flex; 
+        align-items: center; 
+        height: 170px;
+        justify-content: center;
+    }
+
+    @include color-mode(dark) {
+        .section-title-lead-landing-page .row h1 {
+            background-image: url('/images/c-diamond-dark.png');
+        }
+    }
 }
 
 .container-h1-default-page {
