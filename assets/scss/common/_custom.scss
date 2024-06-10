@@ -115,7 +115,7 @@
 }
 
 @include media-breakpoint-up(lg) {
-    .diamond-docs-sidebar-container{
+    .diamond-docs-sidebar-container {
         border-right: 1px dashed $black;
     }
 
@@ -381,35 +381,27 @@ u {
 }
 
 @include media-breakpoint-up(lg){
-    // .anchor-france2030-mobile {
-    //     visibility: collapse;
-    // }
-
     .logo-france2030-mobile {
         display: none;
     }
-
-
-    // .anchor-france2030-desktop,
-    // .logo-france2030-desktop {
-    //     visibility: visible;
-    // }
 }
 
 
 
 
 .col-default-page {
-    min-height: 100vh;
+    min-height: 85vh;
     display: flex;
     flex-direction: column;
 }
 
 .container-landing-page {
-    min-height: 100vh;
+    min-height: 89vh;
     display: flex;
     flex-direction: column;
 }
+
+
 
 .footer{
     margin-top: auto;
@@ -437,6 +429,9 @@ u {
 
 .diamond-docs-sidebar-container {
     width: 331px;
+    min-height: 89vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .docs-sidebar {
