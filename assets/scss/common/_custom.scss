@@ -459,11 +459,17 @@ u {
     background-position-x: center;
 }
 
-@include media-breakpoint-down(md) {
-    .section-title-lead-landing-page .row h1 {    
+@include media-breakpoint-down(sm) {
+    .container-title-homepage h1 {
+        position: relative;
+        top: -15%;
         min-width: 100%;
         min-height: 170px;
         background-image: url(/images/c-diamond-light.png);
+        padding-left: 100px;
+        margin-left: -100px;
+        padding-right: 100px;
+        margin-right: -100px;
         height: 170px;
         background-size: auto 100%;
         background-repeat: no-repeat;
@@ -474,10 +480,13 @@ u {
         align-items: center; 
         height: 170px;
         justify-content: center;
+        
+        // padding-right: 30%;
+        // margin-right: -30%;
     }
 
     @include color-mode(dark) {
-        .section-title-lead-landing-page .row h1 {
+        .container-title-homepage h1 {
             background-image: url('/images/c-diamond-dark.png');
         }
     }
