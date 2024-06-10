@@ -462,8 +462,39 @@ u {
     background-image: url(/images/c-diamond-light.png);
     background-size: 85% auto;
     background-repeat: no-repeat;
-    background-position: top;
+    background-position-y: center;
+    background-position-x: center;
 
+}
+
+// @include media-breakpoint-down(md) {
+.container-h1-default-page {
+        // min-height: 170px;
+        // background-position-y: top;
+        // height: max-content;
+        // // display: flex;
+        // // align-items: center;
+        // display: table-cell;
+        // vertical-align: middle;
+        // text-align: center;
+    display: flex; 
+    align-items: center; 
+    height: 170px;
+    justify-content: center;
+
+        
+    // }
+
+    // .text-like-home-h1 {
+    //     position: relative;
+    //     top: 50%; 
+    //     transform: translateY(-50%);
+    // }
+}
+
+.text-like-home-h1 {
+    position: relative;
+    top: -5%;
 }
 
 @include color-mode(dark) {
