@@ -23,10 +23,40 @@ Mais pour commencer, si vous n'êtes pas encore passé par cette étape et si vo
 
 <h3><u>CODES DISPONIBLES :</u></h3>
 
-| Calcul scientifique                              | Visualisation                           |
+<!-- | Calcul scientifique                              | Visualisation                           |
 | ------------------------------------------------ | --------------------------------------- |
 | [<i class="icon-lammps"></i>LAMMPS](/codes/scientific-computing/lammps/) | [<i class="icon-ovito"></i>Ovito](/codes/visualisation/ovito/) |
-| [<i class="icon-quantum-espresso"></i>Quantum ESPRESSO](/codes/scientific-computing/quantum-espresso/) | [<i class="icon-paraview"></i>ParaView](/codes/visualisation/paraview/) |
+| [<i class="icon-quantum-espresso"></i>Quantum ESPRESSO](/codes/scientific-computing/quantum-espresso/) | [<i class="icon-paraview"></i>ParaView](/codes/visualisation/paraview/) | -->
+
+<table>
+    <!-- <caption>
+        Pages des codes disponibles sous forme d'images de conteneurs
+    </caption> -->
+    <thead>
+        <tr>
+            <th scope="col">Calcul Scientifique</th>
+            <th scope="col">Visualisation</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><a href="/codes/scientific-computing/lammps/"><i class="icon-lammps"></i>LAMMPS</a></td>
+            <td><a href="/codes/visualisation/ovito/"><i class="icon-ovito"></i>Ovito</a></td>
+        </tr>
+        <tr>
+            <td><a href="/codes/scientific-computing/quantum-espresso/"><i class="icon-quantum-espresso"></i>Quantum ESPRESSO</a></td>
+            <td><a href="/codes/visualisation/paraview/"><i class="icon-paraview"></i>ParaView</a></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="/codes/visualisation/vesta/"><i class="icon-vesta"></i>VESTA</a></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a href="/codes/visualisation/vmd/"><i class="icon-vmd"></i>VMD</a></td>
+        </tr>
+    </tbody>
+</table>
 
 <h3> Raccourci : choississez votre code et obtenez la commande Apptainer pour le récupérer</h3>
 
@@ -68,6 +98,14 @@ apptainer pull paraview.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamon
 ```bash
 # PULL
 apptainer pull vesta.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/vesta.sif:latest
+```
+
+{{< /tab >}}
+{{< tab "VMD" >}}
+
+```bash
+# PULL
+apptainer pull vmd.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/vvmd.sif:latest
 ```
 
 {{< /tab >}}
