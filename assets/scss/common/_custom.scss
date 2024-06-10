@@ -202,6 +202,36 @@ u {
     top: 3px; left: 0px;
 }
 
+.icon-vesta {
+    background-image: url('/images/vesta-icon.png');
+    background-size: 20px 20px;
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    margin-right: 5px;
+    margin-left: 0px;
+    position: relative;
+    top: 3px; left: 0px;
+}
+
+.icon-vmd {
+    background-image: url('/images/vmd-icon-light.png');
+    background-size: 20px 20px;
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    margin-right: 5px;
+    margin-left: 0px;
+    position: relative;
+    top: 3px; left: 0px;
+}
+
+@include color-mode(dark) {
+    .icon-vmd {
+        background-image: url(/images/vmd-icon-dark.png);
+    }
+}
+
 @include color-mode(dark) {
     .icon-quantum-espresso {
     background-image: url('/images/quantum-espresso-icon-dark.png');
