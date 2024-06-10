@@ -395,6 +395,14 @@ u {
     flex-direction: column;
 }
 
+@include media-breakpoint-up(xl) {
+    .col-default-page {
+        min-height: 70vh;
+    }
+    
+}
+
+
 .container-landing-page {
     min-height: 89vh;
     display: flex;
