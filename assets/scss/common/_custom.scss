@@ -312,6 +312,16 @@ u {
 }
 
 
+.logo-vmd {
+    content: url(/images/vmd-logo-light.png);
+}
+
+@include color-mode(dark) {
+    .logo-vmd {
+        content: url(/images/vmd-logo-dark.png);
+    }
+}
+
 .logo-france2030-desktop,
 .logo-france2030-mobile {
     content: url('/images/france-2030-couleurs.png');
