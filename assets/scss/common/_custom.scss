@@ -352,6 +352,21 @@ u {
     }
 }
 
+.logo-abinit {
+    content: url(/images/abinit-logo-light.svg);
+    width: 100%;
+    margin-bottom: 8%;
+}
+
+@include color-mode(dark) {
+    .logo-abinit {
+        content: url(/images/abinit-logo-dark.svg);
+    }
+}
+
+
+
+
 .logo-france2030-desktop,
 .logo-france2030-mobile {
     content: url('/images/france-2030-couleurs.png');
@@ -399,7 +414,7 @@ u {
     }
 }
 
-.logo-france2030-mobile{
+.logo-france2030-mobile {
     height: 90px;
     // text-align: center;
     // position: center auto;
