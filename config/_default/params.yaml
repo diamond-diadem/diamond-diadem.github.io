@@ -1,0 +1,106 @@
+title: DIAMOND
+description: Plateforme numérique du PEPR DIADEM
+images:
+  - cover.png
+mainSections:
+  - about
+  - codes
+  - documentation
+diamond:
+  enableNews: false
+social:
+  twitter: getdoks
+doks:
+  colorMode: auto
+  colorModeToggler: true
+  navbarSticky: true
+  containerBreakpoint: fluid
+  navBarButton: false
+  navBarButtonUrl: /docs/prologue/introduction/
+  navBarButtonText: Get started
+  flexSearch: true
+  searchExclKinds: []
+  searchExclTypes:
+    - blog
+  showSearch: []
+  indexSummary: false
+  showDate: false
+  showSummary: true
+  searchLimit: 99
+  alert: false
+  alertDismissable: true
+  bootstrapJavascript: false
+  sectionNav:
+    - codes
+    - documentation
+  toTopButton: false
+  breadcrumbTrail: false
+  headlineHash: true
+  scrollSpy: true
+  multilingualMode: true
+  showMissingLanguages: true
+  docsVersioning: false
+  docsVersion: "1.0"
+  headerBar: false
+  backgroundDots: false
+  sectionFooter: false
+  relatedPosts: false
+  imageList: true
+  imageSingle: true
+  editPage: false
+  lastMod: false
+  repoHost: GitHub
+  docsRepo: https://github.com/h-enk/doks
+  docsRepoBranch: main
+  docsRepoSubPath: ""
+  menu:
+    section:
+      auto: true
+      collapsibleSidebar: true
+render_hooks:
+  image:
+    errorLevel: ignore
+  link:
+    errorLevel: ignore
+    highlightBroken: false
+hyas_images:
+  landscape:
+    normalize: 1360x765
+    lqip: 16x9
+    widths:
+      - 480
+      - 640
+      - 800
+      - 1024
+  portrait:
+    normalize: 765x1360
+    lqip: 9x16
+    widths:
+      - 480
+      - 640
+      - 800
+      - 1024
+inline_svg:
+  iconSetDir: tabler-icons
+seo:
+  title:
+    separator: " | "
+    suffix: ""
+  favicons:
+    sizes: []
+    icon: favicon.png
+    svgIcon: favicon.svg
+    maskIcon: mask-icon.svg
+    maskIconColor: white
+  schemas:
+    type: Organization
+    logo: favicon-512x512.png
+    name: Hyas
+    sameAs: []
+    images:
+      - cover.png
+    article: []
+    newsArticle: []
+    blogPosting:
+      - blog
+    product: []

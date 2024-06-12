@@ -1,0 +1,46 @@
+mounts:
+  - source: node_modules/@hyas/doks-core/archetypes
+    target: archetypes
+  - source: archetypes
+    target: archetypes
+  - source: node_modules/@hyas/core/assets
+    target: assets
+  - source: node_modules/@hyas/images/assets
+    target: assets
+    excludeFiles: /scss/**.scss
+  - source: node_modules/@hyas/doks-core/assets
+    target: assets
+    excludeFiles: /js/**.js
+  - source: node_modules/@tabler/icons/icons
+    target: assets/svgs/tabler-icons
+  - source: assets
+    target: assets
+  - source: assets/js
+    target: assets/js
+  - source: assets/scss
+    target: assets/scss
+  - source: node_modules/@hyas/doks-core/data
+    target: data
+  - source: data
+    target: data
+  - source: node_modules/@hyas/doks-core/i18n
+    target: i18n
+  - source: i18n
+    target: i18n
+  - source: node_modules/@hyas/core/layouts
+    target: layouts
+  - source: node_modules/@hyas/seo/layouts
+    target: layouts
+  - source: node_modules/@hyas/images/layouts
+    target: layouts
+  - source: node_modules/@hyas/doks-core/layouts
+    target: layouts
+    excludeFiles: /partials/footer/to-top.html
+  - source: node_modules/@hyas/inline-svg/layouts
+    target: layouts
+  - source: layouts
+    target: layouts
+  - source: node_modules/@hyas/doks-core/static
+    target: static
+  - source: static
+    target: static

@@ -1,0 +1,74 @@
+title: DIAMOND
+baseurl: https://diamond-diadem@github.io/
+canonifyURLs: true
+disableAliases: true
+disableHugoGeneratorInject: true
+enableEmoji: true
+enableGitInfo: false
+enableRobotsTXT: true
+languageCode: fr-FR
+paginate: 10
+rssLimit: 10
+summarylength: 20
+defaultContentLanguage: fr
+defaultContentLanguageInSubdir: false
+copyRight: Copyright (c) 2020-2024 Hyas
+build:
+  buildStats:
+    enable: true
+outputs:
+  home:
+    - HTML
+    - RSS
+    - searchIndex
+  section:
+    - HTML
+    - RSS
+    - SITEMAP
+outputFormats:
+  searchIndex:
+    mediaType: application/json
+    baseName: search-index
+    isPlainText: true
+    notAlternative: true
+  SITEMAP:
+    mediaType: application/xml
+    baseName: sitemap
+    isHTML: false
+    isPlainText: true
+    noUgly: true
+    rel: sitemap
+sitemap:
+  changefreq: monthly
+  filename: sitemap.xml
+  priority: 0.5
+caches:
+  getjson:
+    dir: :cacheDir/:project
+    maxAge: -1
+taxonomies:
+  contributor: contributors
+  category: categories
+  tag: tags
+permalinks: {}
+minify:
+  tdewolff:
+    html:
+      keepWhitespace: false
+related:
+  threshold: 80
+  includeNewer: true
+  toLower: false
+  indices:
+    - name: categories
+      weight: 100
+    - name: tags
+      weight: 80
+    - name: date
+      weight: 10
+imaging:
+  anchor: Center
+  bgColor: "#ffffff"
+  hint: photo
+  quality: 85
+  resampleFilter: Lanczos
