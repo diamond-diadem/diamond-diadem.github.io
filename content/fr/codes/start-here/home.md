@@ -48,7 +48,7 @@ Mais pour commencer, si vous n'êtes pas encore passé par cette étape et si vo
             <td><a href="/codes/visualisation/paraview/"><i class="icon-paraview"></i>ParaView</a></td>
         </tr>
         <tr>
-            <td></td>
+            <td><a href="/codes/scientific-computing/abinit/"><i class="icon-abinit"></i>Abinit</td>
             <td><a href="/codes/visualisation/vesta/"><i class="icon-vesta"></i>VESTA</a></td>
         </tr>
         <tr>
@@ -74,6 +74,14 @@ apptainer pull lammps.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/
 ```bash
 # PULL
 apptainer pull quantum-espresso.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/quantum-espresso.sif:latest
+```
+
+{{< /tab >}}
+{{< tab "Abinit" >}}
+
+```bash
+# PULL
+apptainer pull abinit.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/abinit.sif:latest
 ```
 
 {{< /tab >}}

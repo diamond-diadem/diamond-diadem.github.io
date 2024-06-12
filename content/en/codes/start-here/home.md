@@ -48,7 +48,7 @@ But to begin with, if you haven't gone through this step yet and if you're not f
             <td><a href="/en/codes/visualisation/paraview/"><i class="icon-paraview"></i>ParaView</a></td>
         </tr>
         <tr>
-            <td></td>
+            <td><a href="/en/codes/scientific-computing/abinit/"><i class="icon-abinit"></i>Abinit</td>
             <td><a href="/en/codes/visualisation/vesta/"><i class="icon-vesta"></i>VESTA</a></td>
         </tr>
         <tr>

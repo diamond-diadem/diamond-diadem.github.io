@@ -232,6 +232,24 @@ u {
     }
 }
 
+.icon-abinit {
+    background-image: url('/images/abinit-icon-light.svg');
+    background-size: 20px 20px;
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    margin-right: 5px;
+    margin-left: 0px;
+    position: relative;
+    top: 3px; left: 0px;
+}
+
+@include color-mode(dark) {
+    .icon-abinit {
+        background-image: url(/images/abinit-icon-dark.svg);
+    }
+}
+
 @include color-mode(dark) {
     .icon-quantum-espresso {
     background-image: url('/images/quantum-espresso-icon-dark.png');
