@@ -21,7 +21,7 @@ This tutorial explains the main ways to interact with an Apptainer image in orde
 
 The image you downloaded is a relocatable and renamable file we recommend putting in a dedicated directory to easily find it. While it can be any directory, in this tutorial we will assume you put it in `$HOME/apptainer-images` :
 
-```sh
+```bash
 mkdir -p $HOME/apptainer-images
 mv ./tutorial.sif $HOME/apptainer-images/tutorial.sif
 ```
@@ -33,7 +33,7 @@ The main way to interact with the image is through invoking the `apptainer` comm
 
 * The `run` argument spawns a container from the image, runs the *container's default command* within the container, and then destroys it.
 
-```sh
+```bash
 $ apptainer run $HOME/apptainer-images/tutorial.sif
 ```
 **Note**
@@ -41,14 +41,14 @@ $ apptainer run $HOME/apptainer-images/tutorial.sif
 
 * The `exec` argument is similar to the `run` argument, only invoking **any** specified command inside the container. For example :
 
-```sh
+```bash
 $ apptainer exec $HOME/apptainer-images/tutorial.sif echo Hi from the container !
 ```
 creates a container from the `$HOME/apptainer-images/tutorial.sif` image, invokes the `echo Hi from the container !` command within the container, and then destroys it.
 
 * The `shell` argument allows to enter an interactive shell inside the container (the `Apptainer>` *prompt* then appears on the left of the command line), run successive commands, then exit the container using `exit` or `Crtl+D`, which also destroys it. For example :
 
-```sh
+```bash
 $ apptainer shell $HOME/apptainer-images/tutorial.sif
 Apptainer> pwd
 Apptainer> cd ..
@@ -63,19 +63,19 @@ $
 
 * The `run-help` argument displays the image's associated help message.
 
-```sh
+```bash
 apptainer run-help $HOME/apptainer-images/tutorial.sif
 ```
 
 * The `inspect` argument displays the image's meta-data (image's author, version, creation date, ...).
 
-```sh
+```bash
 apptainer inspect $HOME/apptainer-images/tutorial.sif
 ```
 
 You may also directly execute the image, as a binary :
 
-```sh
+```bash
 $ $HOME/apptainer-images/tutorial.sif
 ```
 which is strictly equivalent to `apptainer run $HOME/apptainer-images/tutorial.sif`
@@ -85,7 +85,7 @@ Many tools require environment variables definition to run. In principle, a corr
 
 For instance, the default command invoked by `apptainer run $HOME/apptainer-images/tutorial.sif` is :
 
-```sh
+```bash
 echo $GREET $USER "who just ran the default command of the container."
 ```
 where the `$GREET` variable is defined to be "Welcome" by default in the container.
@@ -94,18 +94,18 @@ The `$USER` is automatically set so that its value inside the container is the s
 
 Those two variables may be redefined :
 
-```sh
+```bash
 apptainer run --env GREET=Hello $HOME/apptainer-images/tutorial.sif
 ```
 or
 
-```sh
+```bash
 apptainer run --env USER=newusername $HOME/apptainer-images/tutorial.sif
 ```
 **Remark**
 > When one modifies `$USER`, Apptainer may display a message warning the environment variable's value is accepted but deviates from the standard behaviour.
 
-```sh
+```bash
 WARNING: Environment variable USER already has value [newusername], will not forward new value [oldusername] from parent process environment
 ```
 
@@ -117,26 +117,26 @@ If one wishes to isolate the container from the host machine, Apptainer offers s
 
 * use the `--no-mount` flag to unbind one or several paths in the container, for instance
 
-```sh
+```bash
 apptainer run --no-mount sys $HOME/apptainer-images/tutorial.sif
 ```
 
 * use the `--no-home` flag to make `$HOME` unavailable for the container (although `$PWD` remains mounted) :
 
-```sh
+```bash
 apptainer exec --no-home $HOME/apptainer-images/tutorial.sif ls $HOME
 ```
 > Here, we see `$HOME` exists inside the container but does not match the one one host machine.
 
 * use the `--containall` flag to completely isolate the container from the host.
 
-```sh
+```bash
 apptainer run --containall $HOME/apptainer-images/tutorial.sif
 ```
 
 It is likely, for instance when playing with the previous options, that the directory containing possibly required input or output files can not be accessed from the container ! It is then required to manually mount it to the container using the `--bind` flag. For example, one may imagine the following little exercise : create a file on the host machine, make it available inside the container, create a copy of it inside the container, and then retrieve the copy on the host machine.
 
-```sh
+```bash
 # Creating a file on host
 date > $PWD/test-host.txt
 

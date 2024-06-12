@@ -20,7 +20,7 @@ The software supports various calculation methods, such as plane wave methods, q
 
 ### Retrieve this container using Apptainer:
 
-```sh
+```bash
 # PULL
 apptainer pull quantum-espresso.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/quantum-espresso.sif:latest
 ```

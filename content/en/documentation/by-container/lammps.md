@@ -20,7 +20,7 @@ To have a quick look at Apptainer's main commands, you may refer to [this tutori
 
 The image you downloaded is a relocatable and renamable file we recommend putting in a dedicated directory to easily find it. While it can be any directory, in this tutorial we will assume you put it in `$HOME/apptainer-images` :
 
-```sh
+```bash
 mkdir -p $HOME/apptainer-images
 mv lammps.sif $HOME/apptainer-images/lammps.sif
 ```
@@ -34,7 +34,7 @@ To illustrate the various commands, a set of LAMMPS input files is available in 
 
 In this tutorial, we will assume that the input files contained in this archive are in the current directory:
 
-```sh
+```bash
 tar -xzf DIAMOND-tutorial.tar.gz # Extracts the content of the archive, creates ./tutorial
 cd ./tutorial
 ```
@@ -42,7 +42,7 @@ cd ./tutorial
 ##  One liner command
 For impatient folks, here is how to launch a parallel LAMMPS computation using the container image (previously downloaded and stored in `$HOME/apptainer-images/lammps.sif`). In the case where the current directory contains all  mandatory LAMMPS input files :
 
-```sh
+```bash
 apptainer exec $HOME/apptainer-images/lammps.sif mpirun -np <N> lmp_mpi -in <input.lammps>
 ```
 
@@ -52,7 +52,7 @@ This section presents different ways to use the LAMMPS image. For more details a
 ### Using the LAMMPS container for sequential runs
 To run LAMMPS sequentially (*ie.* without parallelization) without any container, one would use the following command :
 
-```sh
+```bash
 lmp_mpi -in in.file
 ```
 where all LAMMPS input files (including `in.file`, the main input) are stored in the current directory.
@@ -61,19 +61,19 @@ To do the same inside a container, we can run three equivalent commands. In each
 
 * One can use `apptainer exec` to execute a specific command in the container.
 
-```sh
+```bash
 apptainer exec $HOME/apptainer-images/lammps.sif lmp_mpi -in in.file
 ```
 
 * One can use `apptainer run` to call the container's *default* command, namely the `lmp_mpi` executable. We also append instructions at the end of the command allowing to locate LAMMPS input file.
 
-```sh
+```bash
 apptainer run $HOME/apptainer-images/lammps.sif -in in.file # "lmp_mpi" is implicitly called by "run"
 ```
 
 * One can eventually execute the image as a binary, which is strictly identical to using `apptainer run`.
 
-```sh
+```bash
 $HOME/apptainer-images/lammps.sif -in in.file
 ```
 
@@ -82,13 +82,13 @@ The `$HOME/apptainer-images/lammps.sif` image embedds a parallelized (through **
 
 In the case where no containerization would be used, the typical LAMMPS call would look like :
 
-```sh
+```bash
 OMP_NUM_THREADS=2 mpirun -np 4 lmp_mpi -in in.file
 ```
 
 Using the container, the same command becomes
 
-```sh
+```bash
 apptainer exec --env OMP_NUM_THREADS=2 $HOME/apptainer-images/lammps.sif mpirun -np 4 lmp_mpi -in in.file
 ```
 
@@ -98,30 +98,30 @@ apptainer exec --env OMP_NUM_THREADS=2 $HOME/apptainer-images/lammps.sif mpirun 
 ### Display help
 To display the container's help message (supposing the image is stored at `$HOME/apptainer-images/lammps.sif`) :
 
-```sh
+```bash
 apptainer run-help $HOME/apptainer-images/lammps.sif
 ```
 
 To display the container's meta-data (code owner, version, image author, ...) :
 
-```sh
+```bash
 apptainer inspect $HOME/apptainer-images/lammps.sif
 ```
 
 To run the help command specific to the LAMMPS executable in the container (`lmp_mpi`) :
 
-```sh
+```bash
 apptainer exec $HOME/apptainer-images/lammps.sif lmp_mpi -h
 ```
 
 or
 
-```sh
+```bash
 apptainer run $HOME/apptainer-images/lammps.sif -h
 ```
 or
 
-```sh
+```bash
 $HOME/apptainer-images/lammps.sif -h
 ```
 
@@ -130,13 +130,13 @@ By default, Apptainer does not fully isolate the container from the host system.
 
 Whenever `--containall` is activated, the directory on the host machine containing LAMMPS input-files cannot be accessed from the container !
 
-```sh
+```bash
 apptainer run --containall $HOME/apptainer-images/lammps.sif -in in.file # in.file not found !
 ```
 
 It is then required to manually mount the current directory (`$PWD`) to the one where we are located by default in the container (`$HOME`) using the `--bind` flag. For instance :
 
-```sh
+```bash
 apptainer run --containall --bind $PWD:$HOME \ # Mounting the current directory to $HOME in the container.
   $HOME/apptainer-images/lammps.sif -in in.file
 ```
@@ -153,7 +153,7 @@ During execution, the code searches for files describing the interactions in the
 * First, it looks for a file corresponding (location, potential type, name, ...) to what's defined in the main input (`in.file`).
 If nothing is found at the specified path in the main input file (`in.file``), for example, if the file has been inadvertently renamed:
 
-```sh
+```bash
 mv SiC.meam old.meam # inadvertent renaming
 ```
 then the code searches in the directory designated by the environment variable $LAMMPS_POTENTIALS.
@@ -164,7 +164,7 @@ In the (quite rare) case where one has another set of potential they wish to use
 
 * On one hand, we can overwite the content of `/usr/share/lammps/potentials` by mounting another directory from the host machine to this very path (using `--bind`). In such cases, `$LAMMPS_POTENTIALS` still points towards `/usr/share/lammps/potentials` but the content of this directory is overwritten.
 
-```sh
+```bash
 # We overwrite /usr/share/lammps/potentials in the container.
 apptainer run --bind $HOME/Documents/softs/lammps/potentials/:/usr/share/lammps/potentials \
   $HOME/apptainer-images/lammps.sif -in in.file
@@ -172,7 +172,7 @@ apptainer run --bind $HOME/Documents/softs/lammps/potentials/:/usr/share/lammps/
 
 * On the other hand, one can also redefine `$LAMMPS_POTENTIALS` (using `--env`) to make it point to another path from the host machine . Here, `$LAMMPS_POTENTIALS` is modified and the code looks for potentials in the newly defined path.
 
-```sh
+```bash
 # If no isolation option is used, $HOME/Documents/softs/lammps/potentials/
 # is shared with the container.
 apptainer run --env LAMMPS_POTENTIALS=$HOME/Documents/softs/lammps/potentials/\
@@ -181,7 +181,7 @@ apptainer run --env LAMMPS_POTENTIALS=$HOME/Documents/softs/lammps/potentials/\
 
 * However, make sure to ensure that this new directory is also accessible within the container. For example:
 
-```sh
+```bash
 # By default, /opt/lammps-potentials is not shared between the host and the container
 # We have to mount this directory with --bind.
 apptainer run --env LAMMPS_POTENTIALS=/opt/lammps-potentials \ # redefining $LAMMPS_POTENTIALS
@@ -204,7 +204,7 @@ Possible answers :
 * or `$HOME/apptainer-images/lammps.sif -in in.file`
 * or
 
-```sh
+```bash
 apptainer exec \
   --env OMP_NUM_THREADS=1 \
   $HOME/apptainer-images/lammps.sif \
@@ -221,7 +221,7 @@ How to use the container image to run a LAMMPS computation (1 **OpenMP** thread 
 
 Example of a possible answer :
 
-```sh
+```bash
 apptainer exec \
   $HOME/apptainer-images/lammps.sif \
   mpirun -np 16 lmp_mpi -in in.file
@@ -237,7 +237,7 @@ where `--env OMP_NUM_THREADS=1` is implicit and use by default by the container.
 
 Example of a possible answer :
 
-```sh
+```bash
 apptainer exec \
   --containall \
   --env OMP_NUM_THREADS=2 \

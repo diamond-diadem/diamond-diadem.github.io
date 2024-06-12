@@ -18,7 +18,7 @@ To quickly grasp the main Apptainer commands, you can refer to [this tutorial](/
 
 This image is a relocatable and renamable file, which is recommended to be placed in a dedicated directory for easy retrieval; this directory can be any, and for the purpose of this tutorial, we assume you have placed it in a directory named `$HOME/apptainer-images`:
 
-```sh
+```bash
 mkdir -p $HOME/apptainer-images
 mv ovito.sif $HOME/apptainer-images/ovito.sif
 ```
@@ -30,7 +30,7 @@ To illustrate the operation of the visualization program, a set of atomic positi
 
 In this tutorial, we will assume that the input files contained in this archive are in the current directory:
 
-```sh
+```bash
 tar -xzf ovito-tutorial-inputs.tar.gz # Extracts the content of the archive, creates ./tutorial
 cd ./tutorial
 ```
@@ -38,7 +38,7 @@ cd ./tutorial
 ##  One liner command
 For those in a hurry, here's how to launch the Ovito visualization tool using the container image (previously downloaded and located at `$HOME/apptainer-images/ovito.sif`).  In case the current directory contains an input file readable by Ovito:
 
-```sh
+```bash
 apptainer run $HOME/apptainer-images/ovito.sif <input.file>
 ```
 
@@ -47,7 +47,7 @@ This section presents the different ways to use the Ovito image. For more detail
 
 To execute Ovito without any containerization, one would use the command:
 
-```sh
+```bash
 ovito <input.file.1> <input.file.2> ...
 ```
 where the input files`input.file.*` are optional and allow loading the configurations that one wants to display directly at the application's launch.
@@ -63,7 +63,7 @@ Each of these points is detailed in the following sections.
 ### Launching the Ovito container with Apptainer
 To run a command within an Apptainer container, one can use  `apptainer exec <image name> <command>`, to which options can be added and will be detailed in the following parts. In our case, where the image is located at the path `$HOME/apptainer-images/ovito.sif`,  and where the command is in the form `ovito C-diamond.cif` with the atomic configuration file `C-diamond.cif` in the current directory, we can do:
 
-```sh
+```bash
 apptainer exec $HOME/apptainer-images/ovito.sif ovito C-diamond.cif
 ```
 
@@ -74,13 +74,13 @@ The execution of this command works as follows:
 
 The same behavior can be replicated with `apptainer run` which directly calls the default command of the image, `ovito`, to which arguments can be added.
 
-```sh
+```bash
 apptainer run $HOME/apptainer-images/ovito.sif C-diamond.cif # the "ovito" command is implicitely called.
 ```
 
 Finally, one can directly call the image as an executable, which is strictly identical to using `apptainer run` (for variety, let's change the configuration file).
 
-```sh
+```bash
 $HOME/apptainer-images/ovito.sif POSCAR_Si-diamond
 ```
 
@@ -90,7 +90,7 @@ By default, Apptainer does not fully isolate the container from the host system.
 #### Sharing graphical tesources
 On one hand, it is possible that an error message appears, informing you that one of the library plugins (`qt.qpa.xcb`), fails to connect to your display resources.
 
-```sh
+```bash
 apptainer run --containall $HOME/apptainer-images/ovito.sif 
 [...]
 qt.qpa.xcb: could not connect to display 
@@ -104,14 +104,14 @@ This problem is directly due to the total isolation between the container and th
 
 To work around this problem, you simply need to specify to the `apptainer run` command (or `apptainer exec`) what value to assign to this environment variable within the container. For this, you can use the `--env <variable>=<value>` flag, as follows:
 
-```sh
+```bash
 apptainer run --containall --env DISPLAY=$DISPLAY $HOME/apptainer-images/ovito.sif
 ```
 
 #### File access
 On the other hand, the directory containing the input files is not accessible within the container!
 
-```sh
+```bash
 apptainer run --containall --env DISPLAY=$DISPLAY $HOME/apptainer-images/ovito.sif MD/SiC.*.lmp
 [...]
 ERROR: File does not exist: MD/SiC.0000.lmp
@@ -119,7 +119,7 @@ ERROR: File does not exist: MD/SiC.0000.lmp
 
 You then need to manually mount the current directory (`$PWD`) to the directory where you are by default in the container (`$HOME`) with the `--bind` flag. For example:
 
-```sh
+```bash
 apptainer run --containall --bind $PWD:$HOME \ # Mount the current directory to $HOME in the container.
   $HOME/apptainer-images/ovito.sif MD/SiC.*.lmp
 ```
@@ -131,13 +131,13 @@ in case the Ovito input files (in a `MD/` subfolder) are located in the current 
 ### Display help
 To display the container's help message (assuming the image is stored under `$HOME/apptainer-images/ovito.sif`):
 
-```sh
+```bash
 apptainer run-help $HOME/apptainer-images/ovito.sif
 ```
 
 To display the container's metadata (code owner, version, image author, etc.):
 
-```sh
+```bash
 apptainer inspect $HOME/apptainer-images/ovito.sif
 ```
 

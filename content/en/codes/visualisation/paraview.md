@@ -20,7 +20,7 @@ This software is built on a modular architecture, allowing users to customize th
 
 ### Retrieve this container using Apptainer:
 
-```sh
+```bash
 # PULL
 apptainer pull paraview.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/paraview.sif:latest
 ```

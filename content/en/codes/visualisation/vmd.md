@@ -22,7 +22,7 @@ Overall, VMD is a powerful and flexible tool for molecular visualization and ana
 
 ### Retrieve this container using Apptainer:
 
-```sh
+```bash
 # PULL
 apptainer pull vmd.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/vmd.sif:latest
 ```

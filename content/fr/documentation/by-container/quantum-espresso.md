@@ -18,7 +18,7 @@ Pour rapidement s'approprier les principales commandes d'Apptainer, vous pouvez 
 
 Cette image est un fichier relocalisable et renommable, qu'il est recommandé de placer dans un répertoire dédié pour facilement la retrouver ; celui-ci peut-être quelconque, et dans le cadre de ce tutoriel nous assumerons que vous l'avez placée dans un répertoire nommé `$HOME/apptainer-images` :
 
-```sh
+```bash
 mkdir -p $HOME/apptainer-images
 mv quantum-espresso.sif $HOME/apptainer-images/quantum-espresso.sif
 ```
@@ -29,7 +29,7 @@ Pour illustrer les différentes commandes, un jeu de fichiers d'entrée Quantum 
 
 Dans ce tutoriel, on supposera que les fichiers d'entrée contenus dans cette archive sont dans le répertoire courant :
 
-```sh
+```bash
 tar -xzf qe-tutorial-inputs.tar.gz # Extrait le contenu de l'archive, créée ./tutorial
 cd ./tutorial
 ```
@@ -40,7 +40,7 @@ cd ./tutorial
 ##  Commande en une ligne
 Pour les personnes pressées, voici comment lancer un calcul Quantum Espresso parallèle en utilisant l'image de conteneur (téléchargée au préalable et située à `$HOME/apptainer-images/quantum-espresso.sif`). Dans le cas où le répertoire courant contient les fichiers d'entrée nécessaires pour Quantum Espresso :
 
-```sh
+```bash
 apptainer exec $HOME/apptainer-images/quantum-espresso.sif mpirun -np <N> pw.x -in <input.quantum-espresso>
 ```
 
@@ -50,7 +50,7 @@ Cette section présente les différentes manières d'utiliser l'image Quantum Es
 ### Utiliser le conteneur Quantum Espresso en séquentiel
 Pour exécuter Quantum Espresso en séquentiel (c'est-à-dire sans parallélisation) sans conteneur, on utiliserait la commande :
 
-```sh
+```bash
 pw.x -in qe-tutorial.in
 ```
 où tous les fichiers d'entrée Quantum Espresso (dont `qe-tutorial.in` le fichier d'entrée principal) sont stockés dans le répertoire courant.
@@ -59,19 +59,19 @@ Pour effectuer la même chose dans un conteneur, on peut exécuter trois command
 
 * On peut utiliser `apptainer exec` qui permet d'exécuter une commande spécifique dans le conteneur.
 
-```sh
+```bash
 apptainer exec $HOME/apptainer-images/quantum-espresso.sif pw.x -in qe-tutorial.in
 ```
 
 * On peut utiliser `apptainer run` qui appelle la commande par défaut du conteneur, à savoir l'exécutable `pw.x`, en lui spécifiant à la suite les instructions permettant à Quantum Espresso de localiser le fichier d'entrée.
 
-```sh
+```bash
 apptainer run $HOME/apptainer-images/quantum-espresso.sif -in qe-tutorial.in # "pw.x" est implicitement appelé par "run"
 ```
 
 * On peut enfin appeler directement l'image comme un exécutable, ce qui est strictement identique à l'utilisation de `apptainer run`.
 
-```sh
+```bash
 $HOME/apptainer-images/quantum-espresso.sif -in qe-tutorial.in
 ```
 
@@ -80,13 +80,13 @@ L'image `quantum-espresso.sif` embarque une version de Quantum Espresso supporta
 
 Dans le cas où aucune conteneurisation ne serait utilisée, la commande typique ressemblerait à :
 
-```sh
+```bash
 OMP_NUM_THREADS=2 mpirun -np 4 pw.x -in qe-tutorial.in
 ```
 
 En utilisant ce conteneur, la même commande devient :
 
-```sh
+```bash
 apptainer exec --env OMP_NUM_THREADS=2 $HOME/apptainer-images/quantum-espresso.sif mpirun -np 4 pw.x -in qe-tutorial.in
 ```
 
@@ -100,13 +100,13 @@ Dans le cas où les performances numériques sont centrales, il est recommandé 
 ### Afficher l'aide
 Pour afficher le message d'aide du conteneur (on suppose l'image stockée sous `$HOME/apptainer-images/quantum-espresso.sif`) :
 
-```sh
+```bash
 apptainer run-help $HOME/apptainer-images/quantum-espresso.sif
 ```
 
 Pour afficher les méta-données du conteneur (propriétaire du code, version, auteur de l'image, ...) :
 
-```sh
+```bash
 apptainer inspect $HOME/apptainer-images/quantum-espresso.sif
 ```
 
@@ -115,12 +115,12 @@ Par défaut, Apptainer n'isole pas totalement le conteneur du système de la mac
 
 Dans le cas où l'option `--containall` est activée, le répertoire contenant les fichiers d'entrée de Quantum Espresso n'est pas accessible dans le conteneur !
 
-```sh
+```bash
 apptainer run --containall $HOME/apptainer-images/quantum-espresso.sif -in qe-tutorial.in # qe-tutorial.in non trouvé !
 ```
 Il faut alors monter manuellement le répertoire courant (`$PWD`) avec le flag `--bind` au répertoire où l'on se trouve par défaut dans le conteneur (`$HOME`). Par exemple :
 
-```sh
+```bash
 apptainer run --containall --bind $PWD:$HOME \ # On monte le répertoire courant au $HOME du conteneur.
   $HOME/apptainer-images/quantum-espresso.sif -in qe-tutorial.in
 ```
@@ -141,7 +141,7 @@ Réponses possibles :
 * ou `$HOME/apptainer-images/quantum-espresso.sif -in qe-tutorial.in`
 * ou
 
-```sh
+```bash
 apptainer exec \
   --env OMP_NUM_THREADS=1 \
   $HOME/apptainer-images/quantum-espresso.sif \
@@ -157,7 +157,7 @@ Comment utiliser l'image de conteneur pour effectuer un calcul Quantum Espresso 
 
 Exemple de réponse possible :
 
-```sh
+```bash
 apptainer exec \
   $HOME/apptainer-images/quantum-espresso.sif \
   mpirun -np 16 pw.x -in qe-tutorial.in
@@ -173,7 +173,7 @@ Comment utiliser l'image de conteneur pour effectuer un calcul Quantum Espresso 
 
 Exemple de réponse possible
 
-```sh
+```bash
 apptainer exec \
   --containall \
   --env OMP_NUM_THREADS=2 \
