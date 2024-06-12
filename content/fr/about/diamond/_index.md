@@ -5,8 +5,6 @@ linkTitle: DIAMOND
 
 <h2 class="text-center about-lead">bases de <b>D</b>onnées, outils d’<b>I</b>ntelligence <b>A</b>rtificielle, de <b>M</b>odélisation et d’<b>O</b>ptimisatio<b>N</b> pour le <b>D</b>esign numérique de matériaux</h2>
 
-
-
 <style>
 * {
   box-sizing: border-box;
@@ -26,18 +24,16 @@ linkTitle: DIAMOND
 </style>
 <div class="row">
 <div class="column left-about-diamond-fr">
-<img class="logo-diamond" width=100%/>
+  <img alt="DIAMOND" class="logo-diamond" width=100%/>
 </div>
 <div class="column right-about-diamond-fr">
 <div class="text-x-large" align="justify">
 
-L’objectif principal de ce projet ciblé est de mettre en place une infrastructure numérique pour accélérer le développement et la découverte de nouveaux matériaux. Elle est basée d’une part sur une plateforme dédiée aux codes de simulation aux différentes échelles et aux workflows pour l’automatisation de séries de calculs, dont les calculs à haut débit et le traitement des résultats par intelligence artificielle (IA) et d’autre part sur une infrastructure de bases de données issues à la fois d'expériences et de simulations. 
+L’objectif principal de ce projet ciblé est de mettre en place une infrastructure numérique pour accélérer le développement et la découverte de nouveaux matériaux. Elle est basée d’une part sur une plateforme dédiée aux codes de simulation aux différentes échelles et aux workflows pour l’automatisation de séries de calculs, dont les calculs à haut débit et le traitement des résultats par intelligence artificielle (IA) et d’autre part sur une infrastructure de bases de données issues à la fois d'expériences et de simulations.
 
 </div>
 </div>
 </div>
-
-
 
 <div align="justify">
 
