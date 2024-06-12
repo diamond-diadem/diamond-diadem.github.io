@@ -354,7 +354,7 @@ u {
 
 .logo-abinit {
     content: url(/images/abinit-logo-light.svg);
-    width: 100%;
+    min-width: 100%;
     margin-bottom: 8%;
     margin-top: 5%;
 }
@@ -492,14 +492,14 @@ u {
 // }
 
 .diamond-docs-sidebar-container {
-    width: 331px;
+    width: 342px;
     min-height: 89vh;
     display: flex;
     flex-direction: column;
 }
 
 .docs-sidebar {
-    width: 307px;
+    width: 318px;
 }
 
 
