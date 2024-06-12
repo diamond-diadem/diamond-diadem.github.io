@@ -6,11 +6,7 @@ toc: false
 weight: 2
 ---
 
-<br/>
-
-<a href="https://www.paraview.org/" target="_blank"><img class="logo-paraview" width="550px"/></a>
-
-<br/>
+<a href="https://www.paraview.org/" target="_blank"><img alt="ParaView" class="logo-paraview" width="100%"/></a>
 
 <div align="justify">
 
@@ -31,10 +27,10 @@ apptainer pull paraview.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamon
 
 ### Learn how to use this specific container _(to be added)_
 
-### Ovito documentation:
+### ParaView documentation:
 
-- ##### <a href="https://www.paraview.org/" target="_blank">Official website</a>
+- #### <a href="https://www.paraview.org/" target="_blank">Official website</a>
 
-- ##### <a href="https://www.paraview.org/resources/" target="_blank">Official documentation</a>
+- #### <a href="https://www.paraview.org/resources/" target="_blank">Official documentation</a>
 
-- ##### Examples: input files _(to be added)_
+- #### Examples: input files _(to be added)_

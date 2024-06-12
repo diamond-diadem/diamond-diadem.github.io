@@ -13,7 +13,7 @@ Le logiciel fonctionne sur toute distribution Linux moderne ; il ne tourne pas d
 
 {{< /callout >}}
 
-<br/>
+
 
 <!-- <video controls width="400px">
   <source src="https://www.youtube.com/embed/YDOH-mapNgo?si=A3SE_pXO4ty2aaL-" autoplay="false"/>
@@ -21,8 +21,8 @@ Le logiciel fonctionne sur toute distribution Linux moderne ; il ne tourne pas d
 
 <iframe class="tuto-video" src="https://www.youtube.com/embed/YDOH-mapNgo?si=A3SE_pXO4ty2aaL-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-<br/>
-<br/>
+
+
 
 <!-- Ce tutoriel présente succinctement le processus d'installation du logiciel de conteneurisation [Apptainer][apptainer-home-page]. Il est d'ailleurs largement basé sur les [instructions d'installations officielles][apptainer-install-linux], et nous vous invitons à consulter ces ressources pour plus de détails.
 

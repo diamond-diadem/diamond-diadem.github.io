@@ -5,7 +5,7 @@ linkTitle: Conteneurs
 
 <h2 class="about-lead text-center">Environnements légers et isolés incluant tous les outils nécessaires pour exécuter des applications. Ils sont devenus incontournables dans le domaine de l'informatique en raison de leur flexibilité et de leur efficacité.</h2> 
 
-<br/>
+
 
 **Qu'est-ce qu'un conteneur ?**
 - Un conteneur est une unité d'exécution autonome qui encapsule une application, mais aussi les librairies externes et autres dépendances nécessaires pour son exécution.

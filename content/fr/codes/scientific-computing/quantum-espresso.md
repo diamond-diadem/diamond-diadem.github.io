@@ -6,13 +6,13 @@ toc: false
 weight: 2
 ---
 
-<br/>
+
 
 <a href="https://www.quantum-espresso.org/" target="_blank">
     <img alt="Quantum ESPRESSO" class="logo-quantum-espresso" width="600px">
 </a>
 
-<br/>
+
 
 <div align="justify">
 

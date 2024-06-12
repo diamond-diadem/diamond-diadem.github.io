@@ -5,8 +5,6 @@ linkTitle: Apptainer
 
 <h2 class="about-lead text-center">Apptainer (formerly Singularity) is a container creation and management solution geared towards high-performance computing. By offering containers that package both a software tool and all necessary external dependencies for its application, it ensures their portability and reproducibility.</h2>
 
-<br/>
-
 <style>
 * {
   box-sizing: border-box;
@@ -34,7 +32,7 @@ linkTitle: Apptainer
 </style>
 <div class="row">
 <div class="column left-about-apptainer-en">
-<img class="logo-apptainer apptainer-logo-about"/>
+  <img alt="Apptainer" class="logo-apptainer apptainer-logo-about"/>
 </div>
 <div class="column right-about-apptainer-en">
 <div align="justify">

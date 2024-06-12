@@ -6,11 +6,11 @@ toc: false
 weight: 2
 ---
 
-<br/>
+
 
 <a href="https://www.paraview.org/" target="_blank"><img alt="ParaView" class="logo-paraview" width="550px"/></a>
 
-<br/>
+
 
 <div align="justify">
 

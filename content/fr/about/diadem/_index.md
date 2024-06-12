@@ -6,7 +6,7 @@ linkTitle: DIADEM
 <h2 class="text-center about-lead"><b>D</b>ispositifs <b>I</b>ntégrés pour l’<b>A</b>ccélération du <b>D</b>éploiement de <b>M</b>atériaux <b>E</b>mergents</h2>
 
 
-<br/>
+
 
 <style>
 * {
@@ -39,7 +39,7 @@ Le Programme et Équipements Prioritaires de Recherche (PEPR) <a href="https://p
 </div>
 
 
-<br/>
+
 <div width="100%">
 Afin de piloter ce programme et de garantir la neutralité, la qualité et la transparence des travaux, une gouvernance à plusieurs niveaux a été définie :
 
