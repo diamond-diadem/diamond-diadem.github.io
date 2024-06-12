@@ -28,7 +28,7 @@ Le <a href="https://www.lammps.org/" target="_blank">site web de LAMMPS</a> offr
 
 ### Récupérez l'image Apptainer :
 
-```sh
+```bash
 # PULL
 apptainer pull lammps.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/lammps.sif:latest
 ```

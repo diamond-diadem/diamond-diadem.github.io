@@ -30,7 +30,7 @@ Pour rapidement s'approprier les principales commandes d'Apptainer, vous pouvez 
 
 L'image que vous avez téléchargée est un fichier relocalisable et renommable, qu'il est recommandé de placer dans un répertoire dédié pour facilement la retrouver ; celui-ci peut-être quelconque, et dans le cadre de ce tutoriel nous assumerons que vous l'avez placée dans un répertoire nommé `$HOME/apptainer-images` :
 
-```sh
+```bash
 mkdir -p $HOME/apptainer-images
 mv ./tutorial.sif $HOME/apptainer-images/tutorial.sif
 ```
@@ -42,7 +42,7 @@ La principale manière d'interagir avec l'image se fait en invoquant la commande
 
 * L'argument `run` permet de faire naître un conteneur à partir de l'image, d'invoquer la *commande par défaut de l'image*  dans le conteneur puis de détruire le conteneur.
 
-```sh
+```bash
 $ apptainer run $HOME/apptainer-images/tutorial.sif
 ```
 **Note**
@@ -50,14 +50,14 @@ $ apptainer run $HOME/apptainer-images/tutorial.sif
 
 * L'argument `exec` est similaire à l'argument `run` mais permet d'invoquer **n'importe quelle commande** dans le conteneur. Par exemple :
 
-```sh
+```bash
 $ apptainer exec $HOME/apptainer-images/tutorial.sif echo Hi from the container !
 ```
 crée un conteneur à partir de l'image `$HOME/apptainer-images/tutorial.sif`, invoque la commande `echo Hi from the container !` du shell dans le conteneur puis détruit le conteneur.
 
 * l'argument `shell` permet d'ouvrir un shell interactif au sein du conteneur (le *prompt* `Apptainer>` apparaît alors à gauche de la ligne de commande) et d'y effectuer plusieurs commandes successives, puis d'en sortir en détruisant le conteneur avec `exit` ou `Crtl+D`. Par exemple :
 
-```sh
+```bash
 $ apptainer shell $HOME/apptainer-images/tutorial.sif
 Apptainer> pwd
 Apptainer> cd ..
@@ -72,7 +72,7 @@ $
 
 * l'argument `run-help` permet d'afficher le message d'aide inclus dans l'image.
 
-```sh
+```bash
 apptainer run-help $HOME/apptainer-images/tutorial.sif
 ```
 
@@ -83,7 +83,7 @@ apptainer inspect $HOME/apptainer-images/tutorial.sif
 
 Il est également possible d'exécuter l'image directement, comme un binaire :
 
-```sh
+```bash
 $ $HOME/apptainer-images/tutorial.sif
 ```
 ce qui est strictement équivalent à `apptainer run $HOME/apptainer-images/tutorial.sif`
@@ -93,7 +93,7 @@ Pour leur bon fonctionnement, de nombreux outils requièrent que certaines varia
 
 Par exemple, la commande par défaut lancée par `apptainer run $HOME/apptainer-images/tutorial.sif` est la suivante :
 
-```sh
+```bash
 echo $GREET $USER "who just ran the default command of the container."
 ```
 où la variable `$GREET` est définie pour renvoyer "Welcome" par défaut au sein du conteneur.
@@ -102,19 +102,19 @@ La variable `$USER` est récupérée pour que sa valeur dans le conteneur soit i
 
 Ces deux variables d'environmmement peuvent être redéfinies :
 
-```sh
+```bash
 apptainer run --env GREET=Hello $HOME/apptainer-images/tutorial.sif
 ```
 ou
 
-```sh
+```bash
 apptainer run --env USER=newusername $HOME/apptainer-images/tutorial.sif
 ```
 
 **Remarque**
 > Dans le cas où l'on modifie `$USER`, il est possible qu'Apptainer affiche un message prévenant que la modification de la variable est acceptée mais dévie du fonctionnement par défaut.
 
-```sh
+```bash
 WARNING: Environment variable USER already has value [newusername], will not forward new value [oldusername] from parent process environment
 ```
 
@@ -126,26 +126,26 @@ Si l'on veut isoler le conteneur de la machine hôte, Apptainer propose différe
 
 * l'utilisation du flag `--no-mount` pour délier un ou plusieurs chemins au sein du conteneur, par exemple :
 
-```sh
+```bash
 apptainer run --no-mount sys $HOME/apptainer-images/tutorial.sif
 ```
 
 * l'utilisation du flag `--no-home` rend le répertoire `$HOME` inaccessible au conteneur (mais `$PWD` reste monté) :
 
-```sh
+```bash
 apptainer exec --no-home $HOME/apptainer-images/tutorial.sif ls $HOME
 ```
 > Dans ce cas, on voit que `$HOME` existe au sein du conteneur mais ne correspond pas au répertoire de la machine hôte.
 
 * le flag `--containall` isole totalement le conteneur de la machine hôte.
 
-```sh
+```bash
 apptainer run --containall $HOME/apptainer-images/tutorial.sif
 ```
 
 Il est possible, notamment en jouant avec les options précédentes, que le répertoire contenant les éventuels fichiers d'entrée et de sortie requis ne soit pas accessible dans le conteneur ! Il faut alors monter ce dossier manuellement avec le flag `--bind` dans le conteneur. Par exemple, on peut imaginer le petit exercice suivant consistant à créer un fichier sur la machine hôte, le rendre accessible au sein du conteneur, en créer une copie dans le conteneur, puis récupérer cette copie sur la machine hôte :
 
-```sh
+```bash
 # Création d'un fichier sur la machine hôte 
 date > $PWD/test-host.txt
 

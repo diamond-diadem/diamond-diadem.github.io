@@ -19,7 +19,7 @@ Pour rapidement s'approprier les principales commandes d'Apptainer, vous pouvez 
 
 Cette image est un fichier relocalisable et renommable, qu'il est recommandé de placer dans un répertoire dédié pour facilement la retrouver ; celui-ci peut-être quelconque, et dans le cadre de ce tutoriel nous assumerons que vous l'avez placée dans un répertoire nommé `$HOME/apptainer-images` :
 
-```sh
+```bash
 mkdir -p $HOME/apptainer-images
 mv paraview.sif $HOME/apptainer-images/paraview.sif
 ```
@@ -30,7 +30,7 @@ Pour illustrer le fonctionnement du programme de visualisation, un jeu de fichie
 
 Dans ce tutoriel, on supposera que les fichiers d'entrée contenus dans cette archive sont dans le répertoire courant :
 
-```sh
+```bash
 tar -xzf paraview-tutorial-inputs.tar.gz # Extrait le contenu de l'archive, créée ./tutorial
 cd ./tutorial
 ```
@@ -38,7 +38,7 @@ cd ./tutorial
 ##  Commande en une ligne
 Pour les personnes pressées, voici comment lancer l'outil de visualisation ParaView en utilisant l'image de conteneur (téléchargée au préalable et située à `$HOME/apptainer-images/paraview.sif`). Dans le cas où le répertoire courant contient un fichier d'entrée lisible par ParaView :
 
-```sh
+```bash
 apptainer run $HOME/apptainer-images/paraview.sif <input.file>
 ```
 
@@ -47,7 +47,7 @@ Cette section présente les différentes manières d'utiliser l'image ParaView. 
 
 Pour exécuter ParaView sans aucune conteneurisation, on utiliserait la commande :
 
-```sh
+```bash
 paraview <input.file.1> <input.file.2> ...
 ```
 où les fichiers d'entrée `input.file.*` sont optionnels et permettent de charger la ou les structures que l'on veut afficher directement au lancement de l'application. 
@@ -65,7 +65,7 @@ Chacun de ces points est détaillé dans les sections suivantes.
 ### Lancer le conteneur ParaView avec Apptainer
 Pour lancer une commande dans un conteneur Apptainer, on peut utiliser `apptainer exec <nom de l'image> <commande>`, à laquelle on peut adjoindre des options que l'on détaillera dans les parties suivantes. Dans notre cas, où l'image est située au chemin `$HOME/apptainer-images/paraview.sif`, et où la commande est de la forme `paraview tutorial-disk.ex2` avec le fichier de configuration `tutorial-disk.ex2` dans le répertoire courant, on peut donc faire :
 
-```sh
+```bash
 apptainer exec $HOME/apptainer-images/paraview.sif paraview tutorial-disk.ex2
 ```
 
@@ -76,13 +76,13 @@ Cette commande fonctionne comme suit :
 
 On peut répliquer le même comportement avec `apptainer run` qui appelle directement la commande par défaut de l'image, `paraview`, à laquelle on peut adjoindre des arguments.
 
-```sh
+```bash
 apptainer run $HOME/apptainer-images/paraview.sif tutorial-disk.ex2 # la commande "paraview" est implicitement appellée.
 ```
 
 On peut enfin appeler directement l'image comme un exécutable, ce qui est strictement identique à l'utilisation de `apptainer run` (pour la forme, changeons de fichier de configuration).
 
-```sh
+```bash
 $HOME/apptainer-images/paraview tutorial-can.ex2
 ```
 
@@ -92,7 +92,7 @@ Par défaut, Apptainer n'isole pas totalement le conteneur du système de la mac
 #### Partage des ressources graphiques
 D'une part, il est possible qu'un message d'erreur apparaisse, vous informant que l'un des plugins de la librairie (`qt.qpa.xcb`), ne parvient pas à se connecter à vos ressources d'affichage.
 
-```sh
+```bash
 apptainer run --containall $HOME/apptainer-images/paraview.sif 
 [...]
 qt.qpa.xcb: could not connect to display 
@@ -106,14 +106,14 @@ Ce problème est directement dû à l'isolation totale entre le conteneur et la 
 
 Pour contourner ce problème, il suffit de préciser à la commande `apptainer run` (ou `apptainer exec`) quelle valeur attribuer à cette variable d'environnement au sein du conteneur. Pour cela, on peut recourir au flag `--env <variable>=<valeur>`, comme suit :
 
-```sh
+```bash
 apptainer run --containall --env DISPLAY=$DISPLAY $HOME/apptainer-images/paraview.sif
 ```
 
 #### Accès aux fichiers
 D'autre part, le répertoire contenant les fichiers d'entrée n'est pas accessible dans le conteneur !
 
-```sh
+```bash
 apptainer run --containall --env DISPLAY=$DISPLAY $HOME/apptainer-images/paraview.sif tutorial-disk.ex2
 [...]
 critical: Cannot open data file " "tutorial-disk.ex2" "
@@ -121,7 +121,7 @@ critical: Cannot open data file " "tutorial-disk.ex2" "
 
 Il faut alors monter manuellement le répertoire courant (`$PWD`) avec le flag `--bind` au répertoire où l'on se trouve par défaut dans le conteneur (`$HOME`). Par exemple :
 
-```sh
+```bash
 apptainer run --containall --bind $PWD:$HOME \ # On monte le répertoire courant au $HOME du conteneur.
   $HOME/apptainer-images/paraview.sif tutorial-disk.ex2
 ```
@@ -133,13 +133,13 @@ dans le cas où les fichiers d'entrée de Parawiew se situent dans le répertoir
 ### Afficher l'aide
 Pour afficher le message d'aide du conteneur (on suppose l'image stockée sous `$HOME/apptainer-images/paraview.sif`) :
 
-```sh
+```bash
 apptainer run-help $HOME/apptainer-images/paraview.sif
 ```
 
 Pour afficher les méta-données du conteneur (propriétaire du code, version, auteur de l'image, ...) :
 
-```sh
+```bash
 apptainer inspect $HOME/apptainer-images/paraview.sif
 ```
 

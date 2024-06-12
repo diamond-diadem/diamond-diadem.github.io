@@ -33,7 +33,7 @@ Le logiciel fonctionne sur toute distribution Linux moderne ; il ne tourne pas d
 ### Commande en une ligne
 Les commandes à lancer pour l'installation des paquets Ubuntu sont les suivantes :
 
-```sh
+```bash
 sudo apt update
 sudo apt install -y software-properties-common
 sudo add-apt-repository -y ppa:apptainer/ppa
@@ -46,7 +46,7 @@ Pour installer directement les paquets Ubuntu pré-construits destinés aux arch
 
 Dans un premier temps, il faut donc s'assurer d'avoir accès à la commande `add-apt-repository` :
 
-```sh
+```bash
 sudo apt update 
 sudo apt install -y software-properties-common # Pour pouvoir lancer la commande de la ligne suivante
 sudo add-apt-repository -y ppa:apptainer/ppa
@@ -54,7 +54,7 @@ sudo add-apt-repository -y ppa:apptainer/ppa
 
 Ensuite, on termine l'installation ainsi :
 
-```sh
+```bash
 sudo apt update
 sudo apt install -y apptainer
 ```
@@ -64,7 +64,7 @@ sudo apt install -y apptainer
 ### Commande en une ligne
 Les commandes à lancer pour l'installation des paquets Debian sont les suivantes :
 
-```sh
+```bash
 sudo apt update
 sudo apt install -y wget
 cd /tmp
@@ -75,14 +75,14 @@ sudo apt install -y ./apptainer_1.2.5_amd64.deb
 ### Détail des étapes
 Pour installer les paquets Debian pré-construits uniquement destinés aux architectures `amd64`, il faut accéder au dépôt GitHub contenant le paquet en installant `wget` :
 
-```sh
+```bash
 sudo apt update
 sudo apt install -y wget
 ```
 
 Une fois `wget` disponible, on récupère le paquet `.deb` avant de l'installer sur la machine :
 
-```sh
+```bash
 cd /tmp
 wget https://github.com/apptainer/apptainer/releases/download/v1.2.5/apptainer_1.2.5_amd64.deb
 sudo apt install -y ./apptainer_1.2.5_amd64.deb
@@ -101,7 +101,7 @@ sudo apt install -y ./apptainer_1.2.5_amd64.deb
 ### Paquets RPMs depuis GitHub
 À l'arrivée de chaque nouvelle version, un paquet RPM (RedHat Package Manager) est disponible sur GitHub :
 
-```sh
+```bash
 sudo yum install -y https://github.com/apptainer/apptainer/releases/download/v1.2.5/apptainer-1.2.5-1.x86_64.rpm
 ```
 
@@ -109,13 +109,13 @@ sudo yum install -y https://github.com/apptainer/apptainer/releases/download/v1.
 Les paquets sont également disponibles via EPEL (Extra Packages for Enterprise Linux).
 Sous RedHat, il est préalablement nécessaire de pouvoir accéder aux dépôts EPEL :
 
-```sh
+```bash
 sudo yum install -y epel-release
 ```
 
 Dès lors, on peut installer les paquets ainsi :
 
-```sh
+```bash
 sudo yum install -y apptainer
 ```
 
@@ -124,7 +124,7 @@ Pour les utilisateurs sans droits administrateurs sur leur machine, il est égal
 
 Pour exécuter ce script, lancez la commande suivante :
 
-```sh
+```bash
 curl -s https://raw.githubusercontent.com/apptainer/apptainer/main/tools/install-unprivileged.sh | \
     bash -s - install-dir
 ```
