@@ -28,13 +28,13 @@ mkdir -p $HOME/apptainer-images
 mv ./tutorial.sif $HOME/apptainer-images/tutorial-openmpi.sif
 ```
 
-This image will allow you to create containers embedding code parallelized with **OpenMPI**. This `omn3` code performs a series of multiplications of random {{< math >}}$N \times N${{< /math >}}  square matrices; the size of the matrices {{< math >}}$N${{< /math >}}  and the number of multiplications {{< math >}}$M${{< /math >}} can be specified as arguments. For example, to parallelize 1000 ({{< math >}}$M=1000${{< /math >}}) multiplications of {{< math >}}$100 \times 100${{< /math >}} ({{< math >}}$N \times N = 100 \times 100${{< /math >}}) matrices on 8 cores:
+This image will allow you to create containers embedding code parallelized with **OpenMPI**. This `omn3` code performs a series of multiplications of random $N \times N$  square matrices; the size of the matrices $N$  and the number of multiplications $M$ can be specified as arguments. For example, to parallelize 1000 ($M=1000$) multiplications of $100 \times 100$ ($N \times N = 100 \times 100$) matrices on 8 cores:
 
 ```bash
 mpirun -np 8 omn3 100 1e3
 ```
 
-The total cost is of the order of {{< math >}}$O(MN^3)${{< /math >}}, allowing easy adjustment of calculation time on various machines with different performances.
+The total cost is of the order of $O(MN^3)$, allowing easy adjustment of calculation time on various machines with different performances.
 
 Finally, the image also includes a tool that evaluates the program's use of reserved cores in the background. After execution, you will find the average usage per core in the `CPU-usage` file.
 

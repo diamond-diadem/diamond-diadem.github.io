@@ -2,6 +2,19 @@ defaultMarkdownHandler: goldmark
 goldmark:
   extensions:
     linkify: false
+    passthrough:
+      delimiters:
+        block:
+        - - \[
+          - \]
+        - - $$
+          - $$
+        inline:
+        - - \(
+          - \)
+        - - $
+          - $
+      enable: true
   parser:
     autoHeadingID: true
     autoHeadingIDType: github
@@ -10,6 +23,7 @@ goldmark:
       title: true
   renderer:
     unsafe: true
+
 highlight:
   anchorLineNos: false
   codeFences: true
