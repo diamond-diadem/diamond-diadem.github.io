@@ -2,7 +2,6 @@
 title: Utiliser Apptainer en parallèle ?
 linktitle: Utiliser Apptainer en parallèle ?
 weight: 1
-# toc: true
 ---
 
 Si l'image Apptainer que vous voulez utiliser supporte le calcul parallèle, alors OpenMPI fait partie des librairies inclues au sein du conteneur. Dans ce cas, il est intéressant d'utiliser cette solution de parallélisation pour accélèrer votre calcul. Si on se réfère à la [documentation](https://apptainer.org/docs/user/latest/mpi.html) officielle d'Apptainer, il existe deux modes d'utilisation d'OpenMPI avec Apptainer : le mode hybride et le mode de liaison. Ces modes sont plébiscités lorsque lorsque le conteneur est utilisé sur des infrastructures de type HPC. Cependant, un troisième mode peut être employé si le conteneur est lancé sur une machine personnelle : le mode embarqué. Dans cette documentation, nous détaillerons :
@@ -13,16 +12,15 @@ Si l'image Apptainer que vous voulez utiliser supporte le calcul parallèle, alo
 **Remarque**
 > Les commandes Apptainer ci-dessous ont été simplifiées au maximum dans un but de lisibilité. Il est possible de combiner l'utilisation des commandes `mpirun` avec le flag `--containall`, tout en montant des dossiers spécifiques au conteneur avec les flags `--bind` et en renseignant des variables d'environnement `--env`. Les possibilités sont multiples. Nous vous conseillons donc de jeter un oeil à la documentation relative à ces [sujets]({{< ref "/content/fr/documentation/use-apptainer-image/howto.md" >}}).
 
-## Exemple pratique : image avec OpenMPI 
+## Exemple pratique : image avec OpenMPI
 
  Une image sur mesure dédiée à la mise en pratique de ce tutoriel est disponible en tapant la commande suivante :
 
-
- ```bash
+```bash
  # PULL
  apptainer pull tutorial-openmpi.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/tutorial-openmpi.sif:latest
- ``` 
- 
+ ```
+
 Ainsi, vous récupérez une image Apptainer (format de fichier `.sif`). Cette image est un fichier relocalisable et renommable, qu'il est recommandé de placer dans un répertoire dédié pour facilement la retrouver ; celui-ci peut-être quelconque, et dans le cadre de ce tutoriel nous assumerons que vous l'avez placée dans un répertoire nommé `$HOME/apptainer-images` :
 
 ```bash
@@ -30,13 +28,13 @@ mkdir -p $HOME/apptainer-images
 mv ./tutorial.sif $HOME/apptainer-images/tutorial-openmpi.sif
 ```
 
-Cette image vous permettra de créer des conteneurs embarquant un code parallélisé avec **OpenMPI**. Ce code `omn3` effectue une série de multiplications de matrices $N \times N$ carrées aléatoires ; la taille des matrices $N$ et le nombre de multiplications $M$ peuvent être précisés en argument. Par exemple, pour paralléliser sur $8$ cœurs $M=1000$ multiplications de matrices $N \times N = 100 \times 100$   :
+Cette image vous permettra de créer des conteneurs embarquant un code parallélisé avec **OpenMPI**. Ce code `omn3` effectue une série de multiplications de matrices {{< math >}}$N \times N${{< /math >}} carrées aléatoires ; la taille des matrices {{< math >}}$N${{< /math >}} et le nombre de multiplications {{< math >}}$M${{< /math >}} peuvent être précisés en argument. Par exemple, pour paralléliser sur {{< math >}}$8${{< /math >}} cœurs {{< math >}}$M=1000${{< /math >}} multiplications de matrices {{< math >}}$N \times N = 100 \times 100${{< /math >}}   :
 
 ```bash
 mpirun -np 8 omn3 100 1e3
 ```
 
-Le coût total est d'ordre $O(MN^3)$, afin d'ajuster facilement la durée de calcul sur différentes machines aux performances variées.
+Le coût total est d'ordre {{< math >}}$O(MN^3)${{< /math >}}, afin d'ajuster facilement la durée de calcul sur différentes machines aux performances variées.
 
 Enfin, l'image inclut également un outil évaluant en arrière-plan l'utilisation par le programme des cœurs réservés. Après l'exécution, vous trouverez l'utilisation moyenne par cœur dans le fichier `CPU-usage`.
 
@@ -63,14 +61,15 @@ Nous venons de voir que l'utilisation d'OpenMPI en mode embarqué sur des infras
 (NOTE : INCLURE SCHÉMA OPENMPI EMBARQUÉ/HYBRIDE ICI).
 
 Pour de la parallélisation hybride, l'appel à la commande OpenMPI (`mpirun`) ne se fait plus au sein du conteneur - c'est-à-dire après `apptainer exec` comme pour le mode embarqué - mais à l'extérieur de celui-ci. On utilise donc une commade de la forme :
+
 ```bash
 mpirun -np nb_procs <options-OpenMPI> \
         apptainer exec image_apptainer.sif \
         commande ...
 
 ```
-Par cette approche, c'est la version d'OpenMPI installée sur la machine hôte qui sera appelée, et qui échangera avec la version de la librairie et le code installés au sein du conteneur instancié par `apptainer exec`. Selon les spécificités de la machine hôte, quelques options OpenMPI (`<option-OpenMPI>`) peuvent être nécessaires, et sont discutées plus bas. 
 
+Par cette approche, c'est la version d'OpenMPI installée sur la machine hôte qui sera appelée, et qui échangera avec la version de la librairie et le code installés au sein du conteneur instancié par `apptainer exec`. Selon les spécificités de la machine hôte, quelques options OpenMPI (`<option-OpenMPI>`) peuvent être nécessaires, et sont discutées plus bas.
 
 Dans les faits, afin d'optimiser réellement les performances, il faut passer par une complexité supplémentaire via l'utilisation des instances Apptainer. Cela permet en effet d'homogénéiser les namespaces des processus OpenMPI, favorisant ainsi la communication entre les processus. Pour cela, on procède de la manière suivante :
 
@@ -90,7 +89,8 @@ mpirun -npernode 1 \
         apptainer instance stop nom_instance
 ```
 
-Si vous voulez utiliser des flags spécifiques pour exécuter votre conteneur, il faut le faire à la création de l'instance. Par exemple, pour monter des dossiers spécifiques avec le paramètre `--bind`, cela donne : 
+Si vous voulez utiliser des flags spécifiques pour exécuter votre conteneur, il faut le faire à la création de l'instance. Par exemple, pour monter des dossiers spécifiques avec le paramètre `--bind`, cela donne :
+
 ```bash
 mpirun -npernode 1 \
         apptainer instance start \
@@ -111,9 +111,10 @@ En pratique, l'exécution de commandes OpenMPI peut nécessiter des arguments ou
 ### Inter-compatibilité de versions
 
 Bien qu'il existe une compatibilité OpenMPI inter-version, l'utilisation de versions différentes d'OpenMPI peut résulter en des [baisses de performances](https://github.com/ckhroulev/apptainer-with-ompi/tree/main). Il est donc plus simple, quand c'est possible d'utiliser la même version d'OpenMPI sur la machine hôte que dans le conteneur. Pour cela, on peut fonctionner de deux manières : en sélectionnant, quand c'est possible, la version la plus adaptée d'OpenMPI disponible sur le cluster HPC que vous utilisez, ou alors à l'inverse en installant directement la même version d'OpenMPI que celle du cluster dans l'image Apptainer lors de sa construction.
-Dans le cadre du PEPR DIADEME, les images de conteneurs mises à disponibilité sont construites sans connaissance préalable exhaustive des machines sur lesquelles elles seront utilisées ; il est donc ardu de choisir *a priori* la version qu'il **vous** faut pour l'inclure dans le conteneur.
+Dans le cadre du PEPR DIADEM, les images de conteneurs mises à disponibilité sont construites sans connaissance préalable exhaustive des machines sur lesquelles elles seront utilisées ; il est donc ardu de choisir *a priori* la version qu'il **vous** faut pour l'inclure dans le conteneur.
 
 Si vous voulez connaître la version d'OpenMPI inclue dans une image donnée, ainsi que d'autres informations utiles, vous pouvez appeler `ompi_info` comme ceci :
+
 ```bash
 apptainer exec \
   image_apptainer.sif \
