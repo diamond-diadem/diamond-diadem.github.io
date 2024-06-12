@@ -6,11 +6,7 @@ toc: false
 weight: 1
 ---
 
-<br/>
-
-<a href="https://www.lammps.org/" target="_blank"><img src="/images/lammps-logo.png" width="500px"></a>
-
-<br/>
+<a href="https://www.lammps.org/" target="_blank"><img alt="LAMMPS" src="/images/lammps-logo.png" width="100%"></a>
 
 <div align="justify">
 
@@ -37,8 +33,8 @@ apptainer pull lammps.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/
 
 ### LAMMPS documentation:
 
-- ##### <a href="https://www.lammps.org/" target="_blank">Official website</a>
+- #### <a href="https://www.lammps.org/" target="_blank">Official website</a>
 
-- ##### <a href="https://docs.lammps.org/" target="_blank">Official documentation</a>
+- #### <a href="https://docs.lammps.org/" target="_blank">Official documentation</a>
 
-- ##### Examples: input files
+- #### Examples: input files

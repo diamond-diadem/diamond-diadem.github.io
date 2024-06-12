@@ -5,7 +5,7 @@ linkTitle: DIAMOND
 
 <h2 class="text-center about-lead">bases de <b>D</b>onnées, outils d’<b>I</b>ntelligence <b>A</b>rtificielle, de <b>M</b>odélisation et d’<b>O</b>ptimisatio<b>N</b> pour le <b>D</b>esign numérique de matériaux</h2>
 
-<br/>
+
 
 <style>
 * {
@@ -37,7 +37,7 @@ L’objectif principal de ce projet ciblé est de mettre en place une infrastruc
 </div>
 </div>
 
-<br/>
+
 
 <div align="justify">
 

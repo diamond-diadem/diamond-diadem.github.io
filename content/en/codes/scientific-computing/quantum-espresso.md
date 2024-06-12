@@ -6,11 +6,7 @@ toc: false
 weight: 2
 ---
 
-<br/>
-
-<a href="https://www.quantum-espresso.org/" target="_blank"><img class="logo-quantum-espresso" width="600px"></a>
-
-<br/>
+<a href="https://www.quantum-espresso.org/" target="_blank"><img alt="Quantum ESPRESSO" class="logo-quantum-espresso" width="100%"></a>
 
 <div align="justify">
 
@@ -33,8 +29,8 @@ apptainer pull quantum-espresso.sif oras://gricad-registry.univ-grenoble-alpes.f
 
 ### Quantum ESPRESSO documentation:
 
-- ##### <a href="https://www.quantum-espresso.org/" target="_blank">Official website</a>
+- #### <a href="https://www.quantum-espresso.org/" target="_blank">Official website</a>
 
-- ##### <a href="https://www.quantum-espresso.org/documentation/" target="_blank">Official documentation</a>
+- #### <a href="https://www.quantum-espresso.org/documentation/" target="_blank">Official documentation</a>
 
-- ##### Examples: input files
+- #### Examples: input files
