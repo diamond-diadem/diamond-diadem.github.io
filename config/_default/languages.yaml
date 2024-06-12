@@ -1,0 +1,27 @@
+fr:
+  languageName: FR
+  contentDir: content/fr
+  weight: 10
+  params:
+    languageISO: FR
+    languageTag: fr-FR
+    footer:
+      Ce travail a bénéficié d’une aide de l’Etat gérée par l’Agence Nationale
+      de la Recherche au titre de France 2030 portant la référence
+      ANR-22-PEXD-0015
+    alertText: <a class="alert-link stretched-link fw-normal"
+      href="/blog/example-post/">Doks version 1.0 just shipped!</a>
+en:
+  languageName: EN
+  contentDir: content/en
+  weight: 20
+  params:
+    languageISO: EN
+    languageTag: en-US
+    footer:
+      This work was supported by a grant from the French government managed by
+      the National Research Agency under the France 2030 program with reference
+      ANR-22-PEXD-0015.
+    alertText: <a class="alert-link stretched-link fw-normal"
+      href="/blog/example-post/">Doks version 1.0 just shipped!</a>
+    description: Digital platform for PEPR DIADEM
