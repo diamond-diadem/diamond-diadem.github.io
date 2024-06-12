@@ -28,13 +28,13 @@ mkdir -p $HOME/apptainer-images
 mv ./tutorial.sif $HOME/apptainer-images/tutorial-openmpi.sif
 ```
 
-Cette image vous permettra de créer des conteneurs embarquant un code parallélisé avec **OpenMPI**. Ce code `omn3` effectue une série de multiplications de matrices {{< math >}}$N \times N${{< /math >}} carrées aléatoires ; la taille des matrices {{< math >}}$N${{< /math >}} et le nombre de multiplications {{< math >}}$M${{< /math >}} peuvent être précisés en argument. Par exemple, pour paralléliser sur {{< math >}}$8${{< /math >}} cœurs {{< math >}}$M=1000${{< /math >}} multiplications de matrices {{< math >}}$N \times N = 100 \times 100${{< /math >}}   :
+Cette image vous permettra de créer des conteneurs embarquant un code parallélisé avec **OpenMPI**. Ce code `omn3` effectue une série de multiplications de matrices $N \times N$ carrées aléatoires ; la taille des matrices $N$ et le nombre de multiplications $M$ peuvent être précisés en argument. Par exemple, pour paralléliser sur $8$ cœurs $M=1000$ multiplications de matrices $N \times N = 100 \times 100$   :
 
 ```bash
 mpirun -np 8 omn3 100 1e3
 ```
 
-Le coût total est d'ordre {{< math >}}$O(MN^3)${{< /math >}}, afin d'ajuster facilement la durée de calcul sur différentes machines aux performances variées.
+Le coût total est d'ordre $O(MN^3)$, afin d'ajuster facilement la durée de calcul sur différentes machines aux performances variées.
 
 Enfin, l'image inclut également un outil évaluant en arrière-plan l'utilisation par le programme des cœurs réservés. Après l'exécution, vous trouverez l'utilisation moyenne par cœur dans le fichier `CPU-usage`.
 
