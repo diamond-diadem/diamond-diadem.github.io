@@ -19,6 +19,10 @@ main:
     url: en/about/apptainer/
     weight: 14
     parent: about-en
+  - name: Guix
+    url: en/about/guix
+    weight: 15
+    parent: about-en
   - name: Codes
     url: en/codes/start-here/home/
     weight: 20
