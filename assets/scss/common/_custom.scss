@@ -384,6 +384,19 @@ u {
     }
 }
 
+.logo-z-set {
+    content: url(/images/z-set-light.png);
+    min-width: 100%;
+    margin-bottom: 8%;
+    margin-top: 5%;
+}
+
+@include color-mode(dark) {
+    .logo-z-set {
+        content: url(/images/z-set-dark.png);
+    }
+}
+
 
 
 
