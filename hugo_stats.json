@@ -217,6 +217,7 @@
       "logo-quantum-espresso",
       "logo-vesta",
       "logo-vmd",
+      "logo-z-set",
       "mb-0",
       "mb-1",
       "mb-3",
@@ -376,6 +377,10 @@
       "a-hrefhttpswwwquantum-espressoorg-target_blanksite-officiela",
       "a-hrefhttpswwwquantum-espressoorgdocumentation-target_blankdocumentation-officiellea",
       "a-hrefhttpswwwquantum-espressoorgdocumentation-target_blankofficial-documentationa",
+      "a-hrefhttpwwwzset-softwarecom-target_blankofficial-websitea",
+      "a-hrefhttpwwwzset-softwarecom-target_blanksite-officiela",
+      "a-hrefhttpwwwzset-softwarecomsupportmanuals-target_blankdocumentation-officiellea",
+      "a-hrefhttpwwwzset-softwarecomsupportmanuals-target_blankofficial-documentationa",
       "abinit-documentation",
       "about-packages",
       "accès-aux-fichiers",
@@ -400,6 +405,7 @@
       "documentation-quantum-espresso-",
       "documentation-vesta-",
       "documentation-vmd-",
+      "documentation-z-set-",
       "doks-docs-nav",
       "doks-language-current",
       "doks-languages",
@@ -529,6 +535,7 @@
       "vesta-documentation",
       "vmd-documentation",
       "what-are-the-benefits",
+      "z-set-documentation",
       "à-propos-des-paquets"
     ]
   }
