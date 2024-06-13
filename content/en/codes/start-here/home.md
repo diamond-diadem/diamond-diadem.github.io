@@ -52,7 +52,7 @@ But to begin with, if you haven't gone through this step yet and if you're not f
             <td><a href="/en/codes/visualisation/vesta/"><i class="icon-vesta"></i>VESTA</a></td>
         </tr>
         <tr>
-            <td></td>
+            <td><a href="/en/codes/scientific-computing/z-set/">Z-set</td></td>
             <td><a href="/en/codes/visualisation/vmd/"><i class="icon-vmd"></i>VMD</a></td>
         </tr>
     </tbody>
@@ -82,6 +82,14 @@ apptainer pull quantum-espresso.sif oras://gricad-registry.univ-grenoble-alpes.f
 ```bash
 # PULL
 apptainer pull abinit.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/abinit.sif:latest
+```
+
+{{< /tab >}}
+{{< tab "Z-set" >}}
+
+```bash
+# PULL
+apptainer pull z-set.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/z-set.sif:latest
 ```
 
 {{< /tab >}}
