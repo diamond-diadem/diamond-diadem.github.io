@@ -34,25 +34,25 @@ Mais pour commencer, si vous n'êtes pas encore passé par cette étape et si vo
     </caption> -->
     <thead>
         <tr>
-            <th scope="col">Calcul Scientifique</th>
+            <th class="table-cell-left" scope="col">Calcul Scientifique</th>
             <th scope="col">Visualisation</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td><a href="/codes/scientific-computing/lammps/"><i class="icon-lammps"></i>LAMMPS</a></td>
+            <td class="table-cell-left"><a href="/codes/scientific-computing/lammps/"><i class="icon-lammps"></i>LAMMPS</a></td>
             <td><a href="/codes/visualisation/ovito/"><i class="icon-ovito"></i>Ovito</a></td>
         </tr>
         <tr>
-            <td><a href="/codes/scientific-computing/quantum-espresso/"><i class="icon-quantum-espresso"></i>Quantum ESPRESSO</a></td>
+            <td class="table-cell-left"><a href="/codes/scientific-computing/quantum-espresso/"><i class="icon-quantum-espresso"></i>Quantum ESPRESSO</a></td>
             <td><a href="/codes/visualisation/paraview/"><i class="icon-paraview"></i>ParaView</a></td>
         </tr>
         <tr>
-            <td><a href="/codes/scientific-computing/abinit/"><i class="icon-abinit"></i>Abinit</td>
+            <td class="table-cell-left"><a href="/codes/scientific-computing/abinit/"><i class="icon-abinit"></i>Abinit</td>
             <td><a href="/codes/visualisation/vesta/"><i class="icon-vesta"></i>VESTA</a></td>
         </tr>
         <tr>
-            <td><a href="/codes/scientific-computing/z-set/">Z-set</td>
+            <td class="table-cell-left"><a href="/codes/scientific-computing/z-set/">Z-set</td>
             <td><a href="/codes/visualisation/vmd/"><i class="icon-vmd"></i>VMD</a></td>
         </tr>
     </tbody>
