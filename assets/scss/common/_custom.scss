@@ -1140,7 +1140,25 @@ u {
     display: block;
 }
 
-// h2 a.contact-mailto {
-//    position: relative;
-//    top: 50%; 
+table {
+    border-bottom:$body-color ;
+
+}
+
+// th {
+//     border: solid $body-color 1px;
 // }
+
+// td.table-cell-left {
+//     border-right: solid $body-color 1px;
+// }
+
+@include color-mode(dark) {
+    table {
+        border-bottom: $body-color-dark;
+    }
+
+    // td.table-cell-left {
+    //     border-right: solid $body-color-dark 1px;
+    // }
+}
