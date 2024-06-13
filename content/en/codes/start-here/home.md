@@ -77,6 +77,14 @@ apptainer pull quantum-espresso.sif oras://gricad-registry.univ-grenoble-alpes.f
 ```
 
 {{< /tab >}}
+{{< tab "Abinit" >}}
+
+```bash
+# PULL
+apptainer pull abinit.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/abinit.sif:latest
+```
+
+{{< /tab >}}
 {{< tab "Ovito" >}}
 
 ```bash
