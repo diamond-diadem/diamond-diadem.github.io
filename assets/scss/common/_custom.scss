@@ -1152,9 +1152,8 @@ u {
     display: block;
 }
 
-table {
-    border-bottom:$body-color ;
-
+th, tr {
+    border-bottom: solid rgba(150, 150, 150, 1) 1px;
 }
 
 // th {
@@ -1166,8 +1165,8 @@ table {
 // }
 
 @include color-mode(dark) {
-    table {
-        border-bottom: $body-color-dark;
+    th, tr {
+        border-bottom: solid $body-color-dark 1px;
     }
 
     // td.table-cell-left {
