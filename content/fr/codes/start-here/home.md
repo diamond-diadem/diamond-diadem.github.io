@@ -1,6 +1,7 @@
 ---
 title: CODES CONTENEURISÉS
 linkTitle: Accueil
+googleIcon: home
 toc: false
 ---
 

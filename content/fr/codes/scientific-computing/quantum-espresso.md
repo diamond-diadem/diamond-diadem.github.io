@@ -2,6 +2,7 @@
 title: Quantum ESPRESSO
 title_visible: false
 linkTitle: Quantum ESPRESSO
+icon: icon-quantum-espresso
 toc: false
 weight: 2
 ---
@@ -9,10 +10,8 @@ weight: 2
 
 
 <a href="https://www.quantum-espresso.org/" target="_blank">
-    <img alt="Quantum ESPRESSO" class="logo-quantum-espresso" width="600px">
+    <img alt="Quantum ESPRESSO" class="logo-quantum-espresso" width="100%">
 </a>
-
-
 
 <div align="justify">
 

@@ -2,6 +2,7 @@
 title: VMD
 title_visible: false
 linkTitle: VMD
+icon: icon-vmd
 toc: false
 weight: 4
 ---

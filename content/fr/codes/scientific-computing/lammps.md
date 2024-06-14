@@ -2,15 +2,14 @@
 title: LAMMPS
 title_visible: false
 linkTitle: LAMMPS
+icon: icon-lammps
 toc: false
 weight: 1
 ---
 
 
 
-<a href="https://www.lammps.org/" target="_blank"><img src="/images/lammps-logo.png" width="500px"></a>
-
-
+<a href="https://www.lammps.org/" target="_blank"><img alt="LAMMPS" src="/images/lammps-logo.png" width="100%"></a>
 
 <div align="justify">
 

@@ -2,6 +2,7 @@
 title: Quantum ESPRESSO
 title_visible: false
 linkTitle: Quantum ESPRESSO
+icon: icon-quantum-espresso
 toc: false
 weight: 2
 ---
