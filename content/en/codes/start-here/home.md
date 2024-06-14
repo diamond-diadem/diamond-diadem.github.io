@@ -122,7 +122,7 @@ apptainer pull vesta.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/a
 
 ```bash
 # PULL
-apptainer pull vmd.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/vvmd.sif:latest
+apptainer pull vmd.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/vmd.sif:latest
 ```
 
 {{< /tab >}}
