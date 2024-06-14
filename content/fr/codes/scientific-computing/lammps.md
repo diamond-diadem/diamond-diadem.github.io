@@ -9,7 +9,7 @@ weight: 1
 
 
 
-<a href="https://www.lammps.org/" target="_blank"><img alt="LAMMPS" src="/images/lammps-logo.png" width="100%"></a>
+<a href="https://www.lammps.org/" target="_blank"><img alt="LAMMPS" class="logo-lammps" width="100%"></a>
 
 <div align="justify">
 

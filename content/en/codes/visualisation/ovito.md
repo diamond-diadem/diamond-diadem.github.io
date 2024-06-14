@@ -7,7 +7,7 @@ toc: false
 weight: 1
 ---
 
-<a href="https://www.ovito.org/" target="_blank"><img class="logo-ovito" width="500px"/></a>
+<a href="https://www.ovito.org/" target="_blank"><img alt="Ovito" class="logo-ovito" width="100%"/></a>
 
 <div align="justify">
 
@@ -30,8 +30,8 @@ apptainer pull ovito.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/a
 
 ### Ovito documentation:
 
-- ##### <a href="https://www.ovito.org/" target="_blank">Official website</a>
+- #### <a href="https://www.ovito.org/" target="_blank">Official website</a>
 
-- ##### <a href="https://www.ovito.org/docs/current" target="_blank">Official documentation</a>
+- #### <a href="https://www.ovito.org/docs/current" target="_blank">Official documentation</a>
 
-- ##### Examples: input files
+- #### Examples: input files

@@ -275,6 +275,8 @@ u {
 
 .logo-ovito {
     content: url('/images/ovito-logo-light.png');
+    margin-top: 5%;
+    margin-bottom: 8%;
 }
 
 
@@ -327,10 +329,18 @@ u {
     }
 }
 
+.logo-lammps {
+    content: url("/images/lammps-logo.png");
+    margin-top: 5%;
+    margin-bottom: 8%;
+}
 
 
 .logo-quantum-espresso {
     content: url('/images/quantum-espresso-logo-light.png');
+    margin-top: 5%;
+    margin-bottom: 8%;
+
 }
 
 @include color-mode(dark) {
@@ -342,6 +352,8 @@ u {
 
 .logo-paraview {
     content: url('/images/paraview-logo-light.svg');
+    margin-top: 5%;
+    margin-bottom: 8%;
 }
 
 @include color-mode(dark) {
@@ -354,6 +366,8 @@ u {
 .logo-vesta {
     content: url('/images/vesta-logo-light.png');
     width: 100%;
+    margin-top: 5%;
+    margin-bottom: 8%;
 }
 
 @include color-mode(dark) {
@@ -375,6 +389,8 @@ u {
 
 .logo-vmd {
     content: url(/images/vmd-logo-light.png);
+    margin-top: 5%;
+    margin-bottom: 8%;
 }
 
 @include color-mode(dark) {
