@@ -2,6 +2,7 @@
 title: Ovito
 title_visible: false
 linkTitle: Ovito
+icon: icon-ovito
 toc: false
 weight: 1
 ---

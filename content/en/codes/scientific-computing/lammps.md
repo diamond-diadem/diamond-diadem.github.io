@@ -2,6 +2,7 @@
 title: LAMMPS
 title_visible: false
 linkTitle: LAMMPS
+icon: icon-lammps
 toc: false
 weight: 1
 ---

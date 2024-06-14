@@ -1174,3 +1174,14 @@ table {
     //     border-right: solid $body-color-dark 1px;
     // }
 }
+
+.sidebar-icon {
+    margin-right: 6px;
+}
+
+.sidebar-google-icon {
+    display: inline-block;
+    position: relative;
+    top: 4px; left: -1px;
+    margin-right: -4px;
+}

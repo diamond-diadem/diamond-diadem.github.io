@@ -2,6 +2,7 @@
 title: Abinit
 title_visible: false
 linkTitle: Abinit
+icon: icon-abinit
 toc: false
 weight: 3
 ---

@@ -2,6 +2,7 @@
 title: ParaView
 title_visible: false
 linkTitle: ParaView
+icon: icon-paraview
 toc: false
 weight: 2
 ---

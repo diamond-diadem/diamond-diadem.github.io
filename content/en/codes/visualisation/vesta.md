@@ -2,6 +2,7 @@
 title: VESTA
 title_visible: false
 linkTitle: VESTA
+icon: icon-vesta
 toc: false
 weight: 3
 ---
