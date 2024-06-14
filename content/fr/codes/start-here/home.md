@@ -52,7 +52,7 @@ Mais pour commencer, si vous n'êtes pas encore passé par cette étape et si vo
             <td><a href="/codes/visualisation/vesta/"><i class="icon-vesta"></i>VESTA</a></td>
         </tr>
         <tr>
-            <td class="table-cell-left"><a href="/codes/scientific-computing/z-set/">Z-set</td>
+            <td class="table-cell-left"><a href="/codes/scientific-computing/z-set/"><i class="icon-z-set"></i>Z-set</td>
             <td><a href="/codes/visualisation/vmd/"><i class="icon-vmd"></i>VMD</a></td>
         </tr>
     </tbody>
