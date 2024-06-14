@@ -30,9 +30,9 @@ But to begin with, if you haven't gone through this step yet and if you're not f
 | [<i class="icon-quantum-espresso"></i>Quantum ESPRESSO](/en/codes/scientific-computing/quantum-espresso/) | [<i class="icon-paraview"></i>ParaView](/en/codes/visualisation/paraview/) | -->
 
 <table>
-    <!-- <caption>
-        Pages des codes disponibles sous forme d'images de conteneurs
-    </caption> -->
+    <caption>
+        And more to be added
+    </caption>
     <thead>
         <tr>
             <th scope="col">Scientific Computing</th>
@@ -53,8 +53,12 @@ But to begin with, if you haven't gone through this step yet and if you're not f
             <td><a href="/en/codes/visualisation/vesta/"><i class="icon-vesta"></i>VESTA</a></td>
         </tr>
         <tr>
-            <td><a href="/en/codes/scientific-computing/z-set/"><i class="icon-z-set"></i>Z-set</td></td>
+            <td><a href="/en/codes/scientific-computing/z-set/"><i class="icon-z-set"></i>Z-set</a></td>
             <td><a href="/en/codes/visualisation/vmd/"><i class="icon-vmd"></i>VMD</a></td>
+        </tr>
+        <tr>
+            <td><a href="/en/codes/scientific-computing/freefem/"><i class="icon-freefem"></i>FreeFEM</a></td>
+            <td></td>
         </tr>
     </tbody>
 </table>
@@ -91,6 +95,14 @@ apptainer pull abinit.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/
 ```bash
 # PULL
 apptainer pull z-set.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/z-set.sif:latest
+```
+
+{{< /tab >}}
+{{< tab "FreeFEM" >}}
+
+```bash
+# PULL
+apptainer pull freefemplusplus.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/freefemplusplus.sif:latest
 ```
 
 {{< /tab >}}

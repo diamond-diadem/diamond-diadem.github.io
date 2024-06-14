@@ -36,8 +36,8 @@ apptainer pull lammps.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/
 
 ### Documentation LAMMPS :
 
-- ##### <a href="https://www.lammps.org/" target="_blank">Site officiel</a>
+- #### <a href="https://www.lammps.org/" target="_blank">Site officiel</a>
 
-- ##### <a href="https://docs.lammps.org/" target="_blank">Documentation officielle</a>
+- #### <a href="https://docs.lammps.org/" target="_blank">Documentation officielle</a>
 
-- ##### Exemples : fichiers d'entrée _(à venir)_
+- #### Exemples : fichiers d'entrée _(à venir)_

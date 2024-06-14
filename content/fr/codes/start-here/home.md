@@ -30,9 +30,9 @@ Mais pour commencer, si vous n'êtes pas encore passé par cette étape et si vo
 | [<i class="icon-quantum-espresso"></i>Quantum ESPRESSO](/codes/scientific-computing/quantum-espresso/) | [<i class="icon-paraview"></i>ParaView](/codes/visualisation/paraview/) | -->
 
 <table>
-    <!-- <caption>
-        Pages des codes disponibles sous forme d'images de conteneurs
-    </caption> -->
+    <caption>
+        Et plus à venir !
+    </caption>
     <thead>
         <tr>
             <th class="table-cell-left" scope="col">Calcul Scientifique</th>
@@ -55,6 +55,10 @@ Mais pour commencer, si vous n'êtes pas encore passé par cette étape et si vo
         <tr>
             <td class="table-cell-left"><a href="/codes/scientific-computing/z-set/"><i class="icon-z-set"></i>Z-set</td>
             <td><a href="/codes/visualisation/vmd/"><i class="icon-vmd"></i>VMD</a></td>
+        </tr>
+        <tr>
+            <td><a href="/codes/scientific-computing/freefem/"><i class="icon-freefem"></i>FreeFEM</a></td>
+            <td></td>
         </tr>
     </tbody>
 </table>
