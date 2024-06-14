@@ -46,7 +46,7 @@
                 </li>
               {{ else }}
                 {{ $active := in $currentPage.RelPermalink .RelPermalink }} 
-                <li><a class="docs-link rounded{{ if $active }} active{{ end }}" href="{{ .Permalink }}">{{ if .Params.GoogleIcon }}<span class="material-symbols-outlined sidebar-google-icon">{{ .Params.GoogleIcon }}</span>{{ end }}<i class="sidebar-icon {{ .Params.Icon }}"></i>{{ or .LinkTitle .Title }}</a></li>
+                <li><a class="docs-link rounded{{ if $active }} active{{ end }}" href="{{ .Permalink }}">{{ if .Params.GoogleIcon }}<span class="material-symbols-rounded sidebar-google-icon">{{ .Params.GoogleIcon }}</span>{{ end }}<i class="sidebar-icon {{ .Params.Icon }}"></i>{{ or .LinkTitle .Title }}</a></li>
               {{ end }}
             {{ end }}
           </ul>
