@@ -19,8 +19,8 @@ But to begin with, if you haven't gone through this step yet and if you're not f
 
 <h3><u>USEFUL LINKS :</u></h3>
 
-- <h5><a href="/en/documentation/install-apptainer/howto/">Install Apptainer</a></h5>
-- <h5><a href="/en/documentation/use-apptainer-image/howto/">Learn how to use a container</a></h5>
+- <h4><a href="/en/documentation/install-apptainer/howto/">Install Apptainer</a></h4>
+- <h4><a href="/en/documentation/use-apptainer-image/howto/">Learn how to use a container</a></h4>
 
 <h3><u>AVAILABLE CODES:</u></h3>  
 
