@@ -7,7 +7,9 @@ toc: false
 weight: 3
 ---
 
-<a href="https://jp-minerals.org/vesta/" target="blank"><img alt="VESTA" class="logo-vesta"/></a>
+<a href="https://jp-minerals.org/vesta/" target="blank">
+   <img alt="VESTA" class="codes-pages-top-logo logo-vesta"/>
+</a>
 
 <div align="center">
 

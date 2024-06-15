@@ -8,7 +8,7 @@ weight: 5
 ---
 
 <a href="https://freefem.org/" target="_blank">
-    <img alt="FreeFEM" class="logo-freefem">
+    <img alt="FreeFEM" class="codes-pages-top-logo logo-freefem">
 </a>
 
 <div align="justify">

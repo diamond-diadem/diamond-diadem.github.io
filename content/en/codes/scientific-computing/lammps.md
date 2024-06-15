@@ -7,7 +7,9 @@ toc: false
 weight: 1
 ---
 
-<a href="https://www.lammps.org/" target="_blank"><img class="logo-lammps" alt="LAMMPS" width="100%"></a>
+<a href="https://www.lammps.org/" target="_blank">
+    <img class="codes-pages-top-logo logo-lammps" alt="LAMMPS">
+</a>
 
 <div align="justify">
 

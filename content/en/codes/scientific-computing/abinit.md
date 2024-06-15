@@ -8,7 +8,7 @@ weight: 3
 ---
 
 <a href="https://www.abinit.org/" target="_blank">
-    <img alt="Abinit" class="logo-abinit">
+    <img alt="Abinit" class="codes-pages-top-logo logo-abinit">
 </a>
 
 <div align="justify">

@@ -7,7 +7,11 @@ toc: false
 weight: 4
 ---
 
-<a href="https://www.ks.uiuc.edu/Research/vmd/" target="blank"><img alt="VMD" class="logo-vmd"/></a>
+<a href="https://www.ks.uiuc.edu/Research/vmd/" target="blank">
+    <img alt="VMD" class="codes-pages-top-logo logo-vmd"/>
+</a>
+
+<div align="justify">
 
 VMD (Visual Molecular Dynamics) est un programme complet de visualisation moléculaire qui facilite l'affichage, l'animation et l'analyse de grands systèmes biomoléculaires grâce à des graphiques 3D avancés et des capacités de script intégrées. Il a été développé par le Theoretical and Computational Biophysics Group de l'Université de l'Illinois à Urbana-Champaign pour répondre aux besoins des chercheurs travaillant dans les domaines de la dynamique moléculaire et de la biologie computationnelle.
 
@@ -20,6 +24,8 @@ Au-delà de la visualisation, VMD fournit des outils robustes pour l'analyse des
 La fonctionnalité de VMD peut être étendue grâce à son support pour les langages de script Tcl, Python et Perl. Cette extensibilité permet aux utilisateurs de développer des outils d'analyse personnalisés, d'automatiser les tâches répétitives et d'intégrer VMD avec d'autres logiciels pour créer des flux de travail complexes adaptés aux besoins spécifiques de la recherche. Les capacités de script du programme sont complétées par une architecture de plugin complète, qui permet l'ajout de nouvelles fonctionnalités et d'outils développés par la communauté.
 
 Dans l'ensemble, VMD est un outil puissant et flexible pour la visualisation et l'analyse moléculaires, largement utilisé par les chercheurs en biologie computationnelle, en chimie et dans des domaines connexes. Sa combinaison de visualisation de haute qualité, d'outils d'analyse étendus et d'extensibilité par script en fait une ressource essentielle pour l'étude et la compréhension des systèmes biomoléculaires.
+
+</div>
 
 ### Récupérez ce conteneur avec Apptainer :
 
