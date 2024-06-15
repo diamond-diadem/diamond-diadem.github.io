@@ -8,7 +8,7 @@ weight: 4
 ---
 
 <a href="http://www.zset-software.com/" target="_blank">
-    <img alt="Z-set" class="logo-z-set">
+    <img alt="Z-set" class="codes-pages-top-logo logo-z-set">
 </a>
 
 Z-Set est une suite logicielle complète conçue pour l'analyse computationnelle avancée dans le domaine de la science et de l'ingénierie des matériaux. Elle se spécialise dans la modélisation et la simulation du comportement des matériaux sous diverses conditions. La suite comprend une gamme de modules qui facilitent la prédiction et l'analyse des propriétés mécaniques, thermiques et thermomécaniques des matériaux.

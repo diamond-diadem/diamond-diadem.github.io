@@ -7,7 +7,9 @@ toc: false
 weight: 1
 ---
 
-<a href="https://www.ovito.org/" target="_blank"><img alt="Ovito" class="logo-ovito" width="100%"/></a>
+<a href="https://www.ovito.org/" target="_blank">
+    <img alt="Ovito" class="codes-pages-top-logo logo-ovito"/>
+</a>
 
 <div align="justify">
 
