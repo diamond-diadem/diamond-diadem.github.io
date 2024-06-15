@@ -1155,6 +1155,7 @@ th, tr {
             top: 6.75rem;
             z-index: 1000;
             height: calc(80vh - 4.25rem);
+            overflow-y: hidden;
         }
     
         .docs-sidebar-offset {
