@@ -259,7 +259,7 @@ u {
     }   
 }
 
-@include media-breakpoint-down(md) {
+@include media-breakpoint-down(lg) {
     .logo-diamond-homepage {
         width: 100%;
         position: relative;
@@ -428,7 +428,7 @@ u {
 }
 
 
-@include media-breakpoint-down(md){
+@include media-breakpoint-down(lg){
     
     // .anchor-france2030-mobile,
     // .logo-france2030-mobile {
@@ -521,7 +521,7 @@ u {
     background-position-x: center;
 }
 
-@include media-breakpoint-down(sm) {
+@include media-breakpoint-down(lg) {
     .container-title-homepage h1 {
         position: relative;
         top: -15%;
@@ -603,7 +603,7 @@ u {
 }
 
 
-@include media-breakpoint-down(md) {
+@include media-breakpoint-down(lg) {
     .section-title-lead-landing-page {
         background-image: none;
     }
@@ -720,14 +720,14 @@ u {
     }
 }
 
-@include media-breakpoint-down(sm) {
+@include media-breakpoint-down(md) {
     .navbar .offcanvas.offcanvas-start,
     .navbar .offcanvas.offcanvas-end {
       width: 95vw;
     }
   }
   
-@include media-breakpoint-down(md) {
+@include media-breakpoint-down(lg) {
     .switch-language-desktop,
     .switch-color-mode-desktop {
         display: none;
@@ -782,7 +782,7 @@ u {
 }
 
 
-@include media-breakpoint-down(md) {
+@include media-breakpoint-down(lg) {
     .left-about-diamond-fr {
       width: 100%;
       margin-top: 5%;
@@ -821,7 +821,7 @@ u {
 }
 
 
-@include media-breakpoint-down(md) {
+@include media-breakpoint-down(lg) {
     .left-about-diamond-en {
       width: 100%;
       margin-top: 5%;
@@ -922,10 +922,11 @@ u {
     }
 }
 
-@include media-breakpoint-down(md) {
+@include media-breakpoint-down(lg) {
     .left-about-diadem-en {
       width: 100%;
       margin-top: 5%;
+      text-align: center;
     }
   
     .right-about-diadem-en {
@@ -973,10 +974,11 @@ u {
     }
 }
 
-@include media-breakpoint-down(md) {
+@include media-breakpoint-down(lg) {
     .left-about-apptainer-fr {
-      width: 100%;
-      margin-top: 5%;
+        text-align: center;
+        width: 100%;
+        margin-top: 5%;
     }
 
     .apptainer-logo-about {
@@ -985,10 +987,16 @@ u {
     }
   
     .right-about-apptainer-fr {
-      width: 100%;
-      margin-top: 10%;
+        width: 100%;
+        margin-top: 10%;
     }
   
+}
+
+@include media-breakpoint-only(md) {
+    .apptainer-logo-about {
+        width: 70%;
+    }
 }
 
 @include media-breakpoint-up(lg) {
@@ -1029,7 +1037,7 @@ u {
     }
 }
 
-@include media-breakpoint-down(md) {
+@include media-breakpoint-down(lg) {
     .left-about-apptainer-en {
       width: 100%;
       margin-top: 5%;
