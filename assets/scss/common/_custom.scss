@@ -218,12 +218,22 @@ u {
     background-image: url(/images/freefem-icon-light.svg);
     @extend .custom-icon;
 }
-
 @include color-mode(dark) {
     .icon-freefem {
         background-image: url(/images/freefem-icon-dark.svg);
     }
 }
+
+.icon-opencalphad {
+    background-image: url(/images/opencalphad-icon-light.png);
+    @extend .custom-icon;
+}
+@include color-mode(dark) {
+    .icon-opencalphad {
+        background-image: url(/images/opencalphad-icon-dark.png);
+    }
+}
+
 
 // // // END custom icons END // // //
 
@@ -359,6 +369,15 @@ u {
 @include color-mode(dark) {
     .logo-freefem {
         content: url(/images/freefem-logo-dark.svg);
+    }
+}
+
+.logo-opencalphad {
+    content: url(/images/opencalphad-logo-light.png);
+}
+@include color-mode(dark) {
+    .logo-opencalphad {
+        content: url(/images/opencalphad-logo-dark.png);
     }
 }
 
@@ -1203,3 +1222,4 @@ th, tr {
 }
   
 // // // END modify _global.scss END // // //
+

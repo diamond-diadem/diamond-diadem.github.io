@@ -60,6 +60,10 @@ Mais pour commencer, si vous n'êtes pas encore passé par cette étape et si vo
             <td><a href="/codes/scientific-computing/freefem/"><i class="icon-freefem"></i>FreeFEM</a></td>
             <td></td>
         </tr>
+        </tr><tr>
+            <td><a href="//codes/scientific-computing/opencalphad/"><i class="icon-opencalphad"></i>OpenCalphad</a></td>
+            <td></td>
+        </tr>
     </tbody>
 </table>
 
@@ -95,6 +99,22 @@ apptainer pull abinit.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/
 ```bash
 # PULL
 apptainer pull z-set.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/z-set.sif:latest
+```
+
+{{< /tab >}}
+{{< tab "FreeFEM" >}}
+
+```bash
+# PULL
+apptainer pull freefemplusplus.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/freefemplusplus.sif:latest
+```
+
+{{< /tab >}}
+{{< tab "OpenCalphad" >}}
+
+```bash
+# PULL
+apptainer pull opencalphad.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/opencalphad.sif:latest
 ```
 
 {{< /tab >}}
