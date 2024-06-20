@@ -61,7 +61,7 @@ Mais pour commencer, si vous n'êtes pas encore passé par cette étape et si vo
             <td></td>
         </tr>
         </tr><tr>
-            <td><a href="//codes/scientific-computing/opencalphad/"><i class="icon-opencalphad"></i>OpenCalphad</a></td>
+            <td><a href="/codes/scientific-computing/opencalphad/"><i class="icon-opencalphad"></i>OpenCalphad</a></td>
             <td></td>
         </tr>
     </tbody>

@@ -3,7 +3,7 @@ title: Contactez-nous
 ---
 
 <h2 align="center">
-    Pour des questions ou remarques générales sur DIAMOND, sur son site web, ou autre, écrivez-moi à
+    Pour des questions ou remarques générales sur DIAMOND, sur son site web, ou autre, écrivez à David à
 </h2>
 <h1 align="center">
 <a class="contact-mailto" href="mailto:david.martin-calle@univ-lyon1.fr">david.martin-calle@univ-lyon1.fr</a>
