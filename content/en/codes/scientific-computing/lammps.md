@@ -40,4 +40,4 @@ apptainer pull lammps.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/
 
 - #### <a href="https://docs.lammps.org/" target="_blank">Official documentation</a>
 
-- #### Examples: input files
+- #### <a href="/downloads/lammps-tutorial-inputs.tar.gz">Examples: input files</a>

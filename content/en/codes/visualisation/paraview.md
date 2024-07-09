@@ -28,7 +28,7 @@ This software is built on a modular architecture, allowing users to customize th
 apptainer pull paraview.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/paraview.sif:latest
 ```
 
-### Learn how to use this specific container _(to be added)_
+### <a href="/en/documentation/by-container/paraview">Learn how to use this specific container</a>
 
 ### ParaView documentation:
 
@@ -36,4 +36,4 @@ apptainer pull paraview.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamon
 
 - #### <a href="https://www.paraview.org/resources/" target="_blank">Official documentation</a>
 
-- #### Examples: input files _(to be added)_
+- #### <a href="/downloads/paraview-tutorial-inputs.tar.gz">Examples: input files</a>

@@ -34,4 +34,4 @@ apptainer pull paraview.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamon
 
 - #### <a href="https://www.paraview.org/resources/" target="_blank">Documentation officielle</a>
 
-- #### Exemples : fichiers d'entrée _(à venir)_
+- #### <a href="/downloads/paraview-tutorial-inputs.tar.gz">Exemples : fichiers d'entrée</a>

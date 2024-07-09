@@ -34,7 +34,7 @@ Dans l'ensemble, VMD est un outil puissant et flexible pour la visualisation et 
 apptainer pull vmd.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/vmd.sif:latest
 ```
 
-### Comment utiliser cette image de conteneur  _( à venir )_
+### <a href="/documentation/by-container/vmd">Comment utiliser cette image de conteneur</a>
 
 ### Documentation VMD :
 
@@ -42,4 +42,4 @@ apptainer pull vmd.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/app
 
 - #### <a href="https://www.ks.uiuc.edu/Research/vmd/current/docs.html" target="_blank">Documentation officielle</a>
 
-- #### Exemples : fichiers d'entrée _(à venir)_
+- #### <a href="/downloads/vmd-tutorial-inputs.tar.gz">Exemples : fichiers d'entrée</a>

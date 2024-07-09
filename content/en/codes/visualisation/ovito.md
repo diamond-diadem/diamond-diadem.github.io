@@ -36,4 +36,4 @@ apptainer pull ovito.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/a
 
 - #### <a href="https://www.ovito.org/docs/current" target="_blank">Official documentation</a>
 
-- #### Examples: input files
+- #### <a href="/downloads/ovito-tutorial-inputs.tar.gz">Examples: input files</a>
