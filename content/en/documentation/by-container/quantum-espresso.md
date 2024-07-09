@@ -38,7 +38,7 @@ cd ./tutorial
 **Disclaimer**
 > The commands presented here are for using the `pw.x` executable of Quantum Espresso. This is also the executable called by default by the `apptainer run` command. In the case where you want to call another executable, it is necessary to use `apptainer exec <options> <image> <executable-name>`.
 
-## TL; DR One liner command
+## One liner command
 For impatient folks, here is how to launch a parallel Quantum Espresso computation using the container image (previously downloaded and stored in `$HOME/apptainer-images/quantum-espresso.sif`). In the case where the current directory contains all  mandatory Quantum Espresso input files:
 
 ```bash
