@@ -14,6 +14,8 @@ For more information about Apptainer containers, please consult the [dedicated p
 
 To quickly grasp the main commands of Apptainer, you can refer to [this tutorial](/en/documentation/use-apptainer-image/howto/).
 
+{{< /callout >}}
+
 This image is a relocatable and renamable file, which is recommended to be placed in a dedicated directory for easy retrieval; this directory can be any, and for the purposes of this tutorial, we assume you have placed it in a directory named `$HOME/apptainer-images`:
 
 ```bash
