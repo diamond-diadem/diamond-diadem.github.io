@@ -46,7 +46,7 @@ apptainer exec $HOME/apptainer-images/quantum-espresso.sif mpirun -np <N> pw.x -
 ```
 
 ## Detailed usage for the Quantum Espresso container
-This section presents different ways to use the Quantum Espresso image. For more details about Apptainer commands, please look at [this tutorial](https://www.apptainer-images.diamond.fr/apptainer-tutorial%basic-commands/EN).
+This section presents different ways to use the Quantum Espresso image. For more details about Apptainer commands, please look at [this tutorial](/en/documentation/use-apptainer-image/howto/#apptainer--crash-course).
 
 ### Using the Quantum Espresso container for sequential runs
 To run Quantum Espresso sequentially (*ie.* without parallelization) without any container, one would use the following command:
