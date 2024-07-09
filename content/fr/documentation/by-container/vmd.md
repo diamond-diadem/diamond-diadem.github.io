@@ -35,7 +35,7 @@ tar -xzf DIAMOND-tutorial.tar.gz # Extrait le contenu de l'archive, créée ./tu
 cd ./tutorial
 ```
 
-## TL; DR Commande en une ligne
+## Commande en une ligne
 Pour les personnes pressées, voici comment lancer l'outil de visualisation VMD en utilisant l'image de conteneur (téléchargée au préalable et située à `$HOME/apptainer-images/vmd.sif`). Dans le cas où le répertoire courant contient un fichier d'entrée lisible par VMD :
 
 ```bash
