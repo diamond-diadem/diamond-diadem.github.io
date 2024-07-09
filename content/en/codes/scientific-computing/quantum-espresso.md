@@ -28,7 +28,7 @@ The software supports various calculation methods, such as plane wave methods, q
 apptainer pull quantum-espresso.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/quantum-espresso.sif:latest
 ```
 
-### Learn how to use this specific container _(to be added)_
+### <a href="/en/documentation/by-container/quantum-espresso">Learn how to use this specific container</a>
 
 ### Quantum ESPRESSO documentation:
 
@@ -36,4 +36,4 @@ apptainer pull quantum-espresso.sif oras://gricad-registry.univ-grenoble-alpes.f
 
 - #### <a href="https://www.quantum-espresso.org/documentation/" target="_blank">Official documentation</a>
 
-- #### Examples: input files
+- #### <a href="/downloads/quantum-espresso-tutorial-inputs.tar.gz">Examples: input files</a>

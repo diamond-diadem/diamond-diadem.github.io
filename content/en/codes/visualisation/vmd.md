@@ -34,7 +34,7 @@ Overall, VMD is a powerful and flexible tool for molecular visualization and ana
 apptainer pull vmd.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/vmd.sif:latest
 ```
 
-### Learn how to use this specific container  _( to be added )_
+### <a href="/en/documentation/by-container/vmd">Learn how to use this specific container</a>
 
 ### VMD documentation:
 
@@ -42,4 +42,4 @@ apptainer pull vmd.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/app
 
 - #### <a href="https://www.ks.uiuc.edu/Research/vmd/current/docs.html" target="_blank">Official documentation</a>
 
-- #### Examples: input files _( to be added )
+- #### <a href="/downloads/vmd-tutorial-inputs.tar.gz">Examples: input files</a>

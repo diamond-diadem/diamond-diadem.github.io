@@ -23,7 +23,7 @@ mkdir -p $HOME/apptainer-images
 mv vmd.sif $HOME/apptainer-images/vmd.sif
 ```
 
-Pour illustrer le fonctionnement du programme de visualisation, un jeu de fichiers lisibles avec VMD est disponible sous forme d'archive via [ce lien](https://diamond-diadem.github.io/downloads/vmd-tutorial-inputs.tar.gz). Cette archive contient les fichiers suivants :
+Pour illustrer le fonctionnement du programme de visualisation, un jeu de fichiers lisibles avec VMD est disponible sous forme d'archive via [ce lien](/downloads/vmd-tutorial-inputs.tar.gz). Cette archive contient les fichiers suivants :
 * `tutorial-ubq1.pdb`, l'un des fichiers d'exemples fréquemment utilisé en démonstration avec VMD contenant la structure d'une protéine présente dans le corps humlain (l'ubiquitine) au format *pdb* (*Protein Data Base*), un format utiliser pour étudier les molécules et les protéines.
 * `tutorial-ubiquitin.psf`, également utilisé en démonstration de VMD, qui contient una autre configuration de l'ubiquitine au format *psf* (*Protein Structure File*).
 * `tutorial-pulling.dcd` à utiliser conjointement avec le fichier précédent pour visualiser l'étirement de la protéine dans le temps.

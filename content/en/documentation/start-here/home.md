@@ -15,3 +15,6 @@ toc: false
    
    - <h4><a href="/en/documentation/by-container/lammps/">LAMMPS</a></h4>
    - <h4><a href="/en/documentation/by-container/ovito/">Ovito</a></h4>
+   - <h4><a href="/en/documentation/by-container/quantum-espresso/">Quantum Espresso</a></h4>
+   - <h4><a href="/en/documentation/by-container/paraview/">ParaView</a></h4>
+   - <h4><a href="/en/documentation/by-container/vmd/">VMD</a></h4>
