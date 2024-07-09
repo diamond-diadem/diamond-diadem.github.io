@@ -19,6 +19,6 @@ weight: 1
    
    - <h4><a href="/documentation/by-container/lammps/">LAMMPS</a></h4>
    - <h4><a href="/documentation/by-container/ovito/">Ovito</a></h4>
-   - <h4><a href="/documentation/by-container/quantum-espresso/">Quantum ESPRESSO</a></h4>
+   - <h4><a href="/documentation/by-container/quantum-espresso/">Quantum Espresso</a></h4>
    - <h4><a href="/documentation/by-container/paraview/">ParaView</a></h4>
    - <h4><a href="/documentation/by-container/vmd/">VMD</a></h4>
