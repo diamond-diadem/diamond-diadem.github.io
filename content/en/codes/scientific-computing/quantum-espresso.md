@@ -36,4 +36,4 @@ apptainer pull quantum-espresso.sif oras://gricad-registry.univ-grenoble-alpes.f
 
 - #### <a href="https://www.quantum-espresso.org/documentation/" target="_blank">Official documentation</a>
 
-- #### <a href="/downloads/quantum-espresso-tutorial-inputs.tar.gz">Examples: input files</a>
+- #### <a href="/downloads/qe-tutorial-inputs.tar.gz">Examples: input files</a>
