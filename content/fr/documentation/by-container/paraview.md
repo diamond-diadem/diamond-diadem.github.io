@@ -125,7 +125,7 @@ Il faut alors monter manuellement le répertoire courant (`$PWD`) avec le flag `
 apptainer run --containall --bind $PWD:$HOME \ # On monte le répertoire courant au $HOME du conteneur.
   $HOME/apptainer-images/paraview.sif tutorial-disk.ex2
 ```
-dans le cas où les fichiers d'entrée de Parawiew se situent dans le répertoire courant (`$PWD`).
+dans le cas où les fichiers d'entrée de Paraview se situent dans le répertoire courant (`$PWD`).
 
 **Note**
 > Notons bien que dans le cas où les flags `--containall` et `--bind` sont utilisés ensemble, seul le contenu des répertoires explicitement montés au sein du conteneur peut être chargé dans ParaView. De même, dans les cas où l'on souhaite exporter notre travail dans un fichier de sortie, ces options nous contraignent à exporter uniquement dans les répertoires explicitement montés, sous peine de ne pas récupérer les fichiers à la destruction du conteneur si l'on écrit dans des répertoires non partagés.
