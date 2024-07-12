@@ -11,6 +11,8 @@ Ce tutoriel présente succinctement le processus d'installation du logiciel de c
 
 Le logiciel fonctionne sur toute distribution Linux moderne ; il ne tourne pas de façon native sur Windows et MacOS, n'étant pas compatible avec les noyaux de ces systèmes d'exploitation. Pour ces plateformes, une solution de machine virtuelle est préconisée et ne sera pas couverte ici : plus d'informations [ici](https://apptainer.org/docs/admin/1.2/installation.html#installation-on-windows-or-mac).
 
+Enfin, ce tutoriel se concentre sur les versions en cours d'exploitation : si vous utilisez une version de distribution Linux qui n'est plus supportée (par exemple CentOS 7 ou Ubuntu 18.04) et que vous rencontrez une erreur difficile à résoudre, n'hésitez pas à [nous contacter](/contact) !
+
 {{< /callout >}}
 
 
