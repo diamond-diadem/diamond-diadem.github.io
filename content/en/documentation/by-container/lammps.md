@@ -4,6 +4,8 @@ linkTitle: LAMMPS tutorial
 weight: 1
 ---
 
+<div align="justify">
+
 {{< callout context="note" title="" icon="info-circle" >}}
 
 In preamble, you need to have Apptainer installed on your machine ; see [this link](/en/documentation/install-apptainer/howto/) for more details.
@@ -246,4 +248,4 @@ apptainer exec \
   mpirun -np 8 lmp_mpi -in in.file
 ```
 
-
+</div>

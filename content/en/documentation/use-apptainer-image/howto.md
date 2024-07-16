@@ -2,7 +2,7 @@
 title: How to interact with an Apptainer image ?
 ---
 
-
+<div align="justify">
 
 {{< callout context="note" title="" icon="info-circle" >}}
 
@@ -148,3 +148,4 @@ apptainer exec --bind $PWD:/opt \                 # Mounting the current directo
 cat $PWD/test-host.txt $PWD/test-container.txt
 ```
 
+</div>

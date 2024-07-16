@@ -4,6 +4,8 @@ linktitle: Using Apptainer in parallel ?
 weight: 1
 ---
 
+<div align="justify">
+
 If the Apptainer image you want to use supports parallel computing, then OpenMPI is included within the container's libraries. In this case, it is beneficial to use this parallelization solution to speed up your computation. According to the official [documentation](https://apptainer.org/docs/user/latest/mpi.html) of Apptainer, there are two modes of using OpenMPI with Apptainer: hybrid mode and binding mode. These modes are recommended when the container is used on HPC (High-Performance Computing) infrastructures. However, a third mode can be employed if the container is run on a personal machine: the embedded mode. In this documentation, we will detail:
 
 - the [embedded mode]({{< ref "#embedded_mode" >}}),
@@ -123,3 +125,5 @@ apptainer exec \
   image_apptainer.sif \
   ompi_info
 ```
+
+</div>

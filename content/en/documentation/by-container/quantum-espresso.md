@@ -4,6 +4,8 @@ linkTitle: Quantum Espresso tutorial
 weight: 3
 ---
 
+<div align="justify">
+
 {{< callout context="note" title="" icon="info-circle" >}}
 
 In preamble, you need to have Apptainer installed on your machine; see [this link](/en/documentation/install-apptainer/howto/) for more details.
@@ -186,3 +188,5 @@ apptainer exec \
   $HOME/apptainer-images/quantum-espresso.sif \
   mpirun -np 8 pw.x -in qe-tutorial.in
 ```
+
+</div>

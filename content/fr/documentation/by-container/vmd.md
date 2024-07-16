@@ -4,6 +4,8 @@ linkTitle: Tutoriel VMD
 weight: 4
 ---
 
+<div align="justify">
+
 {{< callout context="note" title="" icon="info-circle" >}}
 
 En préalable de ces explications, il est nécessaire d'avoir installé Apptainer sur votre machine ; voir [ce lien](/documentation/install-apptainer/howto/) pour plus de détails.
@@ -172,3 +174,5 @@ Comment visualiser une animation contenue dans un fichier avec un conteneur VMD 
 Exemples de réponses possibles :
 * `apptainer exec $HOME/apptainer-images/vmd.sif vmd tutorial-ubiquitin.psf tutorial-pulling.dcd`
 * ou `apptainer run --containall --env DISPLAY=$DISPLAY --bind $PWD:$HOME $HOME/apptainer-images/vmd.sif tutorial-ubiquitin.psf tutorial-pulling.dcd`
+
+</div>

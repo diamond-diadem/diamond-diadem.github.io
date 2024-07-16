@@ -4,6 +4,8 @@ linkTitle: Tutoriel ParaView
 weight: 4
 ---
 
+<div align="justify">
+
 {{< callout context="note" title="" icon="info-circle" >}}
 
 En préalable de ces explications, il est nécessaire d'avoir installé Apptainer sur votre machine ; voir [ce lien](/documentation/install-apptainer/howto/) pour plus de détails.
@@ -125,6 +127,7 @@ Il faut alors monter manuellement le répertoire courant (`$PWD`) avec le flag `
 apptainer run --containall --bind $PWD:$HOME \ # On monte le répertoire courant au $HOME du conteneur.
   $HOME/apptainer-images/paraview.sif tutorial-disk.ex2
 ```
+
 dans le cas où les fichiers d'entrée de Paraview se situent dans le répertoire courant (`$PWD`).
 
 **Note**
@@ -149,10 +152,12 @@ apptainer inspect $HOME/apptainer-images/paraview.sif
 Comment utiliser l'image de conteneur pour ouvrir ParaView ?
 
 > **Données**
+>
 > * L'image est située au chemin suivant : `$HOME/apptainer-images/paraview.sif`.
 > * On ne souhaite pas dans un premier temps spécifier quel fichier de configuration charger, mais l'on souhaite pouvoir les ouvrir plus tard à travers l'interface graphique de ParaView, sans savoir *a priori* où elles sont localisées sur notre machine.
 
 Réponses possibles :
+
 * `apptainer exec $HOME/apptainer-images/paraview.sif paraview`
 * ou `apptainer run $HOME/apptainer-images/paraview.sif`
 * ou `./$HOME/apptainer-images/paraview.sif`
@@ -163,6 +168,7 @@ On note qu'on ne spécifie pas de fichier d'entrée, et qu'on ne recourt à aucu
 Comment visualiser une animation contenue dans un fichier avec un conteneur ParaView et enregistrer cette animation au format `avi` ?
 
 > **Données**
+>
 > * L'image est située au chemin suivant : `$HOME/apptainer-images/paraview.sif`
 > * Le fichier contenant l'animation nous intéressant est situé dans `$PWD/tutorial-can.ex2` sur la machine hôte.
 > * Pour afficher les données chargées, il faut appliquer un rendu visuel en cliquant sur le bouton `Apply` du panneau `Properties` aparaissant sur la gauche.
@@ -171,5 +177,8 @@ Comment visualiser une animation contenue dans un fichier avec un conteneur Para
 > * On tentera de donner une solution non isolée de la machine hôte, et une solution isolant au maximum le conteneur de la machine hôte.
 
 Exemples de réponses possibles :
+
 * `apptainer exec $HOME/apptainer-images/paraview.sif paraview tutorial-can.ex2`
 * ou `apptainer run --containall --env DISPLAY=$DISPLAY --bind $PWD:$HOME $HOME/apptainer-images/paraview.sif tutorial-can.ex2`
+
+</div>

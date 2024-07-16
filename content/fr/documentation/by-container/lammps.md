@@ -4,6 +4,8 @@ linkTitle: Tutoriel LAMMPS
 weight: 1
 ---
 
+<div align="justify">
+
 {{< callout context="note" title="" icon="info-circle" >}}
 
 En préalable de ces explications, il est nécessaire d'avoir installé Apptainer sur votre machine ; voir [ce lien](/documentation/install-apptainer/howto/) pour plus de détails.
@@ -16,16 +18,7 @@ Pour rapidement s'approprier les principales commandes d'Apptainer, vous pouvez 
 
 {{< /callout >}}
 
-
-
-
 <iframe class="tuto-video" src="https://www.youtube.com/embed/szy4ukD5jIw?si=24wHKGR7VhakkizR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-<!-- <video controls width="50%">
-  <source src="/videos/fr/use-lammps-apptainer/utiliser-lammps-apptainer-stfr.mp4" type="video/mp4" autoplay="false"/>
-</video> -->
-
- 
-
 
 L'image que vous avez téléchargée est un fichier relocalisable et renommable, qu'il est recommandé de placer dans un répertoire dédié pour facilement la retrouver ; celui-ci peut-être quelconque, et dans le cadre de ce tutoriel nous assumerons que vous l'avez placée dans un répertoire nommé `$HOME/apptainer-images` :
 
@@ -35,6 +28,7 @@ mv lammps.sif $HOME/apptainer-images/lammps.sif
 ```
 
 Pour illustrer les différentes commandes, un jeu de fichiers d'entrée LAMMPS est disponible sous forme d'archive via [ce lien](/downloads/lammps-tutorial-inputs.tar.gz). L'archive contient les fichiers nécessaires pour effectuer un calcul de dynamique moléculaire pour un système hybride Silicium/Carbone dont les interactions entre atomes sont modélisées par un potentiel de type *Modified embedded atom method* (MEAM). Les fichiers sont les suivants :
+
 * `data.meam` est un fichier contenant les positions des atomes de Silicium et de Carbone ainsi que la définition de la boîte de simulation.
 * `in.file` est le script d'entrée principal de LAMMPS. Il définit les variables requises par LAMMPS et donne les instructions nécessaires pour effectuer un calcul de dynamique moléculaire.
 * `library.meam` est un fichier de paramètres génériques utilisé par le potentiel MEAM pour représenter les interactions *par défaut* entre une large variété d'éléments chimiques.
@@ -47,7 +41,7 @@ tar -xzf DIAMOND-tutorial.tar.gz # Extrait le contenu de l'archive, créée ./tu
 cd ./tutorial
 ```
 
-##  Commande en une ligne
+## Commande en une ligne
 Pour les personnes pressées, voici comment lancer un calcul LAMMPS parallèle en utilisant l'image de conteneur (téléchargée au préalable et située à `$HOME/apptainer-images/lammps.sif`). Dans le cas où le répertoire courant contient les fichiers d'entrée nécessaires pour LAMMPS :
 
 ```bash
@@ -251,3 +245,4 @@ apptainer exec \
   mpirun -np 8 lmp_mpi -in in.file
 ```
 
+</div>
