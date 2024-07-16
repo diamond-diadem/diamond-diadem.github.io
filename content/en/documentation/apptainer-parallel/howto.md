@@ -58,7 +58,11 @@ Another constraint of the embedded mode is that the Apptainer image must be run 
 ## Hybrid Mode {#hybrid_mode}
 
 We have just seen that using OpenMPI in embedded mode on HPC infrastructures, where numerical efficiency is central, would not be desirable due to suboptimal numerical performance. As explained in Apptainer's documentation, it is preferable to use the hybrid mode on HPC infrastructures. In this case, a "dialogue" must be set up between the host machine's OpenMPI (on the HPC infrastructure) and the OpenMPI embedded in the Apptainer image. To better understand the conceptual difference between this hybrid mode and the embedded mode discussed above, you can look at the diagram below.
-(NOTE: INCLUDE EMBEDDED/HYBRID OPENMPI DIAGRAM HERE).
+<!-- (NOTE: INCLUDE EMBEDDED/HYBRID OPENMPI DIAGRAM HERE). -->
+
+<div class="text-center mt-4 mb-4">
+        <img alt="OpenMPI Hybride" class="hybrid-ompi">
+</div>
 
 For hybrid parallelization, the call to the OpenMPI command (`mpirun`) is no longer made within the container - that is, after `apptainer exec` as in embedded mode - but outside of it. Thus, a command of the form is used:
 
