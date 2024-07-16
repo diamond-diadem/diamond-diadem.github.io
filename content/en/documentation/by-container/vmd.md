@@ -157,6 +157,7 @@ apptainer inspect $HOME/apptainer-images/vmd.sif
 How to use the container image to open VMD?
 
 > **Data**
+>
 > * The image is located at the following path: `$HOME/apptainer-images/vmd.sif`.
 > * Initially, we do not want to specify which configuration file to load, but we want to be able to open them later through the VMD graphical interface, without knowing *a priori* where they are located on our machine.
 
@@ -173,12 +174,14 @@ Note that we do not specify an input file, and we do not use any isolation (no `
 How to visualize an animation contained in a file with a VMD container and save this animation in `avi` format?
 
 > **Data**
+>
 > * The image is located at the following path: `$HOME/apptainer-images/vmd.sif`
 > * The files to load to visualize the animation are located at `$PWD/tutorial-ubiquitin.psf` and `$PWD/tutorial-pulling.dcd` on the host machine.
 > * To better visualize the stretching of the protein, it is recommended to change the representation mode, for example, using `Graphics > Representation > Drawing Method > NewCartoon`.
 > * We will try to provide a solution without isolating the host machine from the container, and a solution isolating the container as much as possible from the host machine.
 
 Examples of possible answers:
+
 * `apptainer exec $HOME/apptainer-images/vmd.sif vmd tutorial-ubiquitin.psf tutorial-pulling.dcd`
 * or `apptainer run --containall --env DISPLAY=$DISPLAY --bind $PWD:$HOME $HOME/apptainer-images/vmd.sif tutorial-ubiquitin.psf tutorial-pulling.dcd`
 
