@@ -58,7 +58,11 @@ Une autre contrainte du mode embarqué est que l'image Apptainer doit être exé
 ## Le mode hybride {#hybrid_mode}
 
 Nous venons de voir que l'utilisation d'OpenMPI en mode embarqué sur des infrastrucutres de type HPC, où l'efficacité numérique est centrale, ne serait pas souhaitable en raisons de performances numériques suboptimales. Comme expliqué dans la documentation d'Apptainer, il est préférable d'utiliser le mode hybride sur des infrastructures de type HPC. Dans ce cas, il y faut mettre en place un "dialogue" qui s'opère entre OpenMPI de la machine hôte (sur l'infrastucture de type HPC) et OpenMPI embarqué dans l'image Apptainer. Pour mieux comprendre la différence conceptuelle entre ce mode hybride et le mode embarqué discuté plus haut, on peut jeter un œil au schéma ci-dessous.
-(NOTE : INCLURE SCHÉMA OPENMPI EMBARQUÉ/HYBRIDE ICI).
+<!-- (NOTE : INCLURE SCHÉMA OPENMPI EMBARQUÉ/HYBRIDE ICI). -->
+
+<div class="text-center mt-4 mb-4">
+        <img alt="OpenMPI Hybride" class="hybrid-ompi">
+</div>
 
 Pour de la parallélisation hybride, l'appel à la commande OpenMPI (`mpirun`) ne se fait plus au sein du conteneur - c'est-à-dire après `apptainer exec` comme pour le mode embarqué - mais à l'extérieur de celui-ci. On utilise donc une commade de la forme :
 
