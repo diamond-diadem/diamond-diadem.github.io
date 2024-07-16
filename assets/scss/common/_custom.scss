@@ -234,6 +234,11 @@ u {
     }
 }
 
+.icon-neper {
+    background-image: url(/images/neper-icon.png);
+    @extend .custom-icon
+}
+
 
 // // // END custom icons END // // //
 
