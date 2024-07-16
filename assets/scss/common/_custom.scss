@@ -289,13 +289,15 @@ u {
 
 // // // Apptainer in parallel tuto picture // // //
 
-// .container-hybrid-ompi {
-//     text-align: center;
-// }
-
 .hybrid-ompi {
-    content: url(images/hybrid-ompi.png);
+    content: url(images/hybrid-ompi-light.png);
     width: 100%;
+}
+
+@include color-mode(dark) {
+    .hybrid-ompi{
+        content: url(images/hybrid-ompi-dark.png)
+    }
 }
 
 // // // Codes pages top logos // // //
