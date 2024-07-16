@@ -60,8 +60,12 @@ Mais pour commencer, si vous n'êtes pas encore passé par cette étape et si vo
             <td><a href="/codes/scientific-computing/freefem/"><i class="icon-freefem"></i>FreeFEM</a></td>
             <td></td>
         </tr>
-        </tr><tr>
+        <tr>
             <td><a href="/codes/scientific-computing/opencalphad/"><i class="icon-opencalphad"></i>OpenCalphad</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><a href="/codes/scientific-computing/neper/"><i class="icon-neper"></i>Neper</a></td>
             <td></td>
         </tr>
     </tbody>

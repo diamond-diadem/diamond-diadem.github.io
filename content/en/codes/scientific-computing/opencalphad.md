@@ -38,6 +38,6 @@ apptainer pull opencalphad.sif oras://gricad-registry.univ-grenoble-alpes.fr/dia
 
 - #### <a href="https://www.opencalphad.com/" target="_blank">Official website</a>
 
-- #### <a href="ttps://www.opencalphad.com/OC6-macros.pdf" target="_blank">Official documentation</a>
+- #### <a href="https://www.opencalphad.com/OC6-macros.pdf" target="_blank">Official documentation</a>
 
 - #### Examples: input files _(to be added)_

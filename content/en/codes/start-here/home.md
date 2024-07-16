@@ -58,6 +58,10 @@ But to begin with, if you haven't gone through this step yet and if you're not f
             <td><a href="/en/codes/scientific-computing/opencalphad/"><i class="icon-opencalphad"></i>OpenCalphad</a></td>
             <td></td>
         </tr>
+        </tr><tr>
+            <td><a href="/en/codes/scientific-computing/neper/"><i class="icon-neper"></i>Neper</a></td>
+            <td></td>
+        </tr>
     </tbody>
 </table>
 
