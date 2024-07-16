@@ -2,6 +2,7 @@
 title: Comment interagir avec une image Apptainer ?
 ---
 
+<div align="justify">
 
 {{< callout context="note" title="" icon="info-circle" >}}
 
@@ -135,6 +136,7 @@ apptainer run --no-mount sys $HOME/apptainer-images/tutorial.sif
 ```bash
 apptainer exec --no-home $HOME/apptainer-images/tutorial.sif ls $HOME
 ```
+
 > Dans ce cas, on voit que `$HOME` existe au sein du conteneur mais ne correspond pas au répertoire de la machine hôte.
 
 * le flag `--containall` isole totalement le conteneur de la machine hôte.
@@ -156,3 +158,5 @@ apptainer exec --bind $PWD:/opt \                 # Montage du répertoire coura
 # Vérification sur la machine hôte
 cat $PWD/test-host.txt $PWD/test-container.txt
 ```
+
+</div>

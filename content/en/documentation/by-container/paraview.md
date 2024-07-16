@@ -4,6 +4,8 @@ linkTitle: ParaView tutorial
 weight: 4
 ---
 
+<div align="justify">
+
 {{< callout context="note" title="" icon="info-circle" >}}
 
 Before proceeding with these explanations, it is necessary to have installed Apptainer on your machine; see [this link](/en/documentation/install-apptainer/howto/) for more details.
@@ -177,3 +179,5 @@ How to visualize an animation contained in a file with a ParaView container and 
 Examples of possible answers:
 * `apptainer exec $HOME/apptainer-images/paraview.sif paraview tutorial-can.ex2`
 * or `apptainer run --containall --env DISPLAY=$DISPLAY --bind $PWD:$HOME $HOME/apptainer-images/paraview.sif tutorial-can.ex2`
+
+</div>

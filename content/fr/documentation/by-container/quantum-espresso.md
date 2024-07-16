@@ -4,6 +4,8 @@ linkTitle: Tutoriel Quantum ESPRESSO
 weight: 3
 ---
 
+<div align="justify">
+
 {{< callout context="note" title="" icon="info-circle" >}}
 
 En préalable de ces explications, il est nécessaire d'avoir installé Apptainer sur votre machine ; voir [ce lien](/documentation/install-apptainer/howto/) pour plus de détails.
@@ -181,3 +183,5 @@ apptainer exec \
   $HOME/apptainer-images/quantum-espresso.sif \
   mpirun -np 8 pw.x -in qe-tutorial.in
 ```
+
+</div>

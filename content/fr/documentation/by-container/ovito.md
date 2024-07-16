@@ -4,6 +4,8 @@ linkTitle: Tutoriel Ovito
 weight: 2
 ---
 
+<div align="justify">
+
 {{< callout context="note" title="" icon="info-circle" >}}
 
 En préalable de ces explications, il est nécessaire d'avoir installé Apptainer sur votre machine ; voir [ce lien](/documentation/install-apptainer/howto/) pour plus de détails.
@@ -160,11 +162,15 @@ On note qu'on ne spécifie pas de fichier d'entrée, et qu'on ne recourt à aucu
 Comment visualiser uniquement les configurations antérieures au 100ème pas d'un calcul de dynamique moléculaire avec l'image de conteneur Ovito ?
 
 > **Données**
+>
 > * L'image est située au chemin suivant : `$HOME/apptainer-images/ovito.sif`
 > * Les fichiers de configuration du calcul de dynamique moléculaire nous intéressant sont situés dans `$PWD/MD` sur la machine hôte.
 > * Les fichiers de configuration sont nommés `SiC.XXXX.lmp` (la première configuration est `SiC.0000.lmp` et la 426ème est `SiC.0425.lmp`, par exemple).
 > * Choix libre pour l'isolation entre le conteneur et la machine hôte.
 
 Exemples de réponses possibles :
+
 * `apptainer exec $HOME/apptainer-images/ovito.sif ovito MD/SiC.00*.lmp`
 * ou `apptainer run --containall --env DISPLAY=$DISPLAY --bind $PWD:$HOME $HOME/apptainer-images/ovito.sif MD/SiC.00*.lmp`
+
+</div>

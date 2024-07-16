@@ -4,6 +4,8 @@ linkTitle: Ovito tutorial
 weight: 2
 ---
 
+<div align="justify">
+
 {{< callout context="note" title="" icon="info-circle" >}}
 
 Before proceeding with these explanations, it is necessary to have Apptainer installed on your machine; see [this link](/en/documentation/install-apptainer/howto/) for more details.
@@ -169,3 +171,5 @@ How to visualize only configurations prior to the 100th step of a molecular dyna
 Examples of possible answers:
 * `apptainer exec $HOME/apptainer-images/ovito.sif ovito MD/SiC.00*.lmp`
 * or `apptainer run --containall --env DISPLAY=$DISPLAY --bind $PWD:$HOME $HOME/apptainer-images/ovito.sif MD/SiC.00*.lmp`
+
+</div>

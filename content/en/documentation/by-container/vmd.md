@@ -4,6 +4,8 @@ linkTitle: VMD tutorial
 weight: 4
 ---
 
+<div align="justify">
+
 {{< callout context="note" title="" icon="info-circle" >}}
 
 Before proceeding with these explanations, it is necessary to have installed Apptainer on your machine; see [this link](/en/documentation/install-apptainer/howto/) for more details.
@@ -179,3 +181,5 @@ How to visualize an animation contained in a file with a VMD container and save 
 Examples of possible answers:
 * `apptainer exec $HOME/apptainer-images/vmd.sif vmd tutorial-ubiquitin.psf tutorial-pulling.dcd`
 * or `apptainer run --containall --env DISPLAY=$DISPLAY --bind $PWD:$HOME $HOME/apptainer-images/vmd.sif tutorial-ubiquitin.psf tutorial-pulling.dcd`
+
+</div>
