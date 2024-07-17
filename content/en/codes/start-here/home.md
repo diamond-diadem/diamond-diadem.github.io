@@ -108,11 +108,19 @@ apptainer pull freefemplusplus.sif oras://gricad-registry.univ-grenoble-alpes.fr
 ```
 
 {{< /tab >}}
-{{< tab "OpenC" >}}
+{{< tab "OpenCalphad" >}}
 
 ```bash
 # PULL
 apptainer pull opencalphad.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/opencalphad.sif:latest
+```
+
+{{< /tab >}}
+{{< tab "Neper" >}}
+
+```bash
+# PULL
+apptainer pull neper.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/neper.sif:latest
 ```
 
 {{< /tab >}}
