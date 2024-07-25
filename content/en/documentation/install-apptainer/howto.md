@@ -84,6 +84,8 @@ sudo apt install -y ./apptainer_1.2.5_amd64.deb
 
 <iframe class="tuto-video" src="https://www.youtube.com/embed/OuMyAWsiDDY?si=wGEheMjehqcB8-X8&cc_lang_pref=en&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+<iframe class="tuto-video" src="https://www.youtube.com/embed/BQXcLOYe5Hw?si=mP4gb6T4VzCqUSwB&cc_lang_pref=en&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ### RPM packages from GitHub
 With each new version release, a RPM (RedHat Package Manager) package is available on GitHub :
 
