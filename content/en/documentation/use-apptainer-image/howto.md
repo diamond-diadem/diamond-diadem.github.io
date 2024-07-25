@@ -12,12 +12,9 @@ This tutorial explains the main ways to interact with an Apptainer image in orde
 
 {{< /callout >}}
 
+<!-- <iframe class="tuto-video" src="https://www.youtube.com/embed/tbHy7m1hOwM?si=sJXWIGunSeC4IJ1Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
 
-
-<iframe class="tuto-video" src="https://www.youtube.com/embed/tbHy7m1hOwM?si=sJXWIGunSeC4IJ1Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-
- 
+<iframe class="tuto-video" src="https://www.youtube.com/embed/CPEsOTpOcic?si=59P2En0ztmJ0ykwu&cc_lang_pref=en&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen ></iframe>
 
 The image you downloaded is a relocatable and renamable file we recommend putting in a dedicated directory to easily find it. While it can be any directory, in this tutorial we will assume you put it in `$HOME/apptainer-images` :
 
