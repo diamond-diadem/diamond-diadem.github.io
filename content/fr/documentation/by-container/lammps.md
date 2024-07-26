@@ -18,7 +18,7 @@ Pour rapidement s'approprier les principales commandes d'Apptainer, vous pouvez 
 
 {{< /callout >}}
 
-<iframe class="tuto-video" src="https://www.youtube.com/embed/szy4ukD5jIw?si=24wHKGR7VhakkizR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe class="tuto-video" src="https://www.youtube.com/embed/MheJO_FndWw?si=ASHe6wYhiFqR1te9&cc_lang_pref=fr&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 L'image que vous avez téléchargée est un fichier relocalisable et renommable, qu'il est recommandé de placer dans un répertoire dédié pour facilement la retrouver ; celui-ci peut-être quelconque, et dans le cadre de ce tutoriel nous assumerons que vous l'avez placée dans un répertoire nommé `$HOME/apptainer-images` :
 
