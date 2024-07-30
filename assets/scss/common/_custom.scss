@@ -514,30 +514,9 @@ u {
 }
 
 
-
 .footer{
     margin-top: auto;
 }
-
-// .section-features {
-//     margin-top: auto;
-// }
-
-// .docs-links h3,
-// .page-links h3 {
-//   text-transform: uppercase;
-//   font-size: $font-size-base;
-//   margin: 1.25rem 0 0.5rem;
-//   padding: 1.5rem 0 0;
-// }
-
-// @include media-breakpoint-up(lg) {
-//   .docs-links h3,
-//   .page-links h3 {
-//     margin: 1.125rem 1.5rem 0.75rem 0;
-//     padding: 1.375rem 0 0;
-//   }
-// }
 
 .diamond-docs-sidebar-container {
     width: 342px;
@@ -683,10 +662,6 @@ u {
     font-weight: 500;
 }
 
-// iframe {
-//     margin-bottom: 20px;
-// }
-
 .header-dropdown-text.active {
     color: $link-color;
 }
@@ -696,14 +671,6 @@ u {
         color: $link-color-dark;
     }   
 }
-
-// @include media-breakpoint-down(md) {
-
-//     .navbar .offcanvas.offcanvas-start,
-//     .navbar .offcanvas.offcanvas-end {
-//       width: 80vw;
-//     }
-//   }
 
 @include media-breakpoint-down(xl) {
     .navbar-brand {
@@ -730,27 +697,6 @@ u {
 #totopbutton.fade {
     opacity: 1;
 }
-
-
-// @supports ((position:-webkit-sticky) or (position:sticky)) {
-//     .docs-toc {
-//       position: -webkit-sticky;
-//       position: sticky;
-//       top: 4.25rem;
-//       height: calc(100vh - 4.25rem);
-//       overflow-y: auto;
-//     }
-  
-//     .docs-toc-offset {
-//       top: 4.5rem;
-//       height: calc(100vh - 4.5rem);
-//     }
-  
-//     .docs-toc-top {
-//       position: relative;
-//     }
-// }
-
 
 .docs-sidebar {
     border-right: none;
@@ -1185,12 +1131,6 @@ th, tr {
     top: 4px; left: -1px;
     // margin-right: -4px;
 }
-
-
-
-// .table {
-//     font-size: larger;
-// }
 
 // // // modify _global.scss // // // 
 
