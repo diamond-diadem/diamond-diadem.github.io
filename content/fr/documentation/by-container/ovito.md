@@ -121,7 +121,7 @@ ERROR: File does not exist: MD/SiC.0000.lmp
 Il faut alors monter manuellement le répertoire courant (`$PWD`) avec le flag `--bind` au répertoire où l'on se trouve par défaut dans le conteneur (`$HOME`). Par exemple :
 
 ```bash
-apptainer run --containall --bind $PWD:$HOME \ # On monte le répertoire courant au $HOME du conteneur.
+apptainer run --containall --env DISPLAY=$DISPLAY --bind $PWD:$HOME \ # On monte le répertoire courant au $HOME du conteneur.
   $HOME/apptainer-images/ovito.sif MD/SiC.*.lmp
 ```
 dans le cas où les fichiers d'entrée d'Ovito (dans un sous-dossier `MD/`) se situent dans le répertoire courant (`$PWD`).
