@@ -28,7 +28,7 @@ mv ovito.sif $HOME/apptainer-images/ovito.sif
 Pour illustrer le fonctionnement du programme de visualisation, un jeu de fichiers de positions atomiques lisibles avec Ovito est disponible sous forme d'archive via [ce lien](/downloads/ovito-tutorial-inputs.tar.gz). Cette archive contient les fichiers suivants :
 * `C-diamond.cif` qui contient des positions d'atomes de Carbone formant une structure diamant au format *Crystallographic Information File*, l'un des formats de fichiers textes standards pour stocker les informations relatives à la structure de cristaux.
 * `POSCAR_Si-diamond` qui est un fichier de positions d'une autre structure diamant, cette fois-ci pour des atomes de Silicium. Le format de ce fichier est celui utilisé par le code de simulation `VASP`, très populaire pour pour étudier la structure électronique des matériaux à l'échelle quantique.
-* tout un jeu de fichiers `SiC.*.lmp` contenus dans un sous-dossier `MD`. Ces fichiers, au format utlisé par le code de simulation atomistique classique `LAMMPS`, retracent l'évolution d'un système hybride Silicium/Carbone au cours d'un calcul de dynamique moléculaire.
+* tout un jeu de fichiers `SiC.*.lmp` contenus dans un sous-dossier `MD`. Ces fichiers, au format utilisé par le code de simulation atomistique classique `LAMMPS`, retracent l'évolution d'un système hybride Silicium/Carbone au cours d'un calcul de dynamique moléculaire.
 
 Dans ce tutoriel, on supposera que les fichiers d'entrée contenus dans cette archive sont dans le répertoire courant :
 
