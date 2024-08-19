@@ -66,7 +66,7 @@ Nous venons de voir que l'utilisation d'OpenMPI en mode embarqué sur des infras
         <img alt="OpenMPI Hybride" class="hybrid-ompi">
 </div>
 
-Pour de la parallélisation hybride, l'appel à la commande OpenMPI (`mpirun`) ne se fait plus au sein du conteneur - c'est-à-dire après `apptainer exec` comme pour le mode embarqué - mais à l'extérieur de celui-ci. On utilise donc une commade de la forme :
+Pour de la parallélisation hybride, l'appel à la commande OpenMPI (`mpirun`) ne se fait plus au sein du conteneur - c'est-à-dire après `apptainer exec` comme pour le mode embarqué - mais à l'extérieur de celui-ci. On utilise donc une commande de la forme :
 
 ```bash
 mpirun -np nb_procs <options-OpenMPI> \
