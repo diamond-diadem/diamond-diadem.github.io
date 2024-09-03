@@ -27,8 +27,8 @@ doks:
   showDate: false
   showSummary: true
   searchLimit: 99
-  alert: false
-  alertDismissable: true
+  alert: true
+  alertDismissable: false
   bootstrapJavascript: false
   sectionNav:
     - codes
@@ -41,7 +41,7 @@ doks:
   showMissingLanguages: true
   docsVersioning: false
   docsVersion: "1.0"
-  headerBar: false
+  headerBar: true
   backgroundDots: false
   sectionFooter: false
   relatedPosts: false
