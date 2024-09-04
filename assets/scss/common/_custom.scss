@@ -418,7 +418,7 @@ u {
     }   
 }
 
-@include media-breakpoint-only(lg) {
+@include media-breakpoint-only(xl) {
     .logo-france2030-desktop {
         // content: url('/images/france-2030-couleurs.png');
         height: 75px;
@@ -448,7 +448,7 @@ u {
 //     }
 // }
 
-@include media-breakpoint-up(xl) {
+@include media-breakpoint-up(xxl) {
     .logo-france2030-desktop {
         height : 90px;
         margin-right: 30px;
@@ -499,13 +499,22 @@ u {
     flex-direction: column;
 }
 
+.container-blog-page {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+}
+
 @include media-breakpoint-up(xl) {
     .col-default-page {
         min-height: 70vh;
     }
+
+    // .container-blog-page {
+    //     min-height: 70vh;
+    // }
     
 }
-
 
 .container-landing-page {
     min-height: 89vh;

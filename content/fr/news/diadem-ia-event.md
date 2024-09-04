@@ -21,9 +21,9 @@ seo:
   noindex: false # false (default) or true
 ---
 
-## Sorbonne Center for Artificial Intelligence SCAI, Espace Forum, 4 Pl. Jussieu, 75005 Paris
+### Sorbonne Center for Artificial Intelligence SCAI, Espace Forum, 4 Pl. Jussieu, 75005 Paris
 
-### Orateurs
+### Orateurs :
 
 - **Guillaume STIRNEMANN / Damien LAAGE** sur la partie *(?)*
 - **Martin URHIN** sur la partie générative
@@ -33,7 +33,7 @@ seo:
 - **Emmanuel FRANCK** (UniStra)
 - **Amaury HABRARD** (IUF & Université Jean Monnet)
 
-### Planning
+### Planning :
 
 - **8h30-9h** : Accueil & Café
 
@@ -45,8 +45,6 @@ seo:
 
 - **12h-13h30** : Déjeuner + Session Posters
 
-<!-- ### Une pause l’aprem? -->
-
 - **13h30-14h30** : Conférence pleinière 2 (ML -> Amaury ?)
 - **14h30-14h50** : Exposé court 3 (Matériaux)
 - **14h50-15h10** : Exposé court 4 (ML)
@@ -56,3 +54,5 @@ seo:
 - **15h40-16h10** ; Invité 4 (Matériaux)
 - **16h10-16h50** : Invité 5 (ML -> Emmanuel)
 - **16h50-17h30** : Invité 6 (Matériaux)
+
+<br/>
