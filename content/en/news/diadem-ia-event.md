@@ -37,7 +37,7 @@ seo:
 
 - **8h30-9h** : Welcome & Coffee
 
-- **9h-10h** : Plenary talk 1 (Matérials)
+- **9h-10h** : Plenary talk 1 (Materials)
 - **10h-10h40** : Guest speaker 1 (ML -> Emilie ?)
 - **10h40-11h20** : Guest speaker 2 (Materials)
 - **11h20-11h40** : Short talk 1 (ML)
