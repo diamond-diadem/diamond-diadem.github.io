@@ -1,7 +1,7 @@
 {{ $last := sub (len .Params.contributors) 1 -}}
 <p>
   <small>
-    <p class="event-date">{{- time.Format (default ":date_long" .Site.Params.dateFormat) .Params.EventDate -}}&nbsp;{{- i18n "location" -}}&nbsp;{{- .Params.Location -}}</p>
+    <p class="event-date">{{- time.Format (default ":date_long" .Site.Params.dateFormat) .Params.EventDate -}}</p>
     {{- with .Params.categories -}}
       &nbsp;in&nbsp;
       {{- range $index, $category := . -}}
