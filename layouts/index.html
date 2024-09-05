@@ -65,7 +65,7 @@
           {{ end }}
           {{ range where .Site.Pages "Section" "news" }}
             {{ if .Params.Homepage }}  
-              <div class="col-lg-5"> 
+              <div class="col-lg-6 news-card-homepage"> 
                 <h4>{{ .Title }}</h4>
                 <p><i><b>{{- time.Format (default ":date_long" .Site.Params.dateFormat) .Params.EventDate -}}</i></b></p>  
                 <p>{{ .Summary }}</p> 
@@ -116,7 +116,7 @@
           {{ end }}
           {{ range where .Site.Pages "Section" "news" }}
             {{ if .Params.Homepage }}  
-              <div class="col-lg-5"> 
+              <div class="col-lg-6 news-card-homepage"> 
                 <h4>{{ .Title }}</h4>
                 <p><i><b>{{- time.Format (default ":date_long" .Site.Params.dateFormat) .Params.EventDate -}}</i></b></p> 
                 <p>{{ .Summary }}</p> 
