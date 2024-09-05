@@ -1211,3 +1211,10 @@ th, tr {
     margin-right: 20px;
 
 }
+
+@include color-mode(dark) {
+    .news-card-homepage {
+        border: solid white 1px;
+    }
+    
+}
