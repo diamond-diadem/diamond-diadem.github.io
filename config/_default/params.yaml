@@ -7,7 +7,7 @@ mainSections:
   - codes
   - documentation
 diamond:
-  enableNews: false
+  enableNews: true
 social:
   twitter: getdoks
 doks:
