@@ -66,7 +66,8 @@
           {{ range where .Site.Pages "Section" "news" }}
             {{ if .Params.Homepage }}  
               <div class="col-lg-5"> 
-                <h4>{{ .Title }}</h4> 
+                <h4>{{ .Title }}</h4>
+                <p><i><b>{{- time.Format (default ":date_long" .Site.Params.dateFormat) .Params.EventDate -}}</i></b></p>  
                 <p>{{ .Summary }}</p> 
                 <a href="{{ .Permalink }}">Apprenez-en plus</a> 
               </div>
@@ -111,12 +112,13 @@
             {{ end }}
           {{ end }}
           {{ if (ge $i 1) }}
-            <h2><u><a href="/en/news/">News</a></u></h3>
+            <h2><u>News</u></h3>
           {{ end }}
           {{ range where .Site.Pages "Section" "news" }}
             {{ if .Params.Homepage }}  
               <div class="col-lg-5"> 
-                <h4>{{ .Title }}</h4> 
+                <h4>{{ .Title }}</h4>
+                <p><i><b>{{- time.Format (default ":date_long" .Site.Params.dateFormat) .Params.EventDate -}}</i></b></p> 
                 <p>{{ .Summary }}</p> 
                 <a href="{{ .Permalink }}">Read more</a> 
               </div>

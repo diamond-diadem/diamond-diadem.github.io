@@ -1,7 +1,7 @@
 ---
 title: "Meeting PEPR DIADEM - PEPR IA"
 description: ""
-summary: ""
+summary: "Sorbonne Center for Artificial Intelligence SCAI, Espace Forum, 4 Pl. Jussieu, 75005 Paris"
 eventDate: 2024-11-18
 # location: "Paris"
 # publishDate: 2024-11-18
