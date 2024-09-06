@@ -21,6 +21,8 @@ seo:
   noindex: false # false (default) or true
 ---
 
+## Potentiels Interatomiques par Apprentissage Machine, et Bases de Données Accessibles
+
 #### Organisateurs
 
 - **Magali BENOIT** (CEMES, CNRS, Toulouse)
