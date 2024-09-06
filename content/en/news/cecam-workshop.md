@@ -21,6 +21,8 @@ seo:
   noindex: false # false (default) or true
 ---
 
+## Machine Learning Interatomic Potentials and Accessible Databases
+
 #### Organisers
 
 - **Magali BENOIT** (CEMES, CNRS, Toulouse)
