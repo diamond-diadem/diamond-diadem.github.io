@@ -49,8 +49,8 @@ apptainer exec $HOME/apptainer-images/quantum-espresso.sif mpirun -np <N> pw.x -
 ## Détail d'utilisation du conteneur Quantum Espresso
 Cette section présente les différentes manières d'utiliser l'image Quantum Espresso. Pour plus de détails sur les commandes Apptainer, veuillez vous référer à [ce tutoriel](/documentation/use-apptainer-image/howto/#apptainer--cours-accéléré).
 
-### Utiliser le conteneur Quantum Espresso en séquentiel
-Pour exécuter Quantum Espresso en séquentiel (c'est-à-dire sans parallélisation) sans conteneur, on utiliserait la commande :
+### Utiliser le conteneur Quantum Espresso
+Pour exécuter Quantum Espresso sans conteneur, on utiliserait la commande :
 
 ```bash
 pw.x -in qe-tutorial.in
@@ -131,7 +131,7 @@ dans le cas où les fichiers d'entrée de Quantum Espresso se situent dans le r�
 ## Exercices
 
 ### Exercice 1
-Comment utiliser l'image de conteneur pour effectuer un calcul Quantum Espresso en séquentiel ?
+Comment utiliser l'image de conteneur pour effectuer un calcul Quantum Espresso ?
 
 > **Données**
 > * L'image est située au chemin suivant : `$HOME/apptainer-images/quantum-espresso.sif`
@@ -141,14 +141,6 @@ Réponses possibles :
 * `apptainer run $HOME/apptainer-images/quantum-espresso.sif -in qe-tutorial.in`
 * ou `apptainer exec $HOME/apptainer-images/quantum-espresso.sif pw.x -in qe-tutorial.in`
 * ou `$HOME/apptainer-images/quantum-espresso.sif -in qe-tutorial.in`
-* ou
-
-```bash
-apptainer exec \
-  --env OMP_NUM_THREADS=1 \
-  $HOME/apptainer-images/quantum-espresso.sif \
-  mpirun -np 1 pw.x -in qe-tutorial.in
-```
 
 ### Exercice 2
 Comment utiliser l'image de conteneur pour effectuer un calcul Quantum Espresso (1 thread **OpenMP** et 16 cœurs **MPI**) ?
@@ -161,10 +153,11 @@ Exemple de réponse possible :
 
 ```bash
 apptainer exec \
+  --env OMP_NUM_THREADS=1
   $HOME/apptainer-images/quantum-espresso.sif \
   mpirun -np 16 pw.x -in qe-tutorial.in
 ```
-où l'option `--env OMP_NUM_THREADS=1` est implicite et que le conteneur utilise par défaut. 
+où l'option `--env OMP_NUM_THREADS=1` est nécessaire, sans quoi le conteneur utilise par défaut tous les threads disponibles. 
 
 ### Exercice 3
 Comment utiliser l'image de conteneur pour effectuer un calcul Quantum Espresso (2 threads **OpenMP** et 8 cœurs **MPI**) complètement isolé du système hôte ?
