@@ -50,8 +50,8 @@ apptainer exec $HOME/apptainer-images/quantum-espresso.sif mpirun -np <N> pw.x -
 ## Detailed usage for the Quantum Espresso container
 This section presents different ways to use the Quantum Espresso image. For more details about Apptainer commands, please look at [this tutorial](/en/documentation/use-apptainer-image/howto/#apptainer--crash-course).
 
-### Using the Quantum Espresso container for sequential runs
-To run Quantum Espresso sequentially (*ie.* without parallelization) without any container, one would use the following command:
+### Using the Quantum Espresso container
+To run Quantum Espresso without any container, one would use the following command:
 
 ```bash
 pw.x -in qe-tutorial.in
@@ -135,7 +135,7 @@ in the case where Quantum Espresso input files are in the current directory (`$P
 ## Exercices
 
 ### First exercice
-How to use the container image to run a sequential Quantum Espresso computation?
+How to use the container image to run a Quantum Espresso computation?
 
 **Data**
 > * The image is located at: `$HOME/apptainer-images/quantum-espresso.sif`
@@ -145,14 +145,6 @@ Possible answers:
 * `apptainer run $HOME/apptainer-images/quantum-espresso.sif -in qe-tutorial.in`
 * or `apptainer exec $HOME/apptainer-images/quantum-espresso.sif pw.x -in qe-tutorial.in`
 * or `$HOME/apptainer-images/quantum-espresso.sif -in qe-tutorial.in`
-* or
-
-```bash
-apptainer exec \
-  --env OMP_NUM_THREADS=1 \
-  $HOME/apptainer-images/quantum-espresso.sif \
-  mpirun -np 1 pw.x -in qe-tutorial.in
-```
 
 ### Second exercice
 How to use the container image to run a Quantum Espresso computation (1 **OpenMP** thread and 16 **MPI** cores)?
@@ -165,11 +157,12 @@ Example of a possible answer:
 
 ```bash
 apptainer exec \
+  --env OMP_NUM_THREADS=1
   $HOME/apptainer-images/quantum-espresso.sif \
   mpirun -np 16 pw.x -in qe-tutorial.in
 ```
 
-where `--env OMP_NUM_THREADS=1` is implicit and use by default by the container. 
+where `--env OMP_NUM_THREADS=1` is mandatory, as without it the container uses by defalut all the available threads. 
 
 ### Third exercice
  How to use the container image to run a Quantum Espresso computation (2 **OpenMP** threads and 8 **MPI** cores) which is fully isolated from the host system?
