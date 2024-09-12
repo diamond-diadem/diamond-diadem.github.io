@@ -136,7 +136,7 @@ in the case where the Paraview input files are located in the current directory 
 **Note**
 > Note that in cases where the `--containall` and `--bind` flags are used together, only the contents of the directories explicitly mounted within the container can be loaded into ParaView. Similarly, in cases where we want to export our work to an output file, these options force us to export only to the explicitly mounted directories, otherwise we may not retrieve the files when the container is destroyed if we write to non-shared directories.
 
-### Displaying felp
+### Displaying help
 
 To display the container's help message (assuming the image is stored under `$HOME/apptainer-images/paraview.sif`):
 
