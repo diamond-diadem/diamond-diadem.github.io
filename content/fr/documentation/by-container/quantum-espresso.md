@@ -29,7 +29,7 @@ mv quantum-espresso.sif $HOME/apptainer-images/quantum-espresso.sif
 
 Pour illustrer les différentes commandes, un jeu de fichiers d'entrée Quantum Espresso est disponible sous forme d'archive via [ce lien](/downloads/qe-tutorial-inputs.tar.gz). L'archive contient les fichiers nécessaires pour effectuer un calcul d'énergie pour un système organique contenant du carbone, du magnésium, du souffre, de l'azote et de l'hydrogène. Les fichiers sont les suivants :
 * `qe-tutorial.in` est le fichier d'entrée principal de Quantum Espresso, contenant les paramètres nécessaires pour effectuer le calcul. Les positions des atomes ainsi que la définition de la boîte de simulation sont également dans ce fichier. Enfin on on spécifie où trouver les pseudo-potentiels pour décrire les interactions d'échange-corrélation au sein du système (voir ci-après).
-* le répertoire `pseudo` qui contient les fichiers de pseudo-potentiels propres à chaque espèce chimique du système (`C.upf`, `H.upf`, `Mn.upf`, `N.upf` et `S.upf`).
+* le répertoire `pseudo` qui contient le fichier de pseudo-potentiel pour modéliser les interactions entre atomes de Silicium dans le systeme (`Si.pz-vbc.UPF`).
 
 Dans ce tutoriel, on supposera que les fichiers d'entrée contenus dans cette archive sont dans le répertoire courant :
 
