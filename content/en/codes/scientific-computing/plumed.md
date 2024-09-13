@@ -27,3 +27,19 @@ Additionally, Plumed supports a scripting interface that enables users to set up
 
 </div>
 
+### Retrieve this container image with Apptainer:
+
+```bash
+# PULL
+apptainer pull plumed.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/plumed.sif:latest
+```
+
+### Learn how to use this specific container _(to be added)_
+
+### PLUMED documentation:
+
+- #### <a href="https://www.plumed.org/" target="_blank">Official website</a>
+
+- #### <a href="https://www.plumed.org/doc" target="_blank">Official documentation</a>
+
+- #### Examples: input files _(to be added)_
