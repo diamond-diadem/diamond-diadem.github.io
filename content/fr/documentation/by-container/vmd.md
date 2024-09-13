@@ -8,8 +8,6 @@ weight: 4
 
 {{< callout context="note" title="" icon="info-circle" >}}
 
-<iframe class="tuto-video" src="https://www.youtube.com/embed/NDv_vDjflgs?si=CZhqWkuEm40JUdND&cc_lang_pref=fr&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
 En préalable de ces explications, il est nécessaire d'avoir installé Apptainer sur votre machine ; voir [ce lien](/documentation/install-apptainer/howto/) pour plus de détails.
 
 Ce tutoriel détaille l'utilisation de l'image de conteneur du code VMD téléchargeable à [cette adresse](/codes/visualisation/vmd/). En suivant ce lien, vous récupérez une image Apptainer (format de fichier `.sif`) qui vous permettra de créer des conteneurs à même de faire tourner VMD.
@@ -19,6 +17,8 @@ Pour plus d'informations sur les conteneurs Apptainer, veuillez consulter la [pa
 Pour rapidement s'approprier les principales commandes d'Apptainer, vous pouvez vous référer à [ce tutoriel](/documentation/use-apptainer-image/howto/).
 
 {{< /callout >}}
+
+<iframe class="tuto-video" src="https://www.youtube.com/embed/NDv_vDjflgs?si=CZhqWkuEm40JUdND&cc_lang_pref=fr&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 Cette image est un fichier relocalisable et renommable, qu'il est recommandé de placer dans un répertoire dédié pour facilement la retrouver ; celui-ci peut-être quelconque, et dans le cadre de ce tutoriel nous assumerons que vous l'avez placée dans un répertoire nommé `$HOME/apptainer-images` :
 
