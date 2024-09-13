@@ -26,3 +26,20 @@ Plumed est également équipé d'un ensemble complet d'outils d'analyse permetta
 En outre, Plumed prend en charge une interface de script qui permet aux utilisateurs de configurer et de contrôler des protocoles de simulation complexes, automatisant ainsi le flux de travail et réduisant le risque d'erreur humaine. Le développement communautaire de Plumed assure des mises à jour et des améliorations continues, soutenu par une documentation exhaustive et une communauté d'utilisateurs robuste qui facilite le dépannage et le partage de connaissances.
 
 </div>
+
+### Récupérez l'image Apptainer :
+
+```bash
+# PULL
+apptainer pull plumed.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/plumed.sif:latest
+```
+
+### Comment utiliser cette image de conteneur _(à venir)_
+
+### Documentation PLUMED :
+
+- #### <a href="https://www.plumed.org/" target="_blank">Site officiel</a>
+
+- #### <a href="https://www.plumed.org/doc" target="_blank">Documentation officielle</a>
+
+- #### Exemples : fichiers d'entrée _(à venir)_
