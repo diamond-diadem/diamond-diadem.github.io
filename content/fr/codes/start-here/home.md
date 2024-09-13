@@ -68,6 +68,10 @@ Mais pour commencer, si vous n'êtes pas encore passé par cette étape et si vo
             <td><a href="/codes/scientific-computing/neper/"><i class="icon-neper"></i>Neper</a></td>
             <td></td>
         </tr>
+        <tr>
+            <td><a href="/codes/scientific-computing/plumed/"><i class="icon-plumed"></i>PLUMED</a></td>
+            <td></td>
+        </tr>
     </tbody>
 </table>
 
@@ -127,6 +131,14 @@ apptainer pull opencalphad.sif oras://gricad-registry.univ-grenoble-alpes.fr/dia
 ```bash
 # PULL
 apptainer pull neper.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/neper.sif:latest
+```
+
+{{< /tab >}}
+{{< tab "PLUMED" >}}
+
+```bash
+# PULL
+apptainer pull plumed.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/plumed.sif:latest
 ```
 
 {{< /tab >}}

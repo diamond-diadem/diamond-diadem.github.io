@@ -236,7 +236,17 @@ u {
 
 .icon-neper {
     background-image: url(/images/neper-icon.png);
-    @extend .custom-icon
+    @extend .custom-icon;
+}
+
+.icon-plumed {
+    background-image: url(/images/plumed-icon-light.png);
+    @extend .custom-icon;
+}
+@include color-mode(dark) {
+    .icon-plumed {
+        background-image: url(/images/plumed-icon-dark.png);
+    }
 }
 
 
@@ -401,6 +411,16 @@ u {
 @include color-mode(dark) {
     .logo-opencalphad {
         content: url(/images/opencalphad-logo-dark.png);
+    }
+}
+
+.logo-plumed {
+    width: 50%;
+    content: url(/images/plumed-light.png);
+}
+@include color-mode(dark) {
+    .logo-plumed {
+        content: url(/images/plumed-dark.png);
     }
 }
 
