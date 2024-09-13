@@ -1,8 +1,8 @@
 ---
-title: Plumed
+title: PLUMED
 title_visible: true
-linkTitle: Plumed
-# icon: icon-neper
+linkTitle: PLUMED
+icon: icon-plumed
 toc: false
 weight: 8
 ---
@@ -12,6 +12,8 @@ weight: 8
         <img alt="Plumed" src="/images/plumed.png" class="codes-pages-top-logo logo-plumed">
     </a>
 </div>
+
+<h3 style="margin-top: 0; font-weight: 500;" align="center">The community-developed PLUgin for MolEcular Dynamics</h2>
 
 <div align="justify">
 
@@ -24,3 +26,4 @@ Plumed is also equipped with a comprehensive set of analysis tools that allow fo
 Additionally, Plumed supports a scripting interface that enables users to set up and control complex simulation protocols, automating the workflow and reducing the potential for human error. The community-driven development of Plumed ensures continuous updates and improvements, supported by extensive documentation and a robust user community that facilitates troubleshooting and knowledge sharing.
 
 </div>
+

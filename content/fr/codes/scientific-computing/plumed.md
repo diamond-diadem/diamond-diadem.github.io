@@ -1,8 +1,8 @@
 ---
-title: Plumed
+title: PLUMED
 title_visible: true
-linkTitle: Plumed
-# icon: icon-neper
+linkTitle: PLUMED
+icon: icon-plumed
 toc: false
 weight: 8
 ---
@@ -12,6 +12,8 @@ weight: 8
         <img alt="Plumed" src="/images/plumed.png" class="codes-pages-top-logo logo-plumed">
     </a>
 </div>
+
+<h3 style="margin-top: 0; font-weight: 500;" align="center">The community-developed PLUgin for MolEcular Dynamics</h2>
 
 <div align="justify">
 
