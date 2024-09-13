@@ -236,7 +236,17 @@ u {
 
 .icon-neper {
     background-image: url(/images/neper-icon.png);
-    @extend .custom-icon
+    @extend .custom-icon;
+}
+
+.icon-plumed {
+    background-image: url(/images/plumed-icon-light.png);
+    @extend .custom-icon;
+}
+@include color-mode(dark) {
+    .icon-plumed {
+        background-image: url(/images/plumed-icon-dark.png);
+    }
 }
 
 
