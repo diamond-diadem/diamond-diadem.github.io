@@ -6,7 +6,7 @@ eventDate: "du 9 au 11 septembre 2024"
 # location: "Paris"
 # publishDate: 2024-11-18
 # lastmod: 2024-02-06T09:24:27+01:00
-# expiryDate: 2024-03-06T09:24:27+01:00
+expiryDate: 2024-09-12
 draft: false
 weight: 30
 categories: []
