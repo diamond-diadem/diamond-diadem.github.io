@@ -9,11 +9,11 @@ weight: 8
 
 <div style="text-align: center;">
     <a href="https://www.plumed.org/" target="_blank">
-        <img alt="Plumed" src="/images/plumed.png" class="codes-pages-top-logo logo-plumed">
+        <img alt="PLUMED" class="codes-pages-top-logo logo-plumed">
     </a>
 </div>
 
-<h3 style="margin-top: 0; font-weight: 500;" align="center">The community-developed PLUgin for MolEcular Dynamics</h2>
+<h3 style="margin-top: 0; font-weight: 500;" align="center">The community-developed PLUgin for MolEcular Dynamics</h3>
 
 <div align="justify">
 
