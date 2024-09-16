@@ -459,6 +459,27 @@ u {
 
 }
 
+@include media-breakpoint-only(lg) {
+    .logo-france2030-desktop {
+        // content: url('/images/france-2030-couleurs.png');
+        height: 75px;
+        margin-right: 10px;
+    }
+
+    .nav-item {
+        margin: 0;
+    }
+
+    // .nav-link {
+    //     font-size: 100%
+    // }
+
+    .nav-logo {
+        height: 50px;
+    }
+
+}
+
 
 
 
