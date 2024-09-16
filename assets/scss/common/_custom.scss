@@ -249,6 +249,26 @@ u {
     }
 }
 
+.icon-plumed {
+    background-image: url(/images/plumed-icon-light.png);
+    @extend .custom-icon;
+}
+@include color-mode(dark) {
+    .icon-plumed {
+        background-image: url(/images/plumed-icon-dark.png);
+    }
+}
+
+.icon-gmsh {
+    background-image: url(/images/gmsh-icon-light.png);
+    @extend .custom-icon;
+}
+@include color-mode(dark) {
+    .icon-gmsh {
+        background-image: url(/images/gmsh-icon-dark.png);
+    }
+}
+
 
 // // // END custom icons END // // //
 
@@ -423,6 +443,18 @@ u {
         content: url(/images/plumed-dark.png);
     }
 }
+
+.logo-gmsh {
+    width: 50%;
+    content: url(/images/gmsh-light.png);
+}
+@include color-mode(dark) {
+    .logo-gmsh {
+        content: url(/images/gmsh-dark.png);
+    }
+}
+
+
 
 // // // END Codes pages top logos END // // //
 

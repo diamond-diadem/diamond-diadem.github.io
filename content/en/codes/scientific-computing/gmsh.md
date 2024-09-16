@@ -2,7 +2,7 @@
 title: Gmsh
 title_visible: true
 linkTitle: Gmsh
-# icon: icon-plumed
+icon: icon-gmsh
 toc: false
 weight: 9
 ---
@@ -12,8 +12,6 @@ weight: 9
         <img alt="Gmsh" class="codes-pages-top-logo logo-gmsh">
     </a>
 </div>
-
-<!-- <h3 style="margin-top: 0; font-weight: 500;" align="center">The community-developed PLUgin for MolEcular Dynamics</h3> -->
 
 <div align="justify">
 

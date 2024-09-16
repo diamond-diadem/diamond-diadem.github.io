@@ -2,7 +2,7 @@
 title: Gmsh
 title_visible: true
 linkTitle: Gmsh
-# icon: icon-plumed
+icon: icon-gmsh
 toc: false
 weight: 9
 ---
