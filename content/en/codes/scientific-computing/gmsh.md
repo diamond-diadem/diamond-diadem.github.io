@@ -29,15 +29,15 @@ Moreover, Gmsh includes a powerful scripting language that allows users to autom
 
 ```bash
 # PULL
-apptainer pull plumed.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/plumed.sif:latest
+apptainer pull gmsh.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/gmsh.sif:latest
 ```
 
 ### Learn how to use this specific container _(to be added)_
 
-### PLUMED documentation:
+### Gmsh documentation:
 
-- #### <a href="https://www.plumed.org/" target="_blank">Official website</a>
+- #### <a href="https://gmsh.info/" target="_blank">Official website</a>
 
-- #### <a href="https://www.plumed.org/doc" target="_blank">Official documentation</a>
+- #### <a href="https://gmsh.info/#Documentation" target="_blank">Official documentation</a>
 
 - #### Examples: input files _(to be added)_
