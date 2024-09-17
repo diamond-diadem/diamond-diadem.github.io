@@ -72,6 +72,10 @@ Mais pour commencer, si vous n'êtes pas encore passé par cette étape et si vo
             <td><a href="/codes/scientific-computing/plumed/"><i class="icon-plumed"></i>PLUMED</a></td>
             <td></td>
         </tr>
+        </tr><tr>
+            <td><a href="/codes/scientific-computing/gmsh/"><i class="icon-gmsh"></i>Gmsh</a></td>
+            <td></td>
+        </tr>
     </tbody>
 </table>
 
@@ -139,6 +143,14 @@ apptainer pull neper.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/a
 ```bash
 # PULL
 apptainer pull plumed.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/plumed.sif:latest
+```
+
+{{< /tab >}}
+{{< tab "Gmsh" >}}
+
+```bash
+# PULL
+apptainer pull gmsh.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/gmsh.sif:latest
 ```
 
 {{< /tab >}}
