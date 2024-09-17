@@ -27,7 +27,7 @@ doks:
   showDate: false
   showSummary: true
   searchLimit: 99
-  alert: true
+  alert: false
   alertDismissable: false
   bootstrapJavascript: false
   sectionNav:
