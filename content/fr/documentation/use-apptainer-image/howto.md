@@ -39,6 +39,7 @@ La principale manière d'interagir avec l'image se fait en invoquant la commande
 ```bash
 $ apptainer run $HOME/apptainer-images/tutorial.sif
 ```
+
 **Note**
 > Si la commande lancée par `apptainer run` acceptait des arguments supplémentaires (ce qui n'est pas le cas ici), il serait possible de les fournir en les ajoutant à la suite.
 
@@ -47,6 +48,7 @@ $ apptainer run $HOME/apptainer-images/tutorial.sif
 ```bash
 $ apptainer exec $HOME/apptainer-images/tutorial.sif echo Hi from the container !
 ```
+
 crée un conteneur à partir de l'image `$HOME/apptainer-images/tutorial.sif`, invoque la commande `echo Hi from the container !` du shell dans le conteneur puis détruit le conteneur.
 
 * l'argument `shell` permet d'ouvrir un shell interactif au sein du conteneur (le *prompt* `Apptainer>` apparaît alors à gauche de la ligne de commande) et d'y effectuer plusieurs commandes successives, puis d'en sortir en détruisant le conteneur avec `exit` ou `Crtl+D`. Par exemple :
@@ -71,7 +73,8 @@ apptainer run-help $HOME/apptainer-images/tutorial.sif
 ```
 
 * l'argument `inspect` permet d'afficher les métadonnées relatives à l'image (auteur de l'image, version, date de création, ...)
-```
+
+```bash
 apptainer inspect $HOME/apptainer-images/tutorial.sif
 ```
 
@@ -80,6 +83,7 @@ Il est également possible d'exécuter l'image directement, comme un binaire :
 ```bash
 $ $HOME/apptainer-images/tutorial.sif
 ```
+
 ce qui est strictement équivalent à `apptainer run $HOME/apptainer-images/tutorial.sif`
 
 ## Variables d'environnement
@@ -90,6 +94,7 @@ Par exemple, la commande par défaut lancée par `apptainer run $HOME/apptainer-
 ```bash
 echo $GREET $USER "who just ran the default command of the container."
 ```
+
 où la variable `$GREET` est définie pour renvoyer "Welcome" par défaut au sein du conteneur.
 
 La variable `$USER` est récupérée pour que sa valeur dans le conteneur soit identique à celle de la machine hôte. Ce fonctionnement n'est pas spécifique à l'image étudiée lors de ce tutoriel, il s'agit d'un des nombreux comportements standards d'Apptainer pour faciliter l'utilisation de conteneurs au sein d'environnements de calcul haute performance.
@@ -99,6 +104,7 @@ Ces deux variables d'environmmement peuvent être redéfinies :
 ```bash
 apptainer run --env GREET=Hello $HOME/apptainer-images/tutorial.sif
 ```
+
 ou
 
 ```bash
@@ -111,7 +117,6 @@ apptainer run --env USER=newusername $HOME/apptainer-images/tutorial.sif
 ```bash
 WARNING: Environment variable USER already has value [newusername], will not forward new value [oldusername] from parent process environment
 ```
-
 
 ## Isolation partielle ou isolation totale
 Par défaut, Apptainer n'isole pas totalement le conteneur du système de la machine hôte. Les chemins suivants de la machine hôte sont montés et accessibles par défaut dans le conteneur : `$HOME`, `$PWD` `/sys`, `/proc`, `/tmp`, `/var/tmp`, `/etc/resolve.conf` et `/etc/passwd`.
