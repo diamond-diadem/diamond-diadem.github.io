@@ -324,9 +324,10 @@ u {
 }
 @include media-breakpoint-down(md) {
     .logo-diamond-homepage {
-        width: 95%;
+        min-width: 120%;
         position: relative;
-        top: -35px;
+        top: -35px; left: -10%;
+        margin-bottom: -20%;
     }
 }
 
