@@ -27,7 +27,8 @@ linkTitle: DIAMOND
   <img alt="DIAMOND" class="logo-diamond" width=100%/>
 </div>
 <div class="column right-about-diamond-fr">
-<div class="text-x-large" align="justify">
+<!-- <div class="text-x-large" align="justify"> -->
+<div align="justify">
 
 L’objectif principal de ce projet ciblé est de mettre en place une infrastructure numérique pour accélérer le développement et la découverte de nouveaux matériaux. Elle est basée d’une part sur une plateforme dédiée aux codes de simulation aux différentes échelles et aux workflows pour l’automatisation de séries de calculs, dont les calculs à haut débit et le traitement des résultats par intelligence artificielle (IA) et d’autre part sur une infrastructure de bases de données issues à la fois d'expériences et de simulations.
 
