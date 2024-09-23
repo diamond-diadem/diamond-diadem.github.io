@@ -296,17 +296,35 @@ u {
 
 .logo-diamond-homepage {
     content: url(/images/logo-diamond-new-light.png);
-    width: 38%;
+    // width: 38%;
 }
 @include color-mode(dark) {
     .logo-diamond-homepage {
         content: url(/images/logo-diamond-new-dark.png);
     }   
 }
-
-@include media-breakpoint-down(lg) {
+@include media-breakpoint-up(xl) {
     .logo-diamond-homepage {
-        width: 100%;
+        width: 38%;
+    }
+}
+@include media-breakpoint-only(lg) {
+    .logo-diamond-homepage {
+        width: 50%;
+        // position: relative;
+        // top: -35px;
+    }
+}
+@include media-breakpoint-only(md) {
+    .logo-diamond-homepage {
+        width: 60%;
+        position: relative;
+        top: -35px;
+    }
+}
+@include media-breakpoint-down(md) {
+    .logo-diamond-homepage {
+        width: 95%;
         position: relative;
         top: -35px;
     }
