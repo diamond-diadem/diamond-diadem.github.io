@@ -36,7 +36,8 @@ linkTitle: DIAMOND
 <img alt="DIAMOND" class="logo-diamond" width=100%/>
 </div>
 <div class="column right-about-diamond-en">
-<div class="text-x-large" align="justify">
+<!-- <div class="text-x-large" align="justify"> -->
+<div align="justify">
 
 The main objective of this targeted project is to establish a digital infrastructure to accelerate the development of materials. It is based on one hand on a platform dedicated to simulation codes at various scales and workflows for the automation of calculation series, including high-throughput calculations, and the processing of results through artificial intelligence (AI). On the other hand, it relies on a database infrastructure derived from both experiments and simulations.
 
