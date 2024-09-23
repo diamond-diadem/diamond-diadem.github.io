@@ -1030,8 +1030,8 @@ u {
 
 @include media-breakpoint-up(xl) {
     .left-about-apptainer-fr {
-        width: 25%;
-        margin-top: 0%;
+        width: 23%;
+        margin-top: 2.5%;
         margin-bottom: 0;
     }
 
@@ -1040,9 +1040,10 @@ u {
     }
 
     .right-about-apptainer-fr {
-        width: 75%;
+        width: 73%;
         margin-bottom: 0;
-        padding: 2% 2%;
+        padding: 10px 5px;
+        text-align: justify;
     }
 }
 
