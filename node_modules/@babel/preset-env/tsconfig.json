@@ -11,10 +11,22 @@
   ],
   "references": [
     {
+      "path": "../../packages/babel-compat-data"
+    },
+    {
+      "path": "../../packages/babel-helper-compilation-targets"
+    },
+    {
       "path": "../../packages/babel-helper-plugin-utils"
     },
     {
+      "path": "../../packages/babel-helper-validator-option"
+    },
+    {
       "path": "../../packages/babel-plugin-bugfix-firefox-class-in-computed-class-key"
+    },
+    {
+      "path": "../../packages/babel-plugin-bugfix-safari-class-field-initializer-scope"
     },
     {
       "path": "../../packages/babel-plugin-bugfix-safari-id-destructuring-collision-in-function-expression"
@@ -66,6 +78,9 @@
     },
     {
       "path": "../../packages/babel-plugin-transform-duplicate-keys"
+    },
+    {
+      "path": "../../packages/babel-plugin-transform-duplicate-named-capturing-groups-regex"
     },
     {
       "path": "../../packages/babel-plugin-transform-dynamic-import"
@@ -174,6 +189,9 @@
     },
     {
       "path": "../../packages/babel-plugin-transform-unicode-sets-regex"
+    },
+    {
+      "path": "../../packages/babel-core"
     }
   ]
 }

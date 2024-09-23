@@ -1,88 +1,12 @@
-# Hyas core
+# Core
 
-Official core integration for Hyas.
+Official Core integration for Hyas.
 
-## Status
-
-[![npm (scoped)](https://img.shields.io/npm/v/@hyas/core?style=flat-square)](https://www.npmjs.com/package/@hyas/core)
-
-## Installation
-
-```bash
-npm i @hyas/core
-```
-
-## Setup
-
-Add mounts to `./config/_default/module.toml`:
-
-```toml
-[[mounts]]
-  source = "node_modules/@hyas/core/assets"
-  target = "assets"
-
-[[mounts]]
-  source = "node_modules/@hyas/core/layouts"
-  target = "layouts"
-
-[[mounts]]
-  source = "assets"
-  target = "assets"
-
-[[mounts]]
-  source = "layouts"
-  target = "layouts"
-```
-
-Add to `./config/_default/hugo.toml`:
-
-```toml
-baseurl = "https://hyas.netlify.app/"
-canonifyURLs = false
-disableAliases = true
-disableHugoGeneratorInject = true
-disableKinds = ["taxonomy", "term"]
-enableEmoji = true
-enableGitInfo = false
-enableRobotsTXT = true
-languageCode = "en-US"
-paginate = 7
-rssLimit = 10
-
-[outputs]
-  home = ["HTML"]
-
-[caches]
-  [caches.getjson]
-    dir = ":cacheDir/:project"
-    maxAge = -1
-  [caches.getcsv]
-    dir = ":cacheDir/:project"
-    maxAge = -1
-  [caches.images]
-    dir = ":cacheDir/images"
-    maxAge = "1440h"
-  [caches.assets]
-    dir = ":cacheDir/:project"
-    maxAge = -1
-  [caches.getresource]
-    dir = ":cacheDir/:project"
-    maxage = '1h'
-
-[sitemap]
-  changefreq = "monthly"
-  filename = "sitemap.xml"
-  priority = 0.5
-
-[minify.tdewolff.html]
-  keepWhitespace = false
-```
-
-## How to use
+## Getting Started
 
 See the Hyas documentation:
 
-- [Core](https://docs.gethyas.com/guides/integrations-guide/core/)
+- [Core](https://docs.gethyas.com/guides/integrations/core/)
 
 ## Credits
 
