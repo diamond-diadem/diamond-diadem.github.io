@@ -294,9 +294,11 @@ u {
     }   
 }
 
+
+// logo diamond homepage (responsive) //
+
 .logo-diamond-homepage {
     content: url(/images/logo-diamond-new-light.png);
-    // width: 38%;
 }
 @include color-mode(dark) {
     .logo-diamond-homepage {
@@ -330,6 +332,8 @@ u {
         margin-bottom: -20%;
     }
 }
+// end //
+
 
 .logo-guix {
     content: url(/images/guix-logo-light.svg);
