@@ -70,6 +70,4 @@ The day is devoted to several talks given by renowned researchers and specialist
 - **16h00-16h40:** Emmanuel FRANCK (UNISTRA) *Hybrid ML approaches in Material Science : the contribution of PINNS*
 - **16h40-17h20:** Martin URHIN  (University of Grenoble Alpes) *When GenAI meets Material Science*
 
-
-
 <br/>
