@@ -36,7 +36,7 @@ overview of some promising research directions at the
 interface between Material Science, AI and High Performance
 Computing
 
-The day is devoted to several talks given by renowned researchers and specialists in the field. Young researchers are also invited to present their work via posters or short talks and should submit an abstract to [inter-pepr-days@services.cnrs.fr](mailto:inter-pepr-days@services.cnrs.fr)  before October 15
+The day is devoted to several talks given by renowned researchers and specialists in the field. Young researchers are also invited to present their work via posters or short talks and should submit an abstract to [inter-pepr-days@services.cnrs.fr](mailto:inter-pepr-days@services.cnrs.fr)&nbsp;before October 15
 
 <div align="justify">
 
