@@ -48,22 +48,22 @@ La journée sera consacrée à plusieurs conférences données par des chercheur
 
 - **8h30-9h00 :** Accueil et café
 
-- **9h00-10h00 :** Marie-Pierre GAIGEOT (Evry University) *Graphes et simulation numérique*
-- **10h-10h40 :** Émilie DEVIJVER (CNRS & University of Grenoble Alpes) *Une introduction à la causalité*
+- **9h00-10h00 :** Marie-Pierre GAIGEOT (Université Evry) *Graphes et simulation numérique*
+- **10h-10h40 :** Émilie DEVIJVER (CNRS & Université Grenoble Alpes) *Une introduction à la causalité*
 
 - **10h40-11h00 :** Pause café
 
 - **11h00-11h40 :** Damien LAAGE (CNRS & ENS) *Potentiels de réseaux de neurones pour la réactivité chimique*
-- **11h40-12h20 :** Talk ML (TBA)
+- **11h40-12h20 :** Exposé ML (*va être annoncé*)
 
 - **12h20-14h00 :** Pause déjeuner & Session posters
 
-- **14h00-15h00 :** Amaury HABRARD (IUF & University Jean Monnet) *Adaptation de domaine et apprentissage par transfert*
-- **15h00-15h40 :** Noël JAKSE and Émilie DEVIJVER (University of Grenoble Alpes) *Apprentissage topologique non supervisé et simulations temporelles*
+- **14h00-15h00 :** Amaury HABRARD (IUF & Université Jean Monnet) *Adaptation de domaine et apprentissage par transfert*
+- **15h00-15h40 :** Noël JAKSE and Émilie DEVIJVER (Université Grenoble Alpes) *Apprentissage topologique non supervisé et simulations temporelles*
 
 - **15h40-16h00 :** Pause café
 
 - **16h00-16h40 :** Emmanuel FRANCK (UNISTRA) *Approches hybrides d'apprentissage machine en Science des Matériaux : la contribution des PINNs.*
-- **16h40-17h20 :** Martin URHIN  (University of Grenoble Alpes) *Quand l'IA Générative rencontre la Science des Matériaux*
+- **16h40-17h20 :** Martin URHIN  (Université Grenoble Alpes) *Quand l'IA Générative rencontre la Science des Matériaux*
 
 <br/>
