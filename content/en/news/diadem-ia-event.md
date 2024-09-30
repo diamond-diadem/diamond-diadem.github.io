@@ -26,7 +26,7 @@ seo:
 <div align="center">
 
 ### ORGANISERS:
-#### Marianne CLAUSEL, Émilie DEVIJVER, and Noël JAKSE
+#### Marianne CLAUSEL and Noël JAKSE
 
 </div>
 
@@ -36,7 +36,7 @@ overview of some promising research directions at the
 interface between Material Science, AI and High Performance
 Computing
 
-The day is devoted to several talks given by renowned researchers and specialists in the field. Young researchers are also invited to present their work via posters or short talks and should submit an abstract to [inter-pepr-days@services.cnrs.fr](mailto:inter-pepr-days@services.cnrs.fr)&nbsp;before October 15
+The day is devoted to several talks given by renowned researchers and specialists in the field. Young researchers are also invited to present their work via posters or short talks and should submit an abstract to <a href="mailto:inter-pepr-days@services.cnrs.fr">inter-pepr-days@services.cnrs.fr</a> before October 15
 
 <div align="justify">
 
@@ -63,7 +63,8 @@ The day is devoted to several talks given by renowned researchers and specialist
 - **12h20-14h00:** Lunch break & Posters session
 
 - **14h00-15h00:** Amaury HABRARD (IUF & University Jean Monnet) *Domain adaptation and transfer learning*
-- **15h00-15h40:** Noël JAKSE and Émilie DEVIJVER (University of Grenoble Alpes) *Unsupervised topological learning and temporal simulations*
+- **15h00-15h40:** Free slot (TBA)
+<!-- - **15h00-15h40:** Noël JAKSE and Émilie DEVIJVER (University of Grenoble Alpes) *Unsupervised topological learning and temporal simulations* -->
 
 - **15h40-16h00:** Coffee break
 

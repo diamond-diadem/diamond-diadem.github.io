@@ -26,13 +26,13 @@ seo:
 <div align="center">
 
 ### ORGANISATEURS :
-#### Marianne CLAUSEL, Émilie DEVIJVER, and Noël JAKSE
+#### Marianne CLAUSEL et Noël JAKSE
 
 </div>
 
 **Appel à propositions** : La Journée Inter-PEPR, organisée conjointement par le PEPR DIADEM, le PEPR IA et le PEPR NumPex, vise à offrir un aperçu de certaines directions de recherche prometteuses à l'interface entre la Science des Matériaux, l'IA et le Calcul Haute Performance.
 
-La journée sera consacrée à plusieurs conférences données par des chercheurs et spécialistes renommés dans le domaine. Les jeunes chercheurs sont également invités à présenter leurs travaux sous forme de posters ou de courtes présentations et doivent soumettre un résumé à [inter-pepr-days@services.cnrs.fr](mailto:inter-pepr-days@services.cnrs.fr)&nbsp;avant le 15 octobre.
+La journée sera consacrée à plusieurs conférences données par des chercheurs et spécialistes renommés dans le domaine. Les jeunes chercheurs sont également invités à présenter leurs travaux sous forme de posters ou de courtes présentations et doivent soumettre un résumé à <a href="mailto:inter-pepr-days@services.cnrs.fr">inter-pepr-days@services.cnrs.fr</a> avant le 15 octobre.
 
 <div align="justify">
 
@@ -48,22 +48,24 @@ La journée sera consacrée à plusieurs conférences données par des chercheur
 
 - **8h30-9h00 :** Accueil et café
 
-- **9h00-10h00 :** Marie-Pierre GAIGEOT (Université Evry) *Graphes et simulation numérique*
-- **10h-10h40 :** Émilie DEVIJVER (CNRS & Université Grenoble Alpes) *Une introduction à la causalité*
+- **9h00-10h00 :** Marie-Pierre GAIGEOT (Université Evry) *Graphs and numerical simulation*
+- **10h-10h40 :** Émilie DEVIJVER (CNRS & Université Grenoble Alpes) *An introduction to causality*
 
 - **10h40-11h00 :** Pause café
 
-- **11h00-11h40 :** Damien LAAGE (CNRS & ENS) *Potentiels de réseaux de neurones pour la réactivité chimique*
-- **11h40-12h20 :** Exposé ML (*va être annoncé*)
+- **11h00-11h40 :** Damien LAAGE (CNRS & ENS) *Neural Network Potentials for Chemical Reactivity*
+- **11h40-12h20 :** Exposé ML (*sera annoncé*)
 
 - **12h20-14h00 :** Pause déjeuner & Session posters
 
-- **14h00-15h00 :** Amaury HABRARD (IUF & Université Jean Monnet) *Adaptation de domaine et apprentissage par transfert*
-- **15h00-15h40 :** Noël JAKSE and Émilie DEVIJVER (Université Grenoble Alpes) *Apprentissage topologique non supervisé et simulations temporelles*
+- **14h00-15h00 :** Amaury HABRARD (IUF & Université Jean Monnet) *Domain adaptation and transfer learning*
+- **15h00-15h40 :** Créneau libre (*sera annoncé*)
+
+<!-- - **15h00-15h40 :** Noël JAKSE and Émilie DEVIJVER (Université Grenoble Alpes) *Unsupervised topological learning and temporal simulations* -->
 
 - **15h40-16h00 :** Pause café
 
-- **16h00-16h40 :** Emmanuel FRANCK (UNISTRA) *Approches hybrides d'apprentissage machine en Science des Matériaux : la contribution des PINNs.*
-- **16h40-17h20 :** Martin URHIN  (Université Grenoble Alpes) *Quand l'IA Générative rencontre la Science des Matériaux*
+- **16h00-16h40 :** Emmanuel FRANCK (UNISTRA) *Hybrid ML approaches in Material Science: the contribution of PINNs*
+- **16h40-17h20 :** Martin URHIN  (Université Grenoble Alpes) *When GenAI meets Material Science*
 
 <br/>
