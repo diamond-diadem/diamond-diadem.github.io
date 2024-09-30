@@ -46,19 +46,19 @@ The day is devoted to several talks given by renowned researchers and specialist
 
 </div>
 
-- **8h30-9h:** Welcoming & Coffee
+- **8h30-9h00:** Welcoming & Coffee
 
-- **9h-10h:** Marie-Pierre GAIGEOT (Evry University) *Graphs and numerical simulation*
+- **9h00-10h00:** Marie-Pierre GAIGEOT (Evry University) *Graphs and numerical simulation*
 - **10h-10h40:** Émilie DEVIJVER (CNRS & University of Grenoble Alpes) *An introduction to causality*
 
-- **10h40-11h:** Coffee break
+- **10h40-11h00:** Coffee break
 
-- **11h-11h40:** Damien LAAGE (CNRS & ENS) Neural Network *Potentials for Chemical Reactivity*
+- **11h00-11h40:** Damien LAAGE (CNRS & ENS) Neural Network *Potentials for Chemical Reactivity*
 - **11h40-12h20:** Talk ML (TBA)
 
-- **12h20-14h:** Lunch break & Posters session
+- **12h20-14h00:** Lunch break & Posters session
 
-- **14h-15h:** Amaury HABRARD (IUF & University Jean Monnet)*Domain adaptation and transfer learning*
+- **14h00-15h00:** Amaury HABRARD (IUF & University Jean Monnet)*Domain adaptation and transfer learning*
 - **15h00-15h40:** Noël JAKSE and Émilie DEVIJVER (University of Grenoble Alpes) *Unsupervised topological learning and temporal simulations*
 
 - **15h40-16h00:** Coffe break
