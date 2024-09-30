@@ -1,5 +1,5 @@
 ---
-title: "Meeting PEPR DIADEM - PEPR IA"
+title: "Meeting PEPR DIADEM (Diamond), PEPR IA (CAUSALITA, PDE IA), PEPR NumPex"
 description: ""
 summary: "Sorbonne Center for Artificial Intelligence SCAI, Espace Forum, 4 Pl. Jussieu, 75005 Paris"
 eventDate: "November 18, 2024"
@@ -21,38 +21,51 @@ seo:
   noindex: false # false (default) or true
 ---
 
-### Sorbonne Center for Artificial Intelligence SCAI, Espace Forum, 4 Pl. Jussieu, 75005 Paris
+#### Sorbonne Center for Artificial Intelligence SCAI, Espace Forum, 4 Pl. Jussieu, 75005 Paris
 
-### Speakers:
+<div align="center">
 
-- **Guillaume STIRNEMANN / Damien LAAGE** about *(?)*
-- **Martin URHIN** about Generative models
-- **Noel JAKSE** about Time and topology temporal simulations
-- **Marie-Pierre GAIGOT** about Graphs and temporal simulations
-- **Emilie DEVIJVER** (UGA)
-- **Emmanuel FRANCK** (UniStra)
-- **Amaury HABRARD** (IUF & Université Jean Monnet)
+### ORGANISERS:
+#### Marianne CLAUSEL, Émilie DEVIJVER, and Noël JAKSE
 
-### Planning :
+</div>
 
-- **8h30-9h** : Welcome & Coffee
+Call for proposal : The Inter-PEPR Day, jointly organized by
+PEPR DIADEM, PEPR IA and PEPR NumPex aims to offer an
+overview of some promising research directions at the
+interface between Material Science, AI and High Performance
+Computing
 
-- **9h-10h** : Plenary talk 1 (Materials)
-- **10h-10h40** : Guest speaker 1 (ML -> Emilie ?)
-- **10h40-11h20** : Guest speaker 2 (Materials)
-- **11h20-11h40** : Short talk 1 (ML)
-- **11h40-12h** : Short talk 2 (Materials)
+The day is devoted to several talks given by renowned researchers and specialists in the field. Young researchers are also invited to present their work via posters or short talks and should submit an abstract to [inter-pepr-days@services.cnrs.fr](mailto:inter-pepr-days@services.cnrs.fr) before October 15
 
-- **12h-13h30** : Lunch + Posters session
+<div align="justify">
 
-- **13h30-14h30** : Plenary talk 2 (ML -> Amaury ?)
-- **14h30-14h50** : Short talk  (Materials)
-- **14h50-15h10** : Short talk (ML)
+<div align="center">
 
-- **15h10-15h40** : Pause
+#### Program Attempt:
 
-- **15h40-16h10** ; Guest speaker 4 (Materials)
-- **16h10-16h50** : Guest speaker 5 (ML -> Emmanuel)
-- **16h50-17h30** : Guest speaker 6 (Materials)
+</div>
+
+- **8h30-9h:** Welcoming & Coffee
+
+- **9h-10h:** Marie-Pierre GAIGEOT (Evry University) *Graphs and numerical simulation*
+- **10h-10h40:** Émilie DEVIJVER (CNRS & University of Grenoble Alpes) *An introduction to causality*
+
+- **10h40-11h:** Coffee break
+
+- **11h-11h40:** Damien LAAGE (CNRS & ENS) Neural Network *Potentials for Chemical Reactivity*
+- **11h40-12h20:** Talk ML (TBA)
+
+- **12h20-14h:** Lunch break & Posters session
+
+- **14h-15h:** Amaury HABRARD (IUF & University Jean Monnet)*Domain adaptation and transfer learning*
+- **15h00-15h40:** Noël JAKSE and Émilie DEVIJVER (University of Grenoble Alpes) *Unsupervised topological learning and temporal simulations*
+
+- **15h40-16h00:** Coffe break
+
+- **16h00-16h40:** Emmanuel FRANCK (UNISTRA) *Hybrid ML approaches in Material Science : the contribution of PINNS*
+- **16h40-17h20:** Martin URHIN  (University of Grenoble Alpes) *When GenAI meets Material Science*
+
+</div>
 
 <br/>
