@@ -58,7 +58,7 @@ The day is devoted to several talks given by renowned researchers and specialist
 
 - **12h20-14h00:** Lunch break & Posters session
 
-- **14h00-15h00:** Amaury HABRARD (IUF & University Jean Monnet)*Domain adaptation and transfer learning*
+- **14h00-15h00:** Amaury HABRARD (IUF & University Jean Monnet) *Domain adaptation and transfer learning*
 - **15h00-15h40:** Noël JAKSE and Émilie DEVIJVER (University of Grenoble Alpes) *Unsupervised topological learning and temporal simulations*
 
 - **15h40-16h00:** Coffe break
