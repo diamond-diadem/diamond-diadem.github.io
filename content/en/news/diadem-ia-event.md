@@ -30,7 +30,7 @@ seo:
 
 </div>
 
-Call for proposal : The Inter-PEPR Day, jointly organized by
+**Call for proposal** : The Inter-PEPR Day, jointly organized by
 PEPR DIADEM, PEPR IA and PEPR NumPex aims to offer an
 overview of some promising research directions at the
 interface between Material Science, AI and High Performance
