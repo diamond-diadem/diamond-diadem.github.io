@@ -63,7 +63,7 @@ render_hooks:
   link:
     errorLevel: ignore
     highlightBroken: false
-hyas_images:
+thulite_images:
   landscape:
     normalize: 1360x765
     lqip: 16x9
@@ -98,7 +98,7 @@ seo:
     name: Hyas
     sameAs: []
     images:
-      - cover.png
+      - cover-diamond.png
     article: []
     newsArticle: []
     blogPosting:
