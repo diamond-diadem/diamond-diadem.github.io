@@ -14,8 +14,9 @@
     {{ else -}}
       <h1 class="text-center">{{ .Title }}</h1>
     {{ end -}}
-    {{ with .Params.summary -}}<p class="lead text-center">{{ . }}</p>{{ end -}}
-    {{ with .Content -}}<div class="text-center">{{ . }}</div>{{ end -}}
+    {{ partial "main/blog-meta.html" . }}
+    {{/*  {{ with .Params.summary -}}<p class="lead text-center">{{ . }}</p>{{ end -}}  */}}
+    {{ with .Content -}}<div>{{ . }}</div>{{ end -}}
   </div>
 </div>
 <div class="row justify-content-center">
@@ -40,7 +41,7 @@
           <article>
             <h2 class="h3"><a class="stretched-link text-body" href="{{ .RelPermalink }}">{{ .Params.title }}</a></h2>
             <p>{{ .Params.summary | safeHTML }}</p>
-            {{/*  {{ partial "main/blog-meta.html" . -}}  */}}
+            {{ partial "main/blog-meta.html" . -}}
           </article>
         </div>
       </div>
