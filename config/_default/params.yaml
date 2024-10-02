@@ -1,7 +1,7 @@
 title: DIAMOND
 description: Plateforme numérique du PEPR DIADEM
 images:
-  - cover-diamond.png
+  - /cover-diamond.png
 mainSections:
   - about
   - codes
@@ -98,7 +98,7 @@ seo:
     name: Hyas
     sameAs: []
     images:
-      - cover-diamond.png
+      - /cover-diamond.png
     article: []
     newsArticle: []
     blogPosting:
