@@ -54,8 +54,8 @@ La journée sera consacrée à plusieurs conférences données par des chercheur
 
 - **10h40-11h00 :** Pause café
 
-- **11h00-11h40 :** Damien LAAGE (CNRS & ENS) *Neural Network Potentials for Chemical Reactivity*
-- **11h40-12h20 :** Exposé ML (*sera annoncé*)
+- **11h00-11h40 :** Guillaume STIRNEMANN (CNRS, ENS) *Machine learned interatomic potentials for reactivity in the condensed phases: from recent achievements to future developments*
+- **11h40-12h20 :** Stéphane CHRÉTIEN *Introduction to conformal prediction*
 
 - **12h20-14h00 :** Pause déjeuner & Session posters
 
