@@ -9,15 +9,15 @@ mainSections:
 diamond:
   enableNews: true
 social:
-  twitter: getdoks
+  twitter: ""
 doks:
   colorMode: auto
   colorModeToggler: true
   navbarSticky: true
   containerBreakpoint: fluid
   navBarButton: false
-  navBarButtonUrl: /docs/prologue/introduction/
-  navBarButtonText: Get started
+  # navBarButtonUrl: /docs/prologue/introduction/
+  # navBarButtonText: Get started
   flexSearch: true
   searchExclKinds: []
   searchExclTypes:
@@ -27,13 +27,15 @@ doks:
   showDate: false
   showSummary: true
   searchLimit: 99
+
   alert: false
   alertDismissable: false
+
   bootstrapJavascript: false
   sectionNav:
     - codes
     - documentation
-  toTopButton: false
+  toTopButton: true
   breadcrumbTrail: false
   headlineHash: true
   scrollSpy: true
