@@ -1,7 +1,7 @@
 title: DIAMOND
 description: Plateforme numérique du PEPR DIADEM
 images:
-  - cover.png
+  - /cover.png
 mainSections:
   - about
   - codes
