@@ -46,8 +46,8 @@ jobs:
         uses: actions/configure-pages@v4
       - name: Install dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
-#      - name: Added by dmartincalle
-#        run: "npm install"
+      - name: Added by dmartincalle
+        run: "npm install"
       - name: Build production website
         env:
           # For maximum backward compatibility with Hugo modules
