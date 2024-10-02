@@ -3,7 +3,8 @@ title: "PEPR DIADEM (Diamond), PEPR IA (CAUSALI-T-AI, PDE IA), PEPR NumPex"
 description: ""
 summary: "Sorbonne Center for Artificial Intelligence SCAI, Espace Forum, 4 Pl. Jussieu, 75005 Paris"
 eventDate: "November 18, 2024"
-backgroundImage: "/images/background-meeting-3peprs.png"
+backgroundImage: "./feature.png"
+backgroundOpacity: 0.18
 # location: "Paris"
 # publishDate: 2024-11-18
 # lastmod: 2024-02-06T09:24:27+01:00
@@ -12,7 +13,7 @@ draft: false
 weight: 40
 categories: []
 tags: []
-contributors: [""]
+contributors: []
 pinned: false
 homepage: false
 seo:
@@ -27,10 +28,13 @@ seo:
 
 <div align="center">
 
-### ORGANISERS:
+### ORGANISERS
+
 #### Marianne CLAUSEL and Noël JAKSE
 
 </div>
+
+<div align="justify">
 
 **Call for proposal** : The Inter-PEPR Day, jointly organized by
 PEPR DIADEM, PEPR IA and PEPR NumPex aims to offer an
@@ -40,17 +44,17 @@ Computing
 
 The day is devoted to several talks given by renowned researchers and specialists in the field. Young researchers are also invited to present their work via posters or short talks and should submit an abstract to <a href="mailto:inter-pepr-days@services.cnrs.fr">inter-pepr-days@services.cnrs.fr</a> before October 15
 
-<div align="justify">
+</div>
 
 <div align="center">
 
-#### Tentative Program:
-
-</div>
+#### Tentative Program
 
 </div>
 
 <br/>
+
+<div align="justify">
 
 - **8h30-9h00:** Welcoming & Coffee
 
@@ -72,6 +76,8 @@ The day is devoted to several talks given by renowned researchers and specialist
 
 - **16h00-16h40:** Emmanuel FRANCK (UNISTRA) *Hybrid ML approaches in Material Science : the contribution of PINNS*
 - **16h40-17h20:** Martin URHIN  (University of Grenoble Alpes) *When GenAI meets Material Science*
+
+</div>
 
 <br/>
 

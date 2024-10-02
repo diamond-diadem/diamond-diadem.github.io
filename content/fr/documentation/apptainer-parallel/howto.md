@@ -12,7 +12,7 @@ Si l'image Apptainer que vous voulez utiliser supporte le calcul parallèle, alo
 - le mode [hybride]({{< ref "#hybrid_mode" >}}).
 
 **Remarque**
-> Les commandes Apptainer ci-dessous ont été simplifiées au maximum dans un but de lisibilité. Il est possible de combiner l'utilisation des commandes `mpirun` avec le flag `--containall`, tout en montant des dossiers spécifiques au conteneur avec les flags `--bind` et en renseignant des variables d'environnement `--env`. Les possibilités sont multiples. Nous vous conseillons donc de jeter un oeil à la documentation relative à ces [sujets]({{< ref "/content/fr/documentation/use-apptainer-image/howto.md" >}}).
+> Les commandes Apptainer ci-dessous ont été simplifiées au maximum dans un but de lisibilité. Il est possible de combiner l'utilisation des commandes `mpirun` avec le flag `--containall`, tout en montant des dossiers spécifiques au conteneur avec les flags `--bind` et en renseignant des variables d'environnement `--env`. Les possibilités sont multiples. Nous vous conseillons donc de jeter un oeil à la documentation relative à ces [sujets]({{< ref "/documentation/use-apptainer-image/howto.md" >}}).
 
 ## Exemple pratique : image avec OpenMPI
 
@@ -42,7 +42,7 @@ Enfin, l'image inclut également un outil évaluant en arrière-plan l'utilisati
 
 ## Le mode embarqué {#embedded_mode}
 
-Si vous voulez utilisez votre image Apptainer en parallèle sur votre machine locale, alors vous pouvez utiliser la librairie OpenMPI qui a été embarquée lors de la création de l'image de conteneur.  
+Si vous voulez utilisez votre image Apptainer en parallèle sur votre machine locale, alors vous pouvez utiliser la librairie OpenMPI qui a été embarquée lors de la création de l'image de conteneur.
 Cette approche a l'énorme avantage de vous exempter de tout souci relatif à la version d'OpenMPI installée sur votre machine, et même de savoir si cette librairie est installée tout court.
 
 Il est alors très simple, grâce à la commande `apptainer exec`, d'exécuter des commandes `mpirun` qui appellent les outils de parallélisation inclus dans votre image de conteneur :

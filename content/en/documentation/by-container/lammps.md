@@ -6,7 +6,7 @@ weight: 1
 
 <div align="justify">
 
-{{< callout context="note" title="" icon="info-circle" >}}
+{{< callout context="note" title="" icon="outline/info-circle" >}}
 
 In preamble, you need to have Apptainer installed on your machine ; see [this link](/en/documentation/install-apptainer/howto/) for more details.
 
@@ -228,7 +228,7 @@ apptainer exec \
   $HOME/apptainer-images/lammps.sif \
   mpirun -np 16 lmp_mpi -in in.file
 ```
-where `--env OMP_NUM_THREADS=1` is implicit and use by default by the container. 
+where `--env OMP_NUM_THREADS=1` is implicit and use by default by the container.
 
 ### Third exercice
  How to use the container image to run a LAMMPS computation (2 **OpenMP** threads and 8 **MPI** cores) which is fully isolated from the host system ?

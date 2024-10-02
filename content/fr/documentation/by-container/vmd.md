@@ -6,7 +6,7 @@ weight: 4
 
 <div align="justify">
 
-{{< callout context="note" title="" icon="info-circle" >}}
+{{< callout context="note" title="" icon="outline/info-circle" >}}
 
 En préalable de ces explications, il est nécessaire d'avoir installé Apptainer sur votre machine ; voir [ce lien](/documentation/install-apptainer/howto/) pour plus de détails.
 
@@ -55,7 +55,7 @@ Pour exécuter VMD sans aucune conteneurisation, on utiliserait la commande :
 vmd <input.file.1> <input.file.2> ...
 ```
 
-où les fichiers d'entrée `input.file.*` sont optionnels et permettent de charger la ou les structures que l'on veut afficher directement au lancement de l'application. 
+où les fichiers d'entrée `input.file.*` sont optionnels et permettent de charger la ou les structures que l'on veut afficher directement au lancement de l'application.
 
 **Note**
 > Pour afficher les données chargées, il faut appliquer un rendu visuel en cliquant sur le bouton `Apply` du panneau `Properties` apparaissant sur la gauche.
@@ -98,9 +98,9 @@ Par défaut, Apptainer n'isole pas totalement le conteneur du système de la mac
 D'une part, il est possible qu'un message d'erreur apparaisse, vous informant que l'un des plugins de la librairie (`qt.qpa.xcb`), ne parvient pas à se connecter à vos ressources d'affichage.
 
 ```bash
-apptainer run --containall $HOME/apptainer-images/vmd.sif 
+apptainer run --containall $HOME/apptainer-images/vmd.sif
 [...]
-qt.qpa.xcb: could not connect to display 
+qt.qpa.xcb: could not connect to display
 [...]
 Aborted
 ```

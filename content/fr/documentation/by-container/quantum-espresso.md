@@ -6,7 +6,7 @@ weight: 3
 
 <div align="justify">
 
-{{< callout context="note" title="" icon="info-circle" >}}
+{{< callout context="note" title="" icon="outline/info-circle" >}}
 
 En préalable de ces explications, il est nécessaire d'avoir installé Apptainer sur votre machine ; voir [ce lien](/documentation/install-apptainer/howto/) pour plus de détails.
 
@@ -159,7 +159,7 @@ apptainer exec \
   $HOME/apptainer-images/quantum-espresso.sif \
   mpirun -np 16 pw.x -in qe-tutorial.in
 ```
-où l'option `--env OMP_NUM_THREADS=1` est nécessaire, sans quoi le conteneur utilise par défaut tous les threads disponibles. 
+où l'option `--env OMP_NUM_THREADS=1` est nécessaire, sans quoi le conteneur utilise par défaut tous les threads disponibles.
 
 ### Exercice 3
 Comment utiliser l'image de conteneur pour effectuer un calcul Quantum Espresso (2 threads **OpenMP** et 8 cœurs **MPI**) complètement isolé du système hôte ?

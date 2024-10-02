@@ -6,7 +6,7 @@ weight: 2
 
 <div align="justify">
 
-{{< callout context="note" title="" icon="info-circle" >}}
+{{< callout context="note" title="" icon="outline/info-circle" >}}
 
 En préalable de ces explications, il est nécessaire d'avoir installé Apptainer sur votre machine ; voir [ce lien](/documentation/install-apptainer/howto/) pour plus de détails.
 
@@ -94,9 +94,9 @@ Par défaut, Apptainer n'isole pas totalement le conteneur du système de la mac
 D'une part, il est possible qu'un message d'erreur apparaisse, vous informant que l'un des plugins de la librairie (`qt.qpa.xcb`), ne parvient pas à se connecter à vos ressources d'affichage.
 
 ```bash
-apptainer run --containall $HOME/apptainer-images/ovito.sif 
+apptainer run --containall $HOME/apptainer-images/ovito.sif
 [...]
-qt.qpa.xcb: could not connect to display 
+qt.qpa.xcb: could not connect to display
 [...]
 Aborted
 ```

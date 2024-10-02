@@ -5,13 +5,13 @@ googleIcon: home
 toc: false
 ---
 
-{{< callout context="note" title="" icon="info-circle" >}}
+{{< callout context="note" title="" icon="outline/info-circle" >}}
 
 Dans cette section, vous pourrez télécharger les images Apptainer des codes disponibles sur le site. De calcul scientifique comme de visualisation de données.
 
 {{< /callout >}}
 
-{{< callout context="tip" title="" icon="question-mark" >}}
+{{< callout context="tip" title="" icon="outline/question-mark" >}}
 
 Mais pour commencer, si vous n'êtes pas encore passé par cette étape et si vous n'êtes pas familiers avec l'utilisation d'Apptainer, suivez les liens ci-dessous pour apprendre comment installer Apptainer et interagir avec des images.
 

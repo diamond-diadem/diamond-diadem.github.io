@@ -4,7 +4,7 @@ title: How to install Apptainer ?
 
 <div align="justify">
 
-{{< callout context="note" title="" icon="info-circle" >}}
+{{< callout context="note" title="" icon="outline/info-circle" >}}
 
 This tutorial summarizes how to install the container management software [Apptainer](https://apptainer.org/). It is largely based on [official installation instructions](https://apptainer.org/docs/admin/1.2/installation.html#install-from-pre-built-packages), and one should read these more exhaustive ressources for more details.
 
@@ -24,7 +24,7 @@ Finally, this tutorial focuses on currently supported versions: if you are using
 You can run the following commands to directly install Ubuntu packages :
 
 ```bash
-sudo apt update 
+sudo apt update
 sudo apt install -y software-properties-common
 sudo add-apt-repository -y ppa:apptainer/ppa
 sudo apt update
@@ -37,7 +37,7 @@ To install pre-built Ubuntu packages for `amd64` and `arm64` architectures, one 
 First, run this to ensure access to the `add-apt-repository` command :
 
 ```bash
-sudo apt update 
+sudo apt update
 sudo apt install -y software-properties-common # Mandatory to be able to run next command
 sudo add-apt-repository -y ppa:apptainer/ppa
 ```

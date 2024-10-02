@@ -5,13 +5,13 @@ googleIcon: home
 toc: false
 ---
 
-{{< callout context="note" title="" icon="info-circle" >}}
+{{< callout context="note" title="" icon="outline/info-circle" >}}
 
 In this section, you will be able to download Apptainer images for codes available on this website. For scientific computing as well as data visualisation
 
 {{< /callout >}}
 
-{{< callout context="tip" title="" icon="question-mark" >}}
+{{< callout context="tip" title="" icon="outline/question-mark" >}}
 
 But to begin with, if you haven't gone through this step yet and if you're not familiar with using Apptainer, follow the links below to learn how to install Apptainer and interact with images.
 
@@ -22,7 +22,7 @@ But to begin with, if you haven't gone through this step yet and if you're not f
 - <h4><a href="/en/documentation/install-apptainer/howto/">Install Apptainer</a></h4>
 - <h4><a href="/en/documentation/use-apptainer-image/howto/">Learn how to use a container</a></h4>
 
-<h3><u>AVAILABLE CODES:</u></h3>  
+<h3><u>AVAILABLE CODES:</u></h3>
 
 <table>
     <caption>

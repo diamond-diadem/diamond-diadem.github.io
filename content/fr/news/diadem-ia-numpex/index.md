@@ -3,7 +3,8 @@ title: "PEPR DIADEM (Diamond), PEPR IA (CAUSALI-T-AI, PDE IA), PEPR NumPex"
 description: ""
 summary: "Sorbonne Center for Artificial Intelligence SCAI, Espace Forum, 4 Pl. Jussieu, 75005 Paris"
 eventDate: "18 Novembre 2024"
-location: "Paris"
+backgroundImage: "./feature.png"
+backgroundOpacity: 0.18
 # publishDate: 2024-11-18
 # lastmod: 2024-02-06T09:24:27+01:00
 # expiryDate: 2024-03-06T09:24:27+01:00

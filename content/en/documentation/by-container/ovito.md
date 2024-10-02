@@ -6,7 +6,7 @@ weight: 2
 
 <div align="justify">
 
-{{< callout context="note" title="" icon="info-circle" >}}
+{{< callout context="note" title="" icon="outline/info-circle" >}}
 
 Before proceeding with these explanations, it is necessary to have Apptainer installed on your machine; see [this link](/en/documentation/install-apptainer/howto/) for more details.
 
@@ -96,9 +96,9 @@ By default, Apptainer does not fully isolate the container from the host system.
 On one hand, it is possible that an error message appears, informing you that one of the library plugins (`qt.qpa.xcb`), fails to connect to your display resources.
 
 ```bash
-apptainer run --containall $HOME/apptainer-images/ovito.sif 
+apptainer run --containall $HOME/apptainer-images/ovito.sif
 [...]
-qt.qpa.xcb: could not connect to display 
+qt.qpa.xcb: could not connect to display
 [...]
 Aborted
 ```

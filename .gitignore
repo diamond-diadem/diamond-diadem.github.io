@@ -1,3 +1,5 @@
 resources/
 public/
 themes/
+hugo_stats.json
+node_modules

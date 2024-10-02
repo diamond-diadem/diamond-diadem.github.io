@@ -4,7 +4,7 @@ title: How to interact with an Apptainer image ?
 
 <div align="justify">
 
-{{< callout context="note" title="" icon="info-circle" >}}
+{{< callout context="note" title="" icon="outline/info-circle" >}}
 
 In preamble, you need to have Apptainer installed on your machine ; see [this link](/en/documentation/install-apptainer/howto/) for more details.
 
@@ -52,7 +52,7 @@ Apptainer> cd ..
 Apptainer> pwd
 Apptainer> date
 Apptainer> exit
-$ 
+$
 ```
 
 **Remark**
