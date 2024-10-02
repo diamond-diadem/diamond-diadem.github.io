@@ -26,7 +26,8 @@ seo:
 
 <div align="center">
 
-### ORGANISATEURS :
+### ORGANISATEURS
+
 #### Marianne CLAUSEL et Noël JAKSE
 
 </div>
