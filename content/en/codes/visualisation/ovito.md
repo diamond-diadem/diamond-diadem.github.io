@@ -19,8 +19,6 @@ Ovito is developed, distributed, and supported by OVITO GmbH, a German startup. 
 
 </div>
 
-<!-- ### Direct download link: {{< inline-svg src="paperclip" height="32px" width="32px" class="svg-inline-custom" >}} Ovito -->
-
 ### Retrieve this container using Apptainer:
 
 ```bash

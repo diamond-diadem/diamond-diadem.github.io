@@ -19,8 +19,6 @@ This software is built on a modular architecture, allowing users to customize th
 
 </div>
 
-<!-- ### Direct download link: {{< inline-svg src="paperclip" height="32px" width="32px" class="svg-inline-custom" >}} ParaView _(to be added)_ -->
-
 ### Retrieve this container using Apptainer:
 
 ```bash

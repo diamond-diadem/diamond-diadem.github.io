@@ -21,8 +21,6 @@ Le logiciel prend en charge une variété de méthodes de calcul, telles que la 
 
 </div>
 
-<!-- ### Lien de téléchargement direct : {{< inline-svg src="paperclip" height="32px" width="32px" class="svg-inline-custom" >}} Quantum ESPRESSO _(à venir)_ -->
-
 ### Récupérez l'image Apptainer :
 
 ```bash
