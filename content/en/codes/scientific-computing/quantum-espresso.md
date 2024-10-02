@@ -19,8 +19,6 @@ The software supports various calculation methods, such as plane wave methods, q
 
 </div>
 
-<!-- ### Direct download link : {{< inline-svg src="paperclip" height="32px" width="32px" class="svg-inline-custom" >}} Quantum ESPRESSO -->
-
 ### Retrieve this container using Apptainer:
 
 ```bash

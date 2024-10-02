@@ -1,7 +1,0 @@
-[[mounts]]
-  source = "node_modules/@hyas/seo/layouts"
-  target = "layouts"
-
-[[mounts]]
-  source = "layouts"
-  target = "layouts"

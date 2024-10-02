@@ -6,7 +6,7 @@ weight: 4
 
 <div align="justify">
 
-{{< callout context="note" title="" icon="info-circle" >}}
+{{< callout context="note" title="" icon="outline/info-circle" >}}
 
 Before proceeding with these explanations, it is necessary to have installed Apptainer on your machine; see [this link](/en/documentation/install-apptainer/howto/) for more details.
 
@@ -59,7 +59,7 @@ To run VMD without any containerization, one would use the command:
 vmd <input.file.1> <input.file.2> ...
 
 ```
-where the input files `input.file.*` are optional and allow loading the structure(s) that you want to display directly upon application launch. 
+where the input files `input.file.*` are optional and allow loading the structure(s) that you want to display directly upon application launch.
 **Note**
 > To display the loaded data, you need to apply visual rendering by clicking the `Apply` button in the `Properties` panel appearing on the left.
 
@@ -103,9 +103,9 @@ By default, Apptainer does not fully isolate the container from the host machine
 On one hand, it is possible that an error message appears, informing you that one of the library plugins (`qt.qpa.xcb`) fails to connect to your display resources.
 
 ```bash
-apptainer run --containall $HOME/apptainer-images/vmd.sif 
+apptainer run --containall $HOME/apptainer-images/vmd.sif
 [...]
-qt.qpa.xcb: could not connect to display 
+qt.qpa.xcb: could not connect to display
 [...]
 Aborted
 ```

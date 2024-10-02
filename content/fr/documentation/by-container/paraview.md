@@ -6,7 +6,7 @@ weight: 4
 
 <div align="justify">
 
-{{< callout context="note" title="" icon="info-circle" >}}
+{{< callout context="note" title="" icon="outline/info-circle" >}}
 
 En préalable de ces explications, il est nécessaire d'avoir installé Apptainer sur votre machine ; voir [ce lien](/documentation/install-apptainer/howto/) pour plus de détails.
 
@@ -54,7 +54,7 @@ Pour exécuter ParaView sans aucune conteneurisation, on utiliserait la commande
 ```bash
 paraview <input.file.1> <input.file.2> ...
 ```
-où les fichiers d'entrée `input.file.*` sont optionnels et permettent de charger la ou les structures que l'on veut afficher directement au lancement de l'application. 
+où les fichiers d'entrée `input.file.*` sont optionnels et permettent de charger la ou les structures que l'on veut afficher directement au lancement de l'application.
 
 **Note**
 > Pour afficher les données chargées, il faut appliquer un rendu visuel en cliquant sur le bouton `Apply` du panneau `Properties` apparaissant sur la gauche.
@@ -97,9 +97,9 @@ Par défaut, Apptainer n'isole pas totalement le conteneur du système de la mac
 D'une part, il est possible qu'un message d'erreur apparaisse, vous informant que l'un des plugins de la librairie (`qt.qpa.xcb`), ne parvient pas à se connecter à vos ressources d'affichage.
 
 ```bash
-apptainer run --containall $HOME/apptainer-images/paraview.sif 
+apptainer run --containall $HOME/apptainer-images/paraview.sif
 [...]
-qt.qpa.xcb: could not connect to display 
+qt.qpa.xcb: could not connect to display
 [...]
 Aborted
 ```
@@ -175,7 +175,7 @@ Comment visualiser une animation contenue dans un fichier avec un conteneur Para
 > * Le fichier contenant l'animation nous intéressant est situé dans `$PWD/tutorial-can.ex2` sur la machine hôte.
 > * Pour afficher les données chargées, il faut appliquer un rendu visuel en cliquant sur le bouton `Apply` du panneau `Properties` aparaissant sur la gauche.
 > * Il est possible de jouer avec le panneau `Properties` et de modifier le point de vue afin de mettre en valeur l'animation.
-> * Au sein de ParaView, l'export au format `avi` peut se faire via `File > Save Animation`. 
+> * Au sein de ParaView, l'export au format `avi` peut se faire via `File > Save Animation`.
 > * On tentera de donner une solution non isolée de la machine hôte, et une solution isolant au maximum le conteneur de la machine hôte.
 
 Exemples de réponses possibles :

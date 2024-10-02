@@ -12,7 +12,7 @@ If the Apptainer image you want to use supports parallel computing, then OpenMPI
 - the [hybrid mode]({{< ref "#hybrid_mode" >}}).
 
 **Note**
-> The Apptainer commands below have been simplified for readability. It is possible to combine the use of `mpirun` commands with the `--containall` flag, while mounting specific directories to the container with the `--bind` flags and specifying environment variables `--env`. The possibilities are numerous. We therefore advise you to take a look at the documentation related to these [topics]({{< ref "/content/en/documentation/use-apptainer-image/howto.md" >}}).
+> The Apptainer commands below have been simplified for readability. It is possible to combine the use of `mpirun` commands with the `--containall` flag, while mounting specific directories to the container with the `--bind` flags and specifying environment variables `--env`. The possibilities are numerous. We therefore advise you to take a look at the documentation related to these [topics]({{< ref "/documentation/use-apptainer-image/howto.md" >}}).
 
 ## Practical Example: Image with OpenMPI
 
@@ -42,7 +42,7 @@ Finally, the image also includes a tool that evaluates the program's use of rese
 
 ## Embedded Mode {#embedded_mode}
 
-If you want to use your Apptainer image in parallel on your local machine, you can use the OpenMPI library that was embedded when creating the container image.  
+If you want to use your Apptainer image in parallel on your local machine, you can use the OpenMPI library that was embedded when creating the container image.
 This approach has the huge advantage of exempting you from any concerns related to the version of OpenMPI installed on your machine, or even whether this library is installed at all.
 
 It is then very simple, using the `apptainer exec` command, to execute `mpirun` commands that call the parallelization tools included in your container image:

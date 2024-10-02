@@ -46,7 +46,7 @@ doks:
   sectionFooter: false
   relatedPosts: false
   imageList: true
-  imageSingle: true
+  imageSingle: false
   editPage: false
   lastMod: false
   repoHost: GitHub

@@ -6,7 +6,7 @@ weight: 1
 
 <div align="justify">
 
-{{< callout context="note" title="" icon="info-circle" >}}
+{{< callout context="note" title="" icon="outline/info-circle" >}}
 
 Ce tutoriel présente succinctement le processus d'installation du logiciel de conteneurisation [Apptainer](https://apptainer.org/). Il est d'ailleurs largement basé sur les [instructions d'installations officielles](https://apptainer.org/docs/admin/1.2/installation.html#install-from-pre-built-packages), et nous vous invitons à consulter ces ressources pour plus de détails.
 
@@ -39,7 +39,7 @@ Pour installer directement les paquets Ubuntu pré-construits destinés aux arch
 Dans un premier temps, il faut donc s'assurer d'avoir accès à la commande `add-apt-repository` :
 
 ```bash
-sudo apt update 
+sudo apt update
 sudo apt install -y software-properties-common # Pour pouvoir lancer la commande de la ligne suivante
 sudo add-apt-repository -y ppa:apptainer/ppa
 ```

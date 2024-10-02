@@ -6,7 +6,7 @@ weight: 1
 
 <div align="justify">
 
-{{< callout context="note" title="" icon="info-circle" >}}
+{{< callout context="note" title="" icon="outline/info-circle" >}}
 
 En préalable de ces explications, il est nécessaire d'avoir installé Apptainer sur votre machine ; voir [ce lien](/documentation/install-apptainer/howto/) pour plus de détails.
 
@@ -178,7 +178,7 @@ apptainer run --env LAMMPS_POTENTIALS=$HOME/Documents/softs/lammps/potentials/ \
   $HOME/apptainer-images/lammps.sif -in in.file
 ```
 
-* Attention cependant à bien s'assurer que ce nouveau répertoire est également accessible dans le conteneur. Par exemple : 
+* Attention cependant à bien s'assurer que ce nouveau répertoire est également accessible dans le conteneur. Par exemple :
 
 ```bash
 # Par défaut, /opt/lammps-potentials n'est pas partagée entre l'hôte et le conteneur.
@@ -225,7 +225,7 @@ apptainer exec \
   $HOME/apptainer-images/lammps.sif \
   mpirun -np 16 lmp_mpi -in in.file
 ```
-où l'option `--env OMP_NUM_THREADS=1` est implicite et que le conteneur utilise par défaut. 
+où l'option `--env OMP_NUM_THREADS=1` est implicite et que le conteneur utilise par défaut.
 
 ### Exercice 3
 Comment utiliser l'image de conteneur pour effectuer un calcul LAMMPS (2 threads **OpenMP** et 8 cœurs **MPI**) complètement isolé du système hôte ?

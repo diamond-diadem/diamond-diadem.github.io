@@ -1,14 +1,14 @@
 mounts:
-  - source: node_modules/@hyas/doks-core/archetypes
+  - source: node_modules/@thulite/doks-core/archetypes
     target: archetypes
   - source: archetypes
     target: archetypes
-  - source: node_modules/@hyas/core/assets
+  - source: node_modules/@thulite/core/assets
     target: assets
-  - source: node_modules/@hyas/images/assets
+  - source: node_modules/@thulite/images/assets
     target: assets
     excludeFiles: /scss/**.scss
-  - source: node_modules/@hyas/doks-core/assets
+  - source: node_modules/@thulite/doks-core/assets
     target: assets
     excludeFiles: /js/**.js
   - source: node_modules/@tabler/icons/icons
@@ -19,28 +19,28 @@ mounts:
     target: assets/js
   - source: assets/scss
     target: assets/scss
-  - source: node_modules/@hyas/doks-core/data
+  - source: node_modules/@thulite/doks-core/data
     target: data
   - source: data
     target: data
-  - source: node_modules/@hyas/doks-core/i18n
+  - source: node_modules/@thulite/doks-core/i18n
     target: i18n
   - source: i18n
     target: i18n
-  - source: node_modules/@hyas/core/layouts
+  - source: node_modules/@thulite/core/layouts
     target: layouts
-  - source: node_modules/@hyas/seo/layouts
+  - source: node_modules/@thulite/seo/layouts
     target: layouts
-  - source: node_modules/@hyas/images/layouts
+  - source: node_modules/@thulite/images/layouts
     target: layouts
-  - source: node_modules/@hyas/doks-core/layouts
+  - source: node_modules/@thulite/doks-core/layouts
     target: layouts
     excludeFiles: /partials/footer/to-top.html
-  - source: node_modules/@hyas/inline-svg/layouts
+  - source: node_modules/@thulite/inline-svg/layouts
     target: layouts
   - source: layouts
     target: layouts
-  - source: node_modules/@hyas/doks-core/static
+  - source: node_modules/@thulite/doks-core/static
     target: static
   - source: static
     target: static

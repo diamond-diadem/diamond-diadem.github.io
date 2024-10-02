@@ -4,7 +4,7 @@ title: Comment interagir avec une image Apptainer ?
 
 <div align="justify">
 
-{{< callout context="note" title="" icon="info-circle" >}}
+{{< callout context="note" title="" icon="outline/info-circle" >}}
 
 En préalable de ces explications, il est nécessaire d'avoir installé Apptainer sur votre machine ; voir [ce lien](/documentation/install-apptainer/howto/) pour plus de détails.
 
@@ -60,7 +60,7 @@ Apptainer> cd ..
 Apptainer> pwd
 Apptainer> date
 Apptainer> exit
-$ 
+$
 ```
 
 **Remarque**
@@ -146,7 +146,7 @@ apptainer run --containall $HOME/apptainer-images/tutorial.sif
 Il est possible, notamment en jouant avec les options précédentes, que le répertoire contenant les éventuels fichiers d'entrée et de sortie requis ne soit pas accessible dans le conteneur ! Il faut alors monter ce dossier manuellement avec le flag `--bind` dans le conteneur. Par exemple, on peut imaginer le petit exercice suivant consistant à créer un fichier sur la machine hôte, le rendre accessible au sein du conteneur, en créer une copie dans le conteneur, puis récupérer cette copie sur la machine hôte :
 
 ```bash
-# Création d'un fichier sur la machine hôte 
+# Création d'un fichier sur la machine hôte
 date > $PWD/test-host.txt
 
 apptainer exec --bind $PWD:/opt \                 # Montage du répertoire courant au /opt du conteneur
