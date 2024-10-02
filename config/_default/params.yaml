@@ -27,10 +27,10 @@ doks:
   showDate: false
   showSummary: true
   searchLimit: 99
-
+## Used as banner for news
   alert: false
   alertDismissable: false
-
+##
   bootstrapJavascript: false
   sectionNav:
     - codes
