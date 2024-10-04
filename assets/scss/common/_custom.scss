@@ -611,7 +611,7 @@ u {
 .section-title-lead-landing-page {
     min-width: 100%;
     min-height: 250px;
-    background-image: url(/images/c-diamond-light.png);
+    background-image: url(/images/banner-diamond-light-smaller.png);
     background-size: 100% auto;
     background-repeat: no-repeat;
     // background-position: 50% 70%;
@@ -625,7 +625,7 @@ u {
         top: -15%;
         min-width: 100%;
         min-height: 170px;
-        background-image: url(/images/c-diamond-light.png);
+        background-image: url(/images/banner-diamond-light-smaller.png);
         padding-left: 60px;
         margin-left: -60px;
         padding-right: 60px;
@@ -647,7 +647,7 @@ u {
 
     @include color-mode(dark) {
         .container-title-homepage h1 {
-            background-image: url('/images/c-diamond-dark.png');
+            background-image: url(/images/banner-diamond-dark-smaller.png);
         }
     }
 }
@@ -655,7 +655,7 @@ u {
 .container-h1-default-page {
     min-width: 100%;
     min-height: 170px;
-    background-image: url(/images/c-diamond-light.png);
+    background-image: url(/images/banner-diamond-light-smaller.png);
     background-size: 85% auto;
     background-repeat: no-repeat;
     background-position-y: center;
@@ -696,7 +696,7 @@ u {
 @include color-mode(dark) {
     .section-title-lead-landing-page,
     .container-h1-default-page {
-        background-image: url(/images/c-diamond-dark.png);
+        background-image: url(/images/banner-diamond-dark-smaller.png);
     }
 }
 
