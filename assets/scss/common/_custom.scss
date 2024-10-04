@@ -171,13 +171,13 @@ u {
 }
 
 .icon-abinit {
-    background-image: url(/images/abinit-icon-light.svg);
+    background-image: url(/images/abinit-icon-light.png);
     @extend .custom-icon;
 }
 
 @include color-mode(dark) {
     .icon-abinit {
-        background-image: url(/images/abinit-icon-dark.svg);
+        background-image: url(/images/abinit-icon-dark.png);
     }
 }
 
@@ -333,7 +333,7 @@ u {
 // // // Codes pages top logos // // //
 
 .codes-pages-top-logo {
-    width: 100%;
+    min-inline-size: 100%;
     margin-top: 5%;
     margin-bottom: 8%;
 }
