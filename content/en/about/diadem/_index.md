@@ -33,7 +33,7 @@ linkTitle: DIADEM
 </style>
 <div class="row">
 <div class="column left-about-diadem-en">
-<img alt="DIADEM" src="/images/diadem-logo.png" class="diadem-logo-about"/>
+<img alt="PEPR DIADEM" class="diadem-logo-about"/>
 </div>
 <div class="column right-about-diadem-en">
 <div align="justify" class="text-x-large">
@@ -47,7 +47,7 @@ The <a href="https://pepr-diadem.fr" target="_blank">DIADEM</a> Priority Researc
 
 In order to manage this program and guarantee the neutrality, quality and transparency of the work, governance at several levels has been defined:
 
-- an Institutional Strategic Committee (ISC), made up of representatives of the institutions participating in the program, in charge of strategic management and validation of the Program’s orientations;  
+- an Institutional Strategic Committee (ISC), made up of representatives of the institutions participating in the program, in charge of strategic management and validation of the Program’s orientations;
 - an Operational Steering Committee (OSC), made up of program directors, targeted project managers and project managers, in charge of leading and coordinating the program, making decisions relating to its operation;
 - a Scientific Advisory Board (SAB), made up of scientific personalities who will have an outside perspective on the proper functioning of the program.
 
