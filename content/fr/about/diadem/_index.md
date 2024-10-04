@@ -28,7 +28,7 @@ linkTitle: DIADEM
 </style>
 <div class="row">
 <div class="column left-about-diadem-fr">
-<img src="/images/diadem-logo.png" class="diadem-logo-about"/>
+<img alt="PEPR DIADEM" class="diadem-logo-about"/>
 </div>
 <div class="column right-about-diadem-fr">
 <div align="justify" class="text-x-large">
@@ -43,7 +43,7 @@ Le Programme et Équipements Prioritaires de Recherche (PEPR) <a href="https://p
 <div width="100%">
 Afin de piloter ce programme et de garantir la neutralité, la qualité et la transparence des travaux, une gouvernance à plusieurs niveaux a été définie :
 
-- un Comité Stratégique Institutionnel (CSI), composé des représentants des institutions qui participent au programme, en charge du pilotage stratégique et de la validation des orientations du Programme ;  
+- un Comité Stratégique Institutionnel (CSI), composé des représentants des institutions qui participent au programme, en charge du pilotage stratégique et de la validation des orientations du Programme ;
 - un Comité de pilotage Opérationnel (COMOP), composé des directeurs du programme, des responsables des projets ciblés et des managers de projet, en charge d’animer et coordonner le programme, prendre les décisions relatives à son fonctionnement ;
 - un Conseil Scientifique International, constitué de personnalités scientifiques qui auront un regard extérieur sur le bon fonctionnement du programme.
 </div>
