@@ -403,11 +403,11 @@ u {
 }
 
 .logo-z-set {
-    content: url(/images/z-set-light.png);
+    content: url(/images/z-set-light-smaller.png);
 }
 @include color-mode(dark) {
     .logo-z-set {
-        content: url(/images/z-set-dark.png);
+        content: url(/images/z-set-dark-smaller.png);
     }
 }
 
