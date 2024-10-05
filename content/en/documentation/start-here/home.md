@@ -5,7 +5,7 @@ toc: false
 
 
 
-<h2>Tutorials :</h2>
+<h2>Tutorials</h2>
 
 - <h3><a href="/en/documentation/install-apptainer/howto/">Installing Apptainer on your system</a></h3>
 
