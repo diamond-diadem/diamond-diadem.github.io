@@ -17,6 +17,6 @@ toc: false
 
   - <a class="text-x-large" href="/en/documentation/by-container/lammps/"><b>LAMMPS</b></a>
   - <a class="text-x-large" href="/en/documentation/by-container/ovito/"><b>Ovito</b></a>
-  - <a class="text-x-large" href="/en/documentation/by-container/quantum-espresso/"><b>Quantum Espresso</b></a>
+  - <a class="text-x-large" href="/en/documentation/by-container/quantum-espresso/"><b>Quantum ESPRESSO</b></a>
   - <a class="text-x-large" href="/en/documentation/by-container/paraview/"><b>ParaView</b></a>
   - <a class="text-x-large" href="/en/documentation/by-container/vmd/"><b>VMD</b></a>

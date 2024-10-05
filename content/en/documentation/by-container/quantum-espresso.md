@@ -1,6 +1,6 @@
 ---
-title:  How to use Quantum Espresso Apptainer image?
-linkTitle: Quantum Espresso tutorial
+title:  How to use Quantum ESPRESSO Apptainer image?
+linkTitle: Quantum ESPRESSO tutorial
 weight: 3
 ---
 
