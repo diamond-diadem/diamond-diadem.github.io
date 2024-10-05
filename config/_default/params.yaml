@@ -37,7 +37,7 @@ doks:
     - documentation
   toTopButton: true
   breadcrumbTrail: false
-  headlineHash: true
+  headlineHash: false
   scrollSpy: true
   multilingualMode: true
   showMissingLanguages: true
