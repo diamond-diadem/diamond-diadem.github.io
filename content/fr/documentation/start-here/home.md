@@ -7,7 +7,7 @@ weight: 1
 
 
 
-## Tutoriels
+## Tutoriels :
 
 - ### <a href="/documentation/install-apptainer/howto/">Installation d'Apptainer sur votre système</a>
 
@@ -17,8 +17,8 @@ weight: 1
 
 - ### Tutoriels spécifiques par image
 
-  - <a href="/documentation/by-container/lammps/"><b>LAMMPS</b></a>
-  - <a href="/documentation/by-container/ovito/"><b>Ovito</b></a>
-  - <a href="/documentation/by-container/quantum-espresso/"><b>Quantum Espresso</b></a>
-  - <a href="/documentation/by-container/paraview/"><b>ParaView</b></a>
-  - <a href="/documentation/by-container/vmd/"><b>VMD</b></a>
+  - <a class="text-x-large" href="/documentation/by-container/lammps/"><b>LAMMPS</b></a>
+  - <a class="text-x-large" href="/documentation/by-container/ovito/"><b>Ovito</b></a>
+  - <a class="text-x-large" href="/documentation/by-container/quantum-espresso/"><b>Quantum Espresso</b></a>
+  - <a class="text-x-large" href="/documentation/by-container/paraview/"><b>ParaView</b></a>
+  - <a class="text-x-large" href="/documentation/by-container/vmd/"><b>VMD</b></a>
