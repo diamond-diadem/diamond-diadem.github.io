@@ -28,7 +28,6 @@ In summary, OpenCalphad is a powerful, open-source tool for thermodynamic modeli
 ### Retrieve this container using Apptainer:
 
 ```bash
-# PULL
 apptainer pull opencalphad.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/opencalphad.sif:latest
 ```
 

@@ -28,7 +28,6 @@ With an active community and continuous development, FreeFEM remains at the fore
 ### Retrieve this container using Apptainer:
 
 ```bash
-# PULL
 apptainer pull freefemplusplus.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/freefemplusplus.sif:latest
 ```
 

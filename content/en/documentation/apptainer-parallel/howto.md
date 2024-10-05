@@ -19,7 +19,6 @@ If the Apptainer image you want to use supports parallel computing, then OpenMPI
 A custom image dedicated to this tutorial is available by typing the following command:
 
 ```bash
-# PULL
 apptainer pull tutorial-openmpi.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/tutorial-openmpi.sif:latest
 ```
 

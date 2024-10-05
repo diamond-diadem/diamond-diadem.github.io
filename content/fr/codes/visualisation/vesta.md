@@ -60,7 +60,6 @@ VESTA se distingue par sa capacité à combiner des fonctions de visualisation s
 ### Récupérez ce conteneur avec Apptainer :
 
 ```bash
-# PULL
 apptainer pull vesta.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/vesta.sif:latest
 ```
 

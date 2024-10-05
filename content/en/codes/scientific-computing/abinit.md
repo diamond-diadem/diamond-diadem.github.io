@@ -28,7 +28,6 @@ As an open-source project, Abinit benefits from an active community of developer
 ### Retrieve this container using Apptainer:
 
 ```bash
-# PULL
 apptainer pull abinit.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/abinit.sif:latest
 ```
 

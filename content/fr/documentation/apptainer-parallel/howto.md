@@ -19,7 +19,7 @@ Si l'image Apptainer que vous voulez utiliser supporte le calcul parallèle, alo
  Une image sur mesure dédiée à la mise en pratique de ce tutoriel est disponible en tapant la commande suivante :
 
 ```bash
- # PULL
+
  apptainer pull tutorial-openmpi.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/tutorial-openmpi.sif:latest
  ```
 

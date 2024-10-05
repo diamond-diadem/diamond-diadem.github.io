@@ -30,7 +30,6 @@ Additionally, Plumed supports a scripting interface that enables users to set up
 ### Retrieve this container image with Apptainer:
 
 ```bash
-# PULL
 apptainer pull plumed.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/plumed.sif:latest
 ```
 

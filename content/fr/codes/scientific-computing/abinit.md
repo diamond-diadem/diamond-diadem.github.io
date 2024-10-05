@@ -28,7 +28,6 @@ En tant que projet open-source, Abinit bénéficie d'une communauté active de d
 ### Récupérez l'image Apptainer :
 
 ```bash
-# PULL
 apptainer pull abinit.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/abinit.sif:latest
 ```
 

@@ -24,7 +24,6 @@ Le logiciel prend en charge une variété de méthodes de calcul, telles que la 
 ### Récupérez l'image Apptainer :
 
 ```bash
-# PULL
 apptainer pull quantum-espresso.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/quantum-espresso.sif:latest
 ```
 

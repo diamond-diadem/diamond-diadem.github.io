@@ -18,7 +18,6 @@ Neper is an advanced software designed for the modeling and simulation of polycr
 ### Retrieve this container using Apptainer:
 
 ```bash
-# PULL
 apptainer pull neper.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/neper.sif:latest
 ```
 

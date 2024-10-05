@@ -22,7 +22,6 @@ Ce logiciel repose sur une architecture modulaire, ce qui permet aux utilisateur
 ### Récupérez ce conteneur avec Apptainer :
 
 ```bash
-# PULL
 apptainer pull paraview.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/paraview.sif:latest
 ```
 
