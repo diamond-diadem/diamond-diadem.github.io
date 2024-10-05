@@ -7,7 +7,7 @@ weight: 1
 
 
 
-## Tutoriels :
+## Tutoriels
 
 - ### <a href="/documentation/install-apptainer/howto/">Installation d'Apptainer sur votre système</a>
 
