@@ -28,7 +28,6 @@ Avec une communauté active et un développement continu, FreeFEM reste à la po
 ### Récupérez l'image Apptainer :
 
 ```bash
-# PULL
 apptainer pull freefemplusplus.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/freefemplusplus.sif:latest
 ```
 

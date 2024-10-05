@@ -25,7 +25,6 @@ Z-Set est largement utilisé dans la recherche académique et les applications i
 ### Récupérez l'image Apptainer :
 
 ```bash
-# PULL
 apptainer pull z-set.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/z-set.sif:latest
 ```
 

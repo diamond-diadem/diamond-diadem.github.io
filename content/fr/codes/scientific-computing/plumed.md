@@ -30,7 +30,6 @@ En outre, Plumed prend en charge une interface de script qui permet aux utilisat
 ### Récupérez l'image Apptainer :
 
 ```bash
-# PULL
 apptainer pull plumed.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/plumed.sif:latest
 ```
 

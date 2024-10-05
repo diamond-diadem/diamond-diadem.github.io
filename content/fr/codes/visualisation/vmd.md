@@ -30,7 +30,6 @@ Dans l'ensemble, VMD est un outil puissant et flexible pour la visualisation et 
 ### Récupérez ce conteneur avec Apptainer :
 
 ```bash
-# PULL
 apptainer pull vmd.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/vmd.sif:latest
 ```
 

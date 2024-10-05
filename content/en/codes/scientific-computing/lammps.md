@@ -26,7 +26,6 @@ The [LAMMPS website](https://www.lammps.org/) provides a variety of information 
 ### Retrieve this container using Apptainer:
 
 ```bash
-# PULL
 apptainer pull lammps.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/lammps.sif:latest
 ```
 

@@ -79,7 +79,6 @@ But to begin with, if you haven't gone through this step yet and if you're not f
 {{< tab "LAMMPS" >}}
 
 ```bash
-# PULL
 apptainer pull lammps.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/lammps.sif:latest
 ```
 
@@ -87,7 +86,6 @@ apptainer pull lammps.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/
 {{< tab "Quantum ESPRESSO" >}}
 
 ```bash
-# PULL
 apptainer pull quantum-espresso.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/quantum-espresso.sif:latest
 ```
 
@@ -95,7 +93,6 @@ apptainer pull quantum-espresso.sif oras://gricad-registry.univ-grenoble-alpes.f
 {{< tab "Abinit" >}}
 
 ```bash
-# PULL
 apptainer pull abinit.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/abinit.sif:latest
 ```
 
@@ -103,7 +100,6 @@ apptainer pull abinit.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/
 {{< tab "Z-set" >}}
 
 ```bash
-# PULL
 apptainer pull z-set.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/z-set.sif:latest
 ```
 
@@ -111,7 +107,6 @@ apptainer pull z-set.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/a
 {{< tab "FreeFEM" >}}
 
 ```bash
-# PULL
 apptainer pull freefemplusplus.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/freefemplusplus.sif:latest
 ```
 
@@ -119,7 +114,6 @@ apptainer pull freefemplusplus.sif oras://gricad-registry.univ-grenoble-alpes.fr
 {{< tab "OpenCalphad" >}}
 
 ```bash
-# PULL
 apptainer pull opencalphad.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/opencalphad.sif:latest
 ```
 
@@ -127,7 +121,6 @@ apptainer pull opencalphad.sif oras://gricad-registry.univ-grenoble-alpes.fr/dia
 {{< tab "Neper" >}}
 
 ```bash
-# PULL
 apptainer pull neper.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/neper.sif:latest
 ```
 
@@ -135,7 +128,6 @@ apptainer pull neper.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/a
 {{< tab "PLUMED" >}}
 
 ```bash
-# PULL
 apptainer pull plumed.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/plumed.sif:latest
 ```
 
@@ -143,7 +135,6 @@ apptainer pull plumed.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/
 {{< tab "Gmsh" >}}
 
 ```bash
-# PULL
 apptainer pull gmsh.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/gmsh.sif:latest
 ```
 
@@ -151,7 +142,6 @@ apptainer pull gmsh.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/ap
 {{< tab "Ovito" >}}
 
 ```bash
-# PULL
 apptainer pull ovito.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/ovito.sif:latest
 ```
 
@@ -159,7 +149,6 @@ apptainer pull ovito.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/a
 {{< tab "ParaView" >}}
 
 ```bash
-# PULL
 apptainer pull paraview.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/paraview.sif:latest
 ```
 
@@ -167,7 +156,6 @@ apptainer pull paraview.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamon
 {{< tab "VESTA" >}}
 
 ```bash
-# PULL
 apptainer pull vesta.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/vesta.sif:latest
 ```
 
@@ -175,7 +163,6 @@ apptainer pull vesta.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/a
 {{< tab "VMD" >}}
 
 ```bash
-# PULL
 apptainer pull vmd.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/vmd.sif:latest
 ```
 

@@ -26,7 +26,6 @@ Moreover, Gmsh includes a powerful scripting language that allows users to autom
 ### Retrieve this container image with Apptainer:
 
 ```bash
-# PULL
 apptainer pull gmsh.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/gmsh.sif:latest
 ```
 

@@ -18,7 +18,6 @@ Neper est un logiciel avancé conçu pour la modélisation et la simulation des 
 ### Récupérez l'image Apptainer :
 
 ```bash
-# PULL
 apptainer pull neper.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/neper.sif:latest
 ```
 
