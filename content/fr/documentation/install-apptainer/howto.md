@@ -10,7 +10,7 @@ weight: 1
 
 Ce tutoriel présente succinctement le processus d'installation du logiciel de conteneurisation [Apptainer](https://apptainer.org/). Il est d'ailleurs largement basé sur les [instructions d'installations officielles](https://apptainer.org/docs/admin/1.2/installation.html#install-from-pre-built-packages), et nous vous invitons à consulter ces ressources pour plus de détails.
 
-Le logiciel fonctionne sur toute distribution Linux moderne ; il ne tourne pas de façon native sur Windows et MacOS, n'étant pas compatible avec les noyaux de ces systèmes d'exploitation. Pour ces plateformes, une solution de machine virtuelle est préconisée et ne sera pas couverte ici : plus d'informations [ici](https://apptainer.org/docs/admin/1.2/installation.html#installation-on-windows-or-mac).
+Le logiciel fonctionne sur toute distribution Linux moderne ; il ne tourne pas de façon native sur Windows et MacOS, n'étant pas compatible avec les noyaux de ces systèmes d'exploitation. Pour ces plateformes, une solution de machine virtuelle est préconisée : plus d'informations [ici](https://apptainer.org/docs/admin/1.2/installation.html#installation-on-windows-or-mac).
 
 Enfin, ce tutoriel se concentre sur les versions en cours d'exploitation : si vous utilisez une version de distribution Linux qui n'est plus supportée (par exemple CentOS 7 ou Ubuntu 18.04) et que vous rencontrez une erreur difficile à résoudre, n'hésitez pas à [nous contacter](/contact) !
 
@@ -123,5 +123,24 @@ curl -s https://raw.githubusercontent.com/apptainer/apptainer/main/tools/install
 ```
 
 Toutefois, notez que pour exécuter Apptainer, la commande globale n'est pas directement accessible et il faut à la place lancer `install-dir/bin/apptainer`. Nous vous suggérons de créer un alias `apptainer` pointant vers cet exécutable dans votre `~/.bashrc` ou `~/.bash_aliases`.
+
+## Installation sur Windows / MacOS
+
+Les versions les plus récentes de Windows (Build 19041 et ultérieur) offrent la possibilité d'utiliser des machines virtuelles Linux dans l'environnement Windows via WSL2 (pour Windows Subsystem for Linux). L'installation de WSL2 se fait en exécutant la commande suivante dans un prompt Powershell en tant qu'administrateur :
+
+```bash
+wsl --install
+``` 
+
+Une fois la commande effectuée, il faut redémarrer la machine. Ensuite, la configuration de l'environnement de travail se fait avec les commandes suivantes :
+
+```bash
+wsl.exe --install Ubuntu-24.04 # pour installer Ubuntu-24-04
+wsl --set-default Ubuntu-24-04 # pour définir l'image Ubuntu-24.04 comme étant l'image par défaut
+```
+
+La dernière commande est notamment importante si vous utilisez aussi Docker Desktop sur votre machine. Pendant l'installation de l'image Ubuntu-24.04, vous devrez renseigner un identifiant et un mot de passe utilisateur. Une fois ces opérations réalisées, vous pouvez accéder à l'environnement Ubuntu-24.04 en exécutant la commande `wsl.exe` dans un Powershell ou un terminal windows. Enfin, vous pouvez répéter les étapes "Installer les paquets Debian" pour installer, puis utiliser Apptainer.
+
+Pour les utilisateurs Mac, il est recommandé d'utiliser Lima via Homebrew sur la [documentation d'Apptainer](apptainer.org/docs/admin/main/installation.html#mac).
 
 </div>
