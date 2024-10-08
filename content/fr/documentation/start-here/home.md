@@ -11,7 +11,7 @@ weight: 1
 
 - ### <a href="/documentation/install-apptainer/howto/">Installation d'Apptainer sur votre système</a>
 
-- ### <a href="/documentation/use-apptainer-image/howto/">Utilisation d'une image Apptainer</a>
+- ### <a href="/documentation/use/apptainer-image/">Utilisation d'une image Apptainer</a>
 
 - ### <a href="/documentation/apptainer-parallel/howto/">Apptainer en parallèle</a>
 
