@@ -127,7 +127,7 @@ $HOME/apptainer-images/lammps.sif -h
 ```
 
 ### Isolation partielle ou isolation totale
-Par défaut, Apptainer n'isole pas totalement le conteneur du système de la machine hôte ; pour une isolation partielle ou totale, il faut utiliser respectivement les flags `--no-mount` ou `--no-home` et `--contain-all` (voir [ce lien](/documentation/use/apptainer_image/#isolation-partielle-ou-isolation-totale) pour plus d'informations).
+Par défaut, Apptainer n'isole pas totalement le conteneur du système de la machine hôte ; pour une isolation partielle ou totale, il faut utiliser respectivement les flags `--no-mount` ou `--no-home` et `--contain-all` (voir [ce lien](/fr/documentation/use/apptainer-isolation-flags) pour plus d'informations).
 
 Dans le cas où l'option `--containall` est activée, le répertoire contenant les fichiers d'entrée de LAMMPS n'est pas accessible dans le conteneur !
 
