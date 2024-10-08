@@ -91,7 +91,7 @@ $HOME/apptainer-images/paraview tutorial-can.ex2
 ```
 
 ### Isolation entre le conteneur et la machine hôte
-Par défaut, Apptainer n'isole pas totalement le conteneur du système de la machine hôte ; pour une isolation partielle ou totale, il faut utiliser respectivement les flags `--no-mount` ou `--no-home` et `--containall` (voir [ce lien](/documentation/use/apptainer_image/#isolation-partielle-ou-isolation-totale) pour plus d'informations). Dans le cas où l'option `--containall` est activée, nous rencontrons deux difficultés.
+Par défaut, Apptainer n'isole pas totalement le conteneur du système de la machine hôte ; pour une isolation partielle ou totale, il faut utiliser respectivement les flags `--no-mount` ou `--no-home` et `--containall` (voir [ce lien](/fr/documentation/use/apptainer-isolation-flags) pour plus d'informations). Dans le cas où l'option `--containall` est activée, nous rencontrons deux difficultés.
 
 #### Partage des ressources graphiques
 D'une part, il est possible qu'un message d'erreur apparaisse, vous informant que l'un des plugins de la librairie (`qt.qpa.xcb`), ne parvient pas à se connecter à vos ressources d'affichage.

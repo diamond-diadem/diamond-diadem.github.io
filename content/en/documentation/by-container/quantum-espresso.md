@@ -117,7 +117,7 @@ apptainer inspect $HOME/apptainer-images/quantum-espresso.sif
 ```
 
 ### Partial or total isolation
-By default, Apptainer does not fully isolate the container from the host system. One can either have partial or total isolation using respectively the flags `--no-mount` or `--no-home` and `--containall` (see [this link](/en/documentation/use-apptainer-image/howto/#partial-or-total-isolation) for more information).
+By default, Apptainer does not fully isolate the container from the host system. One can either have partial or total isolation using respectively the flags `--no-mount` or `--no-home` and `--containall` (see [this link](/en/documentation/use-apptainer-image/apptainer-isolation-flags.md) for more information).
 
 Whenever `--containall` is activated, the directory on the host machine containing Quantum Espresso input-files cannot be accessed from the container!
 

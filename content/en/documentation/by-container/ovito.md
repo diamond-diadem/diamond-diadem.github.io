@@ -90,7 +90,7 @@ $HOME/apptainer-images/ovito.sif POSCAR_Si-diamond
 ```
 
 ### Isolation between the container and the host machine
-By default, Apptainer does not fully isolate the container from the host system. One can either have partial or total isolation using respectively the flags `--no-mount` or `--no-home` and `--containall` (see [this link](/en/documentation/use-apptainer-image/howto/#partial-or-total-isolation) for more information).  In case the `--containall` option is activated, we encounter two difficulties.
+By default, Apptainer does not fully isolate the container from the host system. One can either have partial or total isolation using respectively the flags `--no-mount` or `--no-home` and `--containall` (see [this link](/en/documentation/use-apptainer-image/apptainer-isolation-flags.md) for more information).  In case the `--containall` option is activated, we encounter two difficulties.
 
 #### Sharing graphical tesources
 On one hand, it is possible that an error message appears, informing you that one of the library plugins (`qt.qpa.xcb`), fails to connect to your display resources.
