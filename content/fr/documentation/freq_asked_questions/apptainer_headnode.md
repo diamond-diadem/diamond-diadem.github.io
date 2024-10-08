@@ -5,6 +5,8 @@ toc: false
 weight: 4
 ---
 
+<div align="justify">
+
 Il est possible de lancer un conteneur de visualisation (type Ovito) sur les frontales HPC. Pour ce faire, vous devez au préalable vous connecter aux frontales avec le `X11 forwarding` via la commande :
 
 ```bash
@@ -20,3 +22,5 @@ apptainer run --contain --bind $HOME --cleanenv --env DISPLAY=$DISPLAY ovito.sif
 ``` 
 
 > **Attention** Il est déconseillé de lancer des processus lourds sur les frontales des clusters. Sur certains clusters, il existe des services tuant tous les processus qui s'exécutent plus de **X** minutes. C'est le cas notamment des frontales `dahu` et `bigfoot`.
+
+</div>
