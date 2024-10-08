@@ -124,20 +124,7 @@ Please note the global `apptainer` command will not be available with this insta
 
 ## Install on Windows/MacOS
 
-The latest versions of Windows (build 19041 and above) offer the ability to use Linux virtual machines in the Windows environment via WSL2 (for Windows Subsystem for Linux). WSL2 is installed by running the following command in a Powershell prompt as an administrator:
-
-```bash
-wsl --install
-``` 
-
-After running the command, the machine must be rebooted. Next, use the following commands to configure your working environment:
-
-```bash
-wsl.exe --install Ubuntu-24.04 # to install Ubuntu-24-04
-wsl --set-default Ubuntu-24-04 # to set the Ubuntu-24.04 image as the default image
-```
-
-The last command is particularly important if you are also using Docker Desktop on your machine. During the installation of the Ubuntu-24.04 image, you will be asked to enter a user login and password. Once these operations have been completed, you can access the Ubuntu-24.04 environment by running the `wsl.exe` command in a Powershell or Windows terminal. Finally, you can repeat the 'Installing Debian packages' steps to install and use Apptainer.
+For Windows user, a dedicated documentation page can be found [here](/en/documentation/install-apptainer/apptainer-windows).
 
 For Mac users, it is recommended to use Lima via Homebrew on the [Apptainer documentation](apptainer.org/docs/admin/main/installation.html#mac).
 
