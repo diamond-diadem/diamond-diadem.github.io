@@ -14,7 +14,7 @@ Ce tutoriel détaille l'utilisation de l'image de conteneur du code Quantum Espr
 
 Pour plus d'informations sur les conteneurs Apptainer, veuillez consulter la [page dédiée](/about/apptainer/).
 
-Pour rapidement s'approprier les principales commandes d'Apptainer, vous pouvez vous référer à [ce tutoriel](/documentation/use-apptainer-image/howto/).
+Pour rapidement s'approprier les principales commandes d'Apptainer, vous pouvez vous référer à [ce tutoriel](/documentation/use/apptainer-image/).
 
 {{< /callout >}}
 
@@ -49,7 +49,7 @@ apptainer exec $HOME/apptainer-images/quantum-espresso.sif mpirun -np <N> pw.x -
 ```
 
 ## Détail d'utilisation du conteneur Quantum Espresso
-Cette section présente les différentes manières d'utiliser l'image Quantum Espresso. Pour plus de détails sur les commandes Apptainer, veuillez vous référer à [ce tutoriel](/documentation/use-apptainer-image/howto/#apptainer--cours-accéléré).
+Cette section présente les différentes manières d'utiliser l'image Quantum Espresso. Pour plus de détails sur les commandes Apptainer, veuillez vous référer à [ce tutoriel](/documentation/use/apptainer-image/#apptainer--cours-accéléré).
 
 ### Utiliser le conteneur Quantum Espresso
 Pour exécuter Quantum Espresso sans conteneur, on utiliserait la commande :
@@ -115,7 +115,7 @@ apptainer inspect $HOME/apptainer-images/quantum-espresso.sif
 ```
 
 ### Isolation partielle ou isolation totale
-Par défaut, Apptainer n'isole pas totalement le conteneur du système de la machine hôte ; pour une isolation partielle ou totale, il faut utiliser respectivement les flags `--no-mount` ou `--no-home` et `--containall` (voir [ce lien](/documentation/use-apptainer-image/howto/#isolation-partielle-ou-isolation-totale) pour plus d'informations).
+Par défaut, Apptainer n'isole pas totalement le conteneur du système de la machine hôte ; pour une isolation partielle ou totale, il faut utiliser respectivement les flags `--no-mount` ou `--no-home` et `--containall` (voir [ce lien](/documentation/use/apptainer-image/#isolation-partielle-ou-isolation-totale) pour plus d'informations).
 
 Dans le cas où l'option `--containall` est activée, le répertoire contenant les fichiers d'entrée de Quantum Espresso n'est pas accessible dans le conteneur !
 
