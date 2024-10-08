@@ -14,7 +14,7 @@ Ce tutoriel détaille l'utilisation de l'image de conteneur du code Ovito télé
 
 Pour plus d'informations sur les conteneurs Apptainer, veuillez consulter la [page dédiée](/about/apptainer/).
 
-Pour rapidement s'approprier les principales commandes d'Apptainer, vous pouvez vous référer à [ce tutoriel](/documentation/use/apptainer-image/).
+Pour rapidement s'approprier les principales commandes d'Apptainer, vous pouvez vous référer à [ce tutoriel](/documentation/use/apptainer_image/).
 
 {{< /callout >}}
 
@@ -47,7 +47,7 @@ apptainer run $HOME/apptainer-images/ovito.sif <input.file>
 ```
 
 ## Détail d'utilisation du conteneur Ovito
-Cette section présente les différentes manières d'utiliser l'image Ovito. Pour plus de détails sur les commandes Apptainer, veuillez vous référer à [ce tutoriel](/documentation/use/apptainer-image/#apptainer--cours-accéléré).
+Cette section présente les différentes manières d'utiliser l'image Ovito. Pour plus de détails sur les commandes Apptainer, veuillez vous référer à [ce tutoriel](/documentation/use/apptainer_image/#apptainer--cours-accéléré).
 
 Pour exécuter Ovito sans aucune conteneurisation, on utiliserait la commande :
 
@@ -88,7 +88,7 @@ $HOME/apptainer-images/ovito.sif POSCAR_Si-diamond
 ```
 
 ### Isolation entre le conteneur et la machine hôte
-Par défaut, Apptainer n'isole pas totalement le conteneur du système de la machine hôte ; pour une isolation partielle ou totale, il faut utiliser respectivement les flags `--no-mount` ou `--no-home` et `--containall` (voir [ce lien](/documentation/use/apptainer-image/#isolation-partielle-ou-isolation-totale) pour plus d'informations). Dans le cas où l'option `--containall` est activée, nous rencontrons deux difficultés.
+Par défaut, Apptainer n'isole pas totalement le conteneur du système de la machine hôte ; pour une isolation partielle ou totale, il faut utiliser respectivement les flags `--no-mount` ou `--no-home` et `--containall` (voir [ce lien](/documentation/use/apptainer_image/#isolation-partielle-ou-isolation-totale) pour plus d'informations). Dans le cas où l'option `--containall` est activée, nous rencontrons deux difficultés.
 
 #### Partage des ressources graphiques
 D'une part, il est possible qu'un message d'erreur apparaisse, vous informant que l'un des plugins de la librairie (`qt.qpa.xcb`), ne parvient pas à se connecter à vos ressources d'affichage.
