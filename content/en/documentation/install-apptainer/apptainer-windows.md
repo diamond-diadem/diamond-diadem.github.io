@@ -1,5 +1,10 @@
-# Using Apptainer on Windows
+---
+title: "Using Apptainer on Windows"
+weight: 2
+---
 
+<div align="justify">
+    
 Designed primarily for high-performance computing, Apptainer — the containerization solution chosen for the DIAMOND project — natively works only on Linux. If it cannot be used on a Linux distribution, it is necessary to use a virtual machine that emulates a Linux system as an intermediary between Apptainer and the kernel of any other operating system (like Windows).
 
 ## How to Install WSL2 on Windows
@@ -39,7 +44,7 @@ Estimating this overhead requires replicating and comparing the execution time o
 
 This overhead is minor when running many utility tools like visualization or data processing software. However, it can be significant in the case of intensive computations, such as those encountered with the many high-performance simulation codes available on the DIAMOND platform.
 
-> **Test Conditions and Detailed Results**
+<!-- > **Test Conditions and Detailed Results**
 >
 > Calculations were performed on a dual-boot machine with Ubuntu 24.04.1 LTS/Windows 11 to have the same underlying hardware (Intel i7-11800H 2.30GHz CPU and 16GB of RAM). To maximize software similarities, WSL2 was used with the same distribution as our reference (Ubuntu 24.04.1 LTS), and in each case, we ensured the same Apptainer version (1.3.4) was used.
 >
@@ -49,4 +54,6 @@ This overhead is minor when running many utility tools like visualization or dat
 >
 > ![image](./bench_WSL2-cropped.png)
 
-> Considering these average times and standard deviations, it seems that the overhead associated with WSL2 is significant. This conclusion is supported by verifying the compatibility of these samples with the hypothesis of identical average times. A very small p-value ($2.5 \times 10^{-6}$) was obtained (using the `ttest_rel` function from the Python `scipy.stats` module), strongly suggesting that the measured times follow different distributions and that virtualization with WSL2 results in a noticeable increase in execution time compared to a Linux reference distribution.
+> Considering these average times and standard deviations, it seems that the overhead associated with WSL2 is significant. This conclusion is supported by verifying the compatibility of these samples with the hypothesis of identical average times. A very small p-value ($2.5 \times 10^{-6}$) was obtained (using the `ttest_rel` function from the Python `scipy.stats` module), strongly suggesting that the measured times follow different distributions and that virtualization with WSL2 results in a noticeable increase in execution time compared to a Linux reference distribution. -->
+
+</div>
