@@ -7,7 +7,7 @@ weight: 2
 
 {{< callout context="note" title="" icon="outline/info-circle" >}}
 
-En préalable de ces explications, il est nécessaire d'avoir installé Apptainer sur votre machine ; voir [ce lien](/documentation/install-apptainer/howto/) pour plus de détails.
+En préalable de ces explications, il est nécessaire d'avoir installé Apptainer sur votre machine ; voir [ce lien](/documentation/install/install_apptainer/) pour plus de détails.
 
 Ce tutoriel explicite la démarche à suivre pour interagir avec l'image Apptainer d'Aiida.
 
