@@ -1,6 +1,6 @@
 ---
 title: Comment interagir avec un paquet Guix ?
-weight: 3
+weight: 5
 ---
 
 test

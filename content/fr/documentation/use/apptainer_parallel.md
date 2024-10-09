@@ -1,8 +1,7 @@
 ---
 title: Utiliser Apptainer en parallèle
 linkTitle: Utiliser Apptainer en parallèle
-toc: false
-weight: 1
+weight: 2
 ---
 
 <div align="justify">
