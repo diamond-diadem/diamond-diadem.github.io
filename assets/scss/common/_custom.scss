@@ -455,13 +455,13 @@ u {
 
 .logo-france2030-desktop,
 .logo-france2030-mobile {
-    content: url('/images/france-2030-couleurs.png');
+    content: url('/images/france-2030/france-2030-couleurs-smaller.png');
 }
 
 @include color-mode(dark) {
     .logo-france2030-desktop,
     .logo-france2030-mobile {
-    content: url('/images/france-2030-blanc.png');
+    content: url('/images/france-2030/france-2030-blanc-smaller.png');
     }
 }
 
