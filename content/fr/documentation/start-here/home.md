@@ -9,11 +9,11 @@ weight: 1
 
 ## Tutoriels
 
-- ### <a href="/documentation/install-apptainer/howto/">Installation d'Apptainer sur votre système</a>
+- ### <a href="/documentation/install/install_apptainer/">Installation d'Apptainer sur votre système</a>
 
 - ### <a href="/documentation/use/apptainer_image/">Utilisation d'une image Apptainer</a>
 
-- ### <a href="/documentation/apptainer-parallel/howto/">Apptainer en parallèle</a>
+- ### <a href="/documentation/freq_asked_questions/apptainer_parallel/">Apptainer en parallèle</a>
 
 - ### Tutoriels spécifiques par image
 

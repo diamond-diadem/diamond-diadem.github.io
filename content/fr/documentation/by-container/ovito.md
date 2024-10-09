@@ -8,7 +8,7 @@ weight: 2
 
 {{< callout context="note" title="" icon="outline/info-circle" >}}
 
-En préalable de ces explications, il est nécessaire d'avoir installé Apptainer sur votre machine ; voir [ce lien](/documentation/install-apptainer/howto/) pour plus de détails.
+En préalable de ces explications, il est nécessaire d'avoir installé Apptainer sur votre machine ; voir [ce lien](/documentation/install/install_apptainer/) pour plus de détails.
 
 Ce tutoriel détaille l'utilisation de l'image de conteneur du code Ovito téléchargeable à [cette adresse](/codes/visualisation/ovito/). En suivant ce lien, vous récupérez une image Apptainer (format de fichier `.sif`) qui vous permettra de créer des conteneurs à même de faire tourner Ovito.
 
@@ -88,7 +88,7 @@ $HOME/apptainer-images/ovito.sif POSCAR_Si-diamond
 ```
 
 ### Isolation entre le conteneur et la machine hôte
-Par défaut, Apptainer n'isole pas totalement le conteneur du système de la machine hôte ; pour une isolation partielle ou totale, il faut utiliser respectivement les flags `--no-mount` ou `--no-home` et `--containall` (voir [ce lien](/fr/documentation/use/apptainer-isolation-flags) pour plus d'informations). Dans le cas où l'option `--containall` est activée, nous rencontrons deux difficultés.
+Par défaut, Apptainer n'isole pas totalement le conteneur du système de la machine hôte ; pour une isolation partielle ou totale, il faut utiliser respectivement les flags `--no-mount` ou `--no-home` et `--containall` (voir [ce lien](/documentation/use/apptainer-isolation-flags) pour plus d'informations). Dans le cas où l'option `--containall` est activée, nous rencontrons deux difficultés.
 
 #### Partage des ressources graphiques
 D'une part, il est possible qu'un message d'erreur apparaisse, vous informant que l'un des plugins de la librairie (`qt.qpa.xcb`), ne parvient pas à se connecter à vos ressources d'affichage.
