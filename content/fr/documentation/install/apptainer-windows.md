@@ -53,7 +53,9 @@ Ce surcoût est mineur au regard de l'exécution de nombreux outils *utilitaires
 > 
 > Pour tenir compte des potentielles fluctuations de performance dues à la charge du CPU,on réplique 10 fois les calculs dans chacun des cas. Au final, on obtient les temps moyen $<t^{Ubuntu}> = 118.78$ s ($\sigma = 1.41$ s) et $<t^{WSL2}> = 124.15$ s ($\sigma = 0.79$ s).
 >
-> ![image](./bench_WSL2-cropped.png)
+> <div class="text-center mt-4 mb-4">
+>  	<img alt="WSL2 overhead" class="windows-overhead">
+> </div>
 >
 > Au regard de ces temps moyens et des écart-types, il semble que le surcoût associé à WSL2 soit significatif. On peut s'en assurer en vérifiant la compatibilité de ces échantillons avec l'hypothèse des temps moyens identiques. On obtient (via la fonction `ttest_rel` du module Python `scipy.stats`) une valeur-*p* très petite ($2.5 \times 10^{-6}$) suggérant fortement que les temps mesurés suivent des distributions différentes et donc que la virtualisation avec WSL2 entraîne une hausse sensible en terme de temps d'exécution par rapport à une distribution Linux de référence. -->
 

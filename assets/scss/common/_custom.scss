@@ -330,6 +330,18 @@ u {
     }
 }
 
+// // // Windows overhead plot in installation tuto picture // // //
+.windows-overhead {
+    content: url(images/overhead-WSL2-light.png);
+    width: 100%;
+}
+
+@include color-mode(dark) {
+    .windows-overhead{
+        content: url(images/overhead-WSL2-dark.png)
+    }
+}
+
 // // // Codes pages top logos // // //
 
 .codes-pages-top-logo {
