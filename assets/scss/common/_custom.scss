@@ -171,13 +171,13 @@ u {
 }
 
 .icon-abinit {
-    background-image: url(/images/abinit-icon-light.png);
+    background-image: url(/images/abinit/abinit-icon-light.png);
     @extend .custom-icon;
 }
 
 @include color-mode(dark) {
     .icon-abinit {
-        background-image: url(/images/abinit-icon-dark.png);
+        background-image: url(/images/abinit/abinit-icon-dark.png);
     }
 }
 
@@ -394,11 +394,11 @@ u {
 }
 
 .logo-abinit {
-    content: url(/images/abinit-logo-light.svg);
+    content: url(/images/abinit/abinit-logo-light.svg);
 }
 @include color-mode(dark) {
     .logo-abinit {
-        content: url(/images/abinit-logo-dark.svg);
+        content: url(/images/abinit/abinit-logo-dark.svg);
     }
 }
 
