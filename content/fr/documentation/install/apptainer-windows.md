@@ -51,7 +51,7 @@ Ce surcoût est mineur au regard de l'exécution de nombreux outils *utilitaires
 > 
 > Pour chacune de ces installations d'Apptainer, on utilise une image test mise à disposition pour les [tutoriels DIAMOND](/documentation/freq_asked_questions/apptainer_parallel/). Celle-ci effectue $M$ multiplications de matrices carrées $N \times N$ aléatoires. Dans le cas du présent test, on effectue un calcul séquentiel (sur un seul cœur CPU) avec $M=500$ et $N=1000$ : `apptainer run tutorial-openmpi.sif 500 1000`.
 > 
-> Pour tenir compte des potentielles fluctuations de performance dues à la charge du CPU,on réplique 10 fois les calculs dans chacun des cas. Au final, on obtient les temps moyen $<t^{Ubuntu}> = 118.78$ s ($\sigma = 1.41$ s) et $<t^{WSL2}> = 124.15$ s ($\sigma = 0.79$ s).
+> Pour tenir compte des potentielles fluctuations de performance dues à la charge du CPU,on réplique 10 fois les calculs dans chacun des cas. Au final, on obtient les temps moyen $t^{Ubuntu} = 118.78$ s ($\sigma = 1.41$ s) et $t^{WSL2} = 124.15$ s ($\sigma = 0.79$ s).
 >
 > <div class="text-center mt-4 mb-4">
 > 	<img alt="WSL2 overhead" class="windows-overhead">
