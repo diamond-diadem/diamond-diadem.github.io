@@ -42,7 +42,7 @@ La journée sera consacrée à plusieurs conférences données par des chercheur
 
 <div align="center">
 
-#### Programme provisoire :
+#### Programme provisoire
 
 </div>
 
