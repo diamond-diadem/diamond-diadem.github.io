@@ -1,8 +1,12 @@
-# [Options d'isolation avancées pour Apptainer](#options-disolation-avancées-pour-apptainer)
+---
+title: Options d'isolation avancées pour Apptainer
+linkTitle: Options d'isolation avancées pour Apptainer
+weight: 3
+---
 
 Cette page est dédiée aux discussions autour de l'isolation des conteneurs Apptainer. Ce point est évoqué rapidement dans la plupart des tutoriels de la plateforme ; cette page couvre les tenants et les aboutissants de l'isolation plus en profondeur, avec l'objectif de permettre un contrôle plus fin du partage entre hôte et conteneur.
 
-## [Comportement par défaut d'Apptainer](#comportement-par-défaut-dapptainer)
+## Comportement par défaut d'Apptainer
 
 En tant que solution de conteneurisation orientée vers le calcul haute performance, Apptainer est configuré par défaut pour faciliter la lecture et l'écriture de données d'entrée/de sortie ou de logs. 
 
@@ -23,13 +27,13 @@ Notez toutefois que, comme le paragraphe précédent le suggère, il est possibl
 
 De manière connexe, Apptainer permet au conteneur d'accéder par défaut à la valeur de toutes les variables d'environnement définies sur le système hôte (à l'exception de la variable `$PATH` redéfinie pour pointer vers les chemins embarquant les exécutables du conteneur). L'idée est de faciliter la prise en main des utilisateurs et utilisatrices en autorisant les codes conteneurisés à accéder aux variables d'environnement dont ils ont besoin en empruntant les valeurs de la machine hôte. Les outils de visualisation font office d'exemple pertinent pour justifier ce choix : ceux-ci ont besoin de la variable d'environnement `$DISPLAY` pour afficher leur interface sur les ressources graphiques de votre machine, et emprunter sa valeur sur système hôte permet au conteneur de fonctionner efficacement. 
 
-## [Isolation additionnelle](#isolation-additionnelle)
+## Isolation additionnelle
 
 Si la section précédente résume le fonctionnement par défaut d'Apptainer en terme d'isolation et présente les options de configuration côté administrateur ou administratrice système, il existe également des options permettant à l'utilisateur ou l'utilisatrice d'avoir un contrôle relativement fin sur ce comportement.
 
 Ces options répondent à des besoins variés, que l'on peut séparer en deux groupes (*non-exclusifs*). D'une part, on peut vouloir priver le conteneur de l'accès à des répertoires partagés par défaut avec notre machine hôte (par exemple, pour ajouter une couche de sécurité supplémentaire et éviter d'écraser des données importantes). D'autre part, on peut souhaiter empêcher le transfert de variables d'environnement depuis l'hôte vers le conteneur (par exemple, car l'une des variables définies sur l'hôte entre en conflit avec la bonne exécution du code conteneurisé).
 
-### [Le flag `--cleanenv`](#cleanenv)
+### Le flag `--cleanenv`
 
 Dans le cas où l'on veut nettoyer au maximum l'environnement logiciel du conteneur, il est possible d'adjoindre le flag `--cleanenv` (ou `-e`) à `apptainer run` ou `apptainer exec`. 
 
@@ -56,7 +60,7 @@ apptainer run --cleanenv --env DISPLAY=$DISPLAY <image-logiciel-visualisation>
 ```
 La détermination des variables à fixer manuellement (et la valeur à leur attribuer) n'est évidemment pas toujours triviale, mais l'on peut se référer aux documentations officielles si l'on souhaite adopter cette *bonne pratique*.
 
-### [Le flag `--contain` et ses alternatives](#le-flag---contain-et-ses-alternatives)
+### Le flag `--contain` et ses alternatives
 
 L'autre versant de l'isolation de conteneurs, c'est de limiter l'accès de ces derniers aux répertoires de la machine hôte. Pour cela, il existe deux options dédiées : `--no-mount` et `--contain`.
 
@@ -106,7 +110,7 @@ apptainer exec --contain --bind $PWD:$HOME <image> <exécutable> input.file
   # ÇA FONCTIONNE !
 ```
 
-### [Le flag `--containall`](#le-flag---containall)
+### Le flag `--containall`
 
 Il s'agit de la dernière option disponibe pour isoler un conteneur de la machine hôte. On peut considérer que le flag `--containall` (ou `-C`) comme une conjonction de `--cleanenv` et `--contain`.
 
