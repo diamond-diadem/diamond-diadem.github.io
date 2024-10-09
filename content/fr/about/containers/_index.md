@@ -5,8 +5,6 @@ linkTitle: Conteneurs
 
 <h2 class="about-lead text-center">Environnements légers et isolés incluant tous les outils nécessaires pour exécuter des applications. Ils sont devenus incontournables dans le domaine de l'informatique en raison de leur flexibilité et de leur efficacité.</h2> 
 
-
-
 **Qu'est-ce qu'un conteneur ?**
 - Un conteneur est une unité d'exécution autonome qui encapsule une application, mais aussi les librairies externes et autres dépendances nécessaires pour son exécution.
 - Il fournit un environnement isolé, garantissant que les applications embarquées fonctionnent de manière identique quel que soit l'hôte sur lequel on les déploie.
@@ -21,3 +19,30 @@ linkTitle: Conteneurs
 - **Gestion des ressources :** les conteneurs partagent le noyau du système d'exploitation de l'hôte, ce qui les rend plus légers que les machines virtuelles qui nécessitent plus de ressources système.
 
 En résumé, les conteneurs offrent une solution puissante pour le déploiement d'applications, améliorant la flexibilité, la reproductibilité, la portabilité et l'efficacité des processus de développement et de déploiement.
+
+<style>
+ /* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+} 
+</style>
+
+ <div class="row">
+  <div class="column">
+    <img alt="cluster map" class="cluster-map" style="width:90%">
+  </div>
+  <div class="column" align="justify">
+    
+En pratique, vous pouvez choisir la solution technique que vous souhaitez en local sur votre machine. Dans le cadre du projet DIAMOND, nous recommandons l'utilisation d'[Apptainer](/about/apptainer/) mais également de [Guix](/about/guix/). En revanche, sur les clusters ou les centres de calcul, la solution est dictée par ce qui est disponible. Quasiment la moitié des mésocentres et centres de calcul nationaux français possède un système de conteneurs disponible en commande par défaut (permettant donc l'utilisation des conteneurs). Il faut tout de même préciser que l'autre moitié des mésocentres offrent la possibilité de charger un système de conteneurs via la commande `module load` (et donc d'utiliser des conteneurs). En revanche, l'utilisation de Guix est limitée à moins de $30\%$ de l'ensemble des centres de calcul français. Il est à noter que le projet [MESONET](https://www.mesonet.fr/) qui vise à mutualiser les ressources de calcul HPC à l'échelle du pays a déployé une solution pour l'utilisation des conteneurs sur leur cluster de prototypage. Bien que tous les clusters du projet ne soit pas encore disponible, il est fort probable que ceux-ci possèderont un système de conteneurs.
+
+  </div>
+</div>
