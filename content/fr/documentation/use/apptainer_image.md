@@ -11,15 +11,7 @@ En préalable de ces explications, il est nécessaire d'avoir installé Apptaine
 
 Ce tutoriel explicite les principales commandes permettant d'interagir avec une image Apptainer pour générer et manipuler des conteneurs. Les instructions présentées ici sont en principe valables pour tout conteneur Apptainer. Une image sur mesure dédiée à la mise en pratique de ce tutoriel est disponible à [cette adresse](/codes/scientific-computing/lammps/). En suivant ce lien, vous récupérez une image Apptainer (format de fichier `.sif`) qui vous permettra de créer des conteneurs.
 
-<!-- Ce tutoriel détaille l'utilisation de l'image de conteneur du code LAMMPS téléchargeable à [cette adresse](/codes/scientific-computing/lammps/). En suivant ce lien, vous récupérez une image Apptainer (format de fichier `.sif`) qui vous permattra de créer des conteneurs à même de faire tourner LAMMPS.
-
-Pour plus d'informations sur les conteneurs Apptainer, veuillez consulter la [page dédiée](/about/apptainer/).
-
-Pour rapidement s'approprier les principales commandes d'Apptainer, vous pouvez vous référer à [ce tutoriel](/documentation/use/apptainer_image/). -->
-
 {{< /callout >}}
-
-<!-- <iframe class="tuto-video" src="https://www.youtube.com/embed/aJP72OLJBuI?si=q8jyhi8R_WQrgdL0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
 
 <iframe class="tuto-video" src="https://www.youtube.com/embed/CPEsOTpOcic?si=59P2En0ztmJ0ykwu&cc_lang_pref=fr&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen ></iframe>
 
@@ -47,7 +39,7 @@ $ apptainer run $HOME/apptainer-images/tutorial.sif
 * L'argument `exec` est similaire à l'argument `run` mais permet d'invoquer **n'importe quelle commande** dans le conteneur. Par exemple :
 
 ```bash
-$ apptainer exec $HOME/apptainer-images/tutorial.sif echo Hi from the container !
+$ apptainer exec $HOME/apptainer-images/tutorial.sif echo "Hi from the container !"
 ```
 
 crée un conteneur à partir de l'image `$HOME/apptainer-images/tutorial.sif`, invoque la commande `echo Hi from the container !` du shell dans le conteneur puis détruit le conteneur.
@@ -151,7 +143,7 @@ Il est possible, notamment en jouant avec les options précédentes, que le rép
 date > $PWD/test-host.txt
 
 apptainer exec --bind $PWD:/opt \                 # Montage du répertoire courant au /opt du conteneur
-    $HOME/apptainer-images/tutorial.sif           \
+    $HOME/apptainer-images/tutorial.sif \
     cp /opt/test-host.txt /opt/test-container.txt # Création d'une copie dans le conteneur
 
 # Vérification sur la machine hôte
