@@ -52,12 +52,12 @@
 
 .nav-logo {
     height: 55px;
-    content: url('/images/diamond-new-light.png');
+    content: url('/images/diamond/diamond-light-smaller.png');
 }
 
 @include color-mode(dark) {
     .nav-logo {
-        content: url('/images/diamond-new-dark.png');
+        content: url('/images/diamond/diamond-dark-smaller.png');
     }
 }
 
@@ -258,11 +258,11 @@ u {
 }
 
 .logo-diamond {
-    content: url(/images/logo-diamond-new-light.png);
+    content: url(/images/diamond/logo-diamond-light-smaller.png);
 }
 @include color-mode(dark) {
     .logo-diamond {
-        content: url(/images/logo-diamond-new-dark.png);
+        content: url(/images/diamond/logo-diamond-dark-smaller.png);
     }
 }
 
@@ -270,11 +270,11 @@ u {
 // logo diamond homepage (responsive) //
 
 .logo-diamond-homepage {
-    content: url(/images/logo-diamond-new-light.png);
+    content: url(/images/diamond/logo-diamond-light-smaller.png);
 }
 @include color-mode(dark) {
     .logo-diamond-homepage {
-        content: url(/images/logo-diamond-new-dark.png);
+        content: url(/images/diamond/logo-diamond-dark-smaller.png);
     }
 }
 @include media-breakpoint-up(xl) {
