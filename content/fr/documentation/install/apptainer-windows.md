@@ -45,7 +45,7 @@ Estimer celui-ci requiert de répliquer et comparer le temps d'exécution d'un m
 
 Ce surcoût est mineur au regard de l'exécution de nombreux outils *utilitaires* comme des logiciels de visualisation ou de traitement de données. En revanche, il peut s'avérer significatif dans le cas de calculs coûteux, comme ceux rencontrés avec les nombreux codes de simulation haute performance mis à disposition sur la plateforme DIAMOND.
 
-<!-- > **Conditions de test et détail des résultats obtenus**
+> **Conditions de test et détail des résultats obtenus**
 > 
 > Les calculs ont été effectués sur une machine en *dual-boot* Ubuntu 24.04.1 LTS/Windows 11 pour avoir le même matériel sous-jacent (CPU Intel i7-11800H 2.30GHz et 16Go de RAM). Pour maximiser les similarités logicielles, on travaille sur WSL2 avec la même distribution que notre référence (Ubuntu 24.04.1 LTS) et, dans chacun des cas, on s'assure d'utiliser une version d'Apptainer identique (1.3.4).
 > 
@@ -53,10 +53,10 @@ Ce surcoût est mineur au regard de l'exécution de nombreux outils *utilitaires
 > 
 > Pour tenir compte des potentielles fluctuations de performance dues à la charge du CPU,on réplique 10 fois les calculs dans chacun des cas. Au final, on obtient les temps moyen $<t^{Ubuntu}> = 118.78$ s ($\sigma = 1.41$ s) et $<t^{WSL2}> = 124.15$ s ($\sigma = 0.79$ s).
 >
-<div class="text-center mt-4 mb-4">
- 	<img alt="WSL2 overhead" class="windows-overhead">
-</div>
+> <div class="text-center mt-4 mb-4">
+> 	<img alt="WSL2 overhead" class="windows-overhead">
+> </div>
 >
-> Au regard de ces temps moyens et des écart-types, il semble que le surcoût associé à WSL2 soit significatif. On peut s'en assurer en vérifiant la compatibilité de ces échantillons avec l'hypothèse des temps moyens identiques. On obtient (via la fonction `ttest_rel` du module Python `scipy.stats`) une valeur-*p* très petite ($2.5 \times 10^{-6}$) suggérant fortement que les temps mesurés suivent des distributions différentes et donc que la virtualisation avec WSL2 entraîne une hausse sensible en terme de temps d'exécution par rapport à une distribution Linux de référence. -->
+> Au regard de ces temps moyens et des écart-types, il semble que le surcoût associé à WSL2 soit significatif. On peut s'en assurer en vérifiant la compatibilité de ces échantillons avec l'hypothèse des temps moyens identiques. On obtient (via la fonction `ttest_rel` du module Python `scipy.stats`) une valeur-*p* très petite ($2.5 \times 10^{-6}$) suggérant fortement que les temps mesurés suivent des distributions différentes et donc que la virtualisation avec WSL2 entraîne une hausse sensible en terme de temps d'exécution par rapport à une distribution Linux de référence. 
 
 </div>
