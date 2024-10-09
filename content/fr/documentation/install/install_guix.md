@@ -1,6 +1,6 @@
 ---
 title: "Comment installer Guix ?"
-weight: 2
+weight: 3
 ---
 
 test
