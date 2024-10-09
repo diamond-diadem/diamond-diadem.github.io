@@ -10,7 +10,7 @@ fr:
       de la Recherche au titre de France 2030 portant la référence
       ANR-22-PEXD-0015
     alertText: <a class="alert-link stretched-link fw-normal"
-      href="/news/diadem-ia-event/">Rencontre PEPR DIADEM & PEPR IA le 18 Novembre à Paris !</a>
+      href="/news/diadem-ia-numpex/">Rencontre PEPRs DIADEM, IA et NumPex le 18 Novembre à Paris !</a>
 en:
   languageName: EN
   contentDir: content/en
@@ -23,5 +23,5 @@ en:
       the National Research Agency under the France 2030 program with reference
       ANR-22-PEXD-0015.
     alertText: <a class="alert-link stretched-link fw-normal"
-      href="/en/news/diadem-ia-event/">Meeting PEPR DIADEM & PEPR IA on November 18 in Paris !</a>
+      href="/en/news/diadem-ia-numpex/">Meeting PEPRs DIADEM, IA and NumPex on November 18 in Paris!</a>
     description: Digital platform for PEPR DIADEM
