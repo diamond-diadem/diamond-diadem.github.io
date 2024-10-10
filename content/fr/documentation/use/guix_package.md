@@ -5,6 +5,13 @@ weight: 5
 
 <div align="justify">
 
+{{< callout context="note" title="" icon="outline/info-circle" >}}
+
+En préalable de ces explications, il est nécessaire d'avoir installé Guix sur votre machine ; voir [ce lien](/documentation/install/install_guix/) pour plus de détails.
+
+Ce tutoriel explicite les principales commandes permettant d'interagir avec les paquets Guix pour générer et interagir avec des environnements logiciels temporaires.
+
+{{< /callout >}}
 
 ## Comment accéder aux paquets diamond ?
 
