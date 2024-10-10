@@ -316,6 +316,38 @@ u {
     }
 }
 
+// // // Gitlab tutorial // // //
+
+.use-gitlab {
+    content: url(images/use_gitlab_light.png);
+    width: 100%;
+}
+
+.create-issue {
+    content: url(images/create_issue_light.png);
+    width: 100%;
+}
+
+.issue-tab {
+    content: url(images/issue_tab_light.png);
+    width: 100%;
+}
+
+@include color-mode(dark) {
+    .use-gitlab{
+        content: url(images/use_gitlab_dark.png)
+    }
+    .create-issue{
+        content: url(images/create_issue_dark.png)
+    }
+    .issue-tab{
+        content: url(images/issue_tab_dark.png)
+    }
+}
+
+
+
+
 // // // Wordcloud and France cluster map pictures // // //
 
 .containerised-codes {
