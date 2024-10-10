@@ -1421,3 +1421,17 @@ th, tr {
     // opacity: 0.18;
 }
 
+.btn-toggle {
+    display: inline-flex;
+    align-items: first baseline;
+    padding: 0.25rem 0.5rem 0.25rem 0;
+    font-weight: $headings-font-weight;
+    font-size: $font-size-base;
+    text-transform: uppercase;
+    color: $body-color;
+    background-color: transparent;
+    border: 0;
+    // justify-content: left;
+    text-align: left;
+    text-indent: 5px;
+  }
