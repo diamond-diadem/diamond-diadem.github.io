@@ -111,38 +111,24 @@ apptainer run --env USER=newusername $HOME/apptainer-images/tutorial.sif
 WARNING: Environment variable USER already has value [newusername], will not forward new value [oldusername] from parent process environment
 ```
 
-## Isolation partielle ou isolation totale
-Par défaut, Apptainer n'isole pas totalement le conteneur du système de la machine hôte. Les chemins suivants de la machine hôte sont montés et accessibles par défaut dans le conteneur : `$HOME`, `$PWD` `/sys`, `/proc`, `/tmp`, `/var/tmp`, `/etc/resolve.conf` et `/etc/passwd`.
+## Isolation entre l'hôte et le conteneur
+Par défaut, Apptainer n'isole pas totalement le conteneur du système de la machine hôte, mais il existe des optionsœ permettant d'altérer plus ou moins finement ce comportement. Ces options, ainsi que les répertoires partagés par défaut, sont discutés extensivement dans une [section dédiée de la documentation](/documentation/use/apptainer-isolation-flags/).
 
-Si l'on veut isoler le conteneur de la machine hôte, Apptainer propose différentes options (à adjoindre à `apptainer run`, `apptainer exec` ou `apptainer shell`) :
-
-* l'utilisation du flag `--no-mount` pour délier un ou plusieurs chemins au sein du conteneur, par exemple :
-
-```bash
-apptainer run --no-mount sys $HOME/apptainer-images/tutorial.sif
-```
-
-* l'utilisation du flag `--no-home` rend le répertoire `$HOME` inaccessible au conteneur (mais `$PWD` reste monté) :
-
-```bash
-apptainer exec --no-home $HOME/apptainer-images/tutorial.sif ls $HOME
-```
-
-> Dans ce cas, on voit que `$HOME` existe au sein du conteneur mais ne correspond pas au répertoire de la machine hôte.
-
-* le flag `--containall` isole totalement le conteneur de la machine hôte.
+Ici, on se contente de présenter l'option la plus générale (`--containall`) permettant d'isoler à la fois l'environnement logiciel et le système de fichiers du conteneur vis-à-vis de ceux de l'hôte.
 
 ```bash
 apptainer run --containall $HOME/apptainer-images/tutorial.sif
 ```
 
-Il est possible, notamment en jouant avec les options précédentes, que le répertoire contenant les éventuels fichiers d'entrée et de sortie requis ne soit pas accessible dans le conteneur ! Il faut alors monter ce dossier manuellement avec le flag `--bind` dans le conteneur. Par exemple, on peut imaginer le petit exercice suivant consistant à créer un fichier sur la machine hôte, le rendre accessible au sein du conteneur, en créer une copie dans le conteneur, puis récupérer cette copie sur la machine hôte :
+Il est prévisible, en jouant avec cette option, que le répertoire contenant les éventuels fichiers d'entrée et de sortie requis ne soit pas accessible dans le conteneur ! Il faut alors monter ce dossier manuellement avec le flag `--bind` dans le conteneur. Par exemple, on peut imaginer le petit exercice suivant consistant à créer un fichier sur la machine hôte, le rendre accessible au sein du conteneur, en créer une copie dans le conteneur, puis récupérer cette copie sur la machine hôte :
 
 ```bash
 # Création d'un fichier sur la machine hôte
 date > $PWD/test-host.txt
 
-apptainer exec --bind $PWD:/opt \                 # Montage du répertoire courant au /opt du conteneur
+apptainer exec                          \
+    --containall                        \
+    --bind $PWD:/opt                    \ # Montage du répertoire courant au /opt du conteneur
     $HOME/apptainer-images/tutorial.sif \
     cp /opt/test-host.txt /opt/test-container.txt # Création d'une copie dans le conteneur
 

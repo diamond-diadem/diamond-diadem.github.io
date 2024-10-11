@@ -107,38 +107,25 @@ WARNING: Environment variable USER already has value [newusername], will not for
 ```
 
 
-## Partial or total isolation
-By default, Apptainer does not fully isolate the container from the host system. The following paths of the host are mounted and by default available from the container : `$HOME`, `$PWD` `/sys`, `/proc`, `/tmp`, `/var/tmp`, `/etc/resolve.conf` and `/etc/passwd`.
+## Isolation between the host and the container
+By default, pptainer does not fully isolate the container from the host system, but there are options to alter this behavior at different degrees. These options, and the directories share by default, are extensively discussed in a [dedicated tutorial section](/en/documentation/use-apptainer-image/apptainer-isolation-flags/).
 
-If one wishes to isolate the container from the host machine, Apptainer offers several options (to be added to `apptainer run`, `apptainer exec` or `apptainer shell`) :
-
-* use the `--no-mount` flag to unbind one or several paths in the container, for instance
-
-```bash
-apptainer run --no-mount sys $HOME/apptainer-images/tutorial.sif
-```
-
-* use the `--no-home` flag to make `$HOME` unavailable for the container (although `$PWD` remains mounted) :
-
-```bash
-apptainer exec --no-home $HOME/apptainer-images/tutorial.sif ls $HOME
-```
-> Here, we see `$HOME` exists inside the container but does not match the one one host machine.
-
-* use the `--containall` flag to completely isolate the container from the host.
+Here, we only present the most general option (`--containall`), which allows to isolate the container's environment and file system from the host at once.
 
 ```bash
 apptainer run --containall $HOME/apptainer-images/tutorial.sif
 ```
 
-It is likely, for instance when playing with the previous options, that the directory containing possibly required input or output files can not be accessed from the container ! It is then required to manually mount it to the container using the `--bind` flag. For example, one may imagine the following little exercise : create a file on the host machine, make it available inside the container, create a copy of it inside the container, and then retrieve the copy on the host machine.
+It is likely, when playing with the previous option, that the directory containing possibly required input or output files can not be accessed from the container ! It is then required to manually mount it to the container using the `--bind` flag. For example, one may imagine the following little exercise : create a file on the host machine, make it available inside the container, create a copy of it inside the container, and then retrieve the copy on the host machine.
 
 ```bash
 # Creating a file on host
 date > $PWD/test-host.txt
 
-apptainer exec --bind $PWD:/opt \                 # Mounting the current directory to /opt in the container
-    $HOME/apptainer-images/tutorial.sif           \
+apptainer exec                          \
+    --containall                        \
+    --bind $PWD:/opt                    \ # Mounting the current directory to /opt in the container
+    $HOME/apptainer-images/tutorial.sif \
     cp /opt/test-host.txt /opt/test-container.txt # Create a copy of the file in the container
 
 # Verification on host
