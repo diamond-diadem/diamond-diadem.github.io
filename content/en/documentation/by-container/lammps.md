@@ -248,4 +248,14 @@ apptainer exec \
   mpirun -np 8 lmp_mpi -in in.file
 ```
 
+<!-- ## Frequently encountered issues with the LAMMPS image
+
+### Issue Lorem ipsum 
+**Issue description** Lorem ipsum
+**Solution**
+This issue is caused by lorem ipsum
+```bash
+lorem-ipsum
+``` -->
+
 </div>

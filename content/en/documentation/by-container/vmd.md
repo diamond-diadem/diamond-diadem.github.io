@@ -188,4 +188,14 @@ Examples of possible answers:
 * `apptainer exec $HOME/apptainer-images/vmd.sif vmd tutorial-ubiquitin.psf tutorial-pulling.dcd`
 * or `apptainer run --containall --env DISPLAY=$DISPLAY --bind $PWD:$HOME $HOME/apptainer-images/vmd.sif tutorial-ubiquitin.psf tutorial-pulling.dcd`
 
+<!-- ## Frequently encountered issues with the VMD image
+
+### Issue Lorem ipsum 
+**Issue description** Lorem ipsum
+**Solution**
+This issue is caused by lorem ipsum
+```bash
+lorem-ipsum
+``` -->
+
 </div>
