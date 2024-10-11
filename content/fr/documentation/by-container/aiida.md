@@ -1,6 +1,6 @@
 ---
-title: Comment interagir avec l'image Aiida ?
-weight: 4
+title: Tutoriel Aiida
+weight: 6
 ---
 
 <div align="justify">
