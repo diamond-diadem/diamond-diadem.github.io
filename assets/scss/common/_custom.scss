@@ -316,6 +316,59 @@ u {
     }
 }
 
+// // // Gitlab tutorial // // //
+
+.use-gitlab {
+    content: url(images/use_gitlab_light.png);
+    width: 100%;
+}
+
+.create-issue {
+    content: url(images/create_issue_light.png);
+    width: 100%;
+}
+
+.issue-tab {
+    content: url(images/issue_tab_light.png);
+    width: 100%;
+}
+
+@include color-mode(dark) {
+    .use-gitlab{
+        content: url(images/use_gitlab_dark.png)
+    }
+    .create-issue{
+        content: url(images/create_issue_dark.png)
+    }
+    .issue-tab{
+        content: url(images/issue_tab_dark.png)
+    }
+}
+
+
+
+
+// // // Wordcloud and France cluster map pictures // // //
+
+.containerised-codes {
+    content: url(images/containerised_codes_light.png);
+    width: 100%;
+}
+
+.cluster-map {
+    content: url(images/cluster_map_light.png);
+    width: 100%;
+}
+
+@include color-mode(dark) {
+    .containerised-codes{
+        content: url(images/containerised_codes_dark.png)
+    }
+    .cluster-map{
+        content: url(images/cluster_map_dark.png)
+    }
+}
+
 
 // // // Apptainer in parallel tuto picture // // //
 
@@ -327,6 +380,18 @@ u {
 @include color-mode(dark) {
     .hybrid-ompi{
         content: url(images/hybrid-ompi-dark.png)
+    }
+}
+
+// // // Windows overhead plot in installation tuto picture // // //
+.windows-overhead {
+    content: url(images/overhead-WSL2-light.png);
+    width: 100%;
+}
+
+@include color-mode(dark) {
+    .windows-overhead{
+        content: url(images/overhead-WSL2-dark.png)
     }
 }
 
@@ -1356,3 +1421,17 @@ th, tr {
     // opacity: 0.18;
 }
 
+.btn-toggle {
+    display: inline-flex;
+    align-items: first baseline;
+    padding: 0.25rem 0.5rem 0.25rem 0;
+    font-weight: $headings-font-weight;
+    font-size: $font-size-base;
+    text-transform: uppercase;
+    color: $body-color;
+    background-color: transparent;
+    border: 0;
+    // justify-content: left;
+    text-align: left;
+    text-indent: 5px;
+  }

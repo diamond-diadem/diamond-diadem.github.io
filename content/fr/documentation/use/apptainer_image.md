@@ -1,24 +1,17 @@
 ---
 title: Comment interagir avec une image Apptainer ?
+weight: 1
 ---
 
 <div align="justify">
 
 {{< callout context="note" title="" icon="outline/info-circle" >}}
 
-En préalable de ces explications, il est nécessaire d'avoir installé Apptainer sur votre machine ; voir [ce lien](/documentation/install-apptainer/howto/) pour plus de détails.
+En préalable de ces explications, il est nécessaire d'avoir installé Apptainer sur votre machine ; voir [ce lien](/documentation/install/install_apptainer/) pour plus de détails.
 
 Ce tutoriel explicite les principales commandes permettant d'interagir avec une image Apptainer pour générer et manipuler des conteneurs. Les instructions présentées ici sont en principe valables pour tout conteneur Apptainer. Une image sur mesure dédiée à la mise en pratique de ce tutoriel est disponible à [cette adresse](/codes/scientific-computing/lammps/). En suivant ce lien, vous récupérez une image Apptainer (format de fichier `.sif`) qui vous permettra de créer des conteneurs.
 
-<!-- Ce tutoriel détaille l'utilisation de l'image de conteneur du code LAMMPS téléchargeable à [cette adresse](/fr/codes/scientific-computing/lammps/). En suivant ce lien, vous récupérez une image Apptainer (format de fichier `.sif`) qui vous permattra de créer des conteneurs à même de faire tourner LAMMPS.
-
-Pour plus d'informations sur les conteneurs Apptainer, veuillez consulter la [page dédiée](/fr/about/apptainer/).
-
-Pour rapidement s'approprier les principales commandes d'Apptainer, vous pouvez vous référer à [ce tutoriel](/fr/documentation/use-apptainer-image/howto/). -->
-
 {{< /callout >}}
-
-<!-- <iframe class="tuto-video" src="https://www.youtube.com/embed/aJP72OLJBuI?si=q8jyhi8R_WQrgdL0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
 
 <iframe class="tuto-video" src="https://www.youtube.com/embed/CPEsOTpOcic?si=59P2En0ztmJ0ykwu&cc_lang_pref=fr&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen ></iframe>
 
@@ -46,10 +39,10 @@ $ apptainer run $HOME/apptainer-images/tutorial.sif
 * L'argument `exec` est similaire à l'argument `run` mais permet d'invoquer **n'importe quelle commande** dans le conteneur. Par exemple :
 
 ```bash
-$ apptainer exec $HOME/apptainer-images/tutorial.sif echo Hi from the container !
+$ apptainer exec $HOME/apptainer-images/tutorial.sif echo "Hi from the container !"
 ```
 
-crée un conteneur à partir de l'image `$HOME/apptainer-images/tutorial.sif`, invoque la commande `echo Hi from the container !` du shell dans le conteneur puis détruit le conteneur.
+crée un conteneur à partir de l'image `$HOME/apptainer-images/tutorial.sif`, invoque la commande `echo "Hi from the container !"` du shell dans le conteneur puis détruit le conteneur.
 
 * l'argument `shell` permet d'ouvrir un shell interactif au sein du conteneur (le *prompt* `Apptainer>` apparaît alors à gauche de la ligne de commande) et d'y effectuer plusieurs commandes successives, puis d'en sortir en détruisant le conteneur avec `exit` ou `Crtl+D`. Par exemple :
 
@@ -118,39 +111,25 @@ apptainer run --env USER=newusername $HOME/apptainer-images/tutorial.sif
 WARNING: Environment variable USER already has value [newusername], will not forward new value [oldusername] from parent process environment
 ```
 
-## Isolation partielle ou isolation totale
-Par défaut, Apptainer n'isole pas totalement le conteneur du système de la machine hôte. Les chemins suivants de la machine hôte sont montés et accessibles par défaut dans le conteneur : `$HOME`, `$PWD` `/sys`, `/proc`, `/tmp`, `/var/tmp`, `/etc/resolve.conf` et `/etc/passwd`.
+## Isolation entre l'hôte et le conteneur
+Par défaut, Apptainer n'isole pas totalement le conteneur du système de la machine hôte, mais il existe des optionsœ permettant d'altérer plus ou moins finement ce comportement. Ces options, ainsi que les répertoires partagés par défaut, sont discutés extensivement dans une [section dédiée de la documentation](/documentation/use/apptainer-isolation-flags/).
 
-Si l'on veut isoler le conteneur de la machine hôte, Apptainer propose différentes options (à adjoindre à `apptainer run`, `apptainer exec` ou `apptainer shell`) :
-
-* l'utilisation du flag `--no-mount` pour délier un ou plusieurs chemins au sein du conteneur, par exemple :
-
-```bash
-apptainer run --no-mount sys $HOME/apptainer-images/tutorial.sif
-```
-
-* l'utilisation du flag `--no-home` rend le répertoire `$HOME` inaccessible au conteneur (mais `$PWD` reste monté) :
-
-```bash
-apptainer exec --no-home $HOME/apptainer-images/tutorial.sif ls $HOME
-```
-
-> Dans ce cas, on voit que `$HOME` existe au sein du conteneur mais ne correspond pas au répertoire de la machine hôte.
-
-* le flag `--containall` isole totalement le conteneur de la machine hôte.
+Ici, on se contente de présenter l'option la plus générale (`--containall`) permettant d'isoler à la fois l'environnement logiciel et le système de fichiers du conteneur vis-à-vis de ceux de l'hôte.
 
 ```bash
 apptainer run --containall $HOME/apptainer-images/tutorial.sif
 ```
 
-Il est possible, notamment en jouant avec les options précédentes, que le répertoire contenant les éventuels fichiers d'entrée et de sortie requis ne soit pas accessible dans le conteneur ! Il faut alors monter ce dossier manuellement avec le flag `--bind` dans le conteneur. Par exemple, on peut imaginer le petit exercice suivant consistant à créer un fichier sur la machine hôte, le rendre accessible au sein du conteneur, en créer une copie dans le conteneur, puis récupérer cette copie sur la machine hôte :
+Il est prévisible, en jouant avec cette option, que le répertoire contenant les éventuels fichiers d'entrée et de sortie requis ne soit pas accessible dans le conteneur ! Il faut alors monter ce dossier manuellement avec le flag `--bind` dans le conteneur. Par exemple, on peut imaginer le petit exercice suivant consistant à créer un fichier sur la machine hôte, le rendre accessible au sein du conteneur, en créer une copie dans le conteneur, puis récupérer cette copie sur la machine hôte :
 
 ```bash
 # Création d'un fichier sur la machine hôte
 date > $PWD/test-host.txt
 
-apptainer exec --bind $PWD:/opt \                 # Montage du répertoire courant au /opt du conteneur
-    $HOME/apptainer-images/tutorial.sif           \
+apptainer exec                          \
+    --containall                        \
+    --bind $PWD:/opt                    \ # Montage du répertoire courant au /opt du conteneur
+    $HOME/apptainer-images/tutorial.sif \
     cp /opt/test-host.txt /opt/test-container.txt # Création d'une copie dans le conteneur
 
 # Vérification sur la machine hôte

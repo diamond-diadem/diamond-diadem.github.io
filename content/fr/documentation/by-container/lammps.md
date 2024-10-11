@@ -8,13 +8,13 @@ weight: 1
 
 {{< callout context="note" title="" icon="outline/info-circle" >}}
 
-En préalable de ces explications, il est nécessaire d'avoir installé Apptainer sur votre machine ; voir [ce lien](/documentation/install-apptainer/howto/) pour plus de détails.
+En préalable de ces explications, il est nécessaire d'avoir installé Apptainer sur votre machine ; voir [ce lien](/documentation/install/install_apptainer/) pour plus de détails.
 
 Ce tutoriel détaille l'utilisation de l'image de conteneur du code LAMMPS téléchargeable à [cette adresse](/codes/scientific-computing/lammps/). En suivant ce lien, vous récupérez une image Apptainer (format de fichier `.sif`) qui vous permattra de créer des conteneurs à même de faire tourner LAMMPS.
 
 Pour plus d'informations sur les conteneurs Apptainer, veuillez consulter la [page dédiée](/about/apptainer/).
 
-Pour rapidement s'approprier les principales commandes d'Apptainer, vous pouvez vous référer à [ce tutoriel](/documentation/use-apptainer-image/howto/).
+Pour rapidement s'approprier les principales commandes d'Apptainer, vous pouvez vous référer à [ce tutoriel](/documentation/use/apptainer_image/).
 
 {{< /callout >}}
 
@@ -49,7 +49,7 @@ apptainer exec $HOME/apptainer-images/lammps.sif mpirun -np <N> lmp_mpi -in <inp
 ```
 
 ## Détail d'utilisation du conteneur LAMMPS
-Cette section présente les différentes manières d'utiliser l'image LAMMPS. Pour plus de détails sur les commandes Apptainer, veuillez vous référer à [ce tutoriel](/documentation/use-apptainer-image/howto/#apptainer--cours-accéléré).
+Cette section présente les différentes manières d'utiliser l'image LAMMPS. Pour plus de détails sur les commandes Apptainer, veuillez vous référer à [ce tutoriel](/documentation/use/apptainer_image/#apptainer--cours-accéléré).
 
 ### Utiliser le conteneur LAMMPS en séquentiel
 Pour exécuter LAMMPS en séquentiel (c'est-à-dire sans parallélisation) sans conteneur, on utiliserait la commande :
@@ -127,7 +127,7 @@ $HOME/apptainer-images/lammps.sif -h
 ```
 
 ### Isolation partielle ou isolation totale
-Par défaut, Apptainer n'isole pas totalement le conteneur du système de la machine hôte ; pour une isolation partielle ou totale, il faut utiliser respectivement les flags `--no-mount` ou `--no-home` et `--contain-all` (voir [ce lien](/documentation/use-apptainer-image/howto/#isolation-partielle-ou-isolation-totale) pour plus d'informations).
+Par défaut, Apptainer n'isole pas totalement le conteneur du système de la machine hôte ; pour une isolation partielle ou totale, il faut utiliser respectivement les flags `--no-mount` ou `--no-home` et `--contain-all` (voir [ce lien](/documentation/use/apptainer-isolation-flags) pour plus d'informations).
 
 Dans le cas où l'option `--containall` est activée, le répertoire contenant les fichiers d'entrée de LAMMPS n'est pas accessible dans le conteneur !
 
@@ -244,5 +244,16 @@ apptainer exec \
   $HOME/apptainer-images/lammps.sif \
   mpirun -np 8 lmp_mpi -in in.file
 ```
+
+<!-- ## Problèmes fréquemment rencontrés avec l'image de LAMMPS
+
+### Problème Lorem ipsum 
+**Description du problème** Lorem ipsum
+**Solution au problème**
+Ce problème est du à lorem ipsum
+```bash
+lorem-ipsum
+``` -->
+
 
 </div>

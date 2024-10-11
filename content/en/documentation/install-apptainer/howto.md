@@ -122,4 +122,10 @@ curl -s https://raw.githubusercontent.com/apptainer/apptainer/main/tools/install
 
 Please note the global `apptainer` command will not be available with this installation, and it is required to call the executable using `install-dir/bin/apptainer`. We suggest to create an `apptainer` alias pointing to this executable in `~/.bashrc` or `~/.bash_aliases`.
 
+## Install on Windows/MacOS
+
+For Windows user, a dedicated documentation page can be found [here](/en/documentation/install-apptainer/apptainer-windows).
+
+For Mac users, it is recommended to use Lima via Homebrew on the [Apptainer documentation](apptainer.org/docs/admin/main/installation.html#mac).
+
 </div>

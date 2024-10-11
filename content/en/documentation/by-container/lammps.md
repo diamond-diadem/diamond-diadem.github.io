@@ -128,7 +128,7 @@ $HOME/apptainer-images/lammps.sif -h
 ```
 
 ### Partial or total isolation
-By default, Apptainer does not fully isolate the container from the host system. One can either have partial or total isolation using respectively the flags `--no-mount` or `--no-home` and `--contain-all` (see [this link](/en/documentation/use-apptainer-image/howto/#partial-or-total-isolation) for more information).
+By default, Apptainer does not fully isolate the container from the host system. One can either have partial or total isolation using respectively the flags `--no-mount` or `--no-home` and `--contain-all` (see [this link](/en/documentation/use-apptainer-image/apptainer-isolation-flags) for more information).
 
 Whenever `--containall` is activated, the directory on the host machine containing LAMMPS input-files cannot be accessed from the container !
 
@@ -247,5 +247,15 @@ apptainer exec \
   $HOME/apptainer-images/lammps.sif \
   mpirun -np 8 lmp_mpi -in in.file
 ```
+
+<!-- ## Frequently encountered issues with the LAMMPS image
+
+### Issue Lorem ipsum 
+**Issue description** Lorem ipsum
+**Solution**
+This issue is caused by lorem ipsum
+```bash
+lorem-ipsum
+``` -->
 
 </div>

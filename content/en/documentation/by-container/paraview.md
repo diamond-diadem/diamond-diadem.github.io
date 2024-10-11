@@ -93,7 +93,7 @@ $HOME/apptainer-images/paraview tutorial-can.ex2
 ```
 
 ### Isolation between the container and the host machine
-By default, Apptainer does not fully isolate the container from the host machine's system; for partial or total isolation, respectively, the `--no-mount` or `--no-home` and `--containall` flags should be used (see [this link](/en/documentation/use-apptainer-image/howto/#partial-or-total-isolation) for more information). In cases where the `--containall` option is activated, we encounter two difficulties.
+By default, Apptainer does not fully isolate the container from the host machine's system; for partial or total isolation, respectively, the `--no-mount` or `--no-home` and `--containall` flags should be used (see [this link](/en/documentation/use-apptainer-image/apptainer-isolation-flags) for more information). In cases where the `--containall` option is activated, we encounter two difficulties.
 
 #### Sharing graphical resources
 On one hand, it is possible that an error message appears, informing you that one of the library plugins (`qt.qpa.xcb`) fails to connect to your display resources.
@@ -182,5 +182,15 @@ How to visualize an animation contained in a file with a ParaView container and 
 Examples of possible answers:
 * `apptainer exec $HOME/apptainer-images/paraview.sif paraview tutorial-can.ex2`
 * or `apptainer run --containall --env DISPLAY=$DISPLAY --bind $PWD:$HOME $HOME/apptainer-images/paraview.sif tutorial-can.ex2`
+
+<!-- ## Frequently encountered issues with the ParaView image
+
+### Issue Lorem ipsum 
+**Issue description** Lorem ipsum
+**Solution**
+This issue is caused by lorem ipsum
+```bash
+lorem-ipsum
+``` -->
 
 </div>

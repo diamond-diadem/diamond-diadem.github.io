@@ -5,8 +5,6 @@ linkTitle: Apptainer
 
 <h2 class="about-lead text-center">Apptainer (anciennement Singularity) est une solution de création et de gestion de conteneurs orientée vers le calcul haute performance. En proposant des conteneurs empaquetant à la fois un outil logiciel et toutes les dépendances externes nécessaires à son application, il garantit leur portabilité et leur reproductibilité.</h2>
 
-
-
 <style>
 * {
   box-sizing: border-box;
@@ -42,8 +40,6 @@ linkTitle: Apptainer
 Apptainer est un logiciel informatique gratuit et open-source qui facilite le déploiement d'outils numériques à travers la conteneurisation. L'idée générale est d'inclure un code ou une application avec toutes les dépendances (environnement logiciel, librairies externes, ...) nécessaires à son exécution au sein d'un objet nommé conteneur, autonome et indépendant de la machine sur laquelle on l'exécute. Le principal intérêt des conteneurs réside dans leur relative légerté : on ne virtualise pas de système d'exploitation entier (lourd), mais uniquement les éléments indispensables à l'exécution, et on délègue au noyau de la machine hôte (quelle qu'elle soit) la responsabilité de communiquer avec son système d'exploitation et le hardware.
 
 En un sens, Apptainer est une alternative au logiciel Docker. Là où ce dernier est de plus en plus populaire dans le développement et le maintien d'applications conteneurisées orientées web et service, Apptainer propose un contrepoint très intéressant pour le calcul haute performance, avec une forte emphase sur la portabilité et la reproductibilité des résultats.
-
-
 
 </div>
 </div>
