@@ -16,8 +16,8 @@ doks:
   navbarSticky: true
   containerBreakpoint: fluid
   navBarButton: false
-  # navBarButtonUrl: /docs/prologue/introduction/
-  # navBarButtonText: Get started
+  navBarButtonUrl: /docs/prologue/introduction/
+  navBarButtonText: Demander de l'aide
   flexSearch: true
   searchExclKinds: []
   searchExclTypes:

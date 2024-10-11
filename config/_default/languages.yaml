@@ -11,6 +11,7 @@ fr:
       ANR-22-PEXD-0015
     alertText: <a class="alert-link stretched-link fw-normal"
       href="/news/diadem-ia-event/">Rencontre PEPR DIADEM & PEPR IA le 18 Novembre à Paris !</a>
+    docSidebarRef: /documentation/use/ask_help
 en:
   languageName: EN
   contentDir: content/en
@@ -25,3 +26,4 @@ en:
     alertText: <a class="alert-link stretched-link fw-normal"
       href="/en/news/diadem-ia-event/">Meeting PEPR DIADEM & PEPR IA on November 18 in Paris !</a>
     description: Digital platform for PEPR DIADEM
+    docSidebarRef: /en/documentation/use/ask_help
