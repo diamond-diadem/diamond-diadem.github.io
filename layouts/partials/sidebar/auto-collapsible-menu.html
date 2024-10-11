@@ -52,7 +52,9 @@
           </ul>
         </div>
       </li>
+      <a class="btn btn-primary rounded-pill mt-2 btn-block d-lg-none" href="/" role="button">Demander de l'aide</a>
     {{ end }}
+
     {{ range .RegularPages -}}
       {{ $active := in $currentPage.RelPermalink .RelPermalink -}}
       <div class="collapse show" id="section-{{ md5 .Title }}">
@@ -63,3 +65,4 @@
     {{- end }}
   {{ end }}
 </ul>
+<a class="btn btn-primary rounded-pill ms-3 me-2 px-4 order-lg-3 d-none d-lg-block btn-doc-sidebar" href="{{ site.Params.docSidebarRef }}" role="button">{{ i18n "ask_help" }}</a>
