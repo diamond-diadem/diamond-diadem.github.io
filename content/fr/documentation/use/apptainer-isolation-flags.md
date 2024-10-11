@@ -4,6 +4,8 @@ linkTitle: Options d'isolation avancées pour Apptainer
 weight: 3
 ---
 
+<div align="justify">
+
 Cette page est dédiée aux discussions autour de l'isolation des conteneurs Apptainer. Ce point est évoqué rapidement dans la plupart des tutoriels de la plateforme ; cette page couvre les tenants et les aboutissants de l'isolation plus en profondeur, avec l'objectif de permettre un contrôle plus fin du partage entre hôte et conteneur.
 
 ## Comportement par défaut d'Apptainer
@@ -122,7 +124,7 @@ L'option `--containall` réplique également le comportement de `--contain`, ave
 
 En conséquence, si l'on souhaite utiliser `--containall` et laisser le conteneur accéder à des données de la machine hôte, par exemple pour accéder à des données d'entrée, il faut recourir au flag `--bind <répertoire-hôte>:<répertoire-conteneur>`.
 
-Pour reprendre l'exemple, employé plus haut, d'un code de visualisation conteneurisé, l'utilisation conjointe de `--containall`, `--env` et `--bind` se fait ainsi
+Pour reprendre l'exemple, employé plus haut, d'un code de visualisation conteneurisé, l'utilisation conjointe de `--containall`, `--env` et `--bind` se fait ainsi :
 
 ```bash
 # Pour un code de visualisation, le conteneur a besoin de la variable $DISPLAY
@@ -135,3 +137,5 @@ apptainer run --containall           \
               --bind $PWD:$HOME      \
               <image-logiciel-visualisation> $HOME/<fichier-d-entrée>
 ```
+
+</div>
