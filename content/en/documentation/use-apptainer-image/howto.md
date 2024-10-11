@@ -39,9 +39,9 @@ $ apptainer run $HOME/apptainer-images/tutorial.sif
 * The `exec` argument is similar to the `run` argument, only invoking **any** specified command inside the container. For example :
 
 ```bash
-$ apptainer exec $HOME/apptainer-images/tutorial.sif echo Hi from the container !
+$ apptainer exec $HOME/apptainer-images/tutorial.sif echo "Hi from the container !"
 ```
-creates a container from the `$HOME/apptainer-images/tutorial.sif` image, invokes the `echo Hi from the container !` command within the container, and then destroys it.
+creates a container from the `$HOME/apptainer-images/tutorial.sif` image, invokes the `echo "Hi from the container !"` command within the container, and then destroys it.
 
 * The `shell` argument allows to enter an interactive shell inside the container (the `Apptainer>` *prompt* then appears on the left of the command line), run successive commands, then exit the container using `exit` or `Crtl+D`, which also destroys it. For example :
 
