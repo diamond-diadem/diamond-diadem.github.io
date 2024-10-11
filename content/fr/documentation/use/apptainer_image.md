@@ -42,7 +42,7 @@ $ apptainer run $HOME/apptainer-images/tutorial.sif
 $ apptainer exec $HOME/apptainer-images/tutorial.sif echo "Hi from the container !"
 ```
 
-crée un conteneur à partir de l'image `$HOME/apptainer-images/tutorial.sif`, invoque la commande `echo Hi from the container !` du shell dans le conteneur puis détruit le conteneur.
+crée un conteneur à partir de l'image `$HOME/apptainer-images/tutorial.sif`, invoque la commande `echo "Hi from the container !"` du shell dans le conteneur puis détruit le conteneur.
 
 * l'argument `shell` permet d'ouvrir un shell interactif au sein du conteneur (le *prompt* `Apptainer>` apparaît alors à gauche de la ligne de commande) et d'y effectuer plusieurs commandes successives, puis d'en sortir en détruisant le conteneur avec `exit` ou `Crtl+D`. Par exemple :
 
