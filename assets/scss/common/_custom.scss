@@ -1363,6 +1363,7 @@ th, tr {
 
 .news-card-homepage::before {
     content: '';
+    border-radius: 45px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
