@@ -183,4 +183,14 @@ Exemples de réponses possibles :
 * `apptainer exec $HOME/apptainer-images/paraview.sif paraview tutorial-can.ex2`
 * ou `apptainer run --containall --env DISPLAY=$DISPLAY --bind $PWD:$HOME $HOME/apptainer-images/paraview.sif tutorial-can.ex2`
 
+<!-- ## Problèmes fréquemment rencontrés avec l'image de Paraiew
+
+### Problème Lorem ipsum 
+**Description du problème** Lorem ipsum
+**Solution au problème**
+Ce problème est du à lorem ipsum
+```bash
+lorem-ipsum
+``` -->
+
 </div>

@@ -175,4 +175,14 @@ Exemples de réponses possibles :
 * `apptainer exec $HOME/apptainer-images/ovito.sif ovito MD/SiC.00*.lmp`
 * ou `apptainer run --containall --env DISPLAY=$DISPLAY --bind $PWD:$HOME $HOME/apptainer-images/ovito.sif MD/SiC.00*.lmp`
 
+<!-- ## Problèmes fréquemment rencontrés avec l'image d'Ovito
+
+### Problème Lorem ipsum 
+**Description du problème** Lorem ipsum
+**Solution au problème**
+Ce problème est du à lorem ipsum
+```bash
+lorem-ipsum
+``` -->
+
 </div>

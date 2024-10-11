@@ -179,4 +179,14 @@ apptainer exec \
   mpirun -np 8 pw.x -in qe-tutorial.in
 ```
 
+<!-- ## Problèmes fréquemment rencontrés avec l'image de Quantum Espresso
+
+### Problème Lorem ipsum 
+**Description du problème** Lorem ipsum
+**Solution au problème**
+Ce problème est du à lorem ipsum
+```bash
+lorem-ipsum
+``` -->
+
 </div>
