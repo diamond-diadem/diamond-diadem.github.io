@@ -21,7 +21,7 @@
       {{ .Content }}
     </div>
   </div>
-</section>  
+</section>
 {{ if site.Params.doks.backgroundDots -}}
   <div class="d-flex justify-content-start">
     <div class="bg-dots"></div>
@@ -64,19 +64,24 @@
             <h2><u>Actualités en vedette</u></h3>
           {{ end }}
           {{ range where .Site.Pages "Section" "news" }}
-            {{ if .Params.Homepage }}  
-              <div class="col-lg-6 news-card-homepage"> 
+            {{ if .Params.Homepage }}
+              <style>
+                .news-card-homepage::before {
+                  background-image: url({{ .Params.backgroundImage }});
+                }
+              </style>
+              <div class="col-lg-6 news-card-homepage">
                 <h4>{{ .Title }}</h4>
-                <p><i><b>{{ .Params.EventDate }}</i></b></p>  
-                <p>{{ .Summary }}</p> 
-                <a href="{{ .Permalink }}">Apprenez-en plus</a> 
+                <p><i><b>{{ .Params.EventDate }}</i></b></p>
+                <p>{{ .Summary }}</p>
+                <a href="{{ .Permalink }}">Apprenez-en plus</a>
               </div>
             {{ end }}
           {{ end }}
         </div>
       </div>
     </div>
-  {{end -}}  
+  {{end -}}
   {{ end }}
   {{ if eq $.Site.Language.LanguageName "EN" }}
   <section class="section section-md section-features">
@@ -115,20 +120,25 @@
             <h2><u>Featured News</u></h3>
           {{ end }}
           {{ range where .Site.Pages "Section" "news" }}
-            {{ if .Params.Homepage }}  
-              <div class="col-lg-6 news-card-homepage"> 
+            {{ if .Params.Homepage }}
+              <style>
+                .news-card-homepage::before {
+                  background-image: url({{ .Params.backgroundImage }});
+                }
+              </style>
+              <div class="col-lg-6 news-card-homepage">
                 <h4>{{ .Title }}</h4>
-                <p><i><b>{{ .Params.EventDate }}</i></b></p> 
-                <p>{{ .Summary }}</p> 
-                <a href="{{ .Permalink }}">Read more</a> 
+                <p><i><b>{{ .Params.EventDate }}</i></b></p>
+                <p>{{ .Summary }}</p>
+                <a href="{{ .Permalink }}">Read more</a>
               </div>
             {{ end }}
           {{ end }}
         </div>
       </div>
     </div>
-  {{ end -}}  
-  {{ end }}  
+  {{ end -}}
+  {{ end }}
 {{ end }}
 
 {{ define "sidebar-prefooter" }}
