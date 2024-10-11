@@ -132,4 +132,11 @@ apptainer exec                          \
 cat $PWD/test-host.txt $PWD/test-container.txt
 ```
 
+## See also
+If this tutorial helped you to discover the basci usage of Apptainer, you can also take a look at the following pages to better take the platform tools into your own hands:
+* [How to use a containerized code in parallel?](/en/documentation/apptainer-parallel/howto)
+* [What are the options to isolate a container from its host?](/en/documentation/use-apptainer-image/apptainer-isolation-flags)
+* [What about Guix packages?](/en/documentation/TODO:page-to-come)
+* [How to ask for help?](/en/documentation/TODO:page-to-come)
+
 </div>

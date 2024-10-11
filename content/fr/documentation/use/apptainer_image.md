@@ -136,4 +136,11 @@ apptainer exec                          \
 cat $PWD/test-host.txt $PWD/test-container.txt
 ```
 
+## Voir aussi
+Si ce tutoriel vous a été utile pour découvrir les bases d'Apptainer, vous pouvez également consulter les pages suivantes afin de mieux vous approprier les outils de la plateforme :
+* [Comment utiliser un code conteneurisé en parallèle ?](/documentation/use/apptainer_parallel/)
+* [Quelles sont les options d'isolation entre un conteneur et sa machine hôte ?](/documentation/use/apptainer-isolation-flags/)
+* [Et pour les paquets Guix ?](/documentation/use/guix_package)
+* [Comment demander de l'aide ?](/documentation/use/ask_help)
+
 </div>
