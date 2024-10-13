@@ -1258,13 +1258,15 @@ th, tr {
             position: sticky;
             top: 6.75rem;
             z-index: 1000;
-            height: calc(80vh - 4.25rem);
+            // height: calc(85vh + 0.25rem);
+            height: auto;
             overflow-y: hidden;
         }
 
         .docs-sidebar-offset {
             top: 7rem;
-            height: calc(80vh - 4.5rem);
+            // height: 85vh;
+            height: auto;
         }
 
         .docs-sidebar-top {
