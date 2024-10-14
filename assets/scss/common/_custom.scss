@@ -1323,13 +1323,13 @@ th, tr {
             position: sticky;
             top: 6.75rem;
             z-index: 1000;
-            height: calc(85vh);
+            height: calc(80vh - 4rem);
             overflow-y: hidden;
         }
 
         .docs-sidebar-offset {
             top: 7rem;
-            height: calc(85vh);
+            height: calc(80vh - 4rem);
         }
 
         .docs-sidebar-top {
@@ -1437,7 +1437,7 @@ th, tr {
 }
 
 .btn-doc-sidebar {
-    position: static;
-    margin-bottom: 25px;
-    // bottom: 30px;
+    position: fixed;
+    margin-top: 20px;
+    width: 14%;
 }
