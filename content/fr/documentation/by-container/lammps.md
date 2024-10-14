@@ -14,7 +14,7 @@ Ce tutoriel détaille l'utilisation de l'image de conteneur du code LAMMPS tél�
 
 Pour plus d'informations sur les conteneurs Apptainer, veuillez consulter la [page dédiée](/about/apptainer/).
 
-Pour rapidement s'approprier les principales commandes d'Apptainer, vous pouvez vous référer à [ce tutoriel](/documentation/use/apptainer_image/).
+Pour rapidement s'approprier les principales commandes d'Apptainer, vous pouvez vous référer à [ce tutoriel](/documentation/use/apptainer-image/).
 
 {{< /callout >}}
 
@@ -49,7 +49,7 @@ apptainer exec $HOME/apptainer-images/lammps.sif mpirun -np <N> lmp_mpi -in <inp
 ```
 
 ## Détail d'utilisation du conteneur LAMMPS
-Cette section présente les différentes manières d'utiliser l'image LAMMPS. Pour plus de détails sur les commandes Apptainer, veuillez vous référer à [ce tutoriel](/documentation/use/apptainer_image/#apptainer--cours-accéléré).
+Cette section présente les différentes manières d'utiliser l'image LAMMPS. Pour plus de détails sur les commandes Apptainer, veuillez vous référer à [ce tutoriel](/documentation/use/apptainer-image/#apptainer--cours-accéléré).
 
 ### Utiliser le conteneur LAMMPS en séquentiel
 Pour exécuter LAMMPS en séquentiel (c'est-à-dire sans parallélisation) sans conteneur, on utiliserait la commande :

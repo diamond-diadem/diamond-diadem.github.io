@@ -1,8 +1,14 @@
-# [Advanced isolation options for Apptainer](#advanced-isolation-options-for-apptainer)
+---
+title: Advanced isolation options for Apptainer
+linkTitle: Advanced isolation options for Apptainer
+weight: 3
+---
+
+<div align="justify">
 
 This page is dedicated to discussions about the isolation of Apptainer containers. This topic is briefly mentioned in most tutorials on the platform; this page delves deeper into the details of isolation with the goal of providing finer control over the sharing between the host and the container.
 
-## [Default behavior of Apptainer](#default-behavior-of-apptainer)
+## Default behavior of Apptainer
 
 As a containerization solution oriented towards high-performance computing, Apptainer is configured by default to facilitate reading and writing input/output data or logs.
 
@@ -24,13 +30,13 @@ It should be noted that, as suggested in the previous paragraph, it is possible 
 
 Similarly, Apptainer allows the container to access all environment variables defined on the host system by default (except for the `$PATH` variable, which is redefined to point to the paths containing the container's executables). The intention is to facilitate ease of use by allowing containerized code to access the necessary environment variables by borrowing values from the host machine. Visualization tools are a relevant example to justify this choice: they require the `$DISPLAY` environment variable to render their interface on the host's graphical resources, and borrowing its value from the host system allows the container to function effectively.
 
-## [Additional isolation](#additional-isolation)
+## Additional isolation
 
 While the previous section summarized Apptainer's default isolation behavior and presented the configuration options available to the system administrator, there are also options that allow the user to have relatively fine control over this behavior.
 
 These options address a variety of needs, which can be grouped into two (non-exclusive) categories. On one hand, you might want to deny the container access to directories that are shared by default with the host machine (for example, to add an extra layer of security and prevent important data from being overwritten). On the other hand, you may want to prevent the transfer of environment variables from the host to the container (for example, because one of the variables defined on the host conflicts with the proper execution of the containerized code).
 
-### [The `--cleanenv` flag](#the---cleanenv-flag)
+### The `--cleanenv` flag
 
 If you want to clean the container's software environment as much as possible, you can add the `--cleanenv` (or `-e`) flag to `apptainer run` or `apptainer exec`.
 
@@ -57,7 +63,7 @@ apptainer run --cleanenv --env DISPLAY=$DISPLAY <visualization-software-image>
 ```
 Determining which variables to set manually (and the value to assign to them) is not always straightforward, but official documentation can be consulted if you wish to adopt this best practice.
 
-### [The `--contain` flag and its alternatives](#the---contain-flag-and-its-alternatives)
+### The `--contain` flag and its alternatives
 
 Another aspect of container isolation is limiting their access to the host machine's directories. For this, there are two dedicated options: `--no-mount` and `--contain`.
 
@@ -109,7 +115,7 @@ apptainer exec --contain --bind $PWD:$HOME <image> <executable> input.file
   # IT WORKS!
 ```
 
-### [The `--containall` flag](#the---containall-flag)
+### The `--containall` flag
 
 This is the final option available for isolating a container from the host machine. The `--containall` (or `-C`) flag can be considered a combination of `--cleanenv` and `--contain`.
 

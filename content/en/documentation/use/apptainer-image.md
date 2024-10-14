@@ -1,5 +1,6 @@
 ---
-title: How to interact with an Apptainer image ?
+title: How to interact with an Apptainer image?
+weight: 1
 ---
 
 <div align="justify">
@@ -108,7 +109,7 @@ WARNING: Environment variable USER already has value [newusername], will not for
 
 
 ## Isolation between the host and the container
-By default, pptainer does not fully isolate the container from the host system, but there are options to alter this behavior at different degrees. These options, and the directories share by default, are extensively discussed in a [dedicated tutorial section](/en/documentation/use-apptainer-image/apptainer-isolation-flags/).
+By default, pptainer does not fully isolate the container from the host system, but there are options to alter this behavior at different degrees. These options, and the directories share by default, are extensively discussed in a [dedicated tutorial section](/en/documentation/use/apptainer-isolation-flags/).
 
 Here, we only present the most general option (`--containall`), which allows to isolate the container's environment and file system from the host at once.
 
@@ -135,7 +136,7 @@ cat $PWD/test-host.txt $PWD/test-container.txt
 ## See also
 If this tutorial helped you to discover the basci usage of Apptainer, you can also take a look at the following pages to better take the platform tools into your own hands:
 * [How to use a containerized code in parallel?](/en/documentation/apptainer-parallel/howto)
-* [What are the options to isolate a container from its host?](/en/documentation/use-apptainer-image/apptainer-isolation-flags)
+* [What are the options to isolate a container from its host?](/en/documentation/use/apptainer-isolation-flags)
 * [What about Guix packages?](/en/documentation/TODO:page-to-come)
 * [How to ask for help?](/en/documentation/TODO:page-to-come)
 

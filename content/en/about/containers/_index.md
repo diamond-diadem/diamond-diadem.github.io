@@ -20,3 +20,30 @@ linkTitle: Containers
 - **Resource management:** containers share the host's operating system kernel, making them lighter than virtual machines that require more system resources.
 
 In summary, containers offer a powerful solution for application deployment, improving the flexibility, reproducibility, portability, and efficiency of development and deployment processes.
+
+<style>
+ /* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+} 
+</style>
+
+ <div class="row">
+  <div class="column">
+    <img alt="cluster map" class="cluster-map" style="width:90%">
+  </div>
+  <div class="column" align="justify">
+
+In practice, you can choose the technical solution you want locally on your machine. For the DIAMOND project, we recommend using both [Apptainer](/en/about/apptainer/) and [Guix](/en/about/guix/). Nevertheless, for clusters or data centres, the solution depends on what is available. Almost half of the French mesocentres and national data centres have a container system available as a standard command (allowing the use of containers). It should be noted, however, that the other half of the mesocentres offer the possibility of loading a container system via the `module load` command (and thus of using containers). On the other hand, the use of Guix is limited to less than $30\%$ of all French data centres. It should be noted that the [MESONET](https://www.mesonet.fr/) project, which aims to pool HPC computing resources across the country, has implemented a solution for using containers on its prototyping cluster. Although not all of the project's clusters are available yet, it is highly likely that they will have a container system.
+
+  </div>
+</div>
