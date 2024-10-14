@@ -14,7 +14,7 @@ This tutorial focuses on using the Quantum Espresso container image available at
 
 For more information on Apptainer containers, please look at [this page](/en/about/apptainer/).
 
-To have a quick look at Apptainer's main commands, you may refer to [this tutorial](/en/documentation/use-apptainer-image/howto/).
+To have a quick look at Apptainer's main commands, you may refer to [this tutorial](/en/documentation/use/apptainer-image/).
 
 {{< /callout >}}
 
@@ -51,7 +51,7 @@ apptainer exec $HOME/apptainer-images/quantum-espresso.sif mpirun -np <N> pw.x -
 ```
 
 ## Detailed usage for the Quantum Espresso container
-This section presents different ways to use the Quantum Espresso image. For more details about Apptainer commands, please look at [this tutorial](/en/documentation/use-apptainer-image/howto/#apptainer--crash-course).
+This section presents different ways to use the Quantum Espresso image. For more details about Apptainer commands, please look at [this tutorial](/en/documentation/use/apptainer-image/#apptainer--crash-course).
 
 ### Using the Quantum Espresso container
 To run Quantum Espresso without any container, one would use the following command:
@@ -117,7 +117,7 @@ apptainer inspect $HOME/apptainer-images/quantum-espresso.sif
 ```
 
 ### Partial or total isolation
-By default, Apptainer does not fully isolate the container from the host system. One can either have partial or total isolation using respectively the flags `--no-mount` or `--no-home` and `--containall` (see [this link](/en/documentation/use-apptainer-image/apptainer-isolation-flags) for more information).
+By default, Apptainer does not fully isolate the container from the host system. One can either have partial or total isolation using respectively the flags `--no-mount` or `--no-home` and `--containall` (see [this link](/en/documentation/use/apptainer-isolation-flags) for more information).
 
 Whenever `--containall` is activated, the directory on the host machine containing Quantum Espresso input-files cannot be accessed from the container!
 

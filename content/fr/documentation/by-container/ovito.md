@@ -14,7 +14,7 @@ Ce tutoriel détaille l'utilisation de l'image de conteneur du code Ovito télé
 
 Pour plus d'informations sur les conteneurs Apptainer, veuillez consulter la [page dédiée](/about/apptainer/).
 
-Pour rapidement s'approprier les principales commandes d'Apptainer, vous pouvez vous référer à [ce tutoriel](/documentation/use/apptainer_image/).
+Pour rapidement s'approprier les principales commandes d'Apptainer, vous pouvez vous référer à [ce tutoriel](/documentation/use/apptainer-image/).
 
 {{< /callout >}}
 
@@ -47,7 +47,7 @@ apptainer run $HOME/apptainer-images/ovito.sif <input.file>
 ```
 
 ## Détail d'utilisation du conteneur Ovito
-Cette section présente les différentes manières d'utiliser l'image Ovito. Pour plus de détails sur les commandes Apptainer, veuillez vous référer à [ce tutoriel](/documentation/use/apptainer_image/#apptainer--cours-accéléré).
+Cette section présente les différentes manières d'utiliser l'image Ovito. Pour plus de détails sur les commandes Apptainer, veuillez vous référer à [ce tutoriel](/documentation/use/apptainer-image/#apptainer--cours-accéléré).
 
 Pour exécuter Ovito sans aucune conteneurisation, on utiliserait la commande :
 

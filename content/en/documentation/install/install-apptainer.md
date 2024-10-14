@@ -1,5 +1,6 @@
 ---
 title: How to install Apptainer ?
+weight: 1
 ---
 
 <div align="justify">

@@ -12,7 +12,7 @@ Si l'image Apptainer que vous voulez utiliser supporte le calcul parallèle, alo
 - le mode [hybride]({{< ref "#hybrid_mode" >}}).
 
 **Remarque**
-> Les commandes Apptainer ci-dessous ont été simplifiées au maximum dans un but de lisibilité. Il est possible de combiner l'utilisation des commandes `mpirun` avec le flag `--containall`, tout en montant des dossiers spécifiques au conteneur avec les flags `--bind` et en renseignant des variables d'environnement `--env`. Les possibilités sont multiples. Nous vous conseillons donc de jeter un oeil à la documentation relative à ces [sujets]({{< ref "/documentation/use/apptainer_image.md" >}}).
+> Les commandes Apptainer ci-dessous ont été simplifiées au maximum dans un but de lisibilité. Il est possible de combiner l'utilisation des commandes `mpirun` avec le flag `--containall`, tout en montant des dossiers spécifiques au conteneur avec les flags `--bind` et en renseignant des variables d'environnement `--env`. Les possibilités sont multiples. Nous vous conseillons donc de jeter un oeil à la documentation relative à ces [sujets]("/documentation/use/apptainer-image").
 
 ## Exemple pratique : image avec OpenMPI
 
