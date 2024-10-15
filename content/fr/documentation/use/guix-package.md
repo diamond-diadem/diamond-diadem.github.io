@@ -1,6 +1,6 @@
 ---
 title: Comment interagir avec un paquet Guix ?
-weight: 4
+weight: 5
 ---
 
 <div align="justify">
