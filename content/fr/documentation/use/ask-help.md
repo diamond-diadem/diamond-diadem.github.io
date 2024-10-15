@@ -1,6 +1,6 @@
 ---
 title: Comment demander de l'aide ou donner un feedback  ?
-weight: 5
+weight: 6
 ---
 
 {{< callout context="note" title="" icon="outline/info-circle" >}}
