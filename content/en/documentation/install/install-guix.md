@@ -43,7 +43,7 @@ If you're interested in this topic, we recommend you have a look at this [articl
 
 ## Install on Windows / MacOS
 
-For Windows users, you can use a [similar solution](/en/documentation/install/apptainer-windows) to that of Apptainer and use Windows Subsystem for Linux (WSL2). 
+For Windows users, you can use a [similar solution](/en/documentation/install/apptainer-windows) to that of Apptainer and use Windows Subsystem for Linux (WSL2). However, installing Guix in WSL is far from trivial. We advise you to follow this [guide](https://gist.github.com/giuliano108/49ec5bd0a9339db98535bc793ceb5ab4).
 
 For Mac OS users, we recommend using a virtual machine or Docker.
 
