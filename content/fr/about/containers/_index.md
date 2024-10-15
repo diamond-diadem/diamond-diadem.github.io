@@ -5,6 +5,8 @@ linkTitle: Conteneurs
 
 <h2 class="about-lead text-center">Environnements légers et isolés incluant tous les outils nécessaires pour exécuter des applications. Ils sont devenus incontournables dans le domaine de l'informatique en raison de leur flexibilité et de leur efficacité.</h2> 
 
+<div align="justify">
+
 **Qu'est-ce qu'un conteneur ?**
 - Un conteneur est une unité d'exécution autonome qui encapsule une application, mais aussi les librairies externes et autres dépendances nécessaires pour son exécution.
 - Il fournit un environnement isolé, garantissant que les applications embarquées fonctionnent de manière identique quel que soit l'hôte sur lequel on les déploie.
@@ -19,6 +21,8 @@ linkTitle: Conteneurs
 - **Gestion des ressources :** les conteneurs partagent le noyau du système d'exploitation de l'hôte, ce qui les rend plus légers que les machines virtuelles qui nécessitent plus de ressources système.
 
 En résumé, les conteneurs offrent une solution puissante pour le déploiement d'applications, améliorant la flexibilité, la reproductibilité, la portabilité et l'efficacité des processus de développement et de déploiement.
+
+</div>
 
 <style>
  /* Three image containers (use 25% for four, and 50% for two, etc) */
