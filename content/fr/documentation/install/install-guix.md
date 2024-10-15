@@ -45,6 +45,6 @@ Si le sujet vous intéresse, nous vous conseillons de jeter un oeil à cet [arti
 
 Pour les utilisateurs et utilisatrices Windows, vous pouvez utiliser une [solution similaire](/documentation/install/apptainer-windows) à celle d'Apptainer et utiliser Windows Subsystem for Linux (WSL2). Attention, l'installation de Guix dans WSL est toutefois loin d'être trivial. Nous vous conseillons de suivre ce [guide](https://gist.github.com/giuliano108/49ec5bd0a9339db98535bc793ceb5ab4).
 
-Pour les utilisateurs et utilisatrices MacOs, il est recommandé d'utiliser une machine virtuelle ou Docker.
+Pour les utilisateurs et utilisatrices MacOs, il est recommandé d'utiliser une machine virtuelle ou Docker. Vous pouvez consulter ce [lien](https://pagure.io/projects/MSG/%2A).
 
 </div>
