@@ -1,5 +1,5 @@
 ---
-title: Aiida tutorial
+title: AiiDA tutorial
 weight: 6
 ---
 
@@ -9,13 +9,13 @@ weight: 6
 
 Before following these instructions, you must have Apptainer installed on your machine; see [this link](/documentation/install/install_apptainer/) for more details.
 
-This tutorial explains how to interact with Aiida's Apptainer image.
+This tutorial explains how to interact with AiiDA's Apptainer image.
 
 {{< /callout >}}
 
 ## Step 0: Before using the image
 
-To be able to use the Aiida Apptainer image, and for the sake of data persistence, you need a specific folder architecture. In short, we recommend that you use this folder architecture:
+To be able to use the AiiDA Apptainer image, and for the sake of data persistence, you need a specific folder architecture. In short, we recommend that you use this folder architecture:
 
 ```bash
 $ ls /path/to/folder/of/your/choice
@@ -30,12 +30,12 @@ $ ls /path/to/folder/of/your/choice
 ```
 
 Here's the long explanation:
-* The `database` folder is needed to store data related to Aiida.
+* The `database` folder is needed to store data related to AiiDA.
 * The `.ssh` folder is needed to store data related to ssh connections.
 * The `postgres_run` folder is needed to run the PostgreSQL service.
 * The `rabbitmq/var/lib/rabbitmq` and `rabbitmq/var/log` folders are needed to run the RabbitMQ service.
 
-Once this folder architecture has been created and Apptainer installed, you are ready to use an Apptainer image of Aiida.
+Once this folder architecture has been created and Apptainer installed, you are ready to use an Apptainer image of AiiDA.
 
 ## Step 1: Download the image you need
 
@@ -47,7 +47,11 @@ apptainer pull aiida_vasp.sif oras://gricad-registry.univ-grenoble-alpes.fr/diam
 
 ## Step 2: Start an instance and access the container
 
-Once you have downloaded the image you want, you are ready to use it. We recommend that you start an Apptainer instance and then access the container using the `shell` command. To start an instance, use the following command
+Once you have downloaded the image you want, you are ready to use it. We recommend that you start an Apptainer instance and then access the container using the `shell` command. 
+
+### Step by step method
+
+To start an instance, use the following command
 
 ```bash
 apptainer instance start \
@@ -70,9 +74,27 @@ apptainer shell instance://{instance_name}
 apptainer exec instance://{instance_name} {commands}
 ```
 
-## Step 3: Configure your Aiida environment
+### Quick method
 
-If this is the **first time** you're using this Aiida Apptainer image, you'll need to set up your Aiida profile and follow this entire step! Otherwise you can go straight to the [next step](#run-workflow) to use the image and start workflows.
+To automate all these steps and ensure that all image services are running (PostgreSQL and RabbitMQ), a bash script is available via this [link](https://gricad-gitlab.univ-grenoble-alpes.fr/diamond/aiida/aiida2apptainer/-/blob/main/bash_script/quick_start.sh?ref_type=heads). Once downloaded, you can run the command:
+
+```bash
+bash ./quick_start.sh --help # to display the various options available
+```
+
+## Step 3: Configure your AiiDA environment (via GUI)
+
+If you're not familiar with the command prompt and AiiDA commands, we recommend you use the GUI developed for the container. Once you've entered the container, run the following command:
+
+```bash
+python3 /GUI/main.py
+```
+
+Once the GUI is open, we recommend you click on the “Step-by-step mode” button and follow the steps. The same steps as described in the next section are carried out, but in a gentler way for a novice user.
+
+## Step 3 bis: Configure your AiiDA environment (via command prompt)
+
+If this is the **first time** you're using this AiiDA Apptainer image, you'll need to set up your AiiDA profile and follow this entire step! Otherwise you can go straight to the [next step](#run-workflow) to use the image and start workflows.
 
 ### Set-up a user profile
 
@@ -100,7 +122,7 @@ There are already default values to help you choose your own environment variabl
 bash /tmp/config_env.sh
 ```
 
-This allows you to fully configure your Aiida environment by customising the default configuration files supplied with the image. This makes it easier to install code, compute machines or set up an ssh connection.
+This allows you to fully configure your AiiDA environment by customising the default configuration files supplied with the image. This makes it easier to install code, compute machines or set up an ssh connection.
 
 ### Set-up a transparent SSH connection to Gricad clusters
 
@@ -111,7 +133,7 @@ The first thing you need to do is generate an RSA key. To do this, run the comma
 ssh-keygen
 ```
 
-> It's important to leave the password blank so that Aiida can access Gricad's clusters with confidence.
+> It's important to leave the password blank so that AiiDA can access Gricad's clusters with confidence.
 
 Next, copy the file `/tmp/workspace/ssh/config` to the folder `~/.ssh/`. Then, to complete the configuration of the transparent SSH connection, you need to copy the RSA key to the front-ends and clusters using the following commands:
 
@@ -150,7 +172,7 @@ To check that the installation has been done correctly, you can run the `verdi c
 
 ## Step 4: Start a workflow
 
-Once the Aiida environment is set up correctly, you're ready to use the image and configure workflows. As mentioned above, you can use the `shell` or `exec` commands to interact with the container. We recommend that you use the `shell` command to access the container. You should also copy your workflow to the `/tmp' folder.
+Once the AiiDA environment is set up correctly, you're ready to use the image and configure workflows. As mentioned above, you can use the `shell` or `exec` commands to interact with the container. We recommend that you use the `shell` command to access the container. You should also copy your workflow to the `/tmp' folder.
 
 To start a workflow, simply run the command :
 
@@ -172,7 +194,7 @@ apptainer instance stop instance_name
 
 ### Include data for a code
 
-Codes and workflows need data to work properly. For example, VASP needs interatomic potentials. In practice, you can install data (in the same way that you installed the computer and the code). Aiida allows you to install data by unpacking a `.tar` or `.tar.gz` file. This means that you need to mount the `/tmp` folder on the container when setting up your environment. In practice, all you need to do is add the line `-B /tmp:/tmp \` when starting an instance. You can then use the following command:
+Codes and workflows need data to work properly. For example, VASP needs interatomic potentials. In practice, you can install data (in the same way that you installed the computer and the code). AiiDA allows you to install data by unpacking a `.tar` or `.tar.gz` file. This means that you need to mount the `/tmp` folder on the container when setting up your environment. In practice, all you need to do is add the line `-B /tmp:/tmp \` when starting an instance. You can then use the following command:
 
 ```bash
 verdi data vasp-potcar uploadfamily --path=/tmp/{archive} --name=PBE.54 --description="PBE potentials version 54"
@@ -191,6 +213,6 @@ If you want to start workflows on Gricad clusters, you need to specify a PERSEUS
 Here is a list of all the known issues so far:
 
 - No backward compatibility of Apptainer images from version **1.3.X** to version **1.2.X**. Building an image with apptainer **v1.3.X** will prevent it from being downloaded from the `gitlab-gricad` registry with apptainer **v1.2.X**.
-- The postgresql service won't start is the 5432 port is already in use on that machine. In this case, it is impossible to create a profile for Aiida.
+- The postgresql service won't start is the 5432 port is already in use on that machine. In this case, it is impossible to create a profile for AiiDA.
 
 </div>
