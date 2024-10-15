@@ -5,6 +5,8 @@ linkTitle: Containers
 
 <h2 class="about-lead text-center">Lightweight and isolated environments including all the tools necessary to run applications. They have become essential in the field of computing due to their flexibility and efficiency.</h2>
 
+<div align="justify">
+
 **What is a container?**
 
 - A container is a self-contained execution unit that encapsulates an application, as well as external libraries and other dependencies necessary for its execution.
@@ -20,6 +22,8 @@ linkTitle: Containers
 - **Resource management:** containers share the host's operating system kernel, making them lighter than virtual machines that require more system resources.
 
 In summary, containers offer a powerful solution for application deployment, improving the flexibility, reproducibility, portability, and efficiency of development and deployment processes.
+
+</div>
 
 <style>
  /* Three image containers (use 25% for four, and 50% for two, etc) */
