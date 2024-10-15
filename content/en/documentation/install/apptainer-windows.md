@@ -56,6 +56,6 @@ To account for potential performance fluctuations due to CPU load, the calculati
    <img alt="WSL2 overhead" class="windows-overhead">
 </div>
 
-Considering these average times and standard deviations, it seems that the overhead associated with WSL2 is significant. This conclusion is supported by verifying the compatibility of these samples with the hypothesis of identical average times. A very small p-value ($2.5 \times 10^{-6}$) was obtained (using the `ttest_rel` function from the Python `scipy.stats` module), strongly suggesting that the measured times follow different distributions and that virtualization with WSL2 results in a noticeable increase in execution time compared to a Linux reference distribution.
+Considering these average times and standard deviations, it seems that the overhead associated with WSL2 is significant. This conclusion is supported by verifying the compatibility of these samples with the hypothesis of identical average times. A very small *p*-value ($2.5 \times 10^{-6}$) was obtained (using the `ttest_rel` function from the Python `scipy.stats` module), strongly suggesting that the measured times follow different distributions and that virtualization with WSL2 results in a noticeable increase in execution time compared to a Linux reference distribution.
 
 </div>
