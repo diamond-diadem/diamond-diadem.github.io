@@ -389,11 +389,21 @@ u {
     width: 100%;
 }
 
+.bench-lammps-dahu {
+    content: url(images/bench_lammps_dahu_light.png);
+    width: 100%;
+}
+
 @include color-mode(dark) {
     .windows-overhead{
         content: url(images/overhead-WSL2-dark.png)
     }
+    .bench-lammps-dahu{
+        content: url(images/bench_lammps_dahu_dark.png)
+    }
 }
+
+
 
 // // // Codes pages top logos // // //
 
