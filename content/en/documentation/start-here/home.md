@@ -11,7 +11,7 @@ toc: false
 
 - <h3><a href="/en/documentation/use/apptainer-image/">Using an Apptainer image</a></h3>
 
-- <h3><a href="/en/documentation/apptainer-parallel/howto/">Apptainer in parallel</a></h3>
+- <h3><a href="/en/documentation/use/apptainer_parallel/">Apptainer in parallel</a></h3>
 
 - <h3>Specific tutorials, by image</h3>
 

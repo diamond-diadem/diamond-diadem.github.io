@@ -29,7 +29,7 @@ wsl --set-default Ubuntu-24-04
 
 Notez que, pour l'installation d'Ubuntu 24.04, vous aurez à renseigner un identifiant ainsi qu'un mot de passe utilisateur.
 
-Dès lors, on peut lancer WSL2 depuis n'importe quel PowerShell ou terminal Windows grâce à la commande
+Dès lors, on peut lancer WSL2 depuis n'importe quel PowerShell ou terminal Windows grâce à la commande :
 
 ```bash
 wsl.exe

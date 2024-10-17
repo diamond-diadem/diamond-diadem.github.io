@@ -39,7 +39,7 @@ Once this folder architecture has been created and Apptainer installed, you are 
 
 ## Step 1: Download the image you need
 
-The first thing to do is go to the `Deploy` section of this [gitlab repository](https://gricad-gitlab.univ-grenoble-alpes.fr/diamond/aiida/aiida2apptainer). Then select the image you are interested in (`aiida_vasp.sif` for example) and download it using the command :
+The first thing to do is go to the `Deploy` section of this [Gitlab repository](https://gricad-gitlab.univ-grenoble-alpes.fr/diamond/aiida/aiida2apptainer). Then select the image you are interested in (`aiida_vasp.sif` for example) and download it using the command :
 
 ```bash
 apptainer pull aiida_vasp.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/aiida/aiida2apptainer/aiida_vasp.sif:latest
@@ -106,7 +106,7 @@ verdi profile setdefault {your_profile}
 verdi config set warnings.rabbitmq_version false
 ```
 
-> The last command disables RabbitMQ warnings for the user your_profile.
+> The last command disables RabbitMQ warnings for the user `your_profile`.
 
 ### Configure image environment
 
@@ -156,7 +156,7 @@ verdi computer setup -n --config /tmp/workspace/yml_files/computers/setup/{compu
 verdi computer configure {transport} -n --config /tmp/workspace/yml_files/computers/config/{computer}.yml {computer_name}
 ```
 
-> Here you need to change {computer}, {transport} and {computer_name} according to what you want to select. The {transport} parameter must be chosen between `core.local` or `core.ssh` and is specified in the `/tmp/workspace/yml_files/computers/setup/{computer}.yml` file.
+> Here you need to change `{computer}`, `{transport}` and `{computer_name}` according to what you want to select. The `{transport}` parameter must be chosen between `core.local` or `core.ssh` and is specified in the `/tmp/workspace/yml_files/computers/setup/{computer}.yml` file.
 
 To check that the installation has been done correctly, you can run the `verdi computer list` command.
 
@@ -180,7 +180,7 @@ To start a workflow, simply run the command :
 verdi run path/to/your/workflow/run.py
 ```
 
-> Before starting a workflow, you must carefully check the Python script and configure the values for {code_name} and {username} correctly.
+> Before starting a workflow, you must carefully check the Python script and configure the values for `{code_name}` and `{username}` correctly.
 
 ## Step 5: Stop an instance 
 
@@ -200,7 +200,7 @@ Codes and workflows need data to work properly. For example, VASP needs interato
 verdi data vasp-potcar uploadfamily --path=/tmp/{archive} --name=PBE.54 --description="PBE potentials version 54"
 ```
 
-To check that the installation has been done correctly, you can run the command `verdi data vasp-potcar listfamilies`. The output of this command must **not** be empty.
+To check that the installation has been done correctly, you can run the command `verdi data vasp-potcar listfamilies`. The output of this command **must not be empty**.
 
 > Once you've installed the data, we recommend that you stop the instance and start a new one, without mounting the `/tmp` folder on the container.
 

@@ -10,7 +10,7 @@ weight: 3
 
 In preamble, you need to have Apptainer installed on your machine; see [this link](/en/documentation/install-apptainer/howto/) for more details.
 
-This tutorial focuses on using the Quantum Espresso container image available at [this address](/en/codes/visualisation/ovito/). By following this link, you will get an Apptainer image (`.sif` file format) allowing you to create containers running Quantum Espresso.
+This tutorial focuses on using the Quantum Espresso container image available at [this address](/en/codes/scientific-computing/quantum-espresso/). By following this link, you will get an Apptainer image (`.sif` file format) allowing you to create containers running Quantum Espresso.
 
 For more information on Apptainer containers, please look at [this page](/en/about/apptainer/).
 
@@ -101,7 +101,7 @@ apptainer exec --env OMP_NUM_THREADS=2 $HOME/apptainer-images/quantum-espresso.s
 
 In the previous command, we use the `mpirun` command provided by the embedded version of **OpenMPI** within the container to communicate directly with the hardware of the host machine. This *embedded* usage has a major advantage, as we only use the tools installed in the container: it works on all host machines without requiring installation. However, the version of **OpenMPI** within the container is not built to run optimally on all host machines, but to provide satisfactory performance on as wide a range of machines as possible. Typically, in the case of Quantum Espresso, we observe that CPU usage peaks between 85 and 90% with embedded parallelization. Moreover, this parallelization mode also does not allow distributed computing across multiple compute nodes. While ease of portability at the expense of slightly degraded performance may be suitable for conducting simple tests on a local machine, this is not the case on a high-performance computing infrastructure.
 
-In cases where numerical performance is crucial, it is recommended to use a hybrid parallelization mode, where we use the **OpenMPI** version of the host machine as an intermediary between that of the container and the hardware of the host machine. For more details, please refer to the [dedicated page](/en/documentation/apptainer-parallel/howto/).
+In cases where numerical performance is crucial, it is recommended to use a hybrid parallelization mode, where we use the **OpenMPI** version of the host machine as an intermediary between that of the container and the hardware of the host machine. For more details, please refer to the [dedicated page](/en/documentation/use/apptainer-parallel/).
 
 ### Display help
 To display the container's help message (supposing the image is stored at `$HOME/apptainer-images/quantum-espresso.sif`):

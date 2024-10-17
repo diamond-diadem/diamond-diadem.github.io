@@ -27,7 +27,9 @@ Quand vous utilisez Guix, l'ensemble des paquets disponibles proviennent du cana
 
 Une fois ceci fait, la commande `guix pull` va mettre à jour la collection de paquets à partir du canal par défaut (GNU Guix) et du canal Diamond (guix-packages).
 
-> **Attention** Une fois `guix pull` terminé, il est important d'exécuter les commandes suivantes, pour être sûr d'utiliser la commande `guix` à jour :
+**Attention** 
+>
+> Une fois `guix pull` terminé, il est important d'exécuter les commandes suivantes, pour être sûr d'utiliser la commande `guix` à jour :
 >
 >```
 >GUIX_PROFILE="$HOME/.config/guix/current"

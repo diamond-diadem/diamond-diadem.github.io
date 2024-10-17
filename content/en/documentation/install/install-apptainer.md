@@ -127,6 +127,6 @@ Please note the global `apptainer` command will not be available with this insta
 
 For Windows user, a dedicated documentation page can be found [here](/en/documentation/install-apptainer/apptainer-windows).
 
-For Mac users, it is recommended to use Lima via Homebrew on the [Apptainer documentation](apptainer.org/docs/admin/main/installation.html#mac).
+For Mac users, it is recommended to use Lima via Homebrew on the [Apptainer documentation](https://apptainer.org/docs/admin/main/installation.html#mac).
 
 </div>
