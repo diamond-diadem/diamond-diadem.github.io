@@ -27,7 +27,9 @@ When using Guix, all available packages come from the default guix channel: [GNU
 
 Once this is done, the `guix pull` command will update the package collection from the standard channel (GNU Guix) and the Diamond channel (guix-packages).  
 
-> **Caution** Once `guix pull` is complete, it is important to run the following commands to ensure that you are using the latest `guix` command:
+**Caution** 
+>
+> Once `guix pull` is complete, it is important to run the following commands to ensure that you are using the latest `guix` command:
 >
 >```bash
 >GUIX_PROFILE="$HOME/.config/guix/current"
@@ -54,7 +56,7 @@ guix shell --pure -m mylammps_mpi_manifest.scm
 
 ### The `guix time-machine` command
 
-Some packages require a specific version for a dependency. However, if you have run the `guix pull` command, then you have the latest versions of all packages. You may therefore find yourself in a situation where the code you want to use will not build. Don't panic, Guix has a ready-made solution for these problems! The `guix time-machine` command allows you to go back to a previous commit and thus access previous versions of dependencies. In practice, it is recommended to use a `channels.scm` file which contains the information about the desired commit. Again, several examples of channels files are available in the Diamond project's gitlab repository: [guix-packages](https://gricad-gitlab.univ-grenoble-alpes.fr/diamond/guix-packages/-/tree/master/manifests/with_time_machine?ref_type=heads).
+Some packages require a specific version of one or more dependencies. However, if you have run the `guix pull` command, then you have the latest versions of all packages. So you may find yourself in a situation where the code you want to use won't build. Don't panic, Guix has a ready-made solution for these problems! The `guix time-machine` command allows you to revert to a previous commit, and thus access earlier versions of dependencies. In practice, it is recommended to use a `channels.scm` file containing information about the desired commit. Again, several examples of channel files are available in the Diamond project's Gitlab repository: [guix-packages](https://gricad-gitlab.univ-grenoble-alpes.fr/diamond/guix-packages/-/tree/master/manifests/with_time_machine?ref_type=heads).
 
 A typical use of the `guix time-machine' command can therefore be summarised in the following line
 

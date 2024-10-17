@@ -26,7 +26,7 @@ This tutorial explains the various steps you need to take to report a bug, reque
   content: "";
   clear: both;
   display: table;
-} 
+}
 </style>
 
  <div class="row">
@@ -72,27 +72,27 @@ On the other hand, we ask you to select a **template** and a **label** according
 To report a bug or ask for help using the platform's tools, select the `bug_report` template in the "Description" section.
 
 Next, we ask you to provide as much detail as possible about your problem:
-- What code / workflow is affected?
+- What code/workflow is affected?
 - What is the expected behaviour?
 - What is the actual behaviour (feel free to provide logs or screenshots)?
 - What steps do you need to take to reproduce the problem? 
 - What environment are you working in (OS, Apptainer version, container used, Guix commit, etc.)?
 
-### Request new functionality in existing containers / workflows
+### Request new functionality in existing containers/workflows
 
-You can request a new feature in an existing container / workflow. You will need to select the `feature_request` template in the "Description" section.
+You can request a new feature in an existing container/workflow. You will need to select the `feature_request` template in the "Description" section.
 
 Next, we ask you to describe your request in as much detail as possible:
-- What code / workflow does it affect?
+- What code/workflow does it affect?
 - What functionality do you want?
 - What will you be able to do with this functionality?  
 
-### Request a new code / workflow
+### Request a new code/workflow
 
-You can also make a containerisation or packaging request for code / workflow. You will need to select the `code_container_request` template in the "Description" section.
+You can also make a containerisation or packaging request for code/workflow. You will need to select the `code_container_request` template in the "Description" section.
 
 Next, we ask you to describe your request in as much detail as possible:
-- What code / workflow do you want?
+- What code/workflow do you want?
 - What are the dependencies?
 - What functionality do you want?
 - Is the code/workflow free of use? 

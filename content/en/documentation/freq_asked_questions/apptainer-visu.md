@@ -13,6 +13,10 @@ If you do not have superuser rights on your machine, you may have problems autho
 ssh +SI:localhost:<username> # to connect to the Dahu cluster, for example
 ```
 
-> Once you have finished using the container, we recommend that you restore your session to its original behaviour using the command `xhost -SI:localhost:<username>`.
+Once you have finished using the container, we recommend that you restore your session to its original behaviour using the command `xhost -SI:localhost:<username>`.
+
+**Note**
+>
+> At the moment, this problem has only been reported for sessions based on `wayland`. Consequently, the proposed solution could only be tested in this particular case. If you encounter this problem under other conditions and/or the above solution does not work for you, please [report it](/documentation/use/ask-help/).
 
 </div>

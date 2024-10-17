@@ -9,7 +9,7 @@ weight: 1
 
 In preamble, you need to have Apptainer installed on your machine ; see [this link](/en/documentation/install-apptainer/howto/) for more details.
 
-This tutorial explains the main ways to interact with an Apptainer image in order to generate and manage containers. Instructions presented here are in principle also valid for any other Apptainer container. A tailor-made image dedicated to the present tutorial is available at [this address](/en/codes/scientific-computing/lammps/). By following this link, you will get an Apptainer image (`.sif` file format) that will allow you to create containers.
+This tutorial explains the main ways to interact with an Apptainer image in order to generate and manage containers. Instructions presented here are in principle also valid for any other Apptainer container.
 
 {{< /callout >}}
 
@@ -17,7 +17,13 @@ This tutorial explains the main ways to interact with an Apptainer image in orde
 
 <iframe class="tuto-video" src="https://www.youtube.com/embed/CPEsOTpOcic?si=59P2En0ztmJ0ykwu&cc_lang_pref=en&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen ></iframe>
 
-The image you downloaded is a relocatable and renamable file we recommend putting in a dedicated directory to easily find it. While it can be any directory, in this tutorial we will assume you put it in `$HOME/apptainer-images` :
+A custom image dedicated to the practical application of this tutorial is available by typing the following command
+
+```bash
+apptainer pull tutorial.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/tutorial.sif:latest
+```
+
+The result is an Apptainer image (`.sif` file format). This image is a relocatable and renameable file, and it is advisable to place it in a dedicated directory for easy retrieval; this can be any directory, and for the purposes of this tutorial we'll assume you have placed it in a directory called `$HOME/apptainer-images`:
 
 ```bash
 mkdir -p $HOME/apptainer-images
