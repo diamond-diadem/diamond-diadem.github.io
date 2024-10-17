@@ -9,13 +9,19 @@ weight: 1
 
 En préalable de ces explications, il est nécessaire d'avoir installé Apptainer sur votre machine ; voir [ce lien](/documentation/install/install_apptainer/) pour plus de détails.
 
-Ce tutoriel explicite les principales commandes permettant d'interagir avec une image Apptainer pour générer et manipuler des conteneurs. Les instructions présentées ici sont en principe valables pour tout conteneur Apptainer. Une image sur mesure dédiée à la mise en pratique de ce tutoriel est disponible à [cette adresse](/codes/scientific-computing/lammps/). En suivant ce lien, vous récupérez une image Apptainer (format de fichier `.sif`) qui vous permettra de créer des conteneurs.
+Ce tutoriel explicite les principales commandes permettant d'interagir avec une image Apptainer pour générer et manipuler des conteneurs. Les instructions présentées ici sont en principe valables pour tout conteneur Apptainer.
 
 {{< /callout >}}
 
 <iframe class="tuto-video" src="https://www.youtube.com/embed/CPEsOTpOcic?si=59P2En0ztmJ0ykwu&cc_lang_pref=fr&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen ></iframe>
 
-L'image que vous avez téléchargée est un fichier relocalisable et renommable, qu'il est recommandé de placer dans un répertoire dédié pour facilement la retrouver ; celui-ci peut-être quelconque, et dans le cadre de ce tutoriel nous assumerons que vous l'avez placée dans un répertoire nommé `$HOME/apptainer-images` :
+ Une image sur mesure dédiée à la mise en pratique de ce tutoriel est disponible en tapant la commande suivante :
+
+```bash
+ apptainer pull tutorial.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/tutorial.sif:latest
+ ```
+
+Ainsi, vous récupérez une image Apptainer (format de fichier `.sif`). Cette image est un fichier relocalisable et renommable, qu'il est recommandé de placer dans un répertoire dédié pour facilement la retrouver ; celui-ci peut-être quelconque, et dans le cadre de ce tutoriel nous assumerons que vous l'avez placée dans un répertoire nommé `$HOME/apptainer-images` :
 
 ```bash
 mkdir -p $HOME/apptainer-images
