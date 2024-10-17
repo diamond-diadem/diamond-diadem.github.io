@@ -35,11 +35,11 @@ Voici la longue explication :
 * Le dossier `postgres_run` est nécessaire pour l'exécution du service PostgreSQL.
 * Les dossiers `rabbitmq/var/lib/rabbitmq` et `rabbitmq/var/log` sont nécessaires pour l'exécution du service RabbitMQ.
 
-Une fois cette architecture de dossier créé et Apptainer installé, vous êtes prêt à utiliser une image Apptainer d'AiiDA.
+Une fois cette architecture de dossier créée et Apptainer installé, vous êtes prêt à utiliser une image Apptainer d'AiiDA.
 
 ## Étape 1 : Télécharger l'image dont vous avez besoin
 
-La première chose à faire est de se rendre dans la section `Deploy` de ce [dépôt gitlab](https://gricad-gitlab.univ-grenoble-alpes.fr/diamond/aiida/aiida2apptainer). Sélectionnez ensuite l'image qui vous intéresse (`aiida_vasp.sif` par exemple) et téléchargez la via la commande :
+La première chose à faire est de se rendre dans la section `Deploy` de ce [dépôt Gitlab](https://gricad-gitlab.univ-grenoble-alpes.fr/diamond/aiida/aiida2apptainer). Sélectionnez ensuite l'image qui vous intéresse (`aiida_vasp.sif` par exemple) et téléchargez la via la commande :
 
 ```bash
 apptainer pull aiida_vasp.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/aiida/aiida2apptainer/aiida_vasp.sif:latest
@@ -47,7 +47,7 @@ apptainer pull aiida_vasp.sif oras://gricad-registry.univ-grenoble-alpes.fr/diam
 
 ## Étape 2 : Démarrer une instance et accéder au conteneur
 
-Une fois l'image souhaitée téléchargée, vous pouvez l'utiliser. Nous recommandons de démarrer une instance Apptainer, puis d'accéder au conteneur avec la commande `shell`. 
+Une fois l'image souhaitée téléchargée, vous pouvez l'utiliser. Nous recommandons de démarrer une instance Apptainer, puis d'accéder au conteneur avec la commande `shell`.
 
 ### Méthode pas à pas
 
@@ -76,7 +76,7 @@ apptainer exec instance://{instance_name} {commands}
 
 ### Méthode rapide
 
-Pour automatiser toutes ces étapes et s'assurer que tous les services de l'image fonctionnent (PostgreSQL et RabbitMQ), un script bash est disponible via ce [lien](https://gricad-gitlab.univ-grenoble-alpes.fr/diamond/aiida/aiida2apptainer/-/blob/main/bash_script/quick_start.sh?ref_type=heads). Une fois télécharger, vous pouvez exécuter la commande :
+Pour automatiser toutes ces étapes et s'assurer que tous les services de l'image fonctionnent (PostgreSQL et RabbitMQ), un script bash est disponible via ce [lien](https://gricad-gitlab.univ-grenoble-alpes.fr/diamond/aiida/aiida2apptainer/-/blob/main/bash_script/quick_start.sh?ref_type=heads). Une fois celui-ci téléchargé, vous pouvez exécuter la commande :
 
 ```bash
 bash ./quick_start.sh --help # pour voir les différentes options disponibles
@@ -84,7 +84,7 @@ bash ./quick_start.sh --help # pour voir les différentes options disponibles
 
 ## Étape 3 : Configurer votre environnement AiiDA (via le GUI)
 
-Si vous n'êtes pas familier avec l'invite de commande et les commandes AiiDA, nous vous recommandons d'utiliser l'interface graphique développé pour le conteneur. Une fois que vous êtes entré dans celui-ci, exécutez la commande suivante :
+Si vous n'êtes pas familier avec l'invite de commande et les commandes AiiDA, nous vous recommandons d'utiliser l'interface graphique développée pour le conteneur. Une fois que vous êtes entré dans celui-ci, exécutez la commande suivante :
 
 ```bash
 python3 /GUI/main.py
@@ -106,7 +106,7 @@ verdi profile setdefault {your_profile}
 verdi config set warnings.rabbitmq_version false
 ```
 
-> La dernière commande permet de désactiver les warnings de RabbitMQ pour l'utilisateur your_profile.
+> La dernière commande permet de désactiver les warnings de RabbitMQ pour l'utilisateur `your_profile`.
 
 ### Configurer l'environnement de l'image
 
@@ -128,12 +128,12 @@ Cela permet de configurer entièrement votre environnement AiiDA en personnalisa
 
 Cette partie est prévue pour les personnes qui possèdent un compte PERSEUS et sont affectés à un projet valide. Si ce n'est pas le cas et que vous avez besoin d'utiliser les clusters de Gricad, veuillez consulter ce [lien](https://gricad-doc.univ-grenoble-alpes.fr/services/).
 
-La première chose à faire est de générer une clé RSA. Pour ce faire, exécutez la commande : 
+La première chose à faire est de générer une clé RSA. Pour ce faire, exécutez la commande :
 ```bash
 ssh-keygen
 ```
 
-> Il est primordiale de laisser un mot de passe vide pour qu'AiiDA puisse accéder aux clusters de Gricad sans soucis.
+> Il est primordial de laisser un mot de passe vide pour qu'AiiDA puisse accéder aux clusters de Gricad sans soucis.
 
 Ensuite, il vous suffit de copier le fichier `/tmp/workspace/ssh/config` dans le dossier `~/.ssh/`. Puis, pour finaliser la configuration de la connexion SSH transparente, vous devez copier la clé RSA sur les frontales et les clusters avec les commandes suivantes :
 
@@ -156,7 +156,7 @@ verdi computer setup -n --config /tmp/workspace/yml_files/computers/setup/{compu
 verdi computer configure {transport} -n --config /tmp/workspace/yml_files/computers/config/{computer}.yml {computer_name}
 ```
 
-> Ici, vous devez changer {computer}, {transport} et {computer_name} par rapport à ce que vous voulez sélectionner. Le paramètre {transport} doit être choisi parmi `core.local` ou `core.ssh` et est renseigné dans le fichier `/tmp/workspace/yml_files/computers/setup/{computer}.yml`.
+> Ici, vous devez changer `{computer}`, `{transport}` et `{computer_name}` par rapport à ce que vous voulez sélectionner. Le paramètre `{transport}` doit être choisi parmi `core.local` ou `core.ssh` et est renseigné dans le fichier `/tmp/workspace/yml_files/computers/setup/{computer}.yml`.
 
 Pour vérifier que l'installation se soit correctement déroulée, vous pouvez exécuter la commande `verdi computer list`.
 
@@ -172,7 +172,7 @@ Pour vérifier que l'installation se soit correctement déroulée, vous pouvez e
 
 ## Étape 4 : Lancer un workflow
 
-Une fois l'environnement AiiDA configuré correctement, vous êtes prêt à utiliser l'image et configurer des workflows. Comme précisez plus haut, vous pouvez utiliser les commandes `shell` ou `exec` pour interagir avec le conteneur. Nous recommandons l'utilisation de la commande `shell`pour accéder au conteneur. Il faut également copier votre workflow dans le dossier `/tmp`.
+Une fois l'environnement AiiDA configuré correctement, vous êtes prêt à utiliser l'image et configurer des workflows. Comme précisé plus haut, vous pouvez utiliser les commandes `shell` ou `exec` pour interagir avec le conteneur. Nous recommandons l'utilisation de la commande `shell`pour accéder au conteneur. Il faut également copier votre workflow dans le dossier `/tmp`.
 
 Pour lancer un workflow, il vous suffit d'exécuter la commande :
 
@@ -180,9 +180,9 @@ Pour lancer un workflow, il vous suffit d'exécuter la commande :
 verdi run path/to/your/workflow/run.py
 ```
 
-> **Attention!** Avant de lancer un workflow, vous devez vérifier soigneusement le script python et configurer correctement les valeurs pour  {code_name} et {username}.
+> **Attention!** Avant de lancer un workflow, vous devez vérifier soigneusement le script python et configurer correctement les valeurs pour `{code_name}` et `{username}`.
 
-## Étape 5 : Arrêter une instance 
+## Étape 5 : Arrêter une instance
 
 Une fois que vous en avez fini avec l'image Apptainer, il faut arrêter l'instance Apptainer. Pour ce faire, vous devez exécuter la commandes suivante :
 
@@ -200,13 +200,13 @@ Des codes et des workflows requièrent des données pour fonctionner correctemen
 verdi data vasp-potcar uploadfamily --path=/tmp/{archive} --name=PBE.54 --description="PBE potentials version 54"
 ```
 
-Pour vérifier que l'installation se soit dérouler correctement, vous pouvez exécuter la commande `verdi data vasp-potcar listfamilies`. La sortie de cette commande **ne** doit **pas** être vide.
+Pour vérifier que l'installation se soit déroulée correctement, vous pouvez exécuter la commande `verdi data vasp-potcar listfamilies`. La sortie de cette commande **ne doit pas être vide**.
 
-> une fois que vous avez installer les données, nous vous recommandons d'arrêter l'instance et d'en démarrer une nouvelle sans monter le dossier `/tmp` au conteneur.
+> Une fois que vous avez installé les données, nous vous recommandons d'arrêter l'instance et d'en démarrer une nouvelle sans monter le dossier `/tmp` au conteneur.
 
 ### Lancer un workflow sur les clusters de Gricad
 
-Vous devez spécifier un projet PERSEUS si vous voulez lancer des workflows sur les clusters de Gricad; Pour ce faire, vous pouvez le renseigner en tant que votre que nom d'utilisateur dans le workflow python.
+Vous devez spécifier un projet PERSEUS si vous voulez lancer des workflows sur les clusters de Gricad ; pour ce faire, vous pouvez le renseigner en tant que votre que nom d'utilisateur dans le workflow python.
 
 ## Problèmes connus
 

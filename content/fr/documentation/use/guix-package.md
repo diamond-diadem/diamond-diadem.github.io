@@ -7,7 +7,7 @@ weight: 5
 
 {{< callout context="note" title="" icon="outline/info-circle" >}}
 
-En préalable de ces explications, il est nécessaire d'avoir installé Guix sur votre machine ; voir [ce lien](/documentation/install/install_guix/) pour plus de détails.
+En préalable de ces explications, il est nécessaire d'avoir installé Guix sur votre machine ; voir [ce lien](/documentation/install/install-guix/) pour plus de détails.
 
 Ce tutoriel explicite les principales commandes permettant d'interagir avec les paquets Guix pour générer et interagir avec des environnements logiciels temporaires.
 
@@ -15,7 +15,7 @@ Ce tutoriel explicite les principales commandes permettant d'interagir avec les 
 
 ## Comment accéder aux paquets diamond ?
 
-Quand vous utiliser guix, l'ensemble des paquets disponibles proviennent du canal guix par défaut : [GNU Guix](https://hpc.guix.info/browse). Cependant, il est possible d'ajouter des *canaux* pour étendre la liste des paquets disponible. Dans le cadre du projet DIAMOND, certains codes ont été packagés via Guix et son disponible dans le canal [guix-packages](https://gricad-gitlab.univ-grenoble-alpes.fr/diamond/guix-packages). Pour ajouter ce canal précis et donc pouvoir installer les paquets à l'aide de la commande `guix install`, il faut créer un fichier `~/.config/guix/channels.scm` sur votre machine ou sur l'infrastructure HPC que vous utiliserez. Ce fichier doit contenir les lignes suivantes : 
+Quand vous utilisez Guix, l'ensemble des paquets disponibles proviennent du canal guix par défaut : [GNU Guix](https://hpc.guix.info/browse). Cependant, il est possible d'ajouter des *canaux* pour étendre la liste des paquets disponible. Dans le cadre du projet DIAMOND, certains codes ont été packagés via Guix et son disponible dans le canal [guix-packages](https://gricad-gitlab.univ-grenoble-alpes.fr/diamond/guix-packages). Pour ajouter ce canal précis et donc pouvoir installer les paquets à l'aide de la commande `guix install`, il faut créer un fichier `~/.config/guix/channels.scm` sur votre machine ou sur l'infrastructure HPC que vous utiliserez. Ce fichier doit contenir les lignes suivantes :
 
 ```
 ;; Add gricad packages to those Guix provides.
@@ -25,9 +25,9 @@ Quand vous utiliser guix, l'ensemble des paquets disponibles proviennent du cana
       %default-channels)
 ```
 
-Une fois ceci fait, la commande `guix pull` vas mettre à jour la collection de paquets à partir du canal par défaut (GNU Guix) et du canal Diamond (guix-packages).  
+Une fois ceci fait, la commande `guix pull` va mettre à jour la collection de paquets à partir du canal par défaut (GNU Guix) et du canal Diamond (guix-packages).
 
-> **Attention** Une fois `guix pull` terminé, il est important d'exécutez les commandes suivantes, pour être sûr d'utiliser la commande `guix` à jour :  
+> **Attention** Une fois `guix pull` terminé, il est important d'exécuter les commandes suivantes, pour être sûr d'utiliser la commande `guix` à jour :
 >
 >```
 >GUIX_PROFILE="$HOME/.config/guix/current"
@@ -54,7 +54,7 @@ guix shell --pure -m mylammps_mpi_manifest.scm
 
 ### La commande `guix time-machine`
 
-Certains paquets requiert une version spécifique pour une dépendance. Cependant, si vous avez exécutez la commande `guix pull`, alors vous disposez des dernières versions de l'ensemble des paquets. Vous pouvez donc vous retrouvez dans un cas où le code que vous voulez utiliser ne se construit pas. Pas de panique, Guix a une solution tout faîte pour ces problèmes ! En effet, la commande `guix time-machine` vous permet de revenir à un commit précèdent, et donc d'avoir accès à des versions précédentes des dépendances. En pratique, il est recommandé d'utiliser un fichier `channels.scm` qui contient les informations relatives au commit voulu. Encore une fois, plusieurs exemples de fichiers channels sont disponible sur le dépôt gitlab du projet Diamond : [guix-packages](https://gricad-gitlab.univ-grenoble-alpes.fr/diamond/guix-packages/-/tree/master/manifests/with_time_machine?ref_type=heads).
+Certains paquets requièrent une version spécifique d'une ou plusieurs dépendances. Cependant, si vous avez exécuté la commande `guix pull`, alors vous disposez des dernières versions de l'ensemble des paquets. Vous pouvez donc vous retrouvez dans un cas où le code que vous voulez utiliser ne se construit pas. Pas de panique, Guix a une solution tout faîte pour ces problèmes ! En effet, la commande `guix time-machine` vous permet de revenir à un commit précédent, et donc d'avoir accès à des versions antérieures des dépendances. En pratique, il est recommandé d'utiliser un fichier `channels.scm` qui contient les informations relatives au commit voulu. Encore une fois, plusieurs exemples de fichiers channels sont disponible sur le dépôt Gitlab du projet Diamond : [guix-packages](https://gricad-gitlab.univ-grenoble-alpes.fr/diamond/guix-packages/-/tree/master/manifests/with_time_machine?ref_type=heads).
 
 Une utilisation classique de la commande `guix time-machine` peut donc se résumer à la ligne suivante :
 

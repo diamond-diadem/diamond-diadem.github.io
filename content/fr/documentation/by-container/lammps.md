@@ -97,6 +97,10 @@ apptainer exec --env OMP_NUM_THREADS=2 $HOME/apptainer-images/lammps.sif mpirun 
 **Remarque**
 > Si rien n'est précisé, LAMMPS utilise par défaut un seul thread **OpenMP** (`$OMP_NUM_THREADS=1`) et répartit les processus **MPI** sur l'intégralité des cœurs disponibles.
 
+Dans la commande précédente, on utilise la commande `mpirun` fournie par la version d'**OpenMPI** embarquée dans le conteneur pour communiquer directement avec le matériel de la machine hôte. Cette utilisation *embarquée* présente un avantage majeur, puisque l'on utilise uniquement les outils installés dans le conteneur : elle fonctionne sur toutes les machines hôtes sans requérir d'installation. Néanmoins, la version d'**OpenMPI** présente au sein du conteneur n'est pas construite pour tourner de manière optimale sour toutes les machines hôtes, mais pour fourninr des performances satisfaisantes sur une gamme de machine aussi large que possible. Typiquement, dans le cas de Quantum Espresso, on observe que l'utilisation du processeur plafonne entre 85 et 90% en parallélisation embarquée. Par ailleurs, ce mode de parallélisation ne permet pas non plus d'effectuer du calcul distribué sur plusieurs nœuds de calcul. Si une facilité de portage au prix de performances légèrement dégradées peuvent convenir pour effectuer de simples essais sur une machine locale, ce n'est pas le cas sur une infrastructure de calcul haute performance.
+
+Dans le cas où les performances numériques sont centrales, il est recommandé d'utiliser un mode de parallélisation hybride, où l'on utilise la version d'**OpenMPI** de la machine hôte comme intermédiaire entre celle du conteneur et la matériel de la machine hôte. Pour plus de détails, veuillez consulter la [page dédiée](/documentation/use/apptainer_parallel/).
+
 ### Afficher l'aide
 Pour afficher le message d'aide du conteneur (on suppose l'image stockée sous `$HOME/apptainer-images/lammps.sif`) :
 
@@ -247,7 +251,7 @@ apptainer exec \
 
 <!-- ## Problèmes fréquemment rencontrés avec l'image de LAMMPS
 
-### Problème Lorem ipsum 
+### Problème Lorem ipsum
 **Description du problème** Lorem ipsum
 **Solution au problème**
 Ce problème est du à lorem ipsum

@@ -127,6 +127,6 @@ Toutefois, notez que pour exécuter Apptainer, la commande globale n'est pas dir
 
 Pour les utilisateurs et utilisatrices Windows, une page de documentation dédiée est disponible [ici](/documentation/install/apptainer-windows).
 
-Pour les utilisateurs Mac, il est recommandé d'utiliser Lima via Homebrew sur la [documentation d'Apptainer](apptainer.org/docs/admin/main/installation.html#mac).
+Pour les utilisateurs Mac, il est recommandé d'utiliser Lima via Homebrew sur la [documentation d'Apptainer](https://apptainer.org/docs/admin/main/installation.html#mac).
 
 </div>

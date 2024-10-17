@@ -13,7 +13,7 @@ weight: 1
 
 - ### <a href="/documentation/use/apptainer-image/">Utilisation d'une image Apptainer</a>
 
-- ### <a href="/documentation/freq_asked_questions/apptainer_parallel/">Apptainer en parallèle</a>
+- ### <a href="/documentation/use/apptainer_parallel/">Apptainer en parallèle</a>
 
 - ### Tutoriels spécifiques par image
 
