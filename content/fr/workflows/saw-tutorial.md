@@ -13,17 +13,17 @@ apptainer run simple-adsorption-workflow input
 ``
 Une fenêtre avec deux onglets s'ouvrent. L'utilisateur peut alors choisir les différents paramètres de la simulation.
 <p align="center">
-  <img src="./figures/saw_input_gui_1.png" alt="" width="300" />
+  <img alt="saw input gui 1" class="saw-input-gui-1" style="width:50%">
 </p>
 <p align="center"><i>Cliquer sur les paramètres désirés ou les remplir manuellement</i></p>
 
 <p align="center">
-  <img src="./figures/saw_input_gui_3.png" alt="" width="300" />
+  <img alt="saw input gui 3" class="saw-input-gui-3" style="width:50%">
 </p>
 <p align="center"><i>Paramètres avancés</i></p>
 
 <p align="center">
-  <img src="./figures/saw_input_gui_2.png" alt="" width="300" />
+  <img alt="saw input gui 2" class="saw-input-gui-2" style="width:50%">
 </p>
 <p align="center"><i>Sauvegarder le fichier de paramètres</i></p>
 
@@ -75,16 +75,16 @@ apptainer run simple-adsorption-workflow plot
 ``
 
 <p align="center">
-  <img src="./figures/saw_output_gui_1.png" alt="" width="300" />
+  <img alt="saw output gui 1" class="saw-output-gui-1" style="width:50%">
 </p>
 <p align="center"><i>Choisir le fichier avec les données des isothermes</i></p>
 
 <p align="center">
-  <img src="./figures/saw_output_gui_2.png" alt="" width="300" />
+ <img alt="saw output gui 2" class="saw-output-gui-2" style="width:50%">
 </p>
 <p align="center"><i></i></p>
 
 <p align="center">
-  <img src="./figures/saw_output_gui_3.png" alt="" width="300" />
+ <img alt="saw output gui 3" class="saw-output-gui-3" style="width:50%">
 </p>
 <p align="center"><i> Visualiser les isothermes en sélectionnant les paramètres désirés</i></p>
