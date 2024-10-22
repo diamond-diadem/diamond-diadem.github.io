@@ -1452,3 +1452,16 @@ th, tr {
     // width: 14%;
     overflow-y: hidden;
 }
+
+
+// // // Worflows simple-adsorption-workflow // // //
+
+.saw-diagram-description {
+    content: url(/images/saw-diagram-light.png);
+ }
+
+@include color-mode(dark) {
+   .saw-diagram-description {
+      content: url(/images/saw-diagram-dark.png);
+   }
+}
