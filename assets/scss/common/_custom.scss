@@ -1472,7 +1472,7 @@ th, tr {
 
 @include color-mode(dark) {
    .saw-input-gui-1 {
-      content: url(/images/saw-input-gui-1-dark.png);
+      content: url(/images/saw-input-gui-1-light.png);
    }
 }
 
@@ -1482,7 +1482,7 @@ th, tr {
 
 @include color-mode(dark) {
    .saw-input-gui-2 {
-      content: url(/images/saw-input-gui-2-dark.png);
+      content: url(/images/saw-input-gui-2-light.png);
    }
 }
 
@@ -1492,7 +1492,7 @@ th, tr {
 
 @include color-mode(dark) {
    .saw-input-gui-3 {
-      content: url(/images/saw-input-gui-3-dark.png);
+      content: url(/images/saw-input-gui-3-light.png);
    }
 }
 
@@ -1502,7 +1502,7 @@ th, tr {
 
 @include color-mode(dark) {
    .saw-output-gui-1 {
-      content: url(/images/saw-output-gui-1-dark.png);
+      content: url(/images/saw-output-gui-1-light.png);
    }
 }
 
@@ -1512,7 +1512,7 @@ th, tr {
 
 @include color-mode(dark) {
    .saw-output-gui-2 {
-      content: url(/images/saw-output-gui-2-dark.png);
+      content: url(/images/saw-output-gui-2-light.png);
    }
 }
 
@@ -1522,6 +1522,6 @@ th, tr {
 
 @include color-mode(dark) {
    .saw-output-gui-3 {
-      content: url(/images/saw-output-gui-3-dark.png);
+      content: url(/images/saw-output-gui-3-light.png);
    }
 }
