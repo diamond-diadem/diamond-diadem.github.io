@@ -10,11 +10,11 @@ weight: 3
 
 In preamble, you need to have Apptainer installed on your machine; see [this link](/en/documentation/install-apptainer/howto/) for more details.
 
-This tutorial focuses on using the Quantum Espresso container image available at [this address](/en/codes/visualisation/ovito/). By following this link, you will get an Apptainer image (`.sif` file format) allowing you to create containers running Quantum Espresso.
+This tutorial focuses on using the Quantum Espresso container image available at [this address](/en/codes/scientific-computing/quantum-espresso/). By following this link, you will get an Apptainer image (`.sif` file format) allowing you to create containers running Quantum Espresso.
 
 For more information on Apptainer containers, please look at [this page](/en/about/apptainer/).
 
-To have a quick look at Apptainer's main commands, you may refer to [this tutorial](/en/documentation/use-apptainer-image/howto/).
+To have a quick look at Apptainer's main commands, you may refer to [this tutorial](/en/documentation/use/apptainer-image/).
 
 {{< /callout >}}
 
@@ -51,7 +51,7 @@ apptainer exec $HOME/apptainer-images/quantum-espresso.sif mpirun -np <N> pw.x -
 ```
 
 ## Detailed usage for the Quantum Espresso container
-This section presents different ways to use the Quantum Espresso image. For more details about Apptainer commands, please look at [this tutorial](/en/documentation/use-apptainer-image/howto/#apptainer--crash-course).
+This section presents different ways to use the Quantum Espresso image. For more details about Apptainer commands, please look at [this tutorial](/en/documentation/use/apptainer-image/#apptainer--crash-course).
 
 ### Using the Quantum Espresso container
 To run Quantum Espresso without any container, one would use the following command:
@@ -101,7 +101,7 @@ apptainer exec --env OMP_NUM_THREADS=2 $HOME/apptainer-images/quantum-espresso.s
 
 In the previous command, we use the `mpirun` command provided by the embedded version of **OpenMPI** within the container to communicate directly with the hardware of the host machine. This *embedded* usage has a major advantage, as we only use the tools installed in the container: it works on all host machines without requiring installation. However, the version of **OpenMPI** within the container is not built to run optimally on all host machines, but to provide satisfactory performance on as wide a range of machines as possible. Typically, in the case of Quantum Espresso, we observe that CPU usage peaks between 85 and 90% with embedded parallelization. Moreover, this parallelization mode also does not allow distributed computing across multiple compute nodes. While ease of portability at the expense of slightly degraded performance may be suitable for conducting simple tests on a local machine, this is not the case on a high-performance computing infrastructure.
 
-In cases where numerical performance is crucial, it is recommended to use a hybrid parallelization mode, where we use the **OpenMPI** version of the host machine as an intermediary between that of the container and the hardware of the host machine. For more details, please refer to the [dedicated page](/en/documentation/apptainer-parallel/howto/).
+In cases where numerical performance is crucial, it is recommended to use a hybrid parallelization mode, where we use the **OpenMPI** version of the host machine as an intermediary between that of the container and the hardware of the host machine. For more details, please refer to the [dedicated page](/en/documentation/use/apptainer-parallel/).
 
 ### Display help
 To display the container's help message (supposing the image is stored at `$HOME/apptainer-images/quantum-espresso.sif`):
@@ -117,7 +117,7 @@ apptainer inspect $HOME/apptainer-images/quantum-espresso.sif
 ```
 
 ### Partial or total isolation
-By default, Apptainer does not fully isolate the container from the host system. One can either have partial or total isolation using respectively the flags `--no-mount` or `--no-home` and `--containall` (see [this link](/en/documentation/use-apptainer-image/howto/#partial-or-total-isolation) for more information).
+By default, Apptainer does not fully isolate the container from the host system. One can either have partial or total isolation using respectively the flags `--no-mount` or `--no-home` and `--containall` (see [this link](/en/documentation/use/apptainer-isolation-flags) for more information).
 
 Whenever `--containall` is activated, the directory on the host machine containing Quantum Espresso input-files cannot be accessed from the container!
 
@@ -184,5 +184,15 @@ apptainer exec \
   $HOME/apptainer-images/quantum-espresso.sif \
   mpirun -np 8 pw.x -in qe-tutorial.in
 ```
+
+<!-- ## Frequently encountered issues with the Quantum Espresso image
+
+### Issue Lorem ipsum 
+**Issue description** Lorem ipsum
+**Solution**
+This issue is caused by lorem ipsum
+```bash
+lorem-ipsum
+``` -->
 
 </div>

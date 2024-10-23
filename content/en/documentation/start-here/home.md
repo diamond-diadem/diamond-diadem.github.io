@@ -9,9 +9,9 @@ toc: false
 
 - <h3><a href="/en/documentation/install-apptainer/howto/">Installing Apptainer on your system</a></h3>
 
-- <h3><a href="/en/documentation/use-apptainer-image/howto/">Using an Apptainer image</a></h3>
+- <h3><a href="/en/documentation/use/apptainer-image/">Using an Apptainer image</a></h3>
 
-- <h3><a href="/en/documentation/apptainer-parallel/howto/">Apptainer in parallel</a></h3>
+- <h3><a href="/en/documentation/use/apptainer_parallel/">Apptainer in parallel</a></h3>
 
 - <h3>Specific tutorials, by image</h3>
 

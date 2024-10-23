@@ -14,7 +14,7 @@ This tutorial details the usage of the container image of the VMD code downloada
 
 For more information about Apptainer containers, please consult the [dedicated page](/en/about/apptainer/).
 
-To quickly grasp the main commands of Apptainer, you can refer to [this tutorial](/en/documentation/use-apptainer-image/howto/).
+To quickly grasp the main commands of Apptainer, you can refer to [this tutorial](/en/documentation/use/apptainer-image/).
 
 {{< /callout >}}
 
@@ -51,7 +51,7 @@ apptainer run $HOME/apptainer-images/vmd.sif <input.file>
 
 ### Detail of using the VMD container
 
-This section presents the various ways to use the VMD image. For more details on Apptainer commands, please refer to [this tutorial](/en/documentation/use-apptainer-image/howto/).
+This section presents the various ways to use the VMD image. For more details on Apptainer commands, please refer to [this tutorial](/en/documentation/use/apptainer-image/).
 
 To run VMD without any containerization, one would use the command:
 
@@ -97,7 +97,7 @@ $HOME/apptainer-images/vmd tutorial-ubiquitin.psf tutorial-pulling.dcd
 ```
 
 ### Isolation between the container and the host machine
-By default, Apptainer does not fully isolate the container from the host machine's system; for partial or total isolation, respectively, the `--no-mount` or `--no-home` and `--containall` flags should be used (see [this link](/en/documentation/use-apptainer-image/howto/) for more information). In cases where the `--containall` option is activated, we encounter two difficulties.
+By default, Apptainer does not fully isolate the container from the host machine's system; for partial or total isolation, respectively, the `--no-mount` or `--no-home` and `--containall` flags should be used (see [this link](/en/documentation/use/apptainer-image/) for more information). In cases where the `--containall` option is activated, we encounter two difficulties.
 
 #### Sharing graphical resources
 On one hand, it is possible that an error message appears, informing you that one of the library plugins (`qt.qpa.xcb`) fails to connect to your display resources.
@@ -187,5 +187,15 @@ Examples of possible answers:
 
 * `apptainer exec $HOME/apptainer-images/vmd.sif vmd tutorial-ubiquitin.psf tutorial-pulling.dcd`
 * or `apptainer run --containall --env DISPLAY=$DISPLAY --bind $PWD:$HOME $HOME/apptainer-images/vmd.sif tutorial-ubiquitin.psf tutorial-pulling.dcd`
+
+<!-- ## Frequently encountered issues with the VMD image
+
+### Issue Lorem ipsum 
+**Issue description** Lorem ipsum
+**Solution**
+This issue is caused by lorem ipsum
+```bash
+lorem-ipsum
+``` -->
 
 </div>

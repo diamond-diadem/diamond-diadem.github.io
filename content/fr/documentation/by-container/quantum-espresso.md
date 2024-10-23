@@ -8,13 +8,13 @@ weight: 3
 
 {{< callout context="note" title="" icon="outline/info-circle" >}}
 
-En préalable de ces explications, il est nécessaire d'avoir installé Apptainer sur votre machine ; voir [ce lien](/documentation/install-apptainer/howto/) pour plus de détails.
+En préalable de ces explications, il est nécessaire d'avoir installé Apptainer sur votre machine ; voir [ce lien](/documentation/install/install_apptainer/) pour plus de détails.
 
-Ce tutoriel détaille l'utilisation de l'image de conteneur du code Quantum Espresso téléchargeable à [cette adresse](/codes/visualisation/ovito/). En suivant ce lien, vous récupérez une image Apptainer (format de fichier `.sif`) qui vous permettra de créer des conteneurs à même de faire tourner Quantum Espresso.
+Ce tutoriel détaille l'utilisation de l'image de conteneur du code Quantum Espresso téléchargeable à [cette adresse](/codes/scientific-computing/quantum-espresso/). En suivant ce lien, vous récupérez une image Apptainer (format de fichier `.sif`) qui vous permettra de créer des conteneurs à même de faire tourner Quantum Espresso.
 
 Pour plus d'informations sur les conteneurs Apptainer, veuillez consulter la [page dédiée](/about/apptainer/).
 
-Pour rapidement s'approprier les principales commandes d'Apptainer, vous pouvez vous référer à [ce tutoriel](/documentation/use-apptainer-image/howto/).
+Pour rapidement s'approprier les principales commandes d'Apptainer, vous pouvez vous référer à [ce tutoriel](/documentation/use/apptainer-image/).
 
 {{< /callout >}}
 
@@ -49,7 +49,7 @@ apptainer exec $HOME/apptainer-images/quantum-espresso.sif mpirun -np <N> pw.x -
 ```
 
 ## Détail d'utilisation du conteneur Quantum Espresso
-Cette section présente les différentes manières d'utiliser l'image Quantum Espresso. Pour plus de détails sur les commandes Apptainer, veuillez vous référer à [ce tutoriel](/documentation/use-apptainer-image/howto/#apptainer--cours-accéléré).
+Cette section présente les différentes manières d'utiliser l'image Quantum Espresso. Pour plus de détails sur les commandes Apptainer, veuillez vous référer à [ce tutoriel](/documentation/use/apptainer-image/#apptainer--cours-accéléré).
 
 ### Utiliser le conteneur Quantum Espresso
 Pour exécuter Quantum Espresso sans conteneur, on utiliserait la commande :
@@ -99,7 +99,7 @@ apptainer exec --env OMP_NUM_THREADS=2 $HOME/apptainer-images/quantum-espresso.s
 
 Dans la commande précédente, on utilise la commande `mpirun` fournie par la version d'**OpenMPI** embarquée dans le conteneur pour communiquer directement avec le matériel de la machine hôte. Cette utilisation *embarquée* présente un avantage majeur, puisque l'on utilise uniquement les outils installés dans le conteneur : elle fonctionne sur toutes les machines hôtes sans requérir d'installation. Néanmoins, la version d'**OpenMPI** présente au sein du conteneur n'est pas construite pour tourner de manière optimale sour toutes les machines hôtes, mais pour fourninr des performances satisfaisantes sur une gamme de machine aussi large que possible. Typiquement, dans le cas de Quantum Espresso, on observe que l'utilisation du processeur plafonne entre 85 et 90% en parallélisation embarquée. Par ailleurs, ce mode de parallélisation ne permet pas non plus d'effectuer du calcul distribué sur plusieurs nœuds de calcul. Si une facilité de portage au prix de performances légèrement dégradées peuvent convenir pour effectuer de simples essais sur une machine locale, ce n'est pas le cas sur une infrastructure de calcul haute performance.
 
-Dans le cas où les performances numériques sont centrales, il est recommandé d'utiliser un mode de parallélisation hybride, où l'on utilise la version d'**OpenMPI** de la machine hôte comme intermédiaire entre celle du conteneur et la matériel de la machine hôte. Pour plus de détails, veuillez consulter la [page dédiée](/documentation/apptainer-parallel/howto/).
+Dans le cas où les performances numériques sont centrales, il est recommandé d'utiliser un mode de parallélisation hybride, où l'on utilise la version d'**OpenMPI** de la machine hôte comme intermédiaire entre celle du conteneur et la matériel de la machine hôte. Pour plus de détails, veuillez consulter la [page dédiée](/documentation/use/apptainer_parallel/).
 
 ### Afficher l'aide
 Pour afficher le message d'aide du conteneur (on suppose l'image stockée sous `$HOME/apptainer-images/quantum-espresso.sif`) :
@@ -115,7 +115,7 @@ apptainer inspect $HOME/apptainer-images/quantum-espresso.sif
 ```
 
 ### Isolation partielle ou isolation totale
-Par défaut, Apptainer n'isole pas totalement le conteneur du système de la machine hôte ; pour une isolation partielle ou totale, il faut utiliser respectivement les flags `--no-mount` ou `--no-home` et `--containall` (voir [ce lien](/documentation/use-apptainer-image/howto/#isolation-partielle-ou-isolation-totale) pour plus d'informations).
+Par défaut, Apptainer n'isole pas totalement le conteneur du système de la machine hôte ; pour une isolation partielle ou totale, il faut utiliser respectivement les flags `--no-mount` ou `--no-home` et `--containall` (voir [ce lien](/documentation/use/apptainer-isolation-flags) pour plus d'informations).
 
 Dans le cas où l'option `--containall` est activée, le répertoire contenant les fichiers d'entrée de Quantum Espresso n'est pas accessible dans le conteneur !
 
@@ -178,5 +178,15 @@ apptainer exec \
   $HOME/apptainer-images/quantum-espresso.sif \
   mpirun -np 8 pw.x -in qe-tutorial.in
 ```
+
+<!-- ## Problèmes fréquemment rencontrés avec l'image de Quantum Espresso
+
+### Problème Lorem ipsum
+**Description du problème** Lorem ipsum
+**Solution au problème**
+Ce problème est du à lorem ipsum
+```bash
+lorem-ipsum
+``` -->
 
 </div>

@@ -17,10 +17,18 @@ Mais pour commencer, si vous n'êtes pas encore passé par cette étape et si vo
 
 {{< /callout >}}
 
+<div align="justify">
+
+Pendant l'été 2023, la communauté des matériaux a été sondée via LimeSurvey pour identifier des habitudes de travail. Cela a notamment permis de mettre en lumière un certains nombres de codes utilisés, aussi bien pour le calcul que pour la visualisation (cf ci-dessous). À l'heure actuelle, quasiment $40\%$ des codes cités par la communauté ont été conteneurisés et/ou packagés, couvrant l'ensemble des échelles physiques.
+
+</div>
+
+<img alt="containerised codes" class="containerised-codes" style="width:100%">
+
 <h3><u>LIENS UTILES :</u></h3>
 
-- <h4><a href="/documentation/install-apptainer/howto/">Installez Apptainer</a></h4>
-- <h4><a href="/documentation/use-apptainer-image/howto/">Apprenez comment utiliser un conteneur</a></h4>
+- <h4><a href="/documentation/install/install-apptainer/">Installez Apptainer</a></h4>
+- <h4><a href="/documentation/use/apptainer-image/">Apprenez comment utiliser un conteneur</a></h4>
 
 <h3><u>CODES DISPONIBLES :</u></h3>
 

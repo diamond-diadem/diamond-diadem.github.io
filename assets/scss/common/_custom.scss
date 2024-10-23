@@ -316,6 +316,59 @@ u {
     }
 }
 
+// // // Gitlab tutorial // // //
+
+.use-gitlab {
+    content: url(images/use_gitlab_light.png);
+    width: 100%;
+}
+
+.create-issue {
+    content: url(images/create_issue_light.png);
+    width: 100%;
+}
+
+.issue-tab {
+    content: url(images/issue_tab_light.png);
+    width: 100%;
+}
+
+@include color-mode(dark) {
+    .use-gitlab{
+        content: url(images/use_gitlab_dark.png)
+    }
+    .create-issue{
+        content: url(images/create_issue_dark.png)
+    }
+    .issue-tab{
+        content: url(images/issue_tab_dark.png)
+    }
+}
+
+
+
+
+// // // Wordcloud and France cluster map pictures // // //
+
+.containerised-codes {
+    content: url(images/containerised_codes_light.png);
+    width: 100%;
+}
+
+.cluster-map {
+    content: url(images/cluster_map_light.png);
+    width: 100%;
+}
+
+@include color-mode(dark) {
+    .containerised-codes{
+        content: url(images/containerised_codes_dark.png)
+    }
+    .cluster-map{
+        content: url(images/cluster_map_dark.png)
+    }
+}
+
 
 // // // Apptainer in parallel tuto picture // // //
 
@@ -329,6 +382,28 @@ u {
         content: url(images/hybrid-ompi-dark.png)
     }
 }
+
+// // // Windows overhead plot in installation tuto picture // // //
+.windows-overhead {
+    content: url(images/overhead-WSL2-light.png);
+    width: 100%;
+}
+
+.bench-lammps-dahu {
+    content: url(images/bench_lammps_dahu_light.png);
+    width: 100%;
+}
+
+@include color-mode(dark) {
+    .windows-overhead{
+        content: url(images/overhead-WSL2-dark.png)
+    }
+    .bench-lammps-dahu{
+        content: url(images/bench_lammps_dahu_dark.png)
+    }
+}
+
+
 
 // // // Codes pages top logos // // //
 
@@ -1258,15 +1333,13 @@ th, tr {
             position: sticky;
             top: 6.75rem;
             z-index: 1000;
-            // height: calc(85vh + 0.25rem);
-            height: auto;
+            height: auto;//calc(80vh - 4rem);
             overflow-y: hidden;
         }
 
         .docs-sidebar-offset {
             top: 7rem;
-            // height: 85vh;
-            height: auto;
+            height: auto;//calc(80vh - 4rem);
         }
 
         .docs-sidebar-top {
@@ -1286,13 +1359,13 @@ th, tr {
       position: -webkit-sticky;
       position: sticky;
       top: 6.75rem;
-      height: calc(85vh - 6.75rem);
-      overflow-y: auto;
+      height: auto;//calc(85vh - 6.75rem);
+      overflow-y: hidden;
     }
 
     .docs-toc-offset {
       top: 7rem;
-      height: calc(85vh - 7rem);
+      height: auto;//calc(85vh - 7rem);
     }
 
     .docs-toc-top {
@@ -1358,22 +1431,97 @@ th, tr {
     // opacity: 0.18;
 }
 
-.news-card-homepage {
-    position: relative;
-    z-index: 1;
+.btn-toggle {
+    display: inline-flex;
+    align-items: first baseline;
+    padding: 0.25rem 0.5rem 0.25rem 0;
+    font-weight: $headings-font-weight;
+    font-size: $font-size-base;
+    text-transform: uppercase;
+    color: $body-color;
+    background-color: transparent;
+    border: 0;
+    // justify-content: left;
+    text-align: left;
+    text-indent: 5px;
 }
 
-.news-card-homepage::before {
-    content: '';
-    border-radius: 45px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    opacity: 0.3;
-    top: 0;
-    left: 0;
-    z-index: -1;
+.btn-doc-sidebar {
+    // position: fixed;
+    margin-top: 20px;
+    // width: 14%;
+    overflow-y: hidden;
+}
+
+
+// // // Worflows simple-adsorption-workflow // // //
+
+.saw-diagram-description {
+    content: url(/images/saw-diagram-light.png);
+ }
+
+@include color-mode(dark) {
+   .saw-diagram-description {
+      content: url(/images/saw-diagram-dark.png);
+   }
+}
+
+.saw-input-gui-1 {
+    content: url(/images/saw-input-gui-1-light.png);
+ }
+
+@include color-mode(dark) {
+   .saw-input-gui-1 {
+      content: url(/images/saw-input-gui-1-light.png);
+   }
+}
+
+.saw-input-gui-2 {
+    content: url(/images/saw-input-gui-2-light.png);
+ }
+
+@include color-mode(dark) {
+   .saw-input-gui-2 {
+      content: url(/images/saw-input-gui-2-light.png);
+   }
+}
+
+.saw-input-gui-3 {
+    content: url(/images/saw-input-gui-3-light.png);
+ }
+
+@include color-mode(dark) {
+   .saw-input-gui-3 {
+      content: url(/images/saw-input-gui-3-light.png);
+   }
+}
+
+.saw-output-gui-1 {
+    content: url(/images/saw-output-gui-1-light.png);
+ }
+
+@include color-mode(dark) {
+   .saw-output-gui-1 {
+      content: url(/images/saw-output-gui-1-light.png);
+   }
+}
+
+.saw-output-gui-2 {
+    content: url(/images/saw-output-gui-2-light.png);
+ }
+
+@include color-mode(dark) {
+   .saw-output-gui-2 {
+      content: url(/images/saw-output-gui-2-light.png);
+   }
+}
+
+.saw-output-gui-3 {
+    content: url(/images/saw-output-gui-3-light.png);
+ }
+
+@include color-mode(dark) {
+   .saw-output-gui-3 {
+      content: url(/images/saw-output-gui-3-light.png);
+   }
 }
