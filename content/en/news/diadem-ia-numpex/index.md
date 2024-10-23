@@ -1,7 +1,7 @@
 ---
 title: "When AI and HPC meet Materials Science"
 description: ""
-summary: "Sorbonne Center for Artificial Intelligence SCAI, Espace Forum, 4 Pl. Jussieu, 75005 Paris"
+summary: "PEPR DIADEM (Diamond), PEPR IA (CAUSALI-T-AI, PDE IA), PEPR NumPex"
 eventDate: "November 18, 2024"
 backgroundImage: "/images/background-meeting-3peprs.png"
 backgroundOpacity: 0.18
@@ -25,6 +25,11 @@ aliases:
 - diadem-ia-event
 ---
 <!-- <div class="news-3peprs"> -->
+<div align="center">
+
+## PEPR DIADEM (Diamond), PEPR IA (CAUSALI-T-AI, PDE IA), PEPR NumPex
+
+</div>
 
 #### Sorbonne Center for Artificial Intelligence SCAI, Espace Forum, 4 Pl. Jussieu, 75005 Paris
 
