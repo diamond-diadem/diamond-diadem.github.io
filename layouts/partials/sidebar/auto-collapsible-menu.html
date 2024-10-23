@@ -6,7 +6,7 @@
     {{ range .Sections }}
       {{ $active := in $currentPage.RelPermalink .RelPermalink }}
       <li class="mb-1">
-        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-{{ md5 .Title }}" aria-expanded="{{ if $active }}true{{ else }}false{{ end }}">
+        <button class="btn btn-toggle rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-{{ md5 .Title }}" aria-expanded="{{ if $active }}true{{ else }}false{{ end }}">
           {{ .Title }}
         </button>
         <div class="collapse{{ if $active }} show{{ end }}" id="section-{{ md5 .Title }}">
@@ -45,7 +45,7 @@
                   </div>
                 </li>
               {{ else }}
-                {{ $active := in $currentPage.RelPermalink .RelPermalink }} 
+                {{ $active := in $currentPage.RelPermalink .RelPermalink }}
                 <li><a class="docs-link rounded{{ if $active }} active{{ end }}" href="{{ .Permalink }}">{{ if .Params.GoogleIcon }}<span class="material-symbols-rounded sidebar-google-icon">{{ .Params.GoogleIcon }}</span>{{ end }}{{ if .Params.Icon }}<i class="sidebar-icon {{ .Params.Icon }}"></i>{{ end }}{{ or .LinkTitle .Title }}</a></li>
               {{ end }}
             {{ end }}
@@ -53,6 +53,7 @@
         </div>
       </li>
     {{ end }}
+
     {{ range .RegularPages -}}
       {{ $active := in $currentPage.RelPermalink .RelPermalink -}}
       <div class="collapse show" id="section-{{ md5 .Title }}">

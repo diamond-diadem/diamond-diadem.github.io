@@ -54,13 +54,16 @@ other = "to select"
 other = "to navigate"
 
 [search_close]
-other= "to close"
+other = "to close"
 
 [video_unsupported]
 other = "Your browser doesn't support embedded videos, but don't worry, you can <a href=\"{{ .RelPermalink }}\">download it</a> and watch it with your favorite video player!"
 
 [search_cancel]
-other= "Cancel" 
+other = "Cancel"
 
 [location]
-other= "in"
+other = "in"
+
+[ask_help]
+other = "Ask for help"

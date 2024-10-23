@@ -5,8 +5,6 @@ linkTitle: Apptainer
 
 <h2 class="about-lead text-center">Apptainer (anciennement Singularity) est une solution de création et de gestion de conteneurs orientée vers le calcul haute performance. En proposant des conteneurs empaquetant à la fois un outil logiciel et toutes les dépendances externes nécessaires à son application, il garantit leur portabilité et leur reproductibilité.</h2>
 
-
-
 <style>
 * {
   box-sizing: border-box;
@@ -43,12 +41,10 @@ Apptainer est un logiciel informatique gratuit et open-source qui facilite le d�
 
 En un sens, Apptainer est une alternative au logiciel Docker. Là où ce dernier est de plus en plus populaire dans le développement et le maintien d'applications conteneurisées orientées web et service, Apptainer propose un contrepoint très intéressant pour le calcul haute performance, avec une forte emphase sur la portabilité et la reproductibilité des résultats.
 
-
-
 </div>
 </div>
 
 <div align="justify">
-Ce mode de fonctionnement présente un avantage majeur, pour les personnes utilisant les codes comme pour celles et ceux qui les développent. En empaquetant au sein d'un unique fichier immuable et facile à transmettre tout ce qui est requis pour exécuter une application, il est très aisé de distribuer tout outil en s'affranchissant des installations fasidieuses et des incompatibilités de librairies. Ce dernier point en particulier est intéressant du point de vue de la reproductibilité : comme un conteneur est immuable, on a l'assurance que la même application fonctionnera de manière rigoureusement identique dans le temps et sur d'autres machines. En d'autre terme, il n'est plus nécessaire de craindre que la moindre modification (changement de machine ou de cluster de calcul, mise à jour de librairies, ...) affecte le bon fonctionnement de vos codes.
+Ce mode de fonctionnement présente un avantage majeur, pour les personnes utilisant les codes comme pour celles et ceux qui les développent. En empaquetant au sein d'un unique fichier immuable et facile à transmettre tout ce qui est requis pour exécuter une application, il est très aisé de distribuer tout outil en s'affranchissant des installations fastidieuses et des incompatibilités de librairies. Ce dernier point en particulier est intéressant du point de vue de la reproductibilité : comme un conteneur est immuable, on a l'assurance que la même application fonctionnera de manière rigoureusement identique dans le temps et sur d'autres machines. En d'autres termes, il n'est plus nécessaire de craindre que la moindre modification (changement de machine ou de cluster de calcul, mise à jour de librairies, ...) affecte le bon fonctionnement de vos codes.
 </div>
 </div>

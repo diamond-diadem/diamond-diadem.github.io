@@ -8,13 +8,13 @@ weight: 4
 
 {{< callout context="note" title="" icon="outline/info-circle" >}}
 
-En préalable de ces explications, il est nécessaire d'avoir installé Apptainer sur votre machine ; voir [ce lien](/documentation/install-apptainer/howto/) pour plus de détails.
+En préalable de ces explications, il est nécessaire d'avoir installé Apptainer sur votre machine ; voir [ce lien](/documentation/install/install_apptainer/) pour plus de détails.
 
 Ce tutoriel détaille l'utilisation de l'image de conteneur du code VMD téléchargeable à [cette adresse](/codes/visualisation/vmd/). En suivant ce lien, vous récupérez une image Apptainer (format de fichier `.sif`) qui vous permettra de créer des conteneurs à même de faire tourner VMD.
 
 Pour plus d'informations sur les conteneurs Apptainer, veuillez consulter la [page dédiée](/about/apptainer/).
 
-Pour rapidement s'approprier les principales commandes d'Apptainer, vous pouvez vous référer à [ce tutoriel](/documentation/use-apptainer-image/howto/).
+Pour rapidement s'approprier les principales commandes d'Apptainer, vous pouvez vous référer à [ce tutoriel](/documentation/use/apptainer-image/).
 
 {{< /callout >}}
 
@@ -47,7 +47,7 @@ apptainer run $HOME/apptainer-images/vmd.sif <input.file>
 ```
 
 ## Détail d'utilisation du conteneur VMD
-Cette section présente les différentes manières d'utiliser l'image VMD. Pour plus de détails sur les commandes Apptainer, veuillez vous référer à [ce tutoriel](/documentation/use-apptainer-image/howto/#apptainer--cours-accéléré).
+Cette section présente les différentes manières d'utiliser l'image VMD. Pour plus de détails sur les commandes Apptainer, veuillez vous référer à [ce tutoriel](/documentation/use/apptainer-image/#apptainer--cours-accéléré).
 
 Pour exécuter VMD sans aucune conteneurisation, on utiliserait la commande :
 
@@ -92,7 +92,7 @@ $HOME/apptainer-images/vmd tutorial-ubiquitin.psf tutorial-pulling.dcd
 ```
 
 ### Isolation entre le conteneur et la machine hôte
-Par défaut, Apptainer n'isole pas totalement le conteneur du système de la machine hôte ; pour une isolation partielle ou totale, il faut utiliser respectivement les flags `--no-mount` ou `--no-home` et `--containall` (voir [ce lien](/documentation/use-apptainer-image/howto/#isolation-partielle-ou-isolation-totale) pour plus d'informations). Dans le cas où l'option `--containall` est activée, nous rencontrons deux difficultés.
+Par défaut, Apptainer n'isole pas totalement le conteneur du système de la machine hôte ; pour une isolation partielle ou totale, il faut utiliser respectivement les flags `--no-mount` ou `--no-home` et `--containall` (voir [ce lien](/documentation/use/apptainer-isolation-flags) pour plus d'informations). Dans le cas où l'option `--containall` est activée, nous rencontrons deux difficultés.
 
 #### Partage des ressources graphiques
 D'une part, il est possible qu'un message d'erreur apparaisse, vous informant que l'un des plugins de la librairie (`qt.qpa.xcb`), ne parvient pas à se connecter à vos ressources d'affichage.
@@ -176,5 +176,15 @@ Comment visualiser une animation contenue dans un fichier avec un conteneur VMD 
 Exemples de réponses possibles :
 * `apptainer exec $HOME/apptainer-images/vmd.sif vmd tutorial-ubiquitin.psf tutorial-pulling.dcd`
 * ou `apptainer run --containall --env DISPLAY=$DISPLAY --bind $PWD:$HOME $HOME/apptainer-images/vmd.sif tutorial-ubiquitin.psf tutorial-pulling.dcd`
+
+<!-- ## Problèmes fréquemment rencontrés avec l'image de VMD
+
+### Problème Lorem ipsum 
+**Description du problème** Lorem ipsum
+**Solution au problème**
+Ce problème est du à lorem ipsum
+```bash
+lorem-ipsum
+``` -->
 
 </div>

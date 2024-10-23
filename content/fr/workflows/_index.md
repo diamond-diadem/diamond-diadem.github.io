@@ -12,4 +12,9 @@ Des workflows bien conçus permettent non seulement de gagner du temps, mais aus
 
 </div>
 
-<div align="center"><h2>Contenu à venir</h2></div>
+<div align="center"><h2>Worflows disponibles</h2></div>
+
+- ### simple-adsorption-workflow
+  Programme conteunerisé pour l'étude de l'adsorption dans les matériaux poreux
+  - [Description](/workflows/saw-description)
+  - [Tutoriel](/workflows/saw-tutorial)

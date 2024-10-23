@@ -14,7 +14,7 @@ This tutorial details the usage of the Ovito code container image downloadable a
 
 For more information on Apptainer containers, please refer to the [dedicated page](/en/about/apptainer/).
 
-To quickly grasp the main Apptainer commands, you can refer to [this tutorial](/en/documentation/use-apptainer-image/howto/).
+To quickly grasp the main Apptainer commands, you can refer to [this tutorial](/en/documentation/use/apptainer-image/).
 
 {{< /callout >}}
 
@@ -48,7 +48,7 @@ apptainer run $HOME/apptainer-images/ovito.sif <input.file>
 ```
 
 ## Details to use Ovito container
-This section presents the different ways to use the Ovito image. For more details on Apptainer commands, please refer to [this tutorial](/en/documentation/use-apptainer-image/howto/#apptainer--crash-course).
+This section presents the different ways to use the Ovito image. For more details on Apptainer commands, please refer to [this tutorial](/en/documentation/use/apptainer-image/#apptainer--crash-course).
 
 To execute Ovito without any containerization, one would use the command:
 
@@ -90,7 +90,7 @@ $HOME/apptainer-images/ovito.sif POSCAR_Si-diamond
 ```
 
 ### Isolation between the container and the host machine
-By default, Apptainer does not fully isolate the container from the host system. One can either have partial or total isolation using respectively the flags `--no-mount` or `--no-home` and `--containall` (see [this link](/en/documentation/use-apptainer-image/howto/#partial-or-total-isolation) for more information).  In case the `--containall` option is activated, we encounter two difficulties.
+By default, Apptainer does not fully isolate the container from the host system. One can either have partial or total isolation using respectively the flags `--no-mount` or `--no-home` and `--containall` (see [this link](/en/documentation/use/apptainer-isolation-flags) for more information).  In case the `--containall` option is activated, we encounter two difficulties.
 
 #### Sharing graphical tesources
 On one hand, it is possible that an error message appears, informing you that one of the library plugins (`qt.qpa.xcb`), fails to connect to your display resources.
@@ -174,5 +174,15 @@ How to visualize only configurations prior to the 100th step of a molecular dyna
 Examples of possible answers:
 * `apptainer exec $HOME/apptainer-images/ovito.sif ovito MD/SiC.00*.lmp`
 * or `apptainer run --containall --env DISPLAY=$DISPLAY --bind $PWD:$HOME $HOME/apptainer-images/ovito.sif MD/SiC.00*.lmp`
+
+<!-- ## Frequently encountered issues with the Ovito image
+
+### Issue Lorem ipsum 
+**Issue description** Lorem ipsum
+**Solution**
+This issue is caused by lorem ipsum
+```bash
+lorem-ipsum
+``` -->
 
 </div>
