@@ -1,5 +1,5 @@
 ---
-title: "PEPR DIADEM (Diamond), PEPR IA (CAUSALI-T-AI, PDE IA), PEPR NumPex"
+title: "When AI and HPC meet Materials Science"
 description: ""
 summary: "Sorbonne Center for Artificial Intelligence SCAI, Espace Forum, 4 Pl. Jussieu, 75005 Paris"
 eventDate: "November 18, 2024"
@@ -60,7 +60,7 @@ The day is devoted to several talks given by renowned researchers and specialist
 
 - **8h30-9h00:** Welcoming & Coffee
 
-- **9h00-10h00:** Marie-Pierre GAIGEOT (Evry University) *Graphs and numerical simulation*
+- **9h00-10h00:** Marie-Pierre GAIGEOT (Evry University) *Exploiting graph theory in MD simulations for extracting chemical and physical properties of materials*
 - **10h-10h40:** Émilie DEVIJVER (CNRS & University of Grenoble Alpes) *An introduction to causality*
 
 - **10h40-11h00:** Coffee break
