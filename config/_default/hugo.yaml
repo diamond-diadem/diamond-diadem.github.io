@@ -1,7 +1,7 @@
 title: DIAMOND
 baseurl: https://diamond-diadem@github.io/
 canonifyURLs: true
-disableAliases: true
+disableAliases: false
 disableHugoGeneratorInject: true
 enableEmoji: true
 enableGitInfo: false
