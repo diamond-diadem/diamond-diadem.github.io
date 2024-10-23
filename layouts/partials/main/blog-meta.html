@@ -1,4 +1,7 @@
-{{ $last := sub (len .Params.contributors) 1 -}}
+{{ $last := 1 }}
+{{- if .Params.contributors -}}
+  {{ $last = sub (len .Params.contributors) 1 -}}
+{{ end }}
 <p>
   <small>
     <p class="event-date">{{ .Params.EventDate }}</p>
