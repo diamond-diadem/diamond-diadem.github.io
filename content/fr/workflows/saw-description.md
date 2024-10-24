@@ -14,9 +14,9 @@ Ce workflow utilise deux codes principaux très utilisés dans le domaine:
 - [RASPA](https://iraspa.org/raspa/) pour les calculs d'adsorption
 - [Zeo++](https://www.zeoplusplus.org/) pour les propriétés de porosité
 
-L'idée du workflow est de rendre ces calculs accessibles à une personne non-experte en simulation moléculaire. D'une part, le code est totalement conteneurisé, il est donc facile à installer, il suffit d'installer d'`Apptainer` et d'installer l'image `.sif`. D'autre part, il permet de constituer une base de donnée reproductible et pouvant être mis à jour facilement.
+L'idée du workflow est de rendre ces calculs accessibles à une personne non-experte en simulation moléculaire. D'une part, le code est totalement conteneurisé, il est donc facile à installer, il suffit d'installer `Apptainer` et de télécharger l'image `simple-adsorption-workflow.sif`. D'autre part, il permet de constituer une base de donnée reproductible basée sur le format JSON. Le containeur contient un outil permettant de mettre à jour la base de donnée au format JSON.
 
-4 actions sont possibles : 
+4 actions sont possibles :
 - **input** : créer un fichier d'entrée à l'aide de l'interface utilisateur intégrée
 - **run** : lancer les simulations
 - **merge** : regrouper dans une seule base de données le résultat de plusieurs expériences indépendantes
