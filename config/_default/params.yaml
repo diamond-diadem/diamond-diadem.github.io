@@ -35,6 +35,7 @@ doks:
   sectionNav:
     - codes
     - documentation
+    - workflows
   toTopButton: true
   breadcrumbTrail: false
   headlineHash: false
