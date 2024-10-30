@@ -824,15 +824,50 @@ u {
     }
 }
 
-@include media-breakpoint-down(xl) {
+
+// // // >>> Oct. 30 2024 update - some polishing for desktop portrait mode (lg) which had overflow-x in most narrow layouts  >>> // // //
+
+@include media-breakpoint-only(lg) {
     .navbar-brand {
-        font-size: $font-size-md;
+        font-size: 90%; //$font-size-md;
     }
 
     .nav-item {
-        font-size: $font-size-base;
+        font-size: 85%;//$font-size-base;
+    }
+
+    .nav-logo {
+        height: 45px;
+    }
+
+    .logo-france2030-desktop {
+        height: 65px;
+    }
+
+    .icon-tabler-search,
+    .icon-tabler-moon,
+    .icon-tabler-sun,
+    .icon-tabler-chevron-down {
+        width: 80%;
+    }
+
+    .current-language-display {
+        font-size: 85%;
+    }
+
+    .dropdown-item {
+        font-size: 85%;
+    }
+
+    .nav-item.dropdown {
+        margin-right: 50px;
+    }
+    .header-dropdown-text{
+        margin-right: -55px;
     }
 }
+
+// // // <<< Oct. 30 2024 update <<< // // //
 
 @include color-mode(dark){
     .navbar,
@@ -1447,9 +1482,7 @@ th, tr {
 }
 
 .btn-doc-sidebar {
-    // position: fixed;
     margin-top: 20px;
-    // width: 14%;
     overflow-y: hidden;
 }
 
