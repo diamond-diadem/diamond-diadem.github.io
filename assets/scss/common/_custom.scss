@@ -1566,3 +1566,12 @@ th, tr {
 }
 
 // // // <<< change alert color <<< // // //
+
+hr {
+    border: solid 1px black;
+}
+@include color-mode(dark) {
+    hr {
+        border: solid 1px white;
+    }
+}
