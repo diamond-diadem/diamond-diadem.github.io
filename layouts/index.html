@@ -73,7 +73,7 @@
                 }
               </style>
               <div class="col-lg-6 news-card-homepage-{{ $i }}">
-                <h4>{{ .Title }}</h4>
+                <h4>{{ .Title | safeHTML }}</h4>
                 <p><i><b>{{ .Params.EventDate }}</i></b></p>
                 <p>{{ .Summary }}</p>
                 <a href="{{ .Permalink }}">Apprenez-en plus</a>
@@ -121,18 +121,20 @@
           {{ if (ge $i 1) }}
             <h2><u>Featured News</u></h3>
           {{ end }}
+          {{ $i := 0 }}
           {{ range where .Site.Pages "Section" "news" }}
             {{ if .Params.Homepage }}
+            {{ $i = add $i 1}}
               <style>
-                .news-card-homepage::before {
+                .news-card-homepage-{{ $i }}::before {
                   background-image: url({{ .Params.backgroundImage }});
                 }
               </style>
-              <div class="col-lg-6 news-card-homepage">
-                <h4>{{ .Title }}</h4>
+              <div class="col-lg-6 news-card-homepage-{{ $i }}">
+                <h4>{{ .Title | safeHTML }}</h4>
                 <p><i><b>{{ .Params.EventDate }}</i></b></p>
                 <p>{{ .Summary }}</p>
-                <a href="{{ .Permalink }}">Read more</a>
+                <a href="{{ .Permalink }}">Apprenez-en plus</a>
               </div>
             {{ end }}
           {{ end }}
