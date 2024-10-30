@@ -6,7 +6,7 @@ linkTitle: Tutoriel
 ## Pré-requis
 
 - [Installer Apptainer](/documentation/install/install-apptainer)
--  Télécharger l'image Apptainer :
+- Télécharger l'image Apptainer :
 
 ```bash
 apptainer pull simple-adsorption-workflow.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/simple-adsorption-workflow.sif:latest
