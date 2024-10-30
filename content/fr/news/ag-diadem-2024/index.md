@@ -24,7 +24,7 @@ seo:
 
 <div align="center"><h3>
 
-Le PEPR DIADEM est ravi de vous inviter à son Assemblée Générale 2024 qui aura lieu du 13 au 15 novembre 2024 sur la campus de la Doua à Lyon.
+Le <a href="https://pepr-diadem.fr" target="_blank">PEPR DIADEM</a> est ravi de vous inviter à son Assemblée Générale 2024 qui aura lieu du 13 au 15 novembre 2024 sur la campus de la Doua à Lyon.
 
 </h3></div>
 
