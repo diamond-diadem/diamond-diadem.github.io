@@ -3,7 +3,7 @@ title: "Assemblée Générale 2024 du PEPR DIADEM"
 description: ""
 summary: "Le PEPR DIADEM est ravi de vous inviter à son Assemblée Générale 2024 qui aura lieu du 13 au 15 novembre 2024 sur la campus de la Doua à Lyon."
 eventDate: "13-15 Novembre 2024"
-backgroundImage: ""
+backgroundImage: "/images/diadem-background.jpg"
 backgroundOpacity: 0.18
 # publishDate: 2024-11-18
 # lastmod: 2024-02-06T09:24:27+01:00
