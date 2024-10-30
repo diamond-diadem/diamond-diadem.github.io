@@ -14,7 +14,7 @@ apptainer pull simple-adsorption-workflow.sif oras://gricad-registry.univ-grenob
 
 ## 1 -  Choisir les paramètres de la simulation
 ```bash
-apptainer run simple-adsorption-workflow input
+apptainer run simple-adsorption-workflow.sif input
 ```
 Une fenêtre avec deux onglets s'ouvrent:
 <p align="center">
@@ -32,9 +32,9 @@ Une fenêtre avec deux onglets s'ouvrent:
 </p>
 <p align="center"><i>Sauvegarder le fichier de paramètres</i></p>
 
-Les **structures** proviennent de la base de donnée MOFX-DB qui est fourni un serveur d'accès vers la base de donnée originale, la **CoRE MOF 2019**. Ces structures sont nettoyées (sans solvant, sans désordre, etc ...) à partir de structures résolues par diffraction de rayons X provenant de la CSD (Crystallographic Structural Database) dont l'identifiant est une clé à 6 lettres.
+Les **structures** proviennent de la base de donnée **MOFX-DB** basé sur un serveur d'accès pointant vers la base de donnée structurelle originale (**CoRE MOF 2019**). Ces structures sont nettoyées (sans solvant, sans désordre, etc ...) à partir de structures résolues par diffraction de rayons X provenant de la base de données CSD (Crystallographic Structural Database) dont l'identifiant est une clé à 6 lettres.
 
-Les charges partielles peuvent être déterminées par deux méthodes dans l'état actuel :
+Dans l'état actuel, les charges partielles peuvent être déterminées par deux méthodes :
 - sans charges partielles : `None`
 - par une équilibration de charges `EQeq` (voir [cet article](https://doi.org/10.1021/acs.jctc.8b00669))
 
@@ -44,18 +44,16 @@ Les champs de force utilisables sont :
 ## 2 - Lancer les simulations
 
 ```bash
-apptainer run simple-adsorption-workflow run -i input.json
+apptainer run simple-adsorption-workflow.sif run -i input.json
 ```
-
-TODO : vérifier comment récupérer le fichier `input.json` généré dans la première étape et l'intégrer dans le prochain conteneur.
 
 Le script de base lance autant de simulations GCMC utilisant chacune un coeur CPU que de combinaisons de paramètres d'entrées. Exemple : 3 structures x 2 Températures x 5 points de Pression x 2 méthodes de charges  = 60 simulations.
 
-> Note : Le workflow ne permet pas encore d'être utilisé avec un *scheduler*, l'utilisateur doit donc veiller à lancer au maximum autant de simulations que de coeurs CPU accessibles pour garantir une performance acceptable.
+> Note : Dans sa version conteunerisée, le workflow ne permet pas d'être utilisé avec un *scheduler*, l'utilisateur doit donc veiller à lancer au maximum autant de simulations que de coeurs CPU accessibles pour garantir une performance acceptable.
 
 L'architecture des fichiers générés se présentent ainsi :
 ```
-data_<ID>.
+.
 ├── cif
 ├── gcmc
 ├── isotherms
@@ -65,7 +63,7 @@ data_<ID>.
 └── zeopp.log
 ```
 
-La base de donnée complète de propriétés d'adsorption se situe dans le fichier `gcmc/run<index>.json` où index est l'identifiant de l'expérience.
+La **base de donnée** de propriétés d'adsorption se situe dans le fichier `gcmc/run<index>.json` où `<index>` est l'identifiant de l'expérience.
 
 
 ## 3 - Mettre-à-jour la base de donnée
@@ -73,19 +71,18 @@ La base de donnée complète de propriétés d'adsorption se situe dans le fichi
 Lorsque l'on veut mettre à jour une base de donnée déjà générée par une expérience passée (ex : `run<index1>.json`), on peut générer une nouvelle base de donnée par la commande :
 
 ```bash
-apptainer run simple-adsorption-workflow -i run<index1>.json run<index>.json -o ./
+apptainer run simple-adsorption-workflow.sif merge -i run<index1>.json run<index>.json -o ./
 ```
 
 On obtient alors deux nouveaux fichiers :
-- `run_merged.json` : la base de donnée complète
-- `isotherms.json` : le fichier avec les isothermes
+- `run_merged.json` : la base de donnée entière
+- `isotherms.json` : le fichier contenant les isothermes
 
-TODO :
-- vérifier comment on récupère le fichier `isotherms.json` en dehors du containeur
+> Le fichier `isotherms.json` ne contient pas toutes les métadonnées de chaque simulation mono-CPU, contrairement au fichier `run_merged.json` mais est il est trsè utile pour regrouper les données et les représenter simplement (voir section suivante).
 
 ## 4 - Visualiser les résultats
 ```bash
-apptainer run simple-adsorption-workflow plot
+apptainer run simple-adsorption-workflow.sif plot
 ```
 
 <p align="center">
