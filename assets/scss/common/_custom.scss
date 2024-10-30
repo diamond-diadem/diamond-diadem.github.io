@@ -1420,7 +1420,9 @@ th, tr {
     font-size: xx-large;
 }
 
-.news-card-homepage {
+.news-card-homepage-1,
+.news-card-homepage-2,
+.news-card-homepage-3 {
     border: solid black 1px;
     border-radius: 45px;
     padding-bottom: 25px;
@@ -1431,7 +1433,9 @@ th, tr {
 }
 
 @include color-mode(dark) {
-    .news-card-homepage {
+    .news-card-homepage-1,
+    .news-card-homepage-2,
+    .news-card-homepage-3 {
         border: solid white 1px;
     }
 
@@ -1526,12 +1530,16 @@ th, tr {
 // // // <<< simple-adsorption-workflow images <<< // // //
 
 
-.news-card-homepage {
+.news-card-homepage-1,
+.news-card-homepage-2,
+.news-card-homepage-3 {
     position: relative;
     z-index: 1;
 }
 
-.news-card-homepage::before {
+.news-card-homepage-1:before,
+.news-card-homepage-2:before,
+.news-card-homepage-3:before {
     content: '';
     border-radius: 45px;
     background-size: cover;
