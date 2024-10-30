@@ -1,5 +1,6 @@
 ---
-title: Description
+title: Description simple-adsorption-workflow
+linkTitle: Description
 toc: false
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Tutoriel
-# toc: false
+title: Tutoriel simple-adsorption-workflow
+linkTitle: Tutoriel
 ---
 
 ## Pré-requis
