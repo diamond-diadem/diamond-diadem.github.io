@@ -410,7 +410,7 @@ u {
 .codes-pages-top-logo {
     min-inline-size: 100%;
     margin-top: 5%;
-    margin-bottom: 8%;
+    margin-bottom: 0%;
 }
 
 .home-neper {
@@ -505,18 +505,37 @@ u {
 }
 
 .logo-plumed {
-    width: 50%;
     content: url(/images/plumed-light.png);
+    display: block;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 45px;
 }
 @include color-mode(dark) {
     .logo-plumed {
         content: url(/images/plumed-dark.png);
     }
 }
+.container-plumed {
+    border: 1px solid black;
+    border-radius: 45px;
+    background-color: #68a3d6;
+}
+@include color-mode(dark) {
+    .container-plumed {
+        border: 1px solid white;
+        background-color: #314e6c;
+
+    }
+}
 
 .logo-gmsh {
-    width: 50%;
     content: url(/images/gmsh-light.png);
+    display: block;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
 }
 @include color-mode(dark) {
     .logo-gmsh {
@@ -1575,3 +1594,5 @@ hr {
         border: solid 1px white;
     }
 }
+
+

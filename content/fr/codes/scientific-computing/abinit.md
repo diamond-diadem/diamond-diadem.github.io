@@ -11,6 +11,12 @@ weight: 3
     <img alt="Abinit" class="codes-pages-top-logo logo-abinit">
 </a>
 
+### Récupérez l'image Apptainer
+
+```bash
+apptainer pull abinit.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/abinit.sif:latest
+```
+
 <div align="justify">
 
 Abinit est une suite logicielle complète destinée à l'étude computationnelle des propriétés physiques des matériaux en utilisant des méthodes avancées de mécanique quantique. Au cœur d'Abinit se trouve la théorie de la fonctionnelle de la densité (DFT), une approche largement utilisée pour étudier la structure électronique des atomes, des molécules et des phases condensées. En plus de la DFT, Abinit intègre également la théorie de la perturbation à plusieurs corps (MBPT) et la DFT dépendante du temps (TD-DFT), lui permettant d'aborder un large éventail de phénomènes physiques.
@@ -25,15 +31,9 @@ En tant que projet open-source, Abinit bénéficie d'une communauté active de d
 
 </div>
 
-### Récupérez l'image Apptainer :
-
-```bash
-apptainer pull abinit.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/abinit.sif:latest
-```
-
 ### Comment utiliser cette image de conteneur _( à venir)_
 
-### Documentation Abinit :
+### Documentation Abinit
 
 - #### <a href="https://www.abinit.org/" target="_blank">Site officiel</a>
 
