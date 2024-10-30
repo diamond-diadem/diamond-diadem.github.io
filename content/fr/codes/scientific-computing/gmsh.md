@@ -7,11 +7,15 @@ toc: false
 weight: 9
 ---
 
-<div style="text-align: center;">
-    <a href="https://gmsh.info/" target="_blank">
-        <img alt="Gmsh" class="codes-pages-top-logo logo-gmsh">
-    </a>
-</div>
+<a href="https://gmsh.info/" target="_blank">
+    <img alt="Gmsh" class="logo-gmsh">
+</a>
+
+### Récupérez l'image Apptainer
+
+```bash
+apptainer pull gmsh.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/gmsh.sif:latest
+```
 
 <div align="justify">
 
@@ -23,15 +27,9 @@ En outre, Gmsh comprend un puissant langage de script qui permet aux utilisateur
 
 </div>
 
-### Récupérez l'image Apptainer :
-
-```bash
-apptainer pull gmsh.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/gmsh.sif:latest
-```
-
 ### Comment utiliser cette image de conteneur _(à venir)_
 
-### Documentation Gmsh :
+### Documentation Gmsh
 
 - #### <a href="https://gmsh.info/" target="_blank">Site officiel</a>
 

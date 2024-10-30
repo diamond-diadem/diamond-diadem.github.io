@@ -11,6 +11,12 @@ weight: 5
     <img alt="FreeFEM" class="codes-pages-top-logo logo-freefem">
 </a>
 
+### Récupérez l'image Apptainer
+
+```bash
+apptainer pull freefemplusplus.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/freefemplusplus.sif:latest
+```
+
 <div align="justify">
 
 FreeFEM est un logiciel open-source complet qui facilite la résolution numérique des équations aux dérivées partielles (EDP) en utilisant la méthode des éléments finis (FEM). Conçu pour répondre aux besoins des scientifiques, des ingénieurs et des chercheurs, FreeFEM offre une plateforme robuste pour la modélisation et la résolution de problèmes complexes dans divers domaines, y compris la dynamique des fluides, la mécanique des structures, le transfert de chaleur et l'électromagnétisme.
@@ -25,15 +31,9 @@ Avec une communauté active et un développement continu, FreeFEM reste à la po
 
 </div>
 
-### Récupérez l'image Apptainer :
-
-```bash
-apptainer pull freefemplusplus.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/freefemplusplus.sif:latest
-```
-
 ### Comment utiliser cette image de conteneur _(à venir)_
 
-### Documentation FreeFEM :
+### Documentation FreeFEM
 
 - #### <a href="https://freefem.org/" target="_blank">Site officiel</a>
 

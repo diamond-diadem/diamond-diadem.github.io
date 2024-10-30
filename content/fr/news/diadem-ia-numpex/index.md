@@ -1,5 +1,5 @@
 ---
-title: "Quand l'IA et le HPC rencontrent la Science des Matériaux"
+title: "Quand l'IA et le HPC rencontrent<br>la Science des Matériaux"
 aliases:
 - /news/diadem-ia-event
 description: ""
