@@ -1545,3 +1545,16 @@ th, tr {
     left: 0;
     z-index: -1;
 }
+
+// // // >>> change alert color >>> // // //
+
+.alert {
+    background-color: #ec9c2a;
+}
+@include color-mode(dark){
+    .alert {
+        background-color: #77c28d;
+    }
+}
+
+// // // <<< change alert color <<< // // //
