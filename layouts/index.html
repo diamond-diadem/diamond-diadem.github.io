@@ -63,14 +63,16 @@
           {{ if (ge $i 1) }}
             <h2><u>Actualités en vedette</u></h3>
           {{ end }}
+          {{ $i := 0 }}
           {{ range where .Site.Pages "Section" "news" }}
             {{ if .Params.Homepage }}
+            {{ $i = add $i 1}}
               <style>
-                .news-card-homepage::before {
+                .news-card-homepage-{{ $i }}::before {
                   background-image: url({{ .Params.backgroundImage }});
                 }
               </style>
-              <div class="col-lg-6 news-card-homepage">
+              <div class="col-lg-6 news-card-homepage-{{ $i }}">
                 <h4>{{ .Title }}</h4>
                 <p><i><b>{{ .Params.EventDate }}</i></b></p>
                 <p>{{ .Summary }}</p>
