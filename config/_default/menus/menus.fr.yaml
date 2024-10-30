@@ -27,7 +27,7 @@ main:
     url: codes/start-here/home/
     weight: 20
   - name: Workflows
-    url: workflows/
+    url: workflows/start-here/home/
     weight: 30
   - name: Données
     url: data/
