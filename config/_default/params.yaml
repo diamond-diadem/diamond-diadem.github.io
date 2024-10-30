@@ -6,6 +6,7 @@ mainSections:
   - about
   - codes
   - documentation
+  - workflows
 diamond:
   enableNews: true
 social:
