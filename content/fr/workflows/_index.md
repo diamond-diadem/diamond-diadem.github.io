@@ -12,7 +12,7 @@ Des workflows bien conçus permettent non seulement de gagner du temps, mais aus
 
 </div>
 
-<div align="center"><h2>Worflows disponibles</h2></div>
+<div align="center"><h2>Workflows disponibles</h2></div>
 
 - ### simple-adsorption-workflow
 
