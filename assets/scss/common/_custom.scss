@@ -143,6 +143,11 @@ u {
     @extend .custom-icon;
 }
 
+.icon-aiida {
+    background-image: url(/images/aiida-logo.png);
+    @extend .custom-icon;
+}
+
 @include color-mode(dark) {
     .icon-quantum-espresso {
     background-image: url(/images/quantum-espresso-icon-dark.png);
