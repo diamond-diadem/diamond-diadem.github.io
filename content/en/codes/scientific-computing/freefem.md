@@ -11,6 +11,12 @@ weight: 5
     <img alt="FreeFEM" class="codes-pages-top-logo logo-freefem">
 </a>
 
+### Retrieve the Apptainer image
+
+```bash
+apptainer pull freefemplusplus.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/freefemplusplus.sif:latest
+```
+
 <div align="justify">
 
 FreeFEM is a comprehensive, open-source software package that facilitates the numerical solution of partial differential equations (PDEs) using the finite element method (FEM). Developed to cater to the needs of scientists, engineers, and researchers, FreeFEM provides a robust platform for modeling and solving complex problems across various disciplines including fluid dynamics, structural mechanics, heat transfer, and electromagnetism.
@@ -25,15 +31,9 @@ With an active community and continuous development, FreeFEM remains at the fore
 
 </div>
 
-### Retrieve this container using Apptainer:
-
-```bash
-apptainer pull freefemplusplus.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/freefemplusplus.sif:latest
-```
-
 ### Learn how to use this specific container _(to be added)_
 
-### FreeFEM documentation:
+### FreeFEM documentation
 
 - #### <a href="https://freefem.org/" target="_blank">Official website</a>
 
