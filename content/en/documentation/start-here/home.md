@@ -1,6 +1,6 @@
 ---
 title: Welcome to the DIAMOND user documentation
-linkTitle: Browse the documentation
+linkTitle: Welcome
 toc: false
 weight: 1
 ---
