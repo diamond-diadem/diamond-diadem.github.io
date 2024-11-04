@@ -11,6 +11,12 @@ weight: 2
     <img alt="Quantum ESPRESSO" class="codes-pages-top-logo logo-quantum-espresso">
 </a>
 
+### Retrieve the Apptainer image
+
+```bash
+apptainer pull quantum-espresso.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/quantum-espresso.sif:latest
+```
+
 <div align="justify">
 
 Quantum ESPRESSO is an electronic structure calculation software based on density functional theory (DFT) and electronic perturbation theory. It is designed to perform simulations of electronic and structural properties of atomic and molecular systems. Quantum ESPRESSO offers a comprehensive set of tools for studying materials at the atomic scale, including crystals, surfaces, and nanostructures.
@@ -19,15 +25,9 @@ The software supports various calculation methods, such as plane wave methods, q
 
 </div>
 
-### Retrieve this container using Apptainer:
-
-```bash
-apptainer pull quantum-espresso.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/quantum-espresso.sif:latest
-```
-
 ### <a href="/en/documentation/by-container/quantum-espresso">Learn how to use this specific container</a>
 
-### Quantum ESPRESSO documentation:
+### Quantum ESPRESSO documentation
 
 - #### <a href="https://www.quantum-espresso.org/" target="_blank">Official website</a>
 

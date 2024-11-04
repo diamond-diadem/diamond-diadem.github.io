@@ -11,6 +11,12 @@ weight: 1
     <img class="codes-pages-top-logo logo-lammps" alt="LAMMPS">
 </a>
 
+### Retrieve the Apptainer image
+
+```bash
+apptainer pull lammps.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/lammps.sif:latest
+```
+
 <div align="justify">
 
 LAMMPS, which stands for "Large-scale Atomic/Molecular Massively Parallel Simulator," is a powerful and versatile open-source software designed for conducting molecular dynamics simulations. Developed at the Sandia National Laboratory, LAMMPS has gained significant popularity in the scientific community due to its ability to model various materials and systems at the atomic and molecular levels.
@@ -23,15 +29,9 @@ The [LAMMPS website](https://www.lammps.org/) provides a variety of information 
 
 </div>
 
-### Retrieve this container using Apptainer:
-
-```bash
-apptainer pull lammps.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/lammps.sif:latest
-```
-
 ### <a href="/en/documentation/by-container/lammps">Learn how to use this specific container</a>
 
-### LAMMPS documentation:
+### LAMMPS documentation
 
 - #### <a href="https://www.lammps.org/" target="_blank">Official website</a>
 

@@ -11,7 +11,17 @@ weight: 4
     <img alt="Z-set" class="codes-pages-top-logo logo-z-set">
 </a>
 
+### Retrieve the Apptainer image
+
+```bash
+apptainer pull z-set.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/z-set.sif:latest
+```
+
+<div align="justify">
+
 Z-Set is a comprehensive software suite designed for advanced computational analysis in the field of material science and engineering. It specializes in the modeling and simulation of material behavior under various conditions. The suite includes a range of modules that facilitate the prediction and analysis of mechanical, thermal, and thermomechanical properties of materials.
+
+</div>
 
 Key features of Z-Set include:
 
@@ -20,17 +30,15 @@ Key features of Z-Set include:
 - **Multiphysics Capabilities**: Integrates thermal and mechanical simulations to provide a holistic view of material behavior.
 - **Optimization Tools**: Offers tools for the optimization of material properties and design processes.
 
+<div align="justify">
+
 Z-Set is widely used in academic research and industrial applications for its robustness and accuracy in predicting material performance under various environmental and loading conditions.
 
-### Retrieve this container using Apptainer:
-
-```bash
-apptainer pull z-set.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/z-set.sif:latest
-```
+</div>
 
 ### Learn how to use this specific container _(to be added)_
 
-### Z-set documentation:
+### Z-set documentation
 
 - #### <a href="http://www.zset-software.com/" target="_blank">Official website</a>
 

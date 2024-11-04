@@ -7,13 +7,19 @@ toc: false
 weight: 8
 ---
 
-<div style="text-align: center;">
-    <a href="https://www.plumed.org/" target="_blank">
-        <img alt="PLUMED" class="codes-pages-top-logo logo-plumed">
-    </a>
-</div>
+<a href="https://www.plumed.org/" target="_blank">
+    <img alt="PLUMED" class="logo-plumed">
+</a>
 
-<h3 style="margin-top: 0; font-weight: 500;" align="center">The community-developed PLUgin for MolEcular Dynamics</h3>
+<h3 style="font-weight: 500;" align="center">The community-developed PLUgin for MolEcular Dynamics</h3>
+
+<hr>
+
+### Retrieve the Apptainer image
+
+```bash
+apptainer pull plumed.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/plumed.sif:latest
+```
 
 <div align="justify">
 
@@ -27,15 +33,9 @@ Additionally, Plumed supports a scripting interface that enables users to set up
 
 </div>
 
-### Retrieve this container image with Apptainer:
-
-```bash
-apptainer pull plumed.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/plumed.sif:latest
-```
-
 ### Learn how to use this specific container _(to be added)_
 
-### PLUMED documentation:
+### PLUMED documentation
 
 - #### <a href="https://www.plumed.org/" target="_blank">Official website</a>
 
