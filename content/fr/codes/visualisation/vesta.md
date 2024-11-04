@@ -11,15 +11,27 @@ weight: 3
    <img alt="VESTA" class="codes-pages-top-logo logo-vesta"/>
 </a>
 
-<div align="center">
+<div align="center" class="mb-5">
 
 #### " **V**isualization for **E**lectronic and **ST**ructural **A**nalysis "
 
 </div>
 
+<hr>
+
+### Récupérez l'image Apptainer
+
+```bash
+apptainer pull vesta.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/vesta.sif:latest
+```
+
+<div align="justify">
+
 VESTA est un programme de visualisation 3D conçu pour les scientifiques et ingénieurs travaillant dans les domaines de la cristallographie, de la science des matériaux, et de la chimie. Il permet l'affichage et l'analyse de structures cristallines et de données électroniques, facilitant ainsi la compréhension des propriétés matérielles.
 
-### Caractéristiques principales :
+</div>
+
+### Caractéristiques principales
 
 1. **Visualisation des structures cristallines** :
    - Affichage en 3D de structures atomiques avec une grande précision.
@@ -48,24 +60,22 @@ VESTA est un programme de visualisation 3D conçu pour les scientifiques et ing�
    - Interface graphique intuitive avec des menus et des options faciles à naviguer.
    - Outils de sélection et de manipulation interactifs pour une analyse détaillée.
 
-### Applications typiques :
+### Applications typiques
 
 - Recherche en matériaux : exploration et modélisation de nouvelles phases de matériaux.
 - Chimie théorique : visualisation des résultats de calculs de chimie quantique.
 - Cristallographie : analyse de structures cristallines déterminées expérimentalement.
 - Enseignement : outil pédagogique pour illustrer les concepts de structure des matériaux et de chimie.
 
+<div align="justify">
+
 VESTA se distingue par sa capacité à combiner des fonctions de visualisation sophistiquées avec des outils d’analyse robustes, rendant accessible l’étude détaillée des structures atomiques et des propriétés électroniques à un large éventail de professionnels et d'étudiants dans les sciences des matériaux.
 
-### Récupérez ce conteneur avec Apptainer :
-
-```bash
-apptainer pull vesta.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/vesta.sif:latest
-```
+</div>
 
 ### Comment utiliser cette image de conteneur  _( à venir )_
 
-### Documentation VESTA :
+### Documentation VESTA
 
 - #### <a href="https://jp-minerals.org/vesta/" target="_blank">Site officiel</a>
 

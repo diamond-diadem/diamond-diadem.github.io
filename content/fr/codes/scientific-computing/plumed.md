@@ -7,7 +7,7 @@ toc: false
 weight: 8
 ---
 
-<div class="container-plumed">
+<!-- <div class="container-plumed"> -->
 
 <a href="https://www.plumed.org/" target="_blank">
     <img alt="PLUMED" class="logo-plumed">
@@ -15,7 +15,8 @@ weight: 8
 
 <h3 style="font-weight: 500;" align="center">The community-developed PLUgin for MolEcular Dynamics</h3>
 
-</div>
+<!-- </div> -->
+<hr>
 
 ### Récupérez l'image Apptainer
 
