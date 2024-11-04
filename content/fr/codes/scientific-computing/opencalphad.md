@@ -11,6 +11,12 @@ weight: 6
     <img alt="OpenCalphad" class="codes-pages-top-logo logo-opencalphad">
 </a>
 
+### Récupérez l'image Apptainer
+
+```bash
+apptainer pull opencalphad.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/opencalphad.sif:latest
+```
+
 <div align="justify">
 
 OpenCalphad (OC) est un logiciel polyvalent conçu pour les calculs thermodynamiques dans des systèmes multicomposants. Il est largement utilisé en science des matériaux et en ingénierie pour prédire les diagrammes de phases, les propriétés thermodynamiques et les états d'équilibre de systèmes matériels complexes. Développé avec une architecture modulaire, OpenCalphad facilite l'intégration de divers modèles et bases de données thermodynamiques.
@@ -25,15 +31,9 @@ En résumé, OpenCalphad est un outil puissant et open-source pour la modélisat
 
 </div>
 
-### Récupérez l'image Apptainer :
-
-```bash
-apptainer pull opencalphad.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/opencalphad.sif:latest
-```
-
 ### Comment utiliser cette image de conteneur _(à venir)_
 
-### Documentation OpenCalphad :
+### Documentation OpenCalphad
 
 - #### <a href="https://www.opencalphad.com/" target="_blank">Site officiel</a>
 
