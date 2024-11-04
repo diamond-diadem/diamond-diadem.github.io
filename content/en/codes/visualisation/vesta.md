@@ -11,15 +11,27 @@ weight: 3
    <img alt="VESTA" class="codes-pages-top-logo logo-vesta"/>
 </a>
 
-<div align="center">
+<div align="center" class="mb-5">
 
 #### " **V**isualization for **E**lectronic and **ST**ructural **A**nalysis "
 
 </div>
 
+<hr>
+
+### Retrieve the Apptainer image
+
+```bash
+apptainer pull vesta.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/vesta.sif:latest
+```
+
+<div align="justify">
+
 VESTA (Visualization for Electronic and Structural Analysis) is a 3D visualization program designed for scientists and engineers working in the fields of crystallography, materials science, and chemistry. It enables the display and analysis of crystalline structures and electronic data, facilitating the understanding of material properties.
 
-### Key Features:
+</div>
+
+### Key Features
 
 1. **Visualization of Crystalline Structures**:
    - High-precision 3D display of atomic structures.
@@ -55,17 +67,15 @@ VESTA (Visualization for Electronic and Structural Analysis) is a 3D visualizati
 - Crystallography: analysis of experimentally determined crystal structures.
 - Education: pedagogical tool for illustrating concepts in materials science and chemistry.
 
+<div align="justify">
+
 VESTA stands out for its ability to combine sophisticated visualization functions with robust analytical tools, making detailed study of atomic structures and electronic properties accessible to a wide range of professionals and students in the materials sciences.
 
-### Retrieve this container using Apptainer:
-
-```bash
-apptainer pull vesta.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/vesta.sif:latest
-```
+</div>
 
 ### Learn how to use this specific container  _( to be added )_
 
-### VESTA documentation:
+### VESTA documentation
 
 - #### <a href="https://jp-minerals.org/vesta/" target="_blank">Official website</a>
 

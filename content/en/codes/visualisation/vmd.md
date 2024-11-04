@@ -11,6 +11,12 @@ weight: 4
     <img alt="VMD" class="codes-pages-top-logo logo-vmd"/>
 </a>
 
+### Retrieve the Apptainer image
+
+```bash
+apptainer pull vmd.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/vmd.sif:latest
+```
+
 <div align="justify">
 
 VMD (Visual Molecular Dynamics) is a comprehensive molecular visualization program that facilitates the display, animation, and analysis of large biomolecular systems through advanced 3D graphics and integrated scripting capabilities. It was developed by the Theoretical and Computational Biophysics Group at the University of Illinois at Urbana-Champaign to support the needs of researchers working in the fields of molecular dynamics and computational biology.
@@ -26,12 +32,6 @@ VMD's functionality can be extended through its support for Tcl, Python, and Per
 Overall, VMD is a powerful and flexible tool for molecular visualization and analysis, widely used by researchers in computational biology, chemistry, and related fields. Its combination of high-quality visualization, extensive analysis tools, and scripting extensibility makes it an essential resource for the study and understanding of biomolecular systems.
 
 </div>
-
-### Retrieve this container using Apptainer:
-
-```bash
-apptainer pull vmd.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/vmd.sif:latest
-```
 
 ### <a href="/en/documentation/by-container/vmd">Learn how to use this specific container</a>
 
