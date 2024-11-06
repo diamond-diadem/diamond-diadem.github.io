@@ -25,7 +25,9 @@ Ce logiciel repose sur une architecture modulaire, ce qui permet aux utilisateur
 
 </div>
 
-### <a href="/documentation/by-container/paraview">Comment utiliser cette image de conteneur</a>
+### Tutoriel
+
+#### <a href="/documentation/by-container/paraview">Comment utiliser cette image de conteneur</a>
 
 ### Documentation ParaView
 
