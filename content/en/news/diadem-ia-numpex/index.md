@@ -55,7 +55,7 @@ The day is devoted to several talks given by renowned researchers and specialist
 
 <div align="center">
 
-#### Tentative Program
+#### Program
 
 </div>
 
@@ -76,13 +76,12 @@ The day is devoted to several talks given by renowned researchers and specialist
 - **12h20-14h00:** Lunch break & Posters session
 
 - **14h00-15h00:** Amaury HABRARD (IUF & University Jean Monnet) *Domain adaptation and transfer learning*
-- **15h00-15h40:** Free slot (TBA)
-<!-- - **15h00-15h40:** Noël JAKSE and Émilie DEVIJVER (University of Grenoble Alpes) *Unsupervised topological learning and temporal simulations* -->
+- **15h00-15h40:** Emmanuel FRANCK (UNISTRA) *Hybrid ML approaches in Material Science : the contribution of PINNS*
 
 - **15h40-16h00:** Coffee break
 
-- **16h00-16h40:** Emmanuel FRANCK (UNISTRA) *Hybrid ML approaches in Material Science : the contribution of PINNS*
-- **16h40-17h20:** Martin URHIN  (University of Grenoble Alpes) *When GenAI meets Material Science*
+- **16h00-16h40:** Martin URHIN  (University of Grenoble Alpes) *When GenAI meets Material Science*
+- **16h40-17h00:** Discussion and Conclusion
 
 </div>
 
