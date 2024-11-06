@@ -40,17 +40,17 @@ seo:
 
 </div>
 
+<div align="justify">
+
 **Appel à propositions** : La Journée Inter-PEPR, organisée conjointement par le PEPR DIADEM, le PEPR IA et le PEPR NumPex, vise à offrir un aperçu de certaines directions de recherche prometteuses à l'interface entre la Science des Matériaux, l'IA et le Calcul Haute Performance.
 
 La journée sera consacrée à plusieurs conférences données par des chercheurs et spécialistes renommés dans le domaine. Les jeunes chercheurs sont également invités à présenter leurs travaux sous forme de posters ou de courtes présentations et doivent soumettre un résumé à <a href="mailto:inter-pepr-days@services.cnrs.fr">inter-pepr-days@services.cnrs.fr</a> avant le 15 octobre.
 
-<div align="justify">
+</div>
 
 <div align="center">
 
-#### Programme provisoire
-
-</div>
+#### Programme
 
 </div>
 
@@ -69,13 +69,13 @@ La journée sera consacrée à plusieurs conférences données par des chercheur
 - **12h20-14h00 :** Pause déjeuner & Session posters
 
 - **14h00-15h00 :** Amaury HABRARD (IUF & Université Jean Monnet) *Domain adaptation and transfer learning*
-- **15h00-15h40 :** Créneau libre (*sera annoncé*)
+- **15h00-15h40 :** Emmanuel FRANCK (UNISTRA) *Hybrid ML approaches in Material Science: the contribution of PINNs*
 
 <!-- - **15h00-15h40 :** Noël JAKSE and Émilie DEVIJVER (Université Grenoble Alpes) *Unsupervised topological learning and temporal simulations* -->
 
 - **15h40-16h00 :** Pause café
 
-- **16h00-16h40 :** Emmanuel FRANCK (UNISTRA) *Hybrid ML approaches in Material Science: the contribution of PINNs*
-- **16h40-17h20 :** Martin URHIN  (Université Grenoble Alpes) *When GenAI meets Material Science*
+- **16h00-16h40 :** Martin URHIN  (Université Grenoble Alpes) *When GenAI meets Material Science*
+- **16h40-17h00 :** Discussion et Conclusion
 
 <br/>
