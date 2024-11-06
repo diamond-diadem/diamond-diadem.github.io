@@ -1216,8 +1216,10 @@ u {
     }
 
     .apptainer-logo-about {
-        width: 100%;
-        padding: 0 25%;
+        display: block;
+        width: 35%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .right-about-apptainer-fr {
@@ -1235,8 +1237,11 @@ u {
     }
 
     .apptainer-logo-about {
-        width: 100%;
-        padding: 0 10%;
+        display: block;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+
     }
 
     .right-about-apptainer-fr {
@@ -1246,11 +1251,11 @@ u {
 
 }
 
-@include media-breakpoint-only(md) {
-    .apptainer-logo-about {
-        width: 70%;
-    }
-}
+// @include media-breakpoint-only(md) {
+//     .apptainer-logo-about {
+//         width: 70%;
+//     }
+// }
 
 
 // >>> about apptainer en >>> //
@@ -1258,18 +1263,7 @@ u {
 @include media-breakpoint-up(xl) {
     .left-about-apptainer-en {
         width: 35%;
-        // margin-top: 2.5%;
-        // margin-bottom: 0;
     }
-
-    // .apptainer-logo-about{
-    //     display: block;
-    //     width: 85%;
-    //     margin-left: auto;
-    //     margin-right: auto;
-    //     padding-top: 30px;
-    //     padding-bottom: 30px;
-    // }
 
     .right-about-apptainer-en {
         width: 65%;
@@ -1287,11 +1281,6 @@ u {
         margin-bottom: 5%;
     }
 
-    .apptainer-logo-about {
-        width: 100%;
-        padding: 0 25%;
-    }
-
     .right-about-apptainer-en {
         width: 100%;
         margin-bottom: 0%;
@@ -1303,11 +1292,6 @@ u {
     .left-about-apptainer-en {
       width: 100%;
       margin-top: 5%;
-    }
-
-    .apptainer-logo-about {
-        width: 100%;
-        padding: 0 10%;
     }
 
     .right-about-apptainer-en {
