@@ -12,7 +12,7 @@
       <div class="blog-header">
         <h1>{{ .Title | safeHTML }}</h1>
         {{/*  {{ partial "main/blog-meta.html" . }}  */}}
-        <p class="event-date-page">{{ .Params.eventDate }}</p>
+        <h2 class="event-date-page">{{ .Params.eventDate }}</h2>
       </div>
     </div>
     {{ if site.Params.doks.imageSingle -}}
