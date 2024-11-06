@@ -17,6 +17,143 @@ But to begin with, if you haven't gone through this step yet and if you're not f
 
 {{< /callout >}}
 
+<h3> Shortcut : choose your code and retrieve it with Apptainer</h3>
+
+<select class="form-select" id="options">
+    <option value="">--- Select ---</option>
+    <option value="option1">LAMMPS</option>
+    <option value="option2">Quantum ESPRESSO</option>
+    <option value="option3">Abinit</option>
+    <option value="option4">Z-set</option>
+    <option value="option5">FreeFEM</option>
+    <option value="option6">OpenCalphad</option>
+    <option value="option7">Neper</option>
+    <option value="option8">PLUMED</option>
+    <option value="option9">Gmsh</option>
+    <option disabled>─────────────</option>
+    <option value="optiona">Ovito</option>
+    <option value="optionb">ParaView</option>
+    <option value="optionc">Vesta</option>
+    <option value="optiond">VMD</option>
+</select>
+
+<div id="content-option1" class="hidden">
+
+```bash
+apptainer pull lammps.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/lammps.sif:latest
+```
+
+</div>
+<div id="content-option2" class="hidden">
+
+```bash
+apptainer pull quantum-espresso.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/quantum-espresso.sif:latest
+```
+
+</div>
+<div id="content-option3" class="hidden">
+
+```bash
+apptainer pull abinit.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/abinit.sif:latest
+```
+
+</div>
+<div id="content-option4" class="hidden">
+
+```bash
+apptainer pull z-set.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/z-set.sif:latest
+```
+
+</div>
+<div id="content-option5" class="hidden">
+
+```bash
+apptainer pull freefemplusplus.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/freefemplusplus.sif:latest
+```
+
+</div>
+<div id="content-option6" class="hidden">
+
+```bash
+apptainer pull opencalphad.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/opencalphad.sif:latest
+```
+
+</div>
+<div id="content-option7" class="hidden">
+
+```bash
+apptainer pull neper.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/neper.sif:latest
+```
+
+</div>
+<div id="content-option8" class="hidden">
+
+```bash
+apptainer pull plumed.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/plumed.sif:latest
+```
+
+</div>
+<div id="content-option9" class="hidden">
+
+```bash
+apptainer pull gmsh.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/gmsh.sif:latest
+```
+
+</div>
+<div id="content-optiona" class="hidden">
+
+```bash
+apptainer pull ovito.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/ovito.sif:latest
+```
+
+</div>
+<div id="content-optionb" class="hidden">
+
+```bash
+apptainer pull paraview.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/paraview.sif:latest
+```
+
+</div>
+<div id="content-optionc" class="hidden">
+
+```bash
+apptainer pull vesta.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/vesta.sif:latest
+```
+
+</div>
+<div id="content-optiond" class="hidden">
+
+```bash
+apptainer pull vmd.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/vmd.sif:latest
+```
+
+</div>
+
+<script>
+    // Références des éléments
+    const selectElement = document.getElementById('options');
+    const contents = document.querySelectorAll('[id^="content-"]');
+
+    // Écouter le changement de sélection
+    selectElement.addEventListener('change', function() {
+        // Masquer tous les contenus
+        contents.forEach(content => content.classList.add('hidden'));
+
+        // Récupérer la valeur sélectionnée
+        const selectedValue = this.value;
+
+        // Afficher le contenu correspondant si la valeur n'est pas vide
+        if (selectedValue) {
+            const selectedContent = document.getElementById(`content-${selectedValue}`);
+            if (selectedContent) {
+                selectedContent.classList.remove('hidden');
+            }
+        }
+    });
+</script>
+
+<hr>
+
 <div align="justify">
 
 In the summer of 2023, the materials community was surveyed via LimeSurvey to identify working habits. Among other things, this highlighted a number of codes used for both computation and visualisation (see below). Currently, almost $40\%$ of the codes cited by the community are containerised and/or packaged, covering all physical scales.
@@ -81,9 +218,7 @@ In the summer of 2023, the materials community was surveyed via LimeSurvey to id
     </tbody>
 </table>
 
-<h3> Shortcut : choose your code and get the Apptainer command to retrieve it</h3>
-
-{{< tabs "retrieve-apptainer-image" >}}
+<!-- {{< tabs "retrieve-apptainer-image" >}}
 {{< tab "LAMMPS" >}}
 
 ```bash
@@ -175,4 +310,4 @@ apptainer pull vmd.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/app
 ```
 
 {{< /tab >}}
-{{< /tabs >}}
+{{< /tabs >}} -->
