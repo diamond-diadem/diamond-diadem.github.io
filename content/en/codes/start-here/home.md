@@ -169,7 +169,7 @@ In the summer of 2023, the materials community was surveyed via LimeSurvey to id
 
 <h3><u>USEFUL LINKS :</u></h3>
 
-- <h4><a href="/en/documentation/install-apptainer/howto/">Install Apptainer</a></h4>
+- <h4><a href="/en/documentation/install/install-apptainer/">Install Apptainer</a></h4>
 - <h4><a href="/en/documentation/use/apptainer-image/">Learn how to use a container image</a></h4>
 
 <h3><u>AVAILABLE CODES:</u></h3>
