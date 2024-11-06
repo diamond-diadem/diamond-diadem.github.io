@@ -17,6 +17,142 @@ Mais pour commencer, si vous n'êtes pas encore passé par cette étape et si vo
 
 {{< /callout >}}
 
+<h3>Raccourci : choississez votre code et récupérez-le avec Apptainer</h3>
+<select class="form-select" id="options">
+    <option value="">-- Sélectionnez --</option>
+    <option value="option1">LAMMPS</option>
+    <option value="option2">Quantum ESPRESSO</option>
+    <option value="option3">Abinit</option>
+    <option value="option4">Z-set</option>
+    <option value="option5">FreeFEM</option>
+    <option value="option6">OpenCalphad</option>
+    <option value="option7">Neper</option>
+    <option value="option8">PLUMED</option>
+    <option value="option9">Gmsh</option>
+    <option disabled>─────────────</option>
+    <option value="optiona">Ovito</option>
+    <option value="optionb">ParaView</option>
+    <option value="optionc">Vesta</option>
+    <option value="optiond">VMD</option>
+</select>
+
+<div id="content-option1" class="hidden">
+
+```bash
+apptainer pull lammps.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/lammps.sif:latest
+```
+
+</div>
+<div id="content-option2" class="hidden">
+
+```bash
+apptainer pull quantum-espresso.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/quantum-espresso.sif:latest
+```
+
+</div>
+<div id="content-option3" class="hidden">
+
+```bash
+apptainer pull abinit.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/abinit.sif:latest
+```
+
+</div>
+<div id="content-option4" class="hidden">
+
+```bash
+apptainer pull z-set.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/z-set.sif:latest
+```
+
+</div>
+<div id="content-option5" class="hidden">
+
+```bash
+apptainer pull freefemplusplus.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/freefemplusplus.sif:latest
+```
+
+</div>
+<div id="content-option6" class="hidden">
+
+```bash
+apptainer pull opencalphad.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/opencalphad.sif:latest
+```
+
+</div>
+<div id="content-option7" class="hidden">
+
+```bash
+apptainer pull neper.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/neper.sif:latest
+```
+
+</div>
+<div id="content-option8" class="hidden">
+
+```bash
+apptainer pull plumed.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/plumed.sif:latest
+```
+
+</div>
+<div id="content-option9" class="hidden">
+
+```bash
+apptainer pull gmsh.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/gmsh.sif:latest
+```
+
+</div>
+<div id="content-optiona" class="hidden">
+
+```bash
+apptainer pull ovito.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/ovito.sif:latest
+```
+
+</div>
+<div id="content-optionb" class="hidden">
+
+```bash
+apptainer pull paraview.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/paraview.sif:latest
+```
+
+</div>
+<div id="content-optionc" class="hidden">
+
+```bash
+apptainer pull vesta.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/vesta.sif:latest
+```
+
+</div>
+<div id="content-optiond" class="hidden">
+
+```bash
+apptainer pull vmd.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/vmd.sif:latest
+```
+
+</div>
+
+<script>
+    // Références des éléments
+    const selectElement = document.getElementById('options');
+    const contents = document.querySelectorAll('[id^="content-"]');
+
+    // Écouter le changement de sélection
+    selectElement.addEventListener('change', function() {
+        // Masquer tous les contenus
+        contents.forEach(content => content.classList.add('hidden'));
+
+        // Récupérer la valeur sélectionnée
+        const selectedValue = this.value;
+
+        // Afficher le contenu correspondant si la valeur n'est pas vide
+        if (selectedValue) {
+            const selectedContent = document.getElementById(`content-${selectedValue}`);
+            if (selectedContent) {
+                selectedContent.classList.remove('hidden');
+            }
+        }
+    });
+</script>
+
+<hr>
+
 <div align="justify">
 
 Pendant l'été 2023, la communauté des matériaux a été sondée via LimeSurvey pour identifier des habitudes de travail. Cela a notamment permis de mettre en lumière un certains nombres de codes utilisés, aussi bien pour le calcul que pour la visualisation (cf ci-dessous). À l'heure actuelle, quasiment $40\%$ des codes cités par la communauté ont été conteneurisés et/ou packagés, couvrant l'ensemble des échelles physiques.
@@ -25,17 +161,12 @@ Pendant l'été 2023, la communauté des matériaux a été sondée via LimeSurv
 
 <img alt="containerised codes" class="containerised-codes" style="width:100%">
 
-<h3><u>LIENS UTILES :</u></h3>
+<h3><u>LIENS UTILES</u></h3>
 
 - <h4><a href="/documentation/install/install-apptainer/">Installez Apptainer</a></h4>
 - <h4><a href="/documentation/use/apptainer-image/">Apprenez comment utiliser un conteneur</a></h4>
 
-<h3><u>CODES DISPONIBLES :</u></h3>
-
-<!-- | Calcul scientifique                              | Visualisation                           |
-| ------------------------------------------------ | --------------------------------------- |
-| [<i class="icon-lammps"></i>LAMMPS](/codes/scientific-computing/lammps/) | [<i class="icon-ovito"></i>Ovito](/codes/visualisation/ovito/) |
-| [<i class="icon-quantum-espresso"></i>Quantum ESPRESSO](/codes/scientific-computing/quantum-espresso/) | [<i class="icon-paraview"></i>ParaView](/codes/visualisation/paraview/) | -->
+<h3><u>CODES DISPONIBLES</u></h3>
 
 <table>
     <caption>
@@ -87,7 +218,7 @@ Pendant l'été 2023, la communauté des matériaux a été sondée via LimeSurv
     </tbody>
 </table>
 
-<h3> Raccourci : choississez votre code et obtenez la commande Apptainer pour le récupérer</h3>
+<!-- <h3>Raccourci : choississez votre code et obtenez la commande Apptainer pour le récupérer</h3>
 
 {{< tabs "retrieve-apptainer-image" >}}
 {{< tab "LAMMPS" >}}
@@ -181,4 +312,4 @@ apptainer pull vmd.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/app
 ```
 
 {{< /tab >}}
-{{< /tabs >}}
+{{< /tabs >}} -->
