@@ -74,7 +74,7 @@
               </style>
               <div class="col-lg-5 news-card-homepage-{{ $i }}">
                 <h4>{{ .Title | safeHTML }}</h4>
-                <p><i><b>{{ .Params.EventDate }}</i></b></p>
+                <p class="event-date-page">{{ .Params.EventDate }}</p>
                 <p>{{ .Summary }}</p>
                 <a href="{{ .Permalink }}">Apprenez-en plus</a>
               </div>
@@ -132,7 +132,7 @@
               </style>
               <div class="col-lg-5 news-card-homepage-{{ $i }}">
                 <h4>{{ .Title | safeHTML }}</h4>
-                <p><i><b>{{ .Params.EventDate }}</i></b></p>
+                <p class="event-date-page">{{ .Params.EventDate }}</p>
                 <p>{{ .Summary }}</p>
                 <a href="{{ .Permalink }}">Apprenez-en plus</a>
               </div>
