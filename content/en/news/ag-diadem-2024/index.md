@@ -1,5 +1,5 @@
 ---
-title: "2024 General Assembly<br>of the PEPR DIADEM"
+title: "2024 General Assembly of the PEPR DIADEM"
 description: ""
 summary: "PEPR DIADEM is pleased to invite you to its 2024 General Assembly, which will take place from November 13 to 15, 2024, at the Doua campus in Lyon."
 eventDate: "November 13 to 15, 2024"
