@@ -25,9 +25,11 @@ Ovito est développé, distribué, et pris en charge par OVITO GmbH, une start-u
 
 </div>
 
-### <a href="/documentation/by-container/ovito">Comment utiliser cette image de conteneur</a>
+### Tutoriel
 
-### Documentation Ovito :
+#### <a href="/documentation/by-container/ovito">Comment utiliser cette image de conteneur</a>
+
+### Documentation Ovito
 
 - #### <a href="https://www.ovito.org/" target="_blank">Site officiel</a>
 

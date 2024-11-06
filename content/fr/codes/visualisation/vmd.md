@@ -33,7 +33,9 @@ Dans l'ensemble, VMD est un outil puissant et flexible pour la visualisation et 
 
 </div>
 
-### <a href="/documentation/by-container/vmd">Comment utiliser cette image de conteneur</a>
+### Tutoriel
+
+#### <a href="/documentation/by-container/vmd">Comment utiliser cette image de conteneur</a>
 
 ### Documentation VMD
 
