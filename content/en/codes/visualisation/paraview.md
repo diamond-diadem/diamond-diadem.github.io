@@ -25,9 +25,11 @@ This software is built on a modular architecture, allowing users to customize th
 
 </div>
 
-### <a href="/en/documentation/by-container/paraview">Learn how to use this specific container</a>
+### Tutorial
 
-### ParaView documentation:
+#### <a href="/en/documentation/by-container/paraview">Learn how to use this specific container image</a>
+
+### ParaView documentation
 
 - #### <a href="https://www.paraview.org/" target="_blank">Official website</a>
 

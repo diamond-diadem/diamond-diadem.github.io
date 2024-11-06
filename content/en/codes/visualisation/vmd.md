@@ -33,9 +33,11 @@ Overall, VMD is a powerful and flexible tool for molecular visualization and ana
 
 </div>
 
-### <a href="/en/documentation/by-container/vmd">Learn how to use this specific container</a>
+### Tutorial
 
-### VMD documentation:
+#### <a href="/en/documentation/by-container/vmd">Learn how to use this specific container image</a>
+
+### VMD documentation
 
 - #### <a href="https://www.ks.uiuc.edu/Research/vmd/" target="_blank">Official website</a>
 
