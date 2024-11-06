@@ -25,7 +25,9 @@ Ovito is developed, distributed, and supported by OVITO GmbH, a German startup. 
 
 </div>
 
-### <a href="/en/documentation/by-container/ovito">Learn how to use this specific container</a>
+### Tutorial
+
+#### <a href="/en/documentation/by-container/ovito">Learn how to use this specific container image</a>
 
 ### Ovito documentation
 

@@ -29,7 +29,9 @@ The [LAMMPS website](https://www.lammps.org/) provides a variety of information 
 
 </div>
 
-### <a href="/en/documentation/by-container/lammps">Learn how to use this specific container</a>
+### Tutorial
+
+#### <a href="/en/documentation/by-container/lammps">Learn how to use this specific container image</a>
 
 ### LAMMPS documentation
 
