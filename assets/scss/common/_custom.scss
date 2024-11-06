@@ -1181,7 +1181,34 @@ u {
 
 // <<< about diadem en <<<
 
-@include media-breakpoint-up(lg) {
+// >>> about apptainer fr >>>
+
+@include media-breakpoint-up(xl) {
+    .left-about-apptainer-fr {
+        width: 35%;
+        // margin-top: 2.5%;
+        // margin-bottom: 0;
+    }
+
+    .apptainer-logo-about{
+        display: block;
+        width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .right-about-apptainer-fr {
+        width: 65%;
+        margin-bottom: 0;
+        padding: 20px 10px;
+        font-size: 115%;
+        font-weight: 500;
+    }
+}
+
+@include media-breakpoint-only(lg) {
     .left-about-apptainer-fr {
         width: 100%;
         margin-top: 5%;
@@ -1198,25 +1225,6 @@ u {
         margin-bottom: 0%;
     }
 
-}
-
-
-@include media-breakpoint-up(xl) {
-    .left-about-apptainer-fr {
-        width: 23%;
-        margin-top: 2.5%;
-        margin-bottom: 0;
-    }
-
-    .apptainer-logo-about{
-        padding: 0;
-    }
-
-    .right-about-apptainer-fr {
-        width: 73%;
-        margin-bottom: 0;
-        padding: 10px 10px;
-    }
 }
 
 @include media-breakpoint-down(lg) {
@@ -1244,7 +1252,35 @@ u {
     }
 }
 
-@include media-breakpoint-up(lg) {
+
+// >>> about apptainer en >>> //
+
+@include media-breakpoint-up(xl) {
+    .left-about-apptainer-en {
+        width: 35%;
+        // margin-top: 2.5%;
+        // margin-bottom: 0;
+    }
+
+    // .apptainer-logo-about{
+    //     display: block;
+    //     width: 85%;
+    //     margin-left: auto;
+    //     margin-right: auto;
+    //     padding-top: 30px;
+    //     padding-bottom: 30px;
+    // }
+
+    .right-about-apptainer-en {
+        width: 65%;
+        margin-bottom: 0;
+        padding: 20px 10px;
+        font-size: 115%;
+        font-weight: 500;
+    }
+}
+
+@include media-breakpoint-only(lg) {
     .left-about-apptainer-en {
         width: 100%;
         margin-top: 5%;
@@ -1261,25 +1297,6 @@ u {
         margin-bottom: 0%;
     }
 
-}
-
-
-@include media-breakpoint-up(xl) {
-    .left-about-apptainer-en {
-        width: 23%;
-        margin-top: 1.5%;
-        margin-bottom: 0;
-    }
-
-    .apptainer-logo-about{
-        padding: 0;
-    }
-
-    .right-about-apptainer-en {
-        width: 73%;
-        margin-bottom: 0;
-        padding: 10px 10px;
-    }
 }
 
 @include media-breakpoint-down(lg) {
@@ -1299,6 +1316,8 @@ u {
     }
 
 }
+
+// <<< about apptainer en <<<
 
 @include media-breakpoint-up(lg){
 
