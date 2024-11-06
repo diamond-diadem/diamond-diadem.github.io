@@ -19,7 +19,7 @@ Mais pour commencer, si vous n'êtes pas encore passé par cette étape et si vo
 
 <h3>Raccourci : choississez votre code et récupérez-le avec Apptainer</h3>
 <select class="form-select" id="options">
-    <option value="">-- Sélectionnez --</option>
+    <option value="option0">-- Sélectionnez --</option>
     <option value="option1">LAMMPS</option>
     <option value="option2">Quantum ESPRESSO</option>
     <option value="option3">Abinit</option>
@@ -36,6 +36,11 @@ Mais pour commencer, si vous n'êtes pas encore passé par cette étape et si vo
     <option value="optiond">VMD</option>
 </select>
 
+<div id="content-option0">
+
+<br>
+
+</div>
 <div id="content-option1" class="hidden">
 
 ```bash
@@ -152,6 +157,8 @@ apptainer pull vmd.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/app
 </script>
 
 <hr>
+
+<br>
 
 <div align="justify">
 

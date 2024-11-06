@@ -20,7 +20,7 @@ But to begin with, if you haven't gone through this step yet and if you're not f
 <h3> Shortcut : choose your code and retrieve it with Apptainer</h3>
 
 <select class="form-select" id="options">
-    <option value="">--- Select ---</option>
+    <option value="option0">--- Select ---</option>
     <option value="option1">LAMMPS</option>
     <option value="option2">Quantum ESPRESSO</option>
     <option value="option3">Abinit</option>
@@ -37,6 +37,11 @@ But to begin with, if you haven't gone through this step yet and if you're not f
     <option value="optiond">VMD</option>
 </select>
 
+<div id="content-option0">
+
+<br>
+
+</div>
 <div id="content-option1" class="hidden">
 
 ```bash
