@@ -857,7 +857,7 @@ u {
     }
 
     .nav-item {
-        font-size: 85%;//$font-size-base;
+        font-size: 90%;//$font-size-base;
     }
 
     .nav-logo {
@@ -872,7 +872,7 @@ u {
     .icon-tabler-moon,
     .icon-tabler-sun,
     .icon-tabler-chevron-down {
-        width: 80%;
+        width: 20px;
     }
 
     .current-language-display {
@@ -884,10 +884,10 @@ u {
     }
 
     .nav-item.dropdown {
-        margin-right: 50px;
+        margin-right: 45px;
     }
     .header-dropdown-text{
-        margin-right: -55px;
+        margin-right: -50px;
     }
 }
 
