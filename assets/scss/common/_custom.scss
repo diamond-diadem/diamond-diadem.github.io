@@ -246,6 +246,11 @@ u {
     }
 }
 
+.icon-zeoplusplus {
+    background-image: url(/images/zeo++/icon-zeoplusplus.png);
+    @extend .custom-icon
+}
+
 
 // // // END custom icons END // // //
 
@@ -589,18 +594,18 @@ u {
         content: url(/images/plumed-dark.png);
     }
 }
-.container-plumed {
-    border: 1px solid black;
-    border-radius: 45px;
-    background-color: #68a3d6;
-}
-@include color-mode(dark) {
-    .container-plumed {
-        border: 1px solid white;
-        background-color: #314e6c;
+// .container-plumed {
+//     border: 1px solid black;
+//     border-radius: 45px;
+//     background-color: #68a3d6;
+// }
+// @include color-mode(dark) {
+//     .container-plumed {
+//         border: 1px solid white;
+//         background-color: #314e6c;
 
-    }
-}
+//     }
+// }
 
 .logo-gmsh {
     content: url(/images/gmsh-light.png);
@@ -614,6 +619,21 @@ u {
         content: url(/images/gmsh-dark.png);
     }
 }
+
+.logo-zeoplusplus {
+    content: url(/images/zeo++/logo-zeoplusplus.png);
+    display: block;
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+}
+// @include color-mode(dark) {
+//     .logo-zeoplusplus {
+//         content: url(/images/zeo++/logo-zeoplusplus-handmade-nobg.png);
+//     }
+// }
+
+
 
 
 
