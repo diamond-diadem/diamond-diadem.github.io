@@ -58,7 +58,7 @@ La journée sera consacrée à plusieurs conférences données par des chercheur
 
 - **8h30-9h00 :** Accueil et café
 
-- **9h00-10h00 :** Marie-Pierre GAIGEOT (Université Evry) *Exploiting graph theory in MD simulations for extracting chemical and physical properties of materials*
+- **9h00-10h00 :** Marie-Pierre GAIGEOT (IUF & Université Evry) *Exploiting graph theory in MD simulations for extracting chemical and physical properties of materials*
 - **10h-10h40 :** Émilie DEVIJVER (CNRS & Université Grenoble Alpes) *An introduction to causality*
 
 - **10h40-11h00 :** Pause café
