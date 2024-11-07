@@ -360,8 +360,12 @@ u {
 
 // // // Wordcloud and France cluster map pictures // // //
 
-.containerised-codes {
-    content: url(images/containerised_codes_light.png);
+.containerised-codes-fr {
+    content: url(images/containerised-codes/containerised-codes-light-fr.png);
+    width: 100%;
+}
+.containerised-codes-en {
+    content: url(images/containerised-codes/containerised-codes-light-en.png);
     width: 100%;
 }
 
@@ -375,8 +379,11 @@ u {
 }
 
 @include color-mode(dark) {
-    .containerised-codes{
-        content: url(images/containerised_codes_dark.png)
+    .containerised-codes-fr{
+        content: url(images/containerised-codes/containerised-codes-dark-fr.png)
+    }
+    .containerised-codes-en{
+        content: url(images/containerised-codes/containerised-codes-dark-en.png)
     }
     .cluster-map-fr{
         content: url(images/cluster-map/cluster-map-dark-fr.png)

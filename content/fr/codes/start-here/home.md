@@ -23,7 +23,7 @@ Pendant l'été 2023, la communauté des matériaux a été sondée via LimeSurv
 
 </div>
 
-<img alt="containerised codes" class="containerised-codes mt-4" style="width:100%">
+<img alt="containerised codes" class="containerised-codes-fr mt-4" style="width:100%">
 
 <h3><u>LIENS UTILES</u></h3>
 
