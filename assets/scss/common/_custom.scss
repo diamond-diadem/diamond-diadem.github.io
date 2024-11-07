@@ -365,8 +365,12 @@ u {
     width: 100%;
 }
 
-.cluster-map {
-    content: url(images/cluster_map_light.png);
+.cluster-map-fr {
+    content: url(images/cluster-map/cluster-map-light-fr.png);
+    width: 100%;
+}
+.cluster-map-en {
+    content: url(images/cluster-map/cluster-map-light-en.png);
     width: 100%;
 }
 
@@ -374,8 +378,11 @@ u {
     .containerised-codes{
         content: url(images/containerised_codes_dark.png)
     }
-    .cluster-map{
-        content: url(images/cluster_map_dark.png)
+    .cluster-map-fr{
+        content: url(images/cluster-map/cluster-map-dark-fr.png)
+    }
+    .cluster-map-en{
+        content: url(images/cluster-map/cluster-map-dark-en.png)
     }
 }
 

@@ -43,7 +43,7 @@ En résumé, les conteneurs offrent une solution puissante pour le déploiement 
 
 <div class="row">
   <div class="column left-about-containers">
-    <img alt="Cluster map" class="cluster-map">
+    <img alt="Cluster map" class="cluster-map-fr">
   </div>
   <div class="column right-about-containers" align="justify">
 

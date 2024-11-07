@@ -43,7 +43,7 @@ In summary, containers offer a powerful solution for application deployment, imp
 
  <div class="row">
   <div class="column left-about-containers">
-    <img alt="Cluster map" class="cluster-map">
+    <img alt="Cluster map" class="cluster-map-en">
   </div>
   <div class="column right-about-containers" align="justify">
 
