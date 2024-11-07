@@ -84,21 +84,27 @@ Pendant l'été 2023, la communauté des matériaux a été sondée via LimeSurv
 
 <h3>Raccourci : choississez votre code et récupérez-le avec Apptainer</h3>
 <select class="form-select" id="options">
-    <option value="option0">-- Sélectionnez --</option>
-    <option value="option1">LAMMPS</option>
-    <option value="option2">Quantum ESPRESSO</option>
-    <option value="option3">Abinit</option>
-    <option value="option4">Z-set</option>
-    <option value="option5">FreeFEM</option>
-    <option value="option6">OpenCalphad</option>
-    <option value="option7">Neper</option>
-    <option value="option8">PLUMED</option>
-    <option value="option9">Gmsh</option>
-    <option disabled>─────────────</option>
-    <option value="optiona">Ovito</option>
-    <option value="optionb">ParaView</option>
-    <option value="optionc">Vesta</option>
-    <option value="optiond">VMD</option>
+    <optgroup>
+        <option value="option0">-- Sélectionnez --</option>
+    </optgroup>
+    <optgroup label="Calcul Scientifique">
+        <option value="option1">LAMMPS</option>
+        <option value="option2">Quantum ESPRESSO</option>
+        <option value="option3">Abinit</option>
+        <option value="option4">Z-set</option>
+        <option value="option5">FreeFEM</option>
+        <option value="option6">OpenCalphad</option>
+        <option value="option7">Neper</option>
+        <option value="option8">PLUMED</option>
+        <option value="option9">Gmsh</option>
+    </optgroup>
+    <optgroup label="Visualisation">
+        <!-- <option disabled></option> -->
+        <option value="optiona">Ovito</option>
+        <option value="optionb">ParaView</option>
+        <option value="optionc">Vesta</option>
+        <option value="optiond">VMD</option>
+    </optgroup>
 </select>
 
 <div id="content-option1" class="hidden">
