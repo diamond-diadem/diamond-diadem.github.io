@@ -62,20 +62,25 @@ In the summer of 2023, the materials community was surveyed via LimeSurvey to id
         <tr>
             <td><a href="/en/codes/scientific-computing/freefem/"><i class="icon-freefem"></i>FreeFEM</a></td>
             <td></td>
-        </tr><tr>
+        </tr>
+        <tr>
             <td><a href="/en/codes/scientific-computing/opencalphad/"><i class="icon-opencalphad"></i>OpenCalphad</a></td>
             <td></td>
         </tr>
-        </tr><tr>
+        <tr>
             <td><a href="/en/codes/scientific-computing/neper/"><i class="icon-neper"></i>Neper</a></td>
             <td></td>
         </tr>
-        </tr><tr>
+        <tr>
             <td><a href="/en/codes/scientific-computing/plumed/"><i class="icon-plumed"></i>PLUMED</a></td>
             <td></td>
         </tr>
-        </tr><tr>
+        <tr>
             <td><a href="/en/codes/scientific-computing/gmsh/"><i class="icon-gmsh"></i>Gmsh</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><a href="/en/codes/scientific-computing/zeo++/"><i class="icon-zeoplusplus"></i>Zeo++</a></td>
             <td></td>
         </tr>
     </tbody>
@@ -97,6 +102,7 @@ In the summer of 2023, the materials community was surveyed via LimeSurvey to id
         <option value="option7">Neper</option>
         <option value="option8">PLUMED</option>
         <option value="option9">Gmsh</option>
+        <option value="option10">Zeo++</option>
     </optgroup>
     <optgroup label="Visualisation">
         <option value="optiona">Ovito</option>
@@ -166,6 +172,13 @@ apptainer pull plumed.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/
 
 ```bash
 apptainer pull gmsh.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/gmsh.sif:latest
+```
+
+</div>
+<div id="content-option10" class="hidden">
+
+```bash
+apptainer pull zeoplusplus.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/zeoplusplus.sif:latest
 ```
 
 </div>
