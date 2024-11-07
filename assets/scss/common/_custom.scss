@@ -374,6 +374,73 @@ u {
     }
 }
 
+@include media-breakpoint-up(xl) {
+    .left-about-containers {
+        width: 45%;
+    }
+
+    .cluster-map {
+        width: 100%;
+    }
+
+    .right-about-containers {
+        width: 55%;
+        // padding: 40px 10px;
+        padding-top: 25px;
+        padding-left: 15px;
+    }
+}
+
+@include media-breakpoint-only(lg) {
+    .left-about-containers {
+        width: 100%;
+        padding: 15px 0px;
+    }
+
+    .cluster-map {
+        display: block;
+        width: 65%;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    .right-about-containers {
+        width: 100%;
+        // padding: 40px 10px;
+        // padding-top: 25px;
+        // padding-left: 15px;
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    .left-about-containers {
+        width: 100%;
+        padding: 15px 0px;
+    }
+
+    .cluster-map {
+        display: block;
+        width: 65%;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    .right-about-containers {
+        width: 100%;
+        // padding: 40px 10px;
+        // padding-top: 25px;
+        // padding-left: 15px;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .cluster-map {
+        width: 90%;
+    }
+}
+
 
 // // // Apptainer in parallel tuto picture // // //
 
