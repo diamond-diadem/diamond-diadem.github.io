@@ -1,11 +1,10 @@
-@import "custom/sections-icons";
-
 // Put your custom SCSS code here
 
 @import "diamond/responsive-about";
 @import "diamond/custom-icons";
 @import "diamond/codes-logos";
 @import "diamond/news-framework";
+@import "diamond/sections-icons";
 
 @include color-mode(dark) {
     .dropdown-menu {
@@ -997,4 +996,12 @@ hr {
 // // // <<< <select> in codes home page <<< // // //
 
 
+// .offcanvas-title {
+//     display: block;
+//     margin-right: auto;
+// }
 
+.close-sidebar-mobile {
+    display: block;
+    margin-left: auto;
+}
