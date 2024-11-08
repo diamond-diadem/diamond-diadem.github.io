@@ -1,0 +1,137 @@
+// // // custom icons // // //
+
+.custom-icon {
+  background-size: 20px 20px;
+  height: 20px;
+  width: 20px;
+  display: inline-block;
+  margin-right: 5px;
+  margin-left: 0px;
+  position: relative;
+  top: 3px; left: 0px;
+}
+
+.icon-lammps {
+  background-image: url(/images/lammps-icon.svg);
+  @extend .custom-icon;
+}
+
+.icon-ovito {
+  background-image: url(/images/ovito-icon.png);
+  @extend .custom-icon;
+}
+
+.icon-quantum-espresso {
+  background-image: url(/images/quantum-espresso-icon-light.png);
+  @extend .custom-icon;
+}
+
+.icon-aiida {
+  background-image: url(/images/aiida-logo.png);
+  @extend .custom-icon;
+}
+
+@include color-mode(dark) {
+  .icon-quantum-espresso {
+  background-image: url(/images/quantum-espresso-icon-dark.png);
+  }
+}
+
+.icon-paraview {
+  background-image: url(/images/paraview-icon.png);
+  @extend .custom-icon;
+}
+
+.icon-vesta {
+  background-image: url(/images/vesta-icon.png);
+  @extend .custom-icon;
+}
+
+.icon-vmd {
+  background-image: url(/images/vmd-icon-light.png);
+  @extend .custom-icon;
+}
+
+@include color-mode(dark) {
+  .icon-vmd {
+      background-image: url(/images/vmd-icon-dark.png);
+  }
+}
+
+.icon-abinit {
+  background-image: url(/images/abinit/abinit-icon-light.png);
+  @extend .custom-icon;
+}
+
+@include color-mode(dark) {
+  .icon-abinit {
+      background-image: url(/images/abinit/abinit-icon-dark.png);
+  }
+}
+
+.icon-z-set {
+  background-image: url(/images/z-set-icon-20x20.png);
+  @extend .custom-icon;
+}
+
+.icon-freefem {
+  background-image: url(/images/freefem-icon-light.svg);
+  @extend .custom-icon;
+}
+@include color-mode(dark) {
+  .icon-freefem {
+      background-image: url(/images/freefem-icon-dark.svg);
+  }
+}
+
+.icon-opencalphad {
+  background-image: url(/images/opencalphad-icon-light.png);
+  @extend .custom-icon;
+}
+@include color-mode(dark) {
+  .icon-opencalphad {
+      background-image: url(/images/opencalphad-icon-dark.png);
+  }
+}
+
+.icon-neper {
+  background-image: url(/images/neper-icon.png);
+  @extend .custom-icon;
+}
+
+.icon-plumed {
+  background-image: url(/images/plumed-icon-light.png);
+  @extend .custom-icon;
+}
+@include color-mode(dark) {
+  .icon-plumed {
+      background-image: url(/images/plumed-icon-dark.png);
+  }
+}
+
+.icon-plumed {
+  background-image: url(/images/plumed-icon-light.png);
+  @extend .custom-icon;
+}
+@include color-mode(dark) {
+  .icon-plumed {
+      background-image: url(/images/plumed-icon-dark.png);
+  }
+}
+
+.icon-gmsh {
+  background-image: url(/images/gmsh-icon-light.png);
+  @extend .custom-icon;
+}
+@include color-mode(dark) {
+  .icon-gmsh {
+      background-image: url(/images/gmsh-icon-dark.png);
+  }
+}
+
+.icon-zeoplusplus {
+  background-image: url(/images/zeo++/icon-zeoplusplus.png);
+  @extend .custom-icon;
+}
+
+// // // END custom icons END // // //

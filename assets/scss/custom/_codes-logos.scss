@@ -1,0 +1,133 @@
+// // // Codes pages top logos // // //
+
+.codes-pages-top-logo {
+    display: flex;
+    width: 100%;
+    margin-top: 5%;
+}
+
+.home-neper {
+    content: url(/images/home-neper.png);
+}
+
+.logo-lammps {
+    content: url(/images/lammps-logo.jpeg);
+}
+
+.logo-ovito {
+    content: url(/images/ovito-logo-light.png);
+}
+@include color-mode(dark) {
+    .logo-ovito {
+        content: url(/images/ovito-logo-dark.png);
+    }
+}
+
+.logo-quantum-espresso {
+    content: url(/images/quantum-espresso-logo-light.png);
+}
+@include color-mode(dark) {
+    .logo-quantum-espresso {
+        content: url(/images/quantum-espresso-logo-dark.png);
+    }
+}
+
+.logo-paraview {
+    content: url(/images/paraview-logo-light.svg);
+}
+@include color-mode(dark) {
+    .logo-paraview {
+        content: url(/images/paraview-logo-dark.svg);
+    }
+
+}
+
+.logo-vesta {
+    content: url(/images/vesta-logo-light.png);
+}
+@include color-mode(dark) {
+    .logo-vesta {
+        content: url(/images/vesta-logo-dark.png);
+    }
+}
+
+.logo-vmd {
+    content: url(/images/vmd-logo-light.png);
+}
+@include color-mode(dark) {
+    .logo-vmd {
+        content: url(/images/vmd-logo-dark.png);
+    }
+}
+
+.logo-abinit {
+    content: url(/images/abinit/abinit-logo-light.svg);
+}
+@include color-mode(dark) {
+    .logo-abinit {
+        content: url(/images/abinit/abinit-logo-dark.svg);
+    }
+}
+
+.logo-z-set {
+    content: url(/images/z-set-light-smaller.png);
+}
+@include color-mode(dark) {
+    .logo-z-set {
+        content: url(/images/z-set-dark-smaller.png);
+    }
+}
+
+.logo-freefem {
+    content: url(/images/freefem-logo-light.svg);
+}
+@include color-mode(dark) {
+    .logo-freefem {
+        content: url(/images/freefem-logo-dark.svg);
+    }
+}
+
+.logo-opencalphad {
+    content: url(/images/opencalphad-logo-light.png);
+}
+@include color-mode(dark) {
+    .logo-opencalphad {
+        content: url(/images/opencalphad-logo-dark.png);
+    }
+}
+
+.logo-plumed {
+    content: url(/images/plumed-light.png);
+    display: block;
+    width: 50%;
+    margin: auto;
+    margin-top: 45px;
+}
+@include color-mode(dark) {
+    .logo-plumed {
+        content: url(/images/plumed-dark.png);
+    }
+}
+
+.logo-gmsh {
+    content: url(/images/gmsh-light.png);
+    display: block;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+@include color-mode(dark) {
+    .logo-gmsh {
+        content: url(/images/gmsh-dark.png);
+    }
+}
+
+.logo-zeoplusplus {
+    content: url(/images/zeo++/logo-zeoplusplus.png);
+    display: block;
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// // // END Codes pages top logos END // // //
