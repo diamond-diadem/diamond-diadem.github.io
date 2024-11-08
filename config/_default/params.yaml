@@ -9,6 +9,7 @@ mainSections:
   - workflows
 diamond:
   enableNews: true
+  sectionsIcons: false
 social:
   twitter: ""
 doks:
