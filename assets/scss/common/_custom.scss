@@ -1155,8 +1155,7 @@ u {
     .logo-diamond.about {
         display: block;
         width: 70%;
-        margin-left: auto;
-        margin-right: auto;
+        margin: auto;
     }
 
     .right-about-diamond {
@@ -1173,9 +1172,7 @@ u {
     }
 }
 
-// // <<< about diamond en + fr <<< // //
-
-
+// <<< about diamond en+fr <<< //
 
 // >>> about diadem en+fr >>>
 
@@ -1247,8 +1244,7 @@ u {
     .logo-diadem.about {
         display: block;
         width: 55%;
-        margin-left: auto;
-        margin-right: auto;
+        margin: auto;
     }
 
     .right-about-diadem {
@@ -1267,213 +1263,96 @@ u {
 
 // <<< about diadem en+fr <<<
 
-// about diadem fr //
+// >>> about apptainer en+fr >>>
 
-// @include media-breakpoint-only(lg) {
-//     .left-about-diadem-fr {
-//         width: 100%;
-//         margin-top: 5%;
-//         margin-bottom: 5%;
-//     }
+.bottom-about-apptainer {
+    text-align: justify;
+    font-size: 125%;
+    font-weight: 500;
+}
 
-//     .diadem-logo-about {
-//         display: block;
-//         width: 50%;
-//         margin-left: auto;
-//         margin-right: auto;
-//     }
-
-//     .right-about-diadem-fr {
-//         width: 100%;
-//         margin-bottom: 5%;
-//     }
-
-// }
-
-@include media-breakpoint-down(lg) {
-    .left-about-diadem-fr {
-      width: 100%;
-      margin-top: 5%;
+@include media-breakpoint-up(xl){
+    .left-about-apptainer {
+        width: 25%;
+        display: flex;
     }
 
-    .diadem-logo-about {
+    .logo-apptainer.about {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        object-fit: contain;
+    }
+
+    .right-about-apptainer {
+        width: 75%;
+        text-align: justify;
+        display: flex;
+        align-items: center;
+        font-size: 125%;
+        font-weight: 500;
+    }
+
+    .row.about.apptainer {
+        margin-bottom: 30px;
+    }
+}
+
+@include media-breakpoint-only(lg){
+    .left-about-apptainer {
+        width: 35%;
+        display: flex;
+    }
+
+    .logo-apptainer.about {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        object-fit: contain;
+    }
+
+    .right-about-apptainer {
+        width: 65%;
+        text-align: justify;
+        display: flex;
+        align-items: center;
+        font-size: 125%;
+        font-weight: 500;
+    }
+
+    .row.about.apptainer {
+        margin-bottom: 20px;
+    }
+}
+
+@include media-breakpoint-down(lg){
+    .left-about-apptainer {
+        width: 100%;
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+
+    .logo-apptainer.about {
         display: block;
         width: 50%;
-        margin-left: auto;
-        margin-right: auto;
+        margin: auto;
     }
 
-    .right-about-diadem-fr {
-      width: 100%;
-      margin-top: 10%;
-    }
-
-}
-
-// >>> about diadem en >>>
-
-// @include media-breakpoint-only(lg) {
-//     .left-about-diadem-en {
-//         width: 100%;
-//         margin-top: 5%;
-//         margin-bottom: 5%;
-//     }
-
-//     .diadem-logo-about {
-//         width: 100%;
-//         padding: 0 30%;
-//     }
-
-//     .right-about-diadem-en {
-//         width: 100%;
-//         margin-bottom: 5%;
-//     }
-
-// }
-
-
-@include media-breakpoint-down(lg) {
-    .left-about-diadem-en {
-      width: 100%;
-      margin-top: 5%;
-      text-align: center;
-    }
-
-    .diadem-logo-about{
+    .right-about-apptainer {
         width: 100%;
-        padding: 5% 25%;
-    }
-
-    .right-about-diadem-en {
-      width: 100%;
-      margin-top: 10%;
-    }
-
-}
-
-// <<< about diadem en <<<
-
-// >>> about apptainer fr >>>
-
-@include media-breakpoint-up(xl) {
-    .left-about-apptainer-fr {
-        width: 35%;
-        // margin-top: 2.5%;
-        // margin-bottom: 0;
-    }
-
-    .apptainer-logo-about{
-        display: block;
-        width: 85%;
-        margin-left: auto;
-        margin-right: auto;
-        padding-top: 30px;
-        padding-bottom: 30px;
-    }
-
-    .right-about-apptainer-fr {
-        width: 65%;
-        margin-bottom: 0;
-        padding: 20px 10px;
-        font-size: 115%;
+        text-align: justify;
+        font-size: 125%;
         font-weight: 500;
     }
 }
 
-@include media-breakpoint-only(lg) {
-    .left-about-apptainer-fr {
-        width: 100%;
-        margin-top: 5%;
-        margin-bottom: 5%;
-    }
-
-    .apptainer-logo-about {
-        display: block;
-        width: 35%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .right-about-apptainer-fr {
-        width: 100%;
-        margin-bottom: 0%;
-    }
-
-}
-
-@include media-breakpoint-down(lg) {
-    .left-about-apptainer-fr {
-        text-align: center;
-        width: 100%;
-        margin-top: 5%;
-    }
-
-    .apptainer-logo-about {
-        display: block;
-        width: 50%;
-        margin-left: auto;
-        margin-right: auto;
-
-    }
-
-    .right-about-apptainer-fr {
-        width: 100%;
-        margin-top: 10%;
-    }
-
-}
-
-// @include media-breakpoint-only(md) {
-//     .apptainer-logo-about {
-//         width: 70%;
-//     }
-// }
-
-
-// >>> about apptainer en >>> //
-
-@include media-breakpoint-up(xl) {
-    .left-about-apptainer-en {
-        width: 35%;
-    }
-
-    .right-about-apptainer-en {
-        width: 65%;
-        margin-bottom: 0;
-        padding: 20px 10px;
-        font-size: 115%;
-        font-weight: 500;
+@include media-breakpoint-down(md) {
+    .logo-apptainer.about {
+        width: 75%;
     }
 }
 
-@include media-breakpoint-only(lg) {
-    .left-about-apptainer-en {
-        width: 100%;
-        margin-top: 5%;
-        margin-bottom: 5%;
-    }
 
-    .right-about-apptainer-en {
-        width: 100%;
-        margin-bottom: 0%;
-    }
-
-}
-
-@include media-breakpoint-down(lg) {
-    .left-about-apptainer-en {
-      width: 100%;
-      margin-top: 5%;
-    }
-
-    .right-about-apptainer-en {
-      width: 100%;
-      margin-top: 10%;
-    }
-
-}
-
-// <<< about apptainer en <<<
 
 @include media-breakpoint-up(lg){
 
@@ -1650,11 +1529,6 @@ th, tr {
 
 }
 
-// .news-page {
-//     background-repeat: no-repeat;
-//     background-size: auto 100%;
-//     background-color: rgba(0, 0, 0, 0.1)
-// }
 
 .news-page {
     position: relative;
