@@ -1089,92 +1089,91 @@ u {
 
 // // 'About' section // //
 
-// about diamond fr //
+// about diamond en + fr //
 
 @include media-breakpoint-up(xl){
-    .left-about-diamond-fr {
-        width: 25%;
-        margin-top: 0;
+    .left-about-diamond {
+        width: 30%;
+        display: flex;
     }
 
-    .right-about-diamond-fr {
-        width: 75%;
-        padding: 20px 0;
-        font-size: x-large;
+    .logo-diamond.about {
+        align-items: center;
+        justify-content: center;
+        object-fit: contain;
+    }
+
+    .right-about-diamond {
+        width: 70%;
+        text-align: justify;
+        display: flex;
+        align-items: center;
+        font-size: 125%;
+        font-weight: 500;
+    }
+
+    .row.about.diamond {
+        margin-bottom: 30px;
     }
 }
 
 @include media-breakpoint-only(lg){
-    .left-about-diamond-fr {
-        width: 32%;
-        margin-top: 3%;
-        margin-bottom: 2%;
+    .left-about-diamond {
+        width: 40%;
+        display: flex;
     }
 
-    .right-about-diamond-fr {
-        width: 68%;
-        font-size: larger;
-        margin-bottom: 2%;
-    }
-}
-
-@include media-breakpoint-down(lg) {
-    .left-about-diamond-fr {
-      width: 100%;
-      margin-top: 5%;
-      padding: 0 25%;
+    .logo-diamond.about {
+        align-items: center;
+        justify-content: center;
+        object-fit: contain;
     }
 
-    .right-about-diamond-fr {
-      width: 100%;
-      margin-top: 5%;
-      font-size: larger;
+    .right-about-diamond {
+        width: 60%;
+        text-align: justify;
+        display: flex;
+        align-items: center;
+        font-size: 125%;
+        font-weight: 500;
     }
 
-}
-
-// about diamond en //
-
-@include media-breakpoint-up(xl){
-    .left-about-diamond-en {
-        width: 25%;
-        margin-top: 0;
-    }
-
-    .right-about-diamond-en {
-        width: 75%;
-        padding: 15px 5px;
-        font-size: x-large;
+    .row.about.diamond {
+        margin-bottom: 20px;
     }
 }
 
-@include media-breakpoint-only(lg){
-    .left-about-diamond-en {
-        width: 32%;
-        padding: 5px 0px;
+@include media-breakpoint-down(lg){
+    .left-about-diamond {
+        width: 100%;
+        margin-top: 15px;
+        margin-bottom: 20px;
     }
 
-    .right-about-diamond-en {
-        width: 68%;
-        padding: 1% 2%;
-        font-size: larger;
+    .logo-diamond.about {
+        display: block;
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .right-about-diamond {
+        width: 100%;
+        text-align: justify;
+        font-size: 125%;
+        font-weight: 500;
     }
 }
 
-@include media-breakpoint-down(lg) {
-    .left-about-diamond-en {
-      width: 100%;
-      margin-top: 5%;
-      padding: 0 25%;
+@include media-breakpoint-down(md) {
+    .logo-diamond.about {
+        width: 85%;
     }
-
-    .right-about-diamond-en {
-      width: 100%;
-      margin-top: 5%;
-      font-size: larger;
-    }
-
 }
+
+// // <<< about diamond en + fr <<< // //
+
+
 
 // >>> about diadem en+fr >>>
 
