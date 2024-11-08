@@ -19,7 +19,7 @@ The main objective of this targeted project is to establish a digital infrastruc
 
 </div>
 
-<div align="justify">
+<div align="justify" style="font-size: 110%;">
 
 For each of these infrastructures, use cases from ongoing targeted projects have been identified to serve as examples and ensure alignment with user needs. These projects include MOFsLEARNING, ESRF, and FastNano. A demonstrator utilizing these two infrastructures will also be developed, focusing on machine learning-based development of interatomic potentials for atomic-scale simulations. The specifications for these infrastructures and the demonstrator will be established through working groups involving representatives from the main relevant laboratories. The code and workflow platform will be developed and deployed at the GRICAD meso-center of computation, and the database infrastructure will be deployed at TGCC.
 
