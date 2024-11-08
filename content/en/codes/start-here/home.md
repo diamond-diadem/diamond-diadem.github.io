@@ -23,7 +23,7 @@ In the summer of 2023, the materials community was surveyed via LimeSurvey to id
 
 </div>
 
-<img alt="containerised codes" class="containerised-codes-en mt-4" style="width:100%">
+<img alt="containerised codes" class="containerised-codes en mt-4" style="width:100%">
 
 <h3><u>USEFUL LINKS</u></h3>
 
