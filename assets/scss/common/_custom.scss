@@ -1,3 +1,5 @@
+@import "custom/sections-icons";
+
 // Put your custom SCSS code here
 
 @include color-mode(dark) {
@@ -1660,35 +1662,3 @@ hr {
 }
 
 // // // <<< <select> in codes home page <<< // // //
-
-// // // >>> sections large icons >>> // // //
-
-.section-features {
-    margin-top: 50px;
-}
-
-.homepage.section-icon {
-    display: flex;
-    height: 100px;
-    margin: auto;
-    margin-bottom: -15px;
-    margin-top: 20px;
-}
-
-.section-icon.about {
-    content: url(images/sections-icons/about.svg);
-}
-
-.section-icon.containers {
-    content: url(images/sections-icons/containers.svg);
-}
-
-.section-icon.documentation {
-    content: url(images/sections-icons/documentation.svg);
-}
-
-.section-icon.wfs-dbs {
-    content: url(images/sections-icons/wfs-dbs.svg);
-}
-
-// // // <<< sections large icons <<< // // //
