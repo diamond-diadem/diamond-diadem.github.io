@@ -21,31 +21,15 @@ Many package managers exist: some, like `apt` or `rpm`, are specific to certain 
 
 In the context of the DIAMOND project, which imposes stringent requirements related to scientific reproducibility and high-performance computing, we have chosen the [GNU Guix](https://guix.gnu.org) package manager for the following reasons:
 
-</div>
-<style>
-* {
-  box-sizing: border-box;
-}
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-</style>
-<div class="row">
-<div class="column left-about-guix-fr">
-
-<a href="https://guix.gnu.org" target="_blank"><img alt="Guix" class="logo-guix guix-logo-about"/></a>
-
-</div>
-<div class="column right-about-guix-fr" align="justify">
+<a href="https://guix.gnu.org" target="_blank">
+  <img alt="Guix" class="logo-guix about"/>
+</a>
 
 * It can be used on any Linux distribution (essential in the academic field and on scientific computing centers), without competing with other installed managers.
 * It is built to meet the requirements of scientific reproducibility, ensuring bit-by-bit executable integrity.
 * It simplifies the management of different library versions, which is often encountered when two tools each require a specific version of a given library.
 * It is an open-source tool, primarily developed within the French academic community.
 
-</div>
-</div>
-
 In summary, using packages via the GNU Guix manager facilitates the distribution of replicable codes and tools suitable for high-performance computing.
+
+</div>

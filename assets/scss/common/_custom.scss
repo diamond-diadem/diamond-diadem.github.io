@@ -1352,46 +1352,36 @@ u {
     }
 }
 
+// >>> logo guix scaling >>> //
 
-
-@include media-breakpoint-up(lg){
-
-    .left-about-guix-fr {
-        width: 100%;
-        margin-top: 5%;
-        margin-bottom: 5%;
+.logo-guix.about {
+    display: block;
+    margin: auto;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+@include media-breakpoint-up(xl) {
+    .logo-guix.about {
+        width: 50%;
     }
-
-    .right-about-guix-fr {
-        width: 100%;
-   }
-
-    .guix-logo-about {
-        width: 100%;
-        padding: 0 20%;
+}
+@include media-breakpoint-only(lg) {
+    .logo-guix.about {
+        width: 65%;
     }
-
+}
+@include media-breakpoint-only(md) {
+    .logo-guix.about {
+        width: 65%;
+    }
+}
+@include media-breakpoint-down(md) {
+    .logo-guix.about {
+        width: 80%;
+    }
 }
 
-
-
-@include media-breakpoint-up(xl){
-
-    .left-about-guix-fr {
-        width: 100%;
-    }
-
-    .right-about-guix-fr {
-        width: 100%;
-        // padding: 20px 0;
-    }
-
-    .guix-logo-about {
-        width: 100%;
-        padding: 0 30%;
-    }
-
-}
+// <<< logo guix scaling <<< //
 
 .switch-color-mode-mobile {
     margin-left:auto;
