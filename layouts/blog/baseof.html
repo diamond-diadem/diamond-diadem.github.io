@@ -1,0 +1,18 @@
+<!doctype html>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+<html lang="{{ .Site.LanguageCode | default "en" }}" data-bs-theme="{{ site.Params.doks.colorMode | default "auto" }}">
+  {{ partial "head/head" . }}
+  {{ partial "head/body-class" . }}
+  <body class="{{ delimit (.Scratch.Get "class") " " }}"{{ if eq site.Params.doks.scrollSpy true }} data-bs-spy="scroll" data-bs-target="#toc" data-bs-root-margin="0px 0px -60%" data-bs-smooth-scroll="true" tabindex="0"{{ end }}>
+    {{ partial "header/header" . }}
+    {{ block "main" . }}{{ end }}
+    {{ block "sidebar-prefooter" . }}{{ end }}
+    {{ block "sidebar-footer" . }}{{ end }}
+    {{ partial "footer/footer" . }}
+    {{ partial "footer/script-footer" . }}
+    {{ if site.Params.doks.toTopButton -}}
+    {{ partial "footer/to-top" . }}
+    {{ end -}}
+    {{/*  {{ partial "footer/custom-to-top" . }}  */}}
+  </body>
+</html>

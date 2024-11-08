@@ -1,9 +1,9 @@
 // Put your custom SCSS code here
 
-@import "custom/responsive-about";
-@import "custom/custom-icons";
-@import "custom/codes-logos";
-@import "custom/news-framework";
+@import "diamond/responsive-about";
+@import "diamond/custom-icons";
+@import "diamond/codes-logos";
+@import "diamond/news-framework";
 
 @include color-mode(dark) {
     .dropdown-menu {
@@ -993,3 +993,6 @@ hr {
 }
 
 // // // <<< <select> in codes home page <<< // // //
+
+
+
