@@ -18,7 +18,7 @@ The <a href="https://pepr-diadem.fr" target="_blank">DIADEM</a> Priority Researc
   </div>
 </div>
 
-<div align="justify">
+<div align="justify" style="font-size: 110%;">
 
 In order to manage this program and guarantee the neutrality, quality and transparency of the work, governance at several levels has been defined:
 

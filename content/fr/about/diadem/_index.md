@@ -20,7 +20,7 @@ Le Programme et Équipements Prioritaires de Recherche (PEPR) <a href="https://p
   </div>
 </div>
 
-<div align="justify">
+<div align="justify" style="font-size: 110%;">
 
 Afin de piloter ce programme et de garantir la neutralité, la qualité et la transparence des travaux, une gouvernance à plusieurs niveaux a été définie :
 
