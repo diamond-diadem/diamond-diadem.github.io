@@ -38,7 +38,12 @@
     width: 60%;
   }
 }
-@include media-breakpoint-down(md) {
+@include media-breakpoint-only(sm) {
+  .logo-diamond.homepage {
+    width: 70%;
+  }
+}
+@include media-breakpoint-down(sm) {
   .logo-diamond.homepage {
     width: 100%;
   }
