@@ -5,6 +5,11 @@
 @import "diamond/codes-logos";
 @import "diamond/news-framework";
 @import "diamond/sections-icons";
+@import "diamond/banner-diamond";
+
+img {
+    max-width: 100%;
+}
 
 @include color-mode(dark) {
     .dropdown-menu {
@@ -541,117 +546,6 @@ u {
     width: 318px;
 }
 
-
-
-.section-title-lead-landing-page {
-    min-width: 100%;
-    min-height: 250px;
-    background-image: url(/images/banner-diamond-light-smaller.png);
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    // background-position: 50% 70%;
-    background-position-y: center;
-    background-position-x: center;
-}
-
-@include media-breakpoint-down(lg) {
-    .container-title-homepage h1 {
-        position: relative;
-        top: -15%;
-        min-width: 100%;
-        min-height: 170px;
-        background-image: url(/images/banner-diamond-light-smaller.png);
-        padding-left: 60px;
-        margin-left: -60px;
-        padding-right: 60px;
-        margin-right: -60px;
-        height: 170px;
-        background-size: auto 100%;
-        background-repeat: no-repeat;
-        // background-position: 50% 70%;
-        background-position-y: 80%;
-        background-position-x: 60%;
-        display: flex;
-        align-items: center;
-        height: 170px;
-        justify-content: center;
-
-        // padding-right: 30%;
-        // margin-right: -30%;
-    }
-
-    @include color-mode(dark) {
-        .container-title-homepage h1 {
-            background-image: url(/images/banner-diamond-dark-smaller.png);
-        }
-    }
-}
-
-.container-h1-default-page {
-    min-width: 100%;
-    min-height: 170px;
-    background-image: url(/images/banner-diamond-light-smaller.png);
-    background-size: 85% auto;
-    background-repeat: no-repeat;
-    background-position-y: center;
-    background-position-x: center;
-
-}
-
-// @include media-breakpoint-down(md) {
-.container-h1-default-page {
-        // min-height: 170px;
-        // background-position-y: top;
-        // height: max-content;
-        // // display: flex;
-        // // align-items: center;
-        // display: table-cell;
-        // vertical-align: middle;
-        // text-align: center;
-    display: flex;
-    align-items: center;
-    height: 170px;
-    justify-content: center;
-
-
-    // }
-
-    // .text-like-home-h1 {
-    //     position: relative;
-    //     top: 50%;
-    //     transform: translateY(-50%);
-    // }
-}
-
-.text-like-home-h1 {
-    position: relative;
-    top: -5%;
-}
-
-@include color-mode(dark) {
-    .section-title-lead-landing-page,
-    .container-h1-default-page {
-        background-image: url(/images/banner-diamond-dark-smaller.png);
-    }
-}
-
-
-@include media-breakpoint-down(lg) {
-    .section-title-lead-landing-page {
-        background-image: none;
-    }
-    @include color-mode(dark) {
-        .section-title-lead-landing-page {
-            background-image: none;
-        }
-    }
-
-    .container-h1-default-page {
-        background-size: auto 100%;
-    }
-
-}
-
 @include media-breakpoint-down(md) {
     .nav-logo{
         height: 40px;
@@ -924,6 +818,7 @@ th, tr {
 
 .saw-diagram-description {
     content: url(/images/saw-diagram-light.png);
+    width: 100%;
  }
 
 @include color-mode(dark) {
