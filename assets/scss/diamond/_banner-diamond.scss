@@ -1,110 +1,99 @@
 
 
 .section-title-lead-landing-page {
-    background-image: url(/images/banner-diamond-light-smaller.png);
-    background-size: contain;
+    background-image: url(/images/banner-diamond/banner-diamond-light.png);
+    background-size: 100% auto;
+    height: 200px;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position-x: center;
+    background-position-y: center;
+    display: flex;
+    align-items: center;
 }
 
-@include media-breakpoint-down(lg) {
-    .container-title-homepage h1 {
-        position: relative;
-        top: -15%;
-        min-width: 100%;
-        min-height: 170px;
-        background-image: url(/images/banner-diamond-light-smaller.png);
-        padding-left: 60px;
-        margin-left: -60px;
-        padding-right: 60px;
-        margin-right: -60px;
-        height: 170px;
-        background-size: auto 100%;
-        background-repeat: no-repeat;
-        // background-position: 50% 70%;
-        background-position-y: 80%;
-        background-position-x: 60%;
-        display: flex;
-        align-items: center;
-        height: 170px;
-        justify-content: center;
+.container-title-homepage h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
 
-        // padding-right: 30%;
-        // margin-right: -30%;
+.container-title-homepage,
+.container-lead-homepage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+}
+
+.container-title-homepage {
+    padding-top: 25px;
+}
+.container-lead-homepage {
+    padding-bottom: 25px;
+}
+
+
+
+@include color-mode(dark) {
+    .section-title-lead-landing-page {
+        background-image: url(/images/banner-diamond/banner-diamond-dark.png);
     }
+}
 
-    @include color-mode(dark) {
-        .container-title-homepage h1 {
-            background-image: url(/images/banner-diamond-dark-smaller.png);
-        }
+@include media-breakpoint-up(xl) {
+    .section-title-lead-landing-page {
+        width: 85%;
+    }
+}
+@include media-breakpoint-down(xl) {
+    .section-title-lead-landing-page {
+        width: 100%;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .container-title-homepage{
+        padding-bottom: 15px;
+    }
+    .container-lead-homepage{
+        padding-top: 15px;
     }
 }
 
 .container-h1-default-page {
-    // min-width: 100%;
-    // min-height: 170px;
-    background-image: url(/images/banner-diamond-light-smaller.png);
-    background-size: contain;
+    background-image: url(/images/banner-diamond/banner-diamond-light.png);
+    background-size: 100% auto;
     background-repeat: no-repeat;
     background-position-y: center;
     background-position-x: center;
-
-}
-
-// @include media-breakpoint-down(md) {
-.container-h1-default-page {
-        // min-height: 170px;
-        // background-position-y: top;
-        // height: max-content;
-        // // display: flex;
-        // // align-items: center;
-        // display: table-cell;
-        // vertical-align: middle;
-        // text-align: center;
     display: flex;
     align-items: center;
-    height: 170px;
+    height: 150px;
     justify-content: center;
-
-
-    // }
-
-    // .text-like-home-h1 {
-    //     position: relative;
-    //     top: 50%;
-    //     transform: translateY(-50%);
-    // }
 }
 
-.text-like-home-h1 {
-    position: relative;
-    top: -5%;
-}
 
 @include color-mode(dark) {
-    .section-title-lead-landing-page,
     .container-h1-default-page {
-        background-image: url(/images/banner-diamond-dark-smaller.png);
+        background-image: url(/images/banner-diamond/banner-diamond-dark.png);
+    }
+}
+
+@include media-breakpoint-up(xl) {
+    .container-h1-default-page {
+        width: 70%;
+    }
+}
+
+@include media-breakpoint-only(lg) {
+    .container-h1-default-page {
+        width: 85%;
     }
 }
 
 
-@include media-breakpoint-down(lg) {
-    .section-title-lead-landing-page {
-        background-image: none;
-    }
-    @include color-mode(dark) {
-        .section-title-lead-landing-page {
-            background-image: none;
-        }
-    }
-
-    .container-h1-default-page {
-        background-size: auto 100%;
-    }
-
+.container-h1-default-page h1 {
+    margin-top: 0;
+    margin-bottom: 0;
 }
-
-
 
 
