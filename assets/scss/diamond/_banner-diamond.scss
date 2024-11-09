@@ -51,11 +51,51 @@
 }
 
 @include media-breakpoint-down(md) {
-    .container-title-homepage{
-        padding-bottom: 15px;
+    .section-title-lead-landing-page {
+        background-size: fill;
+    }
+
+    .container-title-homepage {
+        padding-bottom: 5%;
+    }
+    .container-lead-homepage {
+        padding-top: 5%;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .section-title-lead-landing-page{
+        height: auto;
+        background-image: none;
+    }
+    @include color-mode(dark) {
+        .section-title-lead-landing-page {
+            background-image: none;
+        }
+    }
+    .container-title-homepage {
+        height: auto;
+        background-image: url(/images/banner-diamond/banner-diamond-light.png);
+        background-size: fill;
+        background-repeat: no-repeat;
+        background-position-y: center;
+        background-position-x: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: auto;
+    }
+    @include color-mode(dark) {
+        .container-title-homepage {
+            background-image: url(/images/banner-diamond/banner-diamond-dark.png);
+        }
     }
     .container-lead-homepage{
-        padding-top: 15px;
+        height: auto;
+        padding: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 
