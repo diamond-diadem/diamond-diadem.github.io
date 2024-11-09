@@ -841,3 +841,15 @@ hr {
     display: block;
     margin-left: auto;
 }
+
+@include media-breakpoint-down(sm) {
+    .section-logo,
+    .section-features {
+        position: relative;
+        top: -40px;
+    }
+    .section-news {
+        position: relative;
+        top: -90px;
+    }
+}
