@@ -24,11 +24,14 @@
     height: 100px;
 }
 
+@include media-breakpoint-up(sm) {
 .container-title-homepage {
     padding-top: 25px;
 }
 .container-lead-homepage {
     padding-bottom: 25px;
+}
+
 }
 
 
@@ -50,7 +53,7 @@
     }
 }
 
-@include media-breakpoint-down(md) {
+@include media-breakpoint-only(sm) {
     .section-title-lead-landing-page {
         background-size: fill;
     }
@@ -83,7 +86,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: auto;
+        padding-bottom: 5%;
+        padding-top: 5%;
     }
     @include color-mode(dark) {
         .container-title-homepage {
@@ -92,10 +96,18 @@
     }
     .container-lead-homepage{
         height: auto;
-        padding: auto;
+        padding-bottom: 5%;
+        padding-top: 5%;
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+    .container-title-homepage h1 {
+        font-size: $h2-font-size;
+    }
+
+    .container-lead-homepage .lead {
+        font-size: $h4-font-size;
     }
 }
 
