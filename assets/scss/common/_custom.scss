@@ -1,5 +1,5 @@
 // Put your custom SCSS code here
-
+@import "diamond/logo-diamond";
 @import "diamond/responsive-about";
 @import "diamond/custom-icons";
 @import "diamond/codes-logos";
@@ -60,17 +60,6 @@ img {
     padding-top: 0;
     padding-bottom: 0;
     margin-top: 0;
-}
-
-.nav-logo {
-    height: 55px;
-    content: url('/images/diamond/diamond-light-smaller.png');
-}
-
-@include color-mode(dark) {
-    .nav-logo {
-        content: url('/images/diamond/diamond-dark-smaller.png');
-    }
 }
 
 .current-language-display {
@@ -139,55 +128,6 @@ u {
         content: url(/images/apptainer-logo-dark.svg);
     }
 }
-
-.logo-diamond {
-    content: url(/images/diamond/logo-diamond-light-smaller.png);
-}
-@include color-mode(dark) {
-    .logo-diamond {
-        content: url(/images/diamond/logo-diamond-dark-smaller.png);
-    }
-}
-
-
-// logo diamond homepage (responsive) //
-
-.logo-diamond-homepage {
-    content: url(/images/diamond/logo-diamond-light-smaller.png);
-}
-@include color-mode(dark) {
-    .logo-diamond-homepage {
-        content: url(/images/diamond/logo-diamond-dark-smaller.png);
-    }
-}
-@include media-breakpoint-up(xl) {
-    .logo-diamond-homepage {
-        width: 38%;
-    }
-}
-@include media-breakpoint-only(lg) {
-    .logo-diamond-homepage {
-        width: 50%;
-        // position: relative;
-        // top: -35px;
-    }
-}
-@include media-breakpoint-only(md) {
-    .logo-diamond-homepage {
-        width: 60%;
-        position: relative;
-        top: -35px;
-    }
-}
-@include media-breakpoint-down(md) {
-    .logo-diamond-homepage {
-        min-width: 120%;
-        position: relative;
-        top: -35px; left: -10%;
-        margin-bottom: -20%;
-    }
-}
-// end //
 
 
 .logo-guix {

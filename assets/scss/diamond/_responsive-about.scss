@@ -1,3 +1,5 @@
+// @import "diamond/logo-diamond";
+
 // // // RESPONSIVE DESIGN: // // //
 
 // // 'About' section // //
@@ -5,46 +7,46 @@
 // about diamond //
 
 @include media-breakpoint-up(xl){
-  .left-about-diamond {
-      width: 30%;
+  .left.about-diamond {
+      width: 20%;
       display: flex;
   }
 
-  .logo-diamond.about {
+  .logo-diamond.about-diamond {
       width: 100%;
       align-items: center;
       justify-content: center;
       object-fit: contain;
   }
 
-  .right-about-diamond {
-      width: 70%;
+  .right.about-diamond {
+      width: 80%;
       text-align: justify;
       display: flex;
       align-items: center;
-      font-size: 125%;
+      font-size: 135%;
       font-weight: 500;
   }
 
-  .row.about.diamond {
+  .row.about-diamond {
       margin-bottom: 30px;
   }
 }
 
 @include media-breakpoint-only(lg){
-  .left-about-diamond {
+  .left.about-diamond {
       width: 40%;
       display: flex;
   }
 
-  .logo-diamond.about {
+  .logo-diamond.about-diamond {
       width: 100%;
       align-items: center;
       justify-content: center;
       object-fit: contain;
   }
 
-  .right-about-diamond {
+  .right.about-diamond {
       width: 60%;
       text-align: justify;
       display: flex;
@@ -53,25 +55,25 @@
       font-weight: 500;
   }
 
-  .row.about.diamond {
+  .row.about-diamond {
       margin-bottom: 20px;
   }
 }
 
 @include media-breakpoint-down(lg){
-  .left-about-diamond {
+  .left.about-diamond {
       width: 100%;
       margin-top: 15px;
       margin-bottom: 20px;
   }
 
-  .logo-diamond.about {
+  .logo-diamond.about-diamond {
       display: block;
       width: 70%;
       margin: auto;
   }
 
-  .right-about-diamond {
+  .right.about-diamond {
       width: 100%;
       text-align: justify;
       font-size: 125%;
@@ -80,7 +82,7 @@
 }
 
 @include media-breakpoint-down(md) {
-  .logo-diamond.about {
+  .logo-diamond.about-diamond {
       width: 85%;
   }
 }

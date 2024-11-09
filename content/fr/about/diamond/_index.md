@@ -5,13 +5,13 @@ linkTitle: DIAMOND
 
 <h2 class="text-center about-lead">bases de <b>D</b>onnées, outils d’<b>I</b>ntelligence <b>A</b>rtificielle, de <b>M</b>odélisation et d’<b>O</b>ptimisatio<b>N</b> pour le <b>D</b>esign numérique de matériaux</h2>
 
-<div class="row about diamond">
+<div class="row about-diamond">
 
-  <div class="left-about-diamond">
-    <img alt="DIAMOND" class="logo-diamond about"/>
+  <div class="left about-diamond">
+    <img alt="DIAMOND" class="logo-diamond about-diamond"/>
   </div>
 
-  <div class="right-about-diamond">
+  <div class="right about-diamond">
 
 L’objectif principal de ce projet ciblé est de mettre en place une infrastructure numérique pour accélérer le développement et la découverte de nouveaux matériaux. Elle est basée d’une part sur une plateforme dédiée aux codes de simulation aux différentes échelles et aux workflows pour l’automatisation de séries de calculs, dont les calculs à haut débit et le traitement des résultats par intelligence artificielle (IA) et d’autre part sur une infrastructure de bases de données issues à la fois d'expériences et de simulations.
 
