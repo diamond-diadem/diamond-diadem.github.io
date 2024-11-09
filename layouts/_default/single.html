@@ -5,12 +5,9 @@
 			<div class="col-lg-5 col-xl-4 docs-sidebar{{ if ne site.Params.doks.navbarSticky true }} docs-sidebar-top{{ end }}{{ if site.Params.doks.headerBar }} docs-sidebar-offset{{ end }} d-none d-lg-block">
 				<nav {{ if eq site.Params.doks.menu.section.collapsibleSidebar false }}id="sidebar-default" {{ end }}class="docs-links" aria-label="Main navigation">
 					{{ partial "sidebar/docs-menu.html" . }}
-					{{/*  {{ if eq .Section "documentation"}}  */}}
 					<a class="btn btn-primary rounded-pill ms-3 me-2 px-4 order-lg-3 d-none d-lg-block btn-doc-sidebar" href="{{ site.Params.docSidebarRef }}" role="button">{{ site.Params.docSidebarText }}</a>
-					{{/*  {{ end }}  */}}
 				</nav>
 			</div>
-			{{/*  <a class="btn btn-primary rounded-pill ms-3 me-2 px-4 order-lg-3 d-none d-lg-block btn-doc-sidebar" href="{{ site.Params.docSidebarRef }}" role="button">{{ site.Params.docSidebarText }}</a>  */}}
 		</div>
 		{{ end -}}
 		{{ if and (eq site.Params.doks.containerBreakpoint "fluid") (in .Site.Params.mainSections .Type) }}
