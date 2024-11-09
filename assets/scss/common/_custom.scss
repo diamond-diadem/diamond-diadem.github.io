@@ -519,6 +519,21 @@ u {
     }
 }
 
+// .dropdown-menu.in-navbar .dropdown-item.active {
+//     background-color: $link-color;
+// }
+@include color-mode(dark) {
+    .dropdown-menu.in-navbar .dropdown-item.active {
+        background-color: $link-color-dark;
+        color: $body-bg-dark;
+    }
+    .dropdown-menu.in-navbar .dropdown-item.active:hover {
+        background-color: $body-bg-dark;
+        color: $link-color-dark;
+    }
+
+}
+
 
 // // // >>> Oct. 30 2024 update - some polishing for desktop portrait mode (lg) which had overflow-x in most narrow layouts  >>> // // //
 
