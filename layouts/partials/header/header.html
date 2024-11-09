@@ -169,7 +169,7 @@
                     </svg>
                   </span>
                 </a>
-                <ul class="dropdown-menu shadow rounded border-0">
+                <ul class="dropdown-menu shadow rounded border-0 in-navbar">
                   {{ range .Children -}}
                   {{- $active = eq .Name $current.LinkTitle -}}
                     <li><a class="dropdown-item{{ if $active }} active{{ end }}" href="{{ .URL | absURL }}"{{ if $active }} aria-current="true"{{ end }}>{{ .Name }}</a></li>
