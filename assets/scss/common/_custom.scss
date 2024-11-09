@@ -519,9 +519,9 @@ u {
     }
 }
 
-// .dropdown-menu.in-navbar .dropdown-item.active {
-//     background-color: $link-color;
-// }
+.dropdown-menu.in-navbar .dropdown-item:hover {
+    background-color: white;
+}
 @include color-mode(dark) {
     .dropdown-menu.in-navbar .dropdown-item.active {
         background-color: $link-color-dark;
