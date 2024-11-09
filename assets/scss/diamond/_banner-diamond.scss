@@ -1,15 +1,11 @@
 
 
-// .section-title-lead-landing-page {
-//     min-width: 100%;
-//     min-height: 250px;
-//     background-image: url(/images/banner-diamond-light-smaller.png);
-//     background-size: 100% auto;
-//     background-repeat: no-repeat;
-//     // background-position: 50% 70%;
-//     background-position-y: center;
-//     background-position-x: center;
-// }
+.section-title-lead-landing-page {
+    background-image: url(/images/banner-diamond-light-smaller.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
 
 @include media-breakpoint-down(lg) {
     .container-title-homepage h1 {
