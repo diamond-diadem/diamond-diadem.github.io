@@ -1,0 +1,36 @@
+.section-dropdown .dropdown-toggle span.active {
+  color: $link-color;
+}
+
+@include color-mode(dark) {
+  .section-dropdown .dropdown-toggle span.active {
+      color: $link-color-dark;
+  }
+}
+
+
+.section-dropdown .dropdown-menu .dropdown-item.active {
+  background-color: $link-color;
+  color: $body-bg;
+}
+.section-dropdown .dropdown-menu .dropdown-item.active:hover {
+  background-color: $body-bg;
+  color: $link-color;
+}
+.section-dropdown .dropdown-menu .dropdown-item:hover {
+  background-color: $body-bg;
+}
+@include color-mode(dark) {
+  .section-dropdown .dropdown-menu .dropdown-item.active {
+      background-color: $link-color-dark;
+      color: $body-bg-dark;
+  }
+  .section-dropdown .dropdown-menu .dropdown-item.active:hover {
+      background-color: $body-bg-dark;
+      color: $link-color-dark;
+  }
+  .section-dropdown .dropdown-menu .dropdown-item:hover {
+      background-color: $body-bg-dark;
+  }
+
+}

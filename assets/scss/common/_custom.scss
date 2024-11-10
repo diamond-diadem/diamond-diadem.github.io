@@ -6,6 +6,7 @@
 @import "diamond/news-framework";
 @import "diamond/sections-icons";
 @import "diamond/banner-diamond";
+@import "diamond/section-dropdown-navbar";
 
 
 img {
@@ -508,35 +509,6 @@ u {
 .lead {
     font-weight: 500;
 }
-
-.header-dropdown-text.active {
-    color: $link-color;
-}
-
-@include color-mode(dark) {
-    .header-dropdown-text.active {
-        color: $link-color-dark;
-    }
-}
-
-.dropdown-menu.in-navbar .dropdown-item:hover {
-    background-color: white;
-}
-@include color-mode(dark) {
-    .dropdown-menu.in-navbar .dropdown-item.active {
-        background-color: $link-color-dark;
-        color: $body-bg-dark;
-    }
-    .dropdown-menu.in-navbar .dropdown-item.active:hover {
-        background-color: $body-bg-dark;
-        color: $link-color-dark;
-    }
-    .dropdown-menu.in-navbar .dropdown-item:hover {
-        background-color: $body-bg-dark;
-    }
-
-}
-
 
 // // // >>> Oct. 30 2024 update - some polishing for desktop portrait mode (lg) which had overflow-x in most narrow layouts  >>> // // //
 

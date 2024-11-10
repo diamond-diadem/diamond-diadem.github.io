@@ -159,9 +159,9 @@
               {{- $active = or $active (in .Identifier $section) -}}
             {{ end }}
             {{ if .HasChildren -}}
-              <li class="nav-item dropdown">
+              <li class="nav-item dropdown section-dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  <span class="header-dropdown-text{{ if $active }} active{{ end }}">
+                  <span class="{{ if $active }}active{{ end }}">
                     {{ .Name -}}
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                       <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -169,7 +169,7 @@
                     </svg>
                   </span>
                 </a>
-                <ul class="dropdown-menu shadow rounded border-0 in-navbar">
+                <ul class="dropdown-menu shadow rounded border-0">
                   {{ range .Children -}}
                   {{- $active = eq .Name $current.LinkTitle -}}
                     <li><a class="dropdown-item{{ if $active }} active{{ end }}" href="{{ .URL | absURL }}"{{ if $active }} aria-current="true"{{ end }}>{{ .Name }}</a></li>
