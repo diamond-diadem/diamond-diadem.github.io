@@ -21,8 +21,6 @@ weight: 1
 apptainer pull lammps.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/lammps.sif:latest
 ```
 
-### Descriptif
-
 LAMMPS, qui signifie "Large-scale Atomic/Molecular Massively Parallel Simulator" (simulateur atomique/moléculaire à grande échelle massivement parallèle), est un logiciel open source puissant et polyvalent conçu pour réaliser des simulations de dynamique moléculaire. Développé au laboratoire national Sandia, LAMMPS a acquis une grande popularité dans la communauté scientifique en raison de sa capacité à modéliser divers matériaux et systèmes au niveau atomique et moléculaire.
 
 LAMMPS est particulièrement adapté pour simuler des phénomènes physiques complexes tels que les matériaux à l'état solide, les liquides, les polymères, les systèmes biologiques, et bien plus encore. Sa force réside dans sa scalabilité, permettant de paralléliser efficacement les simulations sur un grand nombre de processeurs, rendant possible l'étude de systèmes contenant des millions à des milliards de particules.
