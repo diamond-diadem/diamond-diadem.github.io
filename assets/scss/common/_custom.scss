@@ -531,6 +531,9 @@ u {
         background-color: $body-bg-dark;
         color: $link-color-dark;
     }
+    .dropdown-menu.in-navbar .dropdown-item:hover {
+        background-color: $body-bg-dark;
+    }
 
 }
 
