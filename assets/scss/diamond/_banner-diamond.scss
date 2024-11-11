@@ -79,7 +79,7 @@
     .container-title-homepage {
         height: auto;
         background-image: url(/images/banner-diamond/banner-diamond-light.png);
-        background-size: fill;
+        background-size: cover;
         background-repeat: no-repeat;
         background-position-y: center;
         background-position-x: center;
@@ -88,6 +88,10 @@
         justify-content: center;
         padding-bottom: 5%;
         padding-top: 5%;
+        max-width: 110%;
+        width: 110%;
+        position: relative;
+        left: -5%;
     }
     @include color-mode(dark) {
         .container-title-homepage {
