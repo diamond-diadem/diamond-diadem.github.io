@@ -521,7 +521,7 @@ u {
         font-size: 88%;//$font-size-base;
     }
 
-    .nav-logo {
+    .diamond.in-navbar {
         height: 45px;
     }
 
@@ -547,11 +547,10 @@ u {
     .nav-item.dropdown {
         margin-right: 45px;
     }
-    .header-dropdown-text{
+    .section-dropdown .dropdown-toggle span {
         margin-right: -50px;
     }
 }
-
 // // // <<< Oct. 30 2024 update <<< // // //
 
 @include color-mode(dark){
