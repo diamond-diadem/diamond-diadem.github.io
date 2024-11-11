@@ -5,7 +5,7 @@
 {{/* Source: https://github.com/frjo/hugo-theme-zen/blob/main/layouts/home.searchindex.json */}}
 {{- $.Scratch.Set "searchindex" slice -}}
 {{- range $index, $element := $pages -}}
-  {{- $contentRE := replaceRE `(\x60\x60\x60[\S\s]*\x60\x60\x60)` "" $element.Plain -}}
+  {{- $contentRE := replaceRE `(apptainer[\S\s]*latest)` "" $element.Plain -}}
   {{-
     $.Scratch.Add "searchindex" (
                                   dict
