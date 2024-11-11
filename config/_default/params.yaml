@@ -25,7 +25,7 @@ doks:
   searchExclTypes:
     - blog
   showSearch: []
-  indexSummary: false
+  indexSummary: true
   showDate: false
   showSummary: true
   searchLimit: 99

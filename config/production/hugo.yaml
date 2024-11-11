@@ -1,2 +1,3 @@
 # Overrides for production environment
 baseURL: https://diamond-diadem.github.io
+canonifyURLs: true
