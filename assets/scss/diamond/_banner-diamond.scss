@@ -2,8 +2,8 @@
 
 .section-title-lead-landing-page {
     background-image: url(/images/banner-diamond/banner-diamond-light.png);
-    background-size: 100% auto;
-    height: 200px;
+    background-size: cover;//130% auto;
+    height: fit-content;
     background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: center;
@@ -19,20 +19,39 @@
 .container-title-homepage,
 .container-lead-homepage {
     display: flex;
-    align-items: center;
+    // align-items: center;
     justify-content: center;
-    height: 100px;
+    height: 50%;
 }
 
-@include media-breakpoint-up(sm) {
 .container-title-homepage {
-    padding-top: 25px;
+    align-items: last baseline;
+    margin-top: 5%;
 }
 .container-lead-homepage {
-    padding-bottom: 25px;
+    align-items: first baseline;
+    margin-bottom: 5%;
 }
 
+.container-title-homepage h1 {
+    position: relative;
+    top: -0.35em;
 }
+
+.container-lead-homepage .lead {
+    position: relative;
+    top: 0.35em;
+}
+
+// @include media-breakpoint-up(sm) {
+// .container-title-homepage {
+//     padding-bottom: -25px;
+// }
+// .container-lead-homepage {
+//     padding-top: -25px;
+// }
+
+// }
 
 
 
@@ -53,67 +72,46 @@
     }
 }
 
-@include media-breakpoint-only(sm) {
-    .section-title-lead-landing-page {
-        background-size: fill;
-    }
+// @include media-breakpoint-down(md) {
+//     // .section-title-lead-landing-page {
+//     //     background-size: fill;
+//     // }
 
-    .container-title-homepage {
-        padding-bottom: 5%;
-    }
-    .container-lead-homepage {
-        padding-top: 5%;
-    }
-}
+//     // .container-title-homepage {
+//     //     align-items: last baseline;
+//     // }
+
+//     // .container-title-homepage {
+//     //     padding-bottom: 5%;
+//     // }
+//     // .container-lead-homepage {
+//     //     padding-top: 5%;
+//     // }
+// }
 
 @include media-breakpoint-down(sm) {
-    .section-title-lead-landing-page{
-        height: auto;
-        background-image: none;
-    }
-    @include color-mode(dark) {
-        .section-title-lead-landing-page {
-            background-image: none;
-        }
-    }
-    .container-title-homepage {
-        height: auto;
-        background-image: url(/images/banner-diamond/banner-diamond-light.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position-y: center;
-        background-position-x: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding-bottom: 5%;
-        padding-top: 5%;
-        max-width: 110%;
-        width: 110%;
+
+    .section-title-lead-landing-page {
+        max-width: 120%;
+        width: 120%;
         position: relative;
-        left: -5%;
-    }
-    @include color-mode(dark) {
-        .container-title-homepage {
-            background-image: url(/images/banner-diamond/banner-diamond-dark.png);
-        }
-    }
-    .container-lead-homepage{
-        height: auto;
-        padding-bottom: 5%;
-        padding-top: 5%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        left: -10%;
     }
     .container-title-homepage h1 {
         font-size: $h2-font-size;
+        position: relative;
+        top: -0.10em
     }
-
     .container-lead-homepage .lead {
         font-size: $h4-font-size;
+        position: relative;
+        top: 0.10em
     }
+
+
+
 }
+
 
 .container-h1-default-page {
     background-image: url(/images/banner-diamond/banner-diamond-light.png);

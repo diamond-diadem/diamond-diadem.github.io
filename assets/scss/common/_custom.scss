@@ -466,7 +466,7 @@ u {
 
 }
 
-.container-landing-page {
+.container-home-page {
     min-height: 89vh;
     display: flex;
     flex-direction: column;
@@ -835,12 +835,16 @@ hr {
     .section-logo,
     .section-features {
         position: relative;
-        top: -40px;
+        top: -20px;
     }
     .section-news {
         position: relative;
-        top: -90px;
+        top: -70px;
     }
+    .container-home-page {
+        margin-bottom: -70px;
+    }
+
 }
 
 .col-default-page {
