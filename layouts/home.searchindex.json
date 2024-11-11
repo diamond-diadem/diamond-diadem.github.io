@@ -5,7 +5,7 @@
 {{/* Source: https://github.com/frjo/hugo-theme-zen/blob/main/layouts/home.searchindex.json */}}
 {{- $.Scratch.Set "searchindex" slice -}}
 {{- range $index, $element := $pages -}}
-  {{- $contentRE := replaceRE `(apptainer[\S\s]*latest)` "" $element.Plain -}}
+  {{- $summaryRE := replaceRE `(apptainer[\S\s]*latest)` "" $element.Summary-}}
   {{-
     $.Scratch.Add "searchindex" (
                                   dict
@@ -13,8 +13,8 @@
                                   "title" $element.Title
                                   "permalink" $element.RelPermalink
                                   "tags" ($element.Params.tags | default slice)
-                                  "content" $contentRE
-                                  "summary" $element.Summary
+                                  "content" $element.PLain
+                                  "summary" $summaryRE
                                   "date" (time.Format (site.Params.searchDateFormat | default "2006-01-02") $element.Date)
                                 )
   -}}
