@@ -36,10 +36,10 @@ Once this is done, the `guix pull` command will update the package collection fr
 >. "$GUIX_PROFILE/etc/profile"
 >```
 
-Finally, to check that you have access to the Diamond packages, you can try searching for the `myquantum-espresso` package:
+Finally, to check that you have access to the Diamond packages, you can try searching for the `quantum-espresso` package:
 
 ```bash
-guix search myquantum-espresso
+guix search quantum-espresso
 ```
 
 ## How do I use Guix packages?
@@ -51,7 +51,7 @@ This command creates a temporary software environment containing the dependencie
 A classic use of the `guix shell` command can therefore be summarised in the following line
 
 ```bash
-guix shell --pure -m mylammps_mpi_manifest.scm
+guix shell --pure -m lammps_mpi_manifest.scm
 ```
 
 ### The `guix time-machine` command
@@ -61,8 +61,8 @@ Some packages require a specific version of one or more dependencies. However, i
 A typical use of the `guix time-machine' command can therefore be summarised in the following line
 
 ```bash
-guix time-machine --channels=myquantum-espresso_channels.scm \
-    -- shell --pure -m myquantum-espresso_manifest.scm
+guix time-machine --channels=quantum-espresso_channels.scm \
+    -- shell --pure -m quantum-espresso_manifest.scm
 ```
 
 </div>
