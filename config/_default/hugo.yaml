@@ -10,7 +10,7 @@ enableRobotsTXT: true
 languageCode: fr-FR
 paginate: 10
 rssLimit: 10
-summarylength: 20
+summarylength: 50
 defaultContentLanguage: fr
 defaultContentLanguageInSubdir: false
 copyRight: Copyright (c) 2020-2024 Hyas

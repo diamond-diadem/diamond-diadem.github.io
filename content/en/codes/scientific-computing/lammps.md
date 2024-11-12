@@ -5,7 +5,6 @@ linkTitle: LAMMPS
 icon: icon-lammps
 toc: false
 weight: 1
-summary: LAMMPS, which stands for “Large-scale Atomic/Molecular Massively Parallel Simulator,” is a powerful and versatile open-source software designed for conducting molecular dynamics simulations. Developed at the Sandia National Laboratory, LAMMPS has gained significant popularity in the scientific community due to its ability to model various materials and systems at the atomic and molecular levels.
 ---
 
 <a href="https://www.lammps.org/" target="_blank">
