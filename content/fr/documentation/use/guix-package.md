@@ -36,10 +36,10 @@ Une fois ceci fait, la commande `guix pull` va mettre à jour la collection de p
 >. "$GUIX_PROFILE/etc/profile"
 >```
 
-Enfin, pour vérifier que vous avez bien accès aux paquets Diamond, vous pouvez essayer de rechercher le paquet `myquantum-espresso` :
+Enfin, pour vérifier que vous avez bien accès aux paquets Diamond, vous pouvez essayer de rechercher le paquet `quantum-espresso` :
 
 ```
-guix search myquantum-espresso
+guix search quantum-espresso
 ```
 
 ## Comment utiliser les paquets guix ?
@@ -51,7 +51,7 @@ Cette commande fait apparaître un environnement logiciel temporaire contenant l
 Une utilisation classique de la commande `guix shell` peut donc se résumer à la ligne suivante :
 
 ```bash
-guix shell --pure -m mylammps_mpi_manifest.scm
+guix shell --pure -m lammps_mpi_manifest.scm
 ```
 
 ### La commande `guix time-machine`
@@ -61,8 +61,8 @@ Certains paquets requièrent une version spécifique d'une ou plusieurs dépenda
 Une utilisation classique de la commande `guix time-machine` peut donc se résumer à la ligne suivante :
 
 ```bash
-guix time-machine --channels=myquantum-espresso_channels.scm \
-    -- shell --pure -m myquantum-espresso_manifest.scm
+guix time-machine --channels=quantum-espresso_channels.scm \
+    -- shell --pure -m quantum-espresso_manifest.scm
 ```
 
 </div>
