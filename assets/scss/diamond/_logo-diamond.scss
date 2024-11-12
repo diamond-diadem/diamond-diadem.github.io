@@ -2,6 +2,18 @@
   height: 55px;
 }
 
+@include media-breakpoint-down(lg) {
+  .diamond.in-navbar {
+    height: 50px;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .diamond.in-navbar {
+    height: 45px;
+  }
+}
+
 .diamond {
   content: url(/images/diamond/diamond-light-smaller.png);
 }
