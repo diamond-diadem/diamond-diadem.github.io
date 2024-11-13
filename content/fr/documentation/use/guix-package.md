@@ -21,6 +21,7 @@ Quand vous utilisez Guix, l'ensemble des paquets disponibles proviennent du cana
 ;; Add gricad packages to those Guix provides.
 (cons (channel
         (name 'guix-packages)
+        (branch "public-packages")
         (url "https://gricad-gitlab.univ-grenoble-alpes.fr/diamond/guix-packages.git"))
       %default-channels)
 ```
