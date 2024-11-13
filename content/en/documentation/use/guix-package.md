@@ -21,6 +21,7 @@ When using Guix, all available packages come from the default guix channel: [GNU
 ;; Add gricad packages to those Guix provides.
 (cons (channel
         (name 'guix-packages)
+        (branch "public-packages")
         (url "https://gricad-gitlab.univ-grenoble-alpes.fr/diamond/guix-packages.git"))
       %default-channels)
 ```
