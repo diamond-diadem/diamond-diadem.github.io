@@ -17,7 +17,7 @@ Ce tutoriel explicite les principales commandes permettant d'interagir avec les 
 
 Quand vous utilisez Guix, l'ensemble des paquets disponibles proviennent du canal guix par défaut : [GNU Guix](https://hpc.guix.info/browse). Cependant, il est possible d'ajouter des *canaux* pour étendre la liste des paquets disponible. Dans le cadre du projet DIAMOND, certains codes ont été packagés via Guix et son disponible dans le canal [guix-packages](https://gricad-gitlab.univ-grenoble-alpes.fr/diamond/guix-packages). Pour ajouter ce canal précis et donc pouvoir installer les paquets à l'aide de la commande `guix install`, il faut créer un fichier `~/.config/guix/channels.scm` sur votre machine ou sur l'infrastructure HPC que vous utiliserez. Ce fichier doit contenir les lignes suivantes :
 
-```
+```bash
 ;; Add gricad packages to those Guix provides.
 (cons (channel
         (name 'guix-packages)
@@ -39,7 +39,7 @@ Une fois ceci fait, la commande `guix pull` va mettre à jour la collection de p
 
 Enfin, pour vérifier que vous avez bien accès aux paquets Diamond, vous pouvez essayer de rechercher le paquet `quantum-espresso` :
 
-```
+```bash
 guix search quantum-espresso
 ```
 
