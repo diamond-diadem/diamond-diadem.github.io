@@ -90,7 +90,7 @@ Pendant l'été 2023, la communauté des matériaux a été sondée via LimeSurv
     </tbody>
 </table>
 
-<h3>Raccourci : choississez votre code et récupérez-le avec Apptainer</h3>
+<h3>{{< inline-svg src="outline/table-shortcut" class="inline-svg inline-svg-shortcut">}}Raccourci : choississez votre code et récupérez-le avec Apptainer</h3>
 <select class="form-select" id="options">
     <optgroup>
         <option value="option0">-- Sélectionnez --</option>
