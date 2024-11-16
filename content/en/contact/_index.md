@@ -2,14 +2,27 @@
 title: Contact us
 ---
 
-<h2 align="center">
-    For general questions or comments about DIAMOND, its website, or anything else, write to David at
+<div class= "row text-center justify-content-center">
 
-<a class="contact-mailto" href="mailto:david.martin-calle@univ-lyon1.fr">david.martin-calle@univ-lyon1.fr</a>
-</h2>
+<div class="col-xl-12">
 
-<h2 align="center">
-    For technical questions or comments about the containers we offer, or about the documentation, write to Dylan at
+<h3>
+    For general questions or comments about DIAMOND, its website, or anything else, write to David:
+</h3>
+<h3>
+    <a class="contact-mailto" href="mailto:david.martin-calle@univ-lyon1.fr">david.martin-calle@univ-lyon1.fr</a>
+</h3>
 
-<a class="contact-mailto" href="mailto:dylan.bissuel@univ-lyon1.fr">dylan.bissuel@univ-lyon1.fr</a>
-</h2>
+</div>
+<div class="col-xl-12">
+
+<h3>
+    For technical questions or comments about the container images we offer, or about the documentation, write to Dylan:
+</h3>
+<h3>
+    <a class="contact-mailto" href="mailto:dylan.bissuel@univ-lyon1.fr">dylan.bissuel@univ-lyon1.fr</a>
+</h3>
+
+</div>
+
+</div>
