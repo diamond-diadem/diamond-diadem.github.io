@@ -13,7 +13,7 @@ Dans cette section, vous pourrez télécharger les images Apptainer des codes di
 
 {{< callout context="tip" title="" icon="outline/question-mark" >}}
 
-Mais pour commencer, si vous n'êtes pas encore passé par cette étape et si vous n'êtes pas familiers avec l'utilisation d'Apptainer, suivez les liens ci-dessous pour apprendre comment installer Apptainer et interagir avec des images.
+Mais pour commencer, si vous n'êtes pas encore passé par cette étape et si vous n'êtes pas familier avec l'utilisation d'Apptainer, suivez les liens ci-dessous pour apprendre comment installer Apptainer et interagir avec des images.
 
 {{< /callout >}}
 
