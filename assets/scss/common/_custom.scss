@@ -580,7 +580,7 @@ u {
     }
 }
 
-@include media-breakpoint-down(md) {
+@include media-breakpoint-down(sm) {
     .navbar .offcanvas.offcanvas-start,
     .navbar .offcanvas.offcanvas-end {
       width: 95vw;
