@@ -1,0 +1,16 @@
+.alert {
+  font-size: $font-size-md;
+}
+
+.alert .alert-link {
+  text-decoration: none;
+}
+
+.alert {
+  background-color: #ec9c2a;
+}
+@include color-mode(dark){
+  .alert {
+      background-color: #77c28d;
+  }
+}

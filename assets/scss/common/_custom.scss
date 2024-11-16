@@ -7,11 +7,12 @@
 @import "diamond/sections-icons";
 @import "diamond/banner-diamond";
 @import "diamond/section-dropdown-navbar";
+@import "diamond/custom-alerts";
 
 
-img {
-    max-width: 100%;
-}
+// img {
+//     max-width: 100%;
+// }
 
 @include color-mode(dark) {
     .dropdown-menu {
@@ -117,9 +118,9 @@ u {
     text-underline-offset: 6px;
 }
 
-.content .svg-inline {
-    margin-bottom: 0.5rem;
-}
+// .content .svg-inline {
+//     margin-bottom: 0.5rem;
+// }
 
 .logo-apptainer {
     content: url(/images/apptainer-logo.svg);
@@ -783,21 +784,6 @@ th, tr {
 
 // // // <<< simple-adsorption-workflow images <<< // // //
 
-
-
-
-// // // >>> change alert color >>> // // //
-
-.alert {
-    background-color: #ec9c2a;
-}
-@include color-mode(dark){
-    .alert {
-        background-color: #77c28d;
-    }
-}
-
-// // // <<< change alert color <<< // // //
 
 hr {
     border: solid 1px black;
