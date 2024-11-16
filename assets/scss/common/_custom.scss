@@ -850,3 +850,16 @@ hr {
 .contact-mailto {
     overflow-wrap: anywhere;
 }
+
+.inline-svg {
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+.inline-svg-shortcut {
+    width: 1.25em;
+    height: 1.25em;
+    position: relative;
+    top: 0.15em;
+    margin-right: 0.15em;
+}
