@@ -46,7 +46,7 @@
                 </li>
               {{ else }}
                 {{ $active := in $currentPage.RelPermalink .RelPermalink }}
-                <li><a class="docs-link rounded{{ if $active }} active{{ end }}" href="{{ .Permalink }}">{{ if .Params.GoogleIcon }}<span class="material-symbols-rounded sidebar-google-icon">{{ .Params.GoogleIcon }}</span>{{ end }}{{ if .Params.Icon }}<i class="sidebar-icon {{ .Params.Icon }}"></i>{{ end }}{{ or .LinkTitle .Title }}</a></li>
+                <li><a class="docs-link rounded{{ if $active }} active{{ end }}" href="{{ .Permalink }}">{{ if .Params.tablerIcon }}{{ partial "inline-svg" (dict "src" .Params.tablerIcon "class" "svg-inline-sidebar") }}{{ end }}{{ if .Params.Icon }}<i class="sidebar-icon {{ .Params.Icon }}"></i>{{ end }}{{ or .LinkTitle .Title }}</a></li>
               {{ end }}
             {{ end }}
           </ul>

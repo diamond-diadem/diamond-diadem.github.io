@@ -651,22 +651,6 @@ th, tr {
     margin-right: 6px;
 }
 
-
-.material-symbols-rounded {
-    font-variation-settings:
-    'FILL' 1,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 20
-}
-
-.sidebar-google-icon {
-    display: inline-block;
-    position: relative;
-    top: 4px; left: -1px;
-    // margin-right: -4px;
-}
-
 // // // modify _global.scss // // //
 
 @include media-breakpoint-up(lg) {
@@ -851,15 +835,22 @@ hr {
     overflow-wrap: anywhere;
 }
 
-.inline-svg {
+.svg-inline {
     display: inline-block;
     vertical-align: baseline;
 }
 
-.inline-svg-shortcut {
+.svg-inline-shortcut {
     width: 1.25em;
     height: 1.25em;
     position: relative;
     top: 0.15em;
     margin-right: 0.15em;
+}
+
+.svg-inline-sidebar {
+   width: 1.5em; height: 1.5em;;
+   position: relative;
+   top: 0.15em; left: -0.2em;
+   margin-left: 0;
 }
