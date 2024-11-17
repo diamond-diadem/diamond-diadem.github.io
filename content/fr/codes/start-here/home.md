@@ -27,8 +27,22 @@ Pendant l'été 2023, la communauté des matériaux a été sondée via LimeSurv
 
 <h3><u>LIENS UTILES</u></h3>
 
-- <h4><a href="/documentation/install/install-apptainer/">Installez Apptainer</a></h4>
-- <h4><a href="/documentation/use/apptainer-image/">Apprenez comment utiliser une image de conteneur</a></h4>
+{{< link-card
+  title="Installez Apptainer"
+  description="Profitez de notre tutoriel"
+  href="/documentation/install/install-apptainer/"
+  class="card-custom"
+>}}
+
+{{< link-card
+  title="Images de conteneurs"
+  description="Apprenez comment les utiliser"
+  href="/documentation/use/apptainer-image/"
+  class="card-custom"
+>}}
+
+<!-- - <h4><a href="/documentation/install/install-apptainer/">Installez Apptainer</a></h4>
+- <h4><a href="/documentation/use/apptainer-image/">Apprenez comment utiliser une image de conteneur</a></h4> -->
 
 <h3><u>CODES DISPONIBLES</u></h3>
 

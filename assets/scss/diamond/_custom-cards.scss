@@ -1,0 +1,15 @@
+.card-custom {
+  border: 0.75px solid black;
+}
+
+.card-custom:hover {
+  border: 0.75px solid black !important;
+}
+
+
+@include color-mode(dark) {
+  .card-custom {
+      border: 0.75px solid white !important;
+  }
+}
+
