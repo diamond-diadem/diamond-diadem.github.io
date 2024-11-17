@@ -1,7 +1,7 @@
 ---
 title: CONTAINERIZED CODES
 linkTitle: Home
-googleIcon: home
+tablerIcon: "outline/home"
 toc: false
 ---
 
@@ -90,7 +90,7 @@ In the summer of 2023, the materials community was surveyed via LimeSurvey to id
     </tbody>
 </table>
 
-<h3>{{< inline-svg src="outline/table-shortcut" class="inline-svg inline-svg-shortcut">}}Shortcut: choose your code and retrieve it with Apptainer</h3>
+<h3>{{< inline-svg src="outline/table-shortcut" class="svg-inline-shortcut">}}Shortcut: choose your code and retrieve it with Apptainer</h3>
 
 <select class="form-select" id="options">
     <optgroup>
