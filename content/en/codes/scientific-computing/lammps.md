@@ -31,8 +31,6 @@ The [LAMMPS website](https://www.lammps.org/) provides a variety of information 
 
 <h3 class="mb-1">Tutorial</h3>
 
-<!-- #### <a href="/en/documentation/by-container/lammps">Learn how to use this specific container image</a>  -->
-
 {{< link-card title="Learn to use this container image" href="/en/documentation/by-container/lammps" icon="outline/package" >}}
 
 <h3 class="mb-1">LAMMPS documentation</h3>
@@ -42,11 +40,6 @@ The [LAMMPS website](https://www.lammps.org/) provides a variety of information 
 {{< link-card title="Official documentation" href="https://docs.lammps.org" target="_blank" icon="outline/book" >}}
 {{< /card-grid >}}
 
-<!-- - #### <a href="https://www.lammps.org/" target="_blank">Official website</a>
-
-- #### <a href="https://docs.lammps.org/" target="_blank">Official documentation</a> -->
 <h3 class="mb-1">Examples</h3>
 
-{{< link-card title="Input files" href="/downloads/lammps-tutorial-inputs.tar.gz" icon="outline/file-export" >}}
-
-<!-- - #### <a href="/downloads/lammps-tutorial-inputs.tar.gz">Examples: input files</a> -->
+{{< link-card title="Download input files" href="/downloads/lammps-tutorial-inputs.tar.gz" icon="outline/file-export" >}}
