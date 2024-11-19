@@ -7,8 +7,8 @@ toc: false
 weight: 4
 ---
 
-<a href="http://www.zset-software.com/" target="_blank">
-    <img alt="Z-set" class="codes-pages-top-logo logo-z-set">
+<a href="http://www.zset-software.com/" target="_blank" class="codes-pages-top-logo">
+    <img alt="Z-set" class="logo-z-set">
 </a>
 
 ### Récupérez l'image Apptainer

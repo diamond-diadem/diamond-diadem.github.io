@@ -7,8 +7,8 @@ toc: false
 weight: 2
 ---
 
-<a href="https://www.paraview.org/" target="_blank">
-    <img alt="ParaView" class="codes-pages-top-logo logo-paraview" width="100%"/>
+<a href="https://www.paraview.org/" target="_blank" class="codes-pages-top-logo">
+    <img alt="ParaView" class="logo-paraview"/>
 </a>
 
 ### Retrieve the Apptainer image

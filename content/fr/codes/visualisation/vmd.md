@@ -7,8 +7,8 @@ toc: false
 weight: 4
 ---
 
-<a href="https://www.ks.uiuc.edu/Research/vmd/" target="blank">
-    <img alt="VMD" class="codes-pages-top-logo logo-vmd"/>
+<a href="https://www.ks.uiuc.edu/Research/vmd/" target="blank" class="codes-pages-top-logo">
+    <img alt="VMD" class="logo-vmd"/>
 </a>
 
 ### Récupérez l'image Apptainer

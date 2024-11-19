@@ -7,7 +7,7 @@ toc: false
 weight: 10
 ---
 
-<a href="https://www.zeoplusplus.org/" target="_blank">
+<a href="https://www.zeoplusplus.org/" target="_blank" class="codes-pages-top-logo">
     <img alt="Zeo++" class="logo-zeoplusplus">
 </a>
 

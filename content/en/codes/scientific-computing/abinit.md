@@ -7,8 +7,8 @@ toc: false
 weight: 3
 ---
 
-<a href="https://www.abinit.org/" target="_blank">
-    <img alt="Abinit" class="codes-pages-top-logo logo-abinit">
+<a href="https://www.abinit.org/" target="_blank" class="codes-pages-top-logo">
+    <img alt="Abinit" class="logo-abinit">
 </a>
 
 ### Retrieve the Apptainer image

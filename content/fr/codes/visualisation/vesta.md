@@ -7,13 +7,13 @@ toc: false
 weight: 3
 ---
 
-<a href="https://jp-minerals.org/vesta/" target="blank">
-   <img alt="VESTA" class="codes-pages-top-logo logo-vesta"/>
+<div class="codes-pages-top-logo">
+
+<a href="https://jp-minerals.org/vesta/" target="blank" class="codes-pages-top-logo mb-0">
+   <img alt="VESTA" class="logo-vesta"/>
 </a>
 
-<div align="center" class="mb-5">
-
-#### " **V**isualization for **E**lectronic and **ST**ructural **A**nalysis "
+<h4 align="center">"<b>V</b>isualization for <b>E</b>lectronic and <b>ST</b>ructural <b>A</b>nalysis"</h4>
 
 </div>
 

@@ -7,8 +7,8 @@ toc: false
 weight: 11
 ---
 
-<a href="https://github.com/iRASPA/RASPA2" target="_blank">
-  <img alt="RASPA2" class="codes-pages-top-logo logo-raspa2"/>
+<a href="https://github.com/iRASPA/RASPA2" target="_blank" class="codes-pages-top-logo">
+  <img alt="RASPA2" class="logo-raspa2"/>
 </a>
 
 ### Récupérez l'image Apptainer
