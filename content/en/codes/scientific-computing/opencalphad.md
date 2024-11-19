@@ -7,8 +7,8 @@ toc: false
 weight: 6
 ---
 
-<a href="https://www.opencalphad.com/" target="_blank">
-    <img alt="OpenCalphad" class="codes-pages-top-logo logo-opencalphad">
+<a href="https://www.opencalphad.com/" target="_blank" class="codes-pages-top-logo">
+    <img alt="OpenCalphad" class="logo-opencalphad">
 </a>
 
 ### Retrieve the Apptainer image

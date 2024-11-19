@@ -7,10 +7,8 @@ toc: false
 weight: 2
 ---
 
-
-
-<a href="https://www.quantum-espresso.org/" target="_blank">
-    <img alt="Quantum ESPRESSO" class="codes-pages-top-logo logo-quantum-espresso">
+<a href="https://www.quantum-espresso.org/" target="_blank" class="codes-pages-top-logo">
+    <img alt="Quantum ESPRESSO" class="logo-quantum-espresso">
 </a>
 
 ### Récupérez l'image Apptainer

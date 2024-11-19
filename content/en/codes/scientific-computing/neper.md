@@ -7,7 +7,9 @@ toc: false
 weight: 7
 ---
 
-<a href="https://neper.info/" target="_blank"><img alt="Neper" class="home-neper codes-pages-top-logo"></img></a>
+<a href="https://neper.info/" target="_blank" class="codes-pages-top-logo">
+  <img alt="Neper" class="home-neper"></img>
+</a>
 
 ### Retrieve the Apptainer image
 

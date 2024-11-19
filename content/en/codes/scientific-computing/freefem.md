@@ -7,8 +7,8 @@ toc: false
 weight: 5
 ---
 
-<a href="https://freefem.org/" target="_blank">
-    <img alt="FreeFEM" class="codes-pages-top-logo logo-freefem">
+<a href="https://freefem.org/" target="_blank" class="codes-pages-top-logo">
+    <img alt="FreeFEM" class="logo-freefem">
 </a>
 
 ### Retrieve the Apptainer image

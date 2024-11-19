@@ -3,18 +3,25 @@
 .codes-pages-top-logo {
     display: flex;
     width: 100%;
-    margin-top: 5%;
+    margin-top: 0;
+    margin-bottom: 40px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .home-neper {
+    width: 100%;
     content: url(/images/home-neper.png);
 }
 
 .logo-lammps {
+    width: 100%;
     content: url(/images/lammps-logo.jpeg);
 }
 
 .logo-ovito {
+    width: 100%;
     content: url(/images/ovito-logo-light.png);
 }
 @include color-mode(dark) {
@@ -24,6 +31,7 @@
 }
 
 .logo-quantum-espresso {
+    width: 100%;
     content: url(/images/quantum-espresso-logo-light.png);
 }
 @include color-mode(dark) {
@@ -33,6 +41,7 @@
 }
 
 .logo-paraview {
+    width: 100%;
     content: url(/images/paraview-logo-light.svg);
 }
 @include color-mode(dark) {
@@ -43,6 +52,7 @@
 }
 
 .logo-vesta {
+    width: 100%;
     content: url(/images/vesta-logo-light.png);
 }
 @include color-mode(dark) {
@@ -52,6 +62,7 @@
 }
 
 .logo-vmd {
+    width: 100%;
     content: url(/images/vmd-logo-light.png);
 }
 @include color-mode(dark) {
@@ -61,6 +72,7 @@
 }
 
 .logo-abinit {
+    width: 100%;
     content: url(/images/abinit/abinit-logo-light.svg);
 }
 @include color-mode(dark) {
@@ -70,6 +82,7 @@
 }
 
 .logo-z-set {
+    width: 100%;
     content: url(/images/z-set-light-smaller.png);
 }
 @include color-mode(dark) {
@@ -79,6 +92,7 @@
 }
 
 .logo-freefem {
+    width: 100%;
     content: url(/images/freefem-logo-light.svg);
 }
 @include color-mode(dark) {
@@ -88,6 +102,7 @@
 }
 
 .logo-opencalphad {
+    width: 100%;
     content: url(/images/opencalphad-logo-light.png);
 }
 @include color-mode(dark) {
@@ -98,10 +113,7 @@
 
 .logo-plumed {
     content: url(/images/plumed-light.png);
-    display: block;
     width: 50%;
-    margin: auto;
-    margin-top: 45px;
 }
 @include color-mode(dark) {
     .logo-plumed {
@@ -111,10 +123,7 @@
 
 .logo-gmsh {
     content: url(/images/gmsh-light.png);
-    display: block;
     width: 50%;
-    margin-left: auto;
-    margin-right: auto;
 }
 @include color-mode(dark) {
     .logo-gmsh {
@@ -124,17 +133,12 @@
 
 .logo-zeoplusplus {
     content: url(/images/zeo++/logo-zeoplusplus.png);
-    display: block;
     width: 65%;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .logo-raspa2 {
     content: url(/images/raspa2/logo-raspa2.png);
-    display: block;
     width: 50%;
-    margin: auto;
 }
 
 // // // END Codes pages top logos END // // //

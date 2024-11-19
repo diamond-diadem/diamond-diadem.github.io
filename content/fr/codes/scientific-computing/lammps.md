@@ -7,8 +7,8 @@ toc: false
 weight: 1
 ---
 
-<a href="https://www.lammps.org/" target="_blank">
-    <img alt="LAMMPS" class="codes-pages-top-logo logo-lammps">
+<a href="https://www.lammps.org/" target="_blank" class="codes-pages-top-logo">
+    <img class="logo-lammps" alt="LAMMPS">
 </a>
 
 ### Récupérez l'image Apptainer

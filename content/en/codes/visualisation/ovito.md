@@ -7,8 +7,8 @@ toc: false
 weight: 1
 ---
 
-<a href="https://www.ovito.org/" target="_blank">
-    <img alt="Ovito" class="codes-pages-top-logo logo-ovito"/>
+<a href="https://www.ovito.org/" target="_blank" class="codes-pages-top-logo">
+    <img alt="Ovito" class="logo-ovito"/>
 </a>
 
 ### Retrieve the Apptainer image

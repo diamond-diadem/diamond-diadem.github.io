@@ -19,9 +19,9 @@
 		</nav>
 		{{ end -}}
 		{{ if .Params.toc -}}
-		<main class="docs-content col-lg-11 col-xl-9">
+		<main class="docs-content col-lg-11 col-xl-9 codes-content">
 		{{ else -}}
-		<main class="docs-content col-lg-11 col-xl-9 mx-xl-auto">
+		<main class="docs-content col-lg-11 col-xl-9 mx-xl-auto codes-content">
 		{{ end -}}
 			{{ if site.Params.doks.breadcrumbTrail -}}
 				<!-- https://discourse.gohugo.io/t/breadcrumb-navigation-for-highly-nested-content/27359/6 -->
@@ -34,6 +34,8 @@
 			{{ end }}
 			{{ if default true .Params.title_visible -}}
 			<h1>{{ .Title }}</h1>
+			{{ else -}}
+			<br>
 			{{ end -}}
 			<p class="lead">{{ .Params.lead | safeHTML }}</p>
 			<!-- {{ if ne .Params.toc false -}}
@@ -47,14 +49,14 @@
 			{{ else -}}
 			{{ .Content }}
 			{{ end -}}
-			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
+			{{/*  <div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
 				{{ if site.Params.doks.lastMod -}}
 					{{ partial "main/last-modified.html" . }}
 				{{ end -}}
 				{{ if site.Params.doks.editPage -}}
 					{{ partial "main/edit-page.html" . }}
 				{{ end -}}
-			</div>
+			</div>  */}}
 			<!-- {{ partial "main/docs-navigation.html" . }} -->
 			<!--
 			{{ if not .Site.Params.options.collapsibleSidebar -}}
