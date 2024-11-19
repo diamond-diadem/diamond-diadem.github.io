@@ -29,14 +29,24 @@ The [LAMMPS website](https://www.lammps.org/) provides a variety of information 
 
 </div>
 
-### Tutorial
+<h3 class="mb-1">Tutorial</h3>
 
-#### <a href="/en/documentation/by-container/lammps">Learn how to use this specific container image</a>
+<!-- #### <a href="/en/documentation/by-container/lammps">Learn how to use this specific container image</a>  -->
 
-### LAMMPS documentation
+{{< link-card title="Learn how to use this specific container image" href="/en/documentation/by-container/lammps" icon="outline/package" >}}
 
-- #### <a href="https://www.lammps.org/" target="_blank">Official website</a>
+<h3 class="mb-1">LAMMPS documentation</h3>
 
-- #### <a href="https://docs.lammps.org/" target="_blank">Official documentation</a>
+{{< card-grid >}}
+{{< link-card title="Official website" href="https://lammps.org" target="_blank" icon="outline/world-www" >}}
+{{< link-card title="Official documentation" href="https://docs.lammps.org" target="_blank" icon="outline/book" >}}
+{{< /card-grid >}}
 
-- #### <a href="/downloads/lammps-tutorial-inputs.tar.gz">Examples: input files</a>
+<!-- - #### <a href="https://www.lammps.org/" target="_blank">Official website</a>
+
+- #### <a href="https://docs.lammps.org/" target="_blank">Official documentation</a> -->
+<h3 class="mb-1">Examples</h3>
+
+{{< link-card title="Input files" href="/downloads/lammps-tutorial-inputs.tar.gz" icon="outline/file-export" >}}
+
+<!-- - #### <a href="/downloads/lammps-tutorial-inputs.tar.gz">Examples: input files</a> -->
