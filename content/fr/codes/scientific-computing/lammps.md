@@ -29,7 +29,22 @@ Le <a href="https://www.lammps.org/" target="_blank">site web de LAMMPS</a> offr
 
 </div>
 
-### Tutoriel
+<h3 class="mb-1">Tutoriel</h3>
+
+{{< link-card title="Apprenez à utiliser cette image de conteneur" href="/documentation/by-container/lammps" icon="outline/package" >}}
+
+<h3 class="mb-1">Documentation LAMMPS</h3>
+
+{{< card-grid >}}
+{{< link-card title="Site officiel" href="https://lammps.org" target="_blank" icon="outline/world-www" >}}
+{{< link-card title="Documentation officielle" href="https://docs.lammps.org" target="_blank" icon="outline/book" >}}
+{{< /card-grid >}}
+
+<h3 class="mb-1">Exemples</h3>
+
+{{< link-card title="Téléchargez des fichiers d'entrée" href="/downloads/lammps-tutorial-inputs.tar.gz" icon="outline/file-export" >}}
+
+<!-- ### Tutoriel
 
 #### <a href="/documentation/by-container/lammps">Comment utiliser cette image de conteneur</a>
 
@@ -39,4 +54,4 @@ Le <a href="https://www.lammps.org/" target="_blank">site web de LAMMPS</a> offr
 
 - #### <a href="https://docs.lammps.org/" target="_blank">Documentation officielle</a>
 
-- #### <a href="/downloads/lammps-tutorial-inputs.tar.gz">Exemples : fichiers d'entrée</a>
+- #### <a href="/downloads/lammps-tutorial-inputs.tar.gz">Exemples : fichiers d'entrée</a> -->

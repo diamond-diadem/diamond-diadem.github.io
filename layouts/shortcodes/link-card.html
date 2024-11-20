@@ -7,6 +7,7 @@
   "class" .Params.class
   "rel" .Params.rel
   "icon" .Params.icon
+  "disabled" .Params.disabled
 }}
 
 {{- with .Parent }}
@@ -19,11 +20,13 @@
 
 {{- define "partials/inline/link-card.html" }}
   <div class="card text-end w-100{{ with .class}} {{ . }}{{ end }}">
-    <div class="card-body d-flex">
+    <div class="card-body d-flex align-items-center">
+      {{ with .icon }}{{ partial "inline-svg" (dict "src" . "class" "card-icon") }}{{ end }}
       <div class="d-flex flex-column me-auto text-start">
-        <h5 class="card-title my-0"><a href="{{ .href }}"{{ with .target}} target="{{ . }}"{{ end }} class="stretched-link text-reset text-decoration-none"{{ with .rel}} rel="{{ . }}"{{ end }}><span class="icon-title-wrapper-card">{{ with .icon }}{{ partial "inline-svg" (dict "src" . "class" "card-icon") }}{{ end }}{{ .title }}</span></a></h5>
-        {{ with .description }}<p class="card-text mt-1">{{ . }}</p>{{ end }}
+        <h5 class="card-title my-0"><a href="{{ .href }}"{{ with .target}} target="{{ . }}"{{ end }} class="stretched-link text-reset text-decoration-none"{{ with .rel}} rel="{{ . }}"{{ end }}>{{ .title  | safeHTML }}</a></h5>
+        {{ with .description | safeHTML }}<p class="card-text mt-1">{{ . }}</p>{{ end }}
       </div>
+      {{ if (default true ( not .disabled ) ) }}
       <div class="d-flex flex-column justify-content-center">
         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
           <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -32,6 +35,9 @@
           <path d="M13 6l6 6"></path>
         </svg>
       </div>
+      {{ end }}
     </div>
   </div>
 {{- end -}}
+
+
