@@ -25,14 +25,17 @@ Ovito est développé, distribué, et pris en charge par OVITO GmbH, une start-u
 
 </div>
 
-### Tutoriel
+<h3 class="mb-1">Tutoriel</h3>
 
-#### <a href="/documentation/by-container/ovito">Comment utiliser cette image de conteneur</a>
+{{< link-card title="Apprenez à utiliser cette image de conteneur" href="/documentation/by-container/ovito" icon="tabler-icons/outline/package" class="mb-0" >}}
 
-### Documentation Ovito
+<h3 class="mb-1 mt-3">Documentation Ovito</h3>
 
-- #### <a href="https://www.ovito.org/" target="_blank">Site officiel</a>
+{{< card-grid >}}
+{{< link-card title="Site officiel" href="https://www.ovito.org/" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
+{{< link-card title="Documentation officielle" href="https://www.ovito.org/docs/current" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
+{{< /card-grid >}}
 
-- #### <a href="https://www.ovito.org/docs/current" target="_blank">Documentation officielle</a>
+<h3 class="mb-1 mt-3">Exemples</h3>
 
-- #### <a href="/downloads/ovito-tutorial-inputs.tar.gz">Exemples : fichiers d'entrée</a>
+{{< link-card title="Téléchargez des fichiers d'entrée" href="/downloads/ovito-tutorial-inputs.tar.gz" icon="tabler-icons/outline/file-export" class="mb-0" >}}

@@ -25,14 +25,17 @@ Ce logiciel repose sur une architecture modulaire, ce qui permet aux utilisateur
 
 </div>
 
-### Tutoriel
+<h3 class="mb-1">Tutoriel</h3>
 
-#### <a href="/documentation/by-container/paraview">Comment utiliser cette image de conteneur</a>
+{{< link-card title="Apprenez à utiliser cette image de conteneur" href="/documentation/by-container/paraview" icon="tabler-icons/outline/package" class="mb-0" >}}
 
-### Documentation ParaView
+<h3 class="mb-1 mt-3">Documentation ParaView</h3>
 
-- #### <a href="https://www.paraview.org/" target="_blank">Site officiel</a>
+{{< card-grid >}}
+{{< link-card title="Site officiel" href="https://www.paraview.org/" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
+{{< link-card title="Documentation officielle" href="https://www.paraview.org/resources/" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
+{{< /card-grid >}}
 
-- #### <a href="https://www.paraview.org/resources/" target="_blank">Documentation officielle</a>
+<h3 class="mb-1 mt-3">Exemples</h3>
 
-- #### <a href="/downloads/paraview-tutorial-inputs.tar.gz">Exemples : fichiers d'entrée</a>
+{{< link-card title="Téléchargez des fichiers d'entrée" href="/downloads/paraview-tutorial-inputs.tar.gz" icon="tabler-icons/outline/file-export" class="mb-0" >}}
