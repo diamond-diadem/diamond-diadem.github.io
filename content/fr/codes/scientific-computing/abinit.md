@@ -33,25 +33,15 @@ En tant que projet open-source, Abinit bénéficie d'une communauté active de d
 
 <h3 class="mb-1">Tutoriel</h3>
 
-{{< link-card title="Contenu à venir" description="Apprenez à utliser cette image de conteneur" href="#bottom" icon="outline/package" disabled="true">}}
+{{< link-card title="Contenu à venir" description="<i>Apprenez à utiliser cette image de conteneur</i>" href="#bottom" icon="outline/package" disabled="true" class="mb-0" >}}
 
-<h3 class="mb-1">Documentation Abinit</h3>
+<h3 class="mb-1 mt-3">Documentation Abinit</h3>
 
 {{< card-grid >}}
-{{< link-card title="Site officiel" href="https://lammps.org" target="_blank" icon="outline/world-www" >}}
-{{< link-card title="Documentation officielle" href="https://docs.lammps.org" target="_blank" icon="outline/book" >}}
+{{< link-card title="Site officiel" href="https://www.abinit.org/" target="_blank" icon="outline/world-www"  class="mb-0" >}}
+{{< link-card title="Documentation officielle" href="https://docs.abinit.org/" target="_blank" icon="outline/book" class="mb-0" >}}
 {{< /card-grid >}}
 
-<h3 class="mb-1">Exemples</h3>
+<h3 class="mb-1 mt-3">Exemples</h3>
 
-{{< link-card title="Contenu à venir" description="Téléchargez des fichiers d'entrée" href="/downloads/lammps-tutorial-inputs.tar.gz" icon="outline/file-export" disabled="true">}}
-
-<!-- ### Comment utiliser cette image de conteneur _( à venir)_
-
-### Documentation Abinit
-
-- #### <a href="https://www.abinit.org/" target="_blank">Site officiel</a>
-
-- #### <a href="https://docs.abinit.org/" target="_blank">Documentation officielle</a>
-
-- #### Exemples : fichiers d'entrée _(à venir)_ -->
+{{< link-card title="Contenu à venir" description="<i>Téléchargez des fichiers d'entrée</i>" href="#bottom" icon="outline/file-export" disabled="true" class="mb-0" >}}

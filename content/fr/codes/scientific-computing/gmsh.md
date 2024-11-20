@@ -27,12 +27,17 @@ En outre, Gmsh comprend un puissant langage de script qui permet aux utilisateur
 
 </div>
 
-### Comment utiliser cette image de conteneur _(à venir)_
+<h3 class="mb-1">Tutoriel</h3>
 
-### Documentation Gmsh
+{{< link-card title="Contenu à venir" description="<i>Apprenez à utiliser cette image de conteneur</i>" href="#bottom" icon="outline/package" disabled="true" class="mb-0" >}}
 
-- #### <a href="https://gmsh.info/" target="_blank">Site officiel</a>
+<h3 class="mb-1 mt-3">Documentation Gmsh</h3>
 
-- #### <a href="https://gmsh.info/#Documentation" target="_blank">Documentation officielle</a>
+{{< card-grid >}}
+{{< link-card title="Site officiel" href="https://gmsh.info/" target="_blank" icon="outline/world-www" class="mb-0" >}}
+{{< link-card title="Documentation officielle" href="https://gmsh.info/#Documentation" target="_blank" icon="outline/book" class="mb-0" >}}
+{{< /card-grid >}}
 
-- #### Exemples : fichiers d'entrée _(à venir)_
+<h3 class="mb-1 mt-3">Exemples</h3>
+
+{{< link-card title="Contenu à venir" description="<i>Téléchargez des fichiers d'entrée</i>" href="#bottom" icon="outline/file-export" disabled="true" class="mb-0" >}}

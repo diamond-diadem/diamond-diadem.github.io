@@ -23,7 +23,7 @@
     <div class="card-body d-flex align-items-center">
       {{ with .icon }}{{ partial "inline-svg" (dict "src" . "class" "card-icon") }}{{ end }}
       <div class="d-flex flex-column me-auto text-start">
-        <h5 class="card-title my-0"><a href="{{ .href }}"{{ with .target}} target="{{ . }}"{{ end }} class="stretched-link text-reset text-decoration-none"{{ with .rel}} rel="{{ . }}"{{ end }}>{{ .title  | safeHTML }}</a></h5>
+        <h5 class="card-title my-0"><a {{ if ( not .disabled )}}href="{{ .href }}"{{ else}}href="#bottom"{{ end }}{{ with .target}} target="{{ . }}"{{ end }} class="stretched-link text-reset text-decoration-none"{{ with .rel}} rel="{{ . }}"{{ end }}>{{ .title  | safeHTML }}</a></h5>
         {{ with .description | safeHTML }}<p class="card-text mt-1">{{ . }}</p>{{ end }}
       </div>
       {{ if (default true ( not .disabled ) ) }}
