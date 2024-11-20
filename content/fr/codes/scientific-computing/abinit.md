@@ -35,7 +35,7 @@ En tant que projet open-source, Abinit bénéficie d'une communauté active de d
 
 {{< link-card title="Contenu à venir" description="Apprenez à utliser cette image de conteneur" href="#bottom" icon="outline/package" disabled="true">}}
 
-<h3 class="mb-1">Documentation LAMMPS</h3>
+<h3 class="mb-1">Documentation Abinit</h3>
 
 {{< card-grid >}}
 {{< link-card title="Site officiel" href="https://lammps.org" target="_blank" icon="outline/world-www" >}}
