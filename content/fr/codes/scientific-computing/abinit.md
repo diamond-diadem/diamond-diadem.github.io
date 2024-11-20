@@ -31,7 +31,22 @@ En tant que projet open-source, Abinit bénéficie d'une communauté active de d
 
 </div>
 
-### Comment utiliser cette image de conteneur _( à venir)_
+<h3 class="mb-1">Tutoriel</h3>
+
+{{< link-card title="Contenu à venir" description="Apprenez à utliser cette image de conteneur" href="#bottom" icon="outline/package" disabled="true">}}
+
+<h3 class="mb-1">Documentation LAMMPS</h3>
+
+{{< card-grid >}}
+{{< link-card title="Site officiel" href="https://lammps.org" target="_blank" icon="outline/world-www" >}}
+{{< link-card title="Documentation officielle" href="https://docs.lammps.org" target="_blank" icon="outline/book" >}}
+{{< /card-grid >}}
+
+<h3 class="mb-1">Exemples</h3>
+
+{{< link-card title="Contenu à venir" description="Téléchargez des fichiers d'entrée" href="/downloads/lammps-tutorial-inputs.tar.gz" icon="outline/file-export" disabled="true">}}
+
+<!-- ### Comment utiliser cette image de conteneur _( à venir)_
 
 ### Documentation Abinit
 
@@ -39,4 +54,4 @@ En tant que projet open-source, Abinit bénéficie d'une communauté active de d
 
 - #### <a href="https://docs.abinit.org/" target="_blank">Documentation officielle</a>
 
-- #### Exemples : fichiers d'entrée _(à venir)_
+- #### Exemples : fichiers d'entrée _(à venir)_ -->
