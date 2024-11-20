@@ -36,9 +36,9 @@ Pendant l'été 2023, la communauté des matériaux a été sondée via LimeSurv
 
 {{< link-card
   title="Images de conteneurs"
-  description="Apprenez comment les utiliser"
+  description="Apprenez à les utiliser"
   href="/documentation/use/apptainer-image/"
-  icon="tabler-icons/outline/package"
+  icon="tabler-icons/outline/settings-question"
 >}}
 
 <!-- - <h4><a href="/documentation/install/install-apptainer/">Installez Apptainer</a></h4>

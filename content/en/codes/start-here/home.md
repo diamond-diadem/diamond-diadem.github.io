@@ -38,11 +38,8 @@ In the summer of 2023, the materials community was surveyed via LimeSurvey to id
     title="Containers images"
     description="Learn to use them"
     href="/en/documentation/use/apptainer-image/"
-    icon="tabler-icons/outline/package"
+    icon="tabler-icons/outline/settings-question"
 >}}
-
-<!-- - <h4><a href="/en/documentation/install/install-apptainer/">Install Apptainer</a></h4>
-- <h4><a href="/en/documentation/use/apptainer-image/">Learn how to use a container image</a></h4> -->
 
 <h3><u>AVAILABLE CODES</u></h3>
 
