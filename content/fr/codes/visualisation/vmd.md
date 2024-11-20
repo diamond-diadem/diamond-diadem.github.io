@@ -33,14 +33,17 @@ Dans l'ensemble, VMD est un outil puissant et flexible pour la visualisation et 
 
 </div>
 
-### Tutoriel
+<h3 class="mb-1">Tutoriel</h3>
 
-#### <a href="/documentation/by-container/vmd">Comment utiliser cette image de conteneur</a>
+{{< link-card title="Contenu à venir" description="<i>Apprenez à utiliser cette image de conteneur</i>" href="#bottom" icon="tabler-icons/outline/package" disabled="true" class="mb-0" >}}
 
-### Documentation VMD
+<h3 class="mb-1 mt-3">Documentation VMD</h3>
 
-- #### <a href="https://www.ks.uiuc.edu/Research/vmd/" target="_blank">Site officiel</a>
+{{< card-grid >}}
+{{< link-card title="Site officiel" href="https://www.ks.uiuc.edu/Research/vmd/" target="_blank" icon="tabler-icons/outline/world-www"  class="mb-0" >}}
+{{< link-card title="Documentation officielle" href="https://www.ks.uiuc.edu/Research/vmd/current/docs.html" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
+{{< /card-grid >}}
 
-- #### <a href="https://www.ks.uiuc.edu/Research/vmd/current/docs.html" target="_blank">Documentation officielle</a>
+<h3 class="mb-1 mt-3">Exemples</h3>
 
-- #### <a href="/downloads/vmd-tutorial-inputs.tar.gz">Exemples : fichiers d'entrée</a>
+{{< link-card title="Contenu à venir" description="<i>Téléchargez des fichiers d'entrée</i>" href="#bottom" icon="tabler-icons/outline/file-export" disabled="true" class="mb-0" >}}
