@@ -45,7 +45,7 @@ In the summer of 2023, the materials community was surveyed via LimeSurvey to id
 
 <table>
     <caption>
-        And more to be added
+        And more to be added!
     </caption>
     <thead>
         <tr>
