@@ -6,7 +6,7 @@ weight: 3
 
 <div align="justify">
 
-{{< callout context="note" title="" icon="outline/info-circle" >}}
+{{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
 
 In preamble, you need to have Apptainer installed on your machine; see [this link](/en/documentation/install-apptainer/howto/) for more details.
 
@@ -187,7 +187,7 @@ apptainer exec \
 
 <!-- ## Frequently encountered issues with the Quantum Espresso image
 
-### Issue Lorem ipsum 
+### Issue Lorem ipsum
 **Issue description** Lorem ipsum
 **Solution**
 This issue is caused by lorem ipsum

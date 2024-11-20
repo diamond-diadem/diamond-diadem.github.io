@@ -5,7 +5,7 @@ weight: 6
 
 <div align="justify">
 
-{{< callout context="note" title="" icon="outline/info-circle" >}}
+{{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
 
 En préalable de ces explications, il est nécessaire d'avoir installé Apptainer sur votre machine ; voir [ce lien](/documentation/install/install_apptainer/) pour plus de détails.
 

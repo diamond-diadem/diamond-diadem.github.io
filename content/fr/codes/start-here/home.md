@@ -1,17 +1,17 @@
 ---
 title: CODES CONTENEURISÉS
 linkTitle: Accueil
-tablerIcon: "outline/home"
+tablerIcon: "tabler-icons/outline/home"
 toc: false
 ---
 
-{{< callout context="note" title="" icon="outline/info-circle" >}}
+{{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
 
 Dans cette section, vous pourrez télécharger les images Apptainer des codes disponibles sur le site. De calcul scientifique comme de visualisation de données.
 
 {{< /callout >}}
 
-{{< callout context="tip" title="" icon="outline/question-mark" >}}
+{{< callout context="tip" title="" icon="tabler-icons/outline/question-mark" >}}
 
 Mais pour commencer, si vous n'êtes pas encore passé par cette étape et si vous n'êtes pas familier avec l'utilisation d'Apptainer, suivez les liens ci-dessous pour apprendre comment installer Apptainer et interagir avec des images.
 
@@ -31,14 +31,13 @@ Pendant l'été 2023, la communauté des matériaux a été sondée via LimeSurv
   title="Installez Apptainer"
   description="Profitez de notre tutoriel"
   href="/documentation/install/install-apptainer/"
-  class="card-custom"
+  icon="custom/apptainer"
 >}}
 
 {{< link-card
   title="Images de conteneurs"
   description="Apprenez comment les utiliser"
   href="/documentation/use/apptainer-image/"
-  class="card-custom"
 >}}
 
 <!-- - <h4><a href="/documentation/install/install-apptainer/">Installez Apptainer</a></h4>
@@ -104,7 +103,7 @@ Pendant l'été 2023, la communauté des matériaux a été sondée via LimeSurv
     </tbody>
 </table>
 
-<h3>{{< inline-svg src="outline/table-shortcut" class="svg-inline-shortcut">}}Raccourci : choississez votre code et récupérez-le avec Apptainer</h3>
+<h3>{{< inline-svg src="tabler-icons/outline/table-shortcut" class="svg-inline-shortcut">}}Raccourci : choississez votre code et récupérez-le avec Apptainer</h3>
 <select class="form-select" id="options">
     <optgroup>
         <option value="option0">-- Sélectionnez --</option>

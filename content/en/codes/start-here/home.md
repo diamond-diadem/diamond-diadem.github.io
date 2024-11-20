@@ -1,17 +1,17 @@
 ---
 title: CONTAINERISED CODES
 linkTitle: Home
-tablerIcon: "outline/home"
+tablerIcon: "tabler-icons/outline/home"
 toc: false
 ---
 
-{{< callout context="note" title="" icon="outline/info-circle" >}}
+{{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
 
 In this section, you will be able to download Apptainer images for codes available on this website. For scientific computing as well as data visualisation
 
 {{< /callout >}}
 
-{{< callout context="tip" title="" icon="outline/question-mark" >}}
+{{< callout context="tip" title="" icon="tabler-icons/outline/question-mark" >}}
 
 But to begin with, if you haven't gone through this step yet and if you're not familiar with using Apptainer, follow the links below to learn how to install Apptainer and interact with images.
 
@@ -104,7 +104,7 @@ In the summer of 2023, the materials community was surveyed via LimeSurvey to id
     </tbody>
 </table>
 
-<h3>{{< inline-svg src="outline/table-shortcut" class="svg-inline-shortcut">}}Shortcut: choose your code and retrieve it with Apptainer</h3>
+<h3>{{< inline-svg src="tabler-icons/outline/table-shortcut" class="svg-inline-shortcut">}}Shortcut: choose your code and retrieve it with Apptainer</h3>
 
 <select class="form-select" id="options">
     <optgroup>

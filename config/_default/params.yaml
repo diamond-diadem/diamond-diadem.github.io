@@ -86,7 +86,7 @@ thulite_images:
       - 800
       - 1024
 inline_svg:
-  iconSetDir: tabler-icons
+  iconSetDir: all-svg-icons
 seo:
   title:
     separator: " | "

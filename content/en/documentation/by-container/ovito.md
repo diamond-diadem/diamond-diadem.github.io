@@ -6,7 +6,7 @@ weight: 2
 
 <div align="justify">
 
-{{< callout context="note" title="" icon="outline/info-circle" >}}
+{{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
 
 Before proceeding with these explanations, it is necessary to have Apptainer installed on your machine; see [this link](/en/documentation/install-apptainer/howto/) for more details.
 
@@ -177,7 +177,7 @@ Examples of possible answers:
 
 <!-- ## Frequently encountered issues with the Ovito image
 
-### Issue Lorem ipsum 
+### Issue Lorem ipsum
 **Issue description** Lorem ipsum
 **Solution**
 This issue is caused by lorem ipsum

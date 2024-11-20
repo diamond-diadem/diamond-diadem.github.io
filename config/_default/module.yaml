@@ -12,7 +12,7 @@ mounts:
     target: assets
     # excludeFiles: /js/**.js
   - source: node_modules/@tabler/icons/icons
-    target: assets/svgs/tabler-icons
+    target: assets/svgs/all-svg-icons/tabler-icons
   - source: assets
     target: assets
   - source: assets/js

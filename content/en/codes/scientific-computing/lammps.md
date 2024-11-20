@@ -31,15 +31,15 @@ The [LAMMPS website](https://www.lammps.org/) provides a variety of information 
 
 <h3 class="mb-1">Tutorial</h3>
 
-{{< link-card title="Learn to use this container image" href="/en/documentation/by-container/lammps" icon="outline/package" >}}
+{{< link-card title="Learn to use this container image" href="/en/documentation/by-container/lammps" icon="tabler-icons/outline/package" >}}
 
 <h3 class="mb-1">LAMMPS documentation</h3>
 
 {{< card-grid >}}
-{{< link-card title="Official website" href="https://lammps.org" target="_blank" icon="outline/world-www" >}}
-{{< link-card title="Official documentation" href="https://docs.lammps.org" target="_blank" icon="outline/book" >}}
+{{< link-card title="Official website" href="https://lammps.org" target="_blank" icon="tabler-icons/outline/world-www" >}}
+{{< link-card title="Official documentation" href="https://docs.lammps.org" target="_blank" icon="tabler-icons/outline/book" >}}
 {{< /card-grid >}}
 
 <h3 class="mb-1">Examples</h3>
 
-{{< link-card title="Download input files" href="/downloads/lammps-tutorial-inputs.tar.gz" icon="outline/file-export" >}}
+{{< link-card title="Download input files" href="/downloads/lammps-tutorial-inputs.tar.gz" icon="tabler-icons/outline/file-export" >}}

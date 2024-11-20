@@ -5,7 +5,7 @@ weight: 5
 
 <div align="justify">
 
-{{< callout context="note" title="" icon="outline/info-circle" >}}
+{{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
 
 Before these explanations, it is necessary to have Guix installed on your machine; see [this link](/en/documentation/install/install-guix/) for more details.
 
@@ -26,9 +26,9 @@ When using Guix, all available packages come from the default guix channel: [GNU
       %default-channels)
 ```
 
-Once this is done, the `guix pull` command will update the package collection from the standard channel (GNU Guix) and the Diamond channel (guix-packages).  
+Once this is done, the `guix pull` command will update the package collection from the standard channel (GNU Guix) and the Diamond channel (guix-packages).
 
-**Caution** 
+**Caution**
 >
 > Once `guix pull` is complete, it is important to run the following commands to ensure that you are using the latest `guix` command:
 >
