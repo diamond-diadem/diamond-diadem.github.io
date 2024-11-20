@@ -22,7 +22,7 @@ Here are the links for quick access to the documentation section for the tools y
 
 <table>
     <caption>
-        And more to come!
+        And more to be added!
     </caption>
     <thead>
         <tr>
