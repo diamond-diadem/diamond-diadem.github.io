@@ -719,7 +719,8 @@ th, tr {
 .btn-doc-sidebar {
     margin-top: 20px;
     overflow-y: hidden;
-    justify-self: center;
+    justify-self: left;
+    width: fit-content;
 }
 
 
