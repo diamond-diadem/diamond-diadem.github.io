@@ -5,7 +5,7 @@ weight: 5
 
 <div align="justify">
 
-{{< callout context="note" title="" icon="outline/info-circle" >}}
+{{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
 
 En préalable de ces explications, il est nécessaire d'avoir installé Guix sur votre machine ; voir [ce lien](/documentation/install/install-guix/) pour plus de détails.
 
@@ -28,7 +28,7 @@ Quand vous utilisez Guix, l'ensemble des paquets disponibles proviennent du cana
 
 Une fois ceci fait, la commande `guix pull` va mettre à jour la collection de paquets à partir du canal par défaut (GNU Guix) et du canal Diamond (guix-packages).
 
-**Attention** 
+**Attention**
 >
 > Une fois `guix pull` terminé, il est important d'exécuter les commandes suivantes, pour être sûr d'utiliser la commande `guix` à jour :
 >

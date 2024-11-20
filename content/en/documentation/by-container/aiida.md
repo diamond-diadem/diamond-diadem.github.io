@@ -5,7 +5,7 @@ weight: 6
 
 <div align="justify">
 
-{{< callout context="note" title="" icon="outline/info-circle" >}}
+{{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
 
 Before following these instructions, you must have Apptainer installed on your machine; see [this link](/documentation/install/install_apptainer/) for more details.
 
@@ -47,7 +47,7 @@ apptainer pull aiida_vasp.sif oras://gricad-registry.univ-grenoble-alpes.fr/diam
 
 ## Step 2: Start an instance and access the container
 
-Once you have downloaded the image you want, you are ready to use it. We recommend that you start an Apptainer instance and then access the container using the `shell` command. 
+Once you have downloaded the image you want, you are ready to use it. We recommend that you start an Apptainer instance and then access the container using the `shell` command.
 
 ### Step by step method
 
@@ -182,7 +182,7 @@ verdi run path/to/your/workflow/run.py
 
 > Before starting a workflow, you must carefully check the Python script and configure the values for `{code_name}` and `{username}` correctly.
 
-## Step 5: Stop an instance 
+## Step 5: Stop an instance
 
 Once you're done with the Apptainer image, you need to stop the Apptainer instance. To do this, run the following command
 

@@ -27,15 +27,15 @@ Le logiciel prend en charge une variété de méthodes de calcul, telles que la 
 
 <h3 class="mb-1">Tutoriel</h3>
 
-{{< link-card title="Apprenez à utiliser cette image de conteneur" href="/documentation/by-container/quantum-espresso" icon="outline/package" class="mb-0" >}}
+{{< link-card title="Apprenez à utiliser cette image de conteneur" href="/documentation/by-container/quantum-espresso" icon="tabler-icons/outline/package" class="mb-0" >}}
 
 <h3 class="mb-1 mt-3">Documentation Quantum ESPRESSO</h3>
 
 {{< card-grid >}}
-{{< link-card title="Site officiel" href="https://www.quantum-espresso.org/" target="_blank" icon="outline/world-www" class="mb-0" >}}
-{{< link-card title="Documentation officielle" href="https://www.quantum-espresso.org/documentation/" target="_blank" icon="outline/book" class="mb-0" >}}
+{{< link-card title="Site officiel" href="https://www.quantum-espresso.org/" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
+{{< link-card title="Documentation officielle" href="https://www.quantum-espresso.org/documentation/" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
 {{< /card-grid >}}
 
 <h3 class="mb-1 mt-3">Exemples</h3>
 
-{{< link-card title="Téléchargez des fichiers d'entrée" href="/downloads/qe-tutorial-inputs.tar.gz" icon="outline/file-export" class="mb-0" >}}
+{{< link-card title="Téléchargez des fichiers d'entrée" href="/downloads/qe-tutorial-inputs.tar.gz" icon="tabler-icons/outline/file-export" class="mb-0" >}}

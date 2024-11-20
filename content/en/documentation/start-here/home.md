@@ -5,7 +5,7 @@ toc: false
 weight: 1
 ---
 
-{{< callout context="note" title="" icon="outline/info-circle" >}}
+{{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
 **If you have any problems using the tools on the platform or if you have any queries**, please follow the instructions on this [link](/en/documentation/use/ask-help/).
 {{< /callout >}}
 

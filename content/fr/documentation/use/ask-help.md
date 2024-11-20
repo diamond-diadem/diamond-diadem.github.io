@@ -3,7 +3,7 @@ title: Comment demander de l'aide ou donner un feedback  ?
 weight: 6
 ---
 
-{{< callout context="note" title="" icon="outline/info-circle" >}}
+{{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
 
 En préalable de ces explications, il est nécessaire d'avoir créé un compte sur la plateforme [Gricad gitlab](https://gricad-gitlab.univ-grenoble-alpes.fr/). Cela vous permettra de créer des tickets et de pouvoir y répondre.
 

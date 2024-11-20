@@ -5,7 +5,7 @@ weight: 3
 
 <div align="justify">
 
-{{< callout context="note" title="" icon="outline/info-circle" >}}
+{{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
 
 This tutorial briefly describes the installation process for the [Guix](https://guix.gnu.org/) package management tool. It is largely based on the [official installation instructions](https://guix.gnu.org/manual/fr/html_node/Installation-binaire.html), and we invite you to consult those resources for more details.
 
@@ -15,7 +15,7 @@ The package software manager runs on any modern Linux distribution; it does not 
 
 ### Installation instructions
 
-We recommend using the bash script provided by Guix, which automates all stages of the installation (download, installation and configuration). You will need to have the `wget` and `tar` packages installed on your machine. Also note that you will need super-user privileges to run the bash script. 
+We recommend using the bash script provided by Guix, which automates all stages of the installation (download, installation and configuration). You will need to have the `wget` and `tar` packages installed on your machine. Also note that you will need super-user privileges to run the bash script.
 
 The commands to run to install Ubuntu packages are as follows:
 
@@ -23,7 +23,7 @@ The commands to run to install Ubuntu packages are as follows:
 cd /tmp # to move to a temporary folder
 wget https://git.savannah.gnu.org/cgit/guix.git/plain/etc/guix-install.sh # to download the installation bash script
 chmod +x guix-install.sh # to run the bash script
-sudo ./guix-install.sh # to run the bash script 
+sudo ./guix-install.sh # to run the bash script
 ```
 
 Once the installation is complete, we recommend running the `guix pull` command to update the list of Guix packages from the main [GNU Guix](https://hpc.guix.info/browse) channel. Note that this command takes some time to run. To use the updated Guix daemon, you will then need to run the following lines:

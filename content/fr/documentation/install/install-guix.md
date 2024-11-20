@@ -5,7 +5,7 @@ weight: 3
 
 <div align="justify">
 
-{{< callout context="note" title="" icon="outline/info-circle" >}}
+{{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
 
 Ce tutoriel présente succinctement le processus d'installation l'outil de gestion de paquets [Guix](https://guix.gnu.org/). Il est d'ailleurs largement basé sur les [instructions d'installations officielles](https://guix.gnu.org/manual/fr/html_node/Installation-binaire.html), et nous vous invitons à consulter ces ressources pour plus de détails.
 
