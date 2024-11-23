@@ -12,10 +12,6 @@
 @import "diamond/custom-cards";
 
 
-// img {
-//     max-width: 100%;
-// }
-
 @include color-mode(dark) {
     .dropdown-menu {
         background-color: $body-bg-dark;
