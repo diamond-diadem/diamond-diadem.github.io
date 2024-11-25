@@ -1,7 +1,7 @@
 ---
 title: "Assemblée Générale 2024 du PEPR DIADEM"
 description: ""
-summary: "Le PEPR DIADEM est ravi de vous inviter à son Assemblée Générale 2024 qui aura lieu du 13 au 15 novembre 2024 sur la campus de la Doua à Lyon."
+summary: "A eu lieu sur le campus de la Doua à Lyon. Récupérez la présentation et les posters des différents work packages du projet DIAMOND !"
 eventDate: "13-15 Novembre 2024"
 backgroundImage: "/images/diadem-background.jpg"
 backgroundOpacity: 0.25
@@ -22,11 +22,11 @@ seo:
   noindex: false # false (default) or true
 ---
 
-<div align="center"><h3>
+<h3 align="center">
 
-Le <a href="https://pepr-diadem.fr" target="_blank">PEPR DIADEM</a> est ravi de vous inviter à son Assemblée Générale 2024 qui aura lieu du 13 au 15 novembre 2024 sur la campus de la Doua à Lyon.
+L'Assemblée Générale du <a href="https://pepr-diadem.fr" target="_blank">PEPR DIADEM</a> a eu lieu du 13 au 15 novembre 2024 sur le campus de la Doua à Lyon.
 
-</h3></div>
+</h3>
 
 <br/>
 
@@ -36,16 +36,26 @@ Le <a href="https://pepr-diadem.fr" target="_blank">PEPR DIADEM</a> est ravi de 
 
 <div align="justify">
 
-Lors de ces journées, le PEPR DIADEM aura l’honneur de vous présenter les avancées du programme et les faits marquants de ses projets. A cette occasion sera également organisé le lancement des 17 nouveaux projets financés dans le cadre de l’Appel à Projets 2023.
+Lors de ces journées, le PEPR DIADEM a eu l’honneur de présenter les avancées du programme et les faits marquants de ses projets. A cette occasion sera également organisé le lancement des 17 nouveaux projets financés dans le cadre de l’Appel à Projets 2023.
 
 </div>
 
-L’Assemblée Générale s’organisera autour de deux évènements :
+<h4>Les coordinateurs des 3 work packages (WPs) ont présenté aux participants un état d'avancement du projet DIAMOND</h4>
 
-- **13 novembre à l’amphithéâtre Capelle** sera une après-midi ouverte à tous.
-- **14 et 15 novembre, au Double Mixte**, seront des journées réservées aux participants des projets ciblés et des projets financés à l’AAP 2023 du PEPR DIADEM.
+<h5>Consultez ou téléchargez leurs slides</h5>
 
-<p align="center"><a class="btn btn-primary rounded-pill mt-2" href="https://journee-diadem.sciencesconf.org/" role="button">Programme et Inscriptions</a></p>
+- <a href="/downloads/posters-slides-ag2024-diadem/Presentation-DIAMOND-WP1-14-11-AG-2024.pdf">WP1 : Codes et Workflows</a>
+- WP2 : Bases de données
+- WP3 : Démonstrateur Potentiel Machine Learning
+
+<h4>Les ingénieurs des 3 work packages (WPs) ont participé aux sessions posters</h4>
+
+<h5>Consultez ou téléchargez leurs posters</h5>
+
+- <a href="/downloads/posters-slides-ag2024-diadem/Poster-WP1-AG2024.pdf">WP1 : Codes et Workflows</a>
+  - <a href="/downloads/posters-slides-ag2024-diadem/Poster-MOFLearning-AG2024.pdf">Démonstrateur : workflow MOFLearning</a>
+- <a href="/downloads/posters-slides-ag2024-diadem/Poster-WP2-AG2024.pdf">WP2 : Bases de données</a>
+- <a href="/downloads/posters-slides-ag2024-diadem/Poster-WP3-AG2024.pdf">WP3 : Démonstrateur Potentiel Machine Learning</a>
 
 <br/>
 
