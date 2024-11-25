@@ -22,11 +22,11 @@ seo:
   noindex: false # false (default) or true
 ---
 
-<div align="center"><h3>
+<h3 align="center">
 
-<a href="https://pepr-diadem.fr" target="_blank">PEPR DIADEM</a> is pleased to invite you to its 2024 General Assembly, which will take place from November 13 to 15, 2024, at the Doua campus in Lyon.
+2024 <a href="https://pepr-diadem.fr" target="_blank">PEPR DIADEM</a> General Assembly took place from November 13 to 15, 2024, at the Doua campus in Lyon.
 
-</h3></div>
+</h3>
 
 <br/>
 
@@ -36,16 +36,26 @@ seo:
 
 <div align="justify">
 
-During these days, PEPR DIADEM will have the honor of presenting the program's progress and key highlights of its projects. On this occasion, the launch of 17 new projects funded under the 2023 Call for Projects will also be organized.
+During these days, PEPR DIADEM has had the honor of presenting the program's progress and key highlights of its projects. On this occasion, the launch of 17 new projects funded under the 2023 Call for Projects has also been organized.
 
 </div>
 
-The General Assembly will be organized around two events:
+<h4>The coordinators of the 3 work packages (WPs) presented the progress of the DIAMOND project to the participants</h4>
 
-- **November 13 at the Capelle auditorium** will be an afternoon open to all.
-- **November 14 and 15 at the Double Mixte** will be days reserved for participants in targeted projects and projects funded by the 2023 PEPR DIADEM Call for Projects.
+<h5>View or download their slides</h5>
 
-<p align="center"><a class="btn btn-primary rounded-pill mt-2" href="https://journee-diadem.sciencesconf.org/" role="button">Program and Registration</a></p>
+- <a href="/downloads/posters-slides-ag2024-diadem/Presentation-DIAMOND-WP1-14-11-AG-2024.pdf">WP1: Codes and Workflows</a>
+- WP2: Databases
+- WP3: Machine Learning Potential Demonstrator
+
+<h4>The engineers of the 3 work packages (WPs) participated in the poster sessions</h4>
+
+<h5>View or download their posters</h5>
+
+- <a href="/downloads/posters-slides-ag2024-diadem/Poster-WP1-AG2024.pdf">WP1: Codes and Workflows</a>
+  - <a href="/downloads/posters-slides-ag2024-diadem/Poster-MOFLearning-AG2024.pdf">Demonstrator: MOFLearning Workflow</a>
+- <a href="/downloads/posters-slides-ag2024-diadem/Poster-WP2-AG2024.pdf">WP2: Databases</a>
+- <a href="/downloads/posters-slides-ag2024-diadem/Poster-WP3-AG2024.pdf">WP3: Machine Learning Potential Demonstrator</a>
 
 <br/>
 
