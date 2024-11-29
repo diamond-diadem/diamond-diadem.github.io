@@ -41,9 +41,6 @@ Pendant l'été 2023, la communauté des matériaux a été sondée via LimeSurv
   icon="tabler-icons/outline/settings-question"
 >}}
 
-<!-- - <h4><a href="/documentation/install/install-apptainer/">Installez Apptainer</a></h4>
-- <h4><a href="/documentation/use/apptainer-image/">Apprenez comment utiliser une image de conteneur</a></h4> -->
-
 <h3><u>CODES DISPONIBLES</u></h3>
 
 <table>
@@ -101,6 +98,10 @@ Pendant l'été 2023, la communauté des matériaux a été sondée via LimeSurv
             <td><a href="/codes/scientific-computing/raspa2/"><i class="icon-raspa2"></i>RASPA2</a></td>
             <td></td>
         </tr>
+        <tr>
+            <td><a href="/codes/scientific-computing/opendis/"><i class="icon-opendis"></i>Open-DIS</a></td>
+            <td></td>
+        </tr>
     </tbody>
 </table>
 
@@ -121,6 +122,7 @@ Pendant l'été 2023, la communauté des matériaux a été sondée via LimeSurv
         <option value="option9">Gmsh</option>
         <option value="option10">Zeo++</option>
         <option value="option11">RASPA2</option>
+        <option value="option12">Open-DIS</option>
     </optgroup>
     <optgroup label="Visualisation">
         <option value="optiona">Ovito</option>
@@ -204,6 +206,13 @@ apptainer pull zeoplusplus.sif oras://gricad-registry.univ-grenoble-alpes.fr/dia
 
 ```bash
 apptainer pull raspa2.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/raspa2.sif:latest
+```
+
+</div>
+<div id="content-option12" class="hidden">
+
+```bash
+apptainer pull opendis.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/opendis-from-guix.sif:latest
 ```
 
 </div>
