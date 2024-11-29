@@ -139,4 +139,16 @@
   @extend .custom-icon;
 }
 
+.icon-opendis {
+  background-image: url(/images/opendis/opendis-icon-light.png);
+  @extend .custom-icon;
+}
+@include color-mode(dark) {
+  .icon-opendis {
+    background-image: url(/images/opendis/opendis-icon-dark.png);
+  }
+}
+
+
+
 // // // END custom icons END // // //

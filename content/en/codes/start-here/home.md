@@ -98,6 +98,10 @@ In the summer of 2023, the materials community was surveyed via LimeSurvey to id
             <td><a href="/en/codes/scientific-computing/raspa2/"><i class="icon-raspa2"></i>RASPA2</a></td>
             <td></td>
         </tr>
+        <tr>
+            <td><a href="/en/codes/scientific-computing/opendis/"><i class="icon-opendis"></i>Open-DIS</a></td>
+            <td></td>
+        </tr>
     </tbody>
 </table>
 
@@ -119,6 +123,7 @@ In the summer of 2023, the materials community was surveyed via LimeSurvey to id
         <option value="option9">Gmsh</option>
         <option value="option10">Zeo++</option>
         <option value="option11">RASPA2</option>
+        <option value="option12">Open-DIS</option>
     </optgroup>
     <optgroup label="Visualisation">
         <option value="optiona">Ovito</option>
@@ -202,6 +207,13 @@ apptainer pull zeoplusplus.sif oras://gricad-registry.univ-grenoble-alpes.fr/dia
 
 ```bash
 apptainer pull raspa2.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/raspa2.sif:latest
+```
+
+</div>
+<div id="content-option12" class="hidden">
+
+```bash
+apptainer pull opendis.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/opendis-from-guix.sif:latest
 ```
 
 </div>

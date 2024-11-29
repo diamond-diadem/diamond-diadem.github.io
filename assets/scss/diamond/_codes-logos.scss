@@ -141,4 +141,14 @@
     width: 50%;
 }
 
+.logo-opendis {
+    content: url(/images/opendis/opendis-logo-light.png);
+    width: 50%;
+}
+@include color-mode(dark) {
+    .logo-opendis {
+        content: url(/images/opendis/opendis-logo-dark.png);
+    }
+}
+
 // // // END Codes pages top logos END // // //

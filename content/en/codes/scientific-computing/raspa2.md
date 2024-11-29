@@ -31,4 +31,4 @@ apptainer pull raspa2.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/
 
 - #### <a href="https://github.com/iRASPA/RASPA2/tree/master/Docs" target="_blank">Official documentation</a>
 
-- #### Examples: input files _(to be added)
+- #### Examples: input files _(to be added)_
