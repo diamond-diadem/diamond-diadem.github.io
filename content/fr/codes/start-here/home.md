@@ -72,7 +72,7 @@ Pendant l'été 2023, la communauté des matériaux a été sondée via LimeSurv
         </tr>
         <tr>
             <td><a href="/codes/scientific-computing/freefem/"><i class="icon-freefem"></i>FreeFEM</a></td>
-            <td></td>
+            <td><a href="/codes/visualisation/xcrysden/"><i class="icon-xcrysden"></i>XCrySDen</a></td>
         </tr>
         <tr>
             <td><a href="/codes/scientific-computing/opencalphad/"><i class="icon-opencalphad"></i>OpenCalphad</a></td>
@@ -129,6 +129,7 @@ Pendant l'été 2023, la communauté des matériaux a été sondée via LimeSurv
         <option value="optionb">ParaView</option>
         <option value="optionc">Vesta</option>
         <option value="optiond">VMD</option>
+        <option value="optione">XCrySDen</option>
     </optgroup>
 </select>
 
@@ -241,6 +242,13 @@ apptainer pull vesta.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/a
 
 ```bash
 apptainer pull vmd.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/vmd.sif:latest
+```
+
+</div>
+<div id="content-optione" class="hidden">
+
+```bash
+apptainer pull xcrysden.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/xcrysden.sif:latest
 ```
 
 </div>

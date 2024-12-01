@@ -149,6 +149,14 @@
   }
 }
 
-
+.icon-xcrysden {
+  background-image: url(/images/xcrysden/xcrysden-icon-light.png);
+  @extend .custom-icon
+}
+@include color-mode(dark) {
+  .icon-xcrysden {
+    background-image: url(/images/xcrysden/xcrysden-icon-dark.png);
+  }
+}
 
 // // // END custom icons END // // //

@@ -151,4 +151,14 @@
     }
 }
 
+.logo-xcrysden {
+    width: 100%;
+    content: url(/images/xcrysden/xcrysden-logo-light.png);
+}
+@include color-mode(dark) {
+    .logo-xcrysden {
+        content: url(/images/xcrysden/xcrysden-logo-dark.png);
+    }
+}
+
 // // // END Codes pages top logos END // // //
