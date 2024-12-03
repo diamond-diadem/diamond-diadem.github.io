@@ -161,4 +161,14 @@
     }
 }
 
+.logo-wannier90 {
+    width: 100%;
+    content: url(/images/wannier90/wannier90-logo-light.svg);
+}
+@include color-mode(dark) {
+    .logo-wannier90 {
+        content: url(/images/wannier90/wannier90-logo-dark.svg);
+    }
+}
+
 // // // END Codes pages top logos END // // //
