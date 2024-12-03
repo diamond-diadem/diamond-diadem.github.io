@@ -109,35 +109,44 @@ In the summer of 2023, the materials community was surveyed via LimeSurvey to id
     </tbody>
 </table>
 
-<h3>{{< inline-svg src="tabler-icons/outline/table-shortcut" class="svg-inline-shortcut">}}Shortcut: choose your code and retrieve it with Apptainer</h3>
+<h3 align="center" class="mb-5">{{< inline-svg src="tabler-icons/outline/table-shortcut" class="svg-inline-shortcut">}}Shortcut: choose your code and retrieve it with Apptainer</h3>
 
-<select class="form-select" id="options">
-    <optgroup>
-        <option value="option0">--- Select ---</option>
-    </optgroup>
-    <optgroup label="Scientific Computing">
-        <option value="option1">LAMMPS</option>
-        <option value="option2">Quantum ESPRESSO</option>
-        <option value="option3">Abinit</option>
-        <option value="option4">Z-set</option>
-        <option value="option5">FreeFEM</option>
-        <option value="option6">OpenCalphad</option>
-        <option value="option7">Neper</option>
-        <option value="option8">PLUMED</option>
-        <option value="option9">Gmsh</option>
-        <option value="option10">Zeo++</option>
-        <option value="option11">RASPA2</option>
-        <option value="option12">Open-DIS</option>
-        <option value="option13">Wannier90</option>
-    </optgroup>
-    <optgroup label="Visualisation">
-        <option value="optiona">Ovito</option>
-        <option value="optionb">ParaView</option>
-        <option value="optionc">Vesta</option>
-        <option value="optiond">VMD</option>
-        <option value="optione">XCrySDen</option>
-    </optgroup>
-</select>
+<div class="row">
+    <div class="col" align="left">
+        <label for="options1"><b>Scientific Computing</b></label>
+        <select class="form-select select-options" style="width: 100%;" id="options1">
+            <option value="option0" disabled="disabled" selected="selected" hidden="hidden">---Select---</option>
+            <optgroup label="Calcul Scientifique">
+                <option value="option1">LAMMPS</option>
+                <option value="option2">Quantum ESPRESSO</option>
+                <option value="option3">Abinit</option>
+                <option value="option4">Z-set</option>
+                <option value="option5">FreeFEM</option>
+                <option value="option6">OpenCalphad</option>
+                <option value="option7">Neper</option>
+                <option value="option8">PLUMED</option>
+                <option value="option9">Gmsh</option>
+                <option value="option10">Zeo++</option>
+                <option value="option11">RASPA2</option>
+                <option value="option12">Open-DIS</option>
+                <option value="option13">Wannier90</option>
+            </optgroup>
+        </select>
+    </div>
+    <div class="col" align="right">
+        <label for="options2"><b>Visualisation</b></label>
+        <select class="form-select select-options" style="width: 100%;"id="options2">
+            <option value="option0" disabled="disabled" selected="selected" hidden="hidden">---Select---</option>
+            <optgroup label="Visualisation">
+                <option value="optiona">Ovito</option>
+                <option value="optionb">ParaView</option>
+                <option value="optionc">Vesta</option>
+                <option value="optiond">VMD</option>
+                <option value="optione">XCrySDen</option>
+            </optgroup>
+        </select>
+    </div>
+</div>
 
 <div id="content-option1" class="hidden">
 
