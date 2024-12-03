@@ -102,6 +102,10 @@ In the summer of 2023, the materials community was surveyed via LimeSurvey to id
             <td><a href="/en/codes/scientific-computing/opendis/"><i class="icon-opendis"></i>Open-DIS</a></td>
             <td></td>
         </tr>
+        <tr>
+            <td><a href="/en/codes/scientific-computing/wannier90/"><i class="icon-wannier90"></i>Wannier90</a></td>
+            <td></td>
+        </tr>
     </tbody>
 </table>
 
@@ -124,6 +128,7 @@ In the summer of 2023, the materials community was surveyed via LimeSurvey to id
         <option value="option10">Zeo++</option>
         <option value="option11">RASPA2</option>
         <option value="option12">Open-DIS</option>
+        <option value="option13">Wannier90</option>
     </optgroup>
     <optgroup label="Visualisation">
         <option value="optiona">Ovito</option>
@@ -215,6 +220,13 @@ apptainer pull raspa2.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/
 
 ```bash
 apptainer pull opendis.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/opendis-from-guix.sif:latest
+```
+
+</div>
+<div id="content-option13" class="hidden">
+
+```bash
+apptainer pull wannnier90.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/wannier90-from-guix.sif:latest
 ```
 
 </div>
