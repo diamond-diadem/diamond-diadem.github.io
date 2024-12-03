@@ -151,11 +151,21 @@
 
 .icon-xcrysden {
   background-image: url(/images/xcrysden/xcrysden-icon-light.png);
-  @extend .custom-icon
+  @extend .custom-icon;
 }
 @include color-mode(dark) {
   .icon-xcrysden {
     background-image: url(/images/xcrysden/xcrysden-icon-dark.png);
+  }
+}
+
+.icon-wannier90 {
+  background-image: url(/images/wannier90/wannier90-icon-light.png);
+  @extend .custom-icon;
+}
+@include color-mode(dark) {
+  .icon-wannier90 {
+    background-image: url(/images/wannier90/wannier90-icon-dark.png);
   }
 }
 
