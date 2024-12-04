@@ -854,4 +854,13 @@ label {
     .container-select-1 {
         margin-bottom: 1rem;
     }
+    .container-pulls-large {
+        display: none;
+    }
+}
+
+@include media-breakpoint-up(sm) {
+    .container-pulls-small {
+        display: none;
+    }
 }
