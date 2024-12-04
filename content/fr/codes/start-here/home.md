@@ -132,7 +132,100 @@ Pendant l'été 2023, la communauté des matériaux a été sondée via LimeSurv
             </optgroup>
         </select>
     </div>
-    <div class="col-6 col-diamond container-select container-select-2 container-rtl" align="right">
+
+<div class="container-pulls-small">
+<div id="content-option1" class="hidden">
+
+```bash
+apptainer pull lammps.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/lammps.sif:latest
+```
+
+</div>
+<div id="content-option2" class="hidden">
+
+```bash
+apptainer pull quantum-espresso.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/quantum-espresso.sif:latest
+```
+
+</div>
+<div id="content-option3" class="hidden">
+
+```bash
+apptainer pull abinit.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/abinit.sif:latest
+```
+
+</div>
+<div id="content-option4" class="hidden">
+
+```bash
+apptainer pull z-set.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/z-set.sif:latest
+```
+
+</div>
+<div id="content-option5" class="hidden">
+
+```bash
+apptainer pull freefemplusplus.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/freefemplusplus.sif:latest
+```
+
+</div>
+<div id="content-option6" class="hidden">
+
+```bash
+apptainer pull opencalphad.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/opencalphad.sif:latest
+```
+
+</div>
+<div id="content-option7" class="hidden">
+
+```bash
+apptainer pull neper.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/neper.sif:latest
+```
+
+</div>
+<div id="content-option8" class="hidden">
+
+```bash
+apptainer pull plumed.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/plumed.sif:latest
+```
+
+</div>
+<div id="content-option9" class="hidden">
+
+```bash
+apptainer pull gmsh.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/gmsh.sif:latest
+```
+
+</div>
+<div id="content-option10" class="hidden">
+
+```bash
+apptainer pull zeoplusplus.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/zeoplusplus.sif:latest
+```
+
+</div>
+<div id="content-option11" class="hidden">
+
+```bash
+apptainer pull raspa2.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/raspa2.sif:latest
+```
+
+</div>
+<div id="content-option12" class="hidden">
+
+```bash
+apptainer pull opendis.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/opendis-from-guix.sif:latest
+```
+
+</div>
+<div id="content-option13" class="hidden">
+
+```bash
+apptainer pull wannnier90.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/wannier90-from-guix.sif:latest
+```
+
+</div>
+<div class="col-6 col-diamond container-select container-select-2 container-rtl" align="right">
         <label for="options2" style="font-size: 130%;"><b>Visualisation</b></label>
         <select class="form-select select-options" align="right" id="options2">
             <option value="option0" disabled="disabled" selected="selected" hidden="hidden">--- Sélectionnez ---</option>
@@ -144,42 +237,47 @@ Pendant l'été 2023, la communauté des matériaux a été sondée via LimeSurv
                 <option value="optione">XCrySDen</option>
             </optgroup>
         </select>
-    </div>
+</div>
+<div class="container-pulls-small">
+<div id="content-optiona" class="hidden">
+
+```bash
+apptainer pull ovito.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/ovito.sif:latest
+```
+
+</div>
+<div id="content-optionb" class="hidden">
+
+```bash
+apptainer pull paraview.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/paraview.sif:latest
+```
+
+</div>
+<div id="content-optionc" class="hidden">
+
+```bash
+apptainer pull vesta.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/vesta.sif:latest
+```
+
+</div>
+<div id="content-optiond" class="hidden">
+
+```bash
+apptainer pull vmd.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/vmd.sif:latest
+```
+
+</div>
+<div id="content-optione" class="hidden">
+
+```bash
+apptainer pull xcrysden.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/xcrysden.sif:latest
+```
+
+</div>
+</div>
 </div>
 
-<!-- <div class="container-rtl">
-    <select class="form-select" dir="rtl">
-        <option>Coucou</option>
-    </select>
-</div> -->
-<!-- <select class="form-select" id="options">
-    <optgroup>
-        <option value="option0">-- Sélectionnez --</option>
-    </optgroup>
-    <optgroup label="Calcul Scientifique">
-        <option value="option1">LAMMPS</option>
-        <option value="option2">Quantum ESPRESSO</option>
-        <option value="option3">Abinit</option>
-        <option value="option4">Z-set</option>
-        <option value="option5">FreeFEM</option>
-        <option value="option6">OpenCalphad</option>
-        <option value="option7">Neper</option>
-        <option value="option8">PLUMED</option>
-        <option value="option9">Gmsh</option>
-        <option value="option10">Zeo++</option>
-        <option value="option11">RASPA2</option>
-        <option value="option12">Open-DIS</option>
-        <option value="option13">Wannier90</option>
-    </optgroup>
-    <optgroup label="Visualisation">
-        <option value="optiona">Ovito</option>
-        <option value="optionb">ParaView</option>
-        <option value="optionc">Vesta</option>
-        <option value="optiond">VMD</option>
-        <option value="optione">XCrySDen</option>
-    </optgroup>
-</select> -->
-
+<div class="container-pulls-large">
 <div id="content-option1" class="hidden">
 
 ```bash
@@ -305,4 +403,5 @@ apptainer pull vmd.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/app
 apptainer pull xcrysden.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/xcrysden.sif:latest
 ```
 
+</div>
 </div>
