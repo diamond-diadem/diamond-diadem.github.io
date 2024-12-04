@@ -1,4 +1,6 @@
 // Put your custom SCSS code here
+// @import "bootstrap/variables-dark";
+
 @import "diamond/logo-diamond";
 @import "diamond/responsive-about";
 @import "diamond/custom-icons";
@@ -775,9 +777,9 @@ hr {
     display: none;
 }
 
-.form-select {
-    width: auto;
-}
+// .form-select {
+//     width: auto;
+// }
 
 // // // <<< <select> in codes home page <<< // // //
 
@@ -818,4 +820,38 @@ hr {
 
 .contact-mailto {
     overflow-wrap: anywhere;
+}
+
+.container-rtl {
+    text-align: right;
+}
+
+.container-rtl select {
+    direction: rtl;
+    background-position: left 0.75rem center;
+    text-align: right;
+    padding-right: 0.75rem;
+
+}
+
+.container-rtl select option {
+    direction: rtl;
+    text-align: right;
+}
+
+label {
+    white-space: nowrap;
+}
+
+.col-6.col-diamond {
+    width: 50% !important;
+}
+
+@include media-breakpoint-down(sm) {
+    .col-6.col-diamond {
+        width: 100% !important;
+    }
+    .container-select-1 {
+        margin-bottom: 1rem;
+    }
 }
