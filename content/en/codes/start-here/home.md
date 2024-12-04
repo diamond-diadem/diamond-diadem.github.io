@@ -112,11 +112,11 @@ In the summer of 2023, the materials community was surveyed via LimeSurvey to id
 <h3 align="center" class="mb-5">{{< inline-svg src="tabler-icons/outline/table-shortcut" class="svg-inline-shortcut">}}Shortcut: choose your code and retrieve it with Apptainer</h3>
 
 <div class="row">
-    <div class="col" align="left">
-        <label for="options1"><b>Scientific Computing</b></label>
-        <select class="form-select select-options" style="width: 100%;" id="options1">
-            <option value="option0" disabled="disabled" selected="selected" hidden="hidden">---Select---</option>
-            <optgroup label="Calcul Scientifique">
+    <div class="col-6 col-diamond container-select container-select-1" align="left">
+        <label for="options1" style="font-size: larger;"><b>Scientific Computing</b></label>
+        <select class="form-select select-options" align="left" id="options1">
+            <option value="option0" disabled="disabled" selected="selected" hidden="hidden">--- Select a code ---</option>
+            <optgroup label="Scientific Computing">
                 <option value="option1">LAMMPS</option>
                 <option value="option2">Quantum ESPRESSO</option>
                 <option value="option3">Abinit</option>
@@ -133,10 +133,10 @@ In the summer of 2023, the materials community was surveyed via LimeSurvey to id
             </optgroup>
         </select>
     </div>
-    <div class="col" align="right">
-        <label for="options2"><b>Visualisation</b></label>
-        <select class="form-select select-options" style="width: 100%;"id="options2">
-            <option value="option0" disabled="disabled" selected="selected" hidden="hidden">---Select---</option>
+    <div class="col-6 col-diamond container-select container-select-2 container-rtl" align="right">
+        <label for="options2" style="font-size: larger;"><b>Visualisation</b></label>
+        <select class="form-select select-options" align="right" id="options2">
+            <option value="option0" disabled="disabled" selected="selected" hidden="hidden">--- Select a code ---</option>
             <optgroup label="Visualisation">
                 <option value="optiona">Ovito</option>
                 <option value="optionb">ParaView</option>
