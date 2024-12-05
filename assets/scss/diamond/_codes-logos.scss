@@ -171,4 +171,20 @@
     }
 }
 
+
+// // NWChem logo // //
+
+.logo-nwchem {
+    width: 100%;
+    content: url(/images/nwchem/nwchem-logo-light.png);
+}
+@include color-mode(dark) {
+    .logo-nwchem {
+        content: url(/images/nwchem/nwchem-logo-dark.png);
+    }
+}
+
+// // END NWChem logo END // //
+
+
 // // // END Codes pages top logos END // // //
