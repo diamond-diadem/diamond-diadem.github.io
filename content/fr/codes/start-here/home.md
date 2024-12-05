@@ -114,6 +114,10 @@ Pendant l'été 2023, la communauté des matériaux a été sondée via LimeSurv
             <td><a href="/codes/scientific-computing/fenics/"><i class="icon-fenics"></i>FEniCS</a></td>
             <td></td>
         </tr>
+        <tr>
+            <td><a href="/codes/scientific-computing/cp2k/"><i class="icon-cp2k"></i>CP2K</a></td>
+            <td></td>
+        </tr>
     </tbody>
 </table>
 
@@ -141,6 +145,7 @@ Pendant l'été 2023, la communauté des matériaux a été sondée via LimeSurv
                 <option value="option13A">Wannier90</option>
                 <option value="option14A">NWChem</option>
                 <option value="option15A">FEniCS</option>
+                <option value="option16A">CP2K</option>
             </optgroup>
         </select>
     </div>
@@ -264,6 +269,16 @@ apptainer pull fenics.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/
 ```
 
 </div>
+<div id="content-option16A" class="hidden">
+
+```bash
+apptainer pull cp2k.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/cp2k-from-guix.sif:latest
+```
+
+</div>
+
+<!--  -->
+
 <div id="content-optionaA" class="hidden">
 
 ```bash
@@ -324,6 +339,7 @@ apptainer pull xcrysden.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamon
             <option value="option13B">Wannier90</option>
             <option value="option14B">NWChem</option>
             <option value="option15B">FEniCS</option>
+            <option value="option16B">CP2K</option>
         </optgroup>
     </select>
 </div>
@@ -432,6 +448,13 @@ apptainer pull nwchem.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/
 
 ```bash
 apptainer pull fenics.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/fenics-from-guix.sif:latest
+```
+
+</div>
+<div id="content-option16B" style="margin-top: -1rem;" class="hidden">
+
+```bash
+apptainer pull cp2k.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/cp2k-from-guix.sif:latest
 ```
 
 </div>

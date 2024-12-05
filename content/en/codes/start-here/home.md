@@ -114,6 +114,10 @@ In the summer of 2023, the materials community was surveyed via LimeSurvey to id
             <td><a href="/en/codes/scientific-computing/fenics/"><i class="icon-fenics"></i>FEniCS</a></td>
             <td></td>
         </tr>
+        <tr>
+            <td><a href="/en/codes/scientific-computing/cp2k/"><i class="icon-cp2k"></i>CP2K</a></td>
+            <td></td>
+        </tr>
     </tbody>
 </table>
 
@@ -142,6 +146,7 @@ In the summer of 2023, the materials community was surveyed via LimeSurvey to id
                 <option value="option13A">Wannier90</option>
                 <option value="option14A">NWChem</option>
                 <option value="option15A">FEniCS</option>
+                <option value="option16A">CP2K</option>
             </optgroup>
         </select>
     </div>
@@ -265,6 +270,13 @@ apptainer pull fenics.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/
 ```
 
 </div>
+<div id="content-option16A" class="hidden">
+
+```bash
+apptainer pull cp2k.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/cp2k-from-guix.sif:latest
+```
+
+</div>
 
 <!--  -->
 
@@ -328,6 +340,7 @@ apptainer pull xcrysden.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamon
             <option value="option13B">Wannier90</option>
             <option value="option14B">NWChem</option>
             <option value="option15B">FEniCS</option>
+            <option value="option16B">CP2K</option>
         </optgroup>
     </select>
 </div>
@@ -439,7 +452,13 @@ apptainer pull fenics.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/
 ```
 
 </div>
+<div id="content-option16B" style="margin-top: -1rem;" class="hidden">
 
+```bash
+apptainer pull cp2k.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/cp2k-from-guix.sif:latest
+```
+
+</div>
 
 <div class="col-6 col-diamond container-select container-select-2 container-rtl" align="right">
     <label for="options2" style="font-size: larger;"><b>Visualisation</b></label>
