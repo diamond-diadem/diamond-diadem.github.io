@@ -110,6 +110,10 @@ In the summer of 2023, the materials community was surveyed via LimeSurvey to id
             <td><a href="/en/codes/scientific-computing/nwchem/"><i class="icon-nwchem"></i>NWChem</a></td>
             <td></td>
         </tr>
+        <tr>
+            <td><a href="/en/codes/scientific-computing/fenics/"><i class="icon-fenics"></i>FEniCS</a></td>
+            <td></td>
+        </tr>
     </tbody>
 </table>
 
@@ -137,6 +141,7 @@ In the summer of 2023, the materials community was surveyed via LimeSurvey to id
                 <option value="option12A">Open-DIS</option>
                 <option value="option13A">Wannier90</option>
                 <option value="option14A">NWChem</option>
+                <option value="option15A">FEniCS</option>
             </optgroup>
         </select>
     </div>
@@ -253,6 +258,16 @@ apptainer pull nwchem.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/
 ```
 
 </div>
+<div id="content-option15A" class="hidden">
+
+```bash
+apptainer pull fenics.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/fenics-from-guix.sif:latest
+```
+
+</div>
+
+<!--  -->
+
 <div id="content-optionaA" class="hidden">
 
 ```bash
@@ -312,6 +327,7 @@ apptainer pull xcrysden.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamon
             <option value="option12B">Open-DIS</option>
             <option value="option13B">Wannier90</option>
             <option value="option14B">NWChem</option>
+            <option value="option15B">FEniCS</option>
         </optgroup>
     </select>
 </div>
@@ -416,6 +432,14 @@ apptainer pull nwchem.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/
 ```
 
 </div>
+<div id="content-option15B" style="margin-top: -1rem;" class="hidden">
+
+```bash
+apptainer pull fenics.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/fenics-from-guix.sif:latest
+```
+
+</div>
+
 
 <div class="col-6 col-diamond container-select container-select-2 container-rtl" align="right">
     <label for="options2" style="font-size: larger;"><b>Visualisation</b></label>
