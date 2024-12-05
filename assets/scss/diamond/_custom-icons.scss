@@ -169,4 +169,9 @@
   }
 }
 
+.icon-nwchem {
+  background-image: url(/images/nwchem/nwchem-icon.png);
+  @extend .custom-icon;
+}
+
 // // // END custom icons END // // //

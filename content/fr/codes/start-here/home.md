@@ -106,6 +106,10 @@ Pendant l'été 2023, la communauté des matériaux a été sondée via LimeSurv
             <td><a href="/codes/scientific-computing/wannier90/"><i class="icon-wannier90"></i>Wannier90</a></td>
             <td></td>
         </tr>
+        <tr>
+            <td><a href="/codes/scientific-computing/nwchem/"><i class="icon-nwchem"></i>NWChem</a></td>
+            <td></td>
+        </tr>
     </tbody>
 </table>
 
@@ -131,6 +135,7 @@ Pendant l'été 2023, la communauté des matériaux a été sondée via LimeSurv
                 <option value="option11A">RASPA2</option>
                 <option value="option12A">Open-DIS</option>
                 <option value="option13A">Wannier90</option>
+                <option value="option14A">NWChem</option>
             </optgroup>
         </select>
     </div>
@@ -240,6 +245,13 @@ apptainer pull wannnier90.sif oras://gricad-registry.univ-grenoble-alpes.fr/diam
 ```
 
 </div>
+<div id="content-option14A" class="hidden">
+
+```bash
+apptainer pull nwchem.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/nwchem.sif:latest
+```
+
+</div>
 <div id="content-optionaA" class="hidden">
 
 ```bash
@@ -298,6 +310,7 @@ apptainer pull xcrysden.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamon
             <option value="option11B">RASPA2</option>
             <option value="option12B">Open-DIS</option>
             <option value="option13B">Wannier90</option>
+            <option value="option14B">NWChem</option>
         </optgroup>
     </select>
 </div>
@@ -392,6 +405,13 @@ apptainer pull opendis.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond
 
 ```bash
 apptainer pull wannnier90.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/wannier90-from-guix.sif:latest
+```
+
+</div>
+<div id="content-option14B" style="margin-top: -1rem;" class="hidden">
+
+```bash
+apptainer pull nwchem.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/nwchem.sif:latest
 ```
 
 </div>
