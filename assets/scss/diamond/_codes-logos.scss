@@ -142,14 +142,14 @@
 }
 
 .logo-opendis {
-    content: url(/images/opendis/opendis-logo-light.png);
-    width: 50%;
+    content: url(/images/opendis/opendis-logo.png);
+    width: 60%;
 }
-@include color-mode(dark) {
-    .logo-opendis {
-        content: url(/images/opendis/opendis-logo-dark.png);
-    }
-}
+// @include color-mode(dark) {
+//     .logo-opendis {
+//         content: url(/images/opendis/opendis-logo-dark.png);
+//     }
+// }
 
 .logo-xcrysden {
     width: 100%;

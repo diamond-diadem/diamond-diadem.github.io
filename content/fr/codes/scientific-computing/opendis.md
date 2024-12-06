@@ -1,14 +1,14 @@
 ---
-title: Open-DIS
+title: OpenDiS
 title_visible: false
-linkTitle: Open-DIS
+linkTitle: OpenDiS
 icon: icon-opendis
 toc: false
 weight: 12
 ---
 
-<a href="https://open-dis.org/" target="_blank" class="codes-pages-top-logo">
-  <img alt="Open-DIS" class="logo-opendis"/>
+<a href="https://opendis.github.io/OpenDiS/" target="_blank" class="codes-pages-top-logo">
+  <img alt="OpenDiS" class="logo-opendis"/>
 </a>
 
 ### Récupérez l'image Apptainer
@@ -19,9 +19,7 @@ apptainer pull opendis.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond
 
 <div align="justify">
 
-**Open-DIS** (Open Distributed Interactive Simulation) est une implémentation open-source du protocole Distributed Interactive Simulation (DIS). DIS est une norme IEEE (IEEE 1278) conçue pour les simulations en temps réel au niveau des plateformes dans des environnements virtuels, permettant l'interopérabilité entre différents systèmes. Open-DIS facilite l’échange de données de simulation sur des réseaux à l’aide d’unités de données protocolaires standardisées (PDUs).
-
-Le logiciel propose des outils, des bibliothèques et des bases de code dans plusieurs langages de programmation, notamment Java, C++ et C#, permettant aux développeurs de créer, analyser ou étendre des applications de simulation. Il prend en charge divers domaines de simulation tels que la défense, la formation, la réalité virtuelle et les jeux vidéo. Open-DIS suit une conception modulaire, le rendant adapté à une intégration avec des systèmes existants ou à une utilisation autonome pour le développement d'applications de simulation distribuée.
+**OpenDiS (Open Dislocation Simulator)** est un logiciel open-source conçu pour simuler et analyser les dislocations dans les matériaux cristallins à l'échelle atomique. Ce programme est utilisé principalement dans les domaines de la physique des matériaux et de la science des matériaux pour modéliser les interactions complexes entre les dislocations, les défauts cristallins, et les contraintes externes appliquées. Basé sur des méthodes numériques avancées, OpenDiS permet de visualiser les mouvements des dislocations et d'étudier leurs impacts sur les propriétés mécaniques et thermiques des matériaux. Le logiciel est compatible avec plusieurs plateformes et dispose d’une interface flexible pour l’intégration avec d’autres outils de simulation et d’analyse.
 
 </div>
 
@@ -29,11 +27,11 @@ Le logiciel propose des outils, des bibliothèques et des bases de code dans plu
 
 {{< link-card title="Contenu à venir" description="<i>Apprenez à utiliser cette image de conteneur</i>" href="#bottom" icon="tabler-icons/outline/package" disabled="true">}}
 
-<h3 class="mb-1 mt-3">Documentation Open-DIS</h3>
+<h3 class="mb-1 mt-3">Documentation OpenDiS</h3>
 
 {{< card-grid >}}
-{{< link-card title="Site officiel" href="https://open-dis.org/" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
-{{< link-card title="Documentation officielle" href="https://github.com/open-dis/dis-tutorial" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
+{{< link-card title="Site officiel" href="https://opendis.github.io/OpenDiS/" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
+{{< link-card title="Documentation officielle" href="https://opendis.github.io/OpenDiS/tutorials/index.html" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
 {{< /card-grid >}}
 
 <h3 class="mb-1 mt-3">Exemples</h3>

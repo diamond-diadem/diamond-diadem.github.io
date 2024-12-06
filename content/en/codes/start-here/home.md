@@ -99,7 +99,7 @@ In the summer of 2023, the materials community was surveyed via LimeSurvey to id
             <td></td>
         </tr>
         <tr>
-            <td><a href="/en/codes/scientific-computing/opendis/"><i class="icon-opendis"></i>Open-DIS</a></td>
+            <td><a href="/en/codes/scientific-computing/opendis/"><i class="icon-opendis"></i>OpenDiS</a></td>
             <td></td>
         </tr>
         <tr>
@@ -142,7 +142,7 @@ In the summer of 2023, the materials community was surveyed via LimeSurvey to id
                 <option value="option9A">Gmsh</option>
                 <option value="option10A">Zeo++</option>
                 <option value="option11A">RASPA2</option>
-                <option value="option12A">Open-DIS</option>
+                <option value="option12A">OpenDiS</option>
                 <option value="option13A">Wannier90</option>
                 <option value="option14A">NWChem</option>
                 <option value="option15A">FEniCS</option>
@@ -336,7 +336,7 @@ apptainer pull xcrysden.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamon
             <option value="option9B">Gmsh</option>
             <option value="option10B">Zeo++</option>
             <option value="option11B">RASPA2</option>
-            <option value="option12B">Open-DIS</option>
+            <option value="option12B">OpenDiS</option>
             <option value="option13B">Wannier90</option>
             <option value="option14B">NWChem</option>
             <option value="option15B">FEniCS</option>
