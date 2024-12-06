@@ -122,6 +122,10 @@ Pendant l'été 2023, la communauté des matériaux a été sondée via LimeSurv
             <td><a href="/codes/scientific-computing/n2p2/"><i class="icon-n2p2"></i>n2p2</a></td>
             <td></td>
         </tr>
+        <tr>
+            <td><a href="/codes/scientific-computing/dftbplus/"><i class="icon-dftbplus"></i>DFTB+</a></td>
+            <td></td>
+        </tr>
     </tbody>
 </table>
 
@@ -151,6 +155,7 @@ Pendant l'été 2023, la communauté des matériaux a été sondée via LimeSurv
                 <option value="option15A">FEniCS</option>
                 <option value="option16A">CP2K</option>
                 <option value="option17A">n2p2</option>
+                <option value="option18A">DFTB+</option>
             </optgroup>
         </select>
     </div>
@@ -288,7 +293,18 @@ apptainer pull n2p2.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/ap
 ```
 
 </div>
+<div id="content-option18A" class="hidden">
 
+```bash
+apptainer pull dftbplus.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/dftbplus.sif:latest
+```
+
+</div>
+
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
 <!--  -->
 
 <div id="content-optionaA" class="hidden">
@@ -353,6 +369,7 @@ apptainer pull xcrysden.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamon
             <option value="option15B">FEniCS</option>
             <option value="option16B">CP2K</option>
             <option value="option17B">n2p2</option>
+            <option value="option18B">DFTB+</option>
         </optgroup>
     </select>
 </div>
@@ -475,6 +492,13 @@ apptainer pull cp2k.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/ap
 
 ```bash
 apptainer pull n2p2.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/n2p2-from-guix.sif:latest
+```
+
+</div>
+<div id="content-option18B" style="margin-top: -1rem;" class="hidden">
+
+```bash
+apptainer pull dftbplus.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/dftbplus.sif:latest
 ```
 
 </div>
