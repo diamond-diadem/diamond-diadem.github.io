@@ -221,5 +221,18 @@
 }
 // // END n2p2 logo END // //
 
+// // dftbplus logo // //
+
+.logo-dftbplus {
+    width: 100%;
+    content: url(/images/codes/dftbplus/dftbplus-logo-light.png);
+}
+@include color-mode(dark) {
+    .logo-dftbplus {
+        content: url(/images/codes/dftbplus/dftbplus-logo-dark.png);
+    }
+}
+// // END dftbplus logo END // //
+
 
 // // // END Codes pages top logos END // // //
