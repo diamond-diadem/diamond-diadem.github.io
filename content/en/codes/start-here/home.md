@@ -118,6 +118,10 @@ In the summer of 2023, the materials community was surveyed via LimeSurvey to id
             <td><a href="/en/codes/scientific-computing/cp2k/"><i class="icon-cp2k"></i>CP2K</a></td>
             <td></td>
         </tr>
+        <tr>
+            <td><a href="/en/codes/scientific-computing/n2p2/"><i class="icon-n2p2"></i>n2p2</a></td>
+            <td></td>
+        </tr>
     </tbody>
 </table>
 
@@ -147,6 +151,7 @@ In the summer of 2023, the materials community was surveyed via LimeSurvey to id
                 <option value="option14A">NWChem</option>
                 <option value="option15A">FEniCS</option>
                 <option value="option16A">CP2K</option>
+                <option value="option17A">n2p2</option>
             </optgroup>
         </select>
     </div>
@@ -277,6 +282,13 @@ apptainer pull cp2k.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/ap
 ```
 
 </div>
+<div id="content-option17A" class="hidden">
+
+```bash
+apptainer pull n2p2.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/n2p2-from-guix.sif:latest
+```
+
+</div>
 
 <!--  -->
 
@@ -341,6 +353,7 @@ apptainer pull xcrysden.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamon
             <option value="option14B">NWChem</option>
             <option value="option15B">FEniCS</option>
             <option value="option16B">CP2K</option>
+            <option value="option17B">n2p2</option>
         </optgroup>
     </select>
 </div>
@@ -456,6 +469,13 @@ apptainer pull fenics.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/
 
 ```bash
 apptainer pull cp2k.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/cp2k-from-guix.sif:latest
+```
+
+</div>
+<div id="content-option17B" style="margin-top: -1rem;" class="hidden">
+
+```bash
+apptainer pull n2p2.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/n2p2-from-guix.sif:latest
 ```
 
 </div>

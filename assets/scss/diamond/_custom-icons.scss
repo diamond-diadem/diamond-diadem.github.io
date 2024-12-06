@@ -184,4 +184,14 @@
   @extend .custom-icon;
 }
 
+.icon-n2p2 {
+  background-image: url(/images/n2p2/n2p2-icon-light.png);
+  @extend .custom-icon;
+}
+@include color-mode(dark) {
+  .icon-n2p2 {
+    background-image: url(/images/n2p2/n2p2-icon-dark.png);
+  }
+}
+
 // // // END custom icons END // // //

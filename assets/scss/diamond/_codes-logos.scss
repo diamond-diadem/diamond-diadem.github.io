@@ -204,5 +204,22 @@
 
 // // END FEniCS logo END // //
 
+// // n2p2 logo // //
+
+.container-logo-n2p2:hover {
+    text-decoration: none;
+}
+
+.logo-n2p2 {
+    font-size: 800%;
+    color: black;
+}
+@include color-mode(dark) {
+    .logo-n2p2 {
+        color: white;
+    }
+}
+// // END n2p2 logo END // //
+
 
 // // // END Codes pages top logos END // // //
