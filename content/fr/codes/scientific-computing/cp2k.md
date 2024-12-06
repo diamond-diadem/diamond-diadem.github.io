@@ -28,7 +28,7 @@ Le logiciel prend en charge plusieurs méthodologies, notamment la théorie de l
 
 {{< link-card title="Contenu à venir" description="<i>Apprenez à utiliser cette image de conteneur</i>" href="#bottom" icon="tabler-icons/outline/package" disabled="true">}}
 
-<h3 class="mb-1 mt-3">Documentation FEniCS</h3>
+<h3 class="mb-1 mt-3">Documentation CP2K</h3>
 
 {{< card-grid >}}
 {{< link-card title="Site officiel" href="https://www.cp2k.org/" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
