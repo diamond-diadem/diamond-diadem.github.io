@@ -26,7 +26,7 @@ apptainer pull dftbplus.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamon
 
 {{< link-card title="Contenu à venir" description="<i>Apprenez à utiliser cette image de conteneur</i>" href="#bottom" icon="tabler-icons/outline/package" disabled="true">}}
 
-<h3 class="mb-1 mt-3">Documentation n2p2</h3>
+<h3 class="mb-1 mt-3">Documentation DFTB+</h3>
 
 {{< card-grid >}}
 {{< link-card title="Site officiel" href="https://www.dftbplus.org/" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
