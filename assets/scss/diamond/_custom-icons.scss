@@ -140,14 +140,14 @@
 }
 
 .icon-opendis {
-  background-image: url(/images/opendis/opendis-icon-light.png);
+  background-image: url(/images/opendis/opendis-icon.png);
   @extend .custom-icon;
 }
-@include color-mode(dark) {
-  .icon-opendis {
-    background-image: url(/images/opendis/opendis-icon-dark.png);
-  }
-}
+// @include color-mode(dark) {
+//   .icon-opendis {
+//     background-image: url(/images/opendis/opendis-icon-dark.png);
+//   }
+// }
 
 .icon-xcrysden {
   background-image: url(/images/xcrysden/xcrysden-icon-light.png);
