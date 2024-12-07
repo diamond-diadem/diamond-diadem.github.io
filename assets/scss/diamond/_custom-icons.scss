@@ -135,7 +135,7 @@
 }
 
 .icon-raspa2 {
-  background-image: url(/images/raspa2/icon-raspa2.png);
+  background-image: url(/images/codes/raspa2/raspa2-icon.png);
   @extend .custom-icon;
 }
 
@@ -185,12 +185,12 @@
 }
 
 .icon-n2p2 {
-  background-image: url(/images/n2p2/n2p2-icon-light.png);
+  background-image: url(/images/codes/n2p2/n2p2-icon-light.png);
   @extend .custom-icon;
 }
 @include color-mode(dark) {
   .icon-n2p2 {
-    background-image: url(/images/n2p2/n2p2-icon-dark.png);
+    background-image: url(/images/codes/n2p2/n2p2-icon-dark.png);
   }
 }
 
