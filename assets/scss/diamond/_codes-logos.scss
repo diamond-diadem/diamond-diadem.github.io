@@ -73,11 +73,11 @@
 
 .logo-abinit {
     width: 100%;
-    content: url(/images/abinit/abinit-logo-light.svg);
+    content: url(/images/codes/abinit/abinit-logo-light.svg);
 }
 @include color-mode(dark) {
     .logo-abinit {
-        content: url(/images/abinit/abinit-logo-dark.svg);
+        content: url(/images/codes/abinit/abinit-logo-dark.svg);
     }
 }
 

@@ -59,13 +59,13 @@
 }
 
 .icon-abinit {
-  background-image: url(/images/abinit/abinit-icon-light.png);
+  background-image: url(/images/codes/abinit/abinit-icon-light.png);
   @extend .custom-icon;
 }
 
 @include color-mode(dark) {
   .icon-abinit {
-      background-image: url(/images/abinit/abinit-icon-dark.png);
+      background-image: url(/images/codes/abinit/abinit-icon-dark.png);
   }
 }
 
