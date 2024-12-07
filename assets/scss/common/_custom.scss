@@ -864,3 +864,9 @@ label {
         display: none;
     }
 }
+
+@include media-breakpoint-only(lg) {
+    .codes-content {
+        width: 90%;
+    }
+}
