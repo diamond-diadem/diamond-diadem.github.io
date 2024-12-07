@@ -176,11 +176,11 @@
 
 .logo-nwchem {
     width: 100%;
-    content: url(/images/nwchem/nwchem-logo-light.png);
+    content: url(/images/codes/nwchem/nwchem-logo-light.png);
 }
 @include color-mode(dark) {
     .logo-nwchem {
-        content: url(/images/nwchem/nwchem-logo-dark.png);
+        content: url(/images/codes/nwchem/nwchem-logo-dark.png);
     }
 }
 
