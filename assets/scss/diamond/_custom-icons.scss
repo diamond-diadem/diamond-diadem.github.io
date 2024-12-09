@@ -154,13 +154,8 @@
 }
 
 .icon-wannier90 {
-  background-image: url(/images/wannier90/wannier90-icon-light.png);
+  background-image: url(/images/codes/wannier90/wannier90-icon-light.png);
   @extend .custom-icon;
-}
-@include color-mode(dark) {
-  .icon-wannier90 {
-    background-image: url(/images/wannier90/wannier90-icon-dark.png);
-  }
 }
 
 .icon-nwchem {
