@@ -11,35 +11,34 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0 # Fetch full history to ensure all commits are available
+          fetch-depth: 0 # Fetch full history to handle multi-commit pushes
 
-      - name: Debug Repository State
+      - name: Fetch Remote Branch
         run: |
-          echo "Git log:"
-          git log --oneline --graph -n 10
+          TARGET_BRANCH=$(echo $GITHUB_REF | sed 's/refs\/heads\///')
+          echo "Target branch: $TARGET_BRANCH"
 
-          echo "Git status:"
-          git status
+          # Ensure the latest state of the remote branch is fetched
+          git fetch origin $TARGET_BRANCH
 
-          echo "Fetching remote branches..."
-          git fetch origin
+          # Debug: Show fetched branch information
+          echo "Fetched branches:"
+          git branch -r
 
       - name: Identify Commit Range
         id: commits
         run: |
-          TARGET_BRANCH=git fetch origin $(echo $GITHUB_REF | sed 's/refs\/heads\///')
+          TARGET_BRANCH=$(echo $GITHUB_REF | sed 's/refs\/heads\///')
 
-          echo "Target branch: $TARGET_BRANCH"
-
-          # Ensure the latest branch state is fetched
+          # Ensure the remote branch reference exists
           git fetch origin $TARGET_BRANCH
 
-          # Find the base commit
-          BASE_COMMIT=$(git merge-base origin/$TARGET_BRANCH HEAD)
+          # Calculate the base commit as the last known state of the remote branch
+          BASE_COMMIT="origin/$TARGET_BRANCH"
           echo "Base commit: $BASE_COMMIT"
           echo "Commit range: $BASE_COMMIT..HEAD"
 
-          # Expose variables for subsequent steps
+          # Expose the base commit and range for subsequent steps
           echo "BASE_COMMIT=$BASE_COMMIT" >> $GITHUB_ENV
 
       - name: Check for Unauthorized Changes
@@ -47,11 +46,11 @@ jobs:
           # Define the protected files
           PROTECTED_FILES=("package.json" "package-lock.json")
 
-          # Use the commit range from the previous step
+          # Use the base commit from the environment
           COMMIT_RANGE="${BASE_COMMIT}..HEAD"
           echo "Checking commits in range: $COMMIT_RANGE"
 
-          # Fetch the list of modified files
+          # Fetch the list of modified files in the range
           MODIFIED_FILES=$(git diff --name-only $COMMIT_RANGE)
           echo "Modified files in push: $MODIFIED_FILES"
 
