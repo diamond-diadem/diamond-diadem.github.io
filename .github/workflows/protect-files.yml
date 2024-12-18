@@ -2,9 +2,6 @@ name: Protect Critical Files
 
 on:
   push:
-    paths:
-      - 'package.json'
-      - 'package-lock.json'
 
 jobs:
   check-protected-files:
@@ -19,10 +16,13 @@ jobs:
           # Define the protected files
           PROTECTED_FILES=("package.json" "package-lock.json")
 
-          # Loop through each protected file
+          # Fetch the list of modified files in the latest push
+          MODIFIED_FILES=$(git diff --name-only HEAD~1 HEAD)
+
+          # Check if any protected files were modified
           for file in "${PROTECTED_FILES[@]}"; do
-              if git diff-tree --no-commit-id --name-only -r HEAD | grep -q "^${file}$"; then
-                  echo "Error: Unauthorized modification detected in ${file}."
+              if echo "$MODIFIED_FILES" | grep -q "^$file$"; then
+                  echo "Error: Unauthorized modification detected in $file."
                   exit 1
               fi
           done
