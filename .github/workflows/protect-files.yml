@@ -1,4 +1,4 @@
-name: Protect Package Files
+name: Protect Critical Files
 
 on:
   push:
@@ -11,15 +11,21 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0 # Fetch all commits in the branch
+          fetch-depth: 0 # Fetch full history to access all commits in the branch
 
-      - name: Check for unauthorized changes
+      - name: Fetch the branch's previous state
+        run: |
+          # Fetch the branch's previous state from the remote
+          git fetch origin $(echo $GITHUB_REF | sed 's/refs\/heads\///')
+
+      - name: Check for unauthorized changes across all pushed commits
         run: |
           # Define the protected files
           PROTECTED_FILES=("package.json" "package-lock.json")
 
           # Get the range of commits included in the push
-          COMMIT_RANGE=$(git rev-parse origin/$(echo $GITHUB_REF | sed 's/refs\/heads\///')^)..HEAD
+          TARGET_BRANCH=$(echo $GITHUB_REF | sed 's/refs\/heads\///')
+          COMMIT_RANGE=$(git merge-base origin/$TARGET_BRANCH HEAD)..HEAD
 
           echo "Checking commits in range: $COMMIT_RANGE"
 
