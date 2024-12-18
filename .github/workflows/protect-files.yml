@@ -1,0 +1,21 @@
+name: Protect Critical Files
+
+on:
+  pull_request:
+    paths:
+      - 'package.json'
+      - 'package-lock.json'
+
+jobs:
+  check-protected-files:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Verify no unauthorized changes
+        run: |
+          git diff --name-only origin/main..HEAD | grep -E "^(package.json|package-lock.json)$" && \
+          echo "Error: You are not allowed to modify package.json or package-lock.json." && \
+          exit 1 || echo "Protected files have not been modified."
