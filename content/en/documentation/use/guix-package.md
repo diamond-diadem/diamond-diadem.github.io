@@ -15,7 +15,7 @@ This tutorial explains the main commands for interacting with Guix packages to c
 
 ## How do I access diamond packages?
 
-When using Guix, all available packages come from the default guix channel: [GNU Guix](https://hpc.guix.info/browse). However, it is possible to add *channels* to extend the list of available packages. As part of the DIAMOND project, some code has been packaged using Guix and are available in the [guix-packages](https://gricad-gitlab.univ-grenoble-alpes.fr/diamond/guix/guix-channel) channel. To add this specific channel and thus be able to install the packages using the `guix install` command, you need to create a `~/.config/guix/channels.scm` file on your machine or on the HPC infrastructure you will be using. This file needs to contain the following lines:
+When using Guix, all available packages come from the default guix channel: [GNU Guix](https://hpc.guix.info/browse). However, it is possible to add *channels* to extend the list of available packages. As part of the DIAMOND project, some code has been packaged using Guix and are available in the [guix-channel](https://gricad-gitlab.univ-grenoble-alpes.fr/diamond/guix/guix-channel) channel. To add this specific channel and thus be able to install the packages using the `guix install` command, you need to create a `~/.config/guix/channels.scm` file on your machine or on the HPC infrastructure you will be using. This file needs to contain the following lines:
 
 ```bash
 ;; Add gricad packages to those Guix provides.
@@ -47,7 +47,7 @@ guix search quantum-espresso
 
 ### The `guix shell` command
 
-This command creates a temporary software environment containing the dependencies that allow the code to be used as desired. In general, we recommend the use of the `--pure` flag and a `manifest.scm` file. The former plays a similar role to the `--cleanenv` flag in [Apptainer](/en/documentation/use/apptainer-isolation-flags/) and is used to clean up the environment variables on the host system before the temporary software environment appears. The `manifest.scm` file lists all the packages required for the code to run correctly. Several examples of manifests are available in a dedicated Gitlab repository : [guix-packages](https://gricad-gitlab.univ-grenoble-alpes.fr/diamond/guix//guix-packages/-/tree/master/manifests?ref_type=heads).
+This command creates a temporary software environment containing the dependencies that allow the code to be used as desired. In general, we recommend the use of the `--pure` flag and a `manifest.scm` file. The former plays a similar role to the `--cleanenv` flag in [Apptainer](/en/documentation/use/apptainer-isolation-flags/) and is used to clean up the environment variables on the host system before the temporary software environment appears. The `manifest.scm` file lists all the packages required for the code to run correctly. Several examples of manifests are available in a dedicated Gitlab repository : [guix-packages](https://gricad-gitlab.univ-grenoble-alpes.fr/diamond/guix/guix-packages/-/tree/master/manifests?ref_type=heads).
 
 A classic use of the `guix shell` command can therefore be summarised in the following line
 
