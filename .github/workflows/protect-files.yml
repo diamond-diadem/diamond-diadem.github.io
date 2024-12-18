@@ -14,8 +14,17 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Verify no unauthorized changes
+      - name: Check for unauthorized changes
         run: |
-          git diff --name-only origin/main..HEAD | grep -E "^(package.json|package-lock.json)$" && \
-          echo "Error: You are not allowed to modify package.json or package-lock.json." && \
-          exit 1 || echo "Protected files have not been modified."
+          # Define the protected files
+          PROTECTED_FILES=("package.json" "package-lock.json")
+
+          # Loop through each protected file
+          for file in "${PROTECTED_FILES[@]}"; do
+              if git diff-tree --no-commit-id --name-only -r HEAD | grep -q "^${file}$"; then
+                  echo "Error: Unauthorized modification detected in ${file}."
+                  exit 1
+              fi
+          done
+
+          echo "All protected files are safe."
