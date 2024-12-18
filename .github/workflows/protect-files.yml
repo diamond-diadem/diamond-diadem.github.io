@@ -1,4 +1,4 @@
-name: Protect Critical Files
+name: Protect Package Files
 
 on:
   push:
@@ -11,15 +11,22 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          fetch-depth: 2 # Ensure we fetch at least the last 2 commits
+          fetch-depth: 0 # Fetch all commits in the branch
 
       - name: Check for unauthorized changes
         run: |
           # Define the protected files
           PROTECTED_FILES=("package.json" "package-lock.json")
 
-          # Fetch the list of modified files in the latest push
-          MODIFIED_FILES=$(git diff --name-only HEAD~1 HEAD)
+          # Get the range of commits included in the push
+          COMMIT_RANGE=$(git rev-parse origin/$(echo $GITHUB_REF | sed 's/refs\/heads\///')^)..HEAD
+
+          echo "Checking commits in range: $COMMIT_RANGE"
+
+          # Fetch the list of modified files in the range of commits
+          MODIFIED_FILES=$(git diff --name-only $COMMIT_RANGE)
+
+          echo "Modified files in push: $MODIFIED_FILES"
 
           # Check if any protected files were modified
           for file in "${PROTECTED_FILES[@]}"; do
