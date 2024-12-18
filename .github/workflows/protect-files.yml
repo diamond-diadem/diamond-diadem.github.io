@@ -9,39 +9,49 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
         with:
-          fetch-depth: 0 # Fetch full commit history to handle multi-commit pushes
+          fetch-depth: 0 # Fetch full history to ensure all commits are available
 
-      - name: Identify commit range
-        id: range
+      - name: Debug Repository State
         run: |
-          # Ensure the remote branch state is available
-          git fetch origin $(echo $GITHUB_REF | sed 's/refs\/heads\///')
+          echo "Git log:"
+          git log --oneline --graph -n 10
 
-          # Find the starting point of the push
+          echo "Git status:"
+          git status
+
+          echo "Fetching remote branches..."
+          git fetch origin
+
+      - name: Identify Commit Range
+        id: commits
+        run: |
           TARGET_BRANCH=$(echo $GITHUB_REF | sed 's/refs\/heads\///')
-          BASE_COMMIT=$(git merge-base origin/$TARGET_BRANCH HEAD)
+          echo "Target branch: $TARGET_BRANCH"
 
+          # Ensure the latest branch state is fetched
+          git fetch origin $TARGET_BRANCH
+
+          # Find the base commit
+          BASE_COMMIT=$(git merge-base origin/$TARGET_BRANCH HEAD)
           echo "Base commit: $BASE_COMMIT"
           echo "Commit range: $BASE_COMMIT..HEAD"
 
-          # Output the commit range
+          # Expose variables for subsequent steps
           echo "BASE_COMMIT=$BASE_COMMIT" >> $GITHUB_ENV
 
-      - name: Check for unauthorized changes
+      - name: Check for Unauthorized Changes
         run: |
           # Define the protected files
           PROTECTED_FILES=("package.json" "package-lock.json")
 
-          # Get the base commit from the environment
+          # Use the commit range from the previous step
           COMMIT_RANGE="${BASE_COMMIT}..HEAD"
-
           echo "Checking commits in range: $COMMIT_RANGE"
 
-          # List all files modified in the range
+          # Fetch the list of modified files
           MODIFIED_FILES=$(git diff --name-only $COMMIT_RANGE)
-
           echo "Modified files in push: $MODIFIED_FILES"
 
           # Check if any protected files were modified
