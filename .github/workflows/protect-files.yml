@@ -27,7 +27,8 @@ jobs:
       - name: Identify Commit Range
         id: commits
         run: |
-          TARGET_BRANCH=$(echo $GITHUB_REF | sed 's/refs\/heads\///')
+          TARGET_BRANCH=git fetch origin $(echo $GITHUB_REF | sed 's/refs\/heads\///')
+
           echo "Target branch: $TARGET_BRANCH"
 
           # Ensure the latest branch state is fetched
