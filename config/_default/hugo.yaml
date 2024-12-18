@@ -1,4 +1,5 @@
 title: DIAMOND
+baseurl: http://localhost/
 # baseurl: https://diamond-diadem@github.io/
 # canonifyURLs: true
 canonifyURLs: false
@@ -8,7 +9,8 @@ enableEmoji: true
 enableGitInfo: false
 enableRobotsTXT: true
 languageCode: fr-FR
-paginate: 10
+pagination:
+  pagerSize: 10
 rssLimit: 10
 summarylength: 50
 defaultContentLanguage: fr
