@@ -11,25 +11,35 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0 # Fetch full history to access all commits in the branch
+          fetch-depth: 0 # Fetch full commit history to handle multi-commit pushes
 
-      - name: Fetch the branch's previous state
+      - name: Identify commit range
+        id: range
         run: |
-          # Fetch the branch's previous state from the remote
+          # Ensure the remote branch state is available
           git fetch origin $(echo $GITHUB_REF | sed 's/refs\/heads\///')
 
-      - name: Check for unauthorized changes across all pushed commits
+          # Find the starting point of the push
+          TARGET_BRANCH=$(echo $GITHUB_REF | sed 's/refs\/heads\///')
+          BASE_COMMIT=$(git merge-base origin/$TARGET_BRANCH HEAD)
+
+          echo "Base commit: $BASE_COMMIT"
+          echo "Commit range: $BASE_COMMIT..HEAD"
+
+          # Output the commit range
+          echo "BASE_COMMIT=$BASE_COMMIT" >> $GITHUB_ENV
+
+      - name: Check for unauthorized changes
         run: |
           # Define the protected files
           PROTECTED_FILES=("package.json" "package-lock.json")
 
-          # Get the range of commits included in the push
-          TARGET_BRANCH=$(echo $GITHUB_REF | sed 's/refs\/heads\///')
-          COMMIT_RANGE=$(git merge-base origin/$TARGET_BRANCH HEAD)..HEAD
+          # Get the base commit from the environment
+          COMMIT_RANGE="${BASE_COMMIT}..HEAD"
 
           echo "Checking commits in range: $COMMIT_RANGE"
 
-          # Fetch the list of modified files in the range of commits
+          # List all files modified in the range
           MODIFIED_FILES=$(git diff --name-only $COMMIT_RANGE)
 
           echo "Modified files in push: $MODIFIED_FILES"
