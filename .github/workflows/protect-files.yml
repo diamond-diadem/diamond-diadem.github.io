@@ -1,7 +1,7 @@
 name: Protect Critical Files
 
 on:
-  pull_request:
+  push:
     paths:
       - 'package.json'
       - 'package-lock.json'
