@@ -3,4 +3,5 @@ public/
 themes/
 node_modules/
 .vscode/
+
 hugo_stats.json
