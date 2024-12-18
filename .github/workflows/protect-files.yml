@@ -11,34 +11,18 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0 # Fetch full history to handle multi-commit pushes
-
-      - name: Fetch Remote Branch
-        run: |
-          TARGET_BRANCH=$(echo $GITHUB_REF | sed 's/refs\/heads\///')
-          echo "Target branch: $TARGET_BRANCH"
-
-          # Ensure the latest state of the remote branch is fetched
-          git fetch origin $TARGET_BRANCH
-
-          # Debug: Show fetched branch information
-          echo "Fetched branches:"
-          git branch -r
+          fetch-depth: 0 # Fetch full commit history for accurate comparisons
 
       - name: Identify Commit Range
         id: commits
         run: |
-          TARGET_BRANCH=$(echo $GITHUB_REF | sed 's/refs\/heads\///')
-
-          # Ensure the remote branch reference exists
-          git fetch origin $TARGET_BRANCH
-
-          # Calculate the base commit as the last known state of the remote branch
-          BASE_COMMIT="origin/$TARGET_BRANCH"
+          # Use the GitHub `before` context to determine the base commit
+          BASE_COMMIT=${{ github.event.before }}
           echo "Base commit: $BASE_COMMIT"
+          echo "HEAD commit: $(git rev-parse HEAD)"
           echo "Commit range: $BASE_COMMIT..HEAD"
 
-          # Expose the base commit and range for subsequent steps
+          # Expose the base commit for subsequent steps
           echo "BASE_COMMIT=$BASE_COMMIT" >> $GITHUB_ENV
 
       - name: Check for Unauthorized Changes
@@ -50,7 +34,7 @@ jobs:
           COMMIT_RANGE="${BASE_COMMIT}..HEAD"
           echo "Checking commits in range: $COMMIT_RANGE"
 
-          # Fetch the list of modified files in the range
+          # Fetch the list of modified files
           MODIFIED_FILES=$(git diff --name-only $COMMIT_RANGE)
           echo "Modified files in push: $MODIFIED_FILES"
 
