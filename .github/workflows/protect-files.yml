@@ -76,9 +76,9 @@ jobs:
           server_port: 587
           username: david.martin-calle@univ-lyon1.fr
           password: ${{secrets.MAIL_PASSWORD}}
-          subject: "[diamond-diadem.github.io] - Push rejected - Modified protected files"
-          to: $(git log -1 --format='%ae')
-          from: DIAMOND website automatic mail
-          html_body: "Bonjour,<br><br>Votre push vers le dépôt '${{ github.repository }}' a été refusé car il incluait des modifications non autorisées dans des fichiers protégés (package.json et/ou package-lock.json).<br><br>Voir le CONTRIBUTING.md du dépôt pour plus de détails<br><br>Merci.<br><br><hr><br>Hello,<br><br>Your push to the repository '${{ github.repository }}' was rejected because it included unauthorized changes to protected files (package.json and/or package-lock.json).<br><br>See CONTRIBUTING.md on the repo pour for more details<br><br>Thank you."
+          subject: " Push rejeté - package.json ou package-lock.json modifiés par ${{ github.actor }}"
+          to: david.martin-calle@univ-lyon1.fr
+          from: Mail automatique site web DIAMOND
+          html_body: "Bonjour,<br><br>Le push par ${{ github.actor }} vers le dépôt '${{ github.repository }}' a été refusé car il incluait des modifications non autorisées dans des fichiers protégés (package.json et/ou package-lock.json)."
           priority: high
 
