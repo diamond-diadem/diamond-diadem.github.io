@@ -33,7 +33,7 @@ jobs:
           # Required recipients' addresses:
           to: david.martin-calle@univ-lyon1.fr # ${{ github.event.pusher.email }}
           # Required sender full name (address can be skipped):
-          from: david.martin-calle@univ-lyon1.fr
+          from: DIAMOND website automatic mail
           # Optional plain body:
           body: "Hello,\n\nYour push to the repository '${{ github.repository }}' was rejected because it included unauthorized changes to protected files (e.g., package.json or package-lock.json).\n\nPlease review the repository guidelines and adjust your changes before pushing again.\n\nThank you."
           # Optional HTML body read from file:
