@@ -13,7 +13,7 @@ Ce tutoriel explicite les principales commandes permettant d'interagir avec une 
 
 {{< /callout >}}
 
-<iframe class="tuto-video" src="https://www.youtube.com/embed/CPEsOTpOcic?si=59P2En0ztmJ0ykwu&cc_lang_pref=fr&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen ></iframe>
+<iframe class="tuto-video" src="https://www.youtube-nocookie.com/embed/CPEsOTpOcic?si=59P2En0ztmJ0ykwu&cc_lang_pref=fr&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen ></iframe>
 
 Une image sur mesure dédiée à la mise en pratique de ce tutoriel est disponible en tapant la commande suivante :
 
