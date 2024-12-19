@@ -26,6 +26,7 @@ jobs:
           echo "BASE_COMMIT=$BASE_COMMIT" >> $GITHUB_ENV
 
       - name: Check for Unauthorized Changes
+        id: check
         run: |
           # Define the protected files
           PROTECTED_FILES=("package.json" "package-lock.json")
@@ -47,3 +48,16 @@ jobs:
           done
 
           echo "All protected files are safe."
+
+      - name: Revert Push if Check Fails
+        if: failure()
+        run: |
+          echo "Reverting all commits in this push..."
+
+          # Reset the branch to the base commit
+          git reset --hard ${{ github.event.before }}
+
+          # Force push to revert the branch state
+          git push origin HEAD --force
+
+          echo "All commits have been reverted."
