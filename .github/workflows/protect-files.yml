@@ -16,57 +16,27 @@ jobs:
       - name: Identify Commit Range
         id: commits
         run: |
-          # Use the GitHub `before` context to determine the base commit
           BASE_COMMIT=${{ github.event.before }}
           echo "Base commit: $BASE_COMMIT"
           echo "HEAD commit: $(git rev-parse HEAD)"
           echo "Commit range: $BASE_COMMIT..HEAD"
-
-          # Expose the base commit for subsequent steps
           echo "BASE_COMMIT=$BASE_COMMIT" >> $GITHUB_ENV
 
       - name: Check for Unauthorized Changes
         id: check
         run: |
-          # Define the protected files
           PROTECTED_FILES=("package.json" "package-lock.json")
-
-          # Use the base commit from the environment
           COMMIT_RANGE="${BASE_COMMIT}..HEAD"
           echo "Checking commits in range: $COMMIT_RANGE"
-
-          # Fetch the list of modified files
           MODIFIED_FILES=$(git diff --name-only $COMMIT_RANGE)
           echo "Modified files in push: $MODIFIED_FILES"
-
-          # Check if any protected files were modified
           for file in "${PROTECTED_FILES[@]}"; do
               if echo "$MODIFIED_FILES" | grep -q "^$file$"; then
                   echo "Error: Unauthorized modification detected in $file."
                   exit 1
               fi
           done
-
           echo "All protected files are safe."
-
-      - name: Revert Push if Check Fails
-        if: failure()
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          echo "Reverting all commits in this push..."
-
-          # Configure Git to use the GitHub Actions bot
-          git config user.name "GitHub Actions"
-          git config user.email "actions@github.com"
-
-          # Reset the branch to the base commit
-          git reset --hard ${{ github.event.before }}
-
-          # Force push to revert the branch state using GITHUB_TOKEN
-          git push https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }} HEAD --force
-
-          echo "All commits have been reverted."
 
       - name: Send Email Notification
         if: failure()
@@ -76,12 +46,12 @@ jobs:
           echo "Sending email notification to the push creator..."
 
           # Extract the pusher's email
-          PUSHER_EMAIL=$(jq -r '.pusher.email' <<< "${{ toJson(github.event) }}")
+          PUSHER_EMAIL="${{ github.event.pusher.email }}"
           echo "Pusher email: $PUSHER_EMAIL"
 
-          # Create the email content
+          # Email content
           SUBJECT="Push Rejected: Unauthorized Changes Detected"
           BODY="Hello,\n\nYour push to the repository '${{ github.repository }}' was rejected because it included unauthorized changes to protected files (e.g., package.json or package-lock.json).\n\nPlease review the repository guidelines and adjust your changes before pushing again.\n\nThank you."
 
           # Send the email using sendmail
-          echo -e "Subject: $SUBJECT\n\n$BODY" | sendmail -v -r "${NOTIFICATION_EMAIL}" "${PUSHER_EMAIL}"
+          echo -e "Subject: $SUBJECT\n\n$BODY" | sendmail -v -r "${NOTIFICATION_EMAIL}" "$PUSHER_EMAIL"
