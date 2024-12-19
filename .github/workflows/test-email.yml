@@ -19,13 +19,13 @@ jobs:
           #  * smtp+starttls://user:password@server:port
           # connection_url: # ${{secrets.MAIL_CONNECTION}}
           # Required mail server address if not connection_url:
-          server_address: smtp.gmail.com
+          server_address: smtpbv.univ-lyon1.fr
           # Server port, default 25:
-          server_port: 465
+          server_port: 587
           # Optional whether this connection use TLS (default is true if server_port is 465)
-          secure: true
+          # secure: true
           # Optional (recommended) mail server username:
-          username: ${{secrets.MAIL_USERNAME}}
+          username: david.martin-calle
           # Optional (recommended) mail server password:
           password: ${{secrets.MAIL_PASSWORD}}
           # Required mail subject:
@@ -33,7 +33,7 @@ jobs:
           # Required recipients' addresses:
           to: david.martin-calle@univ-lyon1.fr # ${{ github.event.pusher.email }}
           # Required sender full name (address can be skipped):
-          from: DIAMOND website automatic mail # <user@example.com>
+          from: david.martin-calle@univ-lyon1.fr
           # Optional plain body:
           body: "Hello,\n\nYour push to the repository '${{ github.repository }}' was rejected because it included unauthorized changes to protected files (e.g., package.json or package-lock.json).\n\nPlease review the repository guidelines and adjust your changes before pushing again.\n\nThank you."
           # Optional HTML body read from file:
