@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Send Email
-        uses: dawidd6/action-send-mail@v3
+        uses: dawidd6/action-send-mail@v4
         with:
           # Specify connection via URL (replaces server_address, server_port, secure,
           # username and password)
@@ -25,36 +25,36 @@ jobs:
           # Optional whether this connection use TLS (default is true if server_port is 465)
           secure: true
           # Optional (recommended) mail server username:
-          username: ${{secrets.MAIL_USERNAME}}
+          username: diamond.peprdiadem@gmail.com # ${{secrets.MAIL_USERNAME}}
           # Optional (recommended) mail server password:
-          password: ${{secrets.MAIL_PASSWORD}}
+          password: qsxi cowb kgur wvhz # ${{secrets.MAIL_PASSWORD}}
           # Required mail subject:
           subject: \[diamond-diadem.github.io\] - Push rejected - Modified protected files
           # Required recipients' addresses:
-          to: david.martin-calle@univ-lyon1.fr # ${{ github.event.pusher.email }}
+          to: david.martin-calle@outlook.fr # ${{ github.event.pusher.email }}
           # Required sender full name (address can be skipped):
           from: DIAMOND website administration # <user@example.com>
           # Optional plain body:
           body: Hello,\n\nYour push to the repository '${{ github.repository }}' was rejected because it included unauthorized changes to protected files (e.g., package.json or package-lock.json).\n\nPlease review the repository guidelines and adjust your changes before pushing again.\n\nThank you.
           # Optional HTML body read from file:
-          html_body:
+          # html_body:
           # Optional carbon copy recipients:
-          cc:
+          # cc:
           # Optional blind carbon copy recipients:
-          bcc:
+          # bcc:
           # Optional recipient of the email response:
-          reply_to:
+          # reply_to:
           # Optional Message ID this message is replying to:
-          in_reply_to:
+          # in_reply_to:
           # Optional unsigned/invalid certificates allowance:
           ignore_cert: true
           # Optional converting Markdown to HTML (set content_type to text/html too):
           convert_markdown: true
           # Optional attachments:
-          attachments:
+          # attachments:
           # Optional priority: 'high', 'normal' (default) or 'low'
           priority: high
           # Optional nodemailerlog: true/false
-          nodemailerlog: false
+          # nodemailerlog: false
           # Optional nodemailerdebug: true/false if true lognodem will also be set true
-          nodemailerdebug: false
+          # nodemailerdebug: false
