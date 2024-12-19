@@ -16,6 +16,9 @@ import 'js/tabs.js';
 // Import custom.js
 import 'js/custom.js';
 
+// Import synchronised-selects.js (custom script)
+import 'js/diamond/synchronised-selects.js';
+
 /*
 import * as params from '@params';
 
