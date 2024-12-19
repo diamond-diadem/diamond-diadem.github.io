@@ -25,13 +25,13 @@ jobs:
           # Optional whether this connection use TLS (default is true if server_port is 465)
           # secure: true
           # Optional (recommended) mail server username:
-          username: david.martin-calle
+          username: david.martin-calle@univ-lyon1.fr
           # Optional (recommended) mail server password:
           password: ${{secrets.MAIL_PASSWORD}}
           # Required mail subject:
           subject: "[diamond-diadem.github.io] - Push rejected - Modified protected files"
           # Required recipients' addresses:
-          to: david.martin-calle@univ-lyon1.fr # ${{ github.event.pusher.email }}
+          to: david.martin-calle@outlook.fr # ${{ github.event.pusher.email }}
           # Required sender full name (address can be skipped):
           from: DIAMOND website automatic mail
           # Optional plain body:
