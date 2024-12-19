@@ -67,3 +67,21 @@ jobs:
           git push https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }} HEAD --force
 
           echo "All commits have been reverted."
+
+      - name: Send Email Notification
+        if: failure()
+        env:
+          NOTIFICATION_EMAIL: ${{ secrets.NOTIFICATION_EMAIL }}
+        run: |
+          echo "Sending email notification to the push creator..."
+
+          # Extract the pusher's email
+          PUSHER_EMAIL=$(jq -r '.pusher.email' <<< "${{ toJson(github.event) }}")
+          echo "Pusher email: $PUSHER_EMAIL"
+
+          # Create the email content
+          SUBJECT="Push Rejected: Unauthorized Changes Detected"
+          BODY="Hello,\n\nYour push to the repository '${{ github.repository }}' was rejected because it included unauthorized changes to protected files (e.g., package.json or package-lock.json).\n\nPlease review the repository guidelines and adjust your changes before pushing again.\n\nThank you."
+
+          # Send the email using sendmail
+          echo -e "Subject: $SUBJECT\n\n$BODY" | sendmail -v -r "${NOTIFICATION_EMAIL}" "${PUSHER_EMAIL}"
