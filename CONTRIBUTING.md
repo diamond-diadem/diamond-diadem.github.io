@@ -59,3 +59,5 @@ To embed a video from youtube (video tutorials by Dylan: Diamond-DIADEM youtube 
 ```
 
 ##### That's about it
+
+Cheers !
