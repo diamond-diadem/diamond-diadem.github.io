@@ -19,7 +19,7 @@ To have a quick look at Apptainer's main commands, you may refer to [this tutori
 {{< /callout >}}
 
 
-<iframe class="tuto-video" src="https://www.youtube.com/embed/8oKKGG0hy6A?si=1duVepl_lWvG24fC&cc_lang_pref=en&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe class="tuto-video" src="https://www.youtube-nocookie.com/embed/8oKKGG0hy6A?si=1duVepl_lWvG24fC&cc_lang_pref=en&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 This image is a relocatable and renamable file we recommend putting in a dedicated directory to easily find it. While it can be any directory, in this tutorial we will assume you put it in `$HOME/apptainer-images`:
 
