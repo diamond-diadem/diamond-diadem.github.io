@@ -8,12 +8,12 @@
 - inline: `snippet of code` between 2 backticks ``
 - block: between 3 backticks ``` before and after
   - but please precise language, for example "```python "
-  
+
   ```python
   import numpy as np
   a = np.ones((100, 100))
   ```
-  
+
   - in case of command lines for  a terminal, precise " ```bash "
   for on the website, the code block takes the form of a console
 
@@ -59,5 +59,3 @@ To embed a video from youtube (video tutorials by Dylan: Diamond-DIADEM youtube 
 ```
 
 ##### That's about it
-
-Cheers !
