@@ -51,13 +51,19 @@ jobs:
 
       - name: Revert Push if Check Fails
         if: failure()
+        env:
+          PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
         run: |
           echo "Reverting all commits in this push..."
+
+          # Configure Git to use the token
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
 
           # Reset the branch to the base commit
           git reset --hard ${{ github.event.before }}
 
           # Force push to revert the branch state
-          git push origin HEAD --force
+          git push https://${PAT_TOKEN}@github.com/${{ github.repository }} HEAD --force
 
           echo "All commits have been reverted."
