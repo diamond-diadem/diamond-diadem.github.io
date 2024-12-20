@@ -18,11 +18,11 @@ Pour rapidement s'approprier les principales commandes d'Apptainer, vous pouvez 
 
 {{< /callout >}}
 
-<div class="youtube-video" data-video-id="MheJO_FndWw?si=ASHe6wYhiFqR1te9">
+ <div class="youtube-video" data-video-id="MheJO_FndWw?si=ASHe6wYhiFqR1te9">
       <div class="youtube-placeholder">
-          Cliquez pour voir la vidéo
+          <button class="popup-button">Consentement au cookies</button>
       </div>
-</div>
+  </div>
 
 L'image que vous avez téléchargée est un fichier relocalisable et renommable, qu'il est recommandé de placer dans un répertoire dédié pour facilement la retrouver ; celui-ci peut-être quelconque, et dans le cadre de ce tutoriel nous assumerons que vous l'avez placée dans un répertoire nommé `$HOME/apptainer-images` :
 
