@@ -7,9 +7,26 @@
 
 
 /* Styles du placeholder */
+.youtube-placeholder.fr {
+  background-image: url(/images/youtube-consent/youtube-placeholder-light-fr.svg);
+}
+.youtube-placeholder.en {
+  background-image: url(/images/youtube-consent/youtube-placeholder-light-en.svg);
+}
+@include color-mode(dark) {
+  .youtube-placeholder.fr {
+    background-image: url(/images/youtube-consent/youtube-placeholder-dark-fr.svg);
+  }
+  .youtube-placeholder.en {
+    background-image: url(/images/youtube-consent/youtube-placeholder-dark-en.svg);
+  }
+}
+
+
+
 .youtube-placeholder {
   @extend .tuto-video;
-  background-image: url(/images/youtube-consent/youtube-placeholder-light.svg);
+  // background-image: url(/images/youtube-consent/youtube-placeholder-light.svg);
   background-size: cover;
   background-repeat: no-repeat;
   // margin: 20px 0;
@@ -18,7 +35,7 @@
 }
 @include color-mode(dark) {
   .youtube-placeholder {
-    background-image: url(/images/youtube-consent/youtube-placeholder-dark.svg);
+    // background-image: url(/images/youtube-consent/youtube-placeholder-dark.svg);
     border: 1px solid white;
   }
 
@@ -32,22 +49,11 @@
   padding-left: 5%;
   padding-right: 5%;
   cursor: pointer;
-  // width: 45%;
-  // font-size: 4%;
-  // font-size: clamp(12px, 2vw, 18px);
   @extend .btn;
   @extend .btn-primary;
   @extend .rounded-pill;
   @extend .d-block;
-  // @extend .d-none;
-  // @extend .d-lg-block;
 }
-
-// @include media-breakpoint-down
-
-// .youtube-placeholder .popup-button:hover {
-//   background-color: #0056b3;
-// }
 
 /* Styles de la boîte de dialogue */
 .popup-overlay {
@@ -58,7 +64,8 @@
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.6);
-  z-index: 1000;
+  z-index: 2000;
+  overflow: hidden; /* Empêche tout débordement */
 }
 
 .popup-dialog {
@@ -68,89 +75,43 @@
   transform: translate(-50%, -50%);
   background: white;
   padding: 20px;
-  width: 90%;
-  max-width: 400px;
+  width: 50%;
+  // max-width: 400px;
+  max-height: 85%; /* Limite la hauteur à 80% de la hauteur de l'écran */
+  overflow-y: auto; /* Permet de défiler verticalement si le contenu dépasse */
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
+@include color-mode(dark) {
+  .popup-dialog {
+    background: $body-bg-dark;
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .popup-dialog {
+    width: 90%;
+  }
+}
+
 .popup-dialog button {
-  margin-top: 10px;
+  display: inline-block;
+  margin: 10px auto 0 auto;
   padding: 10px 20px;
   border: none;
-  cursor: pointer;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .popup-dialog .accept {
-  background-color: #007BFF;
-  color: white;
+  @extend .btn;
+  @extend .btn-primary;
+  font-size: 110%;
 }
 
 .popup-dialog .decline {
-  background-color: #ccc;
+  @extend .btn;
+  @extend .btn-secondary;
+  font-size: 110%;
 }
-
-
-// /* Styles du placeholder */
-// .youtube-placeholder {
-//   width: 100%;
-//   aspect-ratio: 48 / 27;
-//   margin-top: 1%;
-//   margin-bottom: 2%;
-//   background-image: url(/images/youtube-consent/youtube-placeholder-light.svg);
-//   background-size: cover;
-//   background-position: center center;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   color: #555;
-//   font-size: 16px;
-//   text-align: center;
-//   border: 1px solid #ccc;
-//   margin: 20px 0;
-//   position: relative;
-//   cursor: pointer;
-// }
-
-// /* Styles de la boîte de dialogue */
-// .popup-overlay {
-//   display: none;
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-//   background: rgba(0, 0, 0, 0.6);
-//   z-index: 1000;
-// }
-
-// .popup-dialog {
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-//   background: white;
-//   padding: 20px;
-//   width: 90%;
-//   max-width: 400px;
-//   border-radius: 8px;
-//   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-// }
-
-// .popup-dialog button {
-//   margin-top: 10px;
-//   padding: 10px 20px;
-//   border: none;
-//   cursor: pointer;
-//   border-radius: 5px;
-// }
-
-// .popup-dialog .accept {
-//   background-color: #007BFF;
-//   color: white;
-// }
-
-// .popup-dialog .decline {
-//   background-color: #ccc;
-// }
