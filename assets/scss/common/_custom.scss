@@ -1,5 +1,4 @@
 // Put your custom SCSS code here
-// @import "bootstrap/variables-dark";
 
 @import "diamond/logo-diamond";
 @import "diamond/responsive-about";
@@ -12,6 +11,7 @@
 @import "diamond/custom-alerts";
 @import "diamond/svg-inline";
 @import "diamond/custom-cards";
+@import "diamond/youtube-consent";
 
 
 @include color-mode(dark) {
@@ -871,3 +871,6 @@ label {
         width: 90%;
     }
 }
+ ////////////////////////////////
+
+
