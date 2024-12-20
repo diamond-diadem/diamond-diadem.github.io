@@ -8,14 +8,14 @@ document.addEventListener('DOMContentLoaded', function () {
     const hasConsented = localStorage.getItem('youtubeConsent') === 'true';
 
     // Fonction pour charger une vidéo
-    function loadYouTubeVideo(container, videoId) {
+    function loadYouTubeVideo(container, videoId, language) {
         container.innerHTML = `
             <iframe
                 class="tuto-video"
-                src="https://www.youtube-nocookie.com/embed/${videoId}"
+                src="https://www.youtube-nocookie.com/embed/${videoId}&cc_lang_pref=${language}&cc_load_policy=1"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin">
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
             </iframe>
         `;
     }
@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Gestion des placeholders
     videoContainers.forEach(container => {
         const videoId = container.getAttribute('data-video-id');
+        const language = container.getAttribute('language');
         const placeholder = container.querySelector('.youtube-placeholder');
         const popupButton = placeholder.querySelector('.popup-button');
 
@@ -40,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (hasConsented) {
             // Si le consentement est déjà donné, chargez directement les vidéos
-            loadYouTubeVideo(container, videoId);
+            loadYouTubeVideo(container, videoId, language);
         } else {
             // Sinon, affichez le bouton dans le placeholder
             popupButton.addEventListener('click', () => {
@@ -58,7 +59,8 @@ document.addEventListener('DOMContentLoaded', function () {
         // Charger toutes les vidéos
         videoContainers.forEach(container => {
             const videoId = container.getAttribute('data-video-id');
-            loadYouTubeVideo(container, videoId);
+            const language = container.getAttribute('language');
+            loadYouTubeVideo(container, videoId, language);
         });
 
         // Fermer la popup

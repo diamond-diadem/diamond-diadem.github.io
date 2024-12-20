@@ -1,3 +1,4 @@
+{{ if eq $.Site.Language.LanguageName "FR" }}
 <div class="popup-overlay">
   <div class="popup-dialog">
       <p>
@@ -12,3 +13,20 @@
       <button class="decline">Refuser</button>
   </div>
 </div>
+{{ end }}
+{{ if eq $.Site.Language.LanguageName "EN" }}
+<div class="popup-overlay">
+  <div class="popup-dialog">
+      <p>
+          <strong>This site does not use cookies for tracking or analytics purposes.</strong><br>
+          However, by viewing the embedded videos (YouTube tutorials), third-party cookies may be set by YouTube. We have reduced their usage by employing <em>youtube-nocookie.com</em>, but some cookies may still be used, including:<br>
+          - <strong>Preference cookies:</strong> to remember your display settings.<br>
+          - <strong>Analytical cookies:</strong> to collect statistics about video usage.<br>
+          - <strong>Advertising cookies:</strong> to personalize ads.<br>
+          Please refer to <a href="https://policies.google.com/privacy" target="_blank">YouTube's Privacy Policy</a> for more information.
+      </p>
+      <button class="accept">Accept</button>
+      <button class="decline">Decline</button>
+  </div>
+</div>
+{{ end }}
