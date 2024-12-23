@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function adjustFontSize(placeholder) {
         const button = placeholder.querySelector('.popup-button');
         const containerWidth = placeholder.offsetWidth; // Largeur réelle du conteneur
-        const fontSize = containerWidth * 0.045; // Taille de la police : 2% de la largeur
+        const fontSize = containerWidth * 0.04; // Taille de la police : 4% de la largeur
         button.style.fontSize = `${fontSize}px`;
     }
 

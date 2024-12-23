@@ -67,3 +67,6 @@ other = "in"
 
 [ask_help]
 other = "Ask for help"
+
+[cookies_consent]
+other = "Consent to cookies"
