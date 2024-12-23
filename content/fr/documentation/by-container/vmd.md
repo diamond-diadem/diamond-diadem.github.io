@@ -18,11 +18,13 @@ Pour rapidement s'approprier les principales commandes d'Apptainer, vous pouvez 
 
 {{< /callout >}}
 
-<div class="youtube-video" data-video-id="NDv_vDjflgs?si=CZhqWkuEm40JUdND" language="fr">
+<!-- <div class="youtube-video" data-video-id="NDv_vDjflgs?si=CZhqWkuEm40JUdND" language="fr">
     <div class="youtube-placeholder fr">
         <button class="popup-button">Consentement aux cookies</button>
     </div>
-</div>
+</div> -->
+
+{{< video-with-consent id="NDv_vDjflgs?si=CZhqWkuEm40JUdND" lang="fr" >}}
 
 <!-- <iframe class="tuto-video" src="https://www.youtube-nocookie.com/embed/NDv_vDjflgs?si=CZhqWkuEm40JUdND&cc_lang_pref=fr&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
 

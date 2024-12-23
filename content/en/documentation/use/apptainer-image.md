@@ -13,9 +13,9 @@ This tutorial explains the main ways to interact with an Apptainer image in orde
 
 {{< /callout >}}
 
-<!-- <iframe class="tuto-video" src="https://www.youtube-nocookie.com/embed/tbHy7m1hOwM?si=sJXWIGunSeC4IJ1Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+<!-- <iframe class="tuto-video" src="https://www.youtube-nocookie.com/embed/CPEsOTpOcic?si=59P2En0ztmJ0ykwu&cc_lang_pref=en&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen ></iframe> -->
 
-<iframe class="tuto-video" src="https://www.youtube-nocookie.com/embed/CPEsOTpOcic?si=59P2En0ztmJ0ykwu&cc_lang_pref=en&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen ></iframe>
+{{< video-with-consent id="CPEsOTpOcic?si=59P2En0ztmJ0ykwu" lang="en" >}}
 
 A custom image dedicated to the practical application of this tutorial is available by typing the following command
 

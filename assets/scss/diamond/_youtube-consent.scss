@@ -81,6 +81,21 @@
   overflow-y: auto; /* Permet de défiler verticalement si le contenu dépasse */
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+
+  .close-popup {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
 }
 
 @include color-mode(dark) {
@@ -115,3 +130,216 @@
   @extend .btn-secondary;
   font-size: 110%;
 }
+
+.cookie-banner {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: $body-bg;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 2000;
+  padding: 20px;
+  box-sizing: border-box;
+
+  .cookie-banner-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    p {
+      flex: 1;
+      margin: 0;
+      font-size: 1rem;
+      line-height: 1.5;
+
+      a {
+        text-decoration: underline;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .cookie-banner-actions {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+    button {
+      cursor: pointer;
+
+      &.accept {
+        @extend .btn;
+        @extend .btn-primary;
+      }
+
+      &.decline {
+        @extend .btn;
+        @extend .btn-secondary;
+      }
+    }
+  }
+
+  .close-banner {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+@include color-mode(dark) {
+  .cookie-banner {
+    background-color: $body-bg-dark;
+    box-shadow: 0 -2px 5px rgba(255, 255, 255, 0.3);
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .cookie-banner-actions {
+    flex-wrap: wrap; /* Permet aux boutons de s'adapter à l'espace disponible */
+    justify-content: center;
+    width: 100%;
+
+    button {
+      flex: 0 1 auto; /* Permet de garder les boutons à taille fixe */
+      width: 40%; /* Taille des boutons */
+      margin: 5px; /* Espacement entre les boutons */
+    }
+  }
+}
+
+// .cookie-banner {
+//   display: none;
+//   position: fixed;
+//   bottom: 0;
+//   left: 0;
+//   width: 100%;
+//   background-color: $body-bg;
+//   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+//   z-index: 1000;
+//   padding: 20px;
+//   box-sizing: border-box;
+//   // font-family: Arial, sans-serif;
+
+//   .cookie-banner-content {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     flex-wrap: wrap;
+//     gap: 10px;
+
+//     p {
+//       flex: 1;
+//       margin: 0;
+//       font-size: 1rem;
+//       line-height: 1.5;
+//       // color: #333;
+
+//       a {
+//         text-decoration: underline;
+
+//         &:hover {
+//           text-decoration: none;
+//         }
+//       }
+//     }
+//   }
+
+//   .cookie-banner-actions {
+//     display: flex;
+//     // flex-direction: column;
+//     gap: 10px;
+
+//     button {
+//       // display: block;
+//       // padding: 10px 20px;
+//       // border: none;
+//       // border-radius: 5px;
+//       cursor: pointer;
+//       // font-size: 1rem;
+
+//       &.accept {
+//         @extend .btn;
+//         @extend .btn-primary;
+//         // background-color: #007BFF;
+//         // color: white;
+
+//         // &:hover {
+//         //   background-color: #0056b3;
+//         // }
+//       }
+
+//       &.decline {
+//         @extend .btn;
+//         @extend .btn-secondary;
+
+//         // &:hover {
+//         //   background-color: #aaa;
+//         // }
+//       }
+//     }
+//   }
+
+//   .close-banner {
+//     position: absolute;
+//     top: 10px;
+//     right: 10px;
+//     background: none;
+//     border: none;
+//     cursor: pointer;
+//     padding: 0;
+//     // color: #333;
+
+//     svg {
+//       width: 20px;
+//       height: 20px;
+//     }
+
+//     // &:hover {
+//     //   color: #000;
+//     // }
+//   }
+// }
+
+// @include color-mode(dark) {
+//   .cookie-banner {
+//     background-color: $body-bg-dark;
+//     box-shadow: 0 -2px 5px rgba(255, 255, 255, 0.2);
+//   }
+// }
+
+// .cookie-banner-actions {
+//   display: flex;
+//   flex-direction: row;
+//   gap: 10px;
+// }
+// @include media-breakpoint-down(md) {
+//   .cookie-banner-actions {
+//     flex-direction: column;
+//     width: 100%;
+//     align-items: center;
+
+//     & button {
+//       width: 40%;
+//       margin: 0 1%;
+//     }
+
+//   }
+
+
+// }

@@ -18,11 +18,13 @@ To have a quick look at Apptainer's main commands, you may refer to [this tutori
 
 {{< /callout >}}
 
-<div class="youtube-video" data-video-id="MheJO_FndWw?si=ASHe6wYhiFqR1te9" language="en">
+<!-- <div class="youtube-video" data-video-id="MheJO_FndWw?si=ASHe6wYhiFqR1te9" language="en">
     <div class="youtube-placeholder en">
         <button class="popup-button">Consent to cookies</button>
     </div>
-</div>
+</div> -->
+
+{{< video-with-consent id="MheJO_FndWw?si=ASHe6wYhiFqR1te9" lang="en" >}}
 
 The image you downloaded is a relocatable and renamable file we recommend putting in a dedicated directory to easily find it. While it can be any directory, in this tutorial we will assume you put it in `$HOME/apptainer-images` :
 
