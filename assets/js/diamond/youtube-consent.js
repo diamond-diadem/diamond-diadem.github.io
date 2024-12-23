@@ -8,16 +8,17 @@ document.addEventListener('DOMContentLoaded', function () {
     const acceptBannerButton = cookieBanner?.querySelector('.accept');
     const declineBannerButton = cookieBanner?.querySelector('.decline');
     const closeBannerButton = cookieBanner?.querySelector('.close-banner');
+    const siteLanguage = document.documentElement.lang;
 
     // Vérifier si le consentement a déjà été donné
     const hasConsented = localStorage.getItem('youtubeConsent') === 'true';
 
     // Fonction pour charger une vidéo
-    function loadYouTubeVideo(container, videoId, language) {
+    function loadYouTubeVideo(container, videoId, siteLanguage) {
         container.innerHTML = `
             <iframe
                 class="tuto-video"
-                src="https://www.youtube-nocookie.com/embed/${videoId}?cc_lang_pref=${language}&cc_load_policy=1"
+                src="https://www.youtube-nocookie.com/embed/${videoId}&cc_lang_pref=${siteLanguage}&cc_load_policy=1"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>

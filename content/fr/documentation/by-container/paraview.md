@@ -24,7 +24,7 @@ Pour rapidement s'approprier les principales commandes d'Apptainer, vous pouvez 
     </div>
 </div> -->
 
-{{< video-with-consent id="_pphW6i0qSI?si=CuCRPPPjFi-uAkfI" lang="fr" >}}
+{{< video-with-consent id="_pphW6i0qSI?si=CuCRPPPjFi-uAkfI" >}}
 
 
 <!-- <iframe class="tuto-video" src="https://www.youtube-nocookie.com/embed/_pphW6i0qSI?si=CuCRPPPjFi-uAkfI&cc_lang_pref=fr&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
