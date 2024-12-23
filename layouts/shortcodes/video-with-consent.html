@@ -1,13 +1,13 @@
 {{ if site.Params.diamond.cookiesConsent }}
-<div class="youtube-video" data-video-id="{{ .Get "id" }}" language="{{ .Get "lang" }}">
-  <div class="youtube-placeholder {{ .Get "lang" }}">
+<div class="youtube-video" data-video-id="{{ .Get "id" }}" language="{{ i18n "language" }}">
+  <div class="youtube-placeholder {{ i18n "language" }}">
       <button class="popup-button">{{ i18n "cookies_consent" }}</button>
   </div>
 </div>
 {{ else }}
 <iframe
     class="tuto-video"
-    src="https://www.youtube-nocookie.com/embed/{{ .Get "id" }}&cc_lang_pref={{ .Get "lang" }}&cc_load_policy=1"
+    src="https://www.youtube-nocookie.com/embed/{{ .Get "id" }}&cc_lang_pref={{ i18n "language" }}&cc_load_policy=1"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>

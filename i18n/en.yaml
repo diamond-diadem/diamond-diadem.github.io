@@ -1,0 +1,28 @@
+language: en
+
+404_text: The page you are looking for doesn't exist or has been moved.
+404_title: Page not found :(
+ask_help: Ask for help
+browse: Browse
+chapter_next: Next
+chapter_previous: Prev
+cookies_consent: Consent to cookies
+edit_page: Edit this page on
+get_started: Example Guide
+last_updated: Last updated on
+location: in
+minute: minutes
+on_this_page: On this page
+reading_time: Estimated reading time
+search_cancel: Cancel
+search_close: to close
+search_loading: Loading search index…
+search_navigate: to navigate
+search_no_recent: No recent searches
+search_no_results: No results for
+search_placeholder: Search
+search_select: to select
+search_title: Search
+video_unsupported: Your browser doesn't support embedded videos, but don't worry,
+  you can <a href="{{ .RelPermalink }}">download it</a> and watch it with your favorite
+  video player!
