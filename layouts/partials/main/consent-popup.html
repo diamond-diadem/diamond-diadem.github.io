@@ -1,0 +1,44 @@
+{{ if eq $.Site.Language.LanguageName "FR" }}
+<div class="popup-overlay">
+  <div class="popup-dialog">
+      <p>
+          <strong>Ce site n'utilise aucun cookie à des fins de suivi ou d'analyse.</strong><br>
+          Toutefois, en visionnant les vidéos intégrées (tutoriels YouTube), des cookies tiers peuvent être déposés par YouTube. Nous avons réduit leur nombre en utilisant <em>youtube-nocookie.com</em>, mais certains cookies peuvent encore être utilisés, notamment :<br>
+          - <strong>Cookies de préférences :</strong> mémorisation des paramètres d'affichage.<br>
+          - <strong>Cookies analytiques :</strong> collecte de statistiques sur l'utilisation des vidéos.<br>
+          - <strong>Cookies publicitaires :</strong> personnalisation des annonces.<br>
+          Consultez la <a href="https://policies.google.com/privacy" target="_blank">politique de confidentialité de YouTube</a> pour plus d'informations.
+      </p>
+      <button class="accept">Accepter</button>
+      <button class="decline">Refuser</button>
+      <button class="close-popup" aria-label="Fermer">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+      </button>
+  </div>
+</div>
+{{ end }}
+{{ if eq $.Site.Language.LanguageName "EN" }}
+<div class="popup-overlay">
+  <div class="popup-dialog">
+      <p>
+          <strong>This site does not use cookies for tracking or analytics purposes.</strong><br>
+          However, by viewing the embedded videos (YouTube tutorials), third-party cookies may be set by YouTube. We have reduced their usage by employing <em>youtube-nocookie.com</em>, but some cookies may still be used, including:<br>
+          - <strong>Preference cookies:</strong> to remember your display settings.<br>
+          - <strong>Analytical cookies:</strong> to collect statistics about video usage.<br>
+          - <strong>Advertising cookies:</strong> to personalize ads.<br>
+          Please refer to <a href="https://policies.google.com/privacy" target="_blank">YouTube's Privacy Policy</a> for more information.
+      </p>
+      <button class="accept">Accept</button>
+      <button class="decline">Decline</button>
+      <button class="close-popup" aria-label="Close">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+      </button>
+  </div>
+</div>
+{{ end }}

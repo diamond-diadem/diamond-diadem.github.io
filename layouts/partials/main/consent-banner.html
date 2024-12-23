@@ -1,0 +1,50 @@
+{{ if eq $.Site.Language.LanguageName "FR" }}
+<div class="cookie-banner" style="display: none;">
+  <div class="cookie-banner-content">
+      <p>
+          <strong>Ce site n'utilise aucun cookie à des fins de suivi ou d'analyse.</strong><br>
+          Cependant, en visionnant les vidéos intégrées (tutoriels YouTube), des cookies tiers peuvent être déposés par YouTube. Nous avons réduit leur utilisation en employant <em>youtube-nocookie.com</em>, mais certains cookies peuvent encore être utilisés, notamment :<br>
+          - <strong>Cookies de préférences :</strong> pour mémoriser vos paramètres d'affichage.<br>
+          - <strong>Cookies analytiques :</strong> pour collecter des statistiques sur l'utilisation des vidéos.<br>
+          - <strong>Cookies publicitaires :</strong> pour personnaliser les annonces.<br>
+          Veuillez consulter la <a href="https://policies.google.com/privacy" target="_blank">politique de confidentialité de YouTube</a> pour plus d'informations.<br>
+          <strong>Si vous refusez, les tutoriels vidéo ne seront pas accessibles. Cependant, vous pourrez modifier votre choix ultérieurement si vous tentez de les visionner.</strong>
+      </p>
+      <div class="cookie-banner-actions">
+          <button class="accept">Accepter</button>
+          <button class="decline">Refuser</button>
+      </div>
+  </div>
+  <button class="close-banner" aria-label="Fermer">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+  </button>
+</div>
+{{ end }}
+{{ if eq $.Site.Language.LanguageName "EN" }}
+<div class="cookie-banner" style="display: none;">
+  <div class="cookie-banner-content">
+      <p>
+          <strong>This site does not use cookies for tracking or analytics purposes.</strong><br>
+          However, by viewing the embedded videos (YouTube tutorials), third-party cookies may be set by YouTube. We have reduced their usage by employing <em>youtube-nocookie.com</em>, but some cookies may still be used, including:<br>
+          - <strong>Preference cookies:</strong> to remember your display settings.<br>
+          - <strong>Analytical cookies:</strong> to collect statistics about video usage.<br>
+          - <strong>Advertising cookies:</strong> to personalize ads.<br>
+          Please refer to <a href="https://policies.google.com/privacy" target="_blank">YouTube's Privacy Policy</a> for more information.<br>
+          <strong>If you decline, the tutorial videos will not be accessible. However, you can revise your choice later if you attempt to view them.</strong>
+      </p>
+      <div class="cookie-banner-actions">
+          <button class="accept">Accept</button>
+          <button class="decline">Decline</button>
+      </div>
+  </div>
+  <button class="close-banner" aria-label="Close">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+  </button>
+</div>
+{{ end }}

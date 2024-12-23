@@ -1,5 +1,4 @@
 // Put your custom SCSS code here
-// @import "bootstrap/variables-dark";
 
 @import "diamond/logo-diamond";
 @import "diamond/responsive-about";
@@ -12,6 +11,7 @@
 @import "diamond/custom-alerts";
 @import "diamond/svg-inline";
 @import "diamond/custom-cards";
+@import "diamond/youtube-consent";
 
 
 @include color-mode(dark) {
@@ -566,6 +566,14 @@ u {
     opacity: 1;
 }
 
+.to-top-container {
+    z-index: 500;
+}
+
+// #totopbutton {
+//     z-index: 200;
+// }
+
 .docs-sidebar {
     border-right: none;
 }
@@ -606,15 +614,6 @@ u {
     margin-right: 1.35rem;
     margin-left: 0.7rem;
 }
-
-
-.tuto-video {
-    width: 100%;
-    aspect-ratio: 48 / 27;
-    margin-top: 1%;
-    margin-bottom: 2%;
-}
-
 
 .switch-color-mode-mobile {
     margin-left:auto;
@@ -871,3 +870,6 @@ label {
         width: 90%;
     }
 }
+ ////////////////////////////////
+
+
