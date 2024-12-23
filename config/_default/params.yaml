@@ -10,7 +10,7 @@ mainSections:
 diamond:
   enableNews: true
   sectionsIcons: false
-  cookiesConsent: true
+  cookiesConsent: false
 social:
   twitter: ""
 doks:
