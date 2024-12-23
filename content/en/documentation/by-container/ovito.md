@@ -18,11 +18,13 @@ To quickly grasp the main Apptainer commands, you can refer to [this tutorial](/
 
 {{< /callout >}}
 
-<div class="youtube-video" data-video-id="YE_r67OEEFg?si=t1ZbARrAwnFjFdYj" language="en">
+<!-- <div class="youtube-video" data-video-id="YE_r67OEEFg?si=t1ZbARrAwnFjFdYj" language="en">
     <div class="youtube-placeholder en">
         <button class="popup-button">Consent to cookies</button>
     </div>
-</div>
+</div> -->
+
+{{< video-with-consent id="YE_r67OEEFg?si=t1ZbARrAwnFjFdYj" lang="en" >}}
 
 <!-- <iframe class="tuto-video" src="https://www.youtube-nocookie.com/embed/YE_r67OEEFg?si=t1ZbARrAwnFjFdYj&cc_lang_pref=en&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
 

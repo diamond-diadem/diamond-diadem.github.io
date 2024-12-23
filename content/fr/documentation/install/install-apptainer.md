@@ -15,13 +15,18 @@ Enfin, ce tutoriel se concentre sur les versions en cours d'exploitation : si vo
 
 {{< /callout >}}
 
-<iframe class="tuto-video" src="https://www.youtube-nocookie.com/embed/0mDywp6CN30?si=ZbQDcgUXYLG1XuaU&cc_lang_pref=fr&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<!-- <iframe class="tuto-video" src="https://www.youtube-nocookie.com/embed/0mDywp6CN30?si=ZbQDcgUXYLG1XuaU&cc_lang_pref=fr&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+
+{{< video-with-consent id="0mDywp6CN30?si=ZbQDcgUXYLG1XuaU" lang="fr" >}}
 
 ## Installation de paquets Ubuntu
 
-<iframe class="tuto-video" src="https://www.youtube-nocookie.com/embed/ZACVgNrc-ek?si=HfbWtXnYIOD4RYNn&cc_lang_pref=fr&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<!-- <iframe class="tuto-video" src="https://www.youtube-nocookie.com/embed/ZACVgNrc-ek?si=HfbWtXnYIOD4RYNn&cc_lang_pref=fr&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+
+{{< video-with-consent id="ZACVgNrc-ek?si=HfbWtXnYIOD4RYNn" lang="fr" >}}
 
 ### Commande en une ligne
+
 Les commandes à lancer pour l'installation des paquets Ubuntu sont les suivantes :
 
 ```bash
@@ -33,6 +38,7 @@ sudo apt install -y apptainer
 ```
 
 ### Détail des étapes
+
 Pour installer directement les paquets Ubuntu pré-construits destinés aux architectures `amd64` et `arm64`, il faut pouvoir accéder aux *archives de paquets personnels* (Personal Package Archive - PPA) d'Apptainer.
 
 Dans un premier temps, il faut donc s'assurer d'avoir accès à la commande `add-apt-repository` :
@@ -52,9 +58,12 @@ sudo apt install -y apptainer
 
 ## Installation de paquets Debian
 
-<iframe class="tuto-video" src="https://www.youtube-nocookie.com/embed/6J1iYrv9gzU?si=ITbew-euDfzvng9a&cc_lang_pref=fr&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<!-- <iframe class="tuto-video" src="https://www.youtube-nocookie.com/embed/6J1iYrv9gzU?si=ITbew-euDfzvng9a&cc_lang_pref=fr&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+
+{{< video-with-consent id="6J1iYrv9gzU?si=ITbew-euDfzvng9a" lang="fr" >}}
 
 ### Commande en une ligne
+
 Les commandes à lancer pour l'installation des paquets Debian sont les suivantes :
 
 ```bash
@@ -66,6 +75,7 @@ sudo apt install -y ./apptainer_1.2.5_amd64.deb
 ```
 
 ### Détail des étapes
+
 Pour installer les paquets Debian pré-construits uniquement destinés aux architectures `amd64`, il faut accéder au dépôt GitHub contenant le paquet en installant `wget` :
 
 ```bash
@@ -83,9 +93,13 @@ sudo apt install -y ./apptainer_1.2.5_amd64.deb
 
 ## Installation RedHat, Fedora, CentOS
 
-<iframe class="tuto-video" src="https://www.youtube-nocookie.com/embed/OuMyAWsiDDY?si=wGEheMjehqcB8-X8&cc_lang_pref=fr&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<!-- <iframe class="tuto-video" src="https://www.youtube-nocookie.com/embed/OuMyAWsiDDY?si=wGEheMjehqcB8-X8&cc_lang_pref=fr&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
 
-<iframe class="tuto-video" src="https://www.youtube-nocookie.com/embed/BQXcLOYe5Hw?si=mP4gb6T4VzCqUSwB&cc_lang_pref=fr&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+{{< video-with-consent id="OuMyAWsiDDY?si=wGEheMjehqcB8-X8" lang="fr" >}}
+
+<!-- <iframe class="tuto-video" src="https://www.youtube-nocookie.com/embed/BQXcLOYe5Hw?si=mP4gb6T4VzCqUSwB&cc_lang_pref=fr&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+
+{{< video-with-consent id="BQXcLOYe5Hw?si=mP4gb6T4VzCqUSwB" lang="fr" >}}
 
 ### Paquets RPMs depuis GitHub
 À l'arrivée de chaque nouvelle version, un paquet RPM (RedHat Package Manager) est disponible sur GitHub :
@@ -110,7 +124,9 @@ sudo yum install -y apptainer
 
 ## Installation sans droits superutilisateur
 
-<iframe class="tuto-video" src="https://www.youtube-nocookie.com/embed/tAsmuzLtVZI?si=jy4qoLdFcQk0z-9J&cc_lang_pref=fr&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<!-- <iframe class="tuto-video" src="https://www.youtube-nocookie.com/embed/tAsmuzLtVZI?si=jy4qoLdFcQk0z-9J&cc_lang_pref=fr&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+
+{{< video-with-consent id="tAsmuzLtVZI?si=jy4qoLdFcQk0z-9J" lang="fr" >}}
 
 Pour les utilisateurs sans droits administrateurs sur leur machine, il est également possible de recourir à un script installant des binaires pré-construits, comprenant une variété d'utilitaires dont Apptainer dépend. Le script fonctionne pour les distributions dérivées de Red Hat Enterprise Linux, mais aussi pour Fedora, SUSE/OpenSUSE, Debian, et Ubuntu. Il est toutefois nécessaire d'avoir accès (via la variable `$PATH`) aux outils suivants : `curl` `rpm2cpio` `cpio`.
 

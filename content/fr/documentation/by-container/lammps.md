@@ -18,11 +18,11 @@ Pour rapidement s'approprier les principales commandes d'Apptainer, vous pouvez 
 
 {{< /callout >}}
 
-<div class="youtube-video" data-video-id="MheJO_FndWw?si=ASHe6wYhiFqR1te9" language="fr">
+<!-- <div class="youtube-video" data-video-id="MheJO_FndWw?si=ASHe6wYhiFqR1te9" language="fr">
     <div class="youtube-placeholder fr">
         <button class="popup-button">Consentement aux cookies</button>
     </div>
-</div>
+</div> -->
 
 {{< video-with-consent id="MheJO_FndWw?si=ASHe6wYhiFqR1te9" lang="fr" >}}
 

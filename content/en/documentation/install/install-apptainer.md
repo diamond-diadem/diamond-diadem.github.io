@@ -15,11 +15,15 @@ Finally, this tutorial focuses on currently supported versions: if you are using
 
 {{< /callout >}}
 
-<iframe class="tuto-video" src="https://www.youtube-nocookie.com/embed/0mDywp6CN30?si=ZbQDcgUXYLG1XuaU&cc_lang_pref=en&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<!-- <iframe class="tuto-video" src="https://www.youtube-nocookie.com/embed/0mDywp6CN30?si=ZbQDcgUXYLG1XuaU&cc_lang_pref=en&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+
+{{< video-with-consent id="0mDywp6CN30?si=ZbQDcgUXYLG1XuaU" lang="en" >}}
 
 ## Install Ubuntu packages
 
-<iframe class="tuto-video" src="https://www.youtube-nocookie.com/embed/ZACVgNrc-ek?si=HfbWtXnYIOD4RYNn&cc_lang_pref=en&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<!-- <iframe class="tuto-video" src="https://www.youtube-nocookie.com/embed/ZACVgNrc-ek?si=HfbWtXnYIOD4RYNn&cc_lang_pref=en&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+
+{{< video-with-consent id="ZACVgNrc-ek?si=HfbWtXnYIOD4RYNn" lang="en" >}}
 
 ### One liner command
 You can run the following commands to directly install Ubuntu packages :
@@ -52,7 +56,9 @@ sudo apt install -y apptainer
 
 ## Install Debian packages
 
-<iframe class="tuto-video" src="https://www.youtube-nocookie.com/embed/6J1iYrv9gzU?si=ITbew-euDfzvng9a&cc_lang_pref=en&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<!-- <iframe class="tuto-video" src="https://www.youtube-nocookie.com/embed/6J1iYrv9gzU?si=ITbew-euDfzvng9a&cc_lang_pref=en&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+
+{{< video-with-consent id="6J1iYrv9gzU?si=ITbew-euDfzvng9a" lang="en" >}}
 
 ### One liner command
 You can run the following commands to directly install Debian packages :
@@ -83,9 +89,13 @@ sudo apt install -y ./apptainer_1.2.5_amd64.deb
 
 ## Installation for RedHat, Fedora, CentOS
 
-<iframe class="tuto-video" src="https://www.youtube-nocookie.com/embed/OuMyAWsiDDY?si=wGEheMjehqcB8-X8&cc_lang_pref=en&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<!-- <iframe class="tuto-video" src="https://www.youtube-nocookie.com/embed/OuMyAWsiDDY?si=wGEheMjehqcB8-X8&cc_lang_pref=en&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
 
-<iframe class="tuto-video" src="https://www.youtube-nocookie.com/embed/BQXcLOYe5Hw?si=mP4gb6T4VzCqUSwB&cc_lang_pref=en&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+{{< video-with-consent id="OuMyAWsiDDY?si=wGEheMjehqcB8-X8" lang="en" >}}
+
+<!-- <iframe class="tuto-video" src="https://www.youtube-nocookie.com/embed/BQXcLOYe5Hw?si=mP4gb6T4VzCqUSwB&cc_lang_pref=en&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+
+{{< video-with-consent id="BQXcLOYe5Hw?si=mP4gb6T4VzCqUSwB" lang="en" >}}
 
 ### RPM packages from GitHub
 With each new version release, a RPM (RedHat Package Manager) package is available on GitHub :
@@ -110,7 +120,9 @@ sudo yum install -y apptainer
 
 ## Install without superuser privileges
 
-<iframe class="tuto-video" src="https://www.youtube-nocookie.com/embed/tAsmuzLtVZI?si=jy4qoLdFcQk0z-9J&cc_lang_pref=en&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<!-- <iframe class="tuto-video" src="https://www.youtube-nocookie.com/embed/tAsmuzLtVZI?si=jy4qoLdFcQk0z-9J&cc_lang_pref=en&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+
+{{< video-with-consent id="tAsmuzLtVZI?si=jy4qoLdFcQk0z-9J" lang="en" >}}
 
 For non-privileged users, a scripts is made available to install pre-built binaries together with several utilitaries mandatory to run Apptainer. The script works for Red Hat Enterprise Linux-derived systems, and also for Fedora, SUSE/OpenSUSE, Debian, and Ubuntu. It is however required to have access to `curl` `rpm2cpio` and `cpio` through the `$PATH` environment variable).
 
