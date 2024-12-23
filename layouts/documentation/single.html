@@ -68,6 +68,7 @@
 			</div>
 		{{ end }}
 	</div>
+	{{ if site.Params.diamond.cookiesConsent }}
 	{{ partial "main/consent-popup.html" . }}
-
+	{{ end }}
 {{ end }}
