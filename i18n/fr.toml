@@ -64,3 +64,6 @@ other= "Annuler"
 
 [location]
 other= "à"
+
+[cookies_consent]
+other = "Consentement aux cookies"
