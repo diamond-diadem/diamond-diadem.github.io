@@ -18,7 +18,15 @@ Pour rapidement s'approprier les principales commandes d'Apptainer, vous pouvez 
 
 {{< /callout >}}
 
-<iframe class="tuto-video" src="https://www.youtube-nocookie.com/embed/YE_r67OEEFg?si=t1ZbARrAwnFjFdYj&cc_lang_pref=fr&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<!-- <div class="youtube-video" data-video-id="YE_r67OEEFg?si=t1ZbARrAwnFjFdYj" language="fr">
+    <div class="youtube-placeholder fr">
+        <button class="popup-button">Consentement aux cookies</button>
+    </div>
+</div> -->
+
+{{< video-with-consent id="YE_r67OEEFg?si=t1ZbARrAwnFjFdYj" lang="fr" >}}
+
+<!-- <iframe class="tuto-video" src="https://www.youtube-nocookie.com/embed/YE_r67OEEFg?si=t1ZbARrAwnFjFdYj&cc_lang_pref=fr&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
 
 Cette image est un fichier relocalisable et renommable, qu'il est recommandé de placer dans un répertoire dédié pour facilement la retrouver ; celui-ci peut-être quelconque, et dans le cadre de ce tutoriel nous assumerons que vous l'avez placée dans un répertoire nommé `$HOME/apptainer-images` :
 
