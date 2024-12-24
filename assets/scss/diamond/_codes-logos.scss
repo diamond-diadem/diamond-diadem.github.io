@@ -112,12 +112,12 @@
 }
 
 .logo-plumed {
-    content: url(/images/plumed-light.png);
+    content: url(/images/codes/plumed/plumed-logo-light.svg);
     width: 50%;
 }
 @include color-mode(dark) {
     .logo-plumed {
-        content: url(/images/plumed-dark.png);
+        content: url(/images/codes/plumed/plumed-logo-dark.svg);
     }
 }
 
