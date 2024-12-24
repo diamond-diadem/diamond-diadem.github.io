@@ -85,12 +85,12 @@
 }
 
 .icon-opencalphad {
-  background-image: url(/images/opencalphad-icon-light.png);
+  background-image: url(/images/codes/opencalphad/opencalphad-icon-light.png);
   @extend .custom-icon;
 }
 @include color-mode(dark) {
   .icon-opencalphad {
-      background-image: url(/images/opencalphad-icon-dark.png);
+      background-image: url(/images/codes/opencalphad/opencalphad-icon-dark.png);
   }
 }
 
