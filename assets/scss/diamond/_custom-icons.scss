@@ -22,19 +22,18 @@
 }
 
 .icon-quantum-espresso {
-  background-image: url(/images/quantum-espresso-icon-light.png);
+  background-image: url(/images/codes/quantum-espresso/quantum-espresso-icon-light.png);
   @extend .custom-icon;
+}
+@include color-mode(dark) {
+  .icon-quantum-espresso {
+  background-image: url(/images/codes/quantum-espresso/quantum-espresso-icon-dark.png);
+  }
 }
 
 .icon-aiida {
   background-image: url(/images/aiida-logo.png);
   @extend .custom-icon;
-}
-
-@include color-mode(dark) {
-  .icon-quantum-espresso {
-  background-image: url(/images/quantum-espresso-icon-dark.png);
-  }
 }
 
 .icon-paraview {
