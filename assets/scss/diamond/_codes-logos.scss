@@ -22,11 +22,11 @@
 
 .logo-ovito {
     width: 100%;
-    content: url(/images/ovito-logo-light.png);
+    content: url(/images/codes/ovito/ovito-logo-light.png);
 }
 @include color-mode(dark) {
     .logo-ovito {
-        content: url(/images/ovito-logo-dark.png);
+        content: url(/images/codes/ovito/ovito-logo-dark.png);
     }
 }
 
