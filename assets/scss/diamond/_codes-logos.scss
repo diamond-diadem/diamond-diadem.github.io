@@ -103,11 +103,11 @@
 
 .logo-opencalphad {
     width: 100%;
-    content: url(/images/opencalphad-logo-light.png);
+    content: url(/images/codes/opencalphad/opencalphad-logo-light.svg);
 }
 @include color-mode(dark) {
     .logo-opencalphad {
-        content: url(/images/opencalphad-logo-dark.png);
+        content: url(/images/codes/opencalphad/opencalphad-logo-dark.svg);
     }
 }
 
