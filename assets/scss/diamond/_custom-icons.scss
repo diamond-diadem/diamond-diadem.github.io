@@ -100,22 +100,12 @@
 }
 
 .icon-plumed {
-  background-image: url(/images/plumed-icon-light.png);
+  background-image: url(/images/codes/plumed/plumed-icon-light.png);
   @extend .custom-icon;
 }
 @include color-mode(dark) {
   .icon-plumed {
-      background-image: url(/images/plumed-icon-dark.png);
-  }
-}
-
-.icon-plumed {
-  background-image: url(/images/plumed-icon-light.png);
-  @extend .custom-icon;
-}
-@include color-mode(dark) {
-  .icon-plumed {
-      background-image: url(/images/plumed-icon-dark.png);
+      background-image: url(/images/codes/plumed/plumed-icon-dark.png);
   }
 }
 
