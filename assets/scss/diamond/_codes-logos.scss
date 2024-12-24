@@ -73,11 +73,11 @@
 
 .logo-abinit {
     width: 100%;
-    content: url(/images/abinit/abinit-logo-light.svg);
+    content: url(/images/codes/abinit/abinit-logo-light.svg);
 }
 @include color-mode(dark) {
     .logo-abinit {
-        content: url(/images/abinit/abinit-logo-dark.svg);
+        content: url(/images/codes/abinit/abinit-logo-dark.svg);
     }
 }
 
@@ -103,11 +103,11 @@
 
 .logo-opencalphad {
     width: 100%;
-    content: url(/images/opencalphad-logo-light.png);
+    content: url(/images/codes/opencalphad/opencalphad-logo-light.svg);
 }
 @include color-mode(dark) {
     .logo-opencalphad {
-        content: url(/images/opencalphad-logo-dark.png);
+        content: url(/images/codes/opencalphad/opencalphad-logo-dark.svg);
     }
 }
 
@@ -137,19 +137,14 @@
 }
 
 .logo-raspa2 {
-    content: url(/images/raspa2/logo-raspa2.png);
+    content: url(/images/codes/raspa2/raspa2-logo.png);
     width: 50%;
 }
 
 .logo-opendis {
-    content: url(/images/opendis/opendis-logo.png);
+    content: url(/images/codes/opendis/opendis-logo.png);
     width: 60%;
 }
-// @include color-mode(dark) {
-//     .logo-opendis {
-//         content: url(/images/opendis/opendis-logo-dark.png);
-//     }
-// }
 
 .logo-xcrysden {
     width: 100%;
@@ -163,24 +158,18 @@
 
 .logo-wannier90 {
     width: 100%;
-    content: url(/images/wannier90/wannier90-logo-light.svg);
+    content: url(/images/codes/wannier90/wannier90-logo-light.svg);
 }
-@include color-mode(dark) {
-    .logo-wannier90 {
-        content: url(/images/wannier90/wannier90-logo-dark.svg);
-    }
-}
-
 
 // // NWChem logo // //
 
 .logo-nwchem {
     width: 100%;
-    content: url(/images/nwchem/nwchem-logo-light.png);
+    content: url(/images/codes/nwchem/nwchem-logo-light.png);
 }
 @include color-mode(dark) {
     .logo-nwchem {
-        content: url(/images/nwchem/nwchem-logo-dark.png);
+        content: url(/images/codes/nwchem/nwchem-logo-dark.png);
     }
 }
 
@@ -190,7 +179,7 @@
 
 .logo-fenics {
     width: 40%;
-    content: url(/images/fenics/fenics-logo.png);
+    content: url(/images/codes/fenics/fenics-logo.png);
 }
 
 // // END FEniCS logo END // //
@@ -199,7 +188,7 @@
 
 .logo-cp2k {
     width: 60%;
-    content: url(/images/cp2k/cp2k-logo.png);
+    content: url(/images/codes/cp2k/cp2k-logo.png);
 }
 
 // // END FEniCS logo END // //

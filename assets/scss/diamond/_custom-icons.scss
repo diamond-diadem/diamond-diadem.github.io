@@ -59,13 +59,13 @@
 }
 
 .icon-abinit {
-  background-image: url(/images/abinit/abinit-icon-light.png);
+  background-image: url(/images/codes/abinit/abinit-icon-light.png);
   @extend .custom-icon;
 }
 
 @include color-mode(dark) {
   .icon-abinit {
-      background-image: url(/images/abinit/abinit-icon-dark.png);
+      background-image: url(/images/codes/abinit/abinit-icon-dark.png);
   }
 }
 
@@ -85,12 +85,12 @@
 }
 
 .icon-opencalphad {
-  background-image: url(/images/opencalphad-icon-light.png);
+  background-image: url(/images/codes/opencalphad/opencalphad-icon-light.png);
   @extend .custom-icon;
 }
 @include color-mode(dark) {
   .icon-opencalphad {
-      background-image: url(/images/opencalphad-icon-dark.png);
+      background-image: url(/images/codes/opencalphad/opencalphad-icon-dark.png);
   }
 }
 
@@ -135,20 +135,14 @@
 }
 
 .icon-raspa2 {
-  background-image: url(/images/raspa2/icon-raspa2.png);
+  background-image: url(/images/codes/raspa2/raspa2-icon.png);
   @extend .custom-icon;
 }
 
 .icon-opendis {
-  background-image: url(/images/opendis/opendis-icon.png);
+  background-image: url(/images/codes/opendis/opendis-icon.png);
   @extend .custom-icon;
 }
-// @include color-mode(dark) {
-//   .icon-opendis {
-//     background-image: url(/images/opendis/opendis-icon-dark.png);
-//   }
-// }
-
 .icon-xcrysden {
   background-image: url(/images/xcrysden/xcrysden-icon-light.png);
   @extend .custom-icon;
@@ -160,37 +154,32 @@
 }
 
 .icon-wannier90 {
-  background-image: url(/images/wannier90/wannier90-icon-light.png);
+  background-image: url(/images/codes/wannier90/wannier90-icon-light.png);
   @extend .custom-icon;
-}
-@include color-mode(dark) {
-  .icon-wannier90 {
-    background-image: url(/images/wannier90/wannier90-icon-dark.png);
-  }
 }
 
 .icon-nwchem {
-  background-image: url(/images/nwchem/nwchem-icon.png);
+  background-image: url(/images/codes/nwchem/nwchem-icon.png);
   @extend .custom-icon;
 }
 
 .icon-fenics {
-  background-image: url(/images/fenics/fenics-icon.png);
+  background-image: url(/images/codes/fenics/fenics-icon.png);
   @extend .custom-icon;
 }
 
 .icon-cp2k {
-  background-image: url(/images/cp2k/cp2k-icon.png);
+  background-image: url(/images/codes/cp2k/cp2k-icon.png);
   @extend .custom-icon;
 }
 
 .icon-n2p2 {
-  background-image: url(/images/n2p2/n2p2-icon-light.png);
+  background-image: url(/images/codes/n2p2/n2p2-icon-light.png);
   @extend .custom-icon;
 }
 @include color-mode(dark) {
   .icon-n2p2 {
-    background-image: url(/images/n2p2/n2p2-icon-dark.png);
+    background-image: url(/images/codes/n2p2/n2p2-icon-dark.png);
   }
 }
 
