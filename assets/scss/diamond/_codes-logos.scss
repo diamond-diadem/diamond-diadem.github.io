@@ -32,11 +32,11 @@
 
 .logo-quantum-espresso {
     width: 100%;
-    content: url(/images/quantum-espresso-logo-light.png);
+    content: url(/images/codes/quantum-espresso/quantum-espresso-logo-light.png);
 }
 @include color-mode(dark) {
     .logo-quantum-espresso {
-        content: url(/images/quantum-espresso-logo-dark.png);
+        content: url(/images/codes/quantum-espresso/quantum-espresso-logo-dark.png);
     }
 }
 
