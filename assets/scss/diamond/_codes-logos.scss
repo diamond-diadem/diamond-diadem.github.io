@@ -53,11 +53,11 @@
 
 .logo-vesta {
     width: 100%;
-    content: url(/images/vesta-logo-light.png);
+    content: url(/images/codes/vesta/vesta-logo-light.svg);
 }
 @include color-mode(dark) {
     .logo-vesta {
-        content: url(/images/vesta-logo-dark.png);
+        content: url(/images/codes/vesta/vesta-logo-dark.svg);
     }
 }
 
