@@ -7,13 +7,13 @@ linkTitle: Containers
 
 <div align="justify">
 
-**What is a container?**
+### What is a container?
 
 - A container is a self-contained execution unit that encapsulates an application, as well as external libraries and other dependencies necessary for its execution.
 - It provides an isolated environment, ensuring that embedded applications function identically regardless of the host on which they are deployed.
 - It is a lightweight object, as it only includes what is necessary for its execution. It does not burden itself with a complete operating system, and the container communicates directly with the host machine's kernel to access hardware resources.
 
-**What are the benefits?**
+### What are the benefits?
 
 - **Portability:** containers encapsulate everything an application needs to run, ensuring that its execution is identical regardless of the operating system. This characteristic facilitates portability between development, testing, and production environments.
 - **Isolation:** each container is isolated from others and from the host, avoiding conflicts between dependencies and ensuring the security of the application.
