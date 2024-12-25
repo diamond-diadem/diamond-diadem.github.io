@@ -92,3 +92,67 @@ Et vous aurez accès à une version locale du site sur `localhost:1313`
 Cette version locale du site se mettra à jour à chaque modification des fichiers source, et vous permettra de tester vos contributions
 
 ### Pour un guide de contribution au site, consultez `CONTRIBUTING.md` à la racine du répertoire source
+
+## Structure du projet
+
+diamond-website
+
+├── .github
+│  └── workflows
+│     ├── deploy.yml
+│     └── protect-files.yml
+├── archetypeS
+├── assets
+│  ├── images
+│  ├── js
+│  │  └── ...
+│  ├── scss
+│  │  └── ...
+│  ├── svgs
+│  │  └── ...
+│  ├── cover.png
+│  ├── favicon.png
+│  └── ...
+├── config
+│  └── ...
+├── content
+│  ├── en
+|  |  └── ...
+│  └── fr
+│     ├── about
+│     │  └── ...
+│     ├── codes
+|     |  └── ...
+│     ├── contact
+│     ├── data
+│     ├── documentation
+│     │  └── ...
+│     ├── news
+│     └── workflows
+├── i18n
+├── layouts
+│  └── ...
+├── node_modules
+|  └── ...
+├── public
+|  └── ...
+├── static
+│  ├── downloads
+|  |  └── ...
+│  └── images
+|     └── ...
+├── .gitignore
+├── .gitpod.yml
+├── .hugo_build.lock
+├── .npmignore
+├── .npmrc
+├── .prettierignore
+├── .prettierrc.yaml
+├── CONTRIBUTING.md
+├── LICENSE
+├── README.EN.md
+├── README.FR.md
+├── hugo_stats.json
+├── netlify.toml
+├── package-lock.json
+└── package.json
