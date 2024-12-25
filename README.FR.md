@@ -95,8 +95,8 @@ Cette version locale du site se mettra à jour à chaque modification des fichie
 
 ## Structure du projet
 
+```markdown
 diamond-website
-
 ├── .github
 │  └── workflows
 │     ├── deploy.yml
@@ -156,3 +156,4 @@ diamond-website
 ├── netlify.toml
 ├── package-lock.json
 └── package.json
+```
