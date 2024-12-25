@@ -1,144 +1,17 @@
 ---
-title: CONTAINERISED CODES
-linkTitle: Home
-tablerIcon: "tabler-icons/outline/home"
-toc: false
+title: Partie 3
+weight: 3
 ---
 
-{{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
-
-In this section, you will be able to download Apptainer images for codes available on this website. For scientific computing as well as data visualisation
-
-{{< /callout >}}
-
-{{< callout context="tip" title="" icon="tabler-icons/outline/question-mark" >}}
-
-But to begin with, if you haven't gone through this step yet and if you're not familiar with using Apptainer, follow the links below to learn how to install Apptainer and interact with images.
-
-{{< /callout >}}
-
-<div align="justify">
-
-In the summer of 2023, the materials community was surveyed via LimeSurvey to identify working habits. Among other things, this highlighted a number of codes used for both computation and visualisation (see below). Currently, almost $40\%$ of the codes cited by the community are containerised and/or packaged, covering all physical scales.
-
-</div>
-
-<img alt="containerised codes" class="containerised-codes en mt-4" style="width:100%">
-
-<h3><u>USEFUL LINKS</u></h3>
-
-{{< link-card
-    title="Install Apptainer"
-    description="Take advantage of our tutorial"
-    href="/en/documentation/install/install-apptainer/"
-    icon="custom/apptainer"
->}}
-
-{{< link-card
-    title="Containers images"
-    description="Learn to use them"
-    href="/en/documentation/use/apptainer-image/"
-    icon="tabler-icons/outline/settings-question"
->}}
-
-<h3><u>AVAILABLE CODES</u></h3>
-
-<table>
-    <caption>
-        And more to be added!
-    </caption>
-    <thead>
-        <tr>
-            <th scope="col">Scientific Computing</th>
-            <th scope="col">Visualisation</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><a href="/en/codes/scientific-computing/lammps/"><i class="icon-lammps"></i>LAMMPS</a></td>
-            <td><a href="/en/codes/visualisation/ovito/"><i class="icon-ovito"></i>Ovito</a></td>
-        </tr>
-        <tr>
-            <td><a href="/en/codes/scientific-computing/quantum-espresso/"><i class="icon-quantum-espresso"></i>Quantum ESPRESSO</a></td>
-            <td><a href="/en/codes/visualisation/paraview/"><i class="icon-paraview"></i>ParaView</a></td>
-        </tr>
-        <tr>
-            <td><a href="/en/codes/scientific-computing/abinit/"><i class="icon-abinit"></i>Abinit</td>
-            <td><a href="/en/codes/visualisation/vesta/"><i class="icon-vesta"></i>VESTA</a></td>
-        </tr>
-        <tr>
-            <td><a href="/en/codes/scientific-computing/z-set/"><i class="icon-z-set"></i>Z-set</a></td>
-            <td><a href="/en/codes/visualisation/vmd/"><i class="icon-vmd"></i>VMD</a></td>
-        </tr>
-        <tr>
-            <td><a href="/en/codes/scientific-computing/freefem/"><i class="icon-freefem"></i>FreeFEM</a></td>
-            <td><a href="/en/codes/visualisation/xcrysden/"><i class="icon-xcrysden"></i>XCrySDen</a></td>
-        </tr>
-        <tr>
-            <td><a href="/en/codes/scientific-computing/opencalphad/"><i class="icon-opencalphad"></i>OpenCalphad</a></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td><a href="/en/codes/scientific-computing/neper/"><i class="icon-neper"></i>Neper</a></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td><a href="/en/codes/scientific-computing/plumed/"><i class="icon-plumed"></i>PLUMED</a></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td><a href="/en/codes/scientific-computing/gmsh/"><i class="icon-gmsh"></i>Gmsh</a></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td><a href="/en/codes/scientific-computing/zeo++/"><i class="icon-zeoplusplus"></i>Zeo++</a></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td><a href="/en/codes/scientific-computing/raspa2/"><i class="icon-raspa2"></i>RASPA2</a></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td><a href="/en/codes/scientific-computing/opendis/"><i class="icon-opendis"></i>OpenDiS</a></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td><a href="/en/codes/scientific-computing/wannier90/"><i class="icon-wannier90"></i>Wannier90</a></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td><a href="/en/codes/scientific-computing/nwchem/"><i class="icon-nwchem"></i>NWChem</a></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td><a href="/en/codes/scientific-computing/fenics/"><i class="icon-fenics"></i>FEniCS</a></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td><a href="/en/codes/scientific-computing/cp2k/"><i class="icon-cp2k"></i>CP2K</a></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td><a href="/en/codes/scientific-computing/n2p2/"><i class="icon-n2p2"></i>n2p2</a></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td><a href="/en/codes/scientific-computing/dftbplus/"><i class="icon-dftbplus"></i>DFTB+</a></td>
-            <td></td>
-        </tr>
-    </tbody>
-</table>
-
-<h3 align="center" class="mb-5">{{< inline-svg src="tabler-icons/outline/table-shortcut" class="svg-inline-shortcut">}}Shortcut: choose your code and retrieve it with Apptainer</h3>
-
+<h3 align="center" class="mb-5">{{< inline-svg src="tabler-icons/outline/table-shortcut" class="svg-inline-shortcut">}}Raccourci : choississez votre code et récupérez-le avec Apptainer</h3>
 <div class="container-pulls-large">
 
 <div class="row">
     <div class="col-6 col-diamond container-select container-select-1" align="left">
-        <label for="options1" style="font-size: larger;"><b>Scientific Computing</b></label>
+        <label for="options1" style="font-size: larger;"><b>Calcul Scientifique</b></label>
         <select class="form-select select-options" align="left" id="options1A">
-            <option value="option0" disabled="disabled" selected="selected" hidden="hidden">--- Select a code ---</option>
-            <optgroup label="Scientific Computing">
+            <option value="option0" disabled="disabled" selected="selected" hidden="hidden">--- Sélectionnez ---</option>
+            <optgroup label="Calcul Scientifique">
                 <option value="option1A">LAMMPS</option>
                 <option value="option2A">Quantum ESPRESSO</option>
                 <option value="option3A">Abinit</option>
@@ -163,7 +36,7 @@ In the summer of 2023, the materials community was surveyed via LimeSurvey to id
     <div class="col-6 col-diamond container-select container-select-2 container-rtl" align="right">
         <label for="options2" style="font-size: larger;"><b>Visualisation</b></label>
         <select class="form-select select-options" align="right" id="options2A">
-            <option value="option0" disabled="disabled" selected="selected" hidden="hidden">--- Select a code ---</option>
+            <option value="option0" disabled="disabled" selected="selected" hidden="hidden">--- Sélectionnez ---</option>
             <optgroup label="Visualisation">
                 <option value="optionaA">Ovito</option>
                 <option value="optionbA">ParaView</option>
@@ -303,6 +176,10 @@ apptainer pull dftbplus.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamon
 </div>
 
 <!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
 
 <div id="content-optionaA" class="hidden">
 
@@ -345,10 +222,10 @@ apptainer pull xcrysden.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamon
 <div class="container-pulls-small">
 
 <div class="col-6 col-diamond container-select container-select-1" align="left">
-    <label for="options1" style="font-size: larger;"><b>Scientific Computing</b></label>
+    <label for="options1" style="font-size: larger;"><b>Calcul Scientifique</b></label>
     <select class="form-select select-options" align="left" id="options1B">
-        <option value="option0" disabled="disabled" selected="selected" hidden="hidden">--- Select a code ---</option>
-        <optgroup label="Scientific Computing">
+        <option value="option0" disabled="disabled" selected="selected" hidden="hidden">--- Sélectionnez ---</option>
+        <optgroup label="Calcul Scientifique">
             <option value="option1B">LAMMPS</option>
             <option value="option2B">Quantum ESPRESSO</option>
             <option value="option3B">Abinit</option>
@@ -492,7 +369,7 @@ apptainer pull n2p2.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/ap
 ```
 
 </div>
-<div id="content-option17B" style="margin-top: -1rem;" class="hidden">
+<div id="content-option18B" style="margin-top: -1rem;" class="hidden">
 
 ```bash
 apptainer pull dftbplus.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/dftbplus.sif:latest
@@ -503,7 +380,7 @@ apptainer pull dftbplus.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamon
 <div class="col-6 col-diamond container-select container-select-2 container-rtl" align="right">
     <label for="options2" style="font-size: larger;"><b>Visualisation</b></label>
     <select class="form-select select-options" align="right" id="options2B">
-        <option value="option0" disabled="disabled" selected="selected" hidden="hidden">--- Select a code ---</option>
+        <option value="option0" disabled="disabled" selected="selected" hidden="hidden">--- Sélectionnez ---</option>
         <optgroup label="Visualisation">
             <option value="optionaB">Ovito</option>
             <option value="optionbB">ParaView</option>
