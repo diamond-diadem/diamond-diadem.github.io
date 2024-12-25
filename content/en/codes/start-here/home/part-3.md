@@ -1,5 +1,5 @@
 ---
-title: Partie 3
+title: Part 3
 weight: 3
 ---
 

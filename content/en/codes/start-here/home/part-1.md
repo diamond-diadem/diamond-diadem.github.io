@@ -1,6 +1,7 @@
 ---
-title: Partie 1
+title: Part 1
 weight: 1
+description: 
 ---
 
 {{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
