@@ -483,7 +483,37 @@ La traduction d'une langue à l'autre n'est pas gérée par Hugo, il faut tradui
 
 #### Par section
 
-##### A propos 
+##### "A propos"
+
+Information sur DIAMOND, DIADEM, les conteneurs, Apptainer, et Guix
+
+Dans la barre de navigation supérieure avec les sections, celle-ci est l'unique qui est sous forme de menu déroulant, donnant directement accès aux pages d'information citées ci-dessus.
+
+La structure de ces pages est plus complexe que la colonne que donnerait un pur Markdown.
+
+Aussi, un fichier `scss` dédié, `assets/diamond/_responsive-about.scss`, gère l'adaptation du layout de ces pages pour les différents formats d'écran.
+
+##### "Codes"
+
+C'est pour l'instant, avec "Documentation", le coeur du site web et de ce qu'il propose. Il contient une page d'accueil `codes/start-here/home`, et une page pour chaque code proposé sous forme conteneurisée par la plateforme. Ces pages de codes sont répartis entre `scientific-computing` et `visualisation`, selon la nature du code proposé.
+
+Voir `CONTRIBUTING.md` pour la démarche à faire pour ajouter un nouveau code.
+
+Cette démarchera passera par la mise à jour de la page d'accueil, qui fait l'inventaire des codes disponibles, et qui est séparée en trois fichiers Markdown pour plus de lisibilité et de facilité d'édition, compte tenu de la longueur du fichier total.
+
+```markdown
+start-here
+├── home
+│  ├── index.md
+│  ├── part-1.md
+│  ├── part-2.md
+│  └── part-3.md
+└── _index.md
+```
+
+##### Workflows
+
+...
 
 ### Dossier `assets/`
 
