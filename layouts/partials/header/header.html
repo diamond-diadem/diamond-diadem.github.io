@@ -150,6 +150,8 @@
         <ul class="navbar-nav flex-grow-1 align-self-center">
           {{- $current := . -}}
           {{- $section := $current.Section -}}
+          {{ $newsPages := where .Site.RegularPages "Section" "news" }}
+          {{ $displayNews := (ge (len ($newsPages)) 1) }}
           {{ range .Site.Menus.main -}}
             {{- $active := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) -}}
             {{- $active = or $active (eq .Name $current.Title) -}}
@@ -177,9 +179,18 @@
                 </ul>
               </li>
             {{ else -}}
+            {{ if $displayNews }}
               <li class="nav-item">
                 <a class="nav-link{{ if $active }} active{{ end }}" href="{{ .URL | absURL }}"{{ if $active }} aria-current="true"{{ end }}>{{ .Name }}</a>
               </li>
+            {{ else }}
+              {{ if  not (in .Identifier "news") }}
+              <li class="nav-item">
+                <a class="nav-link{{ if $active }} active{{ end }}" href="{{ .URL | absURL }}"{{ if $active }} aria-current="true"{{ end }}>{{ .Name }}</a>
+              </li>
+            {{ end }}
+            
+            {{ end }}
             {{ end -}}
           {{ end -}}
         </ul>

@@ -35,12 +35,14 @@ main:
   - name: Documentation
     url: documentation/start-here/home/
     weight: 50
-  # - name: Actualités
-  #   url: fr/news/
-  #   weight: 60
   - name: Contact
     url: contact/
+    weight: 60
+  - name: Actualités
+    url: news/
     weight: 70
+    identifier: news-fr
+
 
 
 # codes:
