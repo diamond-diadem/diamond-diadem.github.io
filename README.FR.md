@@ -252,7 +252,238 @@ Ce fichier a été créé automatiquement et n'a pas non plus été édité depu
 
 ### Dossier `content/`
 
-...
+Le dossier  `content/` contient les fichiers Markdown (`.md`), qui sont les fichiers source pour chaque page du site (excepté la page d'accueil qui est générée par `layouts/index.html`).
+
+Pour ajouter du contenu, c'est par ce dossier qu'il faut passer. Il est ensuite possible d'enrichir le contenu avec des feuilles de style `.scss`, la modification des `layouts` en `html`, et des scripts en `.js`.
+
+A noter que la ligne de configuration suivante, dans `markup.yaml`
+
+```yaml
+goldmark:
+  renderer:
+    unsafe: true
+```
+
+permet d'intégrer du code `html` au sein des fichiers Markdown. Ce qui est largement usité dans le cas de ce site web. Il est toutefois tout à fait possible de se cantonner à la syntaxe Markdown.
+
+#### Arborescence
+
+```markdown
+content
+├── en
+│  ├── about
+│  │  ├── apptainer
+│  │  │  └── _index.md
+│  │  ├── containers
+│  │  │  └── _index.md
+│  │  ├── diadem
+│  │  │  └── _index.md
+│  │  ├── diamond
+│  │  │  └── _index.md
+│  │  ├── guix
+│  │  │  └── _index.md
+│  │  └── _index.md
+│  ├── codes
+│  │  ├── scientific-computing
+│  │  │  ├── _index.md
+│  │  │  ├── abinit.md
+│  │  │  ├── cp2k.md
+│  │  │  ├── dftbplus.md
+│  │  │  ├── fenics.md
+│  │  │  ├── freefem.md
+│  │  │  ├── gmsh.md
+│  │  │  ├── lammps.md
+│  │  │  ├── n2p2.md
+│  │  │  ├── neper.md
+│  │  │  ├── nwchem.md
+│  │  │  ├── opencalphad.md
+│  │  │  ├── opendis.md
+│  │  │  ├── plumed.md
+│  │  │  ├── quantum-espresso.md
+│  │  │  ├── raspa2.md
+│  │  │  ├── wannier90.md
+│  │  │  ├── z-set.md
+│  │  │  └── zeo++.md
+│  │  ├── start-here
+│  │  │  ├── home
+│  │  │  │  ├── index.md
+│  │  │  │  ├── part-1.md
+│  │  │  │  ├── part-2.md
+│  │  │  │  └── part-3.md
+│  │  │  └── _index.md
+│  │  ├── visualisation
+│  │  │  ├── _index.md
+│  │  │  ├── ovito.md
+│  │  │  ├── paraview.md
+│  │  │  ├── vesta.md
+│  │  │  ├── vmd.md
+│  │  │  └── xcrysden.md
+│  │  └── _index.md
+│  ├── contact
+│  │  └── _index.md
+│  ├── data
+│  │  └── _index.md
+│  ├── documentation
+│  │  ├── by-container
+│  │  │  ├── _index.md
+│  │  │  ├── aiida.md
+│  │  │  ├── lammps.md
+│  │  │  ├── ovito.md
+│  │  │  ├── paraview.md
+│  │  │  ├── quantum-espresso.md
+│  │  │  └── vmd.md
+│  │  ├── freq_asked_questions
+│  │  │  ├── _index.md
+│  │  │  ├── apptainer-headnode.md
+│  │  │  └── apptainer-visu.md
+│  │  ├── install
+│  │  │  ├── _index.md
+│  │  │  ├── apptainer-windows.md
+│  │  │  ├── install-apptainer.md
+│  │  │  └── install-guix.md
+│  │  ├── start-here
+│  │  │  ├── _index.md
+│  │  │  └── home.md
+│  │  ├── use
+│  │  │  ├── _index.md
+│  │  │  ├── apptainer-image.md
+│  │  │  ├── apptainer-isolation-flags.md
+│  │  │  ├── apptainer-parallel.md
+│  │  │  ├── ask-help.md
+│  │  │  ├── container-num-cost.md
+│  │  │  └── guix-package.md
+│  │  └── _index.md
+│  ├── news
+│  │  ├── ag-diadem-2024
+│  │  │  ├── feature.jpg
+│  │  │  └── index.md
+│  │  ├── diadem-ia-numpex
+│  │  │  ├── feature.png
+│  │  │  └── index.md
+│  │  ├── _index.md
+│  │  └── cecam-workshop.md
+│  ├── workflows
+│  │  ├── saw
+│  │  │  ├── _index.md
+│  │  │  ├── description.md
+│  │  │  └── tutorial.md
+│  │  ├── start-here
+│  │  │  ├── _index.md
+│  │  │  └── home.md
+│  │  └── _index.md
+│  └── _index.md
+└── fr
+   ├── about
+   │  ├── apptainer
+   │  │  └── _index.md
+   │  ├── containers
+   │  │  └── _index.md
+   │  ├── diadem
+   │  │  └── _index.md
+   │  ├── diamond
+   │  │  └── _index.md
+   │  ├── guix
+   │  │  └── _index.md
+   │  └── _index.md
+   ├── codes
+   │  ├── scientific-computing
+   │  │  ├── _index.md
+   │  │  ├── abinit.md
+   │  │  ├── cp2k.md
+   │  │  ├── dftbplus.md
+   │  │  ├── fenics.md
+   │  │  ├── freefem.md
+   │  │  ├── gmsh.md
+   │  │  ├── lammps.md
+   │  │  ├── n2p2.md
+   │  │  ├── neper.md
+   │  │  ├── nwchem.md
+   │  │  ├── opencalphad.md
+   │  │  ├── opendis.md
+   │  │  ├── plumed.md
+   │  │  ├── quantum-espresso.md
+   │  │  ├── raspa2.md
+   │  │  ├── wannier90.md
+   │  │  ├── z-set.md
+   │  │  └── zeo++.md
+   │  ├── start-here
+   │  │  ├── home
+   │  │  │  ├── index.md
+   │  │  │  ├── part-1.md
+   │  │  │  ├── part-2.md
+   │  │  │  └── part-3.md
+   │  │  └── _index.md
+   │  ├── visualisation
+   │  │  ├── _index.md
+   │  │  ├── ovito.md
+   │  │  ├── paraview.md
+   │  │  ├── vesta.md
+   │  │  ├── vmd.md
+   │  │  └── xcrysden.md
+   │  └── _index.md
+   ├── contact
+   │  └── _index.md
+   ├── data
+   │  └── _index.md
+   ├── documentation
+   │  ├── by-container
+   │  │  ├── _index.md
+   │  │  ├── aiida.md
+   │  │  ├── lammps.md
+   │  │  ├── ovito.md
+   │  │  ├── paraview.md
+   │  │  ├── quantum-espresso.md
+   │  │  └── vmd.md
+   │  ├── freq_asked_questions
+   │  │  ├── _index.md
+   │  │  ├── apptainer-headnode.md
+   │  │  └── apptainer-visu.md
+   │  ├── install
+   │  │  ├── _index.md
+   │  │  ├── apptainer-windows.md
+   │  │  ├── install-apptainer.md
+   │  │  └── install-guix.md
+   │  ├── start-here
+   │  │  ├── _index.md
+   │  │  └── home.md
+   │  ├── use
+   │  │  ├── _index.md
+   │  │  ├── apptainer-image.md
+   │  │  ├── apptainer-isolation-flags.md
+   │  │  ├── apptainer-parallel.md
+   │  │  ├── ask-help.md
+   │  │  ├── container-num-cost.md
+   │  │  └── guix-package.md
+   │  └── _index.md
+   ├── news
+   │  ├── ag-diadem-2024
+   │  │  └── index.md
+   │  ├── diadem-ia-numpex
+   │  │  ├── feature.png
+   │  │  └── index.md
+   │  ├── _index.md
+   │  └── cecam-workshop.md
+   ├── workflows
+   │  ├── saw
+   │  │  ├── _index.md
+   │  │  ├── description.md
+   │  │  └── tutorial.md
+   │  ├── start-here
+   │  │  ├── _index.md
+   │  │  └── home.md
+   │  └── _index.md
+   └── _index.md
+```
+
+Cette arborescence montre comment s'organise le contenu du site, par sections, et divisé en deux versions miroirs l'une de l'autre, l'une pour le contenu en français (`content/fr`), et l'autre pour le même contenu en anglais.
+
+En visitant le site, on dispose d'un sélecteur de langue qui permet de passer entre les deux versions (française et anglaise) d'une page.
+
+La traduction d'une langue à l'autre n'est pas gérée par Hugo, il faut traduire à la main ou utiliser des outils tiers
+
+#### Par section
+
+##### A propos 
 
 ### Dossier `assets/`
 
