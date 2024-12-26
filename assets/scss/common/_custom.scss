@@ -877,3 +877,59 @@ label {
     display: flex;
     flex-direction: column;
 }
+
+// .card-news-homepage {
+    
+//     // border: none;
+//     border-radius: 45px;
+// }
+
+.card-news-homepage {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), var(--bg-image);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 45px;
+    margin-bottom: 5%;
+    // 
+    position: relative;
+    padding-inline: 10%;    
+}
+
+@include color-mode(dark) {
+    .card-news-homepage {
+        background-image: linear-gradient(rgba(44, 44, 44, 0.6), rgba(44, 44, 44, 0.6)), var(--bg-image);
+        border-color: white;
+    }
+}
+
+.stretched-link::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      content: "";
+      //
+      border-radius: inherit;   
+}
+
+// .stretched-link {
+//     border-radius: inherit;
+// }
+
+.br-inherit {
+    border-radius: inherit;
+}
+
+.container-news-homepage {
+    margin-bottom: 3%;
+}
