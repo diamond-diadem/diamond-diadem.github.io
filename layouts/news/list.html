@@ -15,7 +15,7 @@
       {{ else -}}
         <h1 class="text-center" style="margin-bottom: 5%;">{{ .Title }}</h1>
       {{ end -}}
-      {{ with .Params.summary -}}<p class="lead text-center">{{ . }}</p>{{ end -}}
+      {{/*  {{ with .Params.summary -}}<p class="lead text-center">{{ . }}</p>{{ end -}}  */}}
       {{ with .Content -}}<div class="text-center">{{ . }}</div>{{ end -}}
     </div>
   </div>

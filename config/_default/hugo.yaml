@@ -1,7 +1,5 @@
 title: DIAMOND
 baseurl: http://localhost/
-# baseurl: https://diamond-diadem@github.io/
-# canonifyURLs: true
 canonifyURLs: false
 disableAliases: false
 disableHugoGeneratorInject: true
@@ -10,7 +8,7 @@ enableGitInfo: false
 enableRobotsTXT: true
 languageCode: fr-FR
 pagination:
-  pagerSize: 10
+  pagerSize: 3
 rssLimit: 10
 summarylength: 50
 defaultContentLanguage: fr
@@ -42,7 +40,7 @@ outputFormats:
     noUgly: true
     rel: sitemap
 sitemap:
-  changefreq: monthly
+  changefreq: daily
   filename: sitemap.xml
   priority: 0.5
 caches:
