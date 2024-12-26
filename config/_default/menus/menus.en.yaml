@@ -35,9 +35,11 @@ main:
   - name: Documentation
     url: en/documentation/start-here/home/
     weight: 50
-  # - name: News
-  #   url: en/news/
-  #   weight: 60
   - name: Contact
     url: en/contact/
+    weight: 60
+  - name: News
+    url: en/news/
     weight: 70
+    identifier: news-en
+
