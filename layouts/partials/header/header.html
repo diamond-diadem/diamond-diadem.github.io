@@ -3,11 +3,11 @@
 {{ end -}}
 
 {{ if site.Params.doks.navbarSticky -}}
-<div class="sticky-top">
+  <div class="sticky-top">
 {{ end -}}
 
 {{ if site.Params.doks.headerBar -}}
-<div class="header-bar"></div>
+  <div class="header-bar"></div>
 {{ end -}}
 
 <header class="navbar navbar-expand-lg">
@@ -18,7 +18,9 @@
   {{ end -}}
 
     <!-- Site title -->
-    <a class="navbar-brand me-auto me-lg-3" href="{{ relLangURL "" }}"><img class="diamond in-navbar"/> {{ .Site.Title }}</a>
+    <a class="navbar-brand me-auto me-lg-3" href="{{ relLangURL "" }}">
+      <img class="diamond in-navbar"/> {{ .Site.Title }}
+    </a>
 
 
     {{/*  {{ if eq site.Params.doks.multilingualMode true -}}
