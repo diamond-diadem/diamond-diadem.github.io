@@ -511,30 +511,42 @@ u {
 
 @include media-breakpoint-only(lg) {
     .navbar-brand {
-        font-size: 90%; //$font-size-md;
+        font-size: 80%; //$font-size-md;
     }
 
     .nav-item {
-        font-size: 88%;//$font-size-base;
+        font-size: 85%;//$font-size-base;
     }
 
     .diamond.in-navbar {
-        height: 45px;
+        height: 40px;
     }
 
     .logo-france2030-desktop {
-        height: 65px;
+        height: 55px;
     }
 
     .icon-tabler-search,
     .icon-tabler-moon,
     .icon-tabler-sun,
     .icon-tabler-chevron-down {
-        width: 18px;
+        width: 16px;
     }
 
+    // .switch-language-desktop,
+    // .switch-color-mode-desktop,
+    // .search-desktop {
+    //     display: inline-flex;
+    //     align-items: center;
+    //     justify-self: right;
+    // }
+    .dropdown-languages {
+        width: 70px;
+    }
+
+
     .current-language-display {
-        font-size: 88%;
+        font-size: 85%;
     }
 
     .dropdown-item {
