@@ -7,6 +7,7 @@ mainSections:
   - codes
   - documentation
   - workflows
+  - news
 diamond:
   enableNews: true
   sectionsIcons: false
@@ -19,8 +20,8 @@ doks:
   navbarSticky: true
   containerBreakpoint: fluid
   navBarButton: false
-  navBarButtonUrl: /docs/prologue/introduction/
-  navBarButtonText: Demander de l'aide
+  # navBarButtonUrl: /docs/prologue/introduction/
+  # navBarButtonText: ""
   flexSearch: true
   searchExclKinds: []
   searchExclTypes: []
@@ -55,7 +56,7 @@ doks:
   editPage: false
   lastMod: false
   repoHost: GitHub
-  docsRepo: https://github.com/h-enk/doks
+  docsRepo: https://github.com/diamond-diadem/diamond-diadem.github.io
   docsRepoBranch: main
   docsRepoSubPath: ""
   menu:
@@ -100,13 +101,13 @@ seo:
   schemas:
     type: Organization
     logo: favicon-512x512.png
-    name: Hyas
+    name: DIAMOND
     sameAs: []
     images:
       - /cover-diamond.png
     article: []
     newsArticle: []
     blogPosting:
-      - blog
+      - news
     product: []
 math: true
