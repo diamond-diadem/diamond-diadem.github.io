@@ -23,8 +23,7 @@ doks:
   navBarButtonText: Demander de l'aide
   flexSearch: true
   searchExclKinds: []
-  searchExclTypes:
-    - blog
+  searchExclTypes: []
   showSearch: []
   indexSummary: false
   showDate: false

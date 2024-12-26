@@ -150,7 +150,7 @@
             {{ if .Params.Homepage }}
             {{ $i = add $i 1}}
               <style>
-                .news-card-homepage-{{ $i }}::before {
+                .news-card-homepage.{{ $i }}::before {
                   background-image: url({{ .Params.backgroundImage }});
                 }
               </style>
