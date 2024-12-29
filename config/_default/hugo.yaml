@@ -35,12 +35,12 @@ outputFormats:
   SITEMAP:
     mediaType: application/xml
     baseName: sitemap
-    isHTML: false
-    isPlainText: true
+    isHTML: true
+    isPlainText: false
     noUgly: true
     rel: sitemap
 sitemap:
-  changefreq: daily
+  changefreq: weekly
   filename: sitemap.xml
   priority: 0.5
 caches:
