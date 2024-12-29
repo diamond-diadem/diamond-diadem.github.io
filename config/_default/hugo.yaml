@@ -35,7 +35,7 @@ outputFormats:
   SITEMAP:
     mediaType: application/xml
     baseName: sitemap
-    isHTML: true
+    isHTML: false
     isPlainText: false
     noUgly: true
     rel: sitemap
