@@ -5,8 +5,8 @@
     opacity: {{ .Params.backgroundOpacity }};
   }
 </style>
-<div class=" news-page wrap container-{{ site.Params.doks.containerBreakpoint | default "lg" }}" role="document">
-<div class="content">
+<div class="news-page wrap container-{{ site.Params.doks.containerBreakpoint | default "lg" }}" role="document">
+  <div class="content">
 {{ if and (eq site.Params.doks.containerBreakpoint "fluid") (or (not (in .Site.Params.mainSections .Type)) (.IsNode)) }}<div class="container p-0">{{ end }}
 <article>
   <div class="row justify-content-center">

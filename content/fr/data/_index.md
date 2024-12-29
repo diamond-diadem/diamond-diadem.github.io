@@ -21,3 +21,5 @@ Développement de la plateforme de base de données : <a class="contact-mailto" 
 <h3>
 Ontologie : <a class="contact-mailto" href="mailto:cinthya.herreracontreras@cea.fr">cinthya.herreracontreras@cea.fr</a>
 </h3>
+
+</div>
