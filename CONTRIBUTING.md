@@ -1,32 +1,33 @@
 # Contributing to the DIAMOND website
-## This file is intented to be read in its source form
-## Contributing to the documentation
+<!-- ## This file is intented to be read in its source form -->
+<!-- ## Contributing to the documentation
 ### A few rules
-#### Write a markdown file
-##### Code
+#### Write a markdown file -->
+## Markdown
 
-- inline: `snippet of code` between 2 backticks ``
-- block: between 3 backticks ``` before and after
-  - but please precise language, for example "```python "
+### Syntax reference
 
-  ```python
-  import numpy as np
-  a = np.ones((100, 100))
-  ```
+- [**Basics**](https://getdoks.org/docs/reference/markdown-basic-syntax/)
 
-  - in case of command lines for  a terminal, precise " ```bash "
-  for on the website, the code block takes the form of a console
+- [**Extended**](https://getdoks.org/docs/reference/markdown-extended-syntax/)
 
-  ```bash
-  sudo apt update
-  sudo apt upgrade
-  ```
+### Math
 
-##### Math
-The website is now set up to accept "$ $" as delimiters for LaTeX syntax for inline math.
-For equation as a block : use " $$ $$ " delimiters
+The website is now configured to accept `$...$` as delimiters for LaTeX syntax for inline math.
+For equation as a block : use
 
-##### Links
+```markdown
+$$
+(...)
+$$
+```
+
+## Youtube videos integration (tutorials)
+
+Use Diamond custom shortcode `{{< video-with-consent >}}`
+
+
+<!-- ##### Links
 For links to another website, obviously put the url of the page you want.
 
 Only one thing, if you want the linked page to open in another tab and not to replace the actual code, use html instead of markdown (but in the markdown file)
@@ -39,9 +40,9 @@ For a ref to another page of the website, the adress to write down is the part i
 
 For example, to link to https://diamond-diadem.github.io/en/codes/visualisation/paraview/,
 
-write [ParaView](/en/codes/visualisation/paraview/)
+write [ParaView](/en/codes/visualisation/paraview/) -->
 
-##### Videos
+<!-- ##### Videos
 
 To embed a video from youtube (video tutorials by Dylan: Diamond-DIADEM youtube channel) :
 
@@ -58,4 +59,4 @@ To embed a video from youtube (video tutorials by Dylan: Diamond-DIADEM youtube 
 <iframe class="tuto-video" src="https://www.youtube.com/embed/OuMyAWsiDDY?si=wGEheMjehqcB8-X8&cc_lang_pref=fr&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 ```
 
-##### That's about it
+##### That's about it -->
