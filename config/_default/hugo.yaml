@@ -73,6 +73,3 @@ imaging:
   hint: photo
   quality: 85
   resampleFilter: Lanczos
-
-services:
-  services.googleAnalytics: ID = 'G-1G3K8JZG98'
