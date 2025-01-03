@@ -24,8 +24,13 @@ $$
 
 ## Youtube videos integration (tutorials)
 
-Use Diamond custom shortcode `{{< video-with-consent >}}`
+Use Diamond custom shortcode `{{< video-with-consent id="{video-id}" >}}` where `{video-id}` is the YouTube identifier of the video you want to integrate. The URL of the video should be: `https://www.youtube.com/watch?v={video-id}`.
 
+### The shortcode takes of the rest
+
+- Turn on privacy-enhanced mode: use of `youtube-no-cookie.com`
+- Cookies Consent Management (if enabled in `config/`)
+- Subtitles language adapts to page language
 
 <!-- ##### Links
 For links to another website, obviously put the url of the page you want.
