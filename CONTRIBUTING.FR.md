@@ -26,13 +26,13 @@ Pour intégrer une vidéo YouTube, utilisez le shortcode personnalisé Diamond :
 {{< video-with-consent id="{video-id}" >}}
 ```
 
-Remplacez `{video-id}` par l'identifiant YouTube de la vidéo. L'URL de la vidéo doit suivre le format : `https://www.youtube.com/watch?v={video-id}`.
+Remplacez `{video-id}` par l'identifiant YouTube de la vidéo. Pour l'obtenir, sur la page de la vidéo YouTube, cliquez sur le bouton "Partager" et copiez le lien de type `https://youtu.be/{video-id}`.
 
 ### Fonctionnalités du shortcode
 
 - Maintient un ratio d'aspect fixe (48:27) avec une largeur de 100 % pour une adaptabilité optimale.
 - Active le mode renforcé de confidentialité via `youtube-no-cookie.com`.
-- Intègre la gestion du consentement des cookies (si configuré dans `config/`).
+- Intègre la gestion du consentement des cookies (si configurée dans `config/`).
 - Adapte automatiquement la langue des sous-titres à celle de la page.
 
 ## Liens
@@ -65,20 +65,41 @@ Exemple : pour lier `https://diamond-diadem.github.io/codes/visualisation/paravi
 
 ## Images
 
-Placez l'image que vous souhaitez ajouter(pour l'exemple, `image.png`) dans le dossier `/static/images/` du répertoire source du site.
+Placez l'image que vous souhaitez ajouter (par exemple, `image.png`) dans le dossier `static/images/` du répertoire source du site.
 
-La syntaxe Markdown de base pour intégrer une image est alors
+La syntaxe Markdown de base pour intégrer une image est :
 
 ```markdown
-![alt text for the image](/images/image.png)
+![Description alternative de l'image](/images/image.png)
 ```
 
- et en HTML
+En HTML, utilisez :
 
- ```html
-<img alt="alt text for the image" src="/images/image.png"/>   
- ```
+```html
+<img alt="Description alternative de l'image" src="/images/image.png"/>   
+```
 
-### Adapter au mode couleur
+### Adapter les images aux thèmes clair/sombre
 
+Si une image doit être adaptée pour les thèmes clair et sombre, créez deux fichiers : `image-light.png` et `image-dark.png` dans `static/images`.
 
+Ensuite, utilisez :
+
+```html
+<img alt="Description alternative de l'image" class="custom-image">
+```
+
+Ajoutez ce code dans `assets/scss/_custom.scss` :
+
+```scss
+.custom-image {
+    content: url(/images/image-light.png);
+}
+@include color-mode(dark) {
+    .custom-image {
+        content: url(/images/image-dark.png);
+    }
+}
+```
+
+Ainsi, l'image s'adapte automatiquement au thème choisi par l'utilisateur.
