@@ -1,1 +1,2 @@
-default-src 'none';script-src 'self' www.googletagmanager.com/gtag/js; connect-src www.google-analytics.com;
+/*
+  Content-Security-Policy: default-src 'none'; script-src 'self' www.googletagmanager.com/gtag/js; connect-src www.google-analytics.com;
