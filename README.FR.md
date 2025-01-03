@@ -533,12 +533,14 @@ Ce qui a été fait à cette occasion :
 - Ajouter à `layouts/partials/head/head.html` :
   
   ```html
-  <meta http-equiv="Content-Security-Policy" content="
+    <meta http-equiv="Content-Security-Policy" content="
     default-src 'none'; 
-    script-src 'self' www.googletagmanager.com/gtag/js; 
-    connect-src www.google-analytics.com; 
+    script-src 'self' www.googletagmanager.com/gtag/js www.youtube.com www.youtube-nocookie.com; 
+    connect-src www.google-analytics.com www.youtube.com www.youtube-nocookie.com; 
+    frame-src www.youtube.com www.youtube-nocookie.com; 
     style-src 'self' 'unsafe-inline'; 
-    img-src 'self' data: https:;">
+    img-src 'self' data: https: www.youtube.com; 
+    media-src www.youtube.com www.youtube-nocookie.com;">
   ```
 
   à la fin de la balise `<head>`. Cette balise est donnée par [cette page, donnée sur thulite.io](https://content-security-policy.com/examples/google-analytics/). Puis corrigée par ChatGPT, pour que cette balise ne fasse pas disparaître les images du site (!)
