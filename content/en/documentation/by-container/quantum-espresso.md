@@ -24,7 +24,7 @@ To have a quick look at Apptainer's main commands, you may refer to [this tutori
     </div>
 </div> -->
 
-{{< video-with-consent id="8oKKGG0hy6A" >}}
+{{< video-with-consent id="8oKKGG0hy6A?si=1duVepl_lWvG24fC" >}}
 
 <!-- <iframe class="tuto-video" src="https://www.youtube-nocookie.com/embed/8oKKGG0hy6A?si=1duVepl_lWvG24fC&cc_lang_pref=en&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
 
