@@ -530,32 +530,28 @@ start-here
 Ce qui a été fait à cette occasion :
 
 - Créer compte sur [analytics.google.com](https://analytics.google.com)
-- Ajouter à `layouts/partials/head/head.html` :
+- Puis, dans `layouts/partials/head/script-header.html`
   
   ```html
-    <meta http-equiv="Content-Security-Policy" content="
-    default-src 'none'; 
-    script-src 'self' www.googletagmanager.com/gtag/js www.youtube.com www.youtube-nocookie.com; 
-    connect-src www.google-analytics.com www.youtube.com www.youtube-nocookie.com; 
-    frame-src www.youtube.com www.youtube-nocookie.com; 
-    style-src 'self' 'unsafe-inline'; 
-    img-src 'self' data: https: www.youtube.com; 
-    media-src www.youtube.com www.youtube-nocookie.com;">
+  {{ if site.Params.diamond.googleAnalytics }}
+    {{ template "_internal/google_analytics.html" . }}
+  {{ end }}
   ```
 
-  à la fin de la balise `<head>`. Cette balise est donnée par [cette page, donnée sur thulite.io](https://content-security-policy.com/examples/google-analytics/). Puis corrigée par ChatGPT, pour que cette balise ne fasse pas disparaître les images du site (!)
-- Puis à la fin du document, juste après la balise `<head>` :
+- Dans `config/_default/hugo.yaml`, ajout de
   
-  ```html
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1G3K8JZG98"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-1G3K8JZG98');
-  </script>
+  ```yaml
+    services:
+      googleAnalytics:
+        ID: 'G-1G3K8JZG98' # tag google analytics du site
   ```
 
-Avec ça, la configuration semble fonctionnelle. A voir si cela fonctionne (tableau de bord Google Analytics). Et penser à ajuster le Cookies Consent Management aux nouveaux cookies générés par Googe Analytics.
+- Dans `config/_default/params.yaml`, ajout d'une ligne
+
+  ```yaml
+  diamond:
+    google_analytics: true
+  ```
+
+  Avec cela, cela fonctionne, on peut suivre le trafic sur [analytics.google.com](analytics.google.com)
+  **TODO : Consentement aux cookies**
