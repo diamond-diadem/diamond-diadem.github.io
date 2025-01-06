@@ -17,7 +17,7 @@ pages:
     - dpkg -i hugo.deb
     - npm ci
   script:
-    - npm run build # to change
+    - npm run preview # to change ?
   artifacts:
     paths:
       - public/website/staging
