@@ -11,7 +11,7 @@ mainSections:
 diamond:
   enableNews: true
   sectionsIcons: false
-  cookiesConsent: false
+  cookiesConsent: true
   googleAnalytics: true
 social:
   twitter: ""
