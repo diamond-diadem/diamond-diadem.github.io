@@ -17,17 +17,10 @@ pages:
     - dpkg -i hugo.deb
     - npm ci
   script:
-    - hugo --minify --gc -d public/website/staging
+    - npm run build # to change
   artifacts:
     paths:
       - public/website/staging
   only:
-<<<<<<< HEAD
-<<<<<<< HEAD
     - staging
-=======
-    - staging
->>>>>>> e0936615 (Update gitlab-ci.yml)
-=======
-    - staging
->>>>>>> eb7fcc8c (False edit .gitlab-ci.yml - redeploy staging website)
+
