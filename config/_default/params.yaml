@@ -12,7 +12,7 @@ diamond:
   enableNews: true
   sectionsIcons: false
   cookiesConsent: true
-  googleAnalytics: true
+  googleAnalytics: false
 social:
   twitter: ""
 doks:
