@@ -10,4 +10,14 @@ $link-color-dark: #b3c7ff;
 $body-color-dark: hsl(224, 6%, 85%);
 $navbar-dark-color: $body-color-dark;
 
-// $stretched-link-pseudo-element: after;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 1000px, // default 992px
+  xl: 1220px, // default 1200px
+  xxl: 1400px
+); // !default;
+
+@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
+@include _assert-starts-at-zero($grid-breakpoints, "$grid-breakpoints");
