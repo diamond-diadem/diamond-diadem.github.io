@@ -17,7 +17,7 @@ $grid-breakpoints: (
   lg: 1000px, // default 992px
   xl: 1220px, // default 1200px
   xxl: 1400px
-); // !default;
+);
 
 @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
 @include _assert-starts-at-zero($grid-breakpoints, "$grid-breakpoints");
