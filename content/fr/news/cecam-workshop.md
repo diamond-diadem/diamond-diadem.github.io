@@ -2,7 +2,7 @@
 title: "Atelier phare du CECAM"
 description: ""
 summary: "Potentiels Interatomiques par Apprentissage Machine, et Bases de Données Accessibles"
-eventDate: "du 9 au 11 septembre 2024"
+eventDate: "9-11 septembre 2024"
 backgroundImage: "/images/news/backgrounds/background-cecam-workshop.jpg"
 backgroundOpacity: 0.18
 # location: "Paris"
