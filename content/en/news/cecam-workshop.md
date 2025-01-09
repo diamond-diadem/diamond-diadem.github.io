@@ -3,6 +3,8 @@ title: "CECAM Flagship Workshop"
 description: ""
 summary: "Machine Learning Interatomic Potentials and Accessible Databases"
 eventDate: "September 9 - September 11, 2024"
+backgroundImage: "/images/news/backgrounds/background-cecam-workshop.jpg"
+backgroundOpacity: 0.18
 # location: "Paris"
 # publishDate: 2024-11-18
 # lastmod: 2024-02-06T09:24:27+01:00
@@ -23,7 +25,7 @@ seo:
 
 ## Machine Learning Interatomic Potentials and Accessible Databases
 
-### <a href="https://www.cecam.org/workshop-details/machine-learning-interatomic-potentials-and-accessible-databases-1313">CECAM web page for the event</a>
+### <a href="https://www.cecam.org/workshop-details/machine-learning-interatomic-potentials-and-accessible-databases-1313" class="d-flex">CECAM web page for the event{{< inline-svg src="tabler-icons/outline/external-link" class="svg-inline-end" >}}</a>
 
 ### Organisers
 
@@ -49,7 +51,7 @@ Machine Learning Interatomic Potentials (MLIPs) have positioned themselves as a 
 - **Thierry DEUTSCH** <a href="/downloads/2024-09-CECAM-Workshop/slides-deutsch-2024-09-11-CECAM-workshop.pdf" target="_blank">Setting up data tools as part of the DIADEM program</a>
 - **Kristjan EIMRE** <a href="/downloads/2024-09-CECAM-Workshop/slides-eimre-2024-09-11-CECAM-workshop.pdf" target="_blank">Generating and publishing datasets using AiiDA and Materials Cloud</a>
 
-#### <a href="/downloads/2024-09-CECAM-Workshop/cecam-workshop-photos.zip">Download photos from the event</a>
+<h4 class="mb-n2"><a href="/downloads/2024-09-CECAM-Workshop/cecam-workshop-photos.zip" class="d-flex">Download photos from the event{{< inline-svg src="tabler-icons/outline/camera-spark" class="svg-inline-end" >}}</a></h4>
 
 Taken by Joao Paulo Almeida De Mendonca
 
