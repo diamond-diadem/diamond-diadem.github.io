@@ -3,6 +3,8 @@ title: "Atelier phare du CECAM"
 description: ""
 summary: "Potentiels Interatomiques par Apprentissage Machine, et Bases de Données Accessibles"
 eventDate: "du 9 au 11 septembre 2024"
+backgroundImage: "/images/news/backgrounds/background-cecam-workshop.jpg"
+backgroundOpacity: 0.18
 # location: "Paris"
 # publishDate: 2024-11-18
 # lastmod: 2024-02-06T09:24:27+01:00
@@ -23,7 +25,7 @@ seo:
 
 ## Potentiels Interatomiques par Apprentissage Machine, et Bases de Données Accessibles
 
-### <a href="https://www.cecam.org/workshop-details/machine-learning-interatomic-potentials-and-accessible-databases-1313">Page CECAM de l'évènement</a>
+### <a href="https://www.cecam.org/workshop-details/machine-learning-interatomic-potentials-and-accessible-databases-1313" class="d-flex">Page CECAM de l'évènement{{< inline-svg src="tabler-icons/outline/external-link" class="svg-inline-end" >}}</a>
 
 ### Organisateurs
 
@@ -49,7 +51,7 @@ Les potentiels interatomiques par apprentissage automatique (MLIPs) se sont impo
 - **Thierry DEUTSCH** <a href="/downloads/2024-09-CECAM-Workshop/slides-deutsch-2024-09-11-CECAM-workshop.pdf" target="_blank">Setting up data tools as part of the DIADEM program</a>
 - **Kristjan EIMRE** <a href="/downloads/2024-09-CECAM-Workshop/slides-eimre-2024-09-11-CECAM-workshop.pdf" target="_blank">Generating and publishing datasets using AiiDA and Materials Cloud</a>
 
-#### <a href="/downloads/2024-09-CECAM-Workshop/cecam-workshop-photos.zip">Téléchargez les photos de l'évènement</a>
+<h4 class="mb-n2"><a href="/downloads/2024-09-CECAM-Workshop/cecam-workshop-photos.zip" class="d-flex">Téléchargez les photos de l'évènement{{< inline-svg src="tabler-icons/outline/camera-spark" class="svg-inline-end" >}}</a></h4>
 
 Prises par Joao Paulo Almeida De Mendonca
 
