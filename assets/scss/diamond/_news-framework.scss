@@ -50,6 +50,8 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  flex: 1;
+
 }
 @include color-mode(dark) {
   .news-page {
