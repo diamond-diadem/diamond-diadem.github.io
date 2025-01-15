@@ -25,6 +25,8 @@ seo:
 
 ## Potentiels Interatomiques par Apprentissage Machine, et Bases de Données Accessibles
 
+![Photo de groupe des participants](group-photo.jpg)
+
 ### <a href="https://www.cecam.org/workshop-details/machine-learning-interatomic-potentials-and-accessible-databases-1313" class="d-flex">Page CECAM de l'évènement{{< inline-svg src="tabler-icons/outline/external-link" class="svg-inline-end" >}}</a>
 
 ### Organisateurs
