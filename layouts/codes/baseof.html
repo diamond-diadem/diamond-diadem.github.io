@@ -8,6 +8,10 @@
       {{/*  <div class="content default">  */}}
       {{/*  {{ if and (eq site.Params.doks.containerBreakpoint "fluid") (or (not (in .Site.Params.mainSections .Type)) (.IsNode)) }}<div class="container p-0">{{ end }}  */}}
         {{ block "main" . }}{{ end }}
+        {{ if site.Params.diamond.cookiesConsent }}
+    	    {{ partial "main/consent-banner.html" . }}
+    	    {{ partial "main/consent-customization-popup.html" . }}
+  	    {{ end }}		
       {{/*  {{ if and (eq site.Params.doks.containerBreakpoint "fluid") (or (not (in .Site.Params.mainSections .Type)) (.IsNode)) }}</div>{{ end }}  */}}
       {{/*  </div>  */}}
     </div>
