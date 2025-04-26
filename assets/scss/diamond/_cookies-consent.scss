@@ -112,7 +112,7 @@
 
 .popup-dialog button {
   display: inline-block;
-  margin: 10px auto 0 auto;
+  margin: 0 auto 0 auto;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -251,7 +251,9 @@
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
     // max-width: 500px;
     width: auto;
+    max-width: 90%;
     position: relative;
+    
 
     h2 {
       font-size: 1.5rem;
@@ -263,6 +265,7 @@
       margin-bottom: 1rem;
 
       label {
+        text-wrap: wrap; // Permet de garder le texte à l'intérieur de la boîte
         font-size: 1.1rem;
         cursor: pointer;
 
@@ -334,3 +337,34 @@
   }
 }
 
+@include media-breakpoint-only(lg) {
+  .cookie-banner-actions {
+    flex-direction: column;
+    align-items: center; /* Centre les boutons */
+    margin: 0 3%;
+
+    button {
+      width: 100%;
+    }
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .cookie-banner-content {
+    flex-direction: column; /* Aligne le texte et les boutons verticalement */
+    align-items: center; /* Centre le contenu */
+    text-align: center; /* Centre le texte */
+  }
+  
+  .cookie-banner-actions {
+    // flex-direction: column; /* Aligne les boutons verticalement */
+    margin-right: 3%; /* Espace à droite */
+    justify-content: center; /* Centre les boutons */
+
+    button {
+      margin: 5px 0; /* Espace entre les boutons */
+      width: min-content; /* Ajuste la largeur des boutons */
+      text-wrap: nowrap; /* Empêche le texte de se déformer */
+    }
+  }
+}
