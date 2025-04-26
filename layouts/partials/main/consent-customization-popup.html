@@ -1,0 +1,93 @@
+{{ if eq $.Site.Language.LanguageName "FR" }}
+<div class="popup-customization-overlay" style="display: none;">
+  <div class="popup-customization-dialog">
+    <h2>Paramétrez vos préférences de cookies</h2>
+    <form id="cookie-preferences">
+      <div class="cookie-option">
+        <label>
+          <input type="checkbox" name="analyticsConsent" checked>
+          Autoriser les cookies Google Analytics (mesure de l'audience)
+        </label>
+      </div>
+      <div class="cookie-option">
+        <label>
+          <input type="checkbox" name="youtubeConsent" checked>
+          Autoriser les cookies YouTube (lecture de nos tutoriels vidéo)
+        </label>
+      </div>
+      <div class="cookie-customization-actions">
+        <button type="submit" class="validate-preferences">Enregistrer mes choix</button>
+        <button type="button" class="cancel-preferences">Tout refuser</button>
+      </div>
+    </form>
+    <button class="close-popup-customization" aria-label="Fermer la fenêtre">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+  </div>
+</div>
+{{ end }}
+{{ if eq $.Site.Language.LanguageName "EN" }}
+<div class="popup-customization-overlay" style="display: none;">
+  <div class="popup-customization-dialog">
+    <h2>Set your cookie preferences</h2>
+    <form id="cookie-preferences">
+      <div class="cookie-option">
+        <label>
+          <input type="checkbox" name="analyticsConsent" checked>
+          Allow Google Analytics cookies (audience measurement)
+        </label>
+      </div>
+      <div class="cookie-option">
+        <label>
+          <input type="checkbox" name="youtubeConsent" checked>
+          Allow YouTube cookies (watch our video tutorials)
+        </label>
+      </div>
+      <div class="cookie-customization-actions">
+        <button type="submit" class="validate-preferences">Save my choices</button>
+        <button type="button" class="cancel-preferences">Decline all</button>
+      </div>
+    </form>
+    <button class="close-popup-customization" aria-label="Close window">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+  </div>
+</div>
+{{ end }}
+
+
+{{/*  <div class="popup-customization-overlay" style="display: none;">
+  <div class="popup-customization-dialog">
+    <h2>Paramétrez vos préférences de cookies</h2>
+    <form id="cookie-preferences">
+      <div class="cookie-option">
+        <label>
+          <input type="checkbox" name="analyticsConsent" checked>
+          Autoriser les cookies Google Analytics (mesure de l'audience)
+        </label>
+      </div>
+      <div class="cookie-option">
+        <label>
+          <input type="checkbox" name="youtubeConsent" checked>
+          Autoriser les cookies YouTube (lecture de nos tutoriels vidéo)
+        </label>
+      </div>
+      <div class="cookie-customization-actions">
+        <button type="submit" class="validate-preferences">Enregistrer mes choix</button>
+        <button type="button" class="cancel-preferences">Tout refuser</button>
+      </div>
+    </form>
+    <button class="close-popup-customization" aria-label="Fermer la fenêtre">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+  </div>
+</div>  */}}
