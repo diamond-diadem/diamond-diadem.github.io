@@ -49,7 +49,7 @@ Ce surcoût est mineur au regard de l'exécution de nombreux outils *utilitaires
 
 Les calculs ont été effectués sur une machine en *dual-boot* Ubuntu 24.04.1 LTS/Windows 11 pour avoir le même matériel sous-jacent (CPU Intel i7-11800H 2.30GHz et 16Go de RAM). Pour maximiser les similarités logicielles, on travaille sur WSL2 avec la même distribution que notre référence (Ubuntu 24.04.1 LTS) et, dans chacun des cas, on s'assure d'utiliser une version d'Apptainer identique (1.3.4).
 
-Pour chacune de ces installations d'Apptainer, on utilise une image test mise à disposition pour les [tutoriels DIAMOND](/documentation/use/apptainer_parallel/). Celle-ci effectue $M$ multiplications de matrices carrées $N \times N$ aléatoires. Dans le cas du présent test, on effectue un calcul séquentiel (sur un seul cœur CPU) avec $M=500$ et $N=1000$ : `apptainer run tutorial-openmpi.sif 500 1000`.
+Pour chacune de ces installations d'Apptainer, on utilise une image test mise à disposition pour les [tutoriels DIAMOND](/documentation/use/apptainer-parallel/#exemple-pratique--image-avec-openmpi). Celle-ci effectue $M$ multiplications de matrices carrées $N \times N$ aléatoires. Dans le cas du présent test, on effectue un calcul séquentiel (sur un seul cœur CPU) avec $M=500$ et $N=1000$ : `apptainer run tutorial-openmpi.sif 500 1000`.
 
 Pour tenir compte des potentielles fluctuations de performance dues à la charge du CPU,on réplique 10 fois les calculs dans chacun des cas. Au final, on obtient les temps moyen $t^{Ubuntu} = 118.78$ s ($\sigma = 1.41$ s) et $t^{WSL2} = 124.15$ s ($\sigma = 0.79$ s).
 

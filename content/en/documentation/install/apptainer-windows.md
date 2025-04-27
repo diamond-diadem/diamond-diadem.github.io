@@ -4,7 +4,7 @@ weight: 2
 ---
 
 <div align="justify">
-    
+
 Designed primarily for high-performance computing, Apptainer — the containerization solution chosen for the DIAMOND project — natively works only on Linux. If it cannot be used on a Linux distribution, it is necessary to use a virtual machine that emulates a Linux system as an intermediary between Apptainer and the kernel of any other operating system (like Windows).
 
 ## How to Install WSL2 on Windows
@@ -48,7 +48,7 @@ This overhead is minor when running many utility tools like visualization or dat
 
 Calculations were performed on a dual-boot machine with Ubuntu 24.04.1 LTS/Windows 11 to have the same underlying hardware (Intel i7-11800H 2.30GHz CPU and 16GB of RAM). To maximize software similarities, WSL2 was used with the same distribution as our reference (Ubuntu 24.04.1 LTS), and in each case, we ensured the same Apptainer version (1.3.4) was used.
 
-For each of these Apptainer installations, a test image provided for the [DIAMOND tutorials](/en/documentation/use/apptainer-windows/) was used. This image performs $M$ multiplications of square $N \times N$ random matrices. In this test, a sequential computation (on a single CPU core) was performed with $M=500$ and $N=1000$: `apptainer run tutorial-openmpi.sif 500 1000`.
+For each of these Apptainer installations, a test image provided for the [DIAMOND tutorials](/en/documentation/use/apptainer-parallel/#practical-example-image-with-openmpi) was used. This image performs $M$ multiplications of square $N \times N$ random matrices. In this test, a sequential computation (on a single CPU core) was performed with $M=500$ and $N=1000$: `apptainer run tutorial-openmpi.sif 500 1000`.
 
 To account for potential performance fluctuations due to CPU load, the calculations were replicated 10 times in each case. The final average times were $t^{Ubuntu} = 118.78$ s ($\sigma = 1.41$ s) and $t^{WSL2} = 124.15$ s ($\sigma = 0.79$ s).
 

@@ -7,7 +7,7 @@ weight: 1
 
 {{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
 
-En préalable de ces explications, il est nécessaire d'avoir installé Apptainer sur votre machine ; voir [ce lien](/documentation/install/install_apptainer/) pour plus de détails.
+En préalable de ces explications, il est nécessaire d'avoir installé Apptainer sur votre machine ; voir [ce lien](/documentation/install/install-apptainer/) pour plus de détails.
 
 Ce tutoriel explicite les principales commandes permettant d'interagir avec une image Apptainer pour générer et manipuler des conteneurs. Les instructions présentées ici sont en principe valables pour tout conteneur Apptainer.
 
@@ -145,10 +145,12 @@ cat $PWD/test-host.txt $PWD/test-container.txt
 ```
 
 ## Voir aussi
+
 Si ce tutoriel vous a été utile pour découvrir les bases d'Apptainer, vous pouvez également consulter les pages suivantes afin de mieux vous approprier les outils de la plateforme :
-* [Comment utiliser un code conteneurisé en parallèle ?](/documentation/use/apptainer_parallel/)
+
+* [Comment utiliser un code conteneurisé en parallèle ?](/documentation/use/apptainer-parallel/)
 * [Quelles sont les options d'isolation entre un conteneur et sa machine hôte ?](/documentation/use/apptainer-isolation-flags/)
-* [Et pour les paquets Guix ?](/documentation/use/guix_package)
-* [Comment demander de l'aide ?](/documentation/use/ask_help)
+* [Et pour les paquets Guix ?](/documentation/use/guix-package)
+* [Comment demander de l'aide ?](/documentation/use/ask-help)
 
 </div>

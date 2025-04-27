@@ -12,7 +12,7 @@ If the Apptainer image you want to use supports parallel computing, then OpenMPI
 - the [hybrid mode]({{< ref "#hybrid_mode" >}}).
 
 **Note**
-> The Apptainer commands below have been simplified for readability. It is possible to combine the use of `mpirun` commands with the `--containall` flag, while mounting specific directories to the container with the `--bind` flags and specifying environment variables `--env`. The possibilities are numerous. We therefore advise you to take a look at the documentation related to these [topics]("/en/documentation/use/apptainer-image).
+> The Apptainer commands below have been simplified for readability. It is possible to combine the use of `mpirun` commands with the `--containall` flag, while mounting specific directories to the container with the `--bind` flags and specifying environment variables `--env`. The possibilities are numerous. We therefore advise you to take a look at the documentation related to these [topics](/en/documentation/use/apptainer-image).
 
 ## Practical Example: Image with OpenMPI
 
