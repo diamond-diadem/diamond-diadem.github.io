@@ -40,19 +40,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function loadGoogleAnalytics() {
         if (window.gtagLoaded) return;
+        if (!window.analyticsSettings?.enabled || !window.analyticsSettings?.gaId) return;
+    
         window.gtagLoaded = true;
-
+    
         const script = document.createElement('script');
-        script.src = 'https://www.googletagmanager.com/gtag/js?id=:G-1G3K8JZG98'; // Remplacer TON-ID-GA
+        script.src = `https://www.googletagmanager.com/gtag/js?id=${window.analyticsSettings.gaId}`;
         script.async = true;
         document.head.appendChild(script);
-
+    
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         window.gtag = gtag;
         gtag('js', new Date());
-        gtag('config', ':G-1G3K8JZG98'); // Remplacer aussi ici
+        gtag('config', window.analyticsSettings.gaId);
     }
+    
 
     function adjustFontSize(placeholder) {
         const button = placeholder.querySelector('.popup-button');
