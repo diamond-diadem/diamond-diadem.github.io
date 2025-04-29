@@ -15,4 +15,20 @@
 
 {{ partial "footer/esbuild" (dict "src" "js/to-top.js" "load" "async" "transpile" false) -}}
 
+{{ if site.Params.analytics.enable }}
+<script>
+  window.analyticsSettings = {
+    enabled: true,
+    gaId: "{{ site.Params.analytics.ga_id }}"
+  };
+</script>
+{{ else }}
+<script>
+  window.analyticsSettings = {
+    enabled: false,
+    gaId: ""
+  };
+</script>
+{{ end }}
+
 {{ partial "footer/esbuild" (dict "src" "js/diamond/cookies-consent.js" "transpile" false) -}}
