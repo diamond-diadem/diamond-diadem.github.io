@@ -112,3 +112,7 @@ seo:
       - news
     product: []
 math: true
+
+analytics:
+  enable: true
+  ga_id: "G-1G3K8JZG98"
