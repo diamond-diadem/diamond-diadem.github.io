@@ -8,8 +8,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const cookieBanner = document.querySelector('.cookie-banner');
 
     // Buttons
-    const acceptBannerButton = cookieBanner?.querySelector('.accept');
-    const declineBannerButton = cookieBanner?.querySelector('.decline');
     const closeBannerButton = cookieBanner?.querySelector('.close-banner');
     const acceptAllButton = document.querySelector('.accept-all');
     const declineAllButton = document.querySelector('.decline-all');
