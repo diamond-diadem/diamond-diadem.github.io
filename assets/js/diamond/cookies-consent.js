@@ -19,8 +19,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const cancelPreferencesButton = document.querySelector('.cancel-preferences');
     const closePopupCustomizationButton = document.querySelector('.close-popup-customization');
 
-    // const siteLanguage = document.documentElement.lang;
-
     // Consent status
     const hasYouTubeConsented = localStorage.getItem('youtubeConsent') === 'true';
     const hasYouTubeRefused = localStorage.getItem('youtubeConsent') === 'false';
@@ -118,6 +116,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     cancelPreferencesButton?.addEventListener('click', () => {
         popupCustomization.style.display = 'none';
+        cookieBanner.style.display = 'none';
     });
 
     closePopupCustomizationButton?.addEventListener('click', () => {
@@ -134,6 +133,7 @@ document.addEventListener('DOMContentLoaded', function () {
         localStorage.setItem('youtubeConsent', youtubeConsent ? 'true' : 'false');
 
         popupCustomization.style.display = 'none';
+        cookieBanner.style.display = 'none';
 
         if (analyticsConsent) loadGoogleAnalytics();
         if (youtubeConsent) initializePlaceholders();
