@@ -12,7 +12,6 @@ diamond:
   enableNews: true
   sectionsIcons: false
   cookiesConsent: true
-  googleAnalytics: true
 social:
   twitter: ""
 doks:
