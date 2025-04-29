@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const cancelPreferencesButton = document.querySelector('.cancel-preferences');
     const closePopupCustomizationButton = document.querySelector('.close-popup-customization');
 
-    const siteLanguage = document.documentElement.lang;
+    // const siteLanguage = document.documentElement.lang;
 
     // Consent status
     const hasYouTubeConsented = localStorage.getItem('youtubeConsent') === 'true';
@@ -31,7 +31,8 @@ document.addEventListener('DOMContentLoaded', function () {
         container.innerHTML = `
             <iframe
                 class="tuto-video"
-                src="https://www.youtube-nocookie.com/embed/${videoId}?cc_lang_pref=${siteLanguage}&cc_load_policy=1"
+                src="https://www.youtube-nocookie.com/embed/${videoId}?hl=${siteLanguage}&cc_lang_pref=${siteLanguage}&cc_load_policy=1"
+
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
