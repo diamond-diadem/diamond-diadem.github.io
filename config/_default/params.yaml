@@ -31,7 +31,7 @@ doks:
   showSummary: true
   searchLimit: 99
 ## Used as banner for news
-  alert: false
+  alert: true
   alertDismissable: false
 ##
   bootstrapJavascript: false
