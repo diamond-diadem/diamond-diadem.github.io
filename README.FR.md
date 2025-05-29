@@ -15,7 +15,7 @@ Pour des contributions plus poussées, avec la possibilité de les tester avant 
 ### Prérequis
 
 - **Node.js** - `v20.11.0` ou supérieur — exécutez `node -v` pour vérifier.
-- **Hugo extended** - `v0.125.0` ou supérieur — exécutez `hugo version` pour vérifier.
+- **Hugo extended** - `v0.140.0` — exécutez `hugo version` pour vérifier.
 
 ### Installation des prérequis : pour les systèmes basés sur Debian (Ubuntu, ...)
 
@@ -43,19 +43,17 @@ Vérifiez que votre système est à jour :
 sudo apt update && sudo apt upgrade
 ```
 
-- Rendez-vous sur la [page des releases](https://github.com/gohugoio/hugo/releases) de Hugo pour vérifier la dernière version disponible.
+- Rendez-vous sur la [page des releases](https://github.com/gohugoio/hugo/releases) de Hugo pour vérifier les versions adaptés aux différents systèmes.
 - Téléchargez directement le paquet `.deb` correspondant à votre système avec `wget`. Par exemple :
 
 ```bash
-wget https://github.com/gohugoio/hugo/releases/download/vX.X.X/hugo_extended_X.X.X_linux-amd64.deb
+wget https://github.com/gohugoio/hugo/releases/download/v0.140.0/hugo_extended_0.140.0_linux-amd64.deb
 ```
-
-- Remplacez `X.X.X` par le numéro de la dernière version stable
 
 Installez le paquet téléchargé :
 
 ```bash
-sudo apt install hugo_extended_X.X.X_linux-amd64.deb
+sudo apt install ./hugo_extended_0.140.0_linux-amd64.deb
 ```
 
 Vérifiez l'installation :
