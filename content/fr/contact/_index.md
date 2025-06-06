@@ -17,7 +17,7 @@ title: Contactez-nous
 <div class="col-xl-12">
 
 <h3>
-    Pour des questions ou remarques techniques sur les images de conteneurs que nous proposons, ou sur la documentation, écrivez à Dylan :
+    Pour des questions ou remarques techniques sur les images de conteneurs que nous proposons, ou sur la documentation, écrivez à Léo :
 </h3>
 <h3>
     <a class="contact-mailto" href="mailto:leo.orveillon@univ-grenoble-alpes.fr">leo.orveillon@univ-grenoble-alpes.fr</a>
