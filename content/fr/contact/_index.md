@@ -20,7 +20,7 @@ title: Contactez-nous
     Pour des questions ou remarques techniques sur les images de conteneurs que nous proposons, ou sur la documentation, écrivez à Dylan :
 </h3>
 <h3>
-    <a class="contact-mailto" href="mailto:dylan.bissuel@univ-lyon1.fr">dylan.bissuel@univ-lyon1.fr</a>
+    <a class="contact-mailto" href="mailto:leo.orveillon@univ-grenoble-alpes.fr">leo.orveillon@univ-grenoble-alpes.fr</a>
 </h3>
 
 </div>
