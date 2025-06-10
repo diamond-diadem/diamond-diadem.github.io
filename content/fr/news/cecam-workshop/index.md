@@ -15,7 +15,7 @@ categories: []
 tags: []
 contributors: []
 pinned: false
-homepage: false
+homepage: true
 seo:
   title: "" # custom title (optional)
   description: "" # custom description (recommended)
