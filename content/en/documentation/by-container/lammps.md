@@ -86,7 +86,7 @@ $HOME/apptainer-images/lammps.sif -in in.file
 ```
 
 ### Using the LAMMPS container for parallel runs
-The `$HOME/apptainer-images/lammps.sif` image embedds a parallelized (through **OpenMP** and **MPI**) version of LAMMPS.
+The `$HOME/apptainer-images/lammps.sif` image embeds a parallelized (through **OpenMP** and **MPI**) version of LAMMPS.
 
 In the case where no containerization would be used, the typical LAMMPS call would look like :
 

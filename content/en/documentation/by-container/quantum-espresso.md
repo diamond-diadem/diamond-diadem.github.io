@@ -89,7 +89,7 @@ $HOME/apptainer-images/quantum-espresso.sif -in qe-tutorial.in
 ```
 
 ### Using the Quantum Espresso container for parallel runs
-The `$HOME/apptainer-images/quantum-espresso.sif` image embedds a parallelized (through **OpenMP** and **MPI**) version of Quantum Espresso.
+The `$HOME/apptainer-images/quantum-espresso.sif` image embeds a parallelized (through **OpenMP** and **MPI**) version of Quantum Espresso.
 
 In the case where no containerization would be used, the typical Quantum Espresso call would look like:
 
