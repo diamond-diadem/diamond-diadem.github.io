@@ -65,7 +65,7 @@ $
 ```
 
 **Remarque**
-> En jouant avec les arguments `exec` et `shell` à partir de différentes images, vous remarquerez parfois que le nombre de commandes accessibles depuis le conteneur est très restreint. Dans l'idéal, un conteneur se limite en effet le plus possible aux outils nécessaires à l'exécution du code qu'il contient en s'affrachissant des outils superflus, pour des raisons de portabilité (taille de l'image) et de sécurité.
+> En jouant avec les arguments `exec` et `shell` à partir de différentes images, vous remarquerez parfois que le nombre de commandes accessibles depuis le conteneur est très restreint. Dans l'idéal, un conteneur se limite en effet le plus possible aux outils nécessaires à l'exécution du code qu'il contient en s'affranchissant des outils superflus, pour des raisons de portabilité (taille de l'image) et de sécurité.
 
 * l'argument `run-help` permet d'afficher le message d'aide inclus dans l'image.
 
