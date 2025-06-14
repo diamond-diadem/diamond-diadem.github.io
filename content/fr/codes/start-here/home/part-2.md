@@ -88,5 +88,9 @@ weight: 2
             <td><a href="/codes/scientific-computing/dftbplus/"><i class="icon-dftbplus"></i>DFTB+</a></td>
             <td></td>
         </tr>
+        <tr>
+            <td><a href="/codes/scientific-computing/xtb/"><i class="icon-xtb"></i>XTB</a></td>
+            <td></td>
+        </tr>
     </tbody>
 </table>

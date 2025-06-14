@@ -31,6 +31,7 @@ weight: 3
                 <option value="option16A">CP2K</option>
                 <option value="option17A">n2p2</option>
                 <option value="option18A">DFTB+</option>
+                <option value="option19A">XTB</option>
             </optgroup>
         </select>
     </div>
@@ -176,6 +177,14 @@ apptainer pull dftbplus.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamon
 
 </div>
 
+<div id="content-option19A" class="hidden">
+
+```bash
+apptainer pull xtb.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/xtb-from-guix.sif:test
+```
+
+</div>
+
 <!--  -->
 
 <div id="content-optionaA" class="hidden">
@@ -241,6 +250,7 @@ apptainer pull xcrysden.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamon
             <option value="option16B">CP2K</option>
             <option value="option17B">n2p2</option>
             <option value="option18B">DFTB+</option>
+            <option value="option19B">XTB</option>
         </optgroup>
     </select>
 </div>
@@ -366,10 +376,17 @@ apptainer pull n2p2.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/ap
 ```
 
 </div>
-<div id="content-option17B" style="margin-top: -1rem;" class="hidden">
+<div id="content-option18B" style="margin-top: -1rem;" class="hidden">
 
 ```bash
 apptainer pull dftbplus.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/dftbplus.sif:latest
+```
+
+</div>
+<div id="content-option19B" class="hidden">
+
+```bash
+apptainer pull xtb.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/xtb-from-guix.sif:test
 ```
 
 </div>
