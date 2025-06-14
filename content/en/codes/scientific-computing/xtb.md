@@ -3,7 +3,7 @@ title: XTB
 title_visible: false
 linkTitle: XTB
 icon: icon-xtb
-weight: 17
+weight: 19
 ---
 
 <a href="https://github.com/grimme-lab/xtb" target="_blank" class="codes-pages-top-logo">
