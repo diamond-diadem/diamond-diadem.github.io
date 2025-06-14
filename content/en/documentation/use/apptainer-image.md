@@ -94,7 +94,7 @@ echo $GREET $USER "who just ran the default command of the container."
 ```
 where the `$GREET` variable is defined to be "Welcome" by default in the container.
 
-The `$USER` is automatically set so that its value inside the container is the same as for the host machine. This design choice is not specific to the image used in this tutorial. It is one of many Apptainer standard behaviours to ease functionning in a high-performance computation setting.
+The `$USER` is automatically set so that its value inside the container is the same as for the host machine. This design choice is not specific to the image used in this tutorial. It is one of many Apptainer standard behaviours to ease functioning in a high-performance computation setting.
 
 Those two variables may be redefined :
 
