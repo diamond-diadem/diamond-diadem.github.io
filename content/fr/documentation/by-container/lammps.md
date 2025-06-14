@@ -153,14 +153,14 @@ apptainer run --containall --bind $PWD:$HOME \ # On monte le répertoire courant
 dans le cas où les fichiers d'entrée de LAMMPS se situent dans le répertoire courant (`$PWD`).
 
 ### Potentiels interatomiques
-Dans LAMMPS, les interactions entre atomes sont modéilisées par des champs de force (ou potentiels interatomiques) dont les paramètres sont spécifiés au sein de fichiers formattés. Le type d'interaction à appliquer (*càd.* le type de fichier à rechercher) dans chaque cas est explicité au sein du fichier d'entrée principal de LAMMPS.
+Dans LAMMPS, les interactions entre atomes sont modélisées par des champs de force (ou potentiels interatomiques) dont les paramètres sont spécifiés au sein de fichiers formatés. Le type d'interaction à appliquer (*càd.* le type de fichier à rechercher) dans chaque cas est explicité au sein du fichier d'entrée principal de LAMMPS.
 
 Par exemple dans notre cas, le fichier d'entrée `in.file` précise à LAMMPS qu'il doit modéliser les interactions Silicium/Carbone grâce aux paramètres contenus dans `SiC.meam`.
 
 À l'exécution le code cherche les fichiers décrivant les interactions dans l'ordre suivant :
 
 * Tout d'abord, il cherche un fichier de potentiel correspondant (localisation, type de potentiel, nom, ...) à celui spécifié dans le fichier d'entrée principal (`in.file`).
-* Si rien n'est trouvé au chemin indiqué dans le fichier d'entrée principal (`in.file`), par exemple si on a malencontreusement renomé le fichier
+* Si rien n'est trouvé au chemin indiqué dans le fichier d'entrée principal (`in.file`), par exemple si on a malencontreusement renommé le fichier
 
 ```bash
 mv SiC.meam old.meam # renommage malencontreux
