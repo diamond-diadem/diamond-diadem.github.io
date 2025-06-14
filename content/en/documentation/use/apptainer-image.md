@@ -63,7 +63,7 @@ $
 ```
 
 **Remark**
-> Playing with `exec` and `shell` using different images, you will sometimes notice the number of commands available inside the container is quite limited. Indeed, a container should ideally restrict its content to be as close as possible to the minimal tools to run the code it embedds. It should hence remove superfluous utilities, both for portability (image size) and security reasons.
+> Playing with `exec` and `shell` using different images, you will sometimes notice the number of commands available inside the container is quite limited. Indeed, a container should ideally restrict its content to be as close as possible to the minimal tools to run the code it embeds. It should hence remove superfluous utilities, both for portability (image size) and security reasons.
 
 * The `run-help` argument displays the image's associated help message.
 
