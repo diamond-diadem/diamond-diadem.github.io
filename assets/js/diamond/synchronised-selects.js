@@ -6,7 +6,9 @@ const contents = document.querySelectorAll('[id^="content-option"]'); // Tous le
 function synchronizeAndDisplay(selectedElement, pairedElementId, resetElementIds) {
     // Synchroniser le <select> correspondant
     const pairedElement = document.getElementById(pairedElementId);
-    pairedElement.selectedIndex = selectedElement.selectedIndex;
+    if (pairedElement) {
+        pairedElement.selectedIndex = selectedElement.selectedIndex;
+    }
 
     // Masquer tous les contenus
     contents.forEach(content => content.classList.add('hidden'));
@@ -27,7 +29,9 @@ function synchronizeAndDisplay(selectedElement, pairedElementId, resetElementIds
     // Réinitialiser les autres paires à "option0"
     resetElementIds.forEach(resetId => {
         const resetElement = document.getElementById(resetId);
-        resetElement.selectedIndex = 0; // Réinitialiser à l'option "option0"
+        if (resetElement) {
+            resetElement.selectedIndex = 0; // Réinitialiser à l'option "option0"
+        }
     });
 }
 
