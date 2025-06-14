@@ -234,7 +234,7 @@ diamond:
 
 ##### `module.yaml`
 
-Ce fichier configure comment certains dossiers issus de `nodes_modules` sont chargés à l'intérieur de certains dossiers du projet. Cela permet de récupérer les fichiers des modules **Doks** et **Thulite**, en particulier.
+Ce fichier configure comment certains dossiers issus de `node_modules` sont chargés à l'intérieur de certains dossiers du projet. Cela permet de récupérer les fichiers des modules **Doks** et **Thulite**, en particulier.
 
 #### `babel.config.js`
 
