@@ -90,7 +90,7 @@ Si vous n'êtes pas familier avec l'invite de commande et les commandes AiiDA, n
 python3 /GUI/main.py
 ```
 
-Une fois l'interface graphique ouverte, nous vous recommandons de cliquer sur le boutton "Mode pas à pas" et de suivre les étapes. Les mêmes étapes que celles décrites dans la section suivante sont effectuées, mais de manière plus douce pour un utilisateur novice.
+Une fois l'interface graphique ouverte, nous vous recommandons de cliquer sur le bouton "Mode pas à pas" et de suivre les étapes. Les mêmes étapes que celles décrites dans la section suivante sont effectuées, mais de manière plus douce pour un utilisateur novice.
 
 ## Étape 3 bis : Configurer votre environnement AiiDA (via l'invite de commande)
 
