@@ -235,7 +235,7 @@ diamond:
 
 ##### `module.yaml`
 
-This file configures how certain folders from `nodes_modules` are loaded into specific project folders. This allows retrieval of files from the **Doks** and **Thulite** modules, in particular.
+This file configures how certain folders from `node_modules` are loaded into specific project folders. This allows retrieval of files from the **Doks** and **Thulite** modules, in particular.
 
 #### `babel.config.js`
 
