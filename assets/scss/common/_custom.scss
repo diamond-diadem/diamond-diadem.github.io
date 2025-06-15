@@ -13,7 +13,6 @@
 @import "diamond/custom-cards";
 @import "diamond/cookies-consent";
 
-
 @include color-mode(dark) {
     .dropdown-menu {
         background-color: $body-bg-dark;
@@ -22,7 +21,6 @@
 .dropdown-languages {
     width: 80px;
 }
-
 
 .dropdown-languages .btn .dropdown-caret {
     // color: $body-color-dark;
@@ -41,12 +39,12 @@
 @include color-mode(dark) {
     .dropdown-languages .btn .dropdown-caret:hover {
         // background-color: $body-bg-dark;
-        color: $link-color-dark
+        color: $link-color-dark;
     }
 
     .navbar {
         border-bottom: 1px solid $white;
-      }
+    }
 }
 
 .dropdown-languages .dropdown-menu {
@@ -54,7 +52,6 @@
     border: 0;
     margin-top: -5;
 }
-
 
 .dropdown-languages .dropdown-menu .dropdown-item {
     // color: $body-color-dark;
@@ -82,11 +79,10 @@
     margin-bottom: 3%;
 }
 
-
 .navbar {
-  z-index: 1000;
-  background-color: rgba(255, 255, 255, 0.95);
-  border-bottom: 1px solid $black;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid $black;
 }
 
 @include media-breakpoint-up(lg) {
@@ -95,7 +91,7 @@
     }
 
     .docs-sidebar {
-      order: 0;
+        order: 0;
     }
     @include color-mode(dark) {
         .diamond-docs-sidebar-container {
@@ -127,7 +123,6 @@ u {
     }
 }
 
-
 .logo-guix {
     content: url(/images/guix-logo-light.svg);
 }
@@ -155,19 +150,16 @@ u {
 }
 
 @include color-mode(dark) {
-    .use-gitlab{
-        content: url(images/use_gitlab_dark.png)
+    .use-gitlab {
+        content: url(images/use_gitlab_dark.png);
     }
-    .create-issue{
-        content: url(images/create_issue_dark.png)
+    .create-issue {
+        content: url(images/create_issue_dark.png);
     }
-    .issue-tab{
-        content: url(images/issue_tab_dark.png)
+    .issue-tab {
+        content: url(images/issue_tab_dark.png);
     }
 }
-
-
-
 
 // // // Wordcloud and France cluster map pictures // // //
 
@@ -194,17 +186,17 @@ u {
 }
 
 @include color-mode(dark) {
-    .containerised-codes.fr{
-        content: url(images/containerised-codes/containerised-codes-dark-fr.png)
+    .containerised-codes.fr {
+        content: url(images/containerised-codes/containerised-codes-dark-fr.png);
     }
-    .containerised-codes.en{
-        content: url(images/containerised-codes/containerised-codes-dark-en.png)
+    .containerised-codes.en {
+        content: url(images/containerised-codes/containerised-codes-dark-en.png);
     }
-    .cluster-map.fr{
-        content: url(images/cluster-map/cluster-map-dark-fr.png)
+    .cluster-map.fr {
+        content: url(images/cluster-map/cluster-map-dark-fr.png);
     }
-    .cluster-map.en{
-        content: url(images/cluster-map/cluster-map-dark-en.png)
+    .cluster-map.en {
+        content: url(images/cluster-map/cluster-map-dark-en.png);
     }
 }
 
@@ -259,7 +251,6 @@ u {
         width: 65%;
         margin-left: auto;
         margin-right: auto;
-
     }
 
     .right-about-containers {
@@ -281,7 +272,6 @@ u {
         width: 65%;
         margin-left: auto;
         margin-right: auto;
-
     }
 
     .right-about-containers {
@@ -298,7 +288,6 @@ u {
     }
 }
 
-
 // // // Apptainer in parallel tuto picture // // //
 
 .hybrid-ompi {
@@ -307,8 +296,8 @@ u {
 }
 
 @include color-mode(dark) {
-    .hybrid-ompi{
-        content: url(images/hybrid-ompi-dark.png)
+    .hybrid-ompi {
+        content: url(images/hybrid-ompi-dark.png);
     }
 }
 
@@ -324,23 +313,23 @@ u {
 }
 
 @include color-mode(dark) {
-    .windows-overhead{
-        content: url(images/overhead-WSL2-dark.png)
+    .windows-overhead {
+        content: url(images/overhead-WSL2-dark.png);
     }
-    .bench-lammps-dahu{
-        content: url(images/bench_lammps_dahu_dark.png)
+    .bench-lammps-dahu {
+        content: url(images/bench_lammps_dahu_dark.png);
     }
 }
 
 .logo-france2030-desktop,
 .logo-france2030-mobile {
-    content: url('/images/france-2030/france-2030-couleurs-smaller.png');
+    content: url("/images/france-2030/france-2030-couleurs-smaller.png");
 }
 
 @include color-mode(dark) {
     .logo-france2030-desktop,
     .logo-france2030-mobile {
-    content: url('/images/france-2030/france-2030-blanc-smaller.png');
+        content: url("/images/france-2030/france-2030-blanc-smaller.png");
     }
 }
 
@@ -362,7 +351,6 @@ u {
     .nav-logo {
         height: 50px;
     }
-
 }
 
 @include media-breakpoint-only(lg) {
@@ -383,11 +371,7 @@ u {
     .nav-logo {
         height: 50px;
     }
-
 }
-
-
-
 
 // @include color-mode(dark) {
 //     .logo-france2030 {
@@ -397,7 +381,7 @@ u {
 
 @include media-breakpoint-up(xxl) {
     .logo-france2030-desktop {
-        height : 90px;
+        height: 90px;
         margin-right: 30px;
     }
 
@@ -405,10 +389,7 @@ u {
     //     font-weight: $font-weight-normal;
     //     font-size: $font-size-md;
     // }
-
-
 }
-
 
 .logo-france2030-mobile {
     height: 90px;
@@ -416,29 +397,23 @@ u {
     // position: center auto;
 }
 
-
-@include media-breakpoint-down(lg){
-
+@include media-breakpoint-down(lg) {
     // .anchor-france2030-mobile,
     // .logo-france2030-mobile {
     //     text-align: center;
     //     visibility: visible;
     // }
     // .anchor-france2030-desktop,
-    .logo-france2030-desktop{
+    .logo-france2030-desktop {
         display: none;
     }
-
 }
 
-@include media-breakpoint-up(lg){
+@include media-breakpoint-up(lg) {
     .logo-france2030-mobile {
         display: none;
     }
 }
-
-
-
 
 // .col-default-page {
 //     min-height: 85vh;
@@ -457,9 +432,9 @@ u {
 //         min-height: 70vh;
 //     }
 
-    // .container-blog-page {
-    //     min-height: 70vh;
-    // }
+// .container-blog-page {
+//     min-height: 70vh;
+// }
 
 // }
 
@@ -469,8 +444,7 @@ u {
 //     flex-direction: column;
 // }
 
-
-.footer{
+.footer {
     margin-top: auto;
 }
 
@@ -486,12 +460,10 @@ u {
 }
 
 @include media-breakpoint-down(md) {
-    .nav-logo{
+    .nav-logo {
         height: 40px;
     }
 }
-
-
 
 .text-x-large {
     font-size: x-large;
@@ -515,7 +487,7 @@ u {
     }
 
     .nav-item {
-        font-size: 85%;//$font-size-base;
+        font-size: 85%; //$font-size-base;
     }
 
     .diamond.in-navbar {
@@ -544,7 +516,6 @@ u {
         width: 70px;
     }
 
-
     .current-language-display {
         font-size: 85%;
     }
@@ -562,7 +533,7 @@ u {
 }
 // // // <<< Oct. 30 2024 update <<< // // //
 
-@include color-mode(dark){
+@include color-mode(dark) {
     .navbar,
     .doks-subnavbar {
         background-color: rgba(44, 44, 44, 0.95);
@@ -599,16 +570,15 @@ u {
 @include media-breakpoint-down(sm) {
     .navbar .offcanvas.offcanvas-start,
     .navbar .offcanvas.offcanvas-end {
-      width: 95vw;
+        width: 95vw;
     }
-  }
+}
 
 @include media-breakpoint-down(lg) {
     .switch-language-desktop,
     .switch-color-mode-desktop {
         display: none;
     }
-
 }
 
 @include media-breakpoint-up(lg) {
@@ -616,9 +586,7 @@ u {
     .switch-color-mode-mobile {
         display: none;
     }
-
 }
-
 
 .switch-language-mobile {
     text-align: right;
@@ -628,16 +596,14 @@ u {
 }
 
 .switch-color-mode-mobile {
-    margin-left:auto;
-    display:block;
+    margin-left: auto;
+    display: block;
 }
-
-
 
 .search-mobile {
     margin-right: 3%;
-    margin-left:auto;
-    display:block;
+    margin-left: auto;
+    display: block;
 }
 
 .close-button-mobile {
@@ -645,12 +611,14 @@ u {
     display: block;
 }
 
-th, tr {
+th,
+tr {
     border-bottom: solid rgba(150, 150, 150, 1) 1px;
 }
 
 @include color-mode(dark) {
-    th, tr {
+    th,
+    tr {
         border-bottom: solid $body-color-dark 1px;
     }
 }
@@ -663,23 +631,23 @@ th, tr {
 
 @include media-breakpoint-up(lg) {
     .docs-sidebar {
-      order: 0;
-      // border-right: 1px solid $gray-200;
+        order: 0;
+        // border-right: 1px solid $gray-200;
     }
 
-    @supports ((position:-webkit-sticky) or (position:sticky)) {
+    @supports ((position: -webkit-sticky) or (position: sticky)) {
         .docs-sidebar {
             position: -webkit-sticky;
             position: sticky;
             top: 6.75rem;
             z-index: 1000;
-            height: auto;//calc(80vh - 4rem);
+            height: auto; //calc(80vh - 4rem);
             overflow-y: hidden;
         }
 
         .docs-sidebar-offset {
             top: 7rem;
-            height: auto;//calc(80vh - 4rem);
+            height: auto; //calc(80vh - 4rem);
         }
 
         .docs-sidebar-top {
@@ -690,7 +658,7 @@ th, tr {
 
 @include media-breakpoint-up(lg) {
     .docs-links {
-      margin-right: 0.25rem;
+        margin-right: 0.25rem;
     }
 }
 
@@ -707,7 +675,6 @@ th, tr {
 }
 
 // // END mprove toc behaviour (while scrolling) END // //
-
 
 // // // END modify _global.scss END // // //
 
@@ -733,46 +700,44 @@ th, tr {
     width: fit-content;
 }
 
-
 // // // Worflows >>> simple-adsorption-workflow images >>> // // //
 
 .saw-diagram-description {
     content: url(/images/saw-diagram-light.png);
     width: 100%;
- }
+}
 
 @include color-mode(dark) {
-   .saw-diagram-description {
-      content: url(/images/saw-diagram-dark.png);
-   }
+    .saw-diagram-description {
+        content: url(/images/saw-diagram-dark.png);
+    }
 }
 
 .saw-input-gui-1 {
     content: url(/images/saw-input-gui-1-light.png);
- }
+}
 
 .saw-input-gui-2 {
     content: url(/images/saw-input-gui-2-light.png);
- }
+}
 
 .saw-input-gui-3 {
     content: url(/images/saw-input-gui-3-light.png);
- }
+}
 
 .saw-output-gui-1 {
     content: url(/images/saw-output-gui-1-light.png);
- }
+}
 
 .saw-output-gui-2 {
     content: url(/images/saw-output-gui-2-light.png);
- }
+}
 
 .saw-output-gui-3 {
     content: url(/images/saw-output-gui-3-light.png);
- }
+}
 
 // // // <<< simple-adsorption-workflow images <<< // // //
-
 
 hr {
     border: solid 1px black;
@@ -795,7 +760,6 @@ hr {
 
 // // // <<< <select> in codes home page <<< // // //
 
-
 .close-sidebar-mobile {
     display: block;
     margin-left: auto;
@@ -814,7 +778,6 @@ hr {
     .container-home-page {
         margin-bottom: -70px;
     }
-
 }
 
 .col-default-page {
@@ -843,7 +806,6 @@ hr {
     background-position: left 0.75rem center;
     text-align: right;
     padding-right: 0.75rem;
-
 }
 
 .container-rtl select option {
@@ -882,7 +844,7 @@ label {
         width: 90%;
     }
 }
- ////////////////////////////////
+////////////////////////////////
 
 // .error404 {
 //     min-height: 100vh;
@@ -891,7 +853,7 @@ label {
 // }
 
 // .card-news-homepage {
-    
+
 //     // border: none;
 //     border-radius: 45px;
 // }
@@ -910,9 +872,9 @@ label {
     border: 1px solid black;
     border-radius: 45px;
     margin-bottom: 30px;
-    // 
+    //
     position: relative;
-    padding-inline: 10%;    
+    padding-inline: 10%;
 }
 
 @include color-mode(dark) {
@@ -923,15 +885,15 @@ label {
 }
 
 .stretched-link::after {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      z-index: 1;
-      content: "";
-      //
-      border-radius: inherit;   
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    content: "";
+    //
+    border-radius: inherit;
 }
 
 // .stretched-link {
@@ -946,10 +908,26 @@ label {
 //     margin-bottom: 30px;
 // }
 
-.single, 
+.single,
 .list {
     display: flex;
     min-height: 100vh !important;
 
     flex-direction: column;
+}
+#scroll-progress-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: transparent;
+    z-index: 9998;
+}
+
+#scroll-progress {
+    height: 100%;
+    width: 0;
+    background-color: var(--bs-primary);
+    transition: width 0.1s ease-out;
 }
