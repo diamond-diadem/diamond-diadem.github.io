@@ -32,7 +32,7 @@ description="Take advantage of our tutorial"
 href="/en/documentation/install/install-apptainer/"
 icon="custom/apptainer"
 
-> }}
+>}}
 
 {{< link-card
 title="Containers images"
@@ -40,4 +40,4 @@ description="Learn to use them"
 href="/en/documentation/use/apptainer-image/"
 icon="tabler-icons/outline/settings-question"
 
-> }}
+>}}
