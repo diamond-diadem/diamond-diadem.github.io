@@ -2,10 +2,7 @@ const topButton = document.getElementById('totopbutton');
 
 if (topButton !== null) {
   topButton.classList.remove('fade');
-  window.onscroll = function() {
-    scrollFunction()
-  };
-
+  window.addEventListener('scroll', scrollFunction);
   topButton.addEventListener('click', topFunction);
 }
 
@@ -21,3 +18,4 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
