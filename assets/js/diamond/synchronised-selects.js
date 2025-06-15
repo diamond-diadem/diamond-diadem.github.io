@@ -17,7 +17,7 @@ function synchronizeAndDisplay(selectedElement, pairedElementId, resetElementIds
     const selectedValue = selectedElement.value;
     if (selectedValue) {
         const correspondingContent1 = document.getElementById(`content-${selectedValue}`);
-        const correspondingContent2 = document.getElementById(`content-${pairedElement.value}`);
+        const correspondingContent2 = pairedElement ? document.getElementById(`content-${pairedElement.value}`) : null;
         if (correspondingContent1) {
             correspondingContent1.classList.remove('hidden');
         }
@@ -51,3 +51,4 @@ document.getElementById('options2A').addEventListener('change', function () {
 document.getElementById('options2B').addEventListener('change', function () {
     synchronizeAndDisplay(this, 'options2A', ['options1A', 'options1B']);
 });
+

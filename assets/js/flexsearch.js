@@ -44,6 +44,8 @@ import Index from 'flexsearch';
     }
   });
 
+  const queryInput = document.querySelector('.search-text');
+
   function showResults(items) {
     const template = document.querySelector('template').content;
     const fragment = document.createDocumentFragment();
@@ -54,17 +56,17 @@ import Index from 'flexsearch';
     const itemsLength = Object.keys(items).length;
 
     // Show/hide "No recent searches" and "No search results" messages
-    if ((itemsLength === 0) && (query.value === '')) {
+    if ((itemsLength === 0) && (queryInput.value === '')) {
       // Hide "No search results" message
       document.querySelector('.search-no-results').classList.add('d-none');
       // Show "No recent searches" message
       document.querySelector('.search-no-recent').classList.remove('d-none');
-    } else if ((itemsLength === 0) && (query.value !== '')) {
+    } else if ((itemsLength === 0) && (queryInput.value !== '')) {
       // Hide "No recent searches" message
       document.querySelector('.search-no-recent').classList.add('d-none');
       // Show "No search results" message
       const queryNoResults = document.querySelector('.query-no-results');
-      queryNoResults.innerText = query.value;
+      queryNoResults.innerText = queryInput.value;
       document.querySelector('.search-no-results').classList.remove('d-none');
     } else {
       // Hide both "No recent searches" and "No search results" messages
@@ -89,7 +91,7 @@ import Index from 'flexsearch';
   }
 
   function doSearch() {
-    const query = document.querySelector('.search-text').value.trim();
+    const query = queryInput.value.trim();
     const limit = {{ .searchLimit }};
     const results = index.search({
       query: query,
@@ -118,7 +120,7 @@ import Index from 'flexsearch';
     });
     document.querySelector('.search-loading').classList.add('d-none');
     document.querySelector('.search-input').classList.remove('d-none');
-    document.querySelector('.search-text').focus();
+    queryInput.focus();
   }
 
   function buildIndex() {
