@@ -11,9 +11,9 @@ A type of archive containing a computer program (in source or executable form) a
 
 ### What are the benefits?
 
-* Using packages facilitates the installation of computer programs, libraries, or utilities.
-* For users, this choice automates the management of the software environment on a machine, allowing them to focus on using the installed tool.
-* For developers, this choice simplifies the distribution of the tools they produce.
+- Using packages facilitates the installation of computer programs, libraries, or utilities.
+- For users, this choice automates the management of the software environment on a machine, allowing them to focus on using the installed tool.
+- For developers, this choice simplifies the distribution of the tools they produce.
 
 ### The chosen solution for DIAMOND
 
@@ -25,10 +25,10 @@ In the context of the DIAMOND project, which imposes stringent requirements rela
   <img alt="Guix" class="logo-guix about"/>
 </a>
 
-* It can be used on any Linux distribution (essential in the academic field and on scientific computing centers), without competing with other installed managers.
-* It is built to meet the requirements of scientific reproducibility, ensuring bit-by-bit executable integrity.
-* It simplifies the management of different library versions, which is often encountered when two tools each require a specific version of a given library.
-* It is an open-source tool, primarily developed within the French academic community.
+- It can be used on any Linux distribution (essential in the academic field and on scientific computing centers), without competing with other installed managers.
+- It is built to meet the requirements of scientific reproducibility, ensuring bit-by-bit executable integrity.
+- It simplifies the management of different library versions, which is often encountered when two tools each require a specific version of a given library.
+- It is an open-source tool, primarily developed within the French academic community.
 
 In summary, using packages via the GNU Guix manager facilitates the distribution of replicable codes and tools suitable for high-performance computing.
 

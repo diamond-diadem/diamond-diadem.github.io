@@ -36,8 +36,9 @@ GUIX_PROFILE="$HOME/.config/guix/current"
 ## Installation sans droits super-utilisateur
 
 Bien que l'utilisation de Guix ne requière pas de droits particuliers, son installation nécessite des droits super-utilisateurs notamment pour :
-* créer le `/gnu/store` qui va stocker tous les paquets,
-* créer des environnements logiciels isolés pour la construction de paquet via le démon Guix.
+
+- créer le `/gnu/store` qui va stocker tous les paquets,
+- créer des environnements logiciels isolés pour la construction de paquet via le démon Guix.
 
 Si le sujet vous intéresse, nous vous conseillons de jeter un œil à cet [article](https://hpc.guix.info/blog/2017/09/reproducibility-and-root-privileges/) ou [celui-là](https://hpc.guix.info/blog/2017/10/using-guix-without-being-root/). Si vous ne possédez pas de droits super-utilisateur sur votre machine, nous vous conseillons de prendre contact avec votre administrateur système pour l'installation.
 

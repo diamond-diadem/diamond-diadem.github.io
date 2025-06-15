@@ -1,49 +1,49 @@
 // // // >>> sections large icons >>> // // //
 
 .section-features {
-  margin-top: 50px;
+    margin-top: 50px;
 }
 
 .homepage.section-icon {
-  display: flex;
-  height: 100px;
-  margin: auto;
-  margin-bottom: -15px;
-  margin-top: 20px;
+    display: flex;
+    height: 100px;
+    margin: auto;
+    margin-bottom: -15px;
+    margin-top: 20px;
 }
 
 .section-icon.about {
-  content: url(images/sections-icons/light/about.svg);
+    content: url(images/sections-icons/light/about.svg);
 }
 
 .section-icon.containers {
-  content: url(images/sections-icons/light/containers.svg);
+    content: url(images/sections-icons/light/containers.svg);
 }
 
 .section-icon.documentation {
-  content: url(images/sections-icons/light/documentation.svg);
+    content: url(images/sections-icons/light/documentation.svg);
 }
 
 .section-icon.wfs-dbs {
-  content: url(images/sections-icons/light/wfs-dbs.svg);
+    content: url(images/sections-icons/light/wfs-dbs.svg);
 }
 
 @include color-mode(dark) {
-  .section-icon.about {
-      content: url(images/sections-icons/dark/about.svg);
-  }
+    .section-icon.about {
+        content: url(images/sections-icons/dark/about.svg);
+    }
 
-  .section-icon.containers {
-      content: url(images/sections-icons/dark/containers.svg);
-  }
+    .section-icon.containers {
+        content: url(images/sections-icons/dark/containers.svg);
+    }
 
-  .section-icon.documentation {
-      content: url(images/sections-icons/dark/documentation.svg);
-  }
+    .section-icon.documentation {
+        content: url(images/sections-icons/dark/documentation.svg);
+    }
 
-  .section-icon.wfs-dbs {
-      content: url(images/sections-icons/dark/wfs-dbs.svg);
-  }
+    .section-icon.wfs-dbs {
+        content: url(images/sections-icons/dark/wfs-dbs.svg);
+    }
 }
 
 // // // <<< sections large icons <<< // // //

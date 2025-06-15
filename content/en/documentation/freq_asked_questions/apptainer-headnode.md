@@ -19,10 +19,10 @@ You can then get graphical feedback for the Ovito Apptainer image using the comm
 
 ```bash
 apptainer run --contain --bind $HOME --cleanenv --env DISPLAY=$DISPLAY ovito.sif
-``` 
+```
 
-**Caution** 
->
+**Caution**
+
 > It is not advisable to run heavy processes on the front-ends of clusters. On some clusters there are services that kill all processes that run for more than **X** minutes. This is particularly the case for the `dahu` and `bigfoot` front-ends.
 
 </div>

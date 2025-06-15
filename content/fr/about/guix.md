@@ -11,9 +11,9 @@ Type d'archive contenant un programme informatique (sous-forme de source ou d'ex
 
 ### Quels avantages ?
 
-* L'utilisation de paquets permet de faciliter l'installation de programmes informatiques, librairies ou utilitaires.
-* Pour les utilisateurs, ce choix permet d'automatiser la gestion de l'environnement logiciel sur une machine afin de pouvoir se concentrer sur l'utilisation de l'outil installé.
-* Pour les développeurs, ce choix permet de faciliter la distribution des outils produits.
+- L'utilisation de paquets permet de faciliter l'installation de programmes informatiques, librairies ou utilitaires.
+- Pour les utilisateurs, ce choix permet d'automatiser la gestion de l'environnement logiciel sur une machine afin de pouvoir se concentrer sur l'utilisation de l'outil installé.
+- Pour les développeurs, ce choix permet de faciliter la distribution des outils produits.
 
 ### La solution choisie pour DIAMOND
 
@@ -25,10 +25,10 @@ Dans le cadre du projet DIAMOND, imposant des exigences fortes relatives à la r
   <img alt="Guix" class="logo-guix about"/>
 </a>
 
-* il est utilisable sur n'importe quelle distribution Linux (incontournables dans le milieu académique et sur les centres de calcul scientifique), sans pour autant entrer en concurrence avec les autres gestionnaires installés.
-* il est construit pour correspondre aux exigences de la reproductibilté scientifique, permettant d'assurer l'intégrité des exécutables bit-à-bit.
-* il facilite la gestion de l'environnement de l'utilisation de versions différentes de librairies, que l'on rencontre souvent lorsque deux outils requièrent chacun une version spécifique d'une librairie donnée.
-* il s'agit d'un outil open-source, prinicpalement développé au sein du milieu académique français.
+- il est utilisable sur n'importe quelle distribution Linux (incontournables dans le milieu académique et sur les centres de calcul scientifique), sans pour autant entrer en concurrence avec les autres gestionnaires installés.
+- il est construit pour correspondre aux exigences de la reproductibilté scientifique, permettant d'assurer l'intégrité des exécutables bit-à-bit.
+- il facilite la gestion de l'environnement de l'utilisation de versions différentes de librairies, que l'on rencontre souvent lorsque deux outils requièrent chacun une version spécifique d'une librairie donnée.
+- il s'agit d'un outil open-source, prinicpalement développé au sein du milieu académique français.
 
 En résumé, l'utilisation de paquets via le gestionnaire GNU Guix permet de faciliter la distribution de codes et d'outils réplicables et adaptés pour le calcul haute performance.
 

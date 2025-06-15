@@ -1,7 +1,7 @@
 ---
 title: Part 1
 weight: 1
-description: 
+description:
 ---
 
 {{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
@@ -27,15 +27,17 @@ In the summer of 2023, the materials community was surveyed via LimeSurvey to id
 <h3><u>USEFUL LINKS</u></h3>
 
 {{< link-card
-    title="Install Apptainer"
-    description="Take advantage of our tutorial"
-    href="/en/documentation/install/install-apptainer/"
-    icon="custom/apptainer"
->}}
+title="Install Apptainer"
+description="Take advantage of our tutorial"
+href="/en/documentation/install/install-apptainer/"
+icon="custom/apptainer"
+
+> }}
 
 {{< link-card
-    title="Containers images"
-    description="Learn to use them"
-    href="/en/documentation/use/apptainer-image/"
-    icon="tabler-icons/outline/settings-question"
->}}
+title="Containers images"
+description="Learn to use them"
+href="/en/documentation/use/apptainer-image/"
+icon="tabler-icons/outline/settings-question"
+
+> }}

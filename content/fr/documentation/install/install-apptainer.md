@@ -39,7 +39,7 @@ sudo apt install -y apptainer
 
 ### Détail des étapes
 
-Pour installer directement les paquets Ubuntu pré-construits destinés aux architectures `amd64` et `arm64`, il faut pouvoir accéder aux *archives de paquets personnels* (Personal Package Archive - PPA) d'Apptainer.
+Pour installer directement les paquets Ubuntu pré-construits destinés aux architectures `amd64` et `arm64`, il faut pouvoir accéder aux _archives de paquets personnels_ (Personal Package Archive - PPA) d'Apptainer.
 
 Dans un premier temps, il faut donc s'assurer d'avoir accès à la commande `add-apt-repository` :
 
@@ -102,6 +102,7 @@ sudo apt install -y ./apptainer_1.2.5_amd64.deb
 {{< video-with-consent id="BQXcLOYe5Hw?si=mP4gb6T4VzCqUSwB" >}}
 
 ### Paquets RPMs depuis GitHub
+
 À l'arrivée de chaque nouvelle version, un paquet RPM (RedHat Package Manager) est disponible sur GitHub :
 
 ```bash
@@ -109,6 +110,7 @@ sudo yum install -y https://github.com/apptainer/apptainer/releases/download/v1.
 ```
 
 ### Paquets RPMs depuis EPEL ou Fedora
+
 Les paquets sont également disponibles via EPEL (Extra Packages for Enterprise Linux).
 Sous RedHat, il est préalablement nécessaire de pouvoir accéder aux dépôts EPEL :
 

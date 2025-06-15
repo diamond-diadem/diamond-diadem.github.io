@@ -36,8 +36,9 @@ GUIX_PROFILE="$HOME/.config/guix/current"
 ## Installation without super-user rights
 
 Although you do not require any special rights to use Guix, you will need super-user rights to install it:
-* create the `/gnu/store` where all packages are stored,
-* create isolated software environments for building packages using the Guix daemon.
+
+- create the `/gnu/store` where all packages are stored,
+- create isolated software environments for building packages using the Guix daemon.
 
 If you're interested in this topic, we recommend you have a look at this [article](https://hpc.guix.info/blog/2017/09/reproducibility-and-root-privileges/) or [this one](https://hpc.guix.info/blog/2017/10/using-guix-without-being-root/). If you do not have super-user privileges on your machine, we advise you to contact your system administrator for installation.
 

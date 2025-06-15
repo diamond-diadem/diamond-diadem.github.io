@@ -48,7 +48,7 @@ En pratique, vous pouvez accéder aux onglets "Issues" et "Merge requests" sur n
 
 ## Consulter les tickets existants
 
-Avant n'importe quelle demande, nous vous recommandons de jeter un œil aux tickets *ouverts* et *résolus*. Votre problème ou requête a peut être déjà été traité ou rapporté par un autre utilisateur.
+Avant n'importe quelle demande, nous vous recommandons de jeter un œil aux tickets _ouverts_ et _résolus_. Votre problème ou requête a peut être déjà été traité ou rapporté par un autre utilisateur.
 
 Pour ce faire, vous n'avez qu'à consulter l'onglet "All" et à utiliser la barre de recherche en renseignant les mots clés relatifs à votre requête.
 
@@ -61,6 +61,7 @@ Si vous ne trouvez rien qui vous intéresse dans les tickets ouverts et résolus
 <img alt="create issue" class="create-issue" style="width:100%">
 
 Nous vous demandons :
+
 - de **n'assigner aucune** personne au ticket,
 - de **ne sélectionner aucune** date d'échéance,
 - de **ne sélectionner aucun** jalon.
@@ -72,6 +73,7 @@ En revanche, nous vous demandons de sélectionner un **modèle** et un **label**
 Pour rapporter un bug ou demander de l'aide quant à l'utilisation des outils de la plateforme, vous devez sélectionner le template `bug_report` dans la rubrique "Description".
 
 Ensuite, nous vous demandons de donner le maximum de détails concernant votre problème :
+
 - Quel code/workflow cela concerne-t-il ?
 - Quel est le comportement attendu ?
 - Quel est le comportement réel ? (n'hésitez pas à donner des logs ou captures d'écran)
@@ -83,6 +85,7 @@ Ensuite, nous vous demandons de donner le maximum de détails concernant votre p
 Vous pouvez demander une nouvelle fonctionnalité dans un conteneur/workflow existant. Vous devez alors sélectionner le template `feature_request` dans la rubrique "Description".
 
 Ensuite, nous vous demandons de donner le maximum de détails concernant votre requête :
+
 - Quel code/workflow cela concerne-t-il ?
 - Quelle est la fonctionnalité que vous souhaitez ?
 - Qu'allez-vous pouvoir faire avec cette fonctionnalité ?
@@ -92,6 +95,7 @@ Ensuite, nous vous demandons de donner le maximum de détails concernant votre r
 Vous pouvez également faire une demande de conteneurisation ou empaquetage de code/workflow. Vous devez alors sélectionner le template `code_container_request` dans la rubrique "Description".
 
 Ensuite, nous vous demandons de donner le maximum de détails concernant votre requête :
+
 - Quel code/workflow voulez-vous ?
 - Quelles sont les dépendances ?
 - Quelles fonctionnalités voulez-vous ?

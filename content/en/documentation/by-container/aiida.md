@@ -30,10 +30,11 @@ $ ls /path/to/folder/of/your/choice
 ```
 
 Here's the long explanation:
-* The `database` folder is needed to store data related to AiiDA.
-* The `.ssh` folder is needed to store data related to ssh connections.
-* The `postgres_run` folder is needed to run the PostgreSQL service.
-* The `rabbitmq/var/lib/rabbitmq` and `rabbitmq/var/log` folders are needed to run the RabbitMQ service.
+
+- The `database` folder is needed to store data related to AiiDA.
+- The `.ssh` folder is needed to store data related to ssh connections.
+- The `postgres_run` folder is needed to run the PostgreSQL service.
+- The `rabbitmq/var/lib/rabbitmq` and `rabbitmq/var/log` folders are needed to run the RabbitMQ service.
 
 Once this folder architecture has been created and Apptainer installed, you are ready to use an Apptainer image of AiiDA.
 
@@ -129,6 +130,7 @@ This allows you to fully configure your AiiDA environment by customising the def
 This part is intended for people who have a PERSEUS account and are assigned to a valid project. If this is not the case and you need to use Gricad clusters, please consult this [link](https://gricad-doc.univ-grenoble-alpes.fr/services/).
 
 The first thing you need to do is generate an RSA key. To do this, run the command:
+
 ```bash
 ssh-keygen
 ```

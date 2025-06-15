@@ -12,6 +12,7 @@ If the Apptainer image you want to use supports parallel computing, then OpenMPI
 - the [hybrid mode]({{< ref "#hybrid_mode" >}}).
 
 **Note**
+
 > The Apptainer commands below have been simplified for readability. It is possible to combine the use of `mpirun` commands with the `--containall` flag, while mounting specific directories to the container with the `--bind` flags and specifying environment variables `--env`. The possibilities are numerous. We therefore advise you to take a look at the documentation related to these [topics](/en/documentation/use/apptainer-image).
 
 ## Practical Example: Image with OpenMPI
@@ -29,7 +30,7 @@ mkdir -p $HOME/apptainer-images
 mv ./tutorial.sif $HOME/apptainer-images/tutorial-openmpi.sif
 ```
 
-This image will allow you to create containers embedding code parallelized with **OpenMPI**. This `omn3` code performs a series of multiplications of random $N \times N$  square matrices; the size of the matrices $N$  and the number of multiplications $M$ can be specified as arguments. For example, to parallelize ($M=1000$) multiplications of ($N \times N = 100 \times 100$) matrices on $8$ cores:
+This image will allow you to create containers embedding code parallelized with **OpenMPI**. This `omn3` code performs a series of multiplications of random $N \times N$ square matrices; the size of the matrices $N$ and the number of multiplications $M$ can be specified as arguments. For example, to parallelize ($M=1000$) multiplications of ($N \times N = 100 \times 100$) matrices on $8$ cores:
 
 ```bash
 mpirun -np 8 omn3 100 1e3
@@ -59,6 +60,7 @@ Another constraint of the embedded mode is that the Apptainer image must be run 
 ## Hybrid Mode {#hybrid_mode}
 
 We have just seen that using OpenMPI in embedded mode on HPC infrastructures, where numerical efficiency is central, would not be desirable due to suboptimal numerical performance. As explained in Apptainer's documentation, it is preferable to use the hybrid mode on HPC infrastructures. In this case, a "dialogue" must be set up between the host machine's OpenMPI (on the HPC infrastructure) and the OpenMPI embedded in the Apptainer image. To better understand the conceptual difference between this hybrid mode and the embedded mode discussed above, you can look at the diagram below.
+
 <!-- (NOTE: INCLUDE EMBEDDED/HYBRID OPENMPI DIAGRAM HERE). -->
 
 <div class="text-center mt-4 mb-4">
@@ -115,7 +117,7 @@ In practice, executing OpenMPI commands may require additional arguments or opti
 ### Inter-Version Compatibility
 
 Although there is inter-version compatibility for OpenMPI, using different versions of OpenMPI can result in [performance drops](https://github.com/ckhroulev/apptainer-with-ompi/tree/main). Therefore, it is simpler, when possible, to use the same version of OpenMPI on the host machine as in the container. This can be done in two ways: by selecting, when possible, the most suitable version of OpenMPI available on the HPC cluster you are using, or by directly installing the same version of OpenMPI as the cluster in the Apptainer image during its construction.
-In the context of PEPR DIADEM, the container images made available are built without exhaustive prior knowledge of the machines they will be used on; it is thus difficult to choose *a priori* the version you need to include in the container.
+In the context of PEPR DIADEM, the container images made available are built without exhaustive prior knowledge of the machines they will be used on; it is thus difficult to choose _a priori_ the version you need to include in the container.
 
 If you want to know the version of OpenMPI included in a given image, as well as other useful information, you can call `ompi_info` as follows:
 

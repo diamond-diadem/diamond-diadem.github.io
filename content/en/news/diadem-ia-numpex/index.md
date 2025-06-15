@@ -22,8 +22,9 @@ seo:
   canonical: "" # custom canonical URL (optional)
   noindex: false # false (default) or true
 aliases:
-- diadem-ia-event
+  - diadem-ia-event
 ---
+
 <!-- <div class="news-3peprs"> -->
 <div align="center">
 
@@ -65,23 +66,23 @@ The day is devoted to several talks given by renowned researchers and specialist
 
 - **8h30-9h00:** Welcoming & Coffee
 
-- **9h00-10h00:** Marie-Pierre GAIGEOT (IUF & Evry University) *Exploiting graph theory in MD simulations for extracting chemical and physical properties of materials*
-- **10h-10h40:** Émilie DEVIJVER (CNRS & University of Grenoble Alpes) *An introduction to causality*
+- **9h00-10h00:** Marie-Pierre GAIGEOT (IUF & Evry University) _Exploiting graph theory in MD simulations for extracting chemical and physical properties of materials_
+- **10h-10h40:** Émilie DEVIJVER (CNRS & University of Grenoble Alpes) _An introduction to causality_
 
 - **10h40-11h00:** Coffee break
 
-- **11h00-11h40:** Guillaume STIRNEMANN (CNRS, ENS) *Machine learned interatomic potentials for reactivity in the condensed phases: from recent achievements to future developments*
-- **11h40-12h20:** Stéphane CHRÉTIEN *Introduction to conformal prediction*
+- **11h00-11h40:** Guillaume STIRNEMANN (CNRS, ENS) _Machine learned interatomic potentials for reactivity in the condensed phases: from recent achievements to future developments_
+- **11h40-12h20:** Stéphane CHRÉTIEN _Introduction to conformal prediction_
 
 - **12h20-14h00:** Lunch break & Posters session
 
-- **14h00-15h00:** Amaury HABRARD (IUF & University Jean Monnet) *Domain adaptation and transfer learning*
-- **15h00-15h40:** Alessandro LEITE (INRIA) *Causal Knowledge Discovery through Large Language Models: Challenges and Opportunities*
+- **14h00-15h00:** Amaury HABRARD (IUF & University Jean Monnet) _Domain adaptation and transfer learning_
+- **15h00-15h40:** Alessandro LEITE (INRIA) _Causal Knowledge Discovery through Large Language Models: Challenges and Opportunities_
 
 - **15h40-16h00:** Coffee break
 
-- **16h00-16h40:** Emmanuel FRANCK (UNISTRA) *Hybrid ML approaches in Material Science : the contribution of PINNS*
-- **16h40-17h20:** Martin URHIN  (University of Grenoble Alpes) *When GenAI meets Material Science*
+- **16h00-16h40:** Emmanuel FRANCK (UNISTRA) _Hybrid ML approaches in Material Science : the contribution of PINNS_
+- **16h40-17h20:** Martin URHIN (University of Grenoble Alpes) _When GenAI meets Material Science_
 - **17h20- :** Discussion and Conclusion
 
 </div>

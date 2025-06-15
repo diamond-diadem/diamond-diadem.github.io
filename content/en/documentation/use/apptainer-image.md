@@ -31,26 +31,30 @@ mv ./tutorial.sif $HOME/apptainer-images/tutorial.sif
 ```
 
 ## Apptainer : crash course
+
 This section is aimed for people who have not used Apptainer yet.
 
 The main way to interact with the image is through invoking the `apptainer` command, followed by different arguments :
 
-* The `run` argument spawns a container from the image, runs the *container's default command* within the container, and then destroys it.
+- The `run` argument spawns a container from the image, runs the _container's default command_ within the container, and then destroys it.
 
 ```bash
 $ apptainer run $HOME/apptainer-images/tutorial.sif
 ```
+
 **Note**
+
 > If the command invoked by `apptainer run` allowed supplementary arguments (which is not the case here), they could be provided by appending them at the end.
 
-* The `exec` argument is similar to the `run` argument, only invoking **any** specified command inside the container. For example :
+- The `exec` argument is similar to the `run` argument, only invoking **any** specified command inside the container. For example :
 
 ```bash
 $ apptainer exec $HOME/apptainer-images/tutorial.sif echo "Hi from the container !"
 ```
+
 creates a container from the `$HOME/apptainer-images/tutorial.sif` image, invokes the `echo "Hi from the container !"` command within the container, and then destroys it.
 
-* The `shell` argument allows to enter an interactive shell inside the container (the `Apptainer>` *prompt* then appears on the left of the command line), run successive commands, then exit the container using `exit` or `Crtl+D`, which also destroys it. For example :
+- The `shell` argument allows to enter an interactive shell inside the container (the `Apptainer>` _prompt_ then appears on the left of the command line), run successive commands, then exit the container using `exit` or `Crtl+D`, which also destroys it. For example :
 
 ```bash
 $ apptainer shell $HOME/apptainer-images/tutorial.sif
@@ -63,15 +67,16 @@ $
 ```
 
 **Remark**
+
 > Playing with `exec` and `shell` using different images, you will sometimes notice the number of commands available inside the container is quite limited. Indeed, a container should ideally restrict its content to be as close as possible to the minimal tools to run the code it embeds. It should hence remove superfluous utilities, both for portability (image size) and security reasons.
 
-* The `run-help` argument displays the image's associated help message.
+- The `run-help` argument displays the image's associated help message.
 
 ```bash
 apptainer run-help $HOME/apptainer-images/tutorial.sif
 ```
 
-* The `inspect` argument displays the image's meta-data (image's author, version, creation date, ...).
+- The `inspect` argument displays the image's meta-data (image's author, version, creation date, ...).
 
 ```bash
 apptainer inspect $HOME/apptainer-images/tutorial.sif
@@ -82,9 +87,11 @@ You may also directly execute the image, as a binary :
 ```bash
 $ $HOME/apptainer-images/tutorial.sif
 ```
+
 which is strictly equivalent to `apptainer run $HOME/apptainer-images/tutorial.sif`
 
 ## Environment variables
+
 Many tools require environment variables definition to run. In principle, a correctly-built container pre-defines suitable default values for them, but it is common for a user to wish and modifiy one (or more). With Apptainer, you may specify the value you want an environment variable to have through the `--env` flag.
 
 For instance, the default command invoked by `apptainer run $HOME/apptainer-images/tutorial.sif` is :
@@ -92,6 +99,7 @@ For instance, the default command invoked by `apptainer run $HOME/apptainer-imag
 ```bash
 echo $GREET $USER "who just ran the default command of the container."
 ```
+
 where the `$GREET` variable is defined to be "Welcome" by default in the container.
 
 The `$USER` is automatically set so that its value inside the container is the same as for the host machine. This design choice is not specific to the image used in this tutorial. It is one of many Apptainer standard behaviours to ease functioning in a high-performance computation setting.
@@ -101,20 +109,23 @@ Those two variables may be redefined :
 ```bash
 apptainer run --env GREET=Hello $HOME/apptainer-images/tutorial.sif
 ```
+
 or
 
 ```bash
 apptainer run --env USER=newusername $HOME/apptainer-images/tutorial.sif
 ```
+
 **Remark**
+
 > When one modifies `$USER`, Apptainer may display a message warning the environment variable's value is accepted but deviates from the standard behaviour.
 
 ```bash
 WARNING: Environment variable USER already has value [newusername], will not forward new value [oldusername] from parent process environment
 ```
 
-
 ## Isolation between the host and the container
+
 By default, pptainer does not fully isolate the container from the host system, but there are options to alter this behavior at different degrees. These options, and the directories share by default, are extensively discussed in a [dedicated tutorial section](/en/documentation/use/apptainer-isolation-flags/).
 
 Here, we only present the most general option (`--containall`), which allows to isolate the container's environment and file system from the host at once.
@@ -143,9 +154,9 @@ cat $PWD/test-host.txt $PWD/test-container.txt
 
 If this tutorial helped you to discover the basci usage of Apptainer, you can also take a look at the following pages to better take the platform tools into your own hands:
 
-* [How to use a containerized code in parallel?](/en/documentation/use/apptainer-parallel/)
-* [What are the options to isolate a container from its host?](/en/documentation/use/apptainer-isolation-flags)
-* [What about Guix packages?](/en/documentation/use/guix-package)
-* [How to ask for help?](/en/documentation/use/ask-help)
+- [How to use a containerized code in parallel?](/en/documentation/use/apptainer-parallel/)
+- [What are the options to isolate a container from its host?](/en/documentation/use/apptainer-isolation-flags)
+- [What about Guix packages?](/en/documentation/use/guix-package)
+- [How to ask for help?](/en/documentation/use/ask-help)
 
 </div>

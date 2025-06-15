@@ -5,15 +5,15 @@ goldmark:
     passthrough:
       delimiters:
         block:
-        - - \[
-          - \]
-        - - $$
-          - $$
+          - - \[
+            - \]
+          - - $$
+            - $$
         inline:
-        - - \(
-          - \)
-        - - $
-          - $
+          - - \(
+            - \)
+          - - $
+            - $
       enable: true
   parser:
     autoHeadingID: true
