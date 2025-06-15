@@ -13,10 +13,10 @@ The main purpose of this documentation is to help you get to grips with the vari
 
 Here are the links for quick access to the documentation section for the tools you are interested in:
 
-* [Installing Apptainer](/en/documentation/install/install-apptainer/)
-* [Installing Guix](/en/documentation/install/install-guix/)
-* [Using an Apptainer image](/en/documentation/use/apptainer-image/)
-* [Using a Guix package](/en/documentation/use/guix-package/)
+- [Installing Apptainer](/en/documentation/install/install-apptainer/)
+- [Installing Guix](/en/documentation/install/install-guix/)
+- [Using an Apptainer image](/en/documentation/use/apptainer-image/)
+- [Using a Guix package](/en/documentation/use/guix-package/)
 
 #### Here are the links for quick access to image-specific tutorials:
 

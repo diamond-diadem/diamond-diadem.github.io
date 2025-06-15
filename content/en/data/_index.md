@@ -2,7 +2,6 @@
 title: Data
 ---
 
-
 <div align="center">
 
 <div style="display: flex; justify-content: center; align-items: center; height: 150px;"><h2  style="margin: 0;">Content to be added</h2></div>

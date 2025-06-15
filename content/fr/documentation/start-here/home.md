@@ -13,10 +13,10 @@ Cette documentation a pour premier objectif de vous permettre de prendre en main
 
 Voici les liens pour accéder rapidement à la section de documentation des outils qui vous intéressent :
 
-* [Installation d'Apptainer](/documentation/install/install-apptainer/)
-* [Installation de Guix](/documentation/install/install-guix/)
-* [Utiliser une image Apptainer](/documentation/use/apptainer-image/)
-* [Utiliser un paquet Guix](/documentation/use/guix-package/)
+- [Installation d'Apptainer](/documentation/install/install-apptainer/)
+- [Installation de Guix](/documentation/install/install-guix/)
+- [Utiliser une image Apptainer](/documentation/use/apptainer-image/)
+- [Utiliser un paquet Guix](/documentation/use/guix-package/)
 
 #### Voici les liens pour accéder rapidement aux tutoriels spécifiques par image :
 

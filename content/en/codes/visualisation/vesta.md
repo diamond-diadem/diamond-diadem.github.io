@@ -34,24 +34,29 @@ VESTA (Visualization for Electronic and Structural Analysis) is a 3D visualizati
 ### Key Features
 
 1. **Visualization of Crystalline Structures**:
+
    - High-precision 3D display of atomic structures.
    - Representation of coordination polyhedra and bonding networks.
    - Customizable rendering styles (spheres, sticks, polyhedra, etc.).
 
 2. **Electronic Data Analysis**:
+
    - Display of electron densities and isodensity surfaces.
    - Visualization of wave functions and probability densities.
 
 3. **Structure Manipulation**:
+
    - Construction and modification of crystalline structures.
    - Creation of supercells and crystalline defects.
    - Symmetry: identification and application of symmetry elements.
 
 4. **Compatibility and File Formats**:
+
    - Supports numerous standard file formats (CIF, VASP, Gaussian, etc.).
    - Export of visualizations in popular image formats (PNG, JPEG) and 3D models (VRML).
 
 5. **Advanced Features**:
+
    - Calculation of interatomic distances, bond angles, and bond lengths.
    - Generation of theoretical X-ray diffraction diagrams.
    - Integration of experimental and theoretical data for comparative analysis.
@@ -73,7 +78,7 @@ VESTA stands out for its ability to combine sophisticated visualization function
 
 </div>
 
-### Learn how to use this specific container  _( to be added )_
+### Learn how to use this specific container _( to be added )_
 
 ### VESTA documentation
 

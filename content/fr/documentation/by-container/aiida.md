@@ -30,10 +30,11 @@ $ ls /chemin/vers/le/dossier/de/votre/choix
 ```
 
 Voici la longue explication :
-* Le dossier `database` est nécessaire pour sauvegarder les données liées à AiiDA.
-* Le dossier `.ssh` est nécessaire pour sauvegarder les données liées aux connexions ssh.
-* Le dossier `postgres_run` est nécessaire pour l'exécution du service PostgreSQL.
-* Les dossiers `rabbitmq/var/lib/rabbitmq` et `rabbitmq/var/log` sont nécessaires pour l'exécution du service RabbitMQ.
+
+- Le dossier `database` est nécessaire pour sauvegarder les données liées à AiiDA.
+- Le dossier `.ssh` est nécessaire pour sauvegarder les données liées aux connexions ssh.
+- Le dossier `postgres_run` est nécessaire pour l'exécution du service PostgreSQL.
+- Les dossiers `rabbitmq/var/lib/rabbitmq` et `rabbitmq/var/log` sont nécessaires pour l'exécution du service RabbitMQ.
 
 Une fois cette architecture de dossier créée et Apptainer installé, vous êtes prêt à utiliser une image Apptainer d'AiiDA.
 
@@ -129,6 +130,7 @@ Cela permet de configurer entièrement votre environnement AiiDA en personnalisa
 Cette partie est prévue pour les personnes qui possèdent un compte PERSEUS et sont affectés à un projet valide. Si ce n'est pas le cas et que vous avez besoin d'utiliser les clusters de Gricad, veuillez consulter ce [lien](https://gricad-doc.univ-grenoble-alpes.fr/services/).
 
 La première chose à faire est de générer une clé RSA. Pour ce faire, exécutez la commande :
+
 ```bash
 ssh-keygen
 ```

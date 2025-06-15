@@ -1,66 +1,66 @@
 .diamond.in-navbar {
-  height: 55px;
+    height: 55px;
 }
 
 @include media-breakpoint-down(lg) {
-  .diamond.in-navbar {
-    height: 50px;
-  }
+    .diamond.in-navbar {
+        height: 50px;
+    }
 }
 
 @include media-breakpoint-down(sm) {
-  .diamond.in-navbar {
-    height: 45px;
-  }
+    .diamond.in-navbar {
+        height: 45px;
+    }
 }
 
 .diamond {
-  content: url(/images/diamond/diamond-light-smaller.png);
+    content: url(/images/diamond/diamond-light-smaller.png);
 }
 
 @include color-mode(dark) {
-  .diamond {
-      content: url(/images/diamond/diamond-dark-smaller.png);
-  }
+    .diamond {
+        content: url(/images/diamond/diamond-dark-smaller.png);
+    }
 }
 
 .logo-diamond {
-  content: url(/images/diamond/logo-diamond-light-smaller.png);
+    content: url(/images/diamond/logo-diamond-light-smaller.png);
 }
 @include color-mode(dark) {
-  .logo-diamond {
-      content: url(/images/diamond/logo-diamond-dark-smaller.png);
-  }
+    .logo-diamond {
+        content: url(/images/diamond/logo-diamond-dark-smaller.png);
+    }
 }
 
 // logo diamond homepage (responsive) //
 
 @include media-breakpoint-up(xl) {
-  .logo-diamond.homepage {
-    width: 38%;
-  }
+    .logo-diamond.homepage {
+        width: 38%;
+    }
 }
 @include media-breakpoint-only(lg) {
-  .logo-diamond.homepage {
-    width: 50%;
-  }
+    .logo-diamond.homepage {
+        width: 50%;
+    }
 }
 @include media-breakpoint-only(md) {
-  .logo-diamond.homepage {
-    width: 60%;
-  }
+    .logo-diamond.homepage {
+        width: 60%;
+    }
 }
 @include media-breakpoint-only(sm) {
-  .logo-diamond.homepage {
-    width: 70%;
-  }
+    .logo-diamond.homepage {
+        width: 70%;
+    }
 }
 @include media-breakpoint-down(sm) {
-  .logo-diamond.homepage {
-    max-width: unset;
-    width: 120%;
-    position: relative;
-    left: -10%;
-  }
+    .logo-diamond.homepage {
+        max-width: unset;
+        width: 120%;
+        position: relative;
+        left: -10%;
+    }
 }
 // end //

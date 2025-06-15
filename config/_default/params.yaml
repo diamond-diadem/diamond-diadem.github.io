@@ -30,10 +30,10 @@ doks:
   showDate: false
   showSummary: true
   searchLimit: 99
-## Used as banner for news
+  ## Used as banner for news
   alert: true
   alertDismissable: false
-##
+  ##
   bootstrapJavascript: false
   sectionNav:
     - codes

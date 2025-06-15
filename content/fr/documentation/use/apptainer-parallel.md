@@ -12,15 +12,16 @@ Si l'image Apptainer que vous voulez utiliser supporte le calcul parallèle, alo
 - le mode [hybride]({{< ref "#hybrid_mode" >}}).
 
 **Remarque**
+
 > Les commandes Apptainer ci-dessous ont été simplifiées au maximum dans un but de lisibilité. Il est possible de combiner l'utilisation des commandes `mpirun` avec le flag `--containall`, tout en montant des dossiers spécifiques au conteneur avec les flags `--bind` et en renseignant des variables d'environnement `--env`. Les possibilités sont multiples. Nous vous conseillons donc de jeter un oeil à la documentation relative à ces [sujets](/documentation/use/apptainer-image).
 
 ## Exemple pratique : image avec OpenMPI
 
- Une image sur mesure dédiée à la mise en pratique de ce tutoriel est disponible en tapant la commande suivante :
+Une image sur mesure dédiée à la mise en pratique de ce tutoriel est disponible en tapant la commande suivante :
 
 ```bash
  apptainer pull tutorial-openmpi.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/tutorial-openmpi.sif:latest
- ```
+```
 
 Ainsi, vous récupérez une image Apptainer (format de fichier `.sif`). Cette image est un fichier relocalisable et renommable, qu'il est recommandé de placer dans un répertoire dédié pour facilement la retrouver ; celui-ci peut-être quelconque, et dans le cadre de ce tutoriel nous assumerons que vous l'avez placée dans un répertoire nommé `$HOME/apptainer-images` :
 
@@ -29,7 +30,7 @@ mkdir -p $HOME/apptainer-images
 mv ./tutorial.sif $HOME/apptainer-images/tutorial-openmpi.sif
 ```
 
-Cette image vous permettra de créer des conteneurs embarquant un code parallélisé avec **OpenMPI**. Ce code `omn3` effectue une série de multiplications de matrices $N \times N$ carrées aléatoires ; la taille des matrices $N$ et le nombre de multiplications $M$ peuvent être précisés en argument. Par exemple, pour paralléliser sur $8$ cœurs $M=1000$ multiplications de matrices $N \times N = 100 \times 100$   :
+Cette image vous permettra de créer des conteneurs embarquant un code parallélisé avec **OpenMPI**. Ce code `omn3` effectue une série de multiplications de matrices $N \times N$ carrées aléatoires ; la taille des matrices $N$ et le nombre de multiplications $M$ peuvent être précisés en argument. Par exemple, pour paralléliser sur $8$ cœurs $M=1000$ multiplications de matrices $N \times N = 100 \times 100$ :
 
 ```bash
 mpirun -np 8 omn3 100 1e3
@@ -59,6 +60,7 @@ Une autre contrainte du mode embarqué est que l'image Apptainer doit être exé
 ## Le mode hybride {#hybrid_mode}
 
 Nous venons de voir que l'utilisation d'OpenMPI en mode embarqué sur des infrastrucutres de type HPC, où l'efficacité numérique est centrale, ne serait pas souhaitable en raisons de performances numériques suboptimales. Comme expliqué dans la documentation d'Apptainer, il est préférable d'utiliser le mode hybride sur des infrastructures de type HPC. Dans ce cas, il y faut mettre en place un "dialogue" qui s'opère entre OpenMPI de la machine hôte (sur l'infrastucture de type HPC) et OpenMPI embarqué dans l'image Apptainer. Pour mieux comprendre la différence conceptuelle entre ce mode hybride et le mode embarqué discuté plus haut, on peut jeter un œil au schéma ci-dessous.
+
 <!-- (NOTE : INCLURE SCHÉMA OPENMPI EMBARQUÉ/HYBRIDE ICI). -->
 
 <div class="text-center mt-4 mb-4">
@@ -116,7 +118,7 @@ En pratique, l'exécution de commandes OpenMPI peut nécessiter des arguments ou
 ### Inter-compatibilité de versions
 
 Bien qu'il existe une compatibilité OpenMPI inter-version, l'utilisation de versions différentes d'OpenMPI peut résulter en des [baisses de performances](https://github.com/ckhroulev/apptainer-with-ompi/tree/main). Il est donc plus simple, quand c'est possible d'utiliser la même version d'OpenMPI sur la machine hôte que dans le conteneur. Pour cela, on peut fonctionner de deux manières : en sélectionnant, quand c'est possible, la version la plus adaptée d'OpenMPI disponible sur le cluster HPC que vous utilisez, ou alors à l'inverse en installant directement la même version d'OpenMPI que celle du cluster dans l'image Apptainer lors de sa construction.
-Dans le cadre du PEPR DIADEM, les images de conteneurs mises à disponibilité sont construites sans connaissance préalable exhaustive des machines sur lesquelles elles seront utilisées ; il est donc ardu de choisir *a priori* la version qu'il **vous** faut pour l'inclure dans le conteneur.
+Dans le cadre du PEPR DIADEM, les images de conteneurs mises à disponibilité sont construites sans connaissance préalable exhaustive des machines sur lesquelles elles seront utilisées ; il est donc ardu de choisir _a priori_ la version qu'il **vous** faut pour l'inclure dans le conteneur.
 
 Si vous voulez connaître la version d'OpenMPI inclue dans une image donnée, ainsi que d'autres informations utiles, vous pouvez appeler `ompi_info` comme ceci :
 

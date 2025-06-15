@@ -18,6 +18,7 @@ In summary, for all recent versions of Windows (build `19041` and later), instal
 ```bash
 wsl --install
 ```
+
 Then, you only need to restart the machine and configure the Linux subsystem you want to use (for example, Ubuntu 24.04):
 
 ```bash
@@ -30,6 +31,7 @@ wsl --set-default Ubuntu-24-04
 Note that for the installation of Ubuntu 24.04, you will need to provide a username and a password.
 
 Once this is done, you can launch WSL2 from any PowerShell or Windows terminal with the command:
+
 ```bash
 wsl.exe
 ```
@@ -56,6 +58,6 @@ To account for potential performance fluctuations due to CPU load, the calculati
    <img alt="WSL2 overhead" class="windows-overhead">
 </div>
 
-Given these average times and standard deviations, the additional costs associated with WSL2 appear to be significant. This can be verified by checking the compatibility of these samples, assuming identical mean times. We obtain (via the `ttest_rel` function in the Python `spy.stats` module) a very small *p*-value ($2.5 \times 10^{-6}$), which strongly suggests that the measured times follow different distributions and that virtualisation with WSL2 therefore leads to a significant increase in execution time compared to a reference Linux distribution.
+Given these average times and standard deviations, the additional costs associated with WSL2 appear to be significant. This can be verified by checking the compatibility of these samples, assuming identical mean times. We obtain (via the `ttest_rel` function in the Python `spy.stats` module) a very small _p_-value ($2.5 \times 10^{-6}$), which strongly suggests that the measured times follow different distributions and that virtualisation with WSL2 therefore leads to a significant increase in execution time compared to a reference Linux distribution.
 
 </div>

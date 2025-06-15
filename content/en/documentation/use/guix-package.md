@@ -15,7 +15,7 @@ This tutorial explains the main commands for interacting with Guix packages to c
 
 ## How do I access diamond packages?
 
-When using Guix, all available packages come from the default guix channel: [GNU Guix](https://hpc.guix.info/browse). However, it is possible to add *channels* to extend the list of available packages. As part of the DIAMOND project, some code has been packaged using Guix and are available in the [guix-channel](https://gricad-gitlab.univ-grenoble-alpes.fr/diamond/guix/guix-channel) channel. To add this specific channel and thus be able to install the packages using the `guix install` command, you need to create a `~/.config/guix/channels.scm` file on your machine or on the HPC infrastructure you will be using. This file needs to contain the following lines:
+When using Guix, all available packages come from the default guix channel: [GNU Guix](https://hpc.guix.info/browse). However, it is possible to add _channels_ to extend the list of available packages. As part of the DIAMOND project, some code has been packaged using Guix and are available in the [guix-channel](https://gricad-gitlab.univ-grenoble-alpes.fr/diamond/guix/guix-channel) channel. To add this specific channel and thus be able to install the packages using the `guix install` command, you need to create a `~/.config/guix/channels.scm` file on your machine or on the HPC infrastructure you will be using. This file needs to contain the following lines:
 
 ```bash
 ;; Add gricad packages to those Guix provides.
@@ -29,13 +29,13 @@ When using Guix, all available packages come from the default guix channel: [GNU
 Once this is done, the `guix pull` command will update the package collection from the standard channel (GNU Guix) and the Diamond channel (`guix-channel`).
 
 **Caution**
->
+
 > Once `guix pull` is complete, it is important to run the following commands to ensure that you are using the latest `guix` command:
 >
->```bash
->GUIX_PROFILE="$HOME/.config/guix/current"
->. "$GUIX_PROFILE/etc/profile"
->```
+> ```bash
+> GUIX_PROFILE="$HOME/.config/guix/current"
+> . "$GUIX_PROFILE/etc/profile"
+> ```
 
 Finally, to check that you have access to the Diamond packages, you can try searching for the `quantum-espresso` package:
 

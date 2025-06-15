@@ -34,24 +34,29 @@ VESTA est un programme de visualisation 3D conçu pour les scientifiques et ing�
 ### Caractéristiques principales
 
 1. **Visualisation des structures cristallines** :
+
    - Affichage en 3D de structures atomiques avec une grande précision.
    - Représentation des polyèdres de coordination et des réseaux de liaison.
    - Personnalisation des styles de rendu (sphères, bâtons, polyèdres, etc.).
 
 2. **Analyse des données électroniques** :
+
    - Affichage des densités électroniques et des surfaces isodensités.
    - Visualisation des fonctions d’onde et des densités de probabilité.
 
 3. **Manipulation des structures** :
+
    - Construction et modification de structures cristallines.
    - Création de supercellules et de défauts cristallins.
    - Symétrie : identification et application des éléments de symétrie.
 
 4. **Compatibilité et formats de fichiers** :
+
    - Supporte de nombreux formats de fichiers standards (CIF, VASP, Gaussian, etc.).
    - Exportation des visualisations en formats d'images populaires (PNG, JPEG) et en modèles 3D (VRML).
 
 5. **Fonctionnalités avancées** :
+
    - Calcul des distances interatomiques, des angles de liaison, et des longueurs de liaison.
    - Génération de diagrammes de diffraction de rayons X théoriques.
    - Intégration de données expérimentales et théoriques pour une analyse comparative.

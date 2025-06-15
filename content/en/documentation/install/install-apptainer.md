@@ -26,6 +26,7 @@ Finally, this tutorial focuses on currently supported versions: if you are using
 {{< video-with-consent id="ZACVgNrc-ek?si=HfbWtXnYIOD4RYNn" >}}
 
 ### One liner command
+
 You can run the following commands to directly install Ubuntu packages :
 
 ```bash
@@ -37,7 +38,8 @@ sudo apt install -y apptainer
 ```
 
 ### Step-by-step detail
-To install pre-built Ubuntu packages for `amd64` and `arm64` architectures, one needs to access Apptainer's *personal package archive* (PPA).
+
+To install pre-built Ubuntu packages for `amd64` and `arm64` architectures, one needs to access Apptainer's _personal package archive_ (PPA).
 
 First, run this to ensure access to the `add-apt-repository` command :
 
@@ -61,6 +63,7 @@ sudo apt install -y apptainer
 {{< video-with-consent id="6J1iYrv9gzU?si=ITbew-euDfzvng9a" >}}
 
 ### One liner command
+
 You can run the following commands to directly install Debian packages :
 
 ```bash
@@ -72,6 +75,7 @@ sudo apt install -y ./apptainer_1.2.5_amd64.deb
 ```
 
 ### Step-by-step detail
+
 To install pre-built Debian packages only for `amd64` architectures, one needs to access Apptainer's GitHub repository using `wget` :
 
 ```bash
@@ -79,7 +83,7 @@ sudo apt update
 sudo apt install -y wget
 ```
 
-Once  `wget` is available, the `.deb` package can be downloaded and installed locally :
+Once `wget` is available, the `.deb` package can be downloaded and installed locally :
 
 ```bash
 cd /tmp
@@ -98,6 +102,7 @@ sudo apt install -y ./apptainer_1.2.5_amd64.deb
 {{< video-with-consent id="BQXcLOYe5Hw?si=mP4gb6T4VzCqUSwB" >}}
 
 ### RPM packages from GitHub
+
 With each new version release, a RPM (RedHat Package Manager) package is available on GitHub :
 
 ```bash
@@ -105,6 +110,7 @@ sudo yum install -y https://github.com/apptainer/apptainer/releases/download/v1.
 ```
 
 ### RPM packages from EPEL or Fedora
+
 RPM packages are also available through EPEL (Extra Packages for Enterprise Linux).
 Using RedHat, one first has to gain access to EPEL repositories :
 

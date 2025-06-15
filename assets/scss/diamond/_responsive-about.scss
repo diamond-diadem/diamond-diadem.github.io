@@ -6,85 +6,85 @@
 
 // about diamond //
 
-@include media-breakpoint-up(xl){
-  .left.about-diamond {
-      width: 25%;
-      display: flex;
-  }
+@include media-breakpoint-up(xl) {
+    .left.about-diamond {
+        width: 25%;
+        display: flex;
+    }
 
-  .logo-diamond.about-diamond {
-      width: 100%;
-      align-items: center;
-      justify-content: center;
-      object-fit: contain;
-  }
+    .logo-diamond.about-diamond {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        object-fit: contain;
+    }
 
-  .right.about-diamond {
-      width: 75%;
-      text-align: justify;
-      display: flex;
-      align-items: center;
-      font-size: 125%;
-      font-weight: 500;
-  }
+    .right.about-diamond {
+        width: 75%;
+        text-align: justify;
+        display: flex;
+        align-items: center;
+        font-size: 125%;
+        font-weight: 500;
+    }
 
-  .row.about-diamond {
-      margin-bottom: 30px;
-  }
+    .row.about-diamond {
+        margin-bottom: 30px;
+    }
 }
 
-@include media-breakpoint-only(lg){
-  .left.about-diamond {
-      width: 40%;
-      display: flex;
-  }
+@include media-breakpoint-only(lg) {
+    .left.about-diamond {
+        width: 40%;
+        display: flex;
+    }
 
-  .logo-diamond.about-diamond {
-      width: 100%;
-      align-items: center;
-      justify-content: center;
-      object-fit: contain;
-  }
+    .logo-diamond.about-diamond {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        object-fit: contain;
+    }
 
-  .right.about-diamond {
-      width: 60%;
-      text-align: justify;
-      display: flex;
-      align-items: center;
-      font-size: 125%;
-      font-weight: 500;
-  }
+    .right.about-diamond {
+        width: 60%;
+        text-align: justify;
+        display: flex;
+        align-items: center;
+        font-size: 125%;
+        font-weight: 500;
+    }
 
-  .row.about-diamond {
-      margin-bottom: 20px;
-  }
+    .row.about-diamond {
+        margin-bottom: 20px;
+    }
 }
 
-@include media-breakpoint-down(lg){
-  .left.about-diamond {
-      width: 100%;
-      margin-top: 15px;
-      margin-bottom: 20px;
-  }
+@include media-breakpoint-down(lg) {
+    .left.about-diamond {
+        width: 100%;
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
 
-  .logo-diamond.about-diamond {
-      display: block;
-      width: 70%;
-      margin: auto;
-  }
+    .logo-diamond.about-diamond {
+        display: block;
+        width: 70%;
+        margin: auto;
+    }
 
-  .right.about-diamond {
-      width: 100%;
-      text-align: justify;
-      font-size: 125%;
-      font-weight: 500;
-  }
+    .right.about-diamond {
+        width: 100%;
+        text-align: justify;
+        font-size: 125%;
+        font-weight: 500;
+    }
 }
 
 @include media-breakpoint-down(md) {
-  .logo-diamond.about-diamond {
-      width: 85%;
-  }
+    .logo-diamond.about-diamond {
+        width: 85%;
+    }
 }
 
 // END about diamond END //
@@ -92,88 +92,88 @@
 // about diadem //
 
 .logo-diadem {
-  content: url(/images/diadem/logo-diadem-processed.png);
+    content: url(/images/diadem/logo-diadem-processed.png);
 }
 
 @include media-breakpoint-up(xl) {
-  .left-about-diadem {
-      width: 27.5%;
-      display: flex;
-  }
+    .left-about-diadem {
+        width: 27.5%;
+        display: flex;
+    }
 
-  .logo-diadem.about{
-      width: 100%;
-      align-items: center;
-      justify-content: center;
-      object-fit: contain;
-  }
+    .logo-diadem.about {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        object-fit: contain;
+    }
 
-  .right-about-diadem {
-      width: 72.5%;
-      text-align: justify;
-      display: flex;
-      align-items: center;
-      font-size: 125%;
-      font-weight: 500;
-  }
+    .right-about-diadem {
+        width: 72.5%;
+        text-align: justify;
+        display: flex;
+        align-items: center;
+        font-size: 125%;
+        font-weight: 500;
+    }
 
-  .row.about.diadem {
-      margin-bottom: 30px;
-  }
+    .row.about.diadem {
+        margin-bottom: 30px;
+    }
 }
 
-@include media-breakpoint-only(lg){
-  .left-about-diadem {
-      width: 40%;
-      display: flex;
-  }
+@include media-breakpoint-only(lg) {
+    .left-about-diadem {
+        width: 40%;
+        display: flex;
+    }
 
-  .logo-diadem.about {
-      width: 100%;
-      align-items: center;
-      justify-content: center;
-      object-fit: contain;
-  }
+    .logo-diadem.about {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        object-fit: contain;
+    }
 
-  .right-about-diadem {
-      width: 60%;
-      text-align: justify;
-      display: flex;
-      align-items: center;
-      font-size: 125%;
-      font-weight: 500;
-  }
+    .right-about-diadem {
+        width: 60%;
+        text-align: justify;
+        display: flex;
+        align-items: center;
+        font-size: 125%;
+        font-weight: 500;
+    }
 
-  .row.about.diadem {
-      margin-bottom: 20px;
-  }
+    .row.about.diadem {
+        margin-bottom: 20px;
+    }
 }
 
-@include media-breakpoint-down(lg){
-  .left-about-diadem {
-      width: 100%;
-      margin-top: 15px;
-      margin-bottom: 20px;
-  }
+@include media-breakpoint-down(lg) {
+    .left-about-diadem {
+        width: 100%;
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
 
-  .logo-diadem.about {
-      display: block;
-      width: 55%;
-      margin: auto;
-  }
+    .logo-diadem.about {
+        display: block;
+        width: 55%;
+        margin: auto;
+    }
 
-  .right-about-diadem {
-      width: 100%;
-      text-align: justify;
-      font-size: 125%;
-      font-weight: 500;
-  }
+    .right-about-diadem {
+        width: 100%;
+        text-align: justify;
+        font-size: 125%;
+        font-weight: 500;
+    }
 }
 
 @include media-breakpoint-down(md) {
-  .logo-diadem.about {
-      width: 70%;
-  }
+    .logo-diadem.about {
+        width: 70%;
+    }
 }
 
 // END about diadem END //
@@ -181,90 +181,90 @@
 // about apptainer //
 
 .bottom-about-apptainer {
-  text-align: justify;
-  font-size: 125%;
-  font-weight: 500;
+    text-align: justify;
+    font-size: 125%;
+    font-weight: 500;
 }
 
-@include media-breakpoint-up(xl){
-  .left-about-apptainer {
-      width: 25%;
-      display: flex;
-  }
+@include media-breakpoint-up(xl) {
+    .left-about-apptainer {
+        width: 25%;
+        display: flex;
+    }
 
-  .logo-apptainer.about {
-      width: 100%;
-      align-items: center;
-      justify-content: center;
-      object-fit: contain;
-  }
+    .logo-apptainer.about {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        object-fit: contain;
+    }
 
-  .right-about-apptainer {
-      width: 75%;
-      text-align: justify;
-      display: flex;
-      align-items: center;
-      font-size: 125%;
-      font-weight: 500;
-  }
+    .right-about-apptainer {
+        width: 75%;
+        text-align: justify;
+        display: flex;
+        align-items: center;
+        font-size: 125%;
+        font-weight: 500;
+    }
 
-  .row.about.apptainer {
-      margin-bottom: 30px;
-  }
+    .row.about.apptainer {
+        margin-bottom: 30px;
+    }
 }
 
-@include media-breakpoint-only(lg){
-  .left-about-apptainer {
-      width: 35%;
-      display: flex;
-  }
+@include media-breakpoint-only(lg) {
+    .left-about-apptainer {
+        width: 35%;
+        display: flex;
+    }
 
-  .logo-apptainer.about {
-      width: 100%;
-      align-items: center;
-      justify-content: center;
-      object-fit: contain;
-  }
+    .logo-apptainer.about {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        object-fit: contain;
+    }
 
-  .right-about-apptainer {
-      width: 65%;
-      text-align: justify;
-      display: flex;
-      align-items: center;
-      font-size: 125%;
-      font-weight: 500;
-  }
+    .right-about-apptainer {
+        width: 65%;
+        text-align: justify;
+        display: flex;
+        align-items: center;
+        font-size: 125%;
+        font-weight: 500;
+    }
 
-  .row.about.apptainer {
-      margin-bottom: 20px;
-  }
+    .row.about.apptainer {
+        margin-bottom: 20px;
+    }
 }
 
-@include media-breakpoint-down(lg){
-  .left-about-apptainer {
-      width: 100%;
-      margin-top: 15px;
-      margin-bottom: 20px;
-  }
+@include media-breakpoint-down(lg) {
+    .left-about-apptainer {
+        width: 100%;
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
 
-  .logo-apptainer.about {
-      display: block;
-      width: 50%;
-      margin: auto;
-  }
+    .logo-apptainer.about {
+        display: block;
+        width: 50%;
+        margin: auto;
+    }
 
-  .right-about-apptainer {
-      width: 100%;
-      text-align: justify;
-      font-size: 125%;
-      font-weight: 500;
-  }
+    .right-about-apptainer {
+        width: 100%;
+        text-align: justify;
+        font-size: 125%;
+        font-weight: 500;
+    }
 }
 
 @include media-breakpoint-down(md) {
-  .logo-apptainer.about {
-      width: 75%;
-  }
+    .logo-apptainer.about {
+        width: 75%;
+    }
 }
 
 // END about apptainer END //
@@ -272,30 +272,30 @@
 // guix logo scaling //
 
 .logo-guix.about {
-  display: block;
-  margin: auto;
-  margin-top: 35px;
-  margin-bottom: 35px;
+    display: block;
+    margin: auto;
+    margin-top: 35px;
+    margin-bottom: 35px;
 }
 @include media-breakpoint-up(xl) {
-  .logo-guix.about {
-      width: 50%;
-  }
+    .logo-guix.about {
+        width: 50%;
+    }
 }
 @include media-breakpoint-only(lg) {
-  .logo-guix.about {
-      width: 65%;
-  }
+    .logo-guix.about {
+        width: 65%;
+    }
 }
 @include media-breakpoint-only(md) {
-  .logo-guix.about {
-      width: 65%;
-  }
+    .logo-guix.about {
+        width: 65%;
+    }
 }
 @include media-breakpoint-down(md) {
-  .logo-guix.about {
-      width: 80%;
-  }
+    .logo-guix.about {
+        width: 80%;
+    }
 }
 
 // END logo guix scaling END //

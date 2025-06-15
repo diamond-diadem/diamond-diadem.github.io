@@ -42,9 +42,6 @@ main:
     url: news/
     weight: 70
     identifier: news-fr
-
-
-
 # codes:
 #     - name: Codes
 #       weight: 10
@@ -61,8 +58,6 @@ main:
 #       identifier: visualisation-fr
 #       parent: codes-fr
 #       url: fr/codes/visualisation/
-
-
 
 # docs:
 #   - name: À propos

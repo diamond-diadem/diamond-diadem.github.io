@@ -21,8 +21,8 @@ Vous aurez ensuite un retour graphique pour l'image Apptainer d'Ovito grâce à 
 apptainer run --contain --bind $HOME --cleanenv --env DISPLAY=$DISPLAY ovito.sif
 ```
 
-**Attention** 
->
+**Attention**
+
 > Il est déconseillé de lancer des processus lourds sur les frontales des clusters. Sur certains clusters, il existe des services tuant tous les processus qui s'exécutent plus de **X** minutes. C'est le cas notamment des frontales `dahu` et `bigfoot`.
 
 </div>

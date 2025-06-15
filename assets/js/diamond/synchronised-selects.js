@@ -11,7 +11,7 @@ function synchronizeAndDisplay(selectedElement, pairedElementId, resetElementIds
     }
 
     // Masquer tous les contenus
-    contents.forEach(content => content.classList.add('hidden'));
+    contents.forEach((content) => content.classList.add('hidden'));
 
     // Afficher les contenus correspondant à l'option sélectionnée dans la paire
     const selectedValue = selectedElement.value;
@@ -27,7 +27,7 @@ function synchronizeAndDisplay(selectedElement, pairedElementId, resetElementIds
     }
 
     // Réinitialiser les autres paires à "option0"
-    resetElementIds.forEach(resetId => {
+    resetElementIds.forEach((resetId) => {
         const resetElement = document.getElementById(resetId);
         if (resetElement) {
             resetElement.selectedIndex = 0; // Réinitialiser à l'option "option0"
@@ -51,4 +51,3 @@ document.getElementById('options2A').addEventListener('change', function () {
 document.getElementById('options2B').addEventListener('change', function () {
     synchronizeAndDisplay(this, 'options2A', ['options1A', 'options1B']);
 });
-

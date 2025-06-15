@@ -1,7 +1,7 @@
 // Put your custom SCSS variables here
 
-$lead-font-weight:            400;
-$lead-font-size:            175%;
+$lead-font-weight: 400;
+$lead-font-size: 175%;
 
 $primary: #4465ac;
 $body-bg-dark: #2c2c2c;
@@ -11,12 +11,14 @@ $body-color-dark: hsl(224, 6%, 85%);
 $navbar-dark-color: $body-color-dark;
 
 $grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 1000px, // default 992px
-  xl: 1220px, // default 1200px
-  xxl: 1400px
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 1000px,
+    // default 992px
+    xl: 1220px,
+    // default 1200px
+    xxl: 1400px
 );
 
 @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");

@@ -48,7 +48,7 @@ In practice, you can access the "Issues" and "Merge Requests" tabs from any repo
 
 ## View existing issues
 
-Before submitting an issue, we recommend that you have a look at the *open* and *resolved* issues. Your problem or query may have already been solved or reported by another user.
+Before submitting an issue, we recommend that you have a look at the _open_ and _resolved_ issues. Your problem or query may have already been solved or reported by another user.
 
 Simply go to the 'All' tab and use the search bar to enter keywords relating to your query.
 
@@ -61,6 +61,7 @@ If you can't find what you're looking for in the open and closed issues, you can
 <img alt="create issue" class="create-issue" style="width:100%">
 
 We ask that you:
+
 - **do not** assign any person to the ticket,
 - **do not** select any due date,
 - **do not** select any milestones.
@@ -72,6 +73,7 @@ On the other hand, we ask you to select a **template** and a **label** according
 To report a bug or ask for help using the platform's tools, select the `bug_report` template in the "Description" section.
 
 Next, we ask you to provide as much detail as possible about your problem:
+
 - What code/workflow is affected?
 - What is the expected behaviour?
 - What is the actual behaviour (feel free to provide logs or screenshots)?
@@ -83,6 +85,7 @@ Next, we ask you to provide as much detail as possible about your problem:
 You can request a new feature in an existing container/workflow. You will need to select the `feature_request` template in the "Description" section.
 
 Next, we ask you to describe your request in as much detail as possible:
+
 - What code/workflow does it affect?
 - What functionality do you want?
 - What will you be able to do with this functionality?
@@ -92,6 +95,7 @@ Next, we ask you to describe your request in as much detail as possible:
 You can also make a containerisation or packaging request for code/workflow. You will need to select the `code_container_request` template in the "Description" section.
 
 Next, we ask you to describe your request in as much detail as possible:
+
 - What code/workflow do you want?
 - What are the dependencies?
 - What functionality do you want?

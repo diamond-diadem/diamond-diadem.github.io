@@ -23,7 +23,7 @@ apptainer pull xcrysden.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamon
 
 </div>
 
-### Learn how to use this specific container  _( to be added )_
+### Learn how to use this specific container _( to be added )_
 
 ### XCrySDen documentation
 

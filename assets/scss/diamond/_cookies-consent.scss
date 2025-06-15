@@ -1,370 +1,364 @@
 .tuto-video {
-  width: 100%;
-  aspect-ratio: 48 / 27;
-  margin-top: 1%;
-  margin-bottom: 2%;
+    width: 100%;
+    aspect-ratio: 48 / 27;
+    margin-top: 1%;
+    margin-bottom: 2%;
 }
-
 
 /* Styles du placeholder */
 .youtube-placeholder.fr {
-  background-image: url(/images/youtube-consent/youtube-placeholder-light-fr.svg);
+    background-image: url(/images/youtube-consent/youtube-placeholder-light-fr.svg);
 }
 .youtube-placeholder.en {
-  background-image: url(/images/youtube-consent/youtube-placeholder-light-en.svg);
+    background-image: url(/images/youtube-consent/youtube-placeholder-light-en.svg);
 }
 @include color-mode(dark) {
-  .youtube-placeholder.fr {
-    background-image: url(/images/youtube-consent/youtube-placeholder-dark-fr.svg);
-  }
-  .youtube-placeholder.en {
-    background-image: url(/images/youtube-consent/youtube-placeholder-dark-en.svg);
-  }
+    .youtube-placeholder.fr {
+        background-image: url(/images/youtube-consent/youtube-placeholder-dark-fr.svg);
+    }
+    .youtube-placeholder.en {
+        background-image: url(/images/youtube-consent/youtube-placeholder-dark-en.svg);
+    }
 }
-
-
 
 .youtube-placeholder {
-  @extend .tuto-video;
-  // background-image: url(/images/youtube-consent/youtube-placeholder-light.svg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  // margin: 20px 0;
-  border: 1px solid black;
-  position: relative;
+    @extend .tuto-video;
+    // background-image: url(/images/youtube-consent/youtube-placeholder-light.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    // margin: 20px 0;
+    border: 1px solid black;
+    position: relative;
 }
 @include color-mode(dark) {
-  .youtube-placeholder {
-    // background-image: url(/images/youtube-consent/youtube-placeholder-dark.svg);
-    border: 1px solid white;
-  }
-
+    .youtube-placeholder {
+        // background-image: url(/images/youtube-consent/youtube-placeholder-dark.svg);
+        border: 1px solid white;
+    }
 }
 
 /* Bouton dans le placeholder */
 .youtube-placeholder .popup-button {
-  position: absolute;
-  bottom: 20%;
-  right: 5.5%;
-  padding-left: 5%;
-  padding-right: 5%;
-  cursor: pointer;
-  @extend .btn;
-  @extend .btn-primary;
-  @extend .rounded-pill;
-  @extend .d-block;
+    position: absolute;
+    bottom: 20%;
+    right: 5.5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    cursor: pointer;
+    @extend .btn;
+    @extend .btn-primary;
+    @extend .rounded-pill;
+    @extend .d-block;
 }
 
 /* Styles de la boîte de dialogue */
 .popup-overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 2000;
-  overflow: hidden; /* Empêche tout débordement */
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 2000;
+    overflow: hidden; /* Empêche tout débordement */
 }
 
 .popup-dialog {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: white;
-  padding: 20px;
-  width: 50%;
-  // max-width: 400px;
-  max-height: 85%; /* Limite la hauteur à 80% de la hauteur de l'écran */
-  overflow-y: auto; /* Permet de défiler verticalement si le contenu dépasse */
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-
-  .close-popup {
     position: absolute;
-    top: 0px;
-    right: 10px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    width: 50%;
+    // max-width: 400px;
+    max-height: 85%; /* Limite la hauteur à 80% de la hauteur de l'écran */
+    overflow-y: auto; /* Permet de défiler verticalement si le contenu dépasse */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 
-    svg {
-      width: 20px;
-      height: 20px;
+    .close-popup {
+        position: absolute;
+        top: 0px;
+        right: 10px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+
+        svg {
+            width: 20px;
+            height: 20px;
+        }
     }
-  }
 }
 
 @include color-mode(dark) {
-  .popup-dialog {
-    background: $body-bg-dark;
-  }
+    .popup-dialog {
+        background: $body-bg-dark;
+    }
 }
 
 @include media-breakpoint-down(lg) {
-  .popup-dialog {
-    width: 90%;
-  }
+    .popup-dialog {
+        width: 90%;
+    }
 }
 
 .popup-dialog button {
-  display: inline-block;
-  margin: 0 auto 0 auto;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+    display: inline-block;
+    margin: 0 auto 0 auto;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .popup-dialog .accept {
-  @extend .btn;
-  @extend .btn-primary;
-  font-size: 110%;
+    @extend .btn;
+    @extend .btn-primary;
+    font-size: 110%;
 }
 
 .popup-dialog .decline {
-  @extend .btn;
-  @extend .btn-secondary;
-  font-size: 110%;
+    @extend .btn;
+    @extend .btn-secondary;
+    font-size: 110%;
 }
 
 .cookie-banner {
-  display: none;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: $body-bg;
-  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
-  z-index: 2000;
-  padding: 20px;
-  box-sizing: border-box;
-
-  .cookie-banner-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
     width: 100%;
+    background-color: $body-bg;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 2000;
+    padding: 20px;
+    box-sizing: border-box;
 
-    p {
-      flex: 1;
-      margin: 0;
-      font-size: 1.1rem;
-      line-height: 1.5;
-      margin-right: 1rem;
+    .cookie-banner-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        width: 100%;
 
-      a {
-        text-decoration: underline;
+        p {
+            flex: 1;
+            margin: 0;
+            font-size: 1.1rem;
+            line-height: 1.5;
+            margin-right: 1rem;
 
-        &:hover {
-          text-decoration: none;
+            a {
+                text-decoration: underline;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
         }
-      }
     }
-  }
 
-  .cookie-banner-actions {
-    display: flex;
-    align-items: right; // Aligner les boutons à droite
-    gap: 0.5rem; // Petit écart entre les boutons
-    // margin-top: 1rem; // Espace au-dessus des boutons
-  
-    button {
-      cursor: pointer;
+    .cookie-banner-actions {
+        display: flex;
+        align-items: right; // Aligner les boutons à droite
+        gap: 0.5rem; // Petit écart entre les boutons
+        // margin-top: 1rem; // Espace au-dessus des boutons
 
-      &.accept-all {
-        @extend .btn;
-        @extend .btn-primary;
-      }
+        button {
+            cursor: pointer;
 
-      &.customize {
-        @extend .btn;
-        @extend .btn-primary;
-      }
+            &.accept-all {
+                @extend .btn;
+                @extend .btn-primary;
+            }
 
-      &.decline-all {
-        @extend .btn;
-        @extend .btn-primary;
-      }
+            &.customize {
+                @extend .btn;
+                @extend .btn-primary;
+            }
+
+            &.decline-all {
+                @extend .btn;
+                @extend .btn-primary;
+            }
+        }
     }
-  }
 
-  .close-banner {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
+    .close-banner {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
 
-    svg {
-      width: 20px;
-      height: 20px;
+        svg {
+            width: 20px;
+            height: 20px;
+        }
     }
-  }
 }
 
 @include color-mode(dark) {
-  .cookie-banner {
-    background-color: $body-bg-dark;
-    box-shadow: 0 -2px 5px rgba(255, 255, 255, 0.3);
-  }
+    .cookie-banner {
+        background-color: $body-bg-dark;
+        box-shadow: 0 -2px 5px rgba(255, 255, 255, 0.3);
+    }
 }
 
 @include media-breakpoint-down(md) {
-  .cookie-banner-actions {
-    flex-wrap: wrap; /* Permet aux boutons de s'adapter à l'espace disponible */
-    justify-content: center;
-    width: 100%;
+    .cookie-banner-actions {
+        flex-wrap: wrap; /* Permet aux boutons de s'adapter à l'espace disponible */
+        justify-content: center;
+        width: 100%;
 
-    button {
-      flex: 0 1 auto; /* Permet de garder les boutons à taille fixe */
-      width: 40%; /* Taille des boutons */
-      margin: 5px; /* Espacement entre les boutons */
+        button {
+            flex: 0 1 auto; /* Permet de garder les boutons à taille fixe */
+            width: 40%; /* Taille des boutons */
+            margin: 5px; /* Espacement entre les boutons */
+        }
     }
-  }
 }
 
-
 .popup-customization-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); // fond semi-transparent
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 10000; // au-dessus de tout
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); // fond semi-transparent
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000; // au-dessus de tout
 
-  .popup-customization-dialog {
-    background-color: white;
-    padding: 2rem;
-    border-radius: 16px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
-    // max-width: 500px;
-    width: auto;
-    max-width: 90%;
-    position: relative;
-    
+    .popup-customization-dialog {
+        background-color: white;
+        padding: 2rem;
+        border-radius: 16px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+        // max-width: 500px;
+        width: auto;
+        max-width: 90%;
+        position: relative;
 
-    h2 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-      margin-top: 0;
-    }
-
-    .cookie-option {
-      margin-bottom: 1rem;
-
-      label {
-        text-wrap: wrap; // Permet de garder le texte à l'intérieur de la boîte
-        font-size: 1.1rem;
-        cursor: pointer;
-
-        input[type="checkbox"] {
-          margin-right: 0.5rem;
-          transform: scale(1.2);
-          // color: $primary;
-        }
-      }
-    }
-
-    .cookie-customization-actions {
-      display: flex;
-      gap: 1rem;
-      margin-top: 1.5rem;
-
-      button {
-        padding: 0.8rem 1.5rem;
-        border: none;
-        border-radius: 8px;
-        font-size: 1rem;
-        cursor: pointer;
-        transition: background-color 0.2s ease;
-
-        &.validate-preferences {
-          // background-color: #007bff;
-          // color: white;
-
-          // &:hover {
-          //   background-color: #0056b3;
-          // }
-          @extend .btn;
-          @extend .btn-primary;
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            margin-top: 0;
         }
 
-        &.cancel-preferences {
-          // background-color: #ccc;
-          // color: #333;
+        .cookie-option {
+            margin-bottom: 1rem;
 
-          // &:hover {
-          //   background-color: #aaa;
-          // }
-          @extend .btn;
-          @extend .btn-secondary;
+            label {
+                text-wrap: wrap; // Permet de garder le texte à l'intérieur de la boîte
+                font-size: 1.1rem;
+                cursor: pointer;
+
+                input[type="checkbox"] {
+                    margin-right: 0.5rem;
+                    transform: scale(1.2);
+                    // color: $primary;
+                }
+            }
         }
-      }
-    }
 
-    .close-popup-customization {
-      position: absolute;
-      top: 0px;
-      right: 10px;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 0;
-  
-      svg {
-        width: 20px;
-        height: 20px;
-      }
+        .cookie-customization-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+
+            button {
+                padding: 0.8rem 1.5rem;
+                border: none;
+                border-radius: 8px;
+                font-size: 1rem;
+                cursor: pointer;
+                transition: background-color 0.2s ease;
+
+                &.validate-preferences {
+                    // background-color: #007bff;
+                    // color: white;
+
+                    // &:hover {
+                    //   background-color: #0056b3;
+                    // }
+                    @extend .btn;
+                    @extend .btn-primary;
+                }
+
+                &.cancel-preferences {
+                    // background-color: #ccc;
+                    // color: #333;
+
+                    // &:hover {
+                    //   background-color: #aaa;
+                    // }
+                    @extend .btn;
+                    @extend .btn-secondary;
+                }
+            }
+        }
+
+        .close-popup-customization {
+            position: absolute;
+            top: 0px;
+            right: 10px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+
+            svg {
+                width: 20px;
+                height: 20px;
+            }
+        }
     }
-  }
 }
 
 @include color-mode(dark) {
-  .popup-customization-dialog {
-    background-color: $body-bg-dark;
-  }
+    .popup-customization-dialog {
+        background-color: $body-bg-dark;
+    }
 }
 
 @include media-breakpoint-only(lg) {
-  .cookie-banner-actions {
-    flex-direction: column;
-    align-items: center; /* Centre les boutons */
-    margin: 0 3%;
+    .cookie-banner-actions {
+        flex-direction: column;
+        align-items: center; /* Centre les boutons */
+        margin: 0 3%;
 
-    button {
-      width: 100%;
+        button {
+            width: 100%;
+        }
     }
-  }
 }
 
 @include media-breakpoint-down(lg) {
-  .cookie-banner-content {
-    flex-direction: column; /* Aligne le texte et les boutons verticalement */
-    align-items: center; /* Centre le contenu */
-    text-align: center; /* Centre le texte */
-  }
-  
-  .cookie-banner-actions {
-    // flex-direction: column; /* Aligne les boutons verticalement */
-    margin-right: 3%; /* Espace à droite */
-    justify-content: center; /* Centre les boutons */
-
-    button {
-      margin: 5px 0; /* Espace entre les boutons */
-      width: min-content; /* Ajuste la largeur des boutons */
-      text-wrap: nowrap; /* Empêche le texte de se déformer */
+    .cookie-banner-content {
+        flex-direction: column; /* Aligne le texte et les boutons verticalement */
+        align-items: center; /* Centre le contenu */
+        text-align: center; /* Centre le texte */
     }
-  }
+
+    .cookie-banner-actions {
+        // flex-direction: column; /* Aligne les boutons verticalement */
+        margin-right: 3%; /* Espace à droite */
+        justify-content: center; /* Centre les boutons */
+
+        button {
+            margin: 5px 0; /* Espace entre les boutons */
+            width: min-content; /* Ajuste la largeur des boutons */
+            text-wrap: nowrap; /* Empêche le texte de se déformer */
+        }
+    }
 }
