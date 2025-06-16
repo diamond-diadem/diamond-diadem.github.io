@@ -8,7 +8,7 @@ weight: 4
 
 {{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
 
-Before proceeding with these explanations, it is necessary to have installed Apptainer on your machine; see [this link](/en/documentation/install-apptainer/howto/) for more details.
+Before proceeding with these explanations, it is necessary to have installed Apptainer on your machine; see [this link](/en/documentation/install/install-apptainer/) for more details.
 
 This tutorial details the usage of the container image of the VMD code downloadable at [this address](/en/codes/visualisation/vmd/). By following this link, you obtain an Apptainer image (file format `.sif`) that allows you to create containers capable of running VMD.
 
