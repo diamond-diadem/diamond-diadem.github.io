@@ -74,10 +74,10 @@ jobs:
         with:
           server_address: smtpbv.univ-lyon1.fr
           server_port: 587
-          username: david.martin-calle@univ-lyon1.fr
-          password: ${{secrets.MAIL_PASSWORD}}
+          username: ${{secrets.NOTIFY_EMAIL}}
+          password: ${{secrets.EMAIL_PASSWORD}}
           subject: " Push rejeté - package.json ou package-lock.json modifiés par ${{ github.actor }}"
-          to: david.martin-calle@univ-lyon1.fr
+          to: ${{secrets.NOTIFY_EMAIL}}
           from: Mail automatique site web DIAMOND
           html_body: "Bonjour,<br><br>Le push par ${{ github.actor }} vers le dépôt '${{ github.repository }}' a été refusé car il incluait des modifications non autorisées dans des fichiers protégés (package.json et/ou package-lock.json)."
           priority: high
