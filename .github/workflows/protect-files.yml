@@ -36,13 +36,19 @@ jobs:
           echo "Checking commits in range: $COMMIT_RANGE"
 
           notify=false
+          dependabot=false
 
           for commit in $(git rev-list $COMMIT_RANGE); do
             message=$(git log -1 --format=%s $commit)
+            author=$(git log -1 --format=%an $commit)
             files=$(git diff-tree --no-commit-id --name-only -r $commit)
             for file in "${PROTECTED_FILES[@]}"; do
               if echo "$files" | grep -q "^$file$"; then
-                if echo "$message" | grep -Eq '^\[upgrade-dependencies\]'; then
+                if [[ "$author" =~ ^dependabot ]]; then
+                  echo "Allowed Dependabot change in $file for commit $commit ($message)"
+                  dependabot=true
+                  notify=true
+                elif echo "$message" | grep -Eq '^\[upgrade-dependencies\]'; then
                   echo "Allowed change in $file for commit $commit ($message)"
                   notify=true
                 else
@@ -54,6 +60,7 @@ jobs:
           done
 
           echo "notify=$notify" >> $GITHUB_OUTPUT
+          echo "dependabot=$dependabot" >> $GITHUB_OUTPUT
 
       - name: Revert Push if Check Fails
         if: failure()
@@ -89,7 +96,7 @@ jobs:
           priority: high
 
       - name: Send Email Notification for Allowed Upgrade
-        if: success() && steps.check.outputs.notify == 'true'
+        if: success() && steps.check.outputs.notify == 'true' && steps.check.outputs.dependabot != 'true'
         uses: dawidd6/action-send-mail@v4
         with:
           server_address: smtpbv.univ-lyon1.fr
@@ -100,5 +107,19 @@ jobs:
           to: ${{secrets.NOTIFY_EMAIL}}
           from: Automated email from DIAMOND website
           html_body: "Hello,<br><br>The push by ${{ github.actor }} to repository ${{ github.repository }} modified package.json and/or package-lock.json, using the [upgrade-dependencies] commit prefix."
+          priority: normal
+
+      - name: Send Email Notification for Dependabot Upgrade
+        if: success() && steps.check.outputs.dependabot == 'true'
+        uses: dawidd6/action-send-mail@v4
+        with:
+          server_address: smtpbv.univ-lyon1.fr
+          server_port: 587
+          username: ${{secrets.NOTIFY_EMAIL}}
+          password: ${{secrets.EMAIL_PASSWORD}}
+          subject: "Dependency update by Dependabot"
+          to: ${{secrets.NOTIFY_EMAIL}}
+          from: Automated email from DIAMOND website
+          html_body: "Hello,<br><br>Dependabot updated package.json and/or package-lock.json in repository ${{ github.repository }}."
           priority: normal
 
