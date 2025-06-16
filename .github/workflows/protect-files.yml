@@ -35,19 +35,25 @@ jobs:
           COMMIT_RANGE="${BASE_COMMIT}..HEAD"
           echo "Checking commits in range: $COMMIT_RANGE"
 
-          # Fetch the list of modified files
-          MODIFIED_FILES=$(git diff --name-only $COMMIT_RANGE)
-          echo "Modified files in push: $MODIFIED_FILES"
+          notify=false
 
-          # Check if any protected files were modified
-          for file in "${PROTECTED_FILES[@]}"; do
-              if echo "$MODIFIED_FILES" | grep -q "^$file$"; then
-                  echo "Error: Unauthorized modification detected in $file."
+          for commit in $(git rev-list $COMMIT_RANGE); do
+            message=$(git log -1 --format=%s $commit)
+            files=$(git diff-tree --no-commit-id --name-only -r $commit)
+            for file in "${PROTECTED_FILES[@]}"; do
+              if echo "$files" | grep -q "^$file$"; then
+                if echo "$message" | grep -Eq '^\[upgrade-dependencies\]'; then
+                  echo "Allowed change in $file for commit $commit ($message)"
+                  notify=true
+                else
+                  echo "Error: Unauthorized modification detected in $file in commit $commit."
                   exit 1
+                fi
               fi
+            done
           done
 
-          echo "All protected files are safe."
+          echo "notify=$notify" >> $GITHUB_OUTPUT
 
       - name: Revert Push if Check Fails
         if: failure()
@@ -81,4 +87,18 @@ jobs:
           from: Automated email from DIAMOND website
           html_body: "Hello,<br><br>The push by ${{ github.actor }} to the repository '${{ github.repository }}' was rejected because it included unauthorized changes to protected files (package.json and/or package-lock.json)."
           priority: high
+
+      - name: Send Email Notification for Allowed Upgrade
+        if: success() && steps.check.outputs.notify == 'true'
+        uses: dawidd6/action-send-mail@v4
+        with:
+          server_address: smtpbv.univ-lyon1.fr
+          server_port: 587
+          username: ${{secrets.NOTIFY_EMAIL}}
+          password: ${{secrets.EMAIL_PASSWORD}}
+          subject: "Dependency update by ${{ github.actor }}"
+          to: ${{secrets.NOTIFY_EMAIL}}
+          from: Automated email from DIAMOND website
+          html_body: "Hello,<br><br>The push by ${{ github.actor }} to the repository '${{ github.repository }}' updated dependencies in package.json and/or package-lock.json. Using the [upgrade-dependencies] commit message prefix." 
+          priority: normal
 
