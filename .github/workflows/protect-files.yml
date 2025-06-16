@@ -117,9 +117,9 @@ jobs:
           server_port: 587
           username: ${{secrets.NOTIFY_EMAIL}}
           password: ${{secrets.EMAIL_PASSWORD}}
-          subject: "Dependency update by Dependabot"
+          subject: "Dependabot update"
           to: ${{secrets.NOTIFY_EMAIL}}
           from: Automated email from DIAMOND website
-          html_body: "Hello,<br><br>Dependabot updated package.json and/or package-lock.json in repository ${{ github.repository }}."
+          html_body: "Hello,<br><br>${{ github.actor }} merged a Dependabot update that modified package.json and/or package-lock.json in repository ${{ github.repository }}."
           priority: normal
 
