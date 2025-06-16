@@ -1,12 +1,11 @@
 # Default config
 tabWidth: 4
-endOfLine: crlf
+endOfLine: lf
 singleQuote: true
-printWidth: 100000
+printWidth: 120
 trailingComma: none
 bracketSameLine: true
 quoteProps: consistent
-experimentalTernaries: true
 
 # Overrided config
 overrides:
