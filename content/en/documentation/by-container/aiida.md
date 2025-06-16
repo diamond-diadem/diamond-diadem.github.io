@@ -7,7 +7,7 @@ weight: 6
 
 {{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
 
-Before following these instructions, you must have Apptainer installed on your machine; see [this link](/documentation/install/install_apptainer/) for more details.
+Before following these instructions, you must have Apptainer installed on your machine; see [this link](/en/documentation/install/install-apptainer/) for more details.
 
 This tutorial explains how to interact with AiiDA's Apptainer image.
 

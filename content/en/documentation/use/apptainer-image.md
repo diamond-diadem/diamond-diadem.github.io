@@ -7,7 +7,7 @@ weight: 1
 
 {{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
 
-In preamble, you need to have Apptainer installed on your machine ; see [this link](/en/documentation/install-apptainer/howto/) for more details.
+In preamble, you need to have Apptainer installed on your machine ; see [this link](/en/documentation/install/install-apptainer/) for more details.
 
 This tutorial explains the main ways to interact with an Apptainer image in order to generate and manage containers. Instructions presented here are in principle also valid for any other Apptainer container.
 

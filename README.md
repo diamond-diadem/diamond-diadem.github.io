@@ -149,7 +149,7 @@ diamond-website/
 ├── .prettierrc.yaml
 ├── CONTRIBUTING.md
 ├── LICENSE
-├── README.EN.md
+├── README.md
 ├── README.FR.md
 ├── hugo_stats.json
 ├── netlify.toml

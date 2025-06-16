@@ -8,7 +8,7 @@ weight: 3
 
 {{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
 
-In preamble, you need to have Apptainer installed on your machine; see [this link](/en/documentation/install-apptainer/howto/) for more details.
+In preamble, you need to have Apptainer installed on your machine; see [this link](/en/documentation/install/install-apptainer/) for more details.
 
 This tutorial focuses on using the Quantum Espresso container image available at [this address](/en/codes/scientific-computing/quantum-espresso/). By following this link, you will get an Apptainer image (`.sif` file format) allowing you to create containers running Quantum Espresso.
 
