@@ -61,7 +61,7 @@ apptainer exec $HOME/apptainer-images/quantum-espresso.sif mpirun -np <N> pw.x -
 
 ## Detailed usage for the Quantum Espresso container
 
-This section presents different ways to use the Quantum Espresso image. For more details about Apptainer commands, please look at [this tutorial](/en/documentation/use/apptainer-image/#apptainer--crash-course).
+This section presents different ways to use the Quantum Espresso image. For more details about Apptainer commands, please look at [this tutorial](/en/documentation/use/apptainer-image/#apptainer-crash-course).
 
 ### Using the Quantum Espresso container
 
@@ -133,7 +133,7 @@ apptainer inspect $HOME/apptainer-images/quantum-espresso.sif
 
 ### Partial or total isolation
 
-By default, Apptainer does not fully isolate the container from the host system. One can either have partial or total isolation using respectively the flags `--no-mount` or `--no-home` and `--containall` (see [this link](/en/documentation/use/apptainer-isolation-flags) for more information).
+By default, Apptainer does not fully isolate the container from the host system. One can either have partial or total isolation using respectively the flags `--no-mount` or `--no-home` and `--containall` (see [this link](/en/documentation/use/apptainer-isolation-flags/) for more information).
 
 Whenever `--containall` is activated, the directory on the host machine containing Quantum Espresso input-files cannot be accessed from the container!
 

@@ -17,6 +17,6 @@ Once you have finished using the container, we recommend that you restore your s
 
 **Note**
 
-> At the moment, this problem has only been reported for sessions based on `wayland`. Consequently, the proposed solution could only be tested in this particular case. If you encounter this problem under other conditions and/or the above solution does not work for you, please [report it](/documentation/use/ask-help/).
+> At the moment, this problem has only been reported for sessions based on `wayland`. Consequently, the proposed solution could only be tested in this particular case. If you encounter this problem under other conditions and/or the above solution does not work for you, please [report it](/en/documentation/use/ask-help/).
 
 </div>
