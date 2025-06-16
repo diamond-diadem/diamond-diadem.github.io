@@ -8,7 +8,7 @@ weight: 3
 
 {{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
 
-En préalable de ces explications, il est nécessaire d'avoir installé Apptainer sur votre machine ; voir [ce lien](/fr/documentation/install/install-apptainer/) pour plus de détails.
+En préalable de ces explications, il est nécessaire d'avoir installé Apptainer sur votre machine ; voir [ce lien](/documentation/install/install-apptainer/) pour plus de détails.
 
 Ce tutoriel détaille l'utilisation de l'image de conteneur du code Quantum Espresso téléchargeable à [cette adresse](/codes/scientific-computing/quantum-espresso/). En suivant ce lien, vous récupérez une image Apptainer (format de fichier `.sif`) qui vous permettra de créer des conteneurs à même de faire tourner Quantum Espresso.
 
@@ -115,7 +115,7 @@ apptainer exec --env OMP_NUM_THREADS=2 $HOME/apptainer-images/quantum-espresso.s
 
 Dans la commande précédente, on utilise la commande `mpirun` fournie par la version d'**OpenMPI** embarquée dans le conteneur pour communiquer directement avec le matériel de la machine hôte. Cette utilisation _embarquée_ présente un avantage majeur, puisque l'on utilise uniquement les outils installés dans le conteneur : elle fonctionne sur toutes les machines hôtes sans requérir d'installation. Néanmoins, la version d'**OpenMPI** présente au sein du conteneur n'est pas construite pour tourner de manière optimale sour toutes les machines hôtes, mais pour fourninr des performances satisfaisantes sur une gamme de machine aussi large que possible. Typiquement, dans le cas de Quantum Espresso, on observe que l'utilisation du processeur plafonne entre 85 et 90% en parallélisation embarquée. Par ailleurs, ce mode de parallélisation ne permet pas non plus d'effectuer du calcul distribué sur plusieurs nœuds de calcul. Si une facilité de portage au prix de performances légèrement dégradées peuvent convenir pour effectuer de simples essais sur une machine locale, ce n'est pas le cas sur une infrastructure de calcul haute performance.
 
-Dans le cas où les performances numériques sont centrales, il est recommandé d'utiliser un mode de parallélisation hybride, où l'on utilise la version d'**OpenMPI** de la machine hôte comme intermédiaire entre celle du conteneur et la matériel de la machine hôte. Pour plus de détails, veuillez consulter la [page dédiée](/fr/documentation/use/apptainer-parallel/).
+Dans le cas où les performances numériques sont centrales, il est recommandé d'utiliser un mode de parallélisation hybride, où l'on utilise la version d'**OpenMPI** de la machine hôte comme intermédiaire entre celle du conteneur et la matériel de la machine hôte. Pour plus de détails, veuillez consulter la [page dédiée](/documentation/use/apptainer-parallel/).
 
 ### Afficher l'aide
 

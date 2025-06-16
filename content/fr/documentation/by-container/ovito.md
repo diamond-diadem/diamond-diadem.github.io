@@ -8,7 +8,7 @@ weight: 2
 
 {{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
 
-En préalable de ces explications, il est nécessaire d'avoir installé Apptainer sur votre machine ; voir [ce lien](/fr/documentation/install/install-apptainer/) pour plus de détails.
+En préalable de ces explications, il est nécessaire d'avoir installé Apptainer sur votre machine ; voir [ce lien](/documentation/install/install-apptainer/) pour plus de détails.
 
 Ce tutoriel détaille l'utilisation de l'image de conteneur du code Ovito téléchargeable à [cette adresse](/codes/visualisation/ovito/). En suivant ce lien, vous récupérez une image Apptainer (format de fichier `.sif`) qui vous permettra de créer des conteneurs à même de faire tourner Ovito.
 
