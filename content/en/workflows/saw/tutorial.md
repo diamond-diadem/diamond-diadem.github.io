@@ -5,7 +5,7 @@ linkTitle: Tutorial
 
 ## Prerequisites
 
-- [Install Apptainer](/documentation/install/install-apptainer)
+- [Install Apptainer](/en/documentation/install/install-apptainer/)
 - Download the Apptainer image:
 
 ```bash

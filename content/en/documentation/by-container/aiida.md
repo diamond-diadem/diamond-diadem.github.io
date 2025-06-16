@@ -95,7 +95,7 @@ Once the GUI is open, we recommend you click on the “Step-by-step mode” butt
 
 ## Step 3 bis: Configure your AiiDA environment (via command prompt)
 
-If this is the **first time** you're using this AiiDA Apptainer image, you'll need to set up your AiiDA profile and follow this entire step! Otherwise you can go straight to the [next step](#run-workflow) to use the image and start workflows.
+If this is the **first time** you're using this AiiDA Apptainer image, you'll need to set up your AiiDA profile and follow this entire step! Otherwise you can go straight to the [next step](#step-4-start-a-workflow) to use the image and start workflows.
 
 ### Set-up a user profile
 

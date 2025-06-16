@@ -57,7 +57,7 @@ apptainer run $HOME/apptainer-images/paraview.sif <input.file>
 
 ### Detail of using the ParaView container
 
-This section presents the various ways to use the ParaView image. For more details on Apptainer commands, please refer to [this tutorial](/en/documentation/use/apptainer-image/#apptainer--crash-course).
+This section presents the various ways to use the ParaView image. For more details on Apptainer commands, please refer to [this tutorial](/en/documentation/use/apptainer-image/#apptainer-crash-course).
 
 To run ParaView without any containerization, one would use the command:
 
@@ -106,7 +106,7 @@ $HOME/apptainer-images/paraview tutorial-can.ex2
 
 ### Isolation between the container and the host machine
 
-By default, Apptainer does not fully isolate the container from the host machine's system; for partial or total isolation, respectively, the `--no-mount` or `--no-home` and `--containall` flags should be used (see [this link](/en/documentation/use/apptainer-isolation-flags) for more information). In cases where the `--containall` option is activated, we encounter two difficulties.
+By default, Apptainer does not fully isolate the container from the host machine's system; for partial or total isolation, respectively, the `--no-mount` or `--no-home` and `--containall` flags should be used (see [this link](/en/documentation/use/apptainer-isolation-flags/) for more information). In cases where the `--containall` option is activated, we encounter two difficulties.
 
 #### Sharing graphical resources
 

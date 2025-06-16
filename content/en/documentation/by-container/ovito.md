@@ -58,7 +58,7 @@ apptainer run $HOME/apptainer-images/ovito.sif <input.file>
 
 ## Details to use Ovito container
 
-This section presents the different ways to use the Ovito image. For more details on Apptainer commands, please refer to [this tutorial](/en/documentation/use/apptainer-image/#apptainer--crash-course).
+This section presents the different ways to use the Ovito image. For more details on Apptainer commands, please refer to [this tutorial](/en/documentation/use/apptainer-image/#apptainer-crash-course).
 
 To execute Ovito without any containerization, one would use the command:
 
@@ -104,7 +104,7 @@ $HOME/apptainer-images/ovito.sif POSCAR_Si-diamond
 
 ### Isolation between the container and the host machine
 
-By default, Apptainer does not fully isolate the container from the host system. One can either have partial or total isolation using respectively the flags `--no-mount` or `--no-home` and `--containall` (see [this link](/en/documentation/use/apptainer-isolation-flags) for more information). In case the `--containall` option is activated, we encounter two difficulties.
+By default, Apptainer does not fully isolate the container from the host system. One can either have partial or total isolation using respectively the flags `--no-mount` or `--no-home` and `--containall` (see [this link](/en/documentation/use/apptainer-isolation-flags/) for more information). In case the `--containall` option is activated, we encounter two difficulties.
 
 #### Sharing graphical tesources
 

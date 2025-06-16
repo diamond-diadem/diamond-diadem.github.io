@@ -23,5 +23,5 @@ In summary, well-designed workflows not only save time but also reduce the risk 
 
   Containerized program for the study of adsorption in porous materials
 
-  - [Description](/en/workflows/saw/description)
-  - [Tutorial](/en/workflows/saw/tutorial)
+  - [Description](/en/workflows/saw/description/)
+  - [Tutorial](/en/workflows/saw/tutorial/)
