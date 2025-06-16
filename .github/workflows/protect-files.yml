@@ -76,9 +76,9 @@ jobs:
           server_port: 587
           username: ${{secrets.NOTIFY_EMAIL}}
           password: ${{secrets.EMAIL_PASSWORD}}
-          subject: " Push rejeté - package.json ou package-lock.json modifiés par ${{ github.actor }}"
+          subject: "Push rejected - package.json or package-lock.json modified by ${{ github.actor }}"
           to: ${{secrets.NOTIFY_EMAIL}}
-          from: Mail automatique site web DIAMOND
-          html_body: "Bonjour,<br><br>Le push par ${{ github.actor }} vers le dépôt '${{ github.repository }}' a été refusé car il incluait des modifications non autorisées dans des fichiers protégés (package.json et/ou package-lock.json)."
+          from: Automated email from DIAMOND website
+          html_body: "Hello,<br><br>The push by ${{ github.actor }} to the repository '${{ github.repository }}' was rejected because it included unauthorized changes to protected files (package.json and/or package-lock.json)."
           priority: high
 
