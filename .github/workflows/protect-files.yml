@@ -99,6 +99,6 @@ jobs:
           subject: "Dependency update by ${{ github.actor }}"
           to: ${{secrets.NOTIFY_EMAIL}}
           from: Automated email from DIAMOND website
-          html_body: "Hello,<br><br>The push by ${{ github.actor }} to the repository '${{ github.repository }}' updated dependencies in package.json and/or package-lock.json. Using the [upgrade-dependencies] commit message prefix." 
+          html_body: "Hello,<br><br>The push by ${{ github.actor }} to repository ${{ github.repository }} modified package.json and/or package-lock.json, using the [upgrade-dependencies] commit prefix."
           priority: normal
 
