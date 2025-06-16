@@ -13,11 +13,12 @@ import 'js/clipboard.js';
 // Import tabs.js
 import 'js/tabs.js';
 
+// Import synchronised-selects.js (custom script)
+import 'js/diamond/synchronised-selects.js';
+
 // Import custom.js
 import 'js/custom.js';
 
-// Import synchronised-selects.js (custom script)
-import 'js/diamond/synchronised-selects.js';
 
 /*
 import * as params from '@params';
