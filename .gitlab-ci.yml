@@ -17,10 +17,12 @@ pages:
     - dpkg -i hugo.deb
     - npm ci
   script:
-    - npm run preview # to change ?
+    - npm run build
   artifacts:
     paths:
-      - public/website/staging
+      - public
   only:
-    - staging
-
+    refs:
+      - staging
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /^\[stage\]/
