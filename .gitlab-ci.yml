@@ -23,7 +23,11 @@ pages:
       - public
   only:
 <<<<<<< HEAD
+<<<<<<< HEAD
     - staging
 =======
     - staging
 >>>>>>> e0936615 (Update gitlab-ci.yml)
+=======
+    - staging
+>>>>>>> eb7fcc8c (False edit .gitlab-ci.yml - redeploy staging website)
