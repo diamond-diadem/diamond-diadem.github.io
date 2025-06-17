@@ -20,7 +20,7 @@ pages:
     - npm run build
   artifacts:
     paths:
-      - public
+      - public/website/staging
   only:
     refs:
       - staging
