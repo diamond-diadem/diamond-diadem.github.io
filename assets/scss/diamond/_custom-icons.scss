@@ -13,173 +13,173 @@
 }
 
 .icon-lammps {
-    background-image: url(/images/codes/lammps/lammps-icon.svg);
+    background-image: url(images/codes/lammps/lammps-icon.svg);
     @extend .custom-icon;
 }
 
 .icon-ovito {
-    background-image: url(/images/codes/ovito/ovito-icon.png);
+    background-image: url(images/codes/ovito/ovito-icon.png);
     @extend .custom-icon;
 }
 
 .icon-quantum-espresso {
-    background-image: url(/images/codes/quantum-espresso/quantum-espresso-icon-light.png);
+    background-image: url(images/codes/quantum-espresso/quantum-espresso-icon-light.png);
     @extend .custom-icon;
 }
 @include color-mode(dark) {
     .icon-quantum-espresso {
-        background-image: url(/images/codes/quantum-espresso/quantum-espresso-icon-dark.png);
+        background-image: url(images/codes/quantum-espresso/quantum-espresso-icon-dark.png);
     }
 }
 
 .icon-aiida {
-    background-image: url(/images/aiida-logo.png);
+    background-image: url(images/aiida-logo.png);
     @extend .custom-icon;
 }
 
 .icon-paraview {
-    background-image: url(/images/paraview-icon.png);
+    background-image: url(images/paraview-icon.png);
     @extend .custom-icon;
 }
 
 .icon-vesta {
-    background-image: url(/images/codes/vesta/vesta-icon.png);
+    background-image: url(images/codes/vesta/vesta-icon.png);
     @extend .custom-icon;
 }
 
 .icon-vmd {
-    background-image: url(/images/vmd-icon-light.png);
+    background-image: url(images/vmd-icon-light.png);
     @extend .custom-icon;
 }
 
 @include color-mode(dark) {
     .icon-vmd {
-        background-image: url(/images/vmd-icon-dark.png);
+        background-image: url(images/vmd-icon-dark.png);
     }
 }
 
 .icon-abinit {
-    background-image: url(/images/codes/abinit/abinit-icon-light.png);
+    background-image: url(images/codes/abinit/abinit-icon-light.png);
     @extend .custom-icon;
 }
 
 @include color-mode(dark) {
     .icon-abinit {
-        background-image: url(/images/codes/abinit/abinit-icon-dark.png);
+        background-image: url(images/codes/abinit/abinit-icon-dark.png);
     }
 }
 
 .icon-z-set {
-    background-image: url(/images/z-set-icon-20x20.png);
+    background-image: url(images/z-set-icon-20x20.png);
     @extend .custom-icon;
 }
 
 .icon-freefem {
-    background-image: url(/images/freefem-icon-light.svg);
+    background-image: url(images/freefem-icon-light.svg);
     @extend .custom-icon;
 }
 @include color-mode(dark) {
     .icon-freefem {
-        background-image: url(/images/freefem-icon-dark.svg);
+        background-image: url(images/freefem-icon-dark.svg);
     }
 }
 
 .icon-opencalphad {
-    background-image: url(/images/codes/opencalphad/opencalphad-icon-light.png);
+    background-image: url(images/codes/opencalphad/opencalphad-icon-light.png);
     @extend .custom-icon;
 }
 @include color-mode(dark) {
     .icon-opencalphad {
-        background-image: url(/images/codes/opencalphad/opencalphad-icon-dark.png);
+        background-image: url(images/codes/opencalphad/opencalphad-icon-dark.png);
     }
 }
 
 .icon-neper {
-    background-image: url(/images/neper-icon.png);
+    background-image: url(images/neper-icon.png);
     @extend .custom-icon;
 }
 
 .icon-plumed {
-    background-image: url(/images/codes/plumed/plumed-icon-light.png);
+    background-image: url(images/codes/plumed/plumed-icon-light.png);
     @extend .custom-icon;
 }
 @include color-mode(dark) {
     .icon-plumed {
-        background-image: url(/images/codes/plumed/plumed-icon-dark.png);
+        background-image: url(images/codes/plumed/plumed-icon-dark.png);
     }
 }
 
 .icon-gmsh {
-    background-image: url(/images/gmsh-icon-light.png);
+    background-image: url(images/gmsh-icon-light.png);
     @extend .custom-icon;
 }
 @include color-mode(dark) {
     .icon-gmsh {
-        background-image: url(/images/gmsh-icon-dark.png);
+        background-image: url(images/gmsh-icon-dark.png);
     }
 }
 
 .icon-zeoplusplus {
-    background-image: url(/images/zeo++/icon-zeoplusplus.png);
+    background-image: url(images/zeo++/icon-zeoplusplus.png);
     @extend .custom-icon;
 }
 
 .icon-raspa2 {
-    background-image: url(/images/codes/raspa2/raspa2-icon.png);
+    background-image: url(images/codes/raspa2/raspa2-icon.png);
     @extend .custom-icon;
 }
 
 .icon-opendis {
-    background-image: url(/images/codes/opendis/opendis-icon.png);
+    background-image: url(images/codes/opendis/opendis-icon.png);
     @extend .custom-icon;
 }
 .icon-xcrysden {
-    background-image: url(/images/xcrysden/xcrysden-icon-light.png);
+    background-image: url(images/xcrysden/xcrysden-icon-light.png);
     @extend .custom-icon;
 }
 @include color-mode(dark) {
     .icon-xcrysden {
-        background-image: url(/images/xcrysden/xcrysden-icon-dark.png);
+        background-image: url(images/xcrysden/xcrysden-icon-dark.png);
     }
 }
 
 .icon-wannier90 {
-    background-image: url(/images/codes/wannier90/wannier90-icon-light.png);
+    background-image: url(images/codes/wannier90/wannier90-icon-light.png);
     @extend .custom-icon;
 }
 
 .icon-nwchem {
-    background-image: url(/images/codes/nwchem/nwchem-icon.png);
+    background-image: url(images/codes/nwchem/nwchem-icon.png);
     @extend .custom-icon;
 }
 
 .icon-fenics {
-    background-image: url(/images/codes/fenics/fenics-icon.png);
+    background-image: url(images/codes/fenics/fenics-icon.png);
     @extend .custom-icon;
 }
 
 .icon-cp2k {
-    background-image: url(/images/codes/cp2k/cp2k-icon.png);
+    background-image: url(images/codes/cp2k/cp2k-icon.png);
     @extend .custom-icon;
 }
 
 .icon-n2p2 {
-    background-image: url(/images/codes/n2p2/n2p2-icon-light.png);
+    background-image: url(images/codes/n2p2/n2p2-icon-light.png);
     @extend .custom-icon;
 }
 @include color-mode(dark) {
     .icon-n2p2 {
-        background-image: url(/images/codes/n2p2/n2p2-icon-dark.png);
+        background-image: url(images/codes/n2p2/n2p2-icon-dark.png);
     }
 }
 
 .icon-dftbplus {
-    background-image: url(/images/codes/dftbplus/dftbplus-icon.png);
+    background-image: url(images/codes/dftbplus/dftbplus-icon.png);
     @extend .custom-icon;
 }
 
 .icon-xtb {
-    background-image: url(/images/codes/xtb/xtb-logo.svg);
+    background-image: url(images/codes/xtb/xtb-logo.svg);
     @extend .custom-icon;
 }
 

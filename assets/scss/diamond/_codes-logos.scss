@@ -12,163 +12,163 @@
 
 .home-neper {
     width: 100%;
-    content: url(/images/home-neper.png);
+    content: url(images/home-neper.png);
 }
 
 .logo-lammps {
     width: 100%;
-    content: url(/images/codes/lammps/lammps-logo.jpeg);
+    content: url(images/codes/lammps/lammps-logo.jpeg);
 }
 
 .logo-ovito {
     width: 100%;
-    content: url(/images/codes/ovito/ovito-logo-light.png);
+    content: url(images/codes/ovito/ovito-logo-light.png);
 }
 @include color-mode(dark) {
     .logo-ovito {
-        content: url(/images/codes/ovito/ovito-logo-dark.png);
+        content: url(images/codes/ovito/ovito-logo-dark.png);
     }
 }
 
 .logo-quantum-espresso {
     width: 100%;
-    content: url(/images/codes/quantum-espresso/quantum-espresso-logo-light.png);
+    content: url(images/codes/quantum-espresso/quantum-espresso-logo-light.png);
 }
 @include color-mode(dark) {
     .logo-quantum-espresso {
-        content: url(/images/codes/quantum-espresso/quantum-espresso-logo-dark.png);
+        content: url(images/codes/quantum-espresso/quantum-espresso-logo-dark.png);
     }
 }
 
 .logo-paraview {
     width: 100%;
-    content: url(/images/paraview-logo-light.svg);
+    content: url(images/paraview-logo-light.svg);
 }
 @include color-mode(dark) {
     .logo-paraview {
-        content: url(/images/paraview-logo-dark.svg);
+        content: url(images/paraview-logo-dark.svg);
     }
 }
 
 .logo-vesta {
     width: 100%;
-    content: url(/images/codes/vesta/vesta-logo-light.svg);
+    content: url(images/codes/vesta/vesta-logo-light.svg);
 }
 @include color-mode(dark) {
     .logo-vesta {
-        content: url(/images/codes/vesta/vesta-logo-dark.svg);
+        content: url(images/codes/vesta/vesta-logo-dark.svg);
     }
 }
 
 .logo-vmd {
     width: 100%;
-    content: url(/images/vmd-logo-light.png);
+    content: url(images/vmd-logo-light.png);
 }
 @include color-mode(dark) {
     .logo-vmd {
-        content: url(/images/vmd-logo-dark.png);
+        content: url(images/vmd-logo-dark.png);
     }
 }
 
 .logo-abinit {
     width: 100%;
-    content: url(/images/codes/abinit/abinit-logo-light.svg);
+    content: url(images/codes/abinit/abinit-logo-light.svg);
 }
 @include color-mode(dark) {
     .logo-abinit {
-        content: url(/images/codes/abinit/abinit-logo-dark.svg);
+        content: url(images/codes/abinit/abinit-logo-dark.svg);
     }
 }
 
 .logo-z-set {
     width: 100%;
-    content: url(/images/z-set-light-smaller.png);
+    content: url(images/z-set-light-smaller.png);
 }
 @include color-mode(dark) {
     .logo-z-set {
-        content: url(/images/z-set-dark-smaller.png);
+        content: url(images/z-set-dark-smaller.png);
     }
 }
 
 .logo-freefem {
     width: 100%;
-    content: url(/images/freefem-logo-light.svg);
+    content: url(images/freefem-logo-light.svg);
 }
 @include color-mode(dark) {
     .logo-freefem {
-        content: url(/images/freefem-logo-dark.svg);
+        content: url(images/freefem-logo-dark.svg);
     }
 }
 
 .logo-opencalphad {
     width: 100%;
-    content: url(/images/codes/opencalphad/opencalphad-logo-light.svg);
+    content: url(images/codes/opencalphad/opencalphad-logo-light.svg);
 }
 @include color-mode(dark) {
     .logo-opencalphad {
-        content: url(/images/codes/opencalphad/opencalphad-logo-dark.svg);
+        content: url(images/codes/opencalphad/opencalphad-logo-dark.svg);
     }
 }
 
 .logo-plumed {
-    content: url(/images/codes/plumed/plumed-logo-light.svg);
+    content: url(images/codes/plumed/plumed-logo-light.svg);
     width: 50%;
 }
 @include color-mode(dark) {
     .logo-plumed {
-        content: url(/images/codes/plumed/plumed-logo-dark.svg);
+        content: url(images/codes/plumed/plumed-logo-dark.svg);
     }
 }
 
 .logo-gmsh {
-    content: url(/images/gmsh-light.png);
+    content: url(images/gmsh-light.png);
     width: 50%;
 }
 @include color-mode(dark) {
     .logo-gmsh {
-        content: url(/images/gmsh-dark.png);
+        content: url(images/gmsh-dark.png);
     }
 }
 
 .logo-zeoplusplus {
-    content: url(/images/zeo++/logo-zeoplusplus.png);
+    content: url(images/zeo++/logo-zeoplusplus.png);
     width: 65%;
 }
 
 .logo-raspa2 {
-    content: url(/images/codes/raspa2/raspa2-logo.png);
+    content: url(images/codes/raspa2/raspa2-logo.png);
     width: 50%;
 }
 
 .logo-opendis {
-    content: url(/images/codes/opendis/opendis-logo.png);
+    content: url(images/codes/opendis/opendis-logo.png);
     width: 60%;
 }
 
 .logo-xcrysden {
     width: 100%;
-    content: url(/images/xcrysden/xcrysden-logo-light.png);
+    content: url(images/xcrysden/xcrysden-logo-light.png);
 }
 @include color-mode(dark) {
     .logo-xcrysden {
-        content: url(/images/xcrysden/xcrysden-logo-dark.png);
+        content: url(images/xcrysden/xcrysden-logo-dark.png);
     }
 }
 
 .logo-wannier90 {
     width: 100%;
-    content: url(/images/codes/wannier90/wannier90-logo-light.svg);
+    content: url(images/codes/wannier90/wannier90-logo-light.svg);
 }
 
 // // NWChem logo // //
 
 .logo-nwchem {
     width: 100%;
-    content: url(/images/codes/nwchem/nwchem-logo-light-enhanced.png);
+    content: url(images/codes/nwchem/nwchem-logo-light-enhanced.png);
 }
 @include color-mode(dark) {
     .logo-nwchem {
-        content: url(/images/codes/nwchem/nwchem-logo-dark-enhanced.png);
+        content: url(images/codes/nwchem/nwchem-logo-dark-enhanced.png);
     }
 }
 
@@ -178,7 +178,7 @@
 
 .logo-fenics {
     width: 40%;
-    content: url(/images/codes/fenics/fenics-logo.png);
+    content: url(images/codes/fenics/fenics-logo.png);
 }
 
 // // END FEniCS logo END // //
@@ -187,7 +187,7 @@
 
 .logo-cp2k {
     width: 60%;
-    content: url(/images/codes/cp2k/cp2k-logo.png);
+    content: url(images/codes/cp2k/cp2k-logo.png);
 }
 
 // // END CP2K logo END // //
@@ -217,11 +217,11 @@
 
 .logo-dftbplus {
     width: 100%;
-    content: url(/images/codes/dftbplus/dftbplus-logo-light.png);
+    content: url(images/codes/dftbplus/dftbplus-logo-light.png);
 }
 @include color-mode(dark) {
     .logo-dftbplus {
-        content: url(/images/codes/dftbplus/dftbplus-logo-dark.png);
+        content: url(images/codes/dftbplus/dftbplus-logo-dark.png);
     }
 }
 // // END dftbplus logo END // //
@@ -230,7 +230,7 @@
 
 .logo-xtb {
     width: 65%;
-    content: url(/images/codes/xtb/xtb-logo.svg);
+    content: url(images/codes/xtb/xtb-logo.svg);
 }
 
 // // END XTB logo END // //

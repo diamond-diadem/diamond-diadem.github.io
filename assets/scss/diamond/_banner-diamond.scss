@@ -1,5 +1,5 @@
 .section-title-lead-landing-page {
-    background-image: url(/images/banner-diamond/banner-diamond-light.png);
+    background-image: url(images/banner-diamond/banner-diamond-light.png);
     background-size: cover; //130% auto;
     height: fit-content;
     background-repeat: no-repeat;
@@ -53,7 +53,7 @@
 
 @include color-mode(dark) {
     .section-title-lead-landing-page {
-        background-image: url(/images/banner-diamond/banner-diamond-dark.png);
+        background-image: url(images/banner-diamond/banner-diamond-dark.png);
     }
 }
 
@@ -105,7 +105,7 @@
 }
 
 .container-h1-default-page {
-    background-image: url(/images/banner-diamond/banner-diamond-light.png);
+    background-image: url(images/banner-diamond/banner-diamond-light.png);
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-position-y: center;
@@ -118,7 +118,7 @@
 
 @include color-mode(dark) {
     .container-h1-default-page {
-        background-image: url(/images/banner-diamond/banner-diamond-dark.png);
+        background-image: url(images/banner-diamond/banner-diamond-dark.png);
     }
 }
 

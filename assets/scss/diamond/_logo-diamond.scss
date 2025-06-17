@@ -15,21 +15,21 @@
 }
 
 .diamond {
-    content: url(/images/diamond/diamond-light-smaller.png);
+    content: url(images/diamond/diamond-light-smaller.png);
 }
 
 @include color-mode(dark) {
     .diamond {
-        content: url(/images/diamond/diamond-dark-smaller.png);
+        content: url(images/diamond/diamond-dark-smaller.png);
     }
 }
 
 .logo-diamond {
-    content: url(/images/diamond/logo-diamond-light-smaller.png);
+    content: url(images/diamond/logo-diamond-light-smaller.png);
 }
 @include color-mode(dark) {
     .logo-diamond {
-        content: url(/images/diamond/logo-diamond-dark-smaller.png);
+        content: url(images/diamond/logo-diamond-dark-smaller.png);
     }
 }
 
