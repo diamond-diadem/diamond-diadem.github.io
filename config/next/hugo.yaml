@@ -1,3 +1,3 @@
 # Overrides for next environment
-baseURL: https://diamond.gricad-pages.univ-grenoble-alpes.fr/
-canonifyURLs: false
+baseURL: https://diamond.gricad-pages.univ-grenoble-alpes.fr/website/staging
+canonifyURLs: true
