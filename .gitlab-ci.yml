@@ -17,7 +17,7 @@ pages:
     - dpkg -i hugo.deb
     - npm ci
   script:
-    - hugo --minify --gc --baseURL="https://diamond.gricad-pages.univ-grenoble-alpes.fr/website/staging/" --canonifyURLs
+    - hugo --minify --gc --baseURL="https://diamond.gricad-pages.univ-grenoble-alpes.fr/website/staging/"
   artifacts:
     paths:
       - public
