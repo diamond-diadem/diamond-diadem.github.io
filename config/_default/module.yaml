@@ -13,8 +13,8 @@ mounts:
     target: assets/svgs/all-svg-icons/tabler-icons
   - source: assets
     target: assets
-  - source: assets/js
-    target: assets/js
+  # - source: assets/js
+  #   target: assets/js
   - source: assets/scss
     target: assets/scss
   - source: node_modules/@thulite/doks-core/data
