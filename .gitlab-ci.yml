@@ -17,10 +17,10 @@ pages:
     - dpkg -i hugo.deb
     - npm ci
   script:
-    - hugo --minify --gc -d public/website/staging
+    - npm run build
   artifacts:
     paths:
-      - public/website/staging
+      - public
   only:
     refs:
       - staging
