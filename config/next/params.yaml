@@ -2,4 +2,4 @@ analytics:
   enable: false
   ga_id: ""
 diamond:
-  sectionIcons: true
+  sectionsIcons: true
