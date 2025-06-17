@@ -5,7 +5,7 @@ aliases:
 description: ""
 summary: "PEPR DIADEM (Diamond), PEPR IA (CAUSALI-T-AI, PDE IA), PEPR NumPex"
 eventDate: "18 Novembre 2024"
-backgroundImage: "/images/background-meeting-3peprs.png"
+backgroundImage: "images/background-meeting-3peprs.png"
 backgroundOpacity: 0.18
 # publishDate: 2024-11-18
 # lastmod: 2024-02-06T09:24:27+01:00

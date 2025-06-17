@@ -3,7 +3,7 @@ title: "CECAM Flagship Workshop"
 description: ""
 summary: "Machine Learning Interatomic Potentials and Accessible Databases"
 eventDate: "September 9 to 11, 2024"
-backgroundImage: "/images/news/backgrounds/background-cecam-workshop.jpg"
+backgroundImage: "images/news/backgrounds/background-cecam-workshop.jpg"
 backgroundOpacity: 0.18
 # location: "Paris"
 # publishDate: 2024-11-18

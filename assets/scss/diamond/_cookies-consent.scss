@@ -7,23 +7,23 @@
 
 /* Styles du placeholder */
 .youtube-placeholder.fr {
-    background-image: url(/images/youtube-consent/youtube-placeholder-light-fr.svg);
+    background-image: url(images/youtube-consent/youtube-placeholder-light-fr.svg);
 }
 .youtube-placeholder.en {
-    background-image: url(/images/youtube-consent/youtube-placeholder-light-en.svg);
+    background-image: url(images/youtube-consent/youtube-placeholder-light-en.svg);
 }
 @include color-mode(dark) {
     .youtube-placeholder.fr {
-        background-image: url(/images/youtube-consent/youtube-placeholder-dark-fr.svg);
+        background-image: url(images/youtube-consent/youtube-placeholder-dark-fr.svg);
     }
     .youtube-placeholder.en {
-        background-image: url(/images/youtube-consent/youtube-placeholder-dark-en.svg);
+        background-image: url(images/youtube-consent/youtube-placeholder-dark-en.svg);
     }
 }
 
 .youtube-placeholder {
     @extend .tuto-video;
-    // background-image: url(/images/youtube-consent/youtube-placeholder-light.svg);
+    // background-image: url(images/youtube-consent/youtube-placeholder-light.svg);
     background-size: cover;
     background-repeat: no-repeat;
     // margin: 20px 0;
@@ -32,7 +32,7 @@
 }
 @include color-mode(dark) {
     .youtube-placeholder {
-        // background-image: url(/images/youtube-consent/youtube-placeholder-dark.svg);
+        // background-image: url(images/youtube-consent/youtube-placeholder-dark.svg);
         border: 1px solid white;
     }
 }

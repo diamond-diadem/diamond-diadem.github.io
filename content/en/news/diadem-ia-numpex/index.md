@@ -3,7 +3,7 @@ title: "When AI and HPC meet Materials Science"
 description: ""
 summary: "PEPR DIADEM (Diamond), PEPR IA (CAUSALI-T-AI, PDE IA), PEPR NumPex"
 eventDate: "November 18, 2024"
-backgroundImage: "/images/background-meeting-3peprs.png"
+backgroundImage: "images/background-meeting-3peprs.png"
 backgroundOpacity: 0.18
 # location: "Paris"
 # publishDate: 2024-11-18

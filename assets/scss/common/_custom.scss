@@ -115,20 +115,20 @@ u {
 }
 
 .logo-apptainer {
-    content: url(/images/apptainer-logo.svg);
+    content: url(images/apptainer-logo.svg);
 }
 @include color-mode(dark) {
     .logo-apptainer {
-        content: url(/images/apptainer-logo-dark.svg);
+        content: url(images/apptainer-logo-dark.svg);
     }
 }
 
 .logo-guix {
-    content: url(/images/guix-logo-light.svg);
+    content: url(images/guix-logo-light.svg);
 }
 @include color-mode(dark) {
     .logo-guix {
-        content: url(/images/guix-logo-dark.svg);
+        content: url(images/guix-logo-dark.svg);
     }
 }
 
@@ -323,19 +323,19 @@ u {
 
 .logo-france2030-desktop,
 .logo-france2030-mobile {
-    content: url("/images/france-2030/france-2030-couleurs-smaller.png");
+    content: url("images/france-2030/france-2030-couleurs-smaller.png");
 }
 
 @include color-mode(dark) {
     .logo-france2030-desktop,
     .logo-france2030-mobile {
-        content: url("/images/france-2030/france-2030-blanc-smaller.png");
+        content: url("images/france-2030/france-2030-blanc-smaller.png");
     }
 }
 
 @include media-breakpoint-only(xl) {
     .logo-france2030-desktop {
-        // content: url('/images/france-2030-couleurs.png');
+        // content: url('images/france-2030-couleurs.png');
         height: 75px;
         margin-right: 10px;
     }
@@ -355,7 +355,7 @@ u {
 
 @include media-breakpoint-only(lg) {
     .logo-france2030-desktop {
-        // content: url('/images/france-2030-couleurs.png');
+        // content: url('images/france-2030-couleurs.png');
         height: 75px;
         margin-right: 10px;
     }
@@ -375,7 +375,7 @@ u {
 
 // @include color-mode(dark) {
 //     .logo-france2030 {
-//         content: url('/images/france-2030-blanc.png');
+//         content: url('images/france-2030-blanc.png');
 //     }
 // }
 
@@ -703,38 +703,38 @@ tr {
 // // // Worflows >>> simple-adsorption-workflow images >>> // // //
 
 .saw-diagram-description {
-    content: url(/images/saw-diagram-light.png);
+    content: url(images/saw-diagram-light.png);
     width: 100%;
 }
 
 @include color-mode(dark) {
     .saw-diagram-description {
-        content: url(/images/saw-diagram-dark.png);
+        content: url(images/saw-diagram-dark.png);
     }
 }
 
 .saw-input-gui-1 {
-    content: url(/images/saw-input-gui-1-light.png);
+    content: url(images/saw-input-gui-1-light.png);
 }
 
 .saw-input-gui-2 {
-    content: url(/images/saw-input-gui-2-light.png);
+    content: url(images/saw-input-gui-2-light.png);
 }
 
 .saw-input-gui-3 {
-    content: url(/images/saw-input-gui-3-light.png);
+    content: url(images/saw-input-gui-3-light.png);
 }
 
 .saw-output-gui-1 {
-    content: url(/images/saw-output-gui-1-light.png);
+    content: url(images/saw-output-gui-1-light.png);
 }
 
 .saw-output-gui-2 {
-    content: url(/images/saw-output-gui-2-light.png);
+    content: url(images/saw-output-gui-2-light.png);
 }
 
 .saw-output-gui-3 {
-    content: url(/images/saw-output-gui-3-light.png);
+    content: url(images/saw-output-gui-3-light.png);
 }
 
 // // // <<< simple-adsorption-workflow images <<< // // //

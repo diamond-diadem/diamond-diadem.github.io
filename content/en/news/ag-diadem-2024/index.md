@@ -3,7 +3,7 @@ title: "2024 General Assembly of the PEPR DIADEM"
 description: ""
 summary: "Took place on the Doua campus in Lyon. Retrieve the presentations and posters from the various work packages of the DIAMOND project."
 eventDate: "November 13 to 15, 2024"
-backgroundImage: "/images/diadem-background.jpg"
+backgroundImage: "images/diadem-background.jpg"
 backgroundOpacity: 0.25
 # publishDate: 2024-11-18
 # lastmod: 2024-02-06T09:24:27+01:00
