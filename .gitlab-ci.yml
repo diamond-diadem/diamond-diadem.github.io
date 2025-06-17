@@ -22,4 +22,8 @@ pages:
     paths:
       - public
   only:
+<<<<<<< HEAD
     - staging
+=======
+    - staging
+>>>>>>> e0936615 (Update gitlab-ci.yml)
