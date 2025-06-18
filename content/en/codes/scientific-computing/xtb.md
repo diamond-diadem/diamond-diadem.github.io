@@ -13,7 +13,7 @@ weight: 19
 ### Retrieve the Apptainer image
 
 ```bash
-apptainer pull xtb.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/xtb-from-guix.sif:test
+apptainer pull xtb.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/xtb-from-guix.sif:latest
 ```
 
 <div align="justify">
