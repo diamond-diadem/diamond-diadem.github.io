@@ -5,8 +5,8 @@ stages:
 
 variables:
   HUGO_VERSION: "0.140.0"
-  HUGO_ENVIRONMENT: next
-  HUGO_ENV: next
+  HUGO_ENVIRONMENT: staging
+  HUGO_ENV: staging
   NODE_ENV: production
 
 pages:
