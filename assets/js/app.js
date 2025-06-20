@@ -4,8 +4,8 @@
 // import core.js
 import '@thulite/core/assets/js/core.js';
 
-// Import clipboard.js
-import 'js/clipboard.js';
+// // Import clipboard.js
+// import 'js/clipboard.js';
 
 // // Import to-top.js
 // import 'js/to-top.js';
