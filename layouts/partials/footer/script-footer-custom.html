@@ -32,3 +32,5 @@
 {{ end }}
 
 {{ partial "footer/esbuild" (dict "src" "js/diamond/cookies-consent.js" "transpile" false) -}}
+{{/* Track clipboard copy events in Google Analytics */}}
+{{ partial "footer/esbuild" (dict "src" "js/diamond/clipboard-ga.js" "load" "async" "transpile" false) -}}
