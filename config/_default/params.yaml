@@ -113,5 +113,5 @@ seo:
 math: true
 
 analytics:
-  enable: true
+  enable: false
   ga_id: "G-1G3K8JZG98"
