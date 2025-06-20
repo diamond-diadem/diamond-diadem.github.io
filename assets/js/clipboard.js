@@ -28,13 +28,13 @@ import Clipboard from 'clipboard';
             if (match) {
                 var groupClass = match[1];
                 if (typeof gtag === 'function') {
-                    gtag('event', 'copy_apptainer_pull_test', {
+                    gtag('event', 'copy_apptainer_pull', {
                         event_category: 'copy',
                         event_label: groupClass,
                         send_to: window.analyticsSettings?.gaId || undefined
                     });
                 } else if (typeof ga === 'function') {
-                    ga('send', 'event', 'copy', 'apptainer_pull_test', groupClass);
+                    ga('send', 'event', 'copy', 'apptainer_pull', groupClass);
                 }
             }
         }
