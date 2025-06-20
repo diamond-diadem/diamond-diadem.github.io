@@ -23,12 +23,17 @@ apptainer pull raspa2.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/
 
 </div>
 
-### Learn how to use this specific container image _(to be added)_
+<h3 class="mb-1">Tutorial</h3>
 
-### RASPA2 documentation
+{{< link-card title="Content to be added" description="<i>Learn to use this container image</i>" href="#bottom" icon="tabler-icons/outline/package" disabled="true" class="mb-0" >}}
 
-- #### <a href="https://github.com/iRASPA/RASPA2" target="_blank">Official website</a>
+<h3 class="mb-1 mt-3">RASPA2 documentation</h3>
 
-- #### <a href="https://github.com/iRASPA/RASPA2/tree/master/Docs" target="_blank">Official documentation</a>
+{{< card-grid >}}
+{{< link-card title="Official website" href="https://github.com/iRASPA/RASPA2" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
+{{< link-card title="Official documentation" href="https://github.com/iRASPA/RASPA2/tree/master/Docs" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
+{{< /card-grid >}}
 
-- #### Examples: input files _(to be added)_
+<h3 class="mb-1 mt-3">Examples</h3>
+
+{{< link-card title="Content to be added" description="<i>Download input files</i>" href="#bottom" icon="tabler-icons/outline/file-export" disabled="true" class="mb-0" >}}
