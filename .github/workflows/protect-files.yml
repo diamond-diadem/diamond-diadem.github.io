@@ -48,7 +48,7 @@ jobs:
                   echo "Allowed Dependabot change in $file for commit $commit ($message)"
                   dependabot=true
                   notify=true
-                elif echo "$message" | grep -Eq '^\[upgrade-dependencies\]'; then
+                elif echo "$message" | grep -Eq '^\[update-dependencies\]'; then
                   echo "Allowed change in $file for commit $commit ($message)"
                   notify=true
                 else
@@ -106,7 +106,7 @@ jobs:
           subject: "Dependency update by ${{ github.actor }}"
           to: ${{secrets.NOTIFY_EMAIL}}
           from: Automated email from DIAMOND website
-          html_body: "Hello,<br><br>The push by ${{ github.actor }} to repository ${{ github.repository }} modified package.json and/or package-lock.json, using the [upgrade-dependencies] commit prefix."
+          html_body: "Hello,<br><br>The push by ${{ github.actor }} to repository ${{ github.repository }} modified package.json and/or package-lock.json, using the [update-dependencies] commit prefix."
           priority: normal
 
       - name: Send Email Notification for Dependabot Upgrade
