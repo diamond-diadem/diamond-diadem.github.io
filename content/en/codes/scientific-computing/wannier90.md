@@ -23,12 +23,17 @@ apptainer pull wannier90.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamo
 
 </div>
 
-### Learn how to use this specific container image _(to be added)_
+<h3 class="mb-1">Tutorial</h3>
 
-### Wannier90 documentation
+{{< link-card title="Content coming soon" description="<i>Learn to use this container image</i>" href="#bottom" icon="tabler-icons/outline/package" disabled="true" class="mb-0" >}}
 
-- #### <a href="https://wannier.org/" target="_blank">Official website</a>
+<h3 class="mb-1 mt-3">Wannier90 documentation</h3>
 
-- #### <a href="https://github.com/wannier-developers/wannier90/tree/develop/docs" target="_blank">Official documentation</a>
+{{< card-grid >}}
+{{< link-card title="Official website" href="https://wannier.org/" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
+{{< link-card title="Official documentation" href="https://github.com/wannier-developers/wannier90/tree/develop/docs" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
+{{< /card-grid >}}
 
-- #### Examples: input files _(to be added)_
+<h3 class="mb-1 mt-3">Examples</h3>
+
+{{< link-card title="Content coming soon" description="<i>Download input files</i>" href="#bottom" icon="tabler-icons/outline/file-export" disabled="true" class="mb-0" >}}

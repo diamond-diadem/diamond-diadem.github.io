@@ -31,12 +31,17 @@ In summary, OpenCalphad is a powerful, open-source tool for thermodynamic modeli
 
 </div>
 
-### Learn how to use this specific container _(to be added)_
+<h3 class="mb-1">Tutorial</h3>
 
-### OpenCalphad documentation:
+{{< link-card title="Content coming soon" description="<i>Learn to use this container image</i>" href="#bottom" icon="tabler-icons/outline/package" disabled="true" class="mb-0" >}}
 
-- #### <a href="https://www.opencalphad.com/" target="_blank">Official website</a>
+<h3 class="mb-1 mt-3">OpenCalphad documentation</h3>
 
-- #### <a href="https://www.opencalphad.com/OC6-macros.pdf" target="_blank">Official documentation</a>
+{{< card-grid >}}
+{{< link-card title="Official website" href="https://www.opencalphad.com/" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
+{{< link-card title="Official documentation" href="https://www.opencalphad.com/OC6-macros.pdf" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
+{{< /card-grid >}}
 
-- #### Examples: input files _(to be added)_
+<h3 class="mb-1 mt-3">Examples</h3>
+
+{{< link-card title="Content coming soon" description="<i>Download input files</i>" href="#bottom" icon="tabler-icons/outline/file-export" disabled="true" class="mb-0" >}}
