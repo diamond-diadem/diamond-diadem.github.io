@@ -8,7 +8,6 @@
     "create": "hugo new",
     "dev": "hugo server --disableFastRender --noHTTPCache",
     "stage": "hugo server --disableFastRender --noHTTPCache --environment staging",
-    "format": "prettier **/** -w -c",
     "build": "hugo --minify --gc",
     "preview": "vite preview --outDir public"
   },
