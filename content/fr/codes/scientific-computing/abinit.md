@@ -13,7 +13,7 @@ weight: 3
 
 ### Récupérez l'image Apptainer
 
-```bash{class="apptainer-pull abinit"}
+```bash
 apptainer pull abinit.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/abinit.sif:latest
 ```
 
