@@ -33,14 +33,17 @@ Overall, VMD is a powerful and flexible tool for molecular visualization and ana
 
 </div>
 
-### Tutorial
+<h3 class="mb-1">Tutorial</h3>
 
-#### <a href="/en/documentation/by-container/vmd">Learn how to use this specific container image</a>
+{{< link-card title="Learn to use this container image" href="/en/documentation/by-container/vmd" icon="tabler-icons/outline/package" class="mb-0" >}}
 
-### VMD documentation
+<h3 class="mb-1 mt-3">VMD documentation</h3>
 
-- #### <a href="https://www.ks.uiuc.edu/Research/vmd/" target="_blank">Official website</a>
+{{< card-grid >}}
+{{< link-card title="Official website" href="https://www.ks.uiuc.edu/Research/vmd/" target="_blank" icon="tabler-icons/outline/world-www"  class="mb-0" >}}
+{{< link-card title="Official documentation" href="https://www.ks.uiuc.edu/Research/vmd/current/docs.html" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
+{{< /card-grid >}}
 
-- #### <a href="https://www.ks.uiuc.edu/Research/vmd/current/docs.html" target="_blank">Official documentation</a>
+<h3 class="mb-1 mt-3">Examples</h3>
 
-- #### <a href="/downloads/vmd-tutorial-inputs.tar.gz">Examples: input files</a>
+{{< link-card title="Download input files" href="/downloads/vmd-tutorial-inputs.tar.gz" icon="tabler-icons/outline/file-export" class="mb-0" >}}
