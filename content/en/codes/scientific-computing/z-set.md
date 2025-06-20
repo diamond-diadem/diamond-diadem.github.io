@@ -36,12 +36,17 @@ Z-Set is widely used in academic research and industrial applications for its ro
 
 </div>
 
-### Learn how to use this specific container _(to be added)_
+<h3 class="mb-1">Tutorial</h3>
 
-### Z-set documentation
+{{< link-card title="Content to be added" description="<i>Learn to use this container image</i>" href="#bottom" icon="tabler-icons/outline/package" disabled="true" class="mb-0" >}}
 
-- #### <a href="http://www.zset-software.com/" target="_blank">Official website</a>
+<h3 class="mb-1 mt-3">Z-set documentation</h3>
 
-- #### <a href="http://www.zset-software.com/support/manuals/" target="_blank">Official documentation</a>
+{{< card-grid >}}
+{{< link-card title="Official website" href="http://www.zset-software.com/" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
+{{< link-card title="Official documentation" href="http://www.zset-software.com/support/manuals/" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
+{{< /card-grid >}}
 
-- #### Examples: input files _(to be added)_
+<h3 class="mb-1 mt-3">Examples</h3>
+
+{{< link-card title="Content to be added" description="<i>Download input files</i>" href="#bottom" icon="tabler-icons/outline/file-export" disabled="true" class="mb-0" >}}

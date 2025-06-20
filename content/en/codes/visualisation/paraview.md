@@ -25,14 +25,17 @@ This software is built on a modular architecture, allowing users to customize th
 
 </div>
 
-### Tutorial
+<h3 class="mb-1">Tutorial</h3>
 
-#### <a href="/en/documentation/by-container/paraview">Learn how to use this specific container image</a>
+{{< link-card title="Learn to use this container image" href="/en/documentation/by-container/paraview" icon="tabler-icons/outline/package" class="mb-0" >}}
 
-### ParaView documentation
+<h3 class="mb-1 mt-3">ParaView documentation</h3>
 
-- #### <a href="https://www.paraview.org/" target="_blank">Official website</a>
+{{< card-grid >}}
+{{< link-card title="Official website" href="https://www.paraview.org/" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
+{{< link-card title="Official documentation" href="https://www.paraview.org/resources/" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
+{{< /card-grid >}}
 
-- #### <a href="https://www.paraview.org/resources/" target="_blank">Official documentation</a>
+<h3 class="mb-1 mt-3">Examples</h3>
 
-- #### <a href="/downloads/paraview-tutorial-inputs.tar.gz">Examples: input files</a>
+{{< link-card title="Download input files" href="/downloads/paraview-tutorial-inputs.tar.gz" icon="tabler-icons/outline/file-export" class="mb-0" >}}

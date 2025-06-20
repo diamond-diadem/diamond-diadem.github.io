@@ -25,14 +25,17 @@ The software supports various calculation methods, such as plane wave methods, q
 
 </div>
 
-### Tutorial
+<h3 class="mb-1">Tutorial</h3>
 
-#### <a href="/en/documentation/by-container/quantum-espresso">Learn how to use this specific container image</a>
+{{< link-card title="Learn to use this container image" href="/en/documentation/by-container/quantum-espresso" icon="tabler-icons/outline/package" class="mb-0" >}}
 
-### Quantum ESPRESSO documentation
+<h3 class="mb-1 mt-3">Quantum ESPRESSO documentation</h3>
 
-- #### <a href="https://www.quantum-espresso.org/" target="_blank">Official website</a>
+{{< card-grid >}}
+{{< link-card title="Official website" href="https://www.quantum-espresso.org/" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
+{{< link-card title="Official documentation" href="https://www.quantum-espresso.org/documentation/" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
+{{< /card-grid >}}
 
-- #### <a href="https://www.quantum-espresso.org/documentation/" target="_blank">Official documentation</a>
+<h3 class="mb-1 mt-3">Examples</h3>
 
-- #### <a href="/downloads/qe-tutorial-inputs.tar.gz">Examples: input files</a>
+{{< link-card title="Download input files" href="/downloads/qe-tutorial-inputs.tar.gz" icon="tabler-icons/outline/file-export" class="mb-0" >}}
