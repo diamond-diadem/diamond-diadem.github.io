@@ -24,3 +24,31 @@ Pour résumer, des workflows bien conçus permettent non seulement de gagner du 
   Programme conteneurisé pour l'étude de l'adsorption dans les matériaux poreux
   - [Description](/workflows/saw/description)
   - [Tutoriel](/workflows/saw/tutorial)
+- ### aiida-n2p2-workflow
+  In mlip we have n2p2-workflow
+  - [Description](/workflows/aiida-n2p2/description_fr)
+  - [Installation](/workflows/aiida-n2p2/installation_fr)
+  - [Benchmark](/workflows/aiida-n2p2/benchmark_fr)
+- ### NUMODIS+LAMMPS-workflow
+  
+  - [Description](/workflows/numodis-lammps/description)
+  - [Installation](/workflows/numodis-lammps/installation)
+  - [Benchmark](/workflows/numodis-lammps/benchmark)
+
+  - ### MOFlearning-workflow
+  
+  - [Description](/workflows/moflearning/description)
+  - [Installation](/workflows/moflearning/installation)
+  - [Benchmark](/workflows/moflearning/benchmark)
+
+  - ### Quantum espresso -workflow
+  
+  - [Description](/workflows/quantum-espresso/description)
+  - [Installation](/workflows/quantum-espresso/installation)
+  - [Benchmark](/workflows/quantum-espresso/benchmark)
+
+  - ### VASP-workflow
+  
+  - [Description](/workflows/vasp/description)
+  - [Installation](/workflows/vasp/installation)
+  - [Benchmark](/workflows/vasp/benchmark)
