@@ -34,4 +34,7 @@
 {{ partial "footer/esbuild" (dict "src" "js/diamond/cookies-consent.js" "transpile" false) -}}
 {{/* Track clipboard copy events in Google Analytics */}}
 {{ partial "footer/esbuild" (dict "src" "js/clipboard.js" "load" "async" "transpile" false) -}}
-{{ partial "footer/esbuild" (dict "src" "js/diamond/scroll-fade.js" "load" "async" "transpile" false) -}}
+
+{{ if site.Params.diamond.enableScrollFade }}
+  {{ partial "footer/esbuild" (dict "src" "js/diamond/scroll-fade.js" "load" "async" "transpile" false) -}}
+{{ end }}

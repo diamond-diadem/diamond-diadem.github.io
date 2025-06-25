@@ -927,3 +927,9 @@ label {
     opacity: 1;
     transform: none;
 }
+
+// fallback si scroll-fade désactivé : rendre visibles tous les éléments
+body:not(.has-scroll-fade) .scroll-fade {
+  opacity: 1;
+  transform: none;
+}
