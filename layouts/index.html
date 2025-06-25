@@ -17,7 +17,7 @@
 <section class="section container-fluid mt-n4 pb-0 section-logo">
   <div class="row text-center">
     <div class="container-fluid text-center">
-          <img class="logo-diamond homepage"/>
+          <img class="logo-diamond homepage scroll-fade"/>
       {{ .Content }}
     </div>
   </div>
@@ -31,28 +31,28 @@
   <section class="section section-md section-features mt-0">
     <div class="container">
       <div class="row justify-content-center text-center">
-        <div class="col-lg-5">
+        <div class="col-lg-5 scroll-fade">
           {{ if site.Params.diamond.sectionsIcons }}
           <img alt="about-icon" class="section-icon homepage about"/>
           {{ end }}
           <h2 class="h4">Apprenez-en plus</h2>
           <p>Sur <a href="/about/diamond/">DIAMOND</a>, le <a href="/about/diadem/">PEPR DIADEM</a>, les <a href="/about/containers/">conteneurs</a> et <a href="/about/apptainer/">Apptainer</a>.</p>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6 scroll-fade">
           {{ if site.Params.diamond.sectionsIcons }}
           <img alt="about-icon" class="section-icon homepage containers"/>
           {{ end }}
           <h2 class="h4">Récupérez nos images Apptainer de codes populaires</h2>
           <p><a href="/codes/start-here/home/">Calcul scientifique et visualisation de données</a>.</p>
         </div>
-        <div class="col-lg-5">
+        <div class="col-lg-5 scroll-fade">
           {{ if site.Params.diamond.sectionsIcons }}
           <img alt="about-icon" class="section-icon homepage wfs-dbs"/>
           {{ end }}
           <h2 class="h4">Workflows et bases de données</h2>
           <p><a href="/workflows/start-here/home/">Notre premier workflow disponible</a>.</p>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6 scroll-fade">
           {{ if site.Params.diamond.sectionsIcons }}
           <img alt="about-icon" class="section-icon homepage documentation"/>
           {{ end }}
@@ -68,10 +68,10 @@
         <div class="row justify-content-center text-center">
           {{ $homepageNewsPages := where (where .Site.RegularPages "Section" "news") "Params.homepage" true }}
            {{ if (ge (len ($homepageNewsPages)) 1) }}
-            <h2>Actualités en vedette</h3>
+            <h2 class="scroll-fade">Actualités en vedette</h3>
           {{ end }}
           {{ range $homepageNewsPages }}
-              <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 news-card-homepage" style="--bg-img: url({{ .Params.backgroundImage }});">
+              <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 news-card-homepage scroll-fade" style="--bg-img: url({{ .Params.backgroundImage }});">
                 <h4 class="br-inherit"><a class="stretched-link text-body br-inherit" href="{{ .Permalink }}">{{ .Title | safeHTML }}</a></h4>
                 <p class="event-date-page">{{ .Params.EventDate }}</p>
                 <p>{{ .Summary }}</p>
