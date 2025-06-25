@@ -12,6 +12,7 @@ diamond:
   enableNews: true
   sectionsIcons: false
   cookiesConsent: true
+  enableScrollFade: true
 social:
   twitter: ""
 doks:
