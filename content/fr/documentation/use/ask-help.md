@@ -58,7 +58,7 @@ Pour ce faire, vous n'avez qu'à consulter l'onglet "All" et à utiliser la barr
 
 Si vous ne trouvez rien qui vous intéresse dans les tickets ouverts et résolus, alors vous pouvez en créer un. Dans un premier temps, il faut que vous sélectionniez le projet auquel votre requête fait référence. En cliquant sur "Créer un ticket", vous serez à une page similaire à celle ci-dessous.
 
-<img alt="create issue" class="create-issue" style="width:100%">
+<img alt="create issue" class="create-issue mb-3" style="width:100%">
 
 Nous vous demandons :
 
