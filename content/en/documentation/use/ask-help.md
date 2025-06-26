@@ -58,7 +58,7 @@ Simply go to the 'All' tab and use the search bar to enter keywords relating to 
 
 If you can't find what you're looking for in the open and closed issues, you can create one. The first step is to select the project to which your query relates. Clicking on "Create an issue" will take you to a page similar to the one below.
 
-<img alt="create issue" class="create-issue" style="width:100%">
+<img alt="create issue" class="create-issue mb-3" style="width:100%">
 
 We ask that you:
 
