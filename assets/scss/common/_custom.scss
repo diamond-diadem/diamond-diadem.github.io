@@ -135,7 +135,7 @@ u {
 // // // Gitlab tutorial // // //
 
 .use-gitlab {
-    content: url(images/ask-help/use_gitlab_dark.png);
+    content: url(images/ask-help/use_gitlab_dark_withborder.png);
     width: 100%;
 }
 
@@ -145,19 +145,19 @@ u {
 }
 
 .issue-tab {
-    content: url(images/ask-help/issue_tab_dark.png);
+    content: url(images/ask-help/issue_tab_dark_withborder.png);
     width: 100%;
 }
 
 @include color-mode(dark) {
     .use-gitlab {
-        content: url(images/ask-help/use_gitlab_light.png);
+        content: url(images/ask-help/use_gitlab_light_withborder.png);
     }
     .create-issue {
         content: url(images/ask-help/create_issue_light_withborder.png);
     }
     .issue-tab {
-        content: url(images/ask-help/issue_tab_light.png);
+        content: url(images/ask-help/issue_tab_light_withborder.png);
     }
 }
 
