@@ -14,26 +14,48 @@ Ce tutoriel explicite les différentes démarches à effectuer pour rapporter un
 ## Préambule
 
 <style>
- /* Three image containers (use 25% for four, and 50% for two, etc) */
-.column {
-  float: left;
-  width: 50%;
-  padding: 5px;
+.row-use-gitlab {
+  display: flex;
+  /* flex-wrap: nowrap; */
+  align-items: center;
+  gap: 30px;
 }
 
-/* Clear floats after image containers */
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
+.column-use-gitlab {
+  flex: 1 1 50%;
+  box-sizing: border-box;
+}
+
+.column-use-gitlab.left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .row-use-gitlab {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .column-use-gitlab {
+    flex: 1 1 100%;
+  }
+
+  .use-gitlab {
+    max-width: 90%;
+    justify-content: center;
+    object-fit: contain;
+    margin: auto;
+  }
 }
 </style>
 
- <div class="row">
-  <div class="column">
-    <img alt="use gitlab" class="use-gitlab" style="width:90%">
+ <div class="row-use-gitlab">
+  <div class="column-use-gitlab left">
+    <img alt="use gitlab" class="use-gitlab">
   </div>
-  <div class="column" align="justify">
+  <div class="column-use-gitlab" align="justify">
 
 Si vous rencontrez un problème relatif à l'utilisation des outils de la plateforme ou si vous avez une requête particulière, alors vous avez la possibilité de communiquer avec les ingénieurs de la plateforme à travers ce [lien](https://gricad-gitlab.univ-grenoble-alpes.fr/diamond).
 
