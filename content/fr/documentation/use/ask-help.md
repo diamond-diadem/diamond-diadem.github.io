@@ -13,49 +13,11 @@ Ce tutoriel explicite les différentes démarches à effectuer pour rapporter un
 
 ## Préambule
 
-<style>
-.row-use-gitlab {
-  display: flex;
-  /* flex-wrap: nowrap; */
-  align-items: center;
-  gap: 30px;
-}
-
-.column-use-gitlab {
-  flex: 1 1 50%;
-  box-sizing: border-box;
-}
-
-.column-use-gitlab.left {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-@media (max-width: 768px) {
-  .row-use-gitlab {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .column-use-gitlab {
-    flex: 1 1 100%;
-  }
-
-  .use-gitlab {
-    max-width: 90%;
-    justify-content: center;
-    object-fit: contain;
-    margin: auto;
-  }
-}
-</style>
-
  <div class="row-use-gitlab">
-  <div class="column-use-gitlab left">
+  <div class="left-use-gitlab">
     <img alt="use gitlab" class="use-gitlab">
   </div>
-  <div class="column-use-gitlab" align="justify">
+  <div class="right-use-gitlab" align="justify">
 
 Si vous rencontrez un problème relatif à l'utilisation des outils de la plateforme ou si vous avez une requête particulière, alors vous avez la possibilité de communiquer avec les ingénieurs de la plateforme à travers ce [lien](https://gricad-gitlab.univ-grenoble-alpes.fr/diamond).
 

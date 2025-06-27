@@ -13,27 +13,11 @@ This tutorial explains the various steps you need to take to report a bug, reque
 
 ## Preambule
 
-<style>
- /* Three image containers (use 25% for four, and 50% for two, etc) */
-.column {
-  float: left;
-  width: 50%;
-  padding: 5px;
-}
-
-/* Clear floats after image containers */
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-</style>
-
- <div class="row">
-  <div class="column">
-    <img alt="use gitlab" class="use-gitlab" style="width:90%">
+<div class="row-use-gitlab">
+  <div class="left-use-gitlab">
+    <img alt="use gitlab" class="use-gitlab">
   </div>
-  <div class="column" align="justify">
+  <div class="right-use-gitlab" align="justify">
 
 If you encounter a problem when using the platform's tools, or if you have a specific request, you can contact the platform's engineers via this [link](https://gricad-gitlab.univ-grenoble-alpes.fr/diamond).
 

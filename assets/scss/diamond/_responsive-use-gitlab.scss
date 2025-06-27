@@ -1,0 +1,66 @@
+.row-use-gitlab {
+  display: flex;
+  /* flex-wrap: nowrap; */
+  align-items: center;
+  gap: 30px;
+}
+
+.left-use-gitlab,
+.right-use-gitlab {
+  flex: 1 1 50%;
+  box-sizing: border-box;
+}
+
+.left-use-gitlab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@include media-breakpoint-only(lg) {
+  .row-use-gitlab {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .left-use-gitlab,
+  .right-use-gitlab {
+    flex: 1 1 100%;
+  }
+
+  .use-gitlab {
+    max-width: 90%;
+    justify-content: center;
+    object-fit: contain;
+    margin: auto;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .row-use-gitlab {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .left-use-gitlab,
+  .right-use-gitlab {
+    flex: 1 1 100%;
+  }
+
+  .use-gitlab {
+    max-width: 90%;
+    justify-content: center;
+    object-fit: contain;
+    margin: auto;
+  }
+}
+
+@include media-breakpoint-only(md) {
+  .left-use-gitlab {
+    flex: 1 1 40%;
+  }
+
+  .right-use-gitlab {
+    flex: 1 1 60%;
+  }
+}

@@ -12,6 +12,7 @@
 @import "diamond/svg-inline";
 @import "diamond/custom-cards";
 @import "diamond/cookies-consent";
+@import "diamond/responsive-use-gitlab";
 
 @include color-mode(dark) {
     .dropdown-menu {
