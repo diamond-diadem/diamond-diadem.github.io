@@ -934,3 +934,7 @@ body:not(.has-scroll-fade) .scroll-fade {
   opacity: 1;
   transform: none;
 }
+
+/* Global bottom margin for all pages */
+.diamond-content { padding-bottom: 40px; }
+
