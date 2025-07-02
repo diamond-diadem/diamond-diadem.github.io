@@ -169,11 +169,11 @@ u {
 }
 
 .containerised-codes.fr {
-    content: url(images/containerised-codes/containerised-codes-light-fr.png);
+    content: url(images/containerised-codes/containerised-codes-light-fr-cropped-nobg.png);
     // width: 100%;
 }
 .containerised-codes.en {
-    content: url(images/containerised-codes/containerised-codes-light-en.png);
+    content: url(images/containerised-codes/containerised-codes-light-en-cropped-nobg.png);
     // width: 100%;
 }
 
@@ -188,10 +188,10 @@ u {
 
 @include color-mode(dark) {
     .containerised-codes.fr {
-        content: url(images/containerised-codes/containerised-codes-dark-fr.png);
+        content: url(images/containerised-codes/containerised-codes-dark-fr-cropped.png);
     }
     .containerised-codes.en {
-        content: url(images/containerised-codes/containerised-codes-dark-en.png);
+        content: url(images/containerised-codes/containerised-codes-dark-en-cropped.png);
     }
     .cluster-map.fr {
         content: url(images/cluster-map/cluster-map-dark-fr.png);
