@@ -31,6 +31,7 @@ weight: 3
                 <option value="option17A">n2p2</option>
                 <option value="option18A">DFTB+</option>
                 <option value="option19A">XTB</option>
+                <option value="option20A">GaTewAY</option>
             </optgroup>
         </select>
     </div>
@@ -182,6 +183,13 @@ apptainer pull xtb.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/app
 ```
 
 </div>
+<div id="content-option20A" class="hidden">
+
+```bash
+apptainer pull gateway.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/gateway.sif:latest
+```
+
+</div>
 
 <!--  -->
 <!--  -->
@@ -253,6 +261,7 @@ apptainer pull xcrysden.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamon
             <option value="option17B">n2p2</option>
             <option value="option18B">DFTB+</option>
             <option value="option19B">XTB</option>
+            <option value="option20B">GaTewAY</option>
         </optgroup>
     </select>
 </div>
@@ -389,6 +398,13 @@ apptainer pull dftbplus.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamon
 
 ```bash
 apptainer pull xtb.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/xtb-from-guix.sif:latest
+```
+
+</div>
+<div id="content-option20B" style="margin-top: -1rem;" class="hidden">
+
+```bash
+apptainer pull gateway.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/gateway.sif:latest
 ```
 
 </div>

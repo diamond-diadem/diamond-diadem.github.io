@@ -92,5 +92,9 @@ weight: 2
             <td><a href="/en/codes/scientific-computing/xtb/"><i class="icon-xtb"></i>XTB</a></td>
             <td></td>
         </tr>
+        <tr>
+            <td><a href="/en/codes/scientific-computing/gateway/"><i class=""></i>GaTewAY</a></td>
+            <td></td>
+        </tr>
     </tbody>
 </table>
