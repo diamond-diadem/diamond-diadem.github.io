@@ -42,6 +42,7 @@ main:
     url: news/
     weight: 70
     identifier: news-fr
+    
 # codes:
 #     - name: Codes
 #       weight: 10
