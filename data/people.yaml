@@ -1,0 +1,375 @@
+people:
+
+
+- name: Joao Paulo Almeida de Mendonca
+  first_name: Joao Paulo
+  last_name: Almeida de Mendonca
+  email: joao-paulo.almeida-de-mendonca@grenoble-inp.fr
+  affiliation: SIMaP Grenoble
+  role: Codes and Workflows Platform
+  project: DIAMOND
+  personnel_type: Scientifique
+  slug: joao-paulo-almeida
+  photo: /images/people/jpam.png
+  bio: I work with bioinspired and machine learning algorithms, applying them to materials science (and some other complex systems, just for fun).     #Markdown, idealy short
+  links:
+    - label: Google Scholar
+      url: https://scholar.google.com/citations?user=KtS3vY4AAAAJ
+    - label: LinkedIn
+      url: https://www.linkedin.com/in/jo%C3%A3o-paulo-almeida-de-mendon%C3%A7a-574598b1/
+  website: https://jpalastus.github.io/
+  orcid: 0000-0003-3253-1220
+  github: jpalastus
+
+
+
+- name: Noël Jakse
+  first_name: Noël
+  last_name: Jakse
+  email: noel.jakse@grenoble-inp.fr
+  affiliation: Grenoble INP
+  role: Codes and Workflows Platform
+  project: DIAMOND
+  personnel_type: 
+    - Project Coordinator
+    - Responsable scientifique
+  slug: no-l-jakse
+  photo: /images/people/nj.png
+
+- name: François Willaime
+  first_name: François
+  last_name: Willaime
+  email: francois.willaime@cea.fr
+  affiliation: CEA Saclay
+  role: Coordinator
+  project: DIAMOND
+  personnel_type:
+    - Project Coordinator
+  slug: fran-ois-willaime
+  photo: /images/people/NA.png
+
+- name: Marco Saitta
+  first_name: Marco
+  last_name: Saitta
+  email: marco.saitta@sorbonne-universite.fr
+  affiliation: Sorbonne Université
+  role: Machine Learning Interatomic Potemtials
+  project: DIAMOND
+  personnel_type: 
+    - Scientifique
+    - Responsable scientifique
+  slug: marco-saitta
+  photo: /images/people/ms.png
+
+- name: Vincent Bergeaud
+  first_name: Vincent
+  last_name: Bergeaud
+  email: vincent.bergeaud@cea.fr
+  affiliation: CEA Saclay
+  role: Materials Database Infrastructure
+  project: DIAMOND
+  personnel_type: Scientifique
+  slug: vincent-bergeaud
+  photo: /images/people/NA.png
+
+- name: Thierry Deutsch
+  first_name: Thierry
+  last_name: Deutsch
+  email: thierry.deutsch@cea.fr
+  affiliation: CEA Grenoble
+  role: Materials Database Infrastructure
+  project: DIAMOND
+  personnel_type: 
+    - Scientifique
+    - Responsable scientifique
+  slug: thierry-deutsch
+  photo: /images/people/NA.png
+
+- name: David Rodney
+  first_name: David
+  last_name: Rodney
+  email: david.rodney@univ-lyon1.fr
+  affiliation: ILM Lyon
+  role: Codes and Workflows Platform
+  project: DIAMOND
+  personnel_type: Scientifique
+  slug: david-rodney
+  photo: /images/people/NA.png
+
+- name: Jean-Philippe Poli
+  first_name: Jean-Philippe
+  last_name: Poli
+  email: jean-philippe.poli@cea.fr
+  affiliation: CEA Saclay
+  role: Materials Database Infrastructure
+  project: DIAMOND
+  personnel_type: Scientifique
+  slug: jean-philippe-poli
+  photo: /images/people/NA.png
+
+- name: Benjamin Arrondeau
+  first_name: Benjamin
+  last_name: Arrondeau
+  email: benjamin.arrondeau@univ-grenoble-alpes.fr
+  affiliation: GRICAD Grenoble
+  role: Codes and Workflows Platform
+  project: DIAMOND
+  personnel_type: Scientifique
+  slug: benjamin-arrondeau
+  photo: /images/people/NA.png
+
+- name: Pierre-Antoine Bouttier
+  first_name: Pierre-Antoine
+  last_name: Bouttier
+  email: Pierre-Antoine.Bouttier@univ-grenoble-alpes.fr
+  affiliation: GRICAD Grenoble
+  role: Codes and Workflows Platform
+  project: DIAMOND
+  personnel_type: Scientifique
+  slug: pierre-antoine-bouttier
+  photo: /images/people/NA.png
+
+- name: Adrien Bruneton
+  first_name: Adrien
+  last_name: Bruneton
+  email: adrien.bruneton@cea.fr
+  affiliation: CEA Saclay
+  role: Codes and Workflows Platform
+  project: DIAMOND
+  personnel_type: Scientifique
+  slug: adrien-bruneton
+  photo: /images/people/NA.png
+
+- name: Nicolas Crouzet
+  first_name: Nicolas
+  last_name: Crouzet
+  email: nicolas.crouzet@cea.fr
+  affiliation: CEA Saclay
+  role: Codes and Workflows Platform
+  project: DIAMOND
+  personnel_type: Scientifique
+  slug: nicolas-crouzet
+  photo: /images/people/NA.png
+
+- name: Geoffrey Daniel
+  first_name: Geoffrey
+  last_name: Daniel
+  email: geoffrey.daniel@cea.fr
+  affiliation: CEA Saclay
+  role: Codes and Workflows Platform
+  project: DIAMOND
+  personnel_type: Scientifique
+  slug: geoffrey-daniel
+  photo: /images/people/NA.png
+
+- name: Jonathan Daubin
+  first_name: Jonathan
+  last_name: Daubin
+  email: jonathan.daubin@cea.fr
+  affiliation: CEA Saclay
+  role: Codes and Workflows Platform
+  project: DIAMOND
+  personnel_type: Scientifique
+  slug: jonathan-daubin
+  photo: /images/people/NA.png
+
+- name: Nils Kash
+  first_name: Nils
+  last_name: Kash
+  email: nils.kash@cea.fr
+  affiliation: CEA Saclay
+  role: Codes and Workflows Platform
+  project: DIAMOND
+  personnel_type: Scientifique
+  slug: nils-kash
+  photo: /images/people/NA.png
+
+- name: David Martin-Calle
+  first_name: David
+  last_name: Martin-Calle
+  email: david.martin-calle@univ-lyon1.fr
+  affiliation: ILM Lyon
+  role: Codes and Workflows Platform
+  project: DIAMOND
+  personnel_type: Scientifique
+  slug: david-martin-calle
+  photo: /images/people/NA.png
+
+- name: Lorenzo Paulatto
+  first_name: Lorenzo
+  last_name: Paulatto
+  email: Lorenzo.paulatto@sorbonne-universite.fr
+  affiliation: Sorbonne Université
+  role: Codes and Workflows Platform
+  project: DIAMOND
+  personnel_type: Scientifique
+  slug: lorenzo-paulatto
+  photo: /images/people/NA.png
+
+- name: Irina Piazza
+  first_name: Irina
+  last_name: Piazza
+  email: irina.piazza@grenoble-inp.fr
+  affiliation: SIMaP Grenoble
+  role: Machine Learning Interatomic Potemtials
+  project: DIAMOND
+  personnel_type: Scientifique
+  slug: irina-piazza
+  photo: /images/people/ip.png
+
+- name: Dorian Rolland
+  first_name: Dorian
+  last_name: Rolland
+  email: dorian.rolland@cea.fr
+  affiliation: CEA Grenoble
+  role: Codes and Workflows Platform
+  project: DIAMOND
+  personnel_type: Scientifique
+  slug: dorian-rolland
+  photo: /images/people/NA.png
+
+- name: Martin Uhrin
+  first_name: Martin
+  last_name: Uhrin
+  email: martin.uhrin@grenoble-inp.fr
+  affiliation: SIMaP Grenoble
+  role: Codes and Workflows Platform
+  project: DIAMOND
+  personnel_type: Scientifique
+  slug: martin-uhrin
+  photo: /images/people/NA.png
+
+- name: Aadhityan Arivazhagan
+  first_name: Aadhityan
+  last_name: Arivazhagan
+  email: aadhityan.arivazhagan@sorbonne-universite.fr
+  affiliation: Sorbonne Université
+  role: Codes and Workflows Platform
+  project: DIAMOND
+  personnel_type: Scientifique
+  slug: aadhityan-arivazhagan
+  photo: /images/people/NA.png
+
+- name: Omar Benyahya
+  first_name: Omar
+  last_name: Benyahya
+  email: omar.benyahya@cea.fr
+  affiliation: CEA Saclay
+  project: DIAMOND
+  personnel_type: Scientifique
+  slug: omar-benyahya
+  photo: /images/people/NA.png
+
+- name: Ahmed Amrani
+  first_name: Ahmed
+  last_name: Amrani
+  email: ahmed.amrani@cea.fr
+  affiliation: CEA Saclay
+  role: Materials Database Infrastructure
+  project: DIAMOND
+  personnel_type: Scientifique
+  slug: ahmed-amrani
+  photo: /images/people/NA.png
+
+- name: Arawinth Camatchy
+  first_name: Arawinth
+  last_name: Camatchy
+  email: arawinth.camatchy@cea.fr
+  affiliation: CEA Grenoble
+  role: Materials Database Infrastructure
+  project: DIAMOND
+  personnel_type: Scientifique
+  slug: arawinth-camatchy
+  photo: /images/people/NA.png
+
+- name: Imanol Setoain
+  first_name: Imanol
+  last_name: Setoain
+  email: imanol.setoain@cea.fr
+  affiliation: CEA Saclay
+  role: Materials Database Infrastructure
+  project: DIAMOND
+  personnel_type: Scientifique
+  slug: imanol-setoain
+  photo: /images/people/NA.png
+
+- name: Nicola Vigano
+  first_name: Nicola
+  last_name: Vigano
+  email: nicola.vigano@cea.fr
+  affiliation: CEA Grenoble
+  role: Materials Database Infrastructure
+  project: DIAMOND
+  personnel_type: Scientifique
+  slug: nicola-vigano
+  photo: /images/people/NA.png
+
+- name: Cinthya Herrera
+  first_name: Cinthya
+  last_name: Herrera
+  email: cinthya.herreracontreras@cea.fr
+  affiliation: CEA Grenoble
+  role: Materials Database Infrastructure
+  project: DIAMOND
+  personnel_type: Scientifique
+  slug: cinthya-herrera
+  photo: /images/people/NA.png
+
+- name: Mihai-Cosmin Marinica
+  first_name: Mihai-Cosmin
+  last_name: Marinica
+  email: cosmin.marinica@cea.fr
+  affiliation: CEA Saclay
+  role: Machine Learning Interatomic Potemtials
+  project: DIAMOND
+  personnel_type: Scientifique
+  slug: mihai-cosmin-marinica
+  photo: /images/people/NA.png
+
+- name: Anruo Zhong
+  first_name: Anruo
+  last_name: Zhong
+  email: Anruo.ZHONG@cea.fr
+  role: Machine Learning Interatomic Potemtials
+  project: DIAMOND
+  personnel_type: Scientifique
+  slug: anruo-zhong
+  photo: /images/people/NA.png
+
+- name: Arthur France-Lanord
+  first_name: Arthur
+  last_name: France-Lanord
+  email: arthur.france-lanord@sorbonne-universite.fr
+  affiliation: Sorbonne Université
+  role: Machine Learning Interatomic Potemtials
+  project: DIAMOND
+  personnel_type: Scientifique
+  slug: arthur-france-lanord
+  photo: /images/people/NA.png
+
+- name: Akshay Ammothum Kandy
+  first_name: Akshay
+  last_name: Ammothum Kandy
+  email: akshay.ammothum_kandy@sorbonne-universite.fr
+  affiliation: Sorbonne Université
+  role: Machine Learning Interatomic Potemtials
+  project: DIAMOND
+  personnel_type: Scientifique
+  slug: akshay-ammothum-kandy
+  photo: /images/people/NA.png
+  
+- name: Léo Orveillon
+  first_name: Léo
+  last_name: Orveillon
+  email: leo.orveillon@univ-grenoble-alpes.fr
+  affiliation: GRICAD Grenoble
+  role: Codes and Workflows Platform
+  project: DIAMOND
+  personnel_type: Scientifique
+  slug: leo-orveillon
+  photo: /images/people/lo.png
+  bio: I am an engineer working on efficient way to packages and deploy scientific codes on HPC infrastructures.  #Markdown
+  links:                                # Optional custom links list
+    - label: LinkedIn
+      url: https://www.linkedin.com/in/leo-orveillon/
+  github: periodLeo
