@@ -32,6 +32,9 @@ main:
   - name: Données
     url: data/
     weight: 40
+  - name: Personnes
+    url: people/
+    weight: 45
   - name: Documentation
     url: documentation/start-here/home/
     weight: 50

@@ -1,0 +1,50 @@
+<div class="person-card" data-person
+     data-name="{{ .name }}"
+     data-role="{{ .role }}"
+     data-affiliation="{{ .affiliation }}"
+     data-project="{{ .project }}"
+     data-ptype="{{ if reflect.IsSlice .personnel_type }}{{ delimit .personnel_type "," }}{{ else }}{{ .personnel_type }}{{ end }}"
+     data-email="{{ .email }}">
+  <div class="flex items-start gap-3">
+    {{ with .photo }}
+      <img src="{{ . }}" alt="Photo de {{ $.name }}" style="width:64px;height:64px;border-radius:9999px;object-fit:cover;">
+    {{ else }}
+      <div style="width:64px;height:64px;border-radius:9999px;background:#e5e7eb;display:flex;align-items:center;justify-content:center;font-weight:600;">
+        {{ (index (split (default "" $.first_name) "") 0) }}{{ (index (split (default "" $.last_name) "") 0) }}
+      </div>
+    {{ end }}
+
+    <div class="min-w-0">
+      <div class="person-name">
+        <a href="{{ (printf "/people/%s/" .slug) | relLangURL }}">{{ .name }}</a>
+      </div>
+      {{ with .role }}<div class="person-role">{{ . }}</div>{{ end }}
+      {{ with .affiliation }}<div class="person-affil">{{ . }}</div>{{ end }}
+
+      {{ with .bio }}
+        {{ $plain := . | markdownify | plainify }}
+        <p class="mt-2 text-sm text-gray-600">{{ substr $plain 0 140 }}{{ if gt (len $plain) 140 }}…{{ end }}</p>
+      {{ end }}
+
+      <div class="mt-2">
+        {{ with .project }}<span class="pill">{{ . }}</span>{{ end }}
+        {{ with .personnel_type }}
+          {{ if reflect.IsSlice . }}
+            {{ range . }}
+              <span class="pill">{{ . }}</span>
+            {{ end }}
+          {{ else }}
+            <span class="pill">{{ . }}</span>
+          {{ end }}
+        {{ end }}
+      </div>
+
+      <div class="mt-2 text-sm">
+        {{ with .email }}<a href="mailto:{{ . }}">{{ . }}</a>{{ end }}
+        {{ with .website }} · <a href="{{ . }}" target="_blank" rel="noopener">Site</a>{{ end }}
+        {{ with .orcid }} · <a href="https://orcid.org/{{ . }}" target="_blank" rel="noopener">ORCID</a>{{ end }}
+        {{ with .github }} · <a href="https://github.com/{{ . }}" target="_blank" rel="noopener">GitHub</a>{{ end }}
+      </div>
+    </div>
+  </div>
+</div>
