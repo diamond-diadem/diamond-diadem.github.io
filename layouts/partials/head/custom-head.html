@@ -1,1 +1,6 @@
 <!-- Custom head -->
+ {{- with site.Params.title }}
+<meta property="og:site_name" content="{{ . }}">
+<meta name="application-name" content="{{ . }}">
+<meta name="apple-mobile-web-app-title" content="{{ . }}">
+{{- end }}
