@@ -10,7 +10,7 @@ people:
   project: DIAMOND
   personnel_type: Scientifique
   slug: joao-paulo-almeida
-  photo: /staging/images/people/jpam.png
+  photo: /website/staging/images/people/jpam.png
   bio: I work with bioinspired and machine learning algorithms, applying them to materials science (and some other complex systems, just for fun).     #Markdown, idealy short
   links:
     - label: Google Scholar
@@ -34,7 +34,7 @@ people:
     - Project Coordinator
     - Responsable scientifique
   slug: no-l-jakse
-  photo: /staging/images/people/nj.png
+  photo: /website/staging/images/people/nj.png
 
 - name: François Willaime
   first_name: François
@@ -46,7 +46,7 @@ people:
   personnel_type:
     - Project Coordinator
   slug: fran-ois-willaime
-  photo: /staging/images/people/NA.png
+  photo: /website/staging/images/people/NA.png
 
 - name: Marco Saitta
   first_name: Marco
@@ -59,7 +59,7 @@ people:
     - Scientifique
     - Responsable scientifique
   slug: marco-saitta
-  photo: /staging/images/people/ms.png
+  photo: /website/staging/images/people/ms.png
 
 - name: Vincent Bergeaud
   first_name: Vincent
@@ -70,7 +70,7 @@ people:
   project: DIAMOND
   personnel_type: Scientifique
   slug: vincent-bergeaud
-  photo: /staging/images/people/NA.png
+  photo: /website/staging/images/people/NA.png
 
 - name: Thierry Deutsch
   first_name: Thierry
@@ -83,7 +83,7 @@ people:
     - Scientifique
     - Responsable scientifique
   slug: thierry-deutsch
-  photo: /staging/images/people/NA.png
+  photo: /website/staging/images/people/NA.png
 
 - name: David Rodney
   first_name: David
@@ -94,7 +94,7 @@ people:
   project: DIAMOND
   personnel_type: Scientifique
   slug: david-rodney
-  photo: /staging/images/people/NA.png
+  photo: /website/staging/images/people/NA.png
 
 - name: Jean-Philippe Poli
   first_name: Jean-Philippe
@@ -105,7 +105,7 @@ people:
   project: DIAMOND
   personnel_type: Scientifique
   slug: jean-philippe-poli
-  photo: /staging/images/people/NA.png
+  photo: /website/staging/images/people/NA.png
 
 - name: Benjamin Arrondeau
   first_name: Benjamin
@@ -116,7 +116,7 @@ people:
   project: DIAMOND
   personnel_type: Scientifique
   slug: benjamin-arrondeau
-  photo: /staging/images/people/NA.png
+  photo: /website/staging/images/people/NA.png
 
 - name: Pierre-Antoine Bouttier
   first_name: Pierre-Antoine
@@ -127,7 +127,7 @@ people:
   project: DIAMOND
   personnel_type: Scientifique
   slug: pierre-antoine-bouttier
-  photo: /staging/images/people/NA.png
+  photo: /website/staging/images/people/NA.png
 
 - name: Adrien Bruneton
   first_name: Adrien
@@ -138,7 +138,7 @@ people:
   project: DIAMOND
   personnel_type: Scientifique
   slug: adrien-bruneton
-  photo: /staging/images/people/NA.png
+  photo: /website/staging/images/people/NA.png
 
 - name: Nicolas Crouzet
   first_name: Nicolas
@@ -149,7 +149,7 @@ people:
   project: DIAMOND
   personnel_type: Scientifique
   slug: nicolas-crouzet
-  photo: /staging/images/people/NA.png
+  photo: /website/staging/images/people/NA.png
 
 - name: Geoffrey Daniel
   first_name: Geoffrey
@@ -160,7 +160,7 @@ people:
   project: DIAMOND
   personnel_type: Scientifique
   slug: geoffrey-daniel
-  photo: /staging/images/people/NA.png
+  photo: /website/staging/images/people/NA.png
 
 - name: Jonathan Daubin
   first_name: Jonathan
@@ -171,7 +171,7 @@ people:
   project: DIAMOND
   personnel_type: Scientifique
   slug: jonathan-daubin
-  photo: /staging/images/people/NA.png
+  photo: /website/staging/images/people/NA.png
 
 - name: Nils Kash
   first_name: Nils
@@ -182,7 +182,7 @@ people:
   project: DIAMOND
   personnel_type: Scientifique
   slug: nils-kash
-  photo: /staging/images/people/NA.png
+  photo: /website/staging/images/people/NA.png
 
 - name: David Martin-Calle
   first_name: David
@@ -193,7 +193,7 @@ people:
   project: DIAMOND
   personnel_type: Scientifique
   slug: david-martin-calle
-  photo: /staging/images/people/NA.png
+  photo: /website/staging/images/people/NA.png
 
 - name: Lorenzo Paulatto
   first_name: Lorenzo
@@ -204,7 +204,7 @@ people:
   project: DIAMOND
   personnel_type: Scientifique
   slug: lorenzo-paulatto
-  photo: /staging/images/people/NA.png
+  photo: /website/staging/images/people/NA.png
 
 - name: Irina Piazza
   first_name: Irina
@@ -215,7 +215,7 @@ people:
   project: DIAMOND
   personnel_type: Scientifique
   slug: irina-piazza
-  photo: /staging/images/people/ip.png
+  photo: /website/staging/images/people/ip.png
 
 - name: Dorian Rolland
   first_name: Dorian
@@ -226,7 +226,7 @@ people:
   project: DIAMOND
   personnel_type: Scientifique
   slug: dorian-rolland
-  photo: /staging/images/people/NA.png
+  photo: /website/staging/images/people/NA.png
 
 - name: Martin Uhrin
   first_name: Martin
@@ -237,7 +237,7 @@ people:
   project: DIAMOND
   personnel_type: Scientifique
   slug: martin-uhrin
-  photo: /staging/images/people/NA.png
+  photo: /website/staging/images/people/NA.png
 
 - name: Aadhityan Arivazhagan
   first_name: Aadhityan
@@ -248,7 +248,7 @@ people:
   project: DIAMOND
   personnel_type: Scientifique
   slug: aadhityan-arivazhagan
-  photo: /staging/images/people/NA.png
+  photo: /website/staging/images/people/NA.png
 
 - name: Omar Benyahya
   first_name: Omar
@@ -258,7 +258,7 @@ people:
   project: DIAMOND
   personnel_type: Scientifique
   slug: omar-benyahya
-  photo: /staging/images/people/NA.png
+  photo: /website/staging/images/people/NA.png
 
 - name: Ahmed Amrani
   first_name: Ahmed
@@ -269,7 +269,7 @@ people:
   project: DIAMOND
   personnel_type: Scientifique
   slug: ahmed-amrani
-  photo: /staging/images/people/NA.png
+  photo: /website/staging/images/people/NA.png
 
 - name: Arawinth Camatchy
   first_name: Arawinth
@@ -280,7 +280,7 @@ people:
   project: DIAMOND
   personnel_type: Scientifique
   slug: arawinth-camatchy
-  photo: /staging/images/people/NA.png
+  photo: /website/staging/images/people/NA.png
 
 - name: Imanol Setoain
   first_name: Imanol
@@ -291,7 +291,7 @@ people:
   project: DIAMOND
   personnel_type: Scientifique
   slug: imanol-setoain
-  photo: /staging/images/people/NA.png
+  photo: /website/staging/images/people/NA.png
 
 - name: Nicola Vigano
   first_name: Nicola
@@ -302,7 +302,7 @@ people:
   project: DIAMOND
   personnel_type: Scientifique
   slug: nicola-vigano
-  photo: /staging/images/people/NA.png
+  photo: /website/staging/images/people/NA.png
 
 - name: Cinthya Herrera
   first_name: Cinthya
@@ -313,7 +313,7 @@ people:
   project: DIAMOND
   personnel_type: Scientifique
   slug: cinthya-herrera
-  photo: /staging/images/people/NA.png
+  photo: /website/staging/images/people/NA.png
 
 - name: Mihai-Cosmin Marinica
   first_name: Mihai-Cosmin
@@ -324,7 +324,7 @@ people:
   project: DIAMOND
   personnel_type: Scientifique
   slug: mihai-cosmin-marinica
-  photo: /staging/images/people/NA.png
+  photo: /website/staging/images/people/NA.png
 
 - name: Anruo Zhong
   first_name: Anruo
@@ -334,7 +334,7 @@ people:
   project: DIAMOND
   personnel_type: Scientifique
   slug: anruo-zhong
-  photo: /staging/images/people/NA.png
+  photo: /website/staging/images/people/NA.png
 
 - name: Arthur France-Lanord
   first_name: Arthur
@@ -345,7 +345,7 @@ people:
   project: DIAMOND
   personnel_type: Scientifique
   slug: arthur-france-lanord
-  photo: /staging/images/people/NA.png
+  photo: /website/staging/images/people/NA.png
 
 - name: Akshay Ammothum Kandy
   first_name: Akshay
@@ -356,7 +356,7 @@ people:
   project: DIAMOND
   personnel_type: Scientifique
   slug: akshay-ammothum-kandy
-  photo: /staging/images/people/NA.png
+  photo: /website/staging/images/people/NA.png
   
 - name: Léo Orveillon
   first_name: Léo
@@ -367,7 +367,7 @@ people:
   project: DIAMOND
   personnel_type: Scientifique
   slug: leo-orveillon
-  photo: /staging/images/people/lo.png
+  photo: /website/staging/images/people/lo.png
   bio: I am an engineer working on efficient way to packages and deploy scientific codes on HPC infrastructures.  #Markdown
   links:                                # Optional custom links list
     - label: LinkedIn

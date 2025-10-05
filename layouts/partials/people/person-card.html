@@ -16,7 +16,7 @@
 
     <div class="min-w-0">
       <div class="person-name">
-        <a href="{{ (printf "/staging/people/%s/" .slug) | relLangURL }}">{{ .name }}</a>
+        <a href="{{ (printf "/website/staging/people/%s/" .slug) | relLangURL }}">{{ .name }}</a>
       </div>
       {{ with .role }}<div class="person-role">{{ . }}</div>{{ end }}
       {{ with .affiliation }}<div class="person-affil">{{ . }}</div>{{ end }}

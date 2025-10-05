@@ -10,7 +10,7 @@
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "joao-paulo-almeida",
-      "photo": "/staging/images/people/jpam.png",
+      "photo": "/website/staging/images/people/jpam.png",
       "bio": "I work with bioinspired and machine learning algorithms, applying them to materials science (and some other complex systems, just for fun).",
       "links": [
         {
@@ -39,7 +39,7 @@
         "Responsable scientifique"
       ],
       "slug": "no-l-jakse",
-      "photo": "/staging/images/people/nj.png"
+      "photo": "/website/staging/images/people/nj.png"
     },
     {
       "name": "François Willaime",
@@ -51,7 +51,7 @@
       "project": "DIAMOND",
       "personnel_type": "Coordonnateur",
       "slug": "fran-ois-willaime",
-      "photo": "/staging/images/people/NA.png"
+      "photo": "/website/staging/images/people/NA.png"
     },
     {
       "name": "Marco Saitta",
@@ -66,7 +66,7 @@
         "Responsable scientifique"
       ],
       "slug": "marco-saitta",
-      "photo": "/staging/images/people/ms.png"
+      "photo": "/website/staging/images/people/ms.png"
     },
     {
       "name": "Vincent Bergeaud",
@@ -78,7 +78,7 @@
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "vincent-bergeaud",
-      "photo": "/staging/images/people/NA.png"
+      "photo": "/website/staging/images/people/NA.png"
     },
     {
       "name": "Thierry Deutsch",
@@ -93,7 +93,7 @@
         "Responsable scientifique"
       ],
       "slug": "thierry-deutsch",
-      "photo": "/staging/images/people/NA.png"
+      "photo": "/website/staging/images/people/NA.png"
     },
     {
       "name": "David Rodney",
@@ -105,7 +105,7 @@
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "david-rodney",
-      "photo": "/staging/images/people/NA.png"
+      "photo": "/website/staging/images/people/NA.png"
     },
     {
       "name": "Jean-Philippe Poli",
@@ -117,7 +117,7 @@
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "jean-philippe-poli",
-      "photo": "/staging/images/people/NA.png"
+      "photo": "/website/staging/images/people/NA.png"
     },
     {
       "name": "Benjamin Arrondeau",
@@ -129,7 +129,7 @@
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "benjamin-arrondeau",
-      "photo": "/staging/images/people/NA.png"
+      "photo": "/website/staging/images/people/NA.png"
     },
     {
       "name": "Pierre-Antoine Bouttier",
@@ -141,7 +141,7 @@
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "pierre-antoine-bouttier",
-      "photo": "/staging/images/people/NA.png"
+      "photo": "/website/staging/images/people/NA.png"
     },
     {
       "name": "Adrien Bruneton",
@@ -153,7 +153,7 @@
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "adrien-bruneton",
-      "photo": "/staging/images/people/NA.png"
+      "photo": "/website/staging/images/people/NA.png"
     },
     {
       "name": "Nicolas Crouzet",
@@ -165,7 +165,7 @@
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "nicolas-crouzet",
-      "photo": "/staging/images/people/NA.png"
+      "photo": "/website/staging/images/people/NA.png"
     },
     {
       "name": "Geoffrey Daniel",
@@ -177,7 +177,7 @@
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "geoffrey-daniel",
-      "photo": "/staging/images/people/NA.png"
+      "photo": "/website/staging/images/people/NA.png"
     },
     {
       "name": "Jonathan Daubin",
@@ -189,7 +189,7 @@
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "jonathan-daubin",
-      "photo": "/staging/images/people/NA.png"
+      "photo": "/website/staging/images/people/NA.png"
     },
     {
       "name": "Nils Kash",
@@ -201,7 +201,7 @@
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "nils-kash",
-      "photo": "/staging/images/people/NA.png"
+      "photo": "/website/staging/images/people/NA.png"
     },
     {
       "name": "David Martin-Calle",
@@ -213,7 +213,7 @@
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "david-martin-calle",
-      "photo": "/staging/images/people/NA.png"
+      "photo": "/website/staging/images/people/NA.png"
     },
     {
       "name": "Lorenzo Paulatto",
@@ -225,7 +225,7 @@
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "lorenzo-paulatto",
-      "photo": "/staging/images/people/NA.png"
+      "photo": "/website/staging/images/people/NA.png"
     },
     {
       "name": "Irina Piazza",
@@ -237,7 +237,7 @@
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "irina-piazza",
-      "photo": "/staging/images/people/ip.png"
+      "photo": "/website/staging/images/people/ip.png"
     },
     {
       "name": "Dorian Rolland",
@@ -249,7 +249,7 @@
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "dorian-rolland",
-      "photo": "/staging/images/people/NA.png"
+      "photo": "/website/staging/images/people/NA.png"
     },
     {
       "name": "Martin Uhrin",
@@ -261,7 +261,7 @@
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "martin-uhrin",
-      "photo": "/staging/images/people/NA.png"
+      "photo": "/website/staging/images/people/NA.png"
     },
     {
       "name": "Aadhityan Arivazhagan",
@@ -273,7 +273,7 @@
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "aadhityan-arivazhagan",
-      "photo": "/staging/images/people/NA.png"
+      "photo": "/website/staging/images/people/NA.png"
     },
     {
       "name": "Omar Benyahya",
@@ -284,7 +284,7 @@
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "omar-benyahya",
-      "photo": "/staging/images/people/NA.png"
+      "photo": "/website/staging/images/people/NA.png"
     },
     {
       "name": "Ahmed Amrani",
@@ -296,7 +296,7 @@
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "ahmed-amrani",
-      "photo": "/staging/images/people/NA.png"
+      "photo": "/website/staging/images/people/NA.png"
     },
     {
       "name": "Arawinth Camatchy",
@@ -308,7 +308,7 @@
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "arawinth-camatchy",
-      "photo": "/staging/images/people/NA.png"
+      "photo": "/website/staging/images/people/NA.png"
     },
     {
       "name": "Imanol Setoain",
@@ -320,7 +320,7 @@
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "imanol-setoain",
-      "photo": "/staging/images/people/NA.png"
+      "photo": "/website/staging/images/people/NA.png"
     },
     {
       "name": "Nicola Vigano",
@@ -332,7 +332,7 @@
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "nicola-vigano",
-      "photo": "/staging/images/people/NA.png"
+      "photo": "/website/staging/images/people/NA.png"
     },
     {
       "name": "Cinthya Herrera",
@@ -344,7 +344,7 @@
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "cinthya-herrera",
-      "photo": "/staging/images/people/NA.png"
+      "photo": "/website/staging/images/people/NA.png"
     },
     {
       "name": "Mihai-Cosmin Marinica",
@@ -356,7 +356,7 @@
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "mihai-cosmin-marinica",
-      "photo": "/staging/images/people/NA.png"
+      "photo": "/website/staging/images/people/NA.png"
     },
     {
       "name": "Anruo Zhong",
@@ -367,7 +367,7 @@
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "anruo-zhong",
-      "photo": "/staging/images/people/NA.png"
+      "photo": "/website/staging/images/people/NA.png"
     },
     {
       "name": "Arthur France-Lanord",
@@ -379,7 +379,7 @@
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "arthur-france-lanord",
-      "photo": "/staging/images/people/NA.png"
+      "photo": "/website/staging/images/people/NA.png"
     },
     {
       "name": "Akshay Ammothum Kandy",
@@ -391,7 +391,7 @@
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "akshay-ammothum-kandy",
-      "photo": "/staging/images/people/NA.png"
+      "photo": "/website/staging/images/people/NA.png"
     },
     {
       "name": "Léo Orveillon",
@@ -403,7 +403,7 @@
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "leo-orveillon",
-      "photo": "/staging/images/people/lo.png",
+      "photo": "/website/staging/images/people/lo.png",
       "bio": "I'm an engineer working on efficient way to packages and deploy scientific codes on HPC infrastructures.",
       "links": [
         {
