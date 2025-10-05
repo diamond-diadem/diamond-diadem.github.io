@@ -5,18 +5,19 @@ first_name: François
 last_name: Willaime
 email: francois.willaime@cea.fr
 affiliation: CEA Saclay
-role: Coordonnateur projet
+role: Coordinator
 project: DIAMOND
-personnel_type: Coordonnateur
-photo: /images/people/NA.png
+personnel_type:
+- Project Coordinator
+photo: /website/staging/images/people/NA.png
 ---
 
-**Rôle :** Coordonnateur projet
+**Rôle :** Coordinator
 
 **Affiliation :** CEA Saclay
 
 **Projet :** DIAMOND
 
-**Type :** Coordonnateur
+**Type :** Project Coordinator
 
 **Email :** [francois.willaime@cea.fr](mailto:francois.willaime@cea.fr)

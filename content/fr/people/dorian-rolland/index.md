@@ -5,13 +5,13 @@ first_name: Dorian
 last_name: Rolland
 email: dorian.rolland@cea.fr
 affiliation: CEA Grenoble
-role: WP1
+role: Codes and Workflows Platform
 project: DIAMOND
 personnel_type: Scientifique
-photo: /images/people/NA.png
+photo: /website/staging/images/people/NA.png
 ---
 
-**Rôle :** WP1
+**Rôle :** Codes and Workflows Platform
 
 **Affiliation :** CEA Grenoble
 

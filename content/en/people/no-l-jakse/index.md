@@ -5,20 +5,20 @@ first_name: Noël
 last_name: Jakse
 email: noel.jakse@grenoble-inp.fr
 affiliation: Grenoble INP
-role: WP1
+role: Codes and Workflows Platform
 project: DIAMOND
 personnel_type:
-- Co-coordennateur
+- Project Coordinator
 - Responsable scientifique
-photo: /images/people/nj.png
+photo: /website/staging/images/people/nj.png
 ---
 
-**Rôle :** WP1
+**Rôle :** Codes and Workflows Platform
 
 **Affiliation :** Grenoble INP
 
 **Projet :** DIAMOND
 
-**Type :** Co-coordennateur, Responsable scientifique
+**Type :** Project Coordinator, Responsable scientifique
 
 **Email :** [noel.jakse@grenoble-inp.fr](mailto:noel.jakse@grenoble-inp.fr)

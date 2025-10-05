@@ -5,13 +5,13 @@ first_name: Cinthya
 last_name: Herrera
 email: cinthya.herreracontreras@cea.fr
 affiliation: CEA Grenoble
-role: Interface WP2 - PEPR NUMPEX
+role: Materials Database Infrastructure
 project: DIAMOND
 personnel_type: Scientifique
-photo: /images/people/NA.png
+photo: /website/staging/images/people/NA.png
 ---
 
-**Rôle :** Interface WP2 - PEPR NUMPEX
+**Rôle :** Materials Database Infrastructure
 
 **Affiliation :** CEA Grenoble
 

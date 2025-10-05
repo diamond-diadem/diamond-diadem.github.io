@@ -8,7 +8,7 @@ affiliation: SIMaP Grenoble
 role: WP1
 project: DIAMOND
 personnel_type: Scientifique
-photo: /images/people/jpam.png
+photo: /website/staging/images/people/jpam.png
 website: https://jpalastus.github.io/
 orcid: 0000-0003-3253-1220
 github: jpalastus

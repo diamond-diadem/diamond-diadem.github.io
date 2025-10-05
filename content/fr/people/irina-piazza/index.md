@@ -5,13 +5,13 @@ first_name: Irina
 last_name: Piazza
 email: irina.piazza@grenoble-inp.fr
 affiliation: SIMaP Grenoble
-role: WP3
+role: Machine Learning Interatomic Potemtials
 project: DIAMOND
 personnel_type: Scientifique
-photo: /images/people/ip.png
+photo: /website/staging/images/people/ip.png
 ---
 
-**Rôle :** WP3
+**Rôle :** Machine Learning Interatomic Potemtials
 
 **Affiliation :** SIMaP Grenoble
 

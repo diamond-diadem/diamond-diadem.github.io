@@ -5,13 +5,13 @@ first_name: Adrien
 last_name: Bruneton
 email: adrien.bruneton@cea.fr
 affiliation: CEA Saclay
-role: WP1
+role: Codes and Workflows Platform
 project: DIAMOND
 personnel_type: Scientifique
-photo: /images/people/NA.png
+photo: /website/staging/images/people/NA.png
 ---
 
-**Rôle :** WP1
+**Rôle :** Codes and Workflows Platform
 
 **Affiliation :** CEA Saclay
 

@@ -5,13 +5,13 @@ first_name: Martin
 last_name: Uhrin
 email: martin.uhrin@grenoble-inp.fr
 affiliation: SIMaP Grenoble
-role: Interface WP1-WP3
+role: Codes and Workflows Platform
 project: DIAMOND
 personnel_type: Scientifique
-photo: /images/people/NA.png
+photo: /website/staging/images/people/NA.png
 ---
 
-**Rôle :** Interface WP1-WP3
+**Rôle :** Codes and Workflows Platform
 
 **Affiliation :** SIMaP Grenoble
 

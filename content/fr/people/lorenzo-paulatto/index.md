@@ -5,13 +5,13 @@ first_name: Lorenzo
 last_name: Paulatto
 email: Lorenzo.paulatto@sorbonne-universite.fr
 affiliation: Sorbonne Université
-role: WP1
+role: Codes and Workflows Platform
 project: DIAMOND
 personnel_type: Scientifique
-photo: /images/people/NA.png
+photo: /website/staging/images/people/NA.png
 ---
 
-**Rôle :** WP1
+**Rôle :** Codes and Workflows Platform
 
 **Affiliation :** Sorbonne Université
 

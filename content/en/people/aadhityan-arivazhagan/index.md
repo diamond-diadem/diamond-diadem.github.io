@@ -5,13 +5,13 @@ first_name: Aadhityan
 last_name: Arivazhagan
 email: aadhityan.arivazhagan@sorbonne-universite.fr
 affiliation: Sorbonne Université
-role: Interface WP1-WP3
+role: Codes and Workflows Platform
 project: DIAMOND
 personnel_type: Scientifique
-photo: /images/people/NA.png
+photo: /website/staging/images/people/NA.png
 ---
 
-**Rôle :** Interface WP1-WP3
+**Rôle :** Codes and Workflows Platform
 
 **Affiliation :** Sorbonne Université
 
