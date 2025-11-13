@@ -954,7 +954,12 @@ label {
     flex-direction: column;
 }
 
-.n2p2_optimization_32core_30min_epocs_VS_threads {
-    content: url(/images/n2p2_optimization_32core_30min_epocs_VS_threads.png);
+.n2p2_benchmark_R_vs_process_log2_total_time3 {
+    content: url(/images/n2p2_benchmark_R_vs_process_log2_total_time3.png);
+    min-height: 300px;
+ }
+
+ .n2p2_throughput_vs_structures {
+    content: url(/images/n2p2_throughput_vs_structures.png);
     min-height: 300px;
  }
