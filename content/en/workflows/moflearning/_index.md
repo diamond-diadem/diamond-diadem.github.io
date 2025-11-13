@@ -1,5 +1,5 @@
 ---
-title: MOFLearning-workflow
+title: MOFLearning-AIIDA-LAMMPS-workflow
 weight: 2
 exclude_search: true
 ---
