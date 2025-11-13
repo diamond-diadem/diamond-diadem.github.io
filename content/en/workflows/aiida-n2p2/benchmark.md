@@ -4,7 +4,7 @@ linkTitle: Benchmark
 toc: false
 ---
 
-### Optimal condition to run n2p2 WF.
+### Optimal condition to run n2p2 on HPC.
 Some investigations have been carried out to determine whether n2p2 performs simple parallelization using MPI or also supports OpenMP (multi-threaded setup). It appears that the best setup for n2p2 is with `NODES=2` and `THREADS=1`. This means that n2p2 does not seem to perform multi-threaded parallelization efficiently, but rather only multi-node parallelization.
 
 Moreover, even when the number of threads is fixed to 1, the total number of training epochs (i.e., the amount of data trained) as a function of the number of nodes does not increase linearly. The linear approximation still holds up to two nodes.
