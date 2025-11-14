@@ -938,3 +938,24 @@ body:not(.has-scroll-fade) .scroll-fade {
 /* Global bottom margin for all pages */
 .diamond-content { padding-bottom: 40px; }
 
+
+
+.n2p2_benchmark_R_vs_process_log2_total_time3 {
+    content: url(/images/workflows/n2p2/n2p2_benchmark_R_vs_process_log2_colored-light.png);
+    min-height: 300px;
+ }
+@include color-mode(dark) {
+    .n2p2_benchmark_R_vs_process_log2_total_time3 {
+        content: url(/images/workflows/n2p2/n2p2_benchmark_R_vs_process_log2_colored-dark.png);
+    }
+}
+ 
+.n2p2_throughput_vs_structures {
+    content: url(/images/workflows/n2p2/n2p2_throughput_vs_structures-light.png);
+    min-height: 300px;
+ }
+ @include color-mode(dark) {
+    .n2p2_throughput_vs_structures {
+        content: url(/images/workflows/n2p2/n2p2_throughput_vs_structures-dark.png);
+    }
+ }
