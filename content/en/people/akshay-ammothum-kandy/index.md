@@ -1,22 +1,21 @@
 ---
-title: Akshay Ammothum Kandy
+title: Akshay Krishna Ammothum Kandy
 slug: akshay-ammothum-kandy
 first_name: Akshay
-last_name: Ammothum Kandy
-email: akshay.ammothum_kandy@sorbonne-universite.fr
-affiliation: Sorbonne Université
-role: Machine Learning Interatomic Potemtials
+last_name: Ammothum kandy
+email: akshaykrishnaak9@gmail.com
+affiliation: IMPMC, Sorbonne University
+role: Machine Learning Interatomic Potentials
 project: DIAMOND
 personnel_type: Scientifique
 photo: /website/staging/images/people/NA.png
+orcid: 0000-0002-9880-4482
+github: aksam432
+links:
+- label: Google Scholar
+  url: https://scholar.google.com/citations?user=iE9GGREAAAAJ&hl=sv
+- label: LinkedIn
+  url: www.linkedin.com/in/aksam432
 ---
 
-**Rôle :** Machine Learning Interatomic Potemtials
-
-**Affiliation :** Sorbonne Université
-
-**Projet :** DIAMOND
-
-**Type :** Scientifique
-
-**Email :** [akshay.ammothum_kandy@sorbonne-universite.fr](mailto:akshay.ammothum_kandy@sorbonne-universite.fr)
+I am a research engineer building databases and automated workflows for MLIPs.

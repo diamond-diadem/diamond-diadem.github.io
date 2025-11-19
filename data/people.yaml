@@ -17,7 +17,7 @@ people:
       url: https://scholar.google.com/citations?user=KtS3vY4AAAAJ
     - label: LinkedIn
       url: https://www.linkedin.com/in/jo%C3%A3o-paulo-almeida-de-mendon%C3%A7a-574598b1/
-  website: https://jpalastus.github.io/
+  website: https://jpalatus.github.io/
   orcid: 0000-0003-3253-1220
   github: jpalastus
 
@@ -53,7 +53,7 @@ people:
   last_name: Saitta
   email: marco.saitta@sorbonne-universite.fr
   affiliation: Sorbonne Université
-  role: Machine Learning Interatomic Potemtials
+  role: Machine Learning Interatomic Potentials
   project: DIAMOND
   personnel_type: 
     - Scientifique
@@ -118,16 +118,22 @@ people:
   slug: benjamin-arrondeau
   photo: /website/staging/images/people/NA.png
 
+  
 - name: Pierre-Antoine Bouttier
   first_name: Pierre-Antoine
   last_name: Bouttier
-  email: Pierre-Antoine.Bouttier@univ-grenoble-alpes.fr
-  affiliation: GRICAD Grenoble
+  email: pierre-antoine.bouttier@univ-grenoble-alpes.fr
+  affiliation: UAR GRICAD/CNRS
   role: Codes and Workflows Platform
   project: DIAMOND
   personnel_type: Scientifique
   slug: pierre-antoine-bouttier
+  bio: I am a reseach engineer specialized in software engineering and applied mathematics. I am currently the deputy director of [GRICAD](https://gricad.univ-grenoble-alpes.fr/)
   photo: /website/staging/images/people/NA.png
+  links:
+    - label: LinkedIn
+      url: https://www.linkedin.com/in/pierre-antoine-bouttier/ 
+ 
 
 - name: Adrien Bruneton
   first_name: Adrien
@@ -173,16 +179,21 @@ people:
   slug: jonathan-daubin
   photo: /website/staging/images/people/NA.png
 
-- name: Nils Kash
+
+- name: Nils Kasch
   first_name: Nils
-  last_name: Kash
-  email: nils.kash@cea.fr
+  last_name: Kasch
+  email: nils.kasch@cea.fr
   affiliation: CEA Saclay
   role: Codes and Workflows Platform
   project: DIAMOND
   personnel_type: Scientifique
-  slug: nils-kash
+  slug: nils-kasch
+  bio: I am an engineer working on parallel material simulation codes and their deployment on HPC.
   photo: /website/staging/images/people/NA.png
+  links:
+    - label: LinkedIn
+      url: www.linkedin.com/in/nils-kasch
 
 - name: David Martin-Calle
   first_name: David
@@ -205,17 +216,24 @@ people:
   personnel_type: Scientifique
   slug: lorenzo-paulatto
   photo: /website/staging/images/people/NA.png
-
+  
 - name: Irina Piazza
   first_name: Irina
   last_name: Piazza
   email: irina.piazza@grenoble-inp.fr
   affiliation: SIMaP Grenoble
-  role: Machine Learning Interatomic Potemtials
+  role: Machine Learning Interatomic Potentials
   project: DIAMOND
   personnel_type: Scientifique
   slug: irina-piazza
-  photo: /website/staging/images/people/ip.png
+  photo: /website/staging/images/people/irina.png
+  bio: I am a reseach engineer buiding automated workflows for machine learning interatomic potential in HCP and I am integrating exsting MLIP workflow inside the DIAMOND platform. #Markdown, idealy short
+  links:
+    - label: Google Scholar
+      url: https://scholar.google.com/citations?user=BlPP-x4AAAAJ&hl=fr&oi=ao
+    - label: LinkedIn
+      url: https://www.linkedin.com/in/irina-piazza/
+  github: irina-piazza
 
 - name: Dorian Rolland
   first_name: Dorian
@@ -304,6 +322,7 @@ people:
   slug: nicola-vigano
   photo: /website/staging/images/people/NA.png
 
+  
 - name: Cinthya Herrera
   first_name: Cinthya
   last_name: Herrera
@@ -313,14 +332,21 @@ people:
   project: DIAMOND
   personnel_type: Scientifique
   slug: cinthya-herrera
-  photo: /website/staging/images/people/NA.png
+  photo: /website/staging/images/people/ch.png
+  bio: I’m a research engineer working on standardizing databases and workflows, I use ontologies to make data and tools speak the same language.
+  links:
+    - label: LinkedIn
+      url: https://www.linkedin.com/in/cinthyaherrera/
+  orcid: 0000-0001-6405-0785
+  github: cnherrera
+
 
 - name: Mihai-Cosmin Marinica
   first_name: Mihai-Cosmin
   last_name: Marinica
   email: cosmin.marinica@cea.fr
   affiliation: CEA Saclay
-  role: Machine Learning Interatomic Potemtials
+  role: Machine Learning Interatomic Potentials
   project: DIAMOND
   personnel_type: Scientifique
   slug: mihai-cosmin-marinica
@@ -330,7 +356,7 @@ people:
   first_name: Anruo
   last_name: Zhong
   email: Anruo.ZHONG@cea.fr
-  role: Machine Learning Interatomic Potemtials
+  role: Machine Learning Interatomic Potentials
   project: DIAMOND
   personnel_type: Scientifique
   slug: anruo-zhong
@@ -341,22 +367,30 @@ people:
   last_name: France-Lanord
   email: arthur.france-lanord@sorbonne-universite.fr
   affiliation: Sorbonne Université
-  role: Machine Learning Interatomic Potemtials
+  role: Machine Learning Interatomic Potentials
   project: DIAMOND
   personnel_type: Scientifique
   slug: arthur-france-lanord
   photo: /website/staging/images/people/NA.png
-
-- name: Akshay Ammothum Kandy
+  
+- name: Akshay Krishna Ammothum Kandy
   first_name: Akshay
-  last_name: Ammothum Kandy
-  email: akshay.ammothum_kandy@sorbonne-universite.fr
-  affiliation: Sorbonne Université
-  role: Machine Learning Interatomic Potemtials
+  last_name: Ammothum kandy  
+  email: akshaykrishnaak9@gmail.com
+  affiliation: IMPMC, Sorbonne University
+  role: Machine Learning Interatomic Potentials
   project: DIAMOND
   personnel_type: Scientifique
   slug: akshay-ammothum-kandy
   photo: /website/staging/images/people/NA.png
+  bio: I am a research engineer building databases and automated workflows for MLIPs. #Markdown, idealy short
+  links:
+    - label: Google Scholar
+      url: https://scholar.google.com/citations?user=iE9GGREAAAAJ&hl=sv
+    - label: LinkedIn
+      url: www.linkedin.com/in/aksam432
+  orcid: 0000-0002-9880-4482
+  github: aksam432
   
 - name: Léo Orveillon
   first_name: Léo
@@ -373,3 +407,4 @@ people:
     - label: LinkedIn
       url: https://www.linkedin.com/in/leo-orveillon/
   github: periodLeo
+  

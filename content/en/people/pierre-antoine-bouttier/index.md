@@ -3,20 +3,15 @@ title: Pierre-Antoine Bouttier
 slug: pierre-antoine-bouttier
 first_name: Pierre-Antoine
 last_name: Bouttier
-email: Pierre-Antoine.Bouttier@univ-grenoble-alpes.fr
-affiliation: GRICAD Grenoble
+email: pierre-antoine.bouttier@univ-grenoble-alpes.fr
+affiliation: UAR GRICAD/CNRS
 role: Codes and Workflows Platform
 project: DIAMOND
 personnel_type: Scientifique
 photo: /website/staging/images/people/NA.png
+links:
+- label: LinkedIn
+  url: https://www.linkedin.com/in/pierre-antoine-bouttier/
 ---
 
-**Rôle :** Codes and Workflows Platform
-
-**Affiliation :** GRICAD Grenoble
-
-**Projet :** DIAMOND
-
-**Type :** Scientifique
-
-**Email :** [Pierre-Antoine.Bouttier@univ-grenoble-alpes.fr](mailto:Pierre-Antoine.Bouttier@univ-grenoble-alpes.fr)
+I am a reseach engineer specialized in software engineering and applied mathematics. I am currently the deputy director of [GRICAD](https://gricad.univ-grenoble-alpes.fr/)

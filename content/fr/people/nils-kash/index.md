@@ -1,22 +1,17 @@
 ---
-title: Nils Kash
-slug: nils-kash
+title: Nils Kasch
+slug: nils-kasch
 first_name: Nils
-last_name: Kash
-email: nils.kash@cea.fr
+last_name: Kasch
+email: nils.kasch@cea.fr
 affiliation: CEA Saclay
 role: Codes and Workflows Platform
 project: DIAMOND
 personnel_type: Scientifique
 photo: /website/staging/images/people/NA.png
+links:
+- label: LinkedIn
+  url: www.linkedin.com/in/nils-kasch
 ---
 
-**Rôle :** Codes and Workflows Platform
-
-**Affiliation :** CEA Saclay
-
-**Projet :** DIAMOND
-
-**Type :** Scientifique
-
-**Email :** [nils.kash@cea.fr](mailto:nils.kash@cea.fr)
+Je suis ingénieur et je travaille sur des codes de simulation parallèle de matériaux et leur déploiement sur HPC.

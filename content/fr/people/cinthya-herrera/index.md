@@ -8,15 +8,12 @@ affiliation: CEA Grenoble
 role: Materials Database Infrastructure
 project: DIAMOND
 personnel_type: Scientifique
-photo: /website/staging/images/people/NA.png
+photo: /website/staging/images/people/ch.png
+orcid: 0000-0001-6405-0785
+github: cnherrera
+links:
+- label: LinkedIn
+  url: https://www.linkedin.com/in/cinthyaherrera/
 ---
 
-**Rôle :** Materials Database Infrastructure
-
-**Affiliation :** CEA Grenoble
-
-**Projet :** DIAMOND
-
-**Type :** Scientifique
-
-**Email :** [cinthya.herreracontreras@cea.fr](mailto:cinthya.herreracontreras@cea.fr)
+Je suis ingénieure de recherche et je travaille à la normalisation des bases de données et des flux de travail. J'utilise des ontologies pour que les données et les outils parlent le même langage.

@@ -6,7 +6,7 @@
       "last_name": "Almeida de Mendonca",
       "email": "joao-paulo.almeida-de-mendonca@grenoble-inp.fr",
       "affiliation": "SIMaP Grenoble",
-      "role": "WP1",
+      "role": "Codes and Workflows Platform",
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "joao-paulo-almeida",
@@ -22,7 +22,7 @@
           "url": "https://www.linkedin.com/in/jo%C3%A3o-paulo-almeida-de-mendon%C3%A7a-574598b1/"
         }
       ],
-      "website": "https://jpalastus.github.io/",
+      "website": "https://jpalatus.github.io/",
       "orcid": "0000-0003-3253-1220",
       "github": "jpalastus"
     },
@@ -32,10 +32,10 @@
       "last_name": "Jakse",
       "email": "noel.jakse@grenoble-inp.fr",
       "affiliation": "Grenoble INP",
-      "role": "WP1",
+      "role": "Codes and Workflows Platform",
       "project": "DIAMOND",
       "personnel_type": [
-        "Co-coordennateur",
+        "Project Coordinator",
         "Responsable scientifique"
       ],
       "slug": "no-l-jakse",
@@ -47,9 +47,11 @@
       "last_name": "Willaime",
       "email": "francois.willaime@cea.fr",
       "affiliation": "CEA Saclay",
-      "role": "Coordonnateur projet",
+      "role": "Coordinator",
       "project": "DIAMOND",
-      "personnel_type": "Coordonnateur",
+      "personnel_type": [
+        "Project Coordinator"
+      ],
       "slug": "fran-ois-willaime",
       "photo": "/website/staging/images/people/NA.png"
     },
@@ -59,7 +61,7 @@
       "last_name": "Saitta",
       "email": "marco.saitta@sorbonne-universite.fr",
       "affiliation": "Sorbonne Université",
-      "role": "WP3",
+      "role": "Machine Learning Interatomic Potentials",
       "project": "DIAMOND",
       "personnel_type": [
         "Scientifique",
@@ -74,7 +76,7 @@
       "last_name": "Bergeaud",
       "email": "vincent.bergeaud@cea.fr",
       "affiliation": "CEA Saclay",
-      "role": "WP2",
+      "role": "Materials Database Infrastructure",
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "vincent-bergeaud",
@@ -86,7 +88,7 @@
       "last_name": "Deutsch",
       "email": "thierry.deutsch@cea.fr",
       "affiliation": "CEA Grenoble",
-      "role": "WP2",
+      "role": "Materials Database Infrastructure",
       "project": "DIAMOND",
       "personnel_type": [
         "Scientifique",
@@ -101,7 +103,7 @@
       "last_name": "Rodney",
       "email": "david.rodney@univ-lyon1.fr",
       "affiliation": "ILM Lyon",
-      "role": "WP1",
+      "role": "Codes and Workflows Platform",
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "david-rodney",
@@ -113,7 +115,7 @@
       "last_name": "Poli",
       "email": "jean-philippe.poli@cea.fr",
       "affiliation": "CEA Saclay",
-      "role": "WP2",
+      "role": "Materials Database Infrastructure",
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "jean-philippe-poli",
@@ -125,7 +127,7 @@
       "last_name": "Arrondeau",
       "email": "benjamin.arrondeau@univ-grenoble-alpes.fr",
       "affiliation": "GRICAD Grenoble",
-      "role": "WP1",
+      "role": "Codes and Workflows Platform",
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "benjamin-arrondeau",
@@ -135,13 +137,20 @@
       "name": "Pierre-Antoine Bouttier",
       "first_name": "Pierre-Antoine",
       "last_name": "Bouttier",
-      "email": "Pierre-Antoine.Bouttier@univ-grenoble-alpes.fr",
-      "affiliation": "GRICAD Grenoble",
-      "role": "WP1",
+      "email": "pierre-antoine.bouttier@univ-grenoble-alpes.fr",
+      "affiliation": "UAR GRICAD/CNRS",
+      "role": "Codes and Workflows Platform",
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "pierre-antoine-bouttier",
-      "photo": "/website/staging/images/people/NA.png"
+      "bio": "I am a reseach engineer specialized in software engineering and applied mathematics. I am currently the deputy director of [GRICAD](https://gricad.univ-grenoble-alpes.fr/)",
+      "photo": "/website/staging/images/people/NA.png",
+      "links": [
+        {
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/in/pierre-antoine-bouttier/"
+        }
+      ]
     },
     {
       "name": "Adrien Bruneton",
@@ -149,7 +158,7 @@
       "last_name": "Bruneton",
       "email": "adrien.bruneton@cea.fr",
       "affiliation": "CEA Saclay",
-      "role": "WP1",
+      "role": "Codes and Workflows Platform",
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "adrien-bruneton",
@@ -161,7 +170,7 @@
       "last_name": "Crouzet",
       "email": "nicolas.crouzet@cea.fr",
       "affiliation": "CEA Saclay",
-      "role": "WP1",
+      "role": "Codes and Workflows Platform",
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "nicolas-crouzet",
@@ -173,7 +182,7 @@
       "last_name": "Daniel",
       "email": "geoffrey.daniel@cea.fr",
       "affiliation": "CEA Saclay",
-      "role": "WP1",
+      "role": "Codes and Workflows Platform",
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "geoffrey-daniel",
@@ -185,23 +194,30 @@
       "last_name": "Daubin",
       "email": "jonathan.daubin@cea.fr",
       "affiliation": "CEA Saclay",
-      "role": "WP1",
+      "role": "Codes and Workflows Platform",
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "jonathan-daubin",
       "photo": "/website/staging/images/people/NA.png"
     },
     {
-      "name": "Nils Kash",
+      "name": "Nils Kasch",
       "first_name": "Nils",
-      "last_name": "Kash",
-      "email": "nils.kash@cea.fr",
+      "last_name": "Kasch",
+      "email": "nils.kasch@cea.fr",
       "affiliation": "CEA Saclay",
-      "role": "WP1",
+      "role": "Codes and Workflows Platform",
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
-      "slug": "nils-kash",
-      "photo": "/website/staging/images/people/NA.png"
+      "slug": "nils-kasch",
+      "bio": "I am an engineer working on parallel material simulation codes and their deployment on HPC.",
+      "photo": "/website/staging/images/people/NA.png",
+      "links": [
+        {
+          "label": "LinkedIn",
+          "url": "www.linkedin.com/in/nils-kasch"
+        }
+      ]
     },
     {
       "name": "David Martin-Calle",
@@ -209,7 +225,7 @@
       "last_name": "Martin-Calle",
       "email": "david.martin-calle@univ-lyon1.fr",
       "affiliation": "ILM Lyon",
-      "role": "WP1",
+      "role": "Codes and Workflows Platform",
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "david-martin-calle",
@@ -221,7 +237,7 @@
       "last_name": "Paulatto",
       "email": "Lorenzo.paulatto@sorbonne-universite.fr",
       "affiliation": "Sorbonne Université",
-      "role": "WP1",
+      "role": "Codes and Workflows Platform",
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "lorenzo-paulatto",
@@ -233,11 +249,23 @@
       "last_name": "Piazza",
       "email": "irina.piazza@grenoble-inp.fr",
       "affiliation": "SIMaP Grenoble",
-      "role": "WP3",
+      "role": "Machine Learning Interatomic Potentials",
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "irina-piazza",
-      "photo": "/website/staging/images/people/ip.png"
+      "photo": "/website/staging/images/people/irina.png",
+      "bio": "I am a reseach engineer buiding automated workflows for machine learning interatomic potential in HCP and I am integrating exsting MLIP workflow inside the DIAMOND platform.",
+      "links": [
+        {
+          "label": "Google Scholar",
+          "url": "https://scholar.google.com/citations?user=BlPP-x4AAAAJ&hl=fr&oi=ao"
+        },
+        {
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/in/irina-piazza/"
+        }
+      ],
+      "github": "irina-piazza"
     },
     {
       "name": "Dorian Rolland",
@@ -245,7 +273,7 @@
       "last_name": "Rolland",
       "email": "dorian.rolland@cea.fr",
       "affiliation": "CEA Grenoble",
-      "role": "WP1",
+      "role": "Codes and Workflows Platform",
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "dorian-rolland",
@@ -257,7 +285,7 @@
       "last_name": "Uhrin",
       "email": "martin.uhrin@grenoble-inp.fr",
       "affiliation": "SIMaP Grenoble",
-      "role": "Interface WP1-WP3",
+      "role": "Codes and Workflows Platform",
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "martin-uhrin",
@@ -269,7 +297,7 @@
       "last_name": "Arivazhagan",
       "email": "aadhityan.arivazhagan@sorbonne-universite.fr",
       "affiliation": "Sorbonne Université",
-      "role": "Interface WP1-WP3",
+      "role": "Codes and Workflows Platform",
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "aadhityan-arivazhagan",
@@ -292,7 +320,7 @@
       "last_name": "Amrani",
       "email": "ahmed.amrani@cea.fr",
       "affiliation": "CEA Saclay",
-      "role": "WP2",
+      "role": "Materials Database Infrastructure",
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "ahmed-amrani",
@@ -304,7 +332,7 @@
       "last_name": "Camatchy",
       "email": "arawinth.camatchy@cea.fr",
       "affiliation": "CEA Grenoble",
-      "role": "WP2",
+      "role": "Materials Database Infrastructure",
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "arawinth-camatchy",
@@ -316,7 +344,7 @@
       "last_name": "Setoain",
       "email": "imanol.setoain@cea.fr",
       "affiliation": "CEA Saclay",
-      "role": "WP2",
+      "role": "Materials Database Infrastructure",
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "imanol-setoain",
@@ -328,7 +356,7 @@
       "last_name": "Vigano",
       "email": "nicola.vigano@cea.fr",
       "affiliation": "CEA Grenoble",
-      "role": "WP2",
+      "role": "Materials Database Infrastructure",
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "nicola-vigano",
@@ -340,11 +368,20 @@
       "last_name": "Herrera",
       "email": "cinthya.herreracontreras@cea.fr",
       "affiliation": "CEA Grenoble",
-      "role": "Interface WP2 - PEPR NUMPEX",
+      "role": "Materials Database Infrastructure",
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "cinthya-herrera",
-      "photo": "/website/staging/images/people/NA.png"
+      "photo": "/website/staging/images/people/ch.png",
+      "bio": "I’m a research engineer working on standardizing databases and workflows, I use ontologies to make data and tools speak the same language.",
+      "links": [
+        {
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/in/cinthyaherrera/"
+        }
+      ],
+      "orcid": "0000-0001-6405-0785",
+      "github": "cnherrera"
     },
     {
       "name": "Mihai-Cosmin Marinica",
@@ -352,7 +389,7 @@
       "last_name": "Marinica",
       "email": "cosmin.marinica@cea.fr",
       "affiliation": "CEA Saclay",
-      "role": "WP3",
+      "role": "Machine Learning Interatomic Potentials",
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "mihai-cosmin-marinica",
@@ -363,7 +400,7 @@
       "first_name": "Anruo",
       "last_name": "Zhong",
       "email": "Anruo.ZHONG@cea.fr",
-      "role": "WP3",
+      "role": "Machine Learning Interatomic Potentials",
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "anruo-zhong",
@@ -375,23 +412,36 @@
       "last_name": "France-Lanord",
       "email": "arthur.france-lanord@sorbonne-universite.fr",
       "affiliation": "Sorbonne Université",
-      "role": "Interface WP1-WP3",
+      "role": "Machine Learning Interatomic Potentials",
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "arthur-france-lanord",
       "photo": "/website/staging/images/people/NA.png"
     },
     {
-      "name": "Akshay Ammothum Kandy",
+      "name": "Akshay Krishna Ammothum Kandy",
       "first_name": "Akshay",
-      "last_name": "Ammothum Kandy",
-      "email": "akshay.ammothum_kandy@sorbonne-universite.fr",
-      "affiliation": "Sorbonne Université",
-      "role": "Interface WP1-WP3",
+      "last_name": "Ammothum kandy",
+      "email": "akshaykrishnaak9@gmail.com",
+      "affiliation": "IMPMC, Sorbonne University",
+      "role": "Machine Learning Interatomic Potentials",
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "akshay-ammothum-kandy",
-      "photo": "/website/staging/images/people/NA.png"
+      "photo": "/website/staging/images/people/NA.png",
+      "bio": "I am a research engineer building databases and automated workflows for MLIPs.",
+      "links": [
+        {
+          "label": "Google Scholar",
+          "url": "https://scholar.google.com/citations?user=iE9GGREAAAAJ&hl=sv"
+        },
+        {
+          "label": "LinkedIn",
+          "url": "www.linkedin.com/in/aksam432"
+        }
+      ],
+      "orcid": "0000-0002-9880-4482",
+      "github": "aksam432"
     },
     {
       "name": "Léo Orveillon",
@@ -399,12 +449,12 @@
       "last_name": "Orveillon",
       "email": "leo.orveillon@univ-grenoble-alpes.fr",
       "affiliation": "GRICAD Grenoble",
-      "role": "WP1",
+      "role": "Codes and Workflows Platform",
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "leo-orveillon",
       "photo": "/website/staging/images/people/lo.png",
-      "bio": "I'm an engineer working on efficient way to packages and deploy scientific codes on HPC infrastructures.",
+      "bio": "I am an engineer working on efficient way to packages and deploy scientific codes on HPC infrastructures.",
       "links": [
         {
           "label": "LinkedIn",
