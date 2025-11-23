@@ -740,6 +740,18 @@ tr {
 
 // // // <<< simple-adsorption-workflow images <<< // // //
 
+// // // >>> aiida-lammps diffusion images >>> // // //
+
+.diffusion-kr-in-cubtc {
+    content: url(/images/movie_diffusion_krypton_DOTSOV_480p.gif);
+ }
+
+.diffusion-kr-ovito {
+    content: url(/images/0000[Ag][sra]3[ASR]1_steps_30.gif);
+ }
+
+// // // <<< aiida-lammps diffusion images <<< // // //
+
 hr {
     border: solid 1px black;
 }
