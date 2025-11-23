@@ -1,5 +1,5 @@
 ---
 title: MOFLearning-AIIDA-LAMMPS-workflow
-weight: 2
+weight: 4
 exclude_search: true
 ---

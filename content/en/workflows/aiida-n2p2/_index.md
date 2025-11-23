@@ -1,5 +1,5 @@
 ---
 title: n2p2-workflow
-weight: 2
+weight: 3
 exclude_search: true
 ---
