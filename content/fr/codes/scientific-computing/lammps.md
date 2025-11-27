@@ -14,7 +14,7 @@ weight: 1
 ### Récupérez l'image Apptainer
 
 ```bash
-apptainer pull lammps.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/lammps.sif:latest
+apptainer pull lammps.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/lammps-from-guix.sif:latest
 ```
 
 <div align="justify">
