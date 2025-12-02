@@ -26,7 +26,7 @@ In summary, well-designed workflows not only save time but also reduce the risk 
   In mlip we have n2p2-workflow
   - [Description](/en/workflows/aiida-n2p2/description)
   - [Installation](/en/workflows/aiida-n2p2/installation)
-  - [Benchmark](/en/workflows/aiida-n2p2/benchmark)
+  <!-- - [Benchmark](/en/workflows/aiida-n2p2/benchmark) -->
 
 - ### MOFLearning-AIIDA-LAMMPS-workflow
   - [Description](/en/workflows/aiida-diffusion-wf/description)
