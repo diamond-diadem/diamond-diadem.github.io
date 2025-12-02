@@ -29,7 +29,7 @@ Pour résumer, des workflows bien conçus permettent non seulement de gagner du 
   In mlip we have n2p2-workflow
   - [Description](/workflows/aiida-n2p2/description_fr)
   - [Installation](/workflows/aiida-n2p2/installation_fr)
-  - [Benchmark](/workflows/aiida-n2p2/benchmark_fr)
+  <!-- - [Benchmark](/workflows/aiida-n2p2/benchmark_fr) -->
 - ### MOFLearning-AIIDA-LAMMPS-workflow
   - [Description](/workflows/aiida-diffusion-wf/description)
   - [Installation](/workflows/aiida-diffusion-wf/installation)
