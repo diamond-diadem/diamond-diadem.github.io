@@ -12,7 +12,7 @@ draft: false
 weight: 40
 categories: []
 tags: []
-# contributors: []
+contributors: []
 pinned: false
 homepage: true
 seo:
