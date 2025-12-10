@@ -15,21 +15,25 @@ For more in-depth contributions, with the ability to test them before pushing, i
 
 ### Prerequisites
 
-- **Node.js** - `v20.11.0` or higher — run `node -v` to check.
-- **Hugo extended** - `v0.140.0` — run `hugo version` to check.
+- **Node.js** - `v25.2.1` — run `node -v` to check.
+- **Hugo extended** - `v0.152.2` — run `hugo version` to check.
 
 ### Installing Prerequisites: for Debian-based systems (Ubuntu, ...)
 
 - #### Node.js
 
 ```bash
-sudo apt update && sudo apt upgrade
-sudo apt install -y curl software-properties-common
-curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
-sudo apt install -y nodejs
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+```
+Restart terminal, then:
+
+```bash
+nvm install node
+nvm use node
+npm install -g npm
 ```
 
-Then verify the installation:
+Verify the installation:
 
 ```bash
 node -v
@@ -38,23 +42,13 @@ npm -v
 
 - #### Hugo extended
 
-Ensure your system is up-to-date:
+Download and install version 0.152.2 for Linux amd64
 
 ```bash
-sudo apt update && sudo apt upgrade
-```
-
-- Go to the [Hugo releases page](https://github.com/gohugoio/hugo/releases) to check the different releases of `v0.140.0`.
-- Directly download the `.deb` package corresponding to your system using `wget`. For example:
-
-```bash
-wget https://github.com/gohugoio/hugo/releases/download/v0.140.0/hugo_extended_0.140.0_linux-amd64.deb
-```
-
-Install the downloaded package:
-
-```bash
-sudo apt install ./hugo_extended_0.140.0_linux-amd64.deb
+wget https://github.com/gohugoio/hugo/releases/download/v0.152.2/hugo_extended_0.152.2_linux-amd64.tar.gz
+tar -xzf hugo_extended_0.152.2_linux-amd64.tar.gz
+sudo mv hugo /usr/local/bin/hugo
+sudo chmod +x /usr/local/bin/hugo
 ```
 
 Verify the installation:
