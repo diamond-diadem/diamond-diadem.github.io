@@ -18,7 +18,7 @@ For more in-depth contributions, with the ability to test them before pushing, i
 - **Node.js** - `v25.2.1` — run `node -v` to check.
 - **Hugo extended** - `v0.152.2` — run `hugo version` to check.
 
-### Installing Prerequisites: for Debian-based systems (Ubuntu, ...)
+### Installing Prerequisites for Linux
 
 - #### Node.js
 
