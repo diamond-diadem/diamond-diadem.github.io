@@ -253,4 +253,4 @@ pre-commit install  # install pre-commit hooks
 pytest -v  # discover and run all tests
 ```
 
-Consultez le [developer guide](http://aiida-n2p2.readthedocs.io/en/latest/developer_guide/index.html) pour plus d’informations.
+<!-- Consultez le [developer guide](http://aiida-n2p2.readthedocs.io/en/latest/developer_guide/index.html) pour plus d’informations. -->
