@@ -1,48 +1,3 @@
-# mounts:
-#   - source: node_modules/@thulite/doks-core/archetypes
-#     target: archetypes
-#   - source: archetypes
-#     target: archetypes
-#   - source: node_modules/@thulite/core/assets
-#     target: assets
-#   - source: node_modules/@thulite/images/assets
-#     target: assets
-#   - source: node_modules/@thulite/doks-core/assets
-#     target: assets
-#   - source: node_modules/@tabler/icons/icons
-#     target: assets/svgs/all-svg-icons/tabler-icons
-#   - source: assets
-#     target: assets
-#   # - source: assets/js
-#   #   target: assets/js
-#   - source: assets/scss
-#     target: assets/scss
-#   - source: node_modules/@thulite/doks-core/data
-#     target: data
-#   - source: data
-#     target: data
-#   - source: node_modules/@thulite/doks-core/i18n
-#     target: i18n
-#   - source: i18n
-#     target: i18n
-#   - source: node_modules/@thulite/core/layouts
-#     target: layouts
-#   - source: node_modules/@thulite/seo/layouts
-#     target: layouts
-#   - source: node_modules/@thulite/images/layouts
-#     target: layouts
-#   - source: node_modules/@thulite/doks-core/layouts
-#     target: layouts
-#     excludeFiles: /partials/footer/to-top.html
-#   - source: node_modules/@thulite/inline-svg/layouts
-#     target: layouts
-#   - source: layouts
-#     target: layouts
-#   - source: node_modules/@thulite/doks-core/static
-#     target: static
-#   - source: static
-#     target: static
-
 # Module Configuration File
 #
 # This file configures Hugo module settings, particularly module mounts which
@@ -53,7 +8,7 @@
 # from different locations.
 
 mounts:
-  # content
+  # # content
   # - source: content
   #   target: content
 
@@ -68,7 +23,7 @@ mounts:
   
   - source: node_modules/@thulite/doks-core/layouts
     target: layouts
-    excludeFiles: [home.html, _partials/header/header.html, about/*, _partials/footer/to-top.html, _partials/main/blog-meta.html, _shortcodes/link-card.html]
+    excludeFiles: [home.html, _partials/header/header.html, about/*, _partials/footer/to-top.html, _partials/main/blog-meta.html, _shortcodes/link-card.html, _partials/footer/footer.html]
 
   - source: node_modules/@thulite/core/layouts
     target: layouts
