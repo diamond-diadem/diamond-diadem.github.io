@@ -59,9 +59,6 @@ mounts:
   - source: node_modules/@thulite/doks-core/assets
     target: assets
 
-  - source: node_modules/@tabler/icons/icons
-    target: assets/svgs/tabler-icons
-
   - source: node_modules/@thulite/images/assets
     target: assets
   
