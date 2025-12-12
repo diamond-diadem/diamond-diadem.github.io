@@ -3,6 +3,13 @@ title: CONTAINERISED CODES
 linkTitle: Home
 tablerIcon: "tabler-icons/outline/home"
 layout: codes-home
+seo:
+  keywords:
+    - containerised scientific codes
+    - DIAMOND codes
+    - Apptainer images
+    - HPC workflow library
+    - materials simulation software
 ---
 
 <!-- The layout: codes-home.html loads the three parts of this (long) markdown file, to be found in the same folder as this file: part-1.md part-2.md part-3-md -->
