@@ -1,6 +1,13 @@
 ---
 title: À propos des conteneurs
 linkTitle: Conteneurs
+seo:
+  keywords:
+    - conteneurs scientifiques
+    - environnements HPC portables
+    - simulations reproductibles
+    - stratégie DIAMOND
+    - Apptainer et Guix
 ---
 
 <h2 class="about-lead text-center">Environnements légers et isolés incluant tous les outils nécessaires pour exécuter des applications. Ils sont devenus incontournables dans le domaine de l'informatique en raison de leur flexibilité et de leur efficacité.</h2>

@@ -1,0 +1,41 @@
+{{- $shouldSkip := or (.Param "exclude_search") (.Param "hidden") }}
+{{- if not $shouldSkip }}
+  {{- $keywords := slice }}
+  {{- $source := false }}
+  {{- with .Params.seo }}
+    {{- $source = .keywords }}
+  {{- end }}
+  {{- if not $source }}
+    {{- $source = .Params.keywords }}
+  {{- end }}
+  {{- if not $source }}
+    {{- $source = site.Params.seo.keywords }}
+  {{- end }}
+  {{- if $source }}
+    {{- if reflect.IsSlice $source }}
+      {{- $keywords = $source }}
+    {{- else }}
+      {{- $keywords = split (printf "%s" $source) "," }}
+    {{- end }}
+  {{- end }}
+  {{- $clean := slice }}
+  {{- range $keywords }}
+    {{- $value := printf "%v" . }}
+    {{- $value = strings.TrimSpace $value }}
+    {{- if $value }}
+      {{- $clean = $clean | append $value }}
+    {{- end }}
+  {{- end }}
+  {{- if gt (len $clean) 0 }}
+    {{- $content := "" }}
+    {{- range $i, $kw := $clean }}
+      {{- $escaped := htmlEscape $kw }}
+      {{- if $i }}
+        {{- $content = printf "%s, %s" $content $escaped }}
+      {{- else }}
+        {{- $content = printf "%s" $escaped }}
+      {{- end }}
+    {{- end }}
+    <meta name="keywords" content="{{ $content }}">
+  {{- end }}
+{{- end }}

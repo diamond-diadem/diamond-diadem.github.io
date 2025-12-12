@@ -1,5 +1,12 @@
 ---
 title: Contactez-nous
+seo:
+  keywords:
+    - contact DIAMOND
+    - support plateforme
+    - assistance conteneurs
+    - aide documentation
+    - coordination des données
 ---
 
 <div class= "row text-center justify-content-center">

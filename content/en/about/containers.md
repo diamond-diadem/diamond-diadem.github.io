@@ -1,6 +1,13 @@
 ---
 title: About Containers
 linkTitle: Containers
+seo:
+  keywords:
+    - scientific containers
+    - portable HPC environments
+    - reproducible simulations
+    - DIAMOND containers
+    - Apptainer
 ---
 
 <h2 class="about-lead text-center">Lightweight, isolated environments that contain all the tools needed to run applications. They have become essential in the field of computing due to their flexibility and efficiency.</h2>

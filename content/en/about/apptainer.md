@@ -1,6 +1,13 @@
 ---
 title: About Apptainer
 linkTitle: Apptainer
+seo:
+  keywords:
+    - Apptainer containers
+    - Singularity HPC
+    - scientific reproducibility
+    - high-performance computing containers
+    - containerization
 ---
 
 <h2 class="about-lead text-center">Apptainer (formerly Singularity) is a container creation and management solution geared towards high-performance computing. By offering containers that package both a software tool and all necessary external dependencies for its application, it ensures their portability and reproducibility.</h2>
