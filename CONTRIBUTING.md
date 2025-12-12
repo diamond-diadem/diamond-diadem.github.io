@@ -103,3 +103,17 @@ Add this code in `assets/scss/_custom.scss`:
 ```
 
 This ensures the image automatically adapts to the user's chosen theme.
+
+## Codes section
+
+### Generate a new code page
+
+Use the interactive generator to scaffold code pages that follow the standard layout used under `content/<lang>/codes/*`.
+
+1. Run `npm run new:code`.
+2. Answer the prompts: category (`scientific-computing` or `visualisation`) via `s`/`v`, official website and documentation URLs, apptainer filename on the container registry, and a description of the code in both English and French. Multiline answers end with a single `.` line.
+3. The tool  refreshes the Codes section landing page table/selects automatically.
+
+Undo the most recent run with `npm run new:code -- --undo`.
+
+Custom logos/icons are to be added manually; in practice this task is generally handled by the website administrator after your Markdown changes are done.
