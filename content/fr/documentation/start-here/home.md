@@ -3,6 +3,13 @@ title: Bienvenue sur la documentation utilisateur DIAMOND
 linkTitle: Accueil
 toc: false
 weight: 1
+seo:
+  keywords:
+    - documentation DIAMOND
+    - aide utilisateurs
+    - tutoriels Apptainer
+    - guides Guix
+    - aide conteneurs scientifiques
 ---
 
 {{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
