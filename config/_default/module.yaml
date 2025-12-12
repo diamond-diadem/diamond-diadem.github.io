@@ -30,7 +30,6 @@ mounts:
 
   - source: node_modules/@thulite/seo/layouts
     target: layouts
-    excludeFiles: [_partials/seo/keywords.html, _partials/seo/_all.html]
 
   - source: node_modules/@thulite/images/layouts
     target: layouts
