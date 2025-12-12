@@ -2,11 +2,8 @@
 title: About Guix
 linkTitle: Guix
 seo:
-  keywords:
-    - GNU Guix packages
-    - HPC package manager
-    - DIAMOND tooling distribution
-    - scientific reproducibility
+  description: GNU Guix delivers reproducible HPC software stacks for DIAMOND, providing
+    a dependable package manager for scientific tooling distribution.
 ---
 
 <div align="justify">

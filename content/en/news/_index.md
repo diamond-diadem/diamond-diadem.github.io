@@ -4,10 +4,6 @@ cascade:
   type: news
 summary: Homepage for events and news related to the DIAMOND project
 seo:
-  keywords:
-    - DIAMOND news
-    - materials events
-    - platform updates
-    - workshop announcements
-    - research community highlights
+  description: Follow DIAMOND news for materials events, platform updates, workshop announcements,
+    and research community highlights.
 ---
