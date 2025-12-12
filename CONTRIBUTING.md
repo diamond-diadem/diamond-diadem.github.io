@@ -1,39 +1,91 @@
 
 # Contributing to the DIAMOND website
 
+## Local Installation (Development Server), for contributors
+
+### Occasional Edits
+
+You can edit the site directly on [the Github.com repository](https://github.com/diamond-diadem/diamond-diadem.github.io).
+
+For more in-depth contributions, with the ability to test them before pushing, install the site locally.
+
+### Prerequisites
+
+- **Node.js** - `v25.2.1` or higher — run `node -v` to check.
+- **Hugo extended** - `v0.152.2` — run `hugo version` to check.
+
+### Installing Prerequisites for Linux
+
+- #### Node.js
+
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+```
+Restart terminal, then:
+
+```bash
+nvm install node
+nvm use node
+npm install -g npm
+```
+
+Verify the installation:
+
+```bash
+node -v
+npm -v
+```
+
+- #### Hugo extended
+
+Download and install version 0.152.2 for Linux amd64
+
+```bash
+wget https://github.com/gohugoio/hugo/releases/download/v0.152.2/hugo_extended_0.152.2_linux-amd64.tar.gz
+tar -xzf hugo_extended_0.152.2_linux-amd64.tar.gz
+sudo mv hugo /usr/local/bin/hugo
+sudo chmod +x /usr/local/bin/hugo
+```
+
+Verify the installation:
+
+```bash
+hugo version
+```
+
+### Retrieve and Install the Website Locally
+
+#### Clone the Github Repository
+
+```bash
+git clone https://github.com/diamond-diadem/diamond-diadem.github.io.git diamond-website
+```
+
+#### Install Site Dependencies
+
+```bash
+cd diamond-website
+npm install
+```
+
+### Access the Development Server
+
+Run the command:
+
+```bash
+npm run dev
+```
+
+And you will have access to a local version of the site at `localhost:1313`.
+
+This local version of the site will update with each modification of the source files, allowing you to test your contributions.
+
 ## Markdown
 
 ### Syntax References
 
 - [**Basics**](https://getdoks.org/docs/reference/markdown-basic-syntax/)
 - [**Advanced**](https://getdoks.org/docs/reference/markdown-extended-syntax/)
-
-### Math Support
-
-The website supports `$...$` delimiters for LaTeX syntax in inline math. For block equations, use the following format:
-
-```markdown
-$$
-(...)
-$$
-```
-
-## YouTube Video Integration (Tutorials)
-
-To integrate a YouTube video, use the custom Diamond shortcode:
-
-```markdown
-{{< video-with-consent id="{video-id}" >}}
-```
-
-Replace `{video-id}` with the YouTube video ID. To obtain this ID, go to the YouTube video page, click the "Share" button, and copy the link of the form `https://youtu.be/{video-id}`.
-
-### Features of the Shortcode
-
-- Maintains a fixed aspect ratio (48:27) with 100% width for optimal adaptability.
-- Enables privacy-enhanced mode via `youtube-no-cookie.com`.
-- Integrates cookie consent management (if configured in `config/`).
-- Automatically adapts subtitles to match the page language.
 
 ## Links
 
@@ -117,3 +169,31 @@ Use the interactive generator to scaffold code pages that follow the standard la
 Undo the most recent run with `npm run new:code -- --undo`.
 
 Custom logos/icons are to be added manually; in practice this task is generally handled by the website administrator after your Markdown changes are done.
+
+### Math Support
+
+The website supports `$...$` delimiters for LaTeX syntax in inline math. For block equations, use the following format:
+
+```markdown
+$$
+(...)
+$$
+```
+
+## YouTube Video Integration (Tutorials)
+
+To integrate a YouTube video, use the custom Diamond shortcode:
+
+```markdown
+{{< video-with-consent id="{video-id}" >}}
+```
+
+Replace `{video-id}` with the YouTube video ID. To obtain this ID, go to the YouTube video page, click the "Share" button, and copy the link of the form `https://youtu.be/{video-id}`.
+
+### Features of the Shortcode
+
+- Maintains a fixed aspect ratio (48:27) with 100% width for optimal adaptability.
+- Enables privacy-enhanced mode via `youtube-no-cookie.com`.
+- Integrates cookie consent management (if configured in `config/`).
+- Automatically adapts subtitles to match the page language.
+
