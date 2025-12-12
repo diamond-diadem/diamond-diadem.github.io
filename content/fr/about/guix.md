@@ -1,6 +1,13 @@
 ---
 title: À propos de Guix
 linkTitle: Guix
+seo:
+  keywords:
+    - GNU Guix paquets
+    - gestionnaire de paquets HPC
+    - distributions reproductibles
+    - logiciels scientifiques
+    - plateforme DIAMOND
 ---
 
 <div align="justify">

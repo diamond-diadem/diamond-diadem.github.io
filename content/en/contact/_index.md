@@ -1,5 +1,12 @@
 ---
 title: Contact us
+seo:
+  keywords:
+    - contact DIAMOND
+    - platform support email
+    - container assistance
+    - documentation helpdesk
+    - materials data contact
 ---
 
 <div class= "row text-center justify-content-center">

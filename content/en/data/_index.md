@@ -1,5 +1,12 @@
 ---
 title: Data
+seo:
+  keywords:
+    - materials data platform
+    - scientific databases
+    - data governance
+    - ontology support
+    - DIAMOND data contacts
 ---
 
 <div align="center">

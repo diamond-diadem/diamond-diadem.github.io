@@ -1,5 +1,12 @@
 ---
 title: Données
+seo:
+  keywords:
+    - plateforme de données matériaux
+    - bases de données scientifiques
+    - gouvernance des données
+    - ontologie matériaux
+    - contacts DIAMOND données
 ---
 
 <div align="center">

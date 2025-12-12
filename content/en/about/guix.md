@@ -1,6 +1,12 @@
 ---
 title: About Guix
 linkTitle: Guix
+seo:
+  keywords:
+    - GNU Guix packages
+    - HPC package manager
+    - DIAMOND tooling distribution
+    - scientific reproducibility
 ---
 
 <div align="justify">
