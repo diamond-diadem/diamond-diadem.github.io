@@ -1,6 +1,6 @@
 ---
 title: Codes
-exclude_search: true
+headless: true
 cascade:
   toc: false
 ---
