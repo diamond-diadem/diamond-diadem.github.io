@@ -71,7 +71,7 @@ const OPTGROUP_LABELS = {
 const rl = readline.createInterface({ input, output });
 
 async function ask(question, defaultValue = '') {
-  const hint = defaultValue ? ` (${defaultValue})` : '';
+  const hint = defaultValue ? ` (default value: ${defaultValue})` : '';
   const answer = (await rl.question(`${question}${hint}: `)).trim();
   return answer || defaultValue || '';
 }
@@ -93,17 +93,34 @@ async function askYesNo(question, defaultValue = true) {
 }
 
 async function askMultiline(prompt) {
-  console.log(`${prompt} (finish with a single '.' on its own line)`);
+  console.log(
+    `${prompt}\nPaste your Markdown, then finish with either a single '.' line or by pressing Enter twice on an empty line.`,
+  );
   const lines = [];
-  // eslint-disable-next-line no-constant-condition
-  while (true) {
-    const line = (await rl.question('> '));
-    if (line.trim() === '.') {
-      break;
-    }
-    lines.push(line);
-  }
-  return lines.join('\n').trim();
+  let emptyStreak = 0;
+  return new Promise((resolve) => {
+    const finish = () => {
+      rl.off('line', handler);
+      resolve(lines.join('\n').trim());
+    };
+    const handler = (input) => {
+      if (input.trim() === '.') {
+        finish();
+        return;
+      }
+      if (input === '') {
+        emptyStreak += 1;
+        if (emptyStreak >= 2) {
+          finish();
+          return;
+        }
+      } else {
+        emptyStreak = 0;
+      }
+      lines.push(input);
+    };
+    rl.on('line', handler);
+  });
 }
 
 function slugify(value) {
@@ -195,7 +212,7 @@ function buildFrontMatter(data) {
   const lines = [
     '---',
     `title: ${data.title}`,
-    'title_visible: false',
+    'title_visible: true',
     `linkTitle: ${data.linkTitle}`,
     'toc: false',
     `weight: ${data.weight}`,
@@ -242,15 +259,10 @@ ${examplesPlaceholder}
 }
 
 async function askCategory() {
-  const defaultKey = 's';
   while (true) {
-    const answer = (await rl.question(`Category [s = scientific-computing, v = visualisation] (${defaultKey}): `)).trim().toLowerCase();
-    const resolved =
-      CATEGORY_CHOICES[answer] ||
-      Object.values(CATEGORY_CHOICES).find((value) => value === answer) ||
-      CATEGORY_CHOICES[defaultKey];
-    if (resolved) {
-      return resolved;
+    const answer = (await rl.question('Category [s = scientific-computing, v = visualisation]: ')).trim().toLowerCase();
+    if (CATEGORY_CHOICES[answer]) {
+      return CATEGORY_CHOICES[answer];
     }
     console.log('Please choose either "s" or "v".');
   }
@@ -567,8 +579,8 @@ async function updateCodesTable(locale, data, changeLog) {
 
 function buildScientificBlocks(index, command) {
   return {
-    large: `\n<div id="content-option${index}A" class="hidden">\n\n\`\`\`bash\n${command}\n\`\`\`\n\n</div>\n\n`,
-    small: `\n<div id="content-option${index}B" style="margin-top: -1rem;" class="hidden">\n\n\`\`\`bash\n${command}\n\`\`\`\n\n</div>\n\n`,
+    large: `<div id="content-option${index}A" class="hidden">\n\n\`\`\`bash\n${command}\n\`\`\`\n\n</div>\n\n`,
+    small: `<div id="content-option${index}B" style="margin-top: -1rem;" class="hidden">\n\n\`\`\`bash\n${command}\n\`\`\`\n\n</div>\n\n`,
   };
 }
 
@@ -597,8 +609,8 @@ function updateScientificPart3(content, locale, data) {
   );
   const newIndex = highestIndex + 1 || 1;
   const optionSnippets = {
-    large: `    <option value="option${newIndex}A">${data.linkTitle}</option>\n       `,
-    small: `    <option value="option${newIndex}B">${data.linkTitle}</option>\n       `,
+    large: `    <option value="option${newIndex}A">${data.linkTitle}</option>\n            `,
+    small: `    <option value="option${newIndex}B">${data.linkTitle}</option>\n        `,
   };
   const blocks = buildScientificBlocks(newIndex, data.apptainerCommand);
 
@@ -760,7 +772,7 @@ async function main() {
     documentationUrl = ensureUrl(documentationUrl);
 
     const apptainerFilename = `${slug}.sif`;
-    let registryFilename = await ask('Apptainer filename in container registry (without extension)', slug);
+    let registryFilename = await ask('Apptainer filename in container registry (without \'.sif\' extension)', slug);
     if (!registryFilename) {
       registryFilename = slug;
     }
@@ -773,7 +785,7 @@ async function main() {
     const descriptions = {};
     for (const locale of locales) {
       const strings = LOCALE_STRINGS[locale];
-      descriptions[locale] = await askMultiline(`[${strings.label}] Description/overview of the code (Markdown allowed)`);
+      descriptions[locale] = await askMultiline(`[${strings.label}] Description/overview of the code`);
     }
 
     const baseData = {
