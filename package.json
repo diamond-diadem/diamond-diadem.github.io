@@ -10,6 +10,7 @@
   },
   "scripts": {
     "create": "hugo new",
+    "new:code": "node scripts/create-code-page.mjs",
     "dev": "hugo server --disableFastRender --noHTTPCache",
     "stage": "hugo server --disableFastRender --noHTTPCache --environment staging",
     "build": "hugo --minify --gc",
