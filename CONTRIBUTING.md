@@ -1,6 +1,9 @@
 
 # Contributing to the DIAMOND website
 
+> **Branch protection**  
+> The `main` branch is protected: direct pushes are blocked and will be rejected. Always create a feature branch for your changes, then open a pull request so the website administrator can review and merge it. This keeps production stable and ensures every update is traceable.
+
 ## Local Installation (Development Server), for contributors
 
 ### Occasional Edits
@@ -196,4 +199,3 @@ Replace `{video-id}` with the YouTube video ID. To obtain this ID, go to the You
 - Enables privacy-enhanced mode via `youtube-no-cookie.com`.
 - Integrates cookie consent management (if configured in `config/`).
 - Automatically adapts subtitles to match the page language.
-
