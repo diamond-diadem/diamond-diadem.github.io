@@ -1,5 +1,8 @@
 ---
 title: Data
+seo:
+  description: Materials data platform overview covering scientific databases, governance,
+    ontology support, and DIAMOND contacts.
 ---
 
 <div align="center">

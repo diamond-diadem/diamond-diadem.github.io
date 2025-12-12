@@ -1,6 +1,9 @@
 ---
 title: About Apptainer
 linkTitle: Apptainer
+seo:
+  description: Apptainer (Singularity) containers for high-performance computing, delivering
+    portable, reproducible scientific workflows through modern containerization.
 ---
 
 <h2 class="about-lead text-center">Apptainer (formerly Singularity) is a container creation and management solution geared towards high-performance computing. By offering containers that package both a software tool and all necessary external dependencies for its application, it ensures their portability and reproducibility.</h2>

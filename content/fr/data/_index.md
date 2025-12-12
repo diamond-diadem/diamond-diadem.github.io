@@ -1,5 +1,8 @@
 ---
 title: Données
+seo:
+  description: Plateforme de données matériaux DIAMOND couvrant les bases scientifiques,
+    la gouvernance, l'ontologie et les contacts dédiés.
 ---
 
 <div align="center">

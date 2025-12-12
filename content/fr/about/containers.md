@@ -1,6 +1,9 @@
 ---
 title: À propos des conteneurs
 linkTitle: Conteneurs
+seo:
+  description: Présentation des conteneurs scientifiques DIAMOND, des environnements HPC
+    portables, des simulations reproductibles et de l'écosystème Apptainer/Guix.
 ---
 
 <h2 class="about-lead text-center">Environnements légers et isolés incluant tous les outils nécessaires pour exécuter des applications. Ils sont devenus incontournables dans le domaine de l'informatique en raison de leur flexibilité et de leur efficacité.</h2>

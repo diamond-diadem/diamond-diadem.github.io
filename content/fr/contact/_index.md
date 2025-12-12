@@ -1,5 +1,8 @@
 ---
 title: Contactez-nous
+seo:
+  description: Contactez DIAMOND pour le support plateforme, l'assistance conteneurs,
+    l'aide documentation et la coordination des données.
 ---
 
 <div class= "row text-center justify-content-center">

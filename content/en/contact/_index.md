@@ -1,5 +1,8 @@
 ---
 title: Contact us
+seo:
+  description: Contact DIAMOND for platform support, container assistance, documentation
+    questions, and materials data coordination.
 ---
 
 <div class= "row text-center justify-content-center">

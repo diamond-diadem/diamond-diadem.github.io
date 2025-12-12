@@ -3,6 +3,9 @@ title: Welcome to the DIAMOND user documentation
 linkTitle: Welcome
 toc: false
 weight: 1
+seo:
+  description: Start here for DIAMOND documentation with Apptainer tutorials, Guix guides,
+    and scientific container help.
 ---
 
 {{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
