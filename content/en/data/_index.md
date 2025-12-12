@@ -1,12 +1,8 @@
 ---
 title: Data
 seo:
-  keywords:
-    - materials data platform
-    - scientific databases
-    - data governance
-    - ontology support
-    - DIAMOND data contacts
+  description: Materials data platform overview covering scientific databases, governance,
+    ontology support, and DIAMOND contacts.
 ---
 
 <div align="center">

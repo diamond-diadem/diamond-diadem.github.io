@@ -1,12 +1,8 @@
 ---
 title: Données
 seo:
-  keywords:
-    - plateforme de données matériaux
-    - bases de données scientifiques
-    - gouvernance des données
-    - ontologie matériaux
-    - contacts DIAMOND données
+  description: Plateforme de données matériaux DIAMOND couvrant les bases scientifiques,
+    la gouvernance, l'ontologie et les contacts dédiés.
 ---
 
 <div align="center">

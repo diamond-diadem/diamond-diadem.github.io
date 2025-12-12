@@ -1,12 +1,8 @@
 ---
 title: Contactez-nous
 seo:
-  keywords:
-    - contact DIAMOND
-    - support plateforme
-    - assistance conteneurs
-    - aide documentation
-    - coordination des données
+  description: Contactez DIAMOND pour le support plateforme, l'assistance conteneurs,
+    l'aide documentation et la coordination des données.
 ---
 
 <div class= "row text-center justify-content-center">

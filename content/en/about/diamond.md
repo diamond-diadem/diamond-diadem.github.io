@@ -2,12 +2,8 @@
 title: About DIAMOND
 linkTitle: DIAMOND
 seo:
-  keywords:
-    - digital materials platform
-    - materials acceleration infrastructure
-    - AI-driven materials design
-    - high-throughput workflows
-    - French research collaboration
+  description: Digital materials platform accelerating discovery through AI-driven design,
+    high-throughput workflows, and French research collaboration.
 ---
 
 <h2 class="text-center about-lead"><b>D</b>ata management and <b>I</b>nfrastructures for <b>A</b>rtificial intelligence, <b>M</b>odelling, <b>O</b>ptimization and <b>N</b>umerical <b>D</b>esign</h2>

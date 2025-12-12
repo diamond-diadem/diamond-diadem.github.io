@@ -5,10 +5,6 @@ tablerIcon: "tabler-icons/outline/home"
 toc: false
 layout: codes-home
 seo:
-  keywords:
-    - codes scientifiques conteneurisés
-    - codes DIAMOND
-    - images Apptainer
-    - workflows HPC
-    - logiciels de simulation de matériaux
+  description: Portail des codes scientifiques conteneurisés DIAMOND regroupant les images
+    Apptainer, workflows HPC et logiciels de simulation de matériaux.
 ---

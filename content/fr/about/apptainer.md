@@ -2,12 +2,8 @@
 title: À propos d'Apptainer
 linkTitle: Apptainer
 seo:
-  keywords:
-    - conteneurs Apptainer
-    - Singularity HPC
-    - reproductibilité scientifique
-    - portabilité des applications
-    - calcul haute performance
+  description: Apptainer (Singularity) apporte des conteneurs HPC portables pour garantir
+    la reproductibilité scientifique et la portabilité des applications.
 ---
 
 <h2 class="about-lead text-center">Apptainer (anciennement Singularity) est une solution de création et de gestion de conteneurs orientée vers le calcul haute performance. En proposant des conteneurs empaquetant à la fois un outil logiciel et toutes les dépendances externes nécessaires à son application, il garantit leur portabilité et leur reproductibilité.</h2>
