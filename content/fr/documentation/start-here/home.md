@@ -3,6 +3,9 @@ title: Bienvenue sur la documentation utilisateur DIAMOND
 linkTitle: Accueil
 toc: false
 weight: 1
+seo:
+  description: Page d'accueil de la documentation DIAMOND avec aide utilisateurs, tutoriels
+    Apptainer, guides Guix et assistance sur les conteneurs scientifiques.
 ---
 
 {{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}

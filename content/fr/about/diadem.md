@@ -1,6 +1,9 @@
 ---
 title: À propos de DIADEM
 linkTitle: DIADEM
+seo:
+  description: Présentation du programme PEPR DIADEM de France 2030, ses plateformes
+    scientifiques, sa gouvernance et ses ambitions pour des matériaux durables.
 ---
 
 <h2 class="text-center about-lead"><b>D</b>ispositifs <b>I</b>ntégrés pour l’<b>A</b>ccélération du <b>D</b>éploiement de <b>M</b>atériaux <b>E</b>mergents</h2>

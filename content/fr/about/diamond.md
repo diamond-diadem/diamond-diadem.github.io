@@ -1,6 +1,10 @@
 ---
 title: À propos de DIAMOND
 linkTitle: DIAMOND
+seo:
+  description: Plateforme numérique de matériaux accélérant la découverte grâce aux workflows
+    haute performance, à l'intelligence artificielle et à la collaboration scientifique
+    française.
 ---
 
 <h2 class="text-center about-lead">bases de <b>D</b>onnées, outils d’<b>I</b>ntelligence <b>A</b>rtificielle, de <b>M</b>odélisation et d’<b>O</b>ptimisatio<b>N</b> pour le <b>D</b>esign numérique de matériaux</h2>

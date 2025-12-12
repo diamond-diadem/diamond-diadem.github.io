@@ -1,6 +1,9 @@
 ---
 title: À propos de Guix
 linkTitle: Guix
+seo:
+  description: GNU Guix, le gestionnaire de paquets HPC choisi par DIAMOND, garantit
+    des distributions reproductibles pour les logiciels scientifiques.
 ---
 
 <div align="justify">
