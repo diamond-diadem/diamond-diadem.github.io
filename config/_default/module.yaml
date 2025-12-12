@@ -20,10 +20,11 @@ mounts:
     target: data
 
   # layouts
-  
+  - source: layouts
+    target: layouts
+
   - source: node_modules/@thulite/doks-core/layouts
     target: layouts
-    excludeFiles: [home.html, _partials/header/header.html, about/*, _partials/footer/to-top.html, _partials/main/blog-meta.html, _shortcodes/link-card.html, _partials/footer/footer.html]
 
   - source: node_modules/@thulite/core/layouts
     target: layouts
@@ -35,9 +36,6 @@ mounts:
     target: layouts
 
   - source: node_modules/@thulite/inline-svg/layouts
-    target: layouts
-
-  - source: layouts
     target: layouts
 
   # i18n
