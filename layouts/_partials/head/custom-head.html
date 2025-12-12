@@ -4,3 +4,6 @@
 <meta name="application-name" content="{{ . }}">
 <meta name="apple-mobile-web-app-title" content="{{ . }}">
 {{- end }}
+{{ if .Param "math" }}
+    {{ partialCached "math.html" . }}
+{{ end }}
