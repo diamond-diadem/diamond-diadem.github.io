@@ -1,6 +1,5 @@
 fr:
   languageName: FR
-  contentDir: content/fr
   weight: 10
   params:
     languageISO: FR
@@ -14,7 +13,6 @@ fr:
     docSidebarText: Contacter le support
 en:
   languageName: EN
-  contentDir: content/en
   weight: 20
   params:
     languageISO: EN
