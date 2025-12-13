@@ -13,7 +13,7 @@ rssLimit: 10
 summarylength: 50
 defaultContentLanguage: fr
 defaultContentLanguageInSubdir: false
-copyRight: Copyright (c) 2020-2024 Hyas
+copyRight: DIAMOND - PEPR DIADEM
 build:
   buildStats:
     enable: true
