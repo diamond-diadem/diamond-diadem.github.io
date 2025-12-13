@@ -10,11 +10,10 @@ This workflow is a workchain to train machine learning interatomical potential a
 
 This package contains software that will allow you to use existing neural network potential parameterizations to predict energies and forces (with standalone tools but also in conjunction with the MD software LAMMPS). In addition it is possible to train new neural network potentials with the provided training tools.
 
-
 This realese for n2p2-workflow uses nnp-scale and nnp-train from:
+
 - [N2P2](https://compphysvienna.github.io/n2p2/) for train mlip.
 - [lammps](https://www.lammps.org/#gsc.tab=0) for validation model.
 
-The workflow contains example for learn how use the workflow. 
+The workflow contains example for learn how use the workflow.
 Follow that [link](/en/workflows/aiida-n2p2/installation) to install it.
-

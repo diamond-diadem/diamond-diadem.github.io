@@ -61,7 +61,7 @@ mounts:
 
   - source: node_modules/@thulite/images/assets
     target: assets
-  
+
   - source: node_modules/@tabler/icons/icons
     target: assets/svgs/all-svg-icons/tabler-icons
 
