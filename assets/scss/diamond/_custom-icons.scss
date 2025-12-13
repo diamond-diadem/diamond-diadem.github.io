@@ -5,10 +5,10 @@
     height: 20px;
     width: 20px;
     display: inline-block;
-    &::before{
+    &::before {
         display: flex;
     }
-    
+
     margin-right: 5px;
     margin-left: 0px;
     margin-bottom: 0px;
@@ -184,7 +184,7 @@
     margin-left: unset;
     position: static;
     background: none;
-    font-family: 'Jost', 'Jost*', var(--bs-body-font-family), sans-serif;
+    font-family: "Jost", "Jost*", var(--bs-body-font-family), sans-serif;
     font-weight: 600;
     font-size: 20px;
     color: black;
@@ -194,7 +194,7 @@
     align-items: center;
     justify-content: center;
     &::before {
-        content: 'G';
+        content: "G";
         display: inline-block;
         vertical-align: middle;
     }
@@ -204,7 +204,6 @@
         color: white;
     }
 }
-
 
 .icon-dftbplus {
     background-image: url(images/codes/dftbplus/dftbplus-icon.png);

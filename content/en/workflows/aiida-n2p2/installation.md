@@ -12,7 +12,6 @@ verdi quicksetup  # better to set up a new profile
 verdi plugin list aiida.calculations  # should now show your calclulation plugins
 ```
 
-
 ## Usage
 
 Here goes a complete example of how to submit a test calculation using this plugin.
@@ -23,9 +22,11 @@ A quick demo of how to submit a calculation:
 verdi daemon start     # make sure the daemon is running
 cd examples
 ```
+
 You can have acces two example both in local and super computer.
 
 ### Tree of n2p2 adida plugin
+
 ```
 ├── aiida_n2p2
 │   ├── calculations
@@ -69,9 +70,11 @@ You can have acces two example both in local and super computer.
 ```
 
 ### Run in local
-Go to 1.Al folder and run the jupter notebook ```AiidA-n2p2_demo.ipynb```
+
+Go to 1.Al folder and run the jupter notebook `AiidA-n2p2_demo.ipynb`
 
 ### Run on the HPC
+
 Before to submit your calculation on the supercomputer be sure that your have made a set up for your local computer with a scheduler to menage your calculation on the super computer.
 This set up is very dependent from which supercomputer you will submit your calculation. Below a typical setup on [GRICAD](https://gricad-doc.univ-grenoble-alpes.fr/hpc/connexion/) that using OAR scheduler.
 
@@ -128,9 +131,9 @@ You will be prompted to provide some configuration details. You can accept the d
 $ verdi computer setup --config yml_files/computers/setup/gricad_dahu.yml
 Report: enter ? for help.
 Report: enter ! to ignore the default and set no value.
-Shebang line (first line of each script, starting with #!) [#!/bin/bash]: 
+Shebang line (first line of each script, starting with #!) [#!/bin/bash]:
 Default amount of memory per machine (kB).: 192000000
-Escape CLI arguments in double quotes [y/N]: 
+Escape CLI arguments in double quotes [y/N]:
 Success: Computer<2> dahu created
 Report: Note: before the computer can be used, it has to be configured with the command:
 Report:   verdi -p presto computer configure core.ssh dahu
@@ -150,20 +153,20 @@ The command will prompt you to confirm the settings. You can accept the defaults
 $ verdi -p presto computer configure core.ssh --config yml_files/computers/config/ssh.yml dahu
 Report: enter ? for help.
 Report: enter ! to ignore the default and set no value.
-User name [piazzai]: 
-Port number [22]: 
-Connection timeout in s [60]: 
-Allow ssh agent [Y/n]: 
-SSH proxy jump []: 
-SSH proxy command [ssh -q piazzai@access-gricad.univ-grenoble-alpes.fr "nc -w 60 `basename dahu.ciment .ciment` 22"]: 
-Compress file transfers [Y/n]: 
-GSS auth [False]: 
-GSS kex [False]: 
-GSS deleg_creds [False]: 
-GSS host [dahu.ciment]: 
-Load system host keys [Y/n]: 
-Key policy (RejectPolicy, WarningPolicy, AutoAddPolicy) [RejectPolicy]: 
-Use login shell when executing command [Y/n]: 
+User name [piazzai]:
+Port number [22]:
+Connection timeout in s [60]:
+Allow ssh agent [Y/n]:
+SSH proxy jump []:
+SSH proxy command [ssh -q piazzai@access-gricad.univ-grenoble-alpes.fr "nc -w 60 `basename dahu.ciment .ciment` 22"]:
+Compress file transfers [Y/n]:
+GSS auth [False]:
+GSS kex [False]:
+GSS deleg_creds [False]:
+GSS host [dahu.ciment]:
+Load system host keys [Y/n]:
+Key policy (RejectPolicy, WarningPolicy, AutoAddPolicy) [RejectPolicy]:
+Use login shell when executing command [Y/n]:
 Report: Configuring computer dahu for user aiida@localhost.
 Success: dahu successfully configured for aiida@localhost
 ```
@@ -173,23 +176,25 @@ Success: dahu successfully configured for aiida@localhost
 Finally, set up the codes (executables) that will run on the remote computer. This is also done with YAML files.
 
 Here is an example for a `lammps_dahu.yml` file:
+
 ```yaml
 ---
 label: lamps
-description: 'Guix-based LAMMPS as set in DAHU.'
-default_calc_job_plugin: 'lammps.raw'
+description: "Guix-based LAMMPS as set in DAHU."
+default_calc_job_plugin: "lammps.raw"
 filepath_executable: "/home/username/.guix-profile/bin/lmp_mpi"
 computer: dahu
 prepend_text: |
-   source /applis/site/guix-start.sh
-   set -x
-   cat $OAR_FILE_NODES | wc -l
-append_text: ' '
+  source /applis/site/guix-start.sh
+  set -x
+  cat $OAR_FILE_NODES | wc -l
+append_text: " "
 ```
 
 For the other codes, such as `n2p2_train` and `n2p2_scale`, create similar YAML files. The main difference will be the `default_calc_job_plugin` line, which should be set to `n2p2.train` and `n2p2.scale` respectively.
 
 Once you have created the three YAML files, run these commands to set up the codes in AiiDA:
+
 ```bash
 verdi code create core.code.installed --config lammps_dahu.yml
 verdi code create core.code.installed --config n2p2_train_dahu.yml
@@ -197,30 +202,35 @@ verdi code create core.code.installed --config n2p2_scale_dahu.yml
 ```
 
 The output for each command will be similar to this:
+
 ```console
 $ verdi code create core.code.installed --config yml_files/codes/lammps_dahu.yml
 Report: enter ? for help.
 Report: enter ! to ignore the default and set no value.
-Escape using double quotes [y/N]: 
+Escape using double quotes [y/N]:
 Success: Created InstalledCode<1>
 ```
 
 ## 5. Run and Monitor a Calculation
 
 You can now submit a calculation from your local machine, and AiiDA will send it to run on `dahu`:
+
 ```bash
 verdi run your_calculation.py
 ```
 
 To check the status of your calculations in AiiDA, use:
+
 ```bash
 verdi process list -a
 ```
 
 To check the job status directly on the remote `dahu` machine, log in and use the scheduler's command:
+
 ```bash
 oarstat -u
 ```
+
 Finally you can go to 1.HPC folder and submit your calculation.
 
 ```verdi run wkchain_Al.py        # run test calculation
@@ -246,5 +256,3 @@ pytest -v  # discover and run all tests
 ```
 
 <!-- See the [developer guide](http://aiida-n2p2.readthedocs.io/en/latest/developer_guide/index.html) for more information. -->
-
-

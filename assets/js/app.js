@@ -19,7 +19,6 @@ import 'js/diamond/synchronised-selects.js';
 // Import custom.js
 import 'js/custom.js';
 
-
 /*
 import * as params from '@params';
 

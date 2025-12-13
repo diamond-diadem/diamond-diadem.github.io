@@ -744,11 +744,11 @@ tr {
 
 .diffusion-kr-in-cubtc {
     content: url(/images/movie_diffusion_krypton_DOTSOV_480p.gif);
- }
+}
 
 .diffusion-kr-ovito {
     content: url(/images/0000[Ag][sra]3[ASR]1_steps_30.gif);
- }
+}
 
 // // // <<< aiida-lammps diffusion images <<< // // //
 
@@ -933,7 +933,9 @@ label {
 .scroll-fade {
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transition:
+        opacity 0.6s ease-out,
+        transform 0.6s ease-out;
 }
 
 .scroll-fade.in-view {
@@ -943,31 +945,31 @@ label {
 
 // fallback si scroll-fade désactivé : rendre visibles tous les éléments
 body:not(.has-scroll-fade) .scroll-fade {
-  opacity: 1;
-  transform: none;
+    opacity: 1;
+    transform: none;
 }
 
 /* Global bottom margin for all pages */
-.diamond-content { padding-bottom: 40px; }
-
-
+.diamond-content {
+    padding-bottom: 40px;
+}
 
 .n2p2_benchmark_R_vs_process_log2_total_time3 {
     content: url(/images/workflows/n2p2/n2p2_benchmark_R_vs_process_log2_colored-light.png);
     min-height: 300px;
- }
+}
 @include color-mode(dark) {
     .n2p2_benchmark_R_vs_process_log2_total_time3 {
         content: url(/images/workflows/n2p2/n2p2_benchmark_R_vs_process_log2_colored-dark.png);
     }
 }
- 
+
 .n2p2_throughput_vs_structures {
     content: url(/images/workflows/n2p2/n2p2_throughput_vs_structures-light.png);
     min-height: 300px;
- }
- @include color-mode(dark) {
+}
+@include color-mode(dark) {
     .n2p2_throughput_vs_structures {
         content: url(/images/workflows/n2p2/n2p2_throughput_vs_structures-dark.png);
     }
- }
+}

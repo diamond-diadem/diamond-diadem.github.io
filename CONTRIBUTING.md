@@ -1,4 +1,3 @@
-
 # Contributing to the DIAMOND website
 
 > **Branch protection**  
@@ -24,6 +23,7 @@ For more in-depth contributions, with the ability to test them before pushing, i
 ```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 ```
+
 Restart terminal, then:
 
 ```bash
@@ -131,7 +131,7 @@ The basic Markdown syntax to embed an image is:
 In HTML, use:
 
 ```html
-<img alt="Alternative text for the image" src="/images/image.png"/>   
+<img alt="Alternative text for the image" src="/images/image.png" />
 ```
 
 ### Adapting Images for Light/Dark Themes
@@ -141,19 +141,19 @@ If an image needs to adapt to light and dark themes, create two files: `image-li
 Then use:
 
 ```html
-<img alt="Alternative text for the image" class="custom-image">
+<img alt="Alternative text for the image" class="custom-image" />
 ```
 
 Add this code in `assets/scss/_custom.scss`:
 
 ```scss
 .custom-image {
-    content: url(/images/image-light.png);
+  content: url(/images/image-light.png);
 }
 @include color-mode(dark) {
-    .custom-image {
-        content: url(/images/image-dark.png);
-    }
+  .custom-image {
+    content: url(/images/image-dark.png);
+  }
 }
 ```
 
@@ -167,7 +167,7 @@ Use the interactive generator to scaffold code pages that follow the standard la
 
 1. Run `npm run new:code`.
 2. Answer the prompts: category (`scientific-computing` or `visualisation`) via `s`/`v`, official website and documentation URLs, apptainer filename on the container registry, and a description of the code in both English and French. Multiline answers end with a single `.` line.
-3. The tool  refreshes the Codes section landing page table/selects automatically.
+3. The tool refreshes the Codes section landing page table/selects automatically.
 
 Undo the most recent run with `npm run new:code -- --undo`.
 
