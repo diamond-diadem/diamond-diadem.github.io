@@ -15,6 +15,8 @@
     "dev": "hugo server --disableFastRender --noHTTPCache",
     "stage": "hugo server --disableFastRender --noHTTPCache --environment staging",
     "build": "hugo --minify --gc",
+    "lint": "prettier --check --ignore-unknown \"content/**/*.{md,mdx}\" \"assets/**/*.{scss,js}\" \"config/**/*.{json,yaml,yml}\" \"i18n/**/*.{json,yaml,yml}\" \"scripts/**/*.mjs\" \"*.{md,json}\"",
+    "lint:write": "prettier --write --ignore-unknown \"content/**/*.{md,mdx}\" \"assets/**/*.{scss,js}\" \"config/**/*.{json,yaml,yml}\" \"i18n/**/*.{json,yaml,yml}\" \"scripts/**/*.mjs\" \"*.{md,json}\"",
     "preview": "vite preview --outDir public"
   },
   "dependencies": {
