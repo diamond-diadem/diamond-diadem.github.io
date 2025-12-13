@@ -2,6 +2,9 @@
 
 > **Branch protection**  
 > The `main` branch is protected: direct pushes are blocked and will be rejected. Always create a feature branch for your changes, then open a pull request so the website administrator can review and merge it. This keeps production stable and ensures every update is traceable.
+> 
+> **Dependency files**  
+> The files `package.json` and `package-lock.json` contain the locked dependencies for the Node.js environment. They should not be edited or modified.
 
 ## Local Installation (Development Server), for contributors
 
