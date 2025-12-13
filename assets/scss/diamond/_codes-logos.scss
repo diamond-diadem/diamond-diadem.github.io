@@ -213,6 +213,28 @@
 }
 // // END n2p2 logo END // //
 
+// // GaTewAY logo // //
+
+.container-logo-gateway {
+    &:hover,
+    &:focus {
+        text-decoration: none;
+    }
+}
+
+.logo-gateway {
+    font-size: 750%;
+    font-weight: 600;
+    letter-spacing: 0.15rem;
+    color: #1d2d35;
+}
+@include color-mode(dark) {
+    .logo-gateway {
+        color: #ffffff;
+    }
+}
+// // END GaTewAY logo END // //
+
 // // dftbplus logo // //
 
 .logo-dftbplus {
