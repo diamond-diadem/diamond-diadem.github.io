@@ -93,7 +93,7 @@ weight: 2
             <td></td>
         </tr>
         <tr>
-            <td><a href="/en/codes/scientific-computing/gateway/"><i class=""></i>GaTewAY</a></td>
+            <td><a href="/en/codes/scientific-computing/gateway/"><i class="icon-gateway"></i>GaTewAY</a></td>
             <td></td>
         </tr>
     </tbody>

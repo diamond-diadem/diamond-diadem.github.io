@@ -1,10 +1,14 @@
 ---
 title: GaTewAY
-title_visible: true
+title_visible: false
 linkTitle: GaTewAY
-icon:
+icon: icon-gateway
 weight: 19
 ---
+
+<div class="codes-pages-top-logo container-logo-gateway">
+  <span align="center" class="logo-gateway"><b>GaTewAY</b></span>
+</div>
 
 ### Retrieve the Apptainer image
 
