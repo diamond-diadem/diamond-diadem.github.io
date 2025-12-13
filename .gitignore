@@ -4,7 +4,7 @@ themes/
 node_modules/
 .vscode/
 
-hugo_stats.json
+hugo_build.lock
 
 *.patch
 .last-generated-code-pages.json
