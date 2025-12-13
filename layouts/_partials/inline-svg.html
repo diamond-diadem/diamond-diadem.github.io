@@ -1,0 +1,29 @@
+{{- $args := dict "src" . -}}
+{{- if reflect.IsMap . -}}
+  {{- $args = . -}}
+{{- end -}}
+
+{{- $src := index $args "src" -}}
+{{- if not $src -}}
+  {{- warnf "inline-svg: missing src parameter" -}}
+  {{- "" -}}
+{{- else -}}
+  {{- $srcIsString := eq (printf "%T" $src) "string" -}}
+  {{- if $srcIsString -}}
+    {{- $clean := strings.TrimSpace (printf "%s" $src) -}}
+    {{- $clean = replaceRE `^(\./)+` "" $clean -}}
+    {{- $hasTraversal := or (strings.Contains $clean "../") (strings.Contains $clean `..\\`) -}}
+    {{- $hasProtocol := strings.Contains $clean "://" -}}
+    {{- if or (strings.HasPrefix $clean "/") $hasTraversal $hasProtocol -}}
+      {{- warnf "inline-svg: rejected unsafe src '%s'" $src -}}
+      {{- "" -}}
+    {{- else -}}
+      {{- $args = merge $args (dict "src" $clean) -}}
+      {{- $out := partialCached "_inline-svg" $args $args -}}
+      {{- $out -}}
+    {{- end -}}
+  {{- else -}}
+    {{- $out := partialCached "_inline-svg" $args $args -}}
+    {{- $out -}}
+  {{- end -}}
+{{- end -}}
