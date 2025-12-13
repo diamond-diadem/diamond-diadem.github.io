@@ -8,9 +8,14 @@
 # from different locations.
 
 mounts:
-  # # content
-  # - source: content
-  #   target: content
+  # content
+  - source: content/fr
+    target: content
+    lang: fr
+
+  - source: content/en
+    target: content
+    lang: en
 
   # data
   - source: node_modules/@thulite/doks-core/data
