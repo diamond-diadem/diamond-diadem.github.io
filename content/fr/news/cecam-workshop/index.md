@@ -27,7 +27,7 @@ seo:
 
 ![Photo de groupe des participants](group-photo.jpg)
 
-### <a href="https://www.cecam.org/workshop-details/machine-learning-interatomic-potentials-and-accessible-databases-1313" class="d-flex">Page CECAM de l'évènement{{< inline-svg src="tabler-icons/outline/external-link" class="svg-inline-end" >}}</a>
+### <a href="https://www.cecam.org/workshop-details/machine-learning-interatomic-potentials-and-accessible-databases-1313" class="d-flex">Page CECAM de l'évènement</a>
 
 ### Organisateurs
 
