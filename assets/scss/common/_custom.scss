@@ -973,3 +973,13 @@ body:not(.has-scroll-fade) .scroll-fade {
         content: url(/images/workflows/n2p2/n2p2_throughput_vs_structures-dark.png);
     }
 }
+
+.officials-banner {
+    content: url(/images/officials/officials-banner-light.png);
+}
+
+@include color-mode(dark) {
+    .officials-banner {
+        content: url(/images/officials/officials-banner-dark.png);
+    }
+}
