@@ -21,12 +21,13 @@
   </div>
 </section>
 {{ if site.Params.doks.backgroundDots -}}
-  <div class="d-flex justify-content-start">
-    <div class="bg-dots"></div>
-  </div>
-  {{ end -}}
-  {{ if eq $.Site.Language.LanguageName "FR" }}
-  <section class="section section-md section-features mt-0">
+<div class="d-flex justify-content-start">
+  <div class="bg-dots"></div>
+</div>
+{{ end -}}
+
+{{- if eq $.Site.Language.LanguageName "FR" }}
+  <section class="section section-md section-features mt-0 mb-0">
     <div class="container">
       <div class="row justify-content-center text-center">
         <div class="col-lg-5 scroll-fade">
@@ -60,6 +61,34 @@
       </div>
     </div>
   </section>
+
+  {{/* Beginning of the temporary FAQs section */}}
+  <a href="/documentation/faq/home/"><img alt="faq-icon" class="faq-icon scroll-fade"/><h2 class="scroll-fade text-center">{{ i18n "faq" }}</h2></a>
+  {{/* End of the temporary FAQs section */}}
+  <!-- {{/* Beginning of the FAQs section */}}
+  {{- $faqs := where .Site.RegularPages "Section" "faqs" }}
+  {{- if (ge (len ($faqs)) 1) }}
+    <section class="section section-md section-news">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <h2 class="scroll-fade">{{ i18n "faq" }}</h3>
+        </div>
+  {{- end }}
+  {{- range $faqs }}
+    <details>
+      <summary>
+        {{ .Title }}
+      </summary>
+      {{ .Content }}
+    </details>
+  {{- end }}
+  {{- if (ge (len ($faqs)) 1) }}
+      </div>
+    </section>
+  {{- end }}
+  {{/* End of FAQs section */}} -->
+
+  {{/* Beginning of the news section */}}
   {{ if site.Params.diamond.enableNews -}}
     <section class="section section-md section-news">
       <div class="container">
@@ -115,6 +144,34 @@
       </div>
     </div>
   </section>
+
+  {{/* Beginning of the temporary FAQs section */}}
+  <a href="/en/documentation/faq/home/"><img alt="faq-icon" class="faq-icon scroll-fade"/><h2 class="scroll-fade text-center">{{ i18n "faq" }}</h2></a>
+  {{/* End of the temporary FAQs section */}}
+  <!-- {{/* Beginning of the FAQs section */}}
+  {{- $faqs := where .Site.RegularPages "Section" "faqs" }}
+  {{- if (ge (len ($faqs)) 1) }}
+    <section class="section section-md section-news">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <h2 class="scroll-fade">{{ i18n "faq" }}</h3>
+        </div>
+  {{- end }}
+  {{- range $faqs }}
+    <details>
+      <summary>
+        {{ .Title }}
+      </summary>
+      {{ .Content }}
+    </details>
+  {{- end }}
+  {{- if (ge (len ($faqs)) 1) }}
+      </div>
+    </section>
+  {{- end }}
+  {{/* End of FAQs section */}} -->
+  
+  {{/* Beginning of the News section */}}
   {{ if site.Params.diamond.enableNews -}}
     <section class="section section-md section-news">
       <div class="container">
