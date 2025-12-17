@@ -984,17 +984,17 @@ body:not(.has-scroll-fade) .scroll-fade {
     }
 }
 
-.faq-icon {
+.section-icon.faq {
     content: url(/images/sections-icons/light/faq.png);
-    max-width: 100px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    color: $link-color;
+    // max-width: 100px;
+    // display: block;
+    // margin-left: auto;
+    // margin-right: auto;
+    // color: $link-color;
 }
 
 @include color-mode(dark) {
-    .faq-icon {
+    .section-icon.faq {
         content: url(/images/sections-icons/dark/faq.png);
         color: $link-color-dark;
     }
