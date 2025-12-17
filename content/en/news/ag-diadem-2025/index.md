@@ -41,6 +41,8 @@ seo:
   <img class="logo-france2030-desktop" alt="France 2030 Logo" style="max-width: 300px; height: auto;"/>
 </div> -->
 
+<div align="justify">
+
 The 2025 General Assembly of PEPR DIADEM, a France 2030 program led by CEA and CNRS and dedicated to the accelerated discovery of innovative materials assisted by Artificial Intelligence, was held from November 24 to 26, 2025, at ENS Paris Saclay.
 
 The program included:
@@ -51,3 +53,5 @@ The program included:
   - Working meetings were held on cross-cutting topics (fluidic synthesis, thin films, metallurgy, additive manufacturing, high-throughput characterization, data and digital infrastructure)
   - Presentations highlighted key results from targeted projects funded by the 2023 call for projects
   - Projects funded by the 2024 call for projects were also presented
+
+</div>
