@@ -10,7 +10,7 @@ mainSections:
   - news
 diamond:
   enableNews: true
-  sectionsIcons: false
+  sectionsIcons: true
   cookiesConsent: true
   enableScrollFade: true
 social:
