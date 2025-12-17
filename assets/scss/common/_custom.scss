@@ -999,3 +999,15 @@ body:not(.has-scroll-fade) .scroll-fade {
         color: $link-color-dark;
     }
 }
+
+// @include media-breakpoint-down(lg) {
+//     .diadem-ga-2025 {
+//         width: 200px;
+//     }
+// }
+
+@include media-breakpoint-down(xl) {
+    .diadem-ga-2025 {
+        visibility: hidden;
+    }
+}
