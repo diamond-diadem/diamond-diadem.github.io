@@ -21,38 +21,39 @@
   </div>
 </section>
 {{ if site.Params.doks.backgroundDots -}}
-  <div class="d-flex justify-content-start">
-    <div class="bg-dots"></div>
-  </div>
-  {{ end -}}
-  {{ if eq $.Site.Language.LanguageName "FR" }}
+<div class="d-flex justify-content-start">
+  <div class="bg-dots"></div>
+</div>
+{{ end -}}
+
+{{- if eq $.Site.Language.LanguageName "FR" }}
   <section class="section section-md section-features mt-0">
     <div class="container">
       <div class="row justify-content-center text-center">
         <div class="col-lg-5 scroll-fade">
           {{ if site.Params.diamond.sectionsIcons }}
-          <img alt="about-icon" class="section-icon homepage about"/>
+            <img alt="about-icon" class="section-icon homepage about"/>
           {{ end }}
           <h2 class="h4">Apprenez-en plus</h2>
           <p>Sur <a href="/about/diamond/">DIAMOND</a>, le <a href="/about/diadem/">PEPR DIADEM</a>, les <a href="/about/containers/">conteneurs</a> et <a href="/about/apptainer/">Apptainer</a>.</p>
         </div>
         <div class="col-lg-6 scroll-fade">
           {{ if site.Params.diamond.sectionsIcons }}
-          <img alt="about-icon" class="section-icon homepage containers"/>
+            <img alt="about-icon" class="section-icon homepage containers"/>
           {{ end }}
           <h2 class="h4">Récupérez nos images Apptainer de codes populaires</h2>
           <p><a href="/codes/start-here/home/">Calcul scientifique et visualisation de données</a>.</p>
         </div>
         <div class="col-lg-5 scroll-fade">
           {{ if site.Params.diamond.sectionsIcons }}
-          <img alt="about-icon" class="section-icon homepage wfs-dbs"/>
+            <img alt="about-icon" class="section-icon homepage wfs-dbs"/>
           {{ end }}
           <h2 class="h4">Workflows et bases de données</h2>
           <p><a href="/workflows/start-here/home/">Nos premiers workflows disponibles</a>.</p>
         </div>
         <div class="col-lg-6 scroll-fade">
           {{ if site.Params.diamond.sectionsIcons }}
-          <img alt="about-icon" class="section-icon homepage documentation"/>
+            <img alt="about-icon" class="section-icon homepage documentation"/>
           {{ end }}
           <h2 class="h4">Consultez la documentation</h2>
           <p><a href="/documentation/install/install-apptainer/">Installez Apptainer</a>, et <a href="/documentation/use/apptainer-image/">apprenez à utiliser nos images de conteneurs</a>.</p>
@@ -60,54 +61,81 @@
       </div>
     </div>
   </section>
+
+  {{/* Beginning of the FAQs section */}}
+  {{- $faqs := where .Site.RegularPages "Section" "faqs" }}
+  {{- if (ge (len ($faqs)) 1) }}
+    <section class="section section-md section-news">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <h2 class="scroll-fade">{{ i18n "faq" }}</h3>
+        </div>
+  {{- end }}
+  {{- range $faqs }}
+    <details>
+      <summary>
+        {{ .Title }}
+      </summary>
+      {{ .Content }}
+    </details>
+  {{- end }}
+  {{- if (ge (len ($faqs)) 1) }}
+      </div>
+    </section>
+  {{- end }}
+  {{/* End of FAQs section */}}
+
+  {{/* Beginning of the news section */}}
   {{ if site.Params.diamond.enableNews -}}
     <section class="section section-md section-news">
       <div class="container">
         <div class="row justify-content-center text-center">
           {{ $homepageNewsPages := where (where .Site.RegularPages "Section" "news") "Params.homepage" true }}
-           {{ if (ge (len ($homepageNewsPages)) 1) }}
+          {{ if (ge (len ($homepageNewsPages)) 1) }}
             <h2 class="scroll-fade">Actualités en vedette</h3>
           {{ end }}
-          {{ range $homepageNewsPages }}
+            {{ range $homepageNewsPages }}
               <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 news-card-homepage scroll-fade" style="--bg-img: url({{ .Params.backgroundImage }});">
                 <h4 class="br-inherit"><a class="stretched-link text-body br-inherit" href="{{ .Permalink }}">{{ .Title | safeHTML }}</a></h4>
                 <p class="event-date-page">{{ .Params.EventDate }}</p>
                 <p>{{ .Summary }}</p>
               </div>
-          {{ end }}
+            {{ end }}
         </div>
       </div>
     </div>
   {{end -}}
-  {{ end }}
-  {{ if eq $.Site.Language.LanguageName "EN" }}
+  {{/* End of the news section */}}
+{{ end }}  {{/* Closing the check on FR langage if statement */}}
+
+{{ if eq $.Site.Language.LanguageName "EN" }}
   <section class="section section-md section-features mt-0">
     <div class="container">
       <div class="row justify-content-center text-center">
         <div class="col-lg-5 scroll-fade">
           {{ if site.Params.diamond.sectionsIcons }}
-          <img alt="about-icon" class="section-icon homepage about"/>
+            <img alt="about-icon" class="section-icon homepage about"/>
           {{ end }}
           <h2 class="h4">Learn more</h2>
           <p>About <a href="/en/about/diamond/">DIAMOND</a>, <a href="/en/about/diadem/">the PEPR DIADEM</a>, <a href="/en/about/containers/">containers</a> and <a href="/en/about/apptainer/">Apptainer</a>.</p>
         </div>
         <div class="col-lg-6 scroll-fade">
           {{ if site.Params.diamond.sectionsIcons }}
-          <img alt="about-icon" class="section-icon homepage containers"/>
+            <img alt="about-icon" class="section-icon homepage containers"/>
           {{ end }}
           <h2 class="h4">Get our Apptainer images for popular codes</h2>
           <p><a href="/en/codes/start-here/home/">Scientific computing and data visualisation</a>.</p>
         </div>
         <div class="col-lg-5 scroll-fade">
           {{ if site.Params.diamond.sectionsIcons }}
-          <img alt="about-icon" class="section-icon homepage wfs-dbs"/>
+            <img alt="about-icon" class="section-icon homepage wfs-dbs"/>
           {{ end }}
           <h2 class="h4">Workflows & databases</h2>
           <p><a href="/en/workflows/start-here/home/">Our first available workflows</a>.</p>
         </div>
         <div class="col-lg-6 scroll-fade">
           {{ if site.Params.diamond.sectionsIcons }}
-          <img alt="about-icon" class="section-icon homepage documentation"/>
+            <img alt="about-icon" class="section-icon homepage documentation"/>
           {{ end }}
           <h2 class="h4">Browse the documentation</h2>
           <p><a href="/en/documentation/install/install-apptainer/">Install Apptainer</a>, and <a href="/en/documentation/use/apptainer-image/">learn to use our container images</a>.</p>
@@ -115,6 +143,31 @@
       </div>
     </div>
   </section>
+
+  {{/* Beginning of the FAQs section */}}
+  {{- $faqs := where .Site.RegularPages "Section" "faqs" }}
+  {{- if (ge (len ($faqs)) 1) }}
+    <section class="section section-md section-news">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <h2 class="scroll-fade">{{ i18n "faq" }}</h3>
+        </div>
+  {{- end }}
+  {{- range $faqs }}
+    <details>
+      <summary>
+        {{ .Title }}
+      </summary>
+      {{ .Content }}
+    </details>
+  {{- end }}
+  {{- if (ge (len ($faqs)) 1) }}
+      </div>
+    </section>
+  {{- end }}
+  {{/* End of FAQs section */}}
+  
+  {{/* Beginning of the News section */}}
   {{ if site.Params.diamond.enableNews -}}
     <section class="section section-md section-news">
       <div class="container">
@@ -125,8 +178,8 @@
               {{ $i = add $i 1 }}
             {{ end }}
           {{ end }}  */}}
-           {{ $homepageNewsPages := where (where .Site.RegularPages "Section" "news") "Params.homepage" true }}
-           {{ if (ge (len ($homepageNewsPages)) 1) }}
+          {{ $homepageNewsPages := where (where .Site.RegularPages "Section" "news") "Params.homepage" true }}
+          {{ if (ge (len ($homepageNewsPages)) 1) }}
             <h2 class="scroll-fade">Featured News</h3>
           {{ end }}
           {{ range $homepageNewsPages }}
@@ -140,13 +193,15 @@
       </div>
     </div>
   {{ end -}}
-  {{ end }}
-{{ end }}
+  {{/* End of the News section */}}
 
-{{ define "sidebar-prefooter" }}
-{{ end }}
+{{- end }}  {{/* Closing the check on EN langage if statement */}}
+{{- end }}  {{/* Closing the main */}}
 
-{{ define "sidebar-footer" }}
+{{- define "sidebar-prefooter" }}
+{{- end }}
+
+{{- define "sidebar-footer" -}}
 {{ if site.Params.doks.sectionFooter -}}
 <section class="section section-md container-fluid bg-light">
   <div class="row justify-content-center text-center">
@@ -160,4 +215,3 @@
 </div>
 </main>
 {{ end }}
-

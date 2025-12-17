@@ -8,3 +8,6 @@ hugo_build.lock
 
 *.patch
 .last-generated-code-pages.json
+
+# Emacs backup files
+*~
