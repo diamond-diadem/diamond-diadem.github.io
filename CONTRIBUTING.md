@@ -1,50 +1,48 @@
-# Contributing to the DIAMOND website
-
-> **Branch protection**  
+> **Branch protection**
 > The `main` branch is protected: direct pushes are blocked and will be rejected. Always create a feature branch for your changes, then open a pull request so the website administrator can review and merge it. This keeps production stable and ensures every update is traceable.
 > 
-> **Dependency files**  
+> **Dependency files**
 > The files `package.json` and `package-lock.json` contain the locked dependencies for the Node.js environment. They should not be edited or modified.
 
-## Local Installation (Development Server), for contributors
+It's possible to edit the site directly on [the Github.com repository](https://github.com/diamond-diadem/diamond-diadem.github.io). However, it's encouraged not to do so. It's best practice to make modifications in local branches, and then create pull requests to contribute them. This way they can be tested on a local Hugo server before pushing.
 
-### Occasional Edits
+## Local development
 
-You can edit the site directly on [the Github.com repository](https://github.com/diamond-diadem/diamond-diadem.github.io).
-
-For more in-depth contributions, with the ability to test them before pushing, install the site locally.
-
-### Prerequisites
+To run a local Hugo server, and access the server in "development mode", the following dependencies are needed:
 
 - **Node.js** - `v25.2.1` or higher — run `node -v` to check.
 - **Hugo extended** - `v0.152.2` — run `hugo version` to check.
 
-### Installing Prerequisites for Linux
+### Installing `Node.js` and `npm`
 
-- #### Node.js
+The [recommended way](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) to install `npm` and `Node.js` is using a *Node Version Manager*, like `nvm` for example. See [here](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating) the detailed description on how to do so. Basically, make sure the `$PROFILE` environment variable is pointing to your `.bashrc` (`.profile`, etc.) to make sure the configuration is written to the correct profile, then get the installation script and run it as follows (review it beforehand, don't execute code without looking at it before)
 
 ```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 ```
 
-Restart terminal, then:
+Then restart the terminal, and it should be available, check with `nvm -v`. At this point it can be displayed the `Node.js` versions available to install as follows.
 
 ```bash
-nvm install node
-nvm use node
-npm install -g npm
+nvm ls-remote
 ```
 
-Verify the installation:
+Note that most of the time it's best to go with the latest `LTS` version, to do so
+
+```bash
+nvm install --lts
+```
+
+Finally, verify the installation and it should be good to go
 
 ```bash
 node -v
 npm -v
 ```
 
-- #### Hugo extended
+### Installing Hugo extended
 
-Download and install version 0.152.2 for Linux amd64
+Download and install version 0.152.2 for Linux amd64 as follows, or adjust as needed for your architecture
 
 ```bash
 wget https://github.com/gohugoio/hugo/releases/download/v0.152.2/hugo_extended_0.152.2_linux-amd64.tar.gz
@@ -53,47 +51,49 @@ sudo mv hugo /usr/local/bin/hugo
 sudo chmod +x /usr/local/bin/hugo
 ```
 
-Verify the installation:
+In case no `root` rights are available, just copy the executable to some sourced directory like `~/.local/bin`, or source the directory where it already is.
+
+Verify the installation was successful
 
 ```bash
 hugo version
 ```
 
-### Retrieve and Install the Website Locally
+### Retrieve and install the website locally
 
-#### Clone the Github Repository
+Clone the GitHub repository
 
 ```bash
 git clone https://github.com/diamond-diadem/diamond-diadem.github.io.git diamond-website
 ```
 
-#### Install Site Dependencies
+Install the `js` site dependencies
 
 ```bash
 cd diamond-website
 npm install
 ```
 
-### Access the Development Server
-
-Run the command:
+And access the development server
 
 ```bash
 npm run dev
 ```
 
-And you will have access to a local version of the site at `localhost:1313`.
+It should have granted access to a local version of the site at, usually, `localhost:1313`.
 
-This local version of the site will update with each modification of the source files, allowing you to test your contributions.
+This local version of the site will update with each modification of the source files, allowing for test on modifications before contributing. Note that some times, mostly when adding new files or changing configurations, the website won't get updated on-live. In these situations it's recommended to terminate the live server running (Ctrl-C), re-launch it, and refresh the page.
 
 ## Markdown
 
-### Syntax References
+For syntax references, check out the following resources:
 
-- [**Basics**](https://getdoks.org/docs/reference/markdown-basic-syntax/)
-- [**Advanced**](https://getdoks.org/docs/reference/markdown-extended-syntax/)
+- Doks' [Basic](https://getdoks.org/docs/reference/markdown-basic-syntax/) guide.
+- Doks' [Advanced](https://getdoks.org/docs/reference/markdown-extended-syntax/) guide.
 
-## Links
+Nonetheless, the following sections point out some important concepts
+
+### Links
 
 To include links in Markdown, use the following syntax:
 
@@ -101,7 +101,7 @@ To include links in Markdown, use the following syntax:
 [Link text](URL)
 ```
 
-### Opening Links in a New Tab
+### Opening links in a new tab
 
 To open a link in a new tab, use the following HTML syntax:
 
@@ -111,7 +111,7 @@ To open a link in a new tab, use the following HTML syntax:
 
 The `target="_blank"` attribute ensures the link opens in a new tab.
 
-### Internal Links
+### Internal links
 
 For internal links within the website, include only the part of the URL after the website's main address.
 
@@ -137,7 +137,7 @@ In HTML, use:
 <img alt="Alternative text for the image" src="/images/image.png" />
 ```
 
-### Adapting Images for Light/Dark Themes
+### Adapting images for light/dark themes
 
 If an image needs to adapt to light and dark themes, create two files: `image-light.png` and `image-dark.png` in `static/images`.
 
@@ -186,7 +186,7 @@ $$
 $$
 ```
 
-## YouTube Video Integration (Tutorials)
+## YouTube video integration (Tutorials)
 
 To integrate a YouTube video, use the custom Diamond shortcode:
 
@@ -196,9 +196,25 @@ To integrate a YouTube video, use the custom Diamond shortcode:
 
 Replace `{video-id}` with the YouTube video ID. To obtain this ID, go to the YouTube video page, click the "Share" button, and copy the link of the form `https://youtu.be/{video-id}`.
 
-### Features of the Shortcode
+### Features of the shortcode
 
 - Maintains a fixed aspect ratio (48:27) with 100% width for optimal adaptability.
 - Enables privacy-enhanced mode via `youtube-no-cookie.com`.
 - Integrates cookie consent management (if configured in `config/`).
 - Automatically adapts subtitles to match the page language.
+
+## Adding FAQs to the Home page
+
+FAQs live inside `content/<lang-code>/faqs/`, and they are simple `.md` files with the following form:
+
+```md
+---
+title: "Frequent question?"
+---
+
+Answer to this question.
+
+Can even take multiple lines, and probably use links, math equations, etc.
+```
+
+To add FAQs, create a new file with this structure inside the mentioned folder, and it should be it. Remember to terminate the live server (if any), and re-start it for the modification to take effect.
