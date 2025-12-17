@@ -34,11 +34,11 @@ seo:
 <br/>
 
 <div style="position: absolute; top: 0; right: 0; margin: 20px;">
-  <img src="/images/diadem/logo-diadem-processed.png" class="diadem-ga-2025" alt="PEPR DIADEM Logo" style="max-width: 300px; height: auto;"/>
+  <img src="/images/diadem/logo-diadem-processed.png" class="diadem-ga-2025" alt="PEPR DIADEM Logo" style="max-width: 200px; height: auto;"/>
 </div>
 
 <div style="position: absolute; top: 0; left: 0; margin: 20px;">
-  <img class="logo-france2030-desktop diadem-ga-2025" alt="France 2030 Logo" style="max-width: 300px; height: auto;"/>
+  <img class="logo-france2030-desktop diadem-ga-2025" alt="France 2030 Logo" style="max-width: 250px; height: auto;"/>
 </div>
 
 <div align="justify">
