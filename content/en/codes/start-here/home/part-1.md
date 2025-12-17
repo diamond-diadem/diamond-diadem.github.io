@@ -18,7 +18,7 @@ But to begin with, if you haven't gone through this step yet and if you're not f
 
 <div align="justify">
 
-In the summer of 2023, the materials community was surveyed via LimeSurvey to identify working habits. Among other things, this highlighted a number of codes used for both computation and visualisation (see below). Currently, almost $40\%$ of the codes cited by the community are containerised and/or packaged, covering all physical scales.
+In the summer of 2023, the materials community was surveyed via LimeSurvey to identify working habits. Among other things, this highlighted a number of codes used for both computation and visualisation (see below). Currently, above $60\%$ of the codes cited by the community are containerised and/or packaged, covering all physical scales.
 
 </div>
 
