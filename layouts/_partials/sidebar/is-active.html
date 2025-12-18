@@ -1,0 +1,19 @@
+{{- $currentDir := .currentDir -}}
+{{- $currentPath := .currentPath -}}
+{{- $candidate := .candidate -}}
+{{- $candidateDir := "" -}}
+{{- $candidatePath := "" -}}
+{{- with $candidate.File -}}
+  {{- $candidateDir = .Dir -}}
+  {{- $candidatePath = .Path -}}
+{{- end -}}
+{{- $strict := .exact | default false -}}
+{{- if $strict -}}
+  {{- if and $currentPath $candidatePath (eq $currentPath $candidatePath) -}}
+true
+  {{- end -}}
+{{- else -}}
+  {{- if and $currentDir $candidateDir (hasPrefix $currentDir $candidateDir) -}}
+true
+  {{- end -}}
+{{- end -}}
