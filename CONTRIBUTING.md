@@ -6,36 +6,41 @@
 > **Dependency files**  
 > The files `package.json` and `package-lock.json` contain the locked dependencies for the Node.js environment. They should not be edited or modified.
 
-## Local Installation (Development Server), for contributors
+It is possible to edit the site directly on [the Github.com repository](https://github.com/diamond-diadem/diamond-diadem.github.io). However, this is discouraged. The best practice is to make modifications on a local branch, then push them to the GitHub repository and create a pull request. Then the website administrator can review and merge it. This approach also allows you to preview the modifications locally before pushing them to the repository, thanks to a local Hugo server;
 
-### Occasional Edits
+## Local development
 
-You can edit the site directly on [the Github.com repository](https://github.com/diamond-diadem/diamond-diadem.github.io).
+To run the site locally in development mode, you need to install the following dependencies:
 
-For more in-depth contributions, with the ability to test them before pushing, install the site locally.
-
-### Prerequisites
-
-- **Node.js** - `v25.2.1` or higher — run `node -v` to check.
+- **Node.js** - `v25.2.1` — run `node -v` to check.
 - **Hugo extended** - `v0.152.2` — run `hugo version` to check.
 
 ### Installing Prerequisites for Linux
 
-- #### Node.js
+Install *Node Version Manager* (`nvm`)
 
 ```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 ```
 
-Restart terminal, then:
+Restart the terminal, then verify the installation
 
 ```bash
-nvm install node
-nvm use node
-npm install -g npm
+nvm -v
+```
+List available Node.js versions
+
+```bash
+nvm ls-remote
 ```
 
-Verify the installation:
+Install the `25.2.1` LTS version
+
+```bash
+nvm install v25.2.1
+```
+
+Finally, verify the installation
 
 ```bash
 node -v
@@ -44,22 +49,40 @@ npm -v
 
 - #### Hugo extended
 
-Download and install version 0.152.2 for Linux amd64
+Download and install Hugo Extended version 0.152.2 for Linux amd64. If you are using a different operating system or architecture, adjust the download link accordingly.
 
 ```bash
 wget https://github.com/gohugoio/hugo/releases/download/v0.152.2/hugo_extended_0.152.2_linux-amd64.tar.gz
 tar -xzf hugo_extended_0.152.2_linux-amd64.tar.gz
+```
+
+If you have superuser rights on your machine, run
+
+```bash
 sudo mv hugo /usr/local/bin/hugo
 sudo chmod +x /usr/local/bin/hugo
 ```
 
-Verify the installation:
+If not, run
+
+```bash
+mv hugo ~/.local/bin/hugo
+chmod +x ~/.local/bin/hugo
+```
+
+Make sure `~/.local/bin` is in your `PATH`. You can add this to your `~/.bashrc` or `~/.zshrc`:
+
+```bash
+export PATH="$HOME/.local/bin:$PATH"
+```
+
+Finally, verify the installation
 
 ```bash
 hugo version
 ```
 
-### Retrieve and Install the Website Locally
+### Clone and set up the website locally
 
 #### Clone the Github Repository
 
@@ -67,7 +90,7 @@ hugo version
 git clone https://github.com/diamond-diadem/diamond-diadem.github.io.git diamond-website
 ```
 
-#### Install Site Dependencies
+Install the `Node.js` dependencies
 
 ```bash
 cd diamond-website
@@ -82,18 +105,21 @@ Run the command:
 npm run dev
 ```
 
-And you will have access to a local version of the site at `localhost:1313`.
+This command starts a local development server that builds the website from your current source files and branch. The site will automatically refresh with each edit. By default, you can view it at `http://localhost:1313`. Run this command whenever you want to work on or preview the website locally.
 
-This local version of the site will update with each modification of the source files, allowing you to test your contributions.
+> Note: After some edits, you may need to stop the server (Ctrl+C) and restart it to see the changes reflected.
+> In case of issues, try clearing the Hugo cache with `hugo --gc`.
 
 ## Markdown
 
 ### Syntax References
 
-- [**Basics**](https://getdoks.org/docs/reference/markdown-basic-syntax/)
-- [**Advanced**](https://getdoks.org/docs/reference/markdown-extended-syntax/)
+- Doks [Basic](https://getdoks.org/docs/reference/markdown-basic-syntax/) guide.
+- Doks [Advanced](https://getdoks.org/docs/reference/markdown-extended-syntax/) guide.
 
-## Links
+Additional custom features are described below.
+
+### Links
 
 To include links in Markdown, use the following syntax:
 
@@ -202,3 +228,19 @@ Replace `{video-id}` with the YouTube video ID. To obtain this ID, go to the You
 - Enables privacy-enhanced mode via `youtube-no-cookie.com`.
 - Integrates cookie consent management (if configured in `config/`).
 - Automatically adapts subtitles to match the page language.
+
+<!-- ## Adding FAQs to the Home page
+
+FAQs live inside `content/<lang-code>/faqs/`, and they are simple `.md` files with the following form:
+
+```md
+---
+title: "Frequent question?"
+---
+
+Answer to this question.
+
+Can even take multiple lines, and probably use links, math equations, etc.
+```
+
+To add FAQs, create a new file with this structure inside the mentioned folder, and it should be it. Remember to terminate the live server (if any), and re-start it for the modification to take effect. -->
