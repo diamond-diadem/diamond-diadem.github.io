@@ -1,6 +1,6 @@
 # [DIAMOND Website](https://diamond-diadem.github.io) - Source Repository for development and deployment on GitHub Pages
 
-## The website is built with [Hugo](https://gohugo.io), using the [Doks](https://getdoks.org) theme, from the [Thulite](https://thulite.io) frmaework, and powered by [Node.js](https://nodejs.org).
+## The website is built with [Hugo](https://gohugo.io), using the [Doks](https://getdoks.org) theme, from the [Thulite](https://thulite.io) framework, and powered by [Node.js](https://nodejs.org).
 
 ## Contributing
 
