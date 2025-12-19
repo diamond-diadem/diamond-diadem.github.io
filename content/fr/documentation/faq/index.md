@@ -1,8 +1,8 @@
 ---
 title: Foire Aux Questions
-linkTitle: Accueil
+linkTitle: Foire Aux Questions
 toc: true
-weight: 2
+weight: 10
 ---
 
 <div align="justify">

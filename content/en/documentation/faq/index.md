@@ -1,8 +1,8 @@
 ---
 title: Frequently Asked Questions
-linkTitle: Home
+linkTitle: Frequently Asked Questions
 toc: true
-weight: 2
+weight: 10
 ---
 
 <div align="justify">
