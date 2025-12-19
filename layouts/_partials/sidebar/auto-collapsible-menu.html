@@ -9,64 +9,80 @@
     {{ $currentPath = .Path -}}
   {{ end -}}
   {{ range (where .Site.Sections "Section" "in" $section) }}
-    {{ range .Sections }}
+    {{ range .Pages.ByWeight }}
       {{ $active := partial "sidebar/is-active" (dict "currentDir" $currentDir "currentPath" $currentPath "candidate" .) }}
       <li class="mb-1">
-        <button class="btn btn-toggle rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-{{ md5 .Title }}" aria-expanded="{{ if $active }}true{{ else }}false{{ end }}">
-          {{ .Title }}
-        </button>
-        <div class="collapse{{ if $active }} show{{ end }}" id="section-{{ md5 .Title }}">
-          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-            {{ range .Pages }}
-              {{ if .IsNode }}
-                {{ $active := partial "sidebar/is-active" (dict "currentDir" $currentDir "currentPath" $currentPath "candidate" .) }}
-                <li class="my-1 ms-3">
-                  <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-{{ md5 .Title }}" aria-expanded="{{ if $active }}true{{ else }}false{{ end }}">
-                    {{ .Title }}
-                  </button>
-                  <div class="collapse{{ if $active }} show{{ end }}" id="section-{{ md5 .Title }}">
-                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                      {{ range .Pages }}
-                        {{ if .IsNode }}
-                          {{ $active := partial "sidebar/is-active" (dict "currentDir" $currentDir "currentPath" $currentPath "candidate" .) }}
-                          <li class="my-1 ms-3">
-                            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-{{ md5 .Title }}" aria-expanded="{{ if $active }}true{{ else }}false{{ end }}">
-                              {{ .Title }}
-                            </button>
-                            <div class="collapse{{ if $active }} show{{ end }}" id="section-{{ md5 .Title }}">
-                              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                {{ range .Pages }}
-                                  {{ $active := partial "sidebar/is-active" (dict "currentDir" $currentDir "currentPath" $currentPath "candidate" . "exact" true) }}
-                                  <li><a class="docs-link rounded{{ if $active }} active{{ end }}" href="{{ .Permalink }}">{{ .Title }}</a></li>
-                                {{ end }}
-                              </ul>
-                            </div>
-                          </li>
-                        {{ else }}
-                          {{ $active := partial "sidebar/is-active" (dict "currentDir" $currentDir "currentPath" $currentPath "candidate" . "exact" true) }}
-                          <li><a class="docs-link rounded{{ if $active }} active{{ end }}" href="{{ .Permalink }}">{{ .Title }}</a></li>
-                        {{ end }}
+        {{ if .IsNode }}
+          {{ if .Params.sidebar_link }}
+            <a class="btn btn-toggle no-caret rounded{{ if $active }} active{{ end }}" href="{{ .Params.sidebar_link | relURL }}">
+              {{ or .LinkTitle .Title }}
+            </a>
+          {{ else }}
+            <button class="btn btn-toggle rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-{{ md5 .Title }}" aria-expanded="{{ if $active }}true{{ else }}false{{ end }}">
+              {{ or .LinkTitle .Title }}
+            </button>
+            <div class="collapse{{ if $active }} show{{ end }}" id="section-{{ md5 .Title }}">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                {{ range .Pages.ByWeight }}
+                  {{ if .IsNode }}
+                    {{ $active := partial "sidebar/is-active" (dict "currentDir" $currentDir "currentPath" $currentPath "candidate" .) }}
+                    <li class="my-1 ms-3">
+                      {{ if .Params.sidebar_link }}
+                        <a class="btn btn-toggle no-caret align-items-center rounded{{ if $active }} active{{ end }}" href="{{ .Params.sidebar_link | relURL }}">
+                          {{ or .LinkTitle .Title }}
+                        </a>
+                      {{ else }}
+                        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-{{ md5 .Title }}" aria-expanded="{{ if $active }}true{{ else }}false{{ end }}">
+                          {{ or .LinkTitle .Title }}
+                        </button>
+                        <div class="collapse{{ if $active }} show{{ end }}" id="section-{{ md5 .Title }}">
+                          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            {{ range .Pages.ByWeight }}
+                              {{ if .IsNode }}
+                                {{ $active := partial "sidebar/is-active" (dict "currentDir" $currentDir "currentPath" $currentPath "candidate" .) }}
+                                <li class="my-1 ms-3">
+                                  {{ if .Params.sidebar_link }}
+                                    <a class="btn btn-toggle no-caret align-items-center rounded{{ if $active }} active{{ end }}" href="{{ .Params.sidebar_link | relURL }}">
+                                      {{ or .LinkTitle .Title }}
+                                    </a>
+                                  {{ else }}
+                                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-{{ md5 .Title }}" aria-expanded="{{ if $active }}true{{ else }}false{{ end }}">
+                                      {{ or .LinkTitle .Title }}
+                                    </button>
+                                    <div class="collapse{{ if $active }} show{{ end }}" id="section-{{ md5 .Title }}">
+                                      <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                        {{ range .Pages.ByWeight }}
+                                          {{ $active := partial "sidebar/is-active" (dict "currentDir" $currentDir "currentPath" $currentPath "candidate" . "exact" true) }}
+                                          <li><a class="docs-link rounded{{ if $active }} active{{ end }}" href="{{ .Permalink }}">{{ or .LinkTitle .Title }}</a></li>
+                                        {{ end }}
+                                      </ul>
+                                    </div>
+                                  {{ end }}
+                                </li>
+                              {{ else }}
+                                {{ $active := partial "sidebar/is-active" (dict "currentDir" $currentDir "currentPath" $currentPath "candidate" . "exact" true) }}
+                                <li><a class="docs-link rounded{{ if $active }} active{{ end }}" href="{{ .Permalink }}">{{ or .LinkTitle .Title }}</a></li>
+                              {{ end }}
+                            {{ end }}
+                          </ul>
+                        </div>
                       {{ end }}
-                    </ul>
-                  </div>
-                </li>
-               {{ else }}
-                {{ $active := partial "sidebar/is-active" (dict "currentDir" $currentDir "currentPath" $currentPath "candidate" . "exact" true) }}
-                <li><a class="docs-link rounded{{ if $active }} active{{ end }}" href="{{ .Permalink }}">{{ if .Params.tablerIcon }}{{ partial "inline-svg" (dict "src" .Params.tablerIcon "class" "svg-inline-sidebar") }}{{ end }}{{ if .Params.Icon }}<i class="sidebar-icon {{ .Params.Icon }}"></i>{{ end }}{{ or .LinkTitle .Title }}</a></li>
-              {{ end }}
-            {{ end }}
-          </ul>
-        </div>
+                    </li>
+                   {{ else }}
+                    {{ $active := partial "sidebar/is-active" (dict "currentDir" $currentDir "currentPath" $currentPath "candidate" . "exact" true) }}
+                    <li><a class="docs-link rounded{{ if $active }} active{{ end }}" href="{{ .Permalink }}">{{ if .Params.tablerIcon }}{{ partial "inline-svg" (dict "src" .Params.tablerIcon "class" "svg-inline-sidebar") }}{{ end }}{{ if .Params.Icon }}<i class="sidebar-icon {{ .Params.Icon }}"></i>{{ end }}{{ or .LinkTitle .Title }}</a></li>
+                  {{ end }}
+                {{ end }}
+              </ul>
+            </div>
+          {{ end }}
+        {{ else }}
+          {{ $active := partial "sidebar/is-active" (dict "currentDir" $currentDir "currentPath" $currentPath "candidate" . "exact" true) }}
+          <a class="btn btn-toggle no-caret rounded{{ if $active }} active{{ end }}" href="{{ .Permalink }}">
+            {{ if .Params.tablerIcon }}{{ partial "inline-svg" (dict "src" .Params.tablerIcon "class" "svg-inline-sidebar") }}{{ end }}{{ if .Params.Icon }}<i class="sidebar-icon {{ .Params.Icon }}"></i>{{ end }}{{ or .LinkTitle .Title }}
+          </a>
+        {{ end }}
       </li>
     {{ end }}
-
-    {{ range .RegularPages -}}
-      {{ $active := partial "sidebar/is-active" (dict "currentDir" $currentDir "currentPath" $currentPath "candidate" . "exact" true) -}}
-      <div class="collapse show" id="section-{{ md5 .Title }}">
-        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-          <li><a class="docs-link rounded{{ if $active }} active{{ end }}" href="{{ .Permalink }}">{{ .Title }}</a></li>
-        </ul>
-      </div>
-    {{- end }}
   {{ end }}
 </ul>

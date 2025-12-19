@@ -694,6 +694,14 @@ tr {
     text-indent: 5px;
 }
 
+.btn-toggle.no-caret::before {
+    content: none;
+}
+
+.btn-toggle.no-caret {
+    padding-left: 1.25rem;
+}
+
 .btn-doc-sidebar {
     margin-top: 20px;
     overflow-y: hidden;

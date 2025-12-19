@@ -1,7 +1,9 @@
 ---
 title: CONTAINERISED CODES
 linkTitle: Home
-tablerIcon: "tabler-icons/outline/home"
+weight: 1
+sidebar_link: /en/codes/home/
+# tablerIcon: "tabler-icons/outline/home"
 layout: codes-home
 seo:
   description: Hub for DIAMOND’s containerised scientific codes, Apptainer images, HPC
