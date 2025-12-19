@@ -27,13 +27,13 @@ main:
     url: en/codes/home/
     weight: 20
   - name: Workflows
-    url: en/workflows/start-here/home/
+    url: en/workflows/home/
     weight: 30
   - name: Data
     url: en/data/
     weight: 40
   - name: Documentation
-    url: en/documentation/start-here/home/
+    url: en/documentation/home/
     weight: 50
   - name: Contact
     url: en/contact/
