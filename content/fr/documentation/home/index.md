@@ -20,7 +20,7 @@ Voici les liens pour accéder rapidement à la section de documentation des outi
 - [Installation de Guix](/documentation/install/install-guix/)
 - [Utiliser une image Apptainer](/documentation/use/apptainer-image/)
 - [Utiliser un paquet Guix](/documentation/use/guix-package/)
-- [Foire Aux Questions (FAQ)](/documentation/faq/home/)
+- [Foire Aux Questions (FAQ)](/documentation/faq/)
 
 #### Voici les liens pour accéder rapidement aux tutoriels spécifiques par image :
 

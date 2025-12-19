@@ -20,7 +20,7 @@ Here are the links for quick access to the documentation section for the tools y
 - [Installing Guix](/en/documentation/install/install-guix/)
 - [Using an Apptainer image](/en/documentation/use/apptainer-image/)
 - [Using a Guix package](/en/documentation/use/guix-package/)
-- [Frequently Asked Questions (FAQ)](/en/documentation/faq/home/)
+- [Frequently Asked Questions (FAQ)](/en/documentation/faq/)
 
 #### Here are the links for quick access to image-specific tutorials:
 
