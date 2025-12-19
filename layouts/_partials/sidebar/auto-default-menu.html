@@ -8,42 +8,43 @@
   {{ $currentPath = .Path -}}
 {{ end -}}
 {{ range (where .Site.Sections "Section" "in" $section) }}
-  {{ range .Sections }}
+  {{ range .Pages.ByWeight }}
     {{ $active := partial "sidebar/is-active" (dict "currentDir" $currentDir "currentPath" $currentPath "candidate" .) }}
-    <h3 class="h6 text-uppercase mb-2">{{ .Title }}</h3>
-    <ul class="list-unstyled">
-      {{ range .Pages }}
-        {{ if .IsNode }}
-          {{ $active := partial "sidebar/is-active" (dict "currentDir" $currentDir "currentPath" $currentPath "candidate" .) }}
-          <h4 class="h6 text-uppercase ms-3 mt-3 mb-2">{{ .Title }}</h4>
-          <ul class="list-unstyled ms-3">
-            {{ range .Pages }}
-              {{ if .IsNode }}
-                {{ $active := partial "sidebar/is-active" (dict "currentDir" $currentDir "currentPath" $currentPath "candidate" .) }}
-                <h5 class="h6 text-uppercase mt-2 mb-2">{{ .Title }}</h5>
-                <ul class="list-unstyled ms-3">
-                  {{ range .Pages }}
-                    {{ $active := partial "sidebar/is-active" (dict "currentDir" $currentDir "currentPath" $currentPath "candidate" . "exact" true) }}
-                    <li><a class="docs-link{{ if $active }} active{{ end }}" href="{{ .Permalink }}">{{ .Name }}</a></li>
-                  {{ end }}
-                </ul>
-              {{ else }}
-                {{ $active := partial "sidebar/is-active" (dict "currentDir" $currentDir "currentPath" $currentPath "candidate" . "exact" true) }}
-                <li><a class="docs-link{{ if $active }} active{{ end }}" href="{{ .Permalink }}">{{ .Name }}</a></li>
+    {{ if .IsNode }}
+      <h3 class="h6 text-uppercase mb-2">{{ or .LinkTitle .Title }}</h3>
+      <ul class="list-unstyled">
+        {{ range .Pages.ByWeight }}
+          {{ if .IsNode }}
+            {{ $active := partial "sidebar/is-active" (dict "currentDir" $currentDir "currentPath" $currentPath "candidate" .) }}
+            <h4 class="h6 text-uppercase ms-3 mt-3 mb-2">{{ or .LinkTitle .Title }}</h4>
+            <ul class="list-unstyled ms-3">
+              {{ range .Pages.ByWeight }}
+                {{ if .IsNode }}
+                  {{ $active := partial "sidebar/is-active" (dict "currentDir" $currentDir "currentPath" $currentPath "candidate" .) }}
+                  <h5 class="h6 text-uppercase mt-2 mb-2">{{ or .LinkTitle .Title }}</h5>
+                  <ul class="list-unstyled ms-3">
+                    {{ range .Pages.ByWeight }}
+                      {{ $active := partial "sidebar/is-active" (dict "currentDir" $currentDir "currentPath" $currentPath "candidate" . "exact" true) }}
+                      <li><a class="docs-link{{ if $active }} active{{ end }}" href="{{ .Permalink }}">{{ or .LinkTitle .Title }}</a></li>
+                    {{ end }}
+                  </ul>
+                {{ else }}
+                  {{ $active := partial "sidebar/is-active" (dict "currentDir" $currentDir "currentPath" $currentPath "candidate" . "exact" true) }}
+                  <li><a class="docs-link{{ if $active }} active{{ end }}" href="{{ .Permalink }}">{{ or .LinkTitle .Title }}</a></li>
+                {{ end }}
               {{ end }}
-            {{ end }}
-          </ul>
-        {{ else }}
-          {{ $active := partial "sidebar/is-active" (dict "currentDir" $currentDir "currentPath" $currentPath "candidate" . "exact" true) }}
-          <li><a class="docs-link{{ if $active }} active{{ end }}" href="{{ .Permalink }}">{{ .Name }}</a></li>
+            </ul>
+          {{ else }}
+            {{ $active := partial "sidebar/is-active" (dict "currentDir" $currentDir "currentPath" $currentPath "candidate" . "exact" true) }}
+            <li><a class="docs-link{{ if $active }} active{{ end }}" href="{{ .Permalink }}">{{ or .LinkTitle .Title }}</a></li>
+          {{ end }}
         {{ end }}
-      {{ end }}
-    </ul>
+      </ul>
+    {{ else }}
+      {{ $active := partial "sidebar/is-active" (dict "currentDir" $currentDir "currentPath" $currentPath "candidate" . "exact" true) }}
+      <ul class="list-unstyled">
+        <li><a class="docs-link{{ if $active }} active{{ end }}" href="{{ .Permalink }}">{{ or .LinkTitle .Title }}</a></li>
+      </ul>
+    {{ end }}
   {{ end }}
-  {{ range .RegularPages -}}
-    {{ $active := partial "sidebar/is-active" (dict "currentDir" $currentDir "currentPath" $currentPath "candidate" . "exact" true) -}}
-    <ul class="list-unstyled">
-      <li><a class="docs-link{{ if $active }} active{{ end }}" href="{{ .Permalink }}">{{ .Name }}</a></li>
-    </ul>
-  {{- end }}
 {{ end }}

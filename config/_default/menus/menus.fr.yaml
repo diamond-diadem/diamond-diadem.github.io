@@ -24,7 +24,7 @@ main:
     weight: 15
     parent: about-fr
   - name: Codes
-    url: codes/start-here/home/
+    url: codes/home/
     weight: 20
   - name: Workflows
     url: workflows/start-here/home/

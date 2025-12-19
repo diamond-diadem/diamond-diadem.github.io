@@ -1,6 +1,6 @@
 ---
 title: Part 3
-weight: 3
+weight: 4
 ---
 
 <h3 align="center" class="mb-5">{{< inline-svg src="tabler-icons/outline/table-shortcut" class="svg-inline-shortcut">}}Shortcut: choose your code and retrieve it with Apptainer</h3>
