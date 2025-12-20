@@ -24,16 +24,16 @@ main:
     weight: 15
     parent: about-fr
   - name: Codes
-    url: codes/start-here/home/
+    url: codes/home/
     weight: 20
   - name: Workflows
-    url: workflows/start-here/home/
+    url: workflows/home/
     weight: 30
   - name: Données
     url: data/
     weight: 40
   - name: Documentation
-    url: documentation/start-here/home/
+    url: documentation/home/
     weight: 50
   - name: Contact
     url: contact/

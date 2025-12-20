@@ -1,6 +1,6 @@
 ---
 title: WORKFLOWS
-linkTitle: Workflows
+linkTitle: Accueil
 weight: 1
 toc: false
 ---

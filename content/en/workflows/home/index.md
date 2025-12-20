@@ -1,6 +1,6 @@
 ---
 title: WORKFLOWS
-linkTitle: Workflows
+linkTitle: Home
 weight: 1
 toc: false
 ---
