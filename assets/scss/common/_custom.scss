@@ -24,7 +24,6 @@
 }
 
 .dropdown-languages .btn .dropdown-caret {
-    // color: $body-color-dark;
     font-weight: 500;
     min-height: 0;
     position: relative;
@@ -32,14 +31,12 @@
 }
 
 .dropdown-languages .btn .dropdown-caret:hover {
-    // color: $body-color-dark;
     font-weight: 500;
     color: $link-color;
 }
 
 @include color-mode(dark) {
     .dropdown-languages .btn .dropdown-caret:hover {
-        // background-color: $body-bg-dark;
         color: $link-color-dark;
     }
 
@@ -51,11 +48,10 @@
 .dropdown-languages .dropdown-menu {
     min-width: 80px;
     border: 0;
-    margin-top: -5;
+    margin-top: -5px;
 }
 
 .dropdown-languages .dropdown-menu .dropdown-item {
-    // color: $body-color-dark;
     font-weight: 500;
     padding-top: 0;
     padding-bottom: 0;
@@ -170,20 +166,16 @@ u {
 
 .containerised-codes.fr {
     content: url(images/containerised-codes/containerised-codes-light-fr-cropped-nobg.png);
-    // width: 100%;
 }
 .containerised-codes.en {
     content: url(images/containerised-codes/containerised-codes-light-en-cropped-nobg.png);
-    // width: 100%;
 }
 
 .cluster-map.fr {
     content: url(images/cluster-map/cluster-map-light-fr.png);
-    // width: 100%;
 }
 .cluster-map.en {
     content: url(images/cluster-map/cluster-map-light-en.png);
-    // width: 100%;
 }
 
 @include color-mode(dark) {
@@ -201,23 +193,8 @@ u {
     }
 }
 
-// @include media-breakpoint-up(xxl) {
-//     .left-about-containers {
-//         width: 45%;
-//     }
 
-//     .cluster-map {
-//         width: 100%;
-//         padding: 3% 0%;
-//     }
 
-//     .right-about-containers {
-//         width: 55%;
-//         // padding: 40px 10px;
-//         padding-top: 25px;
-//         padding-left: 15px;
-//     }
-// }
 
 @include media-breakpoint-up(xl) {
     .left-about-containers {
@@ -235,9 +212,6 @@ u {
         width: 55%;
         display: flex;
         align-items: center;
-        // padding: 40px 10px;
-        // padding-top: 25px;
-        // padding-left: 15px;
     }
 }
 
@@ -256,9 +230,6 @@ u {
 
     .right-about-containers {
         width: 100%;
-        // padding: 40px 10px;
-        // padding-top: 25px;
-        // padding-left: 15px;
     }
 }
 
@@ -277,9 +248,6 @@ u {
 
     .right-about-containers {
         width: 100%;
-        // padding: 40px 10px;
-        // padding-top: 25px;
-        // padding-left: 15px;
     }
 }
 
@@ -336,7 +304,6 @@ u {
 
 @include media-breakpoint-only(xl) {
     .logo-france2030-desktop {
-        // content: url('images/france-2030-couleurs.png');
         height: 75px;
         margin-right: 10px;
     }
@@ -345,9 +312,6 @@ u {
         margin: 0;
     }
 
-    // .nav-link {
-    //     font-size: 100%
-    // }
 
     .nav-logo {
         height: 50px;
@@ -356,7 +320,6 @@ u {
 
 @include media-breakpoint-only(lg) {
     .logo-france2030-desktop {
-        // content: url('images/france-2030-couleurs.png');
         height: 75px;
         margin-right: 10px;
     }
@@ -365,20 +328,12 @@ u {
         margin: 0;
     }
 
-    // .nav-link {
-    //     font-size: 100%
-    // }
 
     .nav-logo {
         height: 50px;
     }
 }
 
-// @include color-mode(dark) {
-//     .logo-france2030 {
-//         content: url('images/france-2030-blanc.png');
-//     }
-// }
 
 @include media-breakpoint-up(xxl) {
     .logo-france2030-desktop {
@@ -386,25 +341,13 @@ u {
         margin-right: 30px;
     }
 
-    // .nav-item {
-    //     font-weight: $font-weight-normal;
-    //     font-size: $font-size-md;
-    // }
 }
 
 .logo-france2030-mobile {
     height: 90px;
-    // text-align: center;
-    // position: center auto;
 }
 
 @include media-breakpoint-down(lg) {
-    // .anchor-france2030-mobile,
-    // .logo-france2030-mobile {
-    //     text-align: center;
-    //     visibility: visible;
-    // }
-    // .anchor-france2030-desktop,
     .logo-france2030-desktop {
         display: none;
     }
@@ -416,34 +359,11 @@ u {
     }
 }
 
-// .col-default-page {
-//     min-height: 85vh;
-//     display: flex;
-//     flex-direction: column;
-// }
 
-// .container-blog-page {
-//     min-height: 85vh;
-//     display: flex;
-//     flex-direction: column;
-// }
 
-// @include media-breakpoint-up(xl) {
-//     .col-default-page {
-//         min-height: 70vh;
-//     }
 
-// .container-blog-page {
-//     min-height: 70vh;
-// }
 
-// }
 
-// .container-home-page {
-//     min-height: 100vh;
-//     display: flex;
-//     flex-direction: column;
-// }
 
 .footer {
     margin-top: auto;
@@ -472,8 +392,6 @@ u {
 
 .text-like-home-h1 {
     font-size: calc(1.375rem + 1.5vw);
-    // font-size: calc(1.875rem + 1.5vw);
-    // margin-top: -1rem;
 }
 
 .lead {
@@ -506,13 +424,6 @@ u {
         width: 16px;
     }
 
-    // .switch-language-desktop,
-    // .switch-color-mode-desktop,
-    // .search-desktop {
-    //     display: inline-flex;
-    //     align-items: center;
-    //     justify-self: right;
-    // }
     .dropdown-languages {
         width: 70px;
     }
@@ -554,9 +465,6 @@ u {
     z-index: 500;
 }
 
-// #totopbutton {
-//     z-index: 200;
-// }
 
 .docs-sidebar {
     border-right: none;
@@ -633,7 +541,6 @@ tr {
 @include media-breakpoint-up(lg) {
     .docs-sidebar {
         order: 0;
-        // border-right: 1px solid $gray-200;
     }
 
     @supports ((position: -webkit-sticky) or (position: sticky)) {
@@ -690,7 +597,6 @@ tr {
     color: $body-color;
     background-color: transparent;
     border: 0;
-    // justify-content: left;
     text-align: left;
     text-indent: 0;
 }
@@ -781,9 +687,6 @@ hr {
     display: none;
 }
 
-// .form-select {
-//     width: auto;
-// }
 
 // // // <<< <select> in codes home page <<< // // //
 
@@ -808,7 +711,6 @@ hr {
 }
 
 .col-default-page {
-    // margin-bottom: 40px;
     width: 95%;
     margin-left: auto;
     margin-right: auto;
@@ -852,9 +754,6 @@ label {
     .col-6.col-diamond {
         width: 100% !important;
     }
-    // .container-select-1 {
-    //     margin-bottom: 1rem;
-    // }
     .container-pulls-large {
         display: none;
     }
@@ -873,17 +772,8 @@ label {
 }
 ////////////////////////////////
 
-// .error404 {
-//     min-height: 100vh;
-//     display: flex;
-//     flex-direction: column;
-// }
 
-// .card-news-homepage {
 
-//     // border: none;
-//     border-radius: 45px;
-// }
 
 .card-news-homepage {
     background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), var(--bg-image);
@@ -899,7 +789,6 @@ label {
     border: 1px solid black;
     border-radius: 45px;
     margin-bottom: 30px;
-    //
     position: relative;
     padding-inline: 10%;
 }
@@ -919,21 +808,14 @@ label {
     left: 0;
     z-index: 1;
     content: "";
-    //
     border-radius: inherit;
 }
 
-// .stretched-link {
-//     border-radius: inherit;
-// }
 
 .br-inherit {
     border-radius: inherit;
 }
 
-// .container-news-homepage {
-//     margin-bottom: 30px;
-// }
 
 .single,
 .list {
@@ -943,7 +825,6 @@ label {
     flex-direction: column;
 }
 
-// Fade-in effect for elements when they enter the viewport
 .scroll-fade {
     opacity: 0;
     transform: translateY(20px);
@@ -957,13 +838,11 @@ label {
     transform: none;
 }
 
-// fallback si scroll-fade désactivé : rendre visibles tous les éléments
 body:not(.has-scroll-fade) .scroll-fade {
     opacity: 1;
     transform: none;
 }
 
-/* Global bottom margin for all pages */
 .diamond-content {
     padding-bottom: 40px;
 }
@@ -1000,11 +879,6 @@ body:not(.has-scroll-fade) .scroll-fade {
 
 .section-icon.faq {
     content: url(/images/sections-icons/light/faq.png);
-    // max-width: 100px;
-    // display: block;
-    // margin-left: auto;
-    // margin-right: auto;
-    // color: $link-color;
 }
 
 @include color-mode(dark) {
@@ -1014,11 +888,6 @@ body:not(.has-scroll-fade) .scroll-fade {
     }
 }
 
-// @include media-breakpoint-down(lg) {
-//     .diadem-ga-2025 {
-//         width: 200px;
-//     }
-// }
 
 @include media-breakpoint-down(xl) {
     .diadem-ga-2025 {
