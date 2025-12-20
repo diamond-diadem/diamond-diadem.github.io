@@ -1,0 +1,11 @@
+@mixin swap-image($selector, $light-url, $dark-url) {
+    #{$selector} {
+        content: url(#{$light-url});
+    }
+
+    @include color-mode(dark) {
+        #{$selector} {
+            content: url(#{$dark-url});
+        }
+    }
+}
