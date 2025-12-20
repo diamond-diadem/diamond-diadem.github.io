@@ -681,8 +681,9 @@ tr {
 
 .btn-toggle {
     display: inline-flex;
-    align-items: first baseline;
-    padding: 0.25rem 0.5rem 0.25rem 0;
+    align-items: center;
+    position: relative;
+    padding: 0.25rem 0.5rem 0.25rem 1.25rem;
     font-weight: $headings-font-weight;
     font-size: $font-size-base;
     text-transform: uppercase;
@@ -691,7 +692,12 @@ tr {
     border: 0;
     // justify-content: left;
     text-align: left;
-    text-indent: 5px;
+    text-indent: 0;
+}
+
+.btn-toggle::before {
+    position: absolute;
+    left: 0;
 }
 
 .btn-toggle.no-caret::before {
