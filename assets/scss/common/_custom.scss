@@ -497,6 +497,14 @@ u {
     }
 }
 
+@include media-breakpoint-down(lg) {
+    .navbar .offcanvas .navbar-nav {
+        align-self: stretch;
+        width: 100%;
+        align-items: center;
+    }
+}
+
 .switch-language-mobile {
     text-align: right;
     width: 0.7rem;
