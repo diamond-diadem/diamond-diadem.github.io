@@ -477,7 +477,11 @@ u {
 }
 
 .docs-sidebar {
-    padding-right: 15px;
+    padding-right: 10px;
+}
+
+.collapsible-sidebar {
+    padding-right: 10px;
 }
 
 @include media-breakpoint-down(sm) {
