@@ -450,14 +450,14 @@ u {
 }
 
 .diamond-docs-sidebar-container {
-    width: 342px;
+    width: 360px;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
 .docs-sidebar {
-    width: 318px;
+    width: 336px;
 }
 
 @include media-breakpoint-down(md) {
