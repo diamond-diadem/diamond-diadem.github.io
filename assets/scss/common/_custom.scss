@@ -476,6 +476,10 @@ u {
     }
 }
 
+.docs-sidebar {
+    padding-right: 15px;
+}
+
 @include media-breakpoint-down(sm) {
     .navbar .offcanvas.offcanvas-start,
     .navbar .offcanvas.offcanvas-end {
