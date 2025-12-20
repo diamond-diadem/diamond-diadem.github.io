@@ -23,16 +23,13 @@
 
 .youtube-placeholder {
     @extend .tuto-video;
-    // background-image: url(images/youtube-consent/youtube-placeholder-light.svg);
     background-size: cover;
     background-repeat: no-repeat;
-    // margin: 20px 0;
     border: 1px solid black;
     position: relative;
 }
 @include color-mode(dark) {
     .youtube-placeholder {
-        // background-image: url(images/youtube-consent/youtube-placeholder-dark.svg);
         border: 1px solid white;
     }
 }
@@ -72,7 +69,6 @@
     background: white;
     padding: 20px;
     width: 50%;
-    // max-width: 400px;
     max-height: 85%; /* Limite la hauteur à 80% de la hauteur de l'écran */
     overflow-y: auto; /* Permet de défiler verticalement si le contenu dépasse */
     border-radius: 8px;
@@ -168,7 +164,6 @@
         display: flex;
         align-items: right; // Aligner les boutons à droite
         gap: 0.5rem; // Petit écart entre les boutons
-        // margin-top: 1rem; // Espace au-dessus des boutons
 
         button {
             cursor: pointer;
@@ -244,7 +239,6 @@
         padding: 2rem;
         border-radius: 16px;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
-        // max-width: 500px;
         width: auto;
         max-width: 90%;
         position: relative;
@@ -266,7 +260,6 @@
                 input[type="checkbox"] {
                     margin-right: 0.5rem;
                     transform: scale(1.2);
-                    // color: $primary;
                 }
             }
         }
@@ -285,23 +278,13 @@
                 transition: background-color 0.2s ease;
 
                 &.validate-preferences {
-                    // background-color: #007bff;
-                    // color: white;
 
-                    // &:hover {
-                    //   background-color: #0056b3;
-                    // }
                     @extend .btn;
                     @extend .btn-primary;
                 }
 
                 &.cancel-preferences {
-                    // background-color: #ccc;
-                    // color: #333;
 
-                    // &:hover {
-                    //   background-color: #aaa;
-                    // }
                     @extend .btn;
                     @extend .btn-secondary;
                 }
@@ -351,7 +334,6 @@
     }
 
     .cookie-banner-actions {
-        // flex-direction: column; /* Aligne les boutons verticalement */
         margin-right: 3%; /* Espace à droite */
         justify-content: center; /* Centre les boutons */
 
