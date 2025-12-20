@@ -1,7 +1,9 @@
 ---
 title: CODES CONTENEURISÉS
 linkTitle: Accueil
-tablerIcon: "tabler-icons/outline/home"
+weight: 1
+sidebar_link: /codes/home/
+# tablerIcon: "tabler-icons/outline/home"
 toc: false
 layout: codes-home
 seo:
