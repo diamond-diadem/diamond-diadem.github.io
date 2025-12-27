@@ -57,10 +57,14 @@
 }
 @include media-breakpoint-down(sm) {
     .logo-diamond.homepage {
-        max-width: unset;
-        width: 120%;
+        width: 90vw;
+        max-width: none;
         position: relative;
-        left: -10%;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-left: 0;
+        margin-right: 0;
+        display: block;
     }
 }
 // end //

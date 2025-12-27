@@ -46,3 +46,13 @@
 }
 
 // // // <<< sections large icons <<< // // //
+
+
+@include media-breakpoint-down(sm) {
+    .homepage.section-icon {
+        height: 80px;
+    }
+    .section-features {
+        margin-top: 10px;
+    }
+}
