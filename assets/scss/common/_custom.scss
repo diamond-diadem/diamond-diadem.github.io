@@ -900,7 +900,6 @@ body:not(.has-scroll-fade) .scroll-fade {
 @include color-mode(dark) {
     .section-icon.faq {
         content: url(/images/sections-icons/dark/faq.png);
-        color: $link-color-dark;
     }
 }
 
