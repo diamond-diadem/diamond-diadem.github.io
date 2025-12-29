@@ -222,11 +222,6 @@
 }
 
 .logo-gateway {
-    // Sets the font size responsively using the clamp() function:
-    // - Minimum font size: 2rem
-    // - Preferred font size: 10vw (10% of the viewport width)
-    // - Maximum font size: 7.5em
-    // This ensures the text scales smoothly between 2rem and 7.5em based on the viewport width.
     font-size: clamp(4rem, 12vw, 7.5em);
     font-weight: 600;
     letter-spacing: 0.15rem;
