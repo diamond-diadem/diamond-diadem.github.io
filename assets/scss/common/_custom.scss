@@ -916,3 +916,8 @@ body:not(.has-scroll-fade) .scroll-fade {
     white-space: normal;
     overflow-wrap: anywhere;
 }
+
+.search-results .codes-pages-top-logo {
+    pointer-events: none;
+    cursor: default;
+}
