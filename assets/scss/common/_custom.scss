@@ -909,3 +909,10 @@ body:not(.has-scroll-fade) .scroll-fade {
         visibility: hidden;
     }
 }
+
+.search-results .logo-gateway {
+    font-size: clamp(1.5rem, 6vw, 5rem);
+    letter-spacing: 0.05rem;
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
