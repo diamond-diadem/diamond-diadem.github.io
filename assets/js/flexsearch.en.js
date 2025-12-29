@@ -26,13 +26,16 @@ import Index from 'flexsearch';
       id: 'id',
       index: [
         {
-          field: 'title'
+          field: 'title',
+          weight: 6
         },
         {
-          field: 'tags'
+          field: 'tags',
+          weight: 3
         },
         {
-          field: {{ if site.Params.doks.indexSummary }}'summary'{{ else }}'content'{{ end }}
+          field: {{ if site.Params.doks.indexSummary }}'summary'{{ else }}'content'{{ end }},
+          weight: 1
         },
         {
           field:  'date',
@@ -53,7 +56,7 @@ import Index from 'flexsearch';
     const results = document.querySelector('.search-results');
     results.textContent = '';
 
-    const itemsLength = Object.keys(items).length;
+    const itemsLength = items.length;
 
     // Show/hide "No recent searches" and "No search results" messages
     if ((itemsLength === 0) && (queryInput.value === '')) {
@@ -74,8 +77,7 @@ import Index from 'flexsearch';
       document.querySelector('.search-no-results').classList.add('d-none');
     }
 
-    for (const id in items) {
-      const item = items[id];
+    items.forEach(function (item) {
       const result = template.cloneNode(true);
       const a = result.querySelector('a');
       const time = result.querySelector('time');
@@ -85,7 +87,7 @@ import Index from 'flexsearch';
       time.innerText = item.date;
       content.innerHTML = item.summary;
       fragment.appendChild(result);
-    }
+    });
 
     results.appendChild(fragment);
   }
@@ -98,15 +100,21 @@ import Index from 'flexsearch';
       enrich: true,
       limit: limit,
     });
-    const items = {};
+    const scored = new Map();
 
     results.forEach(function (result) {
       result.result.forEach(function (r) {
-        items[r.id] = r.doc;
+        const prev = scored.get(r.id);
+        const score = (prev ? prev.score : 0) + (r.score || 0);
+        scored.set(r.id, { doc: r.doc, score: score });
       });
     });
 
-    showResults(items);
+    const ordered = Array.from(scored.values())
+      .sort(function (a, b) { return b.score - a.score; })
+      .map(function (entry) { return entry.doc; });
+
+    showResults(ordered);
   }
 
   function enableUI() {
