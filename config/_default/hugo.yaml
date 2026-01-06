@@ -10,7 +10,7 @@ languageCode: fr-FR
 pagination:
   pagerSize: 3
 rssLimit: 10
-summarylength: 50
+summarylength: 150
 defaultContentLanguage: fr
 defaultContentLanguageInSubdir: false
 copyRight: DIAMOND - PEPR DIADEM
