@@ -921,3 +921,16 @@ body:not(.has-scroll-fade) .scroll-fade {
     pointer-events: none;
     cursor: default;
 }
+
+.search-result.list-view:hover .card {
+    background-color: var(--bs-card-bg);
+    color: var(--bs-body-color);
+    box-shadow: none;
+}
+
+.search-result.list-view:hover .card h2,
+.search-result.list-view:hover .card .h2,
+.search-result.list-view:hover .card .content a {
+    color: var(--bs-body-color);
+    text-decoration: none;
+}
