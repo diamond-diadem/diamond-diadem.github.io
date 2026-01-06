@@ -552,12 +552,12 @@ function insertBeforeSmallContainerClose(content, block) {
 }
 
 async function updateCodesTable(locale, data, changeLog) {
-    const part2Path = path.join(process.cwd(), 'content', locale, 'codes', 'start-here', 'home', 'part-2.md');
+    const homePath = path.join(process.cwd(), 'content', locale, 'codes', 'home', 'index.md');
     const localePrefix = LOCALE_LINK_PREFIX[locale] ?? '';
     const href = `${localePrefix}/codes/${data.category}/${data.slug}/`;
     const anchor = buildAnchor(href, `icon-${data.slug}`, data.linkTitle);
     const newRow = buildTableRow(locale, data.category, anchor);
-    await modifyFile(part2Path, changeLog, (content) => {
+    await modifyFile(homePath, changeLog, (content) => {
         if (content.includes(href)) {
             return content;
         }
@@ -625,8 +625,8 @@ function updateVisualPart3(content, locale, data) {
 }
 
 async function updateApptainerSelects(locale, data, changeLog) {
-    const part3Path = path.join(process.cwd(), 'content', locale, 'codes', 'start-here', 'home', 'part-3.md');
-    await modifyFile(part3Path, changeLog, (content) => {
+    const homePath = path.join(process.cwd(), 'content', locale, 'codes', 'home', 'index.md');
+    await modifyFile(homePath, changeLog, (content) => {
         if (data.category === 'scientific-computing') {
             return updateScientificPart3(content, locale, data);
         }
