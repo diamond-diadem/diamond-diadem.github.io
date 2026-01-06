@@ -922,15 +922,19 @@ body:not(.has-scroll-fade) .scroll-fade {
     cursor: default;
 }
 
-.search-result.list-view:hover .card {
+.search-result.list-view:hover .card,
+.search-result.list-view.selected .card {
     background-color: var(--bs-card-bg);
     color: var(--bs-body-color);
-    box-shadow: none;
+    box-shadow: 0 0 0 2px var(--bs-link-color);
 }
 
 .search-result.list-view:hover .card h2,
 .search-result.list-view:hover .card .h2,
-.search-result.list-view:hover .card .content a {
+.search-result.list-view:hover .card .content a,
+.search-result.list-view.selected .card h2,
+.search-result.list-view.selected .card .h2,
+.search-result.list-view.selected .card .content a {
     color: var(--bs-body-color);
     text-decoration: none;
 }
