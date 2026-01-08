@@ -922,6 +922,10 @@ body:not(.has-scroll-fade) .scroll-fade {
     cursor: default;
 }
 
+.search-results .search-result .title {
+    font-size: 1.75em;
+}
+
 .search-result.list-view:hover .card,
 .search-result.list-view.selected .card {
     background-color: var(--bs-card-bg);
