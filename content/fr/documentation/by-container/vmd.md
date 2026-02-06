@@ -195,7 +195,7 @@ Comment visualiser une animation contenue dans un fichier avec un conteneur VMD 
 > **Données**
 >
 > - L'image est située au chemin suivant : `$HOME/apptainer-images/vmd.sif`
-> - Les fichier à charger pour visualiser l'animation nous intéressant sont situés dans `$PWD/tutorial-ubiquitin.psf` et `$PWD/tutorial-pulling.dcd` sur la machine hôte.
+> - Les fichiers à charger pour visualiser l'animation nous intéressant sont situés dans `$PWD/tutorial-ubiquitin.psf` et `$PWD/tutorial-pulling.dcd` sur la machine hôte.
 > - Pour mieux visualiser l'étirement de la protéine, il est recommandé de changer de mode de réprésentation, par exemple avec `Graphics > Representation > Drawing Method > NewCartoon`.
 > - On tentera de donner une solution non isolée de la machine hôte, et une solution isolant au maximum le conteneur de la machine hôte.
 
