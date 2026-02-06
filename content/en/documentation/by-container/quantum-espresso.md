@@ -43,7 +43,7 @@ To illustrate the different commands, a set of Quantum Espresso input files is a
 In this tutorial, we will assume that the input files contained in this archive are in the current directory:
 
 ```bash
-tar -xzf DIAMOND-tutorial.tar.gz # Extracts the content of the archive, creates ./tutorial
+tar -xzf qe-tutorial-inputs.tar.gz # Extracts the content of the archive, creates ./tutorial
 cd ./tutorial
 ```
 

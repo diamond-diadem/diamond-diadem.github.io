@@ -106,7 +106,7 @@ $HOME/apptainer-images/ovito.sif POSCAR_Si-diamond
 
 By default, Apptainer does not fully isolate the container from the host system. One can either have partial or total isolation using respectively the flags `--no-mount` or `--no-home` and `--containall` (see [this link](/en/documentation/use/apptainer-isolation-flags/) for more information). In case the `--containall` option is activated, we encounter two difficulties.
 
-#### Sharing graphical tesources
+#### Sharing graphical resources
 
 On one hand, it is possible that an error message appears, informing you that one of the library plugins (`qt.qpa.xcb`), fails to connect to your display resources.
 
@@ -191,7 +191,7 @@ How to visualize only configurations prior to the 100th step of a molecular dyna
 >
 > - The image is located at the following path: `$HOME/apptainer-images/ovito.sif`
 > - The configuration files of the molecular dynamics calculation we are interested in are located in `$PWD/MD` on the host machine.
-> - The configuration files are named `SiC.XXXX.lmp` (the first configuration is `SiC.0000.lmp` and the 42th is `SiC.0425.lmp`, for example).
+> - The configuration files are named `SiC.XXXX.lmp` (the first configuration is `SiC.0000.lmp` and the 42nd is `SiC.0425.lmp`, for example).
 > - Free choice for isolation between the container and the host machine.
 
 Examples of possible answers:

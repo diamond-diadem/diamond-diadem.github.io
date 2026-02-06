@@ -43,7 +43,7 @@ To illustrate the functioning of the visualization program, a set of files reada
 In this tutorial, we assume that the input files contained in this archive are in the current directory:
 
 ```bash
-tar -xzf DIAMOND-tutorial.tar.gz # Extracts the contents of the archive, creating ./tutorial
+tar -xzf paraview-tutorial-inputs.tar.gz # Extracts the contents of the archive, creating ./tutorial
 cd ./tutorial
 ```
 
