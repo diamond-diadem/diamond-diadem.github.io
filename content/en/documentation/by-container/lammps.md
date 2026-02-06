@@ -43,7 +43,7 @@ To illustrate the various commands, a set of LAMMPS input files is available in 
 In this tutorial, we will assume that the input files contained in this archive are in the current directory:
 
 ```bash
-tar -xzf DIAMOND-tutorial.tar.gz # Extracts the content of the archive, creates ./tutorial
+tar -xzf lammps-tutorial-inputs.tar.gz # Extracts the content of the archive, creates ./tutorial
 cd ./tutorial
 ```
 
@@ -193,7 +193,7 @@ apptainer run --bind $HOME/Documents/softs/lammps/potentials/:/usr/share/lammps/
   $HOME/apptainer-images/lammps.sif -in in.file
 ```
 
-- On the other hand, one can also redefine `$LAMMPS_POTENTIALS` (using `--env`) to make it point to another path from the host machine . Here, `$LAMMPS_POTENTIALS` is modified and the code looks for potentials in the newly defined path.
+- On the other hand, one can also redefine `$LAMMPS_POTENTIALS` (using `--env`) to make it point to another path from the host machine. Here, `$LAMMPS_POTENTIALS` is modified and the code looks for potentials in the newly defined path.
 
 ```bash
 # If no isolation option is used, $HOME/Documents/softs/lammps/potentials/
