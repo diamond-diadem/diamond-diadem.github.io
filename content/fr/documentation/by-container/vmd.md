@@ -44,7 +44,7 @@ Pour illustrer le fonctionnement du programme de visualisation, un jeu de fichie
 Dans ce tutoriel, on supposera que les fichiers d'entrée contenus dans cette archive sont dans le répertoire courant :
 
 ```bash
-tar -xzf DIAMOND-tutorial.tar.gz # Extrait le contenu de l'archive, créée ./tutorial
+tar -xzf vmd-tutorial-inputs.tar.gz # Extrait le contenu de l'archive, créée ./tutorial
 cd ./tutorial
 ```
 

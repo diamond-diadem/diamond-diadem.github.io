@@ -43,7 +43,7 @@ To illustrate the various commands, a set of LAMMPS input files is available in 
 In this tutorial, we will assume that the input files contained in this archive are in the current directory:
 
 ```bash
-tar -xzf DIAMOND-tutorial.tar.gz # Extracts the content of the archive, creates ./tutorial
+tar -xzf lammps-tutorial-inputs.tar.gz # Extracts the content of the archive, creates ./tutorial
 cd ./tutorial
 ```
 
