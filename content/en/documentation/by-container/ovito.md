@@ -191,7 +191,7 @@ How to visualize only configurations prior to the 100th step of a molecular dyna
 >
 > - The image is located at the following path: `$HOME/apptainer-images/ovito.sif`
 > - The configuration files of the molecular dynamics calculation we are interested in are located in `$PWD/MD` on the host machine.
-> - The configuration files are named `SiC.XXXX.lmp` (the first configuration is `SiC.0000.lmp` and the 42th is `SiC.0425.lmp`, for example).
+> - The configuration files are named `SiC.XXXX.lmp` (the first configuration is `SiC.0000.lmp` and the 42nd is `SiC.0425.lmp`, for example).
 > - Free choice for isolation between the container and the host machine.
 
 Examples of possible answers:
