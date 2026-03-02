@@ -942,3 +942,20 @@ body:not(.has-scroll-fade) .scroll-fade {
     color: var(--bs-body-color);
     text-decoration: none;
 }
+
+/* Invert only the visible icon in the color mode toggler. */
+html[data-bs-theme="dark"] #buttonColorMode .icon-tabler-sun {
+    display: none;
+}
+
+html[data-bs-theme="dark"] #buttonColorMode .icon-tabler-moon {
+    display: block;
+}
+
+html[data-bs-theme="light"] #buttonColorMode .icon-tabler-sun {
+    display: block;
+}
+
+html[data-bs-theme="light"] #buttonColorMode .icon-tabler-moon {
+    display: none;
+}
