@@ -640,38 +640,38 @@ tr {
 // // // Worflows >>> simple-adsorption-workflow images >>> // // //
 
 .saw-diagram-description {
-    content: url(images/saw-diagram-light.png);
+    content: url(images/workflows/saw/saw-diagram-light.png);
     width: 100%;
 }
 
 @include color-mode(dark) {
     .saw-diagram-description {
-        content: url(images/saw-diagram-dark.png);
+        content: url(images/workflows/saw/saw-diagram-dark.png);
     }
 }
 
 .saw-input-gui-1 {
-    content: url(images/saw-input-gui-1-light.png);
+    content: url(images/workflows/saw/saw-input-gui-1-light.png);
 }
 
 .saw-input-gui-2 {
-    content: url(images/saw-input-gui-2-light.png);
+    content: url(images/workflows/saw/saw-input-gui-2-light.png);
 }
 
 .saw-input-gui-3 {
-    content: url(images/saw-input-gui-3-light.png);
+    content: url(images/workflows/saw/saw-input-gui-3-light.png);
 }
 
 .saw-output-gui-1 {
-    content: url(images/saw-output-gui-1-light.png);
+    content: url(images/workflows/saw/saw-output-gui-1-light.png);
 }
 
 .saw-output-gui-2 {
-    content: url(images/saw-output-gui-2-light.png);
+    content: url(images/workflows/saw/saw-output-gui-2-light.png);
 }
 
 .saw-output-gui-3 {
-    content: url(images/saw-output-gui-3-light.png);
+    content: url(images/workflows/saw/saw-output-gui-3-light.png);
 }
 
 // // // <<< simple-adsorption-workflow images <<< // // //
