@@ -82,11 +82,11 @@
 
 .logo-z-set {
     width: 100%;
-    content: url(images/z-set-light-smaller.png);
+    content: url(images/codes/z-set/z-set-light-smaller.png);
 }
 @include color-mode(dark) {
     .logo-z-set {
-        content: url(images/z-set-dark-smaller.png);
+        content: url(images/codes/z-set/z-set-dark-smaller.png);
     }
 }
 
