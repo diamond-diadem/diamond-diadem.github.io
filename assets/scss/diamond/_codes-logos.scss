@@ -42,11 +42,11 @@
 
 .logo-paraview {
     width: 100%;
-    content: url(images/paraview-logo-light.svg);
+    content: url(images/codes/paraview/paraview-logo-light.svg);
 }
 @include color-mode(dark) {
     .logo-paraview {
-        content: url(images/paraview-logo-dark.svg);
+        content: url(images/codes/paraview/paraview-logo-dark.svg);
     }
 }
 
