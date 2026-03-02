@@ -112,11 +112,11 @@ u {
 }
 
 .logo-apptainer {
-    content: url(images/apptainer-logo.svg);
+    content: url(images/apptainer/apptainer-logo.svg);
 }
 @include color-mode(dark) {
     .logo-apptainer {
-        content: url(images/apptainer-logo-dark.svg);
+        content: url(images/apptainer/apptainer-logo-dark.svg);
     }
 }
 
