@@ -79,12 +79,12 @@
 }
 
 .icon-freefem {
-    background-image: url(images/freefem-icon-light.svg);
+    background-image: url(images/codes/freefem/freefem-icon-light.svg);
     @extend .custom-icon;
 }
 @include color-mode(dark) {
     .icon-freefem {
-        background-image: url(images/freefem-icon-dark.svg);
+        background-image: url(images/codes/freefem/freefem-icon-dark.svg);
     }
 }
 

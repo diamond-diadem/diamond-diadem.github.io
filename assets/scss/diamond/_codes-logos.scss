@@ -92,11 +92,11 @@
 
 .logo-freefem {
     width: 100%;
-    content: url(images/freefem-logo-light.svg);
+    content: url(images/codes/freefem/freefem-logo-light.svg);
 }
 @include color-mode(dark) {
     .logo-freefem {
-        content: url(images/freefem-logo-dark.svg);
+        content: url(images/codes/freefem/freefem-logo-dark.svg);
     }
 }
 
