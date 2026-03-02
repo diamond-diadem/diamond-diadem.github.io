@@ -124,7 +124,7 @@
 }
 
 .icon-zeoplusplus {
-    background-image: url(images/zeo++/icon-zeoplusplus.png);
+    background-image: url(images/codes/zeo++/icon-zeoplusplus.png);
     @extend .custom-icon;
 }
 
@@ -138,12 +138,12 @@
     @extend .custom-icon;
 }
 .icon-xcrysden {
-    background-image: url(images/xcrysden/xcrysden-icon-light.png);
+    background-image: url(images/codes/xcrysden/xcrysden-icon-light.png);
     @extend .custom-icon;
 }
 @include color-mode(dark) {
     .icon-xcrysden {
-        background-image: url(images/xcrysden/xcrysden-icon-dark.png);
+        background-image: url(images/codes/xcrysden/xcrysden-icon-dark.png);
     }
 }
 

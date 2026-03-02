@@ -131,7 +131,7 @@
 }
 
 .logo-zeoplusplus {
-    content: url(images/zeo++/logo-zeoplusplus.png);
+    content: url(images/codes/zeo++/logo-zeoplusplus.png);
     width: 65%;
 }
 
@@ -147,11 +147,11 @@
 
 .logo-xcrysden {
     width: 100%;
-    content: url(images/xcrysden/xcrysden-logo-light.png);
+    content: url(images/codes/xcrysden/xcrysden-logo-light.png);
 }
 @include color-mode(dark) {
     .logo-xcrysden {
-        content: url(images/xcrysden/xcrysden-logo-dark.png);
+        content: url(images/codes/xcrysden/xcrysden-logo-dark.png);
     }
 }
 
