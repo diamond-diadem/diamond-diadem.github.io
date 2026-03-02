@@ -114,12 +114,12 @@
 }
 
 .icon-gmsh {
-    background-image: url(images/gmsh-icon-light.png);
+    background-image: url(images/codes/gmsh/gmsh-icon-light.png);
     @extend .custom-icon;
 }
 @include color-mode(dark) {
     .icon-gmsh {
-        background-image: url(images/gmsh-icon-dark.png);
+        background-image: url(images/codes/gmsh/gmsh-icon-dark.png);
     }
 }
 
