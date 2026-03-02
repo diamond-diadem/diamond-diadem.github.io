@@ -62,11 +62,11 @@
 
 .logo-vmd {
     width: 100%;
-    content: url(images/vmd-logo-light.png);
+    content: url(images/codes/vmd/vmd-logo-light.png);
 }
 @include color-mode(dark) {
     .logo-vmd {
-        content: url(images/vmd-logo-dark.png);
+        content: url(images/codes/vmd/vmd-logo-dark.png);
     }
 }
 

@@ -52,13 +52,13 @@
 }
 
 .icon-vmd {
-    background-image: url(images/vmd-icon-light.png);
+    background-image: url(images/codes/vmd/vmd-icon-light.png);
     @extend .custom-icon;
 }
 
 @include color-mode(dark) {
     .icon-vmd {
-        background-image: url(images/vmd-icon-dark.png);
+        background-image: url(images/codes/vmd/vmd-icon-dark.png);
     }
 }
 
