@@ -10,7 +10,7 @@ backgroundOpacity: 0.18
 # lastmod:
 # expiryDate:
 draft: false
-weight: 5
+weight: 30
 categories: []
 tags: []
 contributors: []
