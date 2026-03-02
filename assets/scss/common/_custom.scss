@@ -121,11 +121,11 @@ u {
 }
 
 .logo-guix {
-    content: url(images/guix-logo-light.svg);
+    content: url(images/guix/guix-logo-light.svg);
 }
 @include color-mode(dark) {
     .logo-guix {
-        content: url(images/guix-logo-dark.svg);
+        content: url(images/guix/guix-logo-dark.svg);
     }
 }
 
