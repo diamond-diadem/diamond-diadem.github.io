@@ -33,7 +33,21 @@ if (homepageBanner) {
             fadeStartPx + 24,
             bannerRect.height
         );
+        const topFadeEndPx = clamp(
+            Math.max(40, bannerRect.height * 0.12),
+            32,
+            bannerRect.height * 0.3
+        );
+        const sideFadeEndPx = clamp(
+            Math.max(28, bannerRect.width * 0.08),
+            24,
+            bannerRect.width * 0.16
+        );
 
+        homepageBanner.style.setProperty('--banner-fade-top-start', '0px');
+        homepageBanner.style.setProperty('--banner-fade-top-end', `${topFadeEndPx}px`);
+        homepageBanner.style.setProperty('--banner-fade-side-start', '0px');
+        homepageBanner.style.setProperty('--banner-fade-side-end', `${sideFadeEndPx}px`);
         homepageBanner.style.setProperty('--banner-fade-start', `${fadeStartPx}px`);
         homepageBanner.style.setProperty('--banner-fade-end', `${fadeEndPx}px`);
     };

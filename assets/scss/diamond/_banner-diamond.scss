@@ -1,26 +1,65 @@
 .section-title-lead-landing-page {
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    --banner-fade-top-start: 0px;
+    --banner-fade-top-end: 56px;
+    --banner-fade-side-start: 0px;
+    --banner-fade-side-end: 48px;
+    --banner-fade-start: 70%;
+    --banner-fade-end: 100%;
+}
+
+.section-title-lead-landing-page::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
     background-image: url(images/banner-diamond/banner-diamond-light.png);
     background-size: cover; //130% auto;
-    height: fit-content;
     background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: center;
-    display: flex;
-    align-items: center;
-    --banner-fade-start: 70%;
-    --banner-fade-end: 100%;
-    -webkit-mask-image: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 1) 0,
-        rgba(0, 0, 0, 1) var(--banner-fade-start),
-        rgba(0, 0, 0, 0) var(--banner-fade-end)
-    );
-    mask-image: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 1) 0,
-        rgba(0, 0, 0, 1) var(--banner-fade-start),
-        rgba(0, 0, 0, 0) var(--banner-fade-end)
-    );
+    -webkit-mask-image:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0) 0,
+            rgba(0, 0, 0, 1) var(--banner-fade-top-end),
+            rgba(0, 0, 0, 1) var(--banner-fade-start),
+            rgba(0, 0, 0, 0) var(--banner-fade-end)
+        ),
+        linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0) 0,
+            rgba(0, 0, 0, 1) var(--banner-fade-side-end),
+            rgba(0, 0, 0, 1) calc(100% - var(--banner-fade-side-end)),
+            rgba(0, 0, 0, 0) 100%
+        );
+    -webkit-mask-composite: source-in;
+    mask-image:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0) 0,
+            rgba(0, 0, 0, 1) var(--banner-fade-top-end),
+            rgba(0, 0, 0, 1) var(--banner-fade-start),
+            rgba(0, 0, 0, 0) var(--banner-fade-end)
+        ),
+        linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0) 0,
+            rgba(0, 0, 0, 1) var(--banner-fade-side-end),
+            rgba(0, 0, 0, 1) calc(100% - var(--banner-fade-side-end)),
+            rgba(0, 0, 0, 0) 100%
+        );
+    mask-composite: intersect;
+}
+
+.section-title-lead-landing-page > .row {
+    position: relative;
+    z-index: 1;
 }
 
 .container-title-homepage h1 {
@@ -57,7 +96,7 @@
 
 
 @include color-mode(dark) {
-    .section-title-lead-landing-page {
+    .section-title-lead-landing-page::before {
         background-image: url(images/banner-diamond/banner-diamond-dark.png);
     }
 }
