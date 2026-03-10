@@ -123,12 +123,12 @@
         left: -10%;
     }
     .container-title-homepage h1 {
-        font-size: $h2-font-size;
+        font-size: calc(#{$h2-font-size} * 0.8);
         position: relative;
         top: -0.1em;
     }
     .container-lead-homepage .lead {
-        font-size: $h4-font-size;
+        font-size: calc(#{$h4-font-size} * 0.8);
         position: relative;
         top: 0.1em;
     }
