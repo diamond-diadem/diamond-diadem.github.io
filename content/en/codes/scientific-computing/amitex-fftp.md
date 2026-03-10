@@ -2,6 +2,7 @@
 title: AMITEX_FFTP
 title_visible: true
 linkTitle: AMITEX_FFTP
+icon: icon-amitex-fftp
 toc: false
 weight: 20
 ---
