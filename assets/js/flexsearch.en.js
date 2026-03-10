@@ -48,6 +48,94 @@ import Index from 'flexsearch';
   });
 
   const queryInput = document.querySelector('.search-text');
+  const searchModal = document.getElementById('searchModal');
+  const recentSelectionLimit = 5;
+  const recentSelectionStorageKey = 'flexsearch-recent-selections{{ if site.Language.Lang }}-{{ site.Language.Lang }}{{ end }}';
+
+  function getRecentSelections() {
+    try {
+      const stored = window.localStorage.getItem(recentSelectionStorageKey);
+      const parsed = stored ? JSON.parse(stored) : [];
+      return Array.isArray(parsed)
+        ? parsed.filter(function (item) {
+          return item
+            && typeof item.title === 'string'
+            && item.title.trim() !== ''
+            && typeof item.permalink === 'string'
+            && item.permalink.trim() !== '';
+        })
+        : [];
+    } catch (error) {
+      return [];
+    }
+  }
+
+  function saveRecentSelection(item) {
+    if (!item || !item.title || !item.permalink) {
+      return;
+    }
+
+    const recentItem = {
+      title: item.title,
+      permalink: item.permalink
+    };
+
+    const nextRecentSelections = [recentItem].concat(
+      getRecentSelections().filter(function (entry) {
+        return entry.permalink !== recentItem.permalink;
+      })
+    ).slice(0, recentSelectionLimit);
+
+    try {
+      window.localStorage.setItem(recentSelectionStorageKey, JSON.stringify(nextRecentSelections));
+    } catch (error) {
+      // Ignore storage failures so search still works in restricted browsers.
+    }
+  }
+
+  function hideStatusMessages() {
+    document.querySelector('.search-no-recent').classList.add('d-none');
+    document.querySelector('.search-no-results').classList.add('d-none');
+  }
+
+  function renderRecentSearches() {
+    const recentSelections = getRecentSelections();
+    const results = document.querySelector('.search-results');
+    results.textContent = '';
+
+    if (recentSelections.length === 0) {
+      document.querySelector('.search-no-results').classList.add('d-none');
+      document.querySelector('.search-no-recent').classList.remove('d-none');
+      return;
+    }
+
+    hideStatusMessages();
+
+    const fragment = document.createDocumentFragment();
+    const section = document.createElement('section');
+    section.className = 'recent-searches mt-3';
+
+    const heading = document.createElement('p');
+    heading.className = 'recent-searches-label text-uppercase fw-semibold mb-3';
+    heading.textContent = '{{ i18n "search_recent_label" }}';
+    section.appendChild(heading);
+
+    const wrapper = document.createElement('div');
+    wrapper.className = 'recent-searches-list';
+
+    recentSelections.forEach(function (item) {
+      const link = document.createElement('a');
+      link.className = 'recent-search-link';
+      link.href = item.permalink;
+      link.innerHTML = '<span class="recent-search-link__title"></span>';
+      link.querySelector('.recent-search-link__title').textContent = item.title;
+      wrapper.appendChild(link);
+    });
+
+    section.appendChild(wrapper);
+    fragment.appendChild(section);
+    results.appendChild(fragment);
+  }
 
   function showResults(items) {
     const template = document.querySelector('template').content;
@@ -59,22 +147,14 @@ import Index from 'flexsearch';
     const itemsLength = items.length;
 
     // Show/hide "No recent searches" and "No search results" messages
-    if ((itemsLength === 0) && (queryInput.value === '')) {
-      // Hide "No search results" message
-      document.querySelector('.search-no-results').classList.add('d-none');
-      // Show "No recent searches" message
-      document.querySelector('.search-no-recent').classList.remove('d-none');
-    } else if ((itemsLength === 0) && (queryInput.value !== '')) {
-      // Hide "No recent searches" message
+    if ((itemsLength === 0) && (queryInput.value !== '')) {
       document.querySelector('.search-no-recent').classList.add('d-none');
       // Show "No search results" message
       const queryNoResults = document.querySelector('.query-no-results');
       queryNoResults.innerText = queryInput.value;
       document.querySelector('.search-no-results').classList.remove('d-none');
     } else {
-      // Hide both "No recent searches" and "No search results" messages
-      document.querySelector('.search-no-recent').classList.add('d-none');
-      document.querySelector('.search-no-results').classList.add('d-none');
+      hideStatusMessages();
     }
 
     items.forEach(function (item) {
@@ -84,6 +164,9 @@ import Index from 'flexsearch';
       const content = result.querySelector('.content');
       a.innerHTML = item.title;
       a.href = item.permalink;
+      a.addEventListener('click', function () {
+        saveRecentSelection(item);
+      });
       time.innerText = item.date;
       content.innerHTML = item.summary;
       fragment.appendChild(result);
@@ -94,6 +177,11 @@ import Index from 'flexsearch';
 
   function doSearch() {
     const query = queryInput.value.trim();
+
+    if (query === '') {
+      renderRecentSearches();
+      return;
+    }
     const limit = {{ .searchLimit }};
     const results = index.search({
       query: query,
@@ -126,9 +214,22 @@ import Index from 'flexsearch';
     searchform.addEventListener('input', function () {
       doSearch();
     });
+    if (searchModal) {
+      searchModal.addEventListener('shown.bs.modal', function () {
+        if (queryInput.value.trim() === '') {
+          renderRecentSearches();
+        }
+        queryInput.focus();
+      });
+      searchModal.addEventListener('hidden.bs.modal', function () {
+        queryInput.value = '';
+        renderRecentSearches();
+      });
+    }
     document.querySelector('.search-loading').classList.add('d-none');
     document.querySelector('.search-input').classList.remove('d-none');
     queryInput.focus();
+    renderRecentSearches();
   }
 
   function buildIndex() {

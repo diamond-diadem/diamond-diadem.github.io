@@ -18,6 +18,7 @@ search_close: fermer
 search_loading: Loading search index…
 search_navigate: parcourir
 search_no_recent: Pas de recherches récentes
+search_recent_label: Recherches récentes
 search_no_results: Pas de résultats pour
 search_placeholder: Recherchez sur ce site
 search_select: sélectionner

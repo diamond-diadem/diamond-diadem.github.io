@@ -19,6 +19,7 @@ search_close: to close
 search_loading: Loading search index…
 search_navigate: to navigate
 search_no_recent: No recent searches
+search_recent_label: Recent Searches
 search_no_results: No results for
 search_placeholder: Search
 search_select: to select
