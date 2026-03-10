@@ -1,11 +1,15 @@
 ---
 title: AMITEX_FFTP
-title_visible: true
+title_visible: false
 linkTitle: AMITEX_FFTP
 icon: icon-amitex-fftp
 toc: false
 weight: 20
 ---
+
+<a href="https://amitexfftp.github.io/AMITEX/index.html" target="_blank" class="codes-pages-top-logo">
+    <img alt="Abinit" class="logo-amitex">
+</a>
 
 ### Récupérez l'image Apptainer
 
