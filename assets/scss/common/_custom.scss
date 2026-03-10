@@ -926,21 +926,35 @@ body:not(.has-scroll-fade) .scroll-fade {
     font-size: 1.75em;
 }
 
-.search-result.list-view:hover .card,
-.search-result.list-view.selected .card {
+.search-result.list-view:hover > .card,
+.search-result.list-view.selected > .card {
     background-color: var(--bs-card-bg);
     color: var(--bs-body-color);
+    border-color: var(--bs-link-color);
     box-shadow: 0 0 0 2px var(--bs-link-color);
 }
 
-.search-result.list-view:hover .card h2,
-.search-result.list-view:hover .card .h2,
-.search-result.list-view:hover .card .content a,
-.search-result.list-view.selected .card h2,
-.search-result.list-view.selected .card .h2,
-.search-result.list-view.selected .card .content a {
+.search-result.list-view:hover > .card h2,
+.search-result.list-view:hover > .card .h2,
+.search-result.list-view:hover > .card .content a,
+.search-result.list-view.selected > .card h2,
+.search-result.list-view.selected > .card .h2,
+.search-result.list-view.selected > .card .content a {
     color: var(--bs-body-color);
     text-decoration: none;
+}
+
+.search-result.list-view:hover > .card .card,
+.search-result.list-view.selected > .card .card {
+    background-color: var(--bs-card-bg);
+    color: var(--bs-body-color);
+    box-shadow: none;
+}
+
+
+.search-result .content .card,
+.search-result .content .card * {
+    pointer-events: none;
 }
 
 /* Invert only the visible icon in the color mode toggler. */
