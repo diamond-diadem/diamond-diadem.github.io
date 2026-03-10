@@ -956,6 +956,14 @@ body:not(.has-scroll-fade) .scroll-fade {
     pointer-events: none;
 }
 
+.home #searchModal .search-result .content .card-nav .card-body {
+    padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+}
+
+.search-result .content .card .card-text {
+    margin-bottom: 0;
+}
+
 html[data-bs-theme="dark"] #buttonColorMode .theme-icon-dark {
     display: none;
 }
