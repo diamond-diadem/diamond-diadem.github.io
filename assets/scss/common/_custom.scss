@@ -418,8 +418,7 @@ u {
     }
 
     .icon-tabler-search,
-    .icon-tabler-moon,
-    .icon-tabler-sun,
+    .icon-tabler-brightness,
     .icon-tabler-chevron-down {
         width: 16px;
     }
@@ -957,19 +956,18 @@ body:not(.has-scroll-fade) .scroll-fade {
     pointer-events: none;
 }
 
-/* Invert only the visible icon in the color mode toggler. */
-html[data-bs-theme="dark"] #buttonColorMode .icon-tabler-sun {
+html[data-bs-theme="dark"] #buttonColorMode .theme-icon-dark {
     display: none;
 }
 
-html[data-bs-theme="dark"] #buttonColorMode .icon-tabler-moon {
+html[data-bs-theme="dark"] #buttonColorMode .theme-icon-light {
     display: block;
 }
 
-html[data-bs-theme="light"] #buttonColorMode .icon-tabler-sun {
+html[data-bs-theme="light"] #buttonColorMode .theme-icon-dark {
     display: block;
 }
 
-html[data-bs-theme="light"] #buttonColorMode .icon-tabler-moon {
+html[data-bs-theme="light"] #buttonColorMode .theme-icon-light {
     display: none;
 }
