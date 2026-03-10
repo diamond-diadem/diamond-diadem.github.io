@@ -135,19 +135,62 @@
 }
 
 .container-h1-default-page {
+    display: flex;
+    align-items: center;
+    height: 150px;
+    justify-content: center;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    --page-title-fade-side-end: 36px;
+    --page-title-fade-start: 100px;
+    --page-title-fade-end: 150px;
+}
+
+.container-h1-default-page::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
     background-image: url(images/banner-diamond/banner-diamond-light.png);
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-position-y: center;
     background-position-x: center;
-    display: flex;
-    align-items: center;
-    height: 150px;
-    justify-content: center;
+    -webkit-mask-image:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 1) 0,
+            rgba(0, 0, 0, 1) var(--page-title-fade-start),
+            rgba(0, 0, 0, 0) var(--page-title-fade-end)
+        ),
+        linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0) 0,
+            rgba(0, 0, 0, 1) var(--page-title-fade-side-end),
+            rgba(0, 0, 0, 1) calc(100% - var(--page-title-fade-side-end)),
+            rgba(0, 0, 0, 0) 100%
+        );
+    -webkit-mask-composite: source-in;
+    mask-image:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 1) 0,
+            rgba(0, 0, 0, 1) var(--page-title-fade-start),
+            rgba(0, 0, 0, 0) var(--page-title-fade-end)
+        ),
+        linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0) 0,
+            rgba(0, 0, 0, 1) var(--page-title-fade-side-end),
+            rgba(0, 0, 0, 1) calc(100% - var(--page-title-fade-side-end)),
+            rgba(0, 0, 0, 0) 100%
+        );
+    mask-composite: intersect;
 }
 
 @include color-mode(dark) {
-    .container-h1-default-page {
+    .container-h1-default-page::before {
         background-image: url(images/banner-diamond/banner-diamond-dark.png);
     }
 }
@@ -165,6 +208,9 @@
 }
 
 .container-h1-default-page h1 {
+    position: relative;
+    z-index: 1;
+    top: -0.12em;
     margin-top: 0;
     margin-bottom: 0;
 }

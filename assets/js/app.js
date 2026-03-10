@@ -19,6 +19,9 @@ import 'js/diamond/synchronised-selects.js';
 // Import homepage-banner-fade.js
 import 'js/diamond/homepage-banner-fade.js';
 
+// Import page-title-banner-fade.js
+import 'js/diamond/page-title-banner-fade.js';
+
 // Import custom.js
 import 'js/custom.js';
 
