@@ -1,0 +1,129 @@
+{{ define "main" }}
+<section class="container mx-auto px-4 py-8">
+  <h1 class="text-3xl font-semibold mb-6">{{ .Page.Param "title" }}</h1>
+
+  <!-- Filters -->
+  <div id="filters" class="grid gap-4 md:grid-cols-4 mb-6">
+    <input id="q" type="search" placeholder={{ .Page.Param "searchboxtext" }}
+           class="border rounded px-3 py-2 w-full" />
+
+    <select id="f-project" class="border rounded px-3 py-2 w-full">
+      <option value="">{{ .Page.Param "filter1" }}</option>
+      {{ $seen := dict }}
+      {{ range .Site.Data.people.people }}
+        {{ with .role }}
+          {{ if not (index $seen .) }}
+            <option>{{ . }}</option>
+            {{ $seen = merge $seen (dict . true) }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+    </select>
+
+    <select id="f-type" class="border rounded px-3 py-2 w-full">
+      <option value="">{{ .Page.Param "filter2" }}</option>
+      {{ $seen := dict }}
+      {{ range .Site.Data.people.people }}
+        {{ with .personnel_type }}
+          {{ if reflect.IsSlice . }}
+            {{ range . }}
+              {{ if not (index $seen .) }}
+                <option>{{ . }}</option>
+                {{ $seen = merge $seen (dict . true) }}
+              {{ end }}
+            {{ end }}
+          {{ else }}
+            {{ if not (index $seen .) }}
+              <option>{{ . }}</option>
+              {{ $seen = merge $seen (dict . true) }}
+            {{ end }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+    </select>
+
+
+    <select id="f-affil" class="border rounded px-3 py-2 w-full">
+      <option value="">{{ .Page.Param "filter3" }}</option>
+      {{ $seen3 := dict }}
+      {{ range .Site.Data.people.people }}
+        {{ with .affiliation }}
+          {{ if not (index $seen3 .) }}
+            <option>{{ . }}</option>
+            {{ $seen3 = merge $seen3 (dict . true) }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+    </select>
+  </div>
+
+  <!-- Grid -->
+  <div id="people-grid" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    {{ range sort .Site.Data.people.people "last_name" }}
+      {{ partial "people/person-card.html" . }}
+    {{ end }}
+  </div>
+
+  <p id="no-results" class="hidden mt-4 text-gray-600">Aucun résultat.</p>
+</section>
+
+<style>
+  .person-card { border: 1px solid #e5e7eb; border-radius: 0.75rem; padding: 1rem; background: #fff; }
+  .person-name { font-weight: 600; font-size: 1.125rem; margin-bottom: .25rem; }
+  .person-role, .person-affil { color: #4b5563; font-size: .95rem; }
+  .pill { display:inline-block; padding:.15rem .5rem; font-size:.75rem; border:1px solid #e5e7eb; border-radius:9999px; margin-right:.25rem; color:#374151; }
+  #people-grid.hidden { display: none; }
+  #no-results.hidden { display: none; }
+</style>
+
+<script>
+(function(){
+  const q = document.getElementById('q');
+  const proj = document.getElementById('f-project');
+  const type = document.getElementById('f-type');
+  const aff = document.getElementById('f-affil');
+  const grid = document.getElementById('people-grid');
+  const cards = Array.from(grid.querySelectorAll('[data-person]'));
+  const empty = document.getElementById('no-results');
+
+  function norm(s){ return (s||'').toLowerCase(); }
+
+  function apply(){
+    const tq = norm(q.value);
+    const tp = norm(proj.value);
+    const tt = norm(type.value);
+    const ta = norm(aff.value);
+
+    let visibleCount = 0;
+    cards.forEach(el=>{
+      const data = {
+        name: norm(el.getAttribute('data-name')),
+        role: norm(el.getAttribute('data-role')),
+        aff: norm(el.getAttribute('data-affiliation')),
+        project: norm(el.getAttribute('data-project')),
+        ptype: norm(el.getAttribute('data-ptype')),
+        email: norm(el.getAttribute('data-email'))
+      };
+
+      const textHit = !tq || [data.name, data.role, data.aff, data.email].some(x=>x.includes(tq));
+      const projHit = !tp || data.role === tp;
+      let typeHit = true;
+      if (tt) {
+        const types = (data.ptype || "").split(",");
+        typeHit = types.includes(tt);
+      }
+      const affHit  = !ta || data.aff === ta;
+
+      const ok = textHit && projHit && typeHit && affHit;
+      el.style.display = ok ? '' : 'none';
+      if (ok) visibleCount++;
+    });
+
+    empty.classList.toggle('hidden', visibleCount !== 0);
+  }
+
+  [q, proj, type, aff].forEach(el => el && el.addEventListener('input', apply));
+  [proj, type, aff].forEach(el => el && el.addEventListener('change', apply));
+})();
+</script>
+{{ end }}

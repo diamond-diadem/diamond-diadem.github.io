@@ -1,0 +1,47 @@
+main:
+  - name: About
+    url: en/about/
+    weight: 10
+    identifier: about-en
+  - name: DIAMOND
+    url: en/about/diamond/
+    weight: 11
+    parent: about-en
+  - name: DIADEM
+    url: en/about/diadem/
+    weight: 12
+    parent: about-en
+  - name: Containers
+    url: en/about/containers/
+    weight: 13
+    parent: about-en
+  - name: Apptainer
+    url: en/about/apptainer/
+    weight: 14
+    parent: about-en
+  - name: Guix
+    url: en/about/guix
+    weight: 15
+    parent: about-en
+  - name: Codes
+    url: en/codes/start-here/home/
+    weight: 20
+  - name: Workflows
+    url: en/workflows/start-here/home/
+    weight: 30
+  - name: Data
+    url: en/data/
+    weight: 40
+  - name: People
+    url: en/people/
+    weight: 45
+  - name: Documentation
+    url: en/documentation/start-here/home/
+    weight: 50
+  - name: Contact
+    url: en/contact/
+    weight: 60
+  - name: News
+    url: en/news/
+    weight: 70
+    identifier: news-en

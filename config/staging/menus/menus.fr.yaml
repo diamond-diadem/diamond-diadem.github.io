@@ -1,0 +1,94 @@
+main:
+  - name: À propos
+    url: about/
+    weight: 10
+    identifier: about-fr
+  - name: DIAMOND
+    url: about/diamond/
+    weight: 11
+    parent: about-fr
+  - name: DIADEM
+    url: about/diadem/
+    weight: 12
+    parent: about-fr
+  - name: Conteneurs
+    url: about/containers/
+    weight: 13
+    parent: about-fr
+  - name: Apptainer
+    url: about/apptainer/
+    weight: 14
+    parent: about-fr
+  - name: Guix
+    url: about/guix/
+    weight: 15
+    parent: about-fr
+  - name: Codes
+    url: codes/start-here/home/
+    weight: 20
+  - name: Workflows
+    url: workflows/start-here/home/
+    weight: 30
+  - name: Données
+    url: data/
+    weight: 40
+  - name: Personnes
+    url: people/
+    weight: 45
+  - name: Documentation
+    url: documentation/start-here/home/
+    weight: 50
+  - name: Contact
+    url: contact/
+    weight: 60
+  - name: Actualités
+    url: news/
+    weight: 70
+    identifier: news-fr
+# codes:
+#     - name: Codes
+#       weight: 10
+#       identifier: codes-fr
+#       parent: ""
+#       url: fr/codes/
+#     - name : Scientific computing
+#       weight : 10
+#       identifier: scientific-computing-fr
+#       parent: codes-fr
+#       url: fr/codes/scientific-computing/
+#     - name : Visualisation
+#       weight : 20
+#       identifier: visualisation-fr
+#       parent: codes-fr
+#       url: fr/codes/visualisation/
+
+# docs:
+#   - name: À propos
+#     url: fr/about/
+#     weight: 10
+#   - name: Codes
+#     url: fr/codes/
+#     weight: 20
+#   - name: Workflows
+#     url: fr/workflows/
+#     weight: 30
+#   - name: Données
+#     url: fr/data/
+#     weight: 40
+#   - name: Documentation
+#     url: fr/documentation/
+#     weight: 50
+
+# docs:
+#   - name: DIADEM
+#     weight: 10
+#     identifier: diadem-fr
+#     url: fr/about/diadem/
+#   - name: Conteneurs
+#     weight: 20
+#     identifier: containers-fr
+#     url: fr/about/containers/
+#   - name: DIADEM
+#     weight: 30
+#     identifier: apptainer-fr
+#     url: fr/about/apptainer/

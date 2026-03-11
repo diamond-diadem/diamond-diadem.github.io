@@ -1,0 +1,150 @@
+{{ define "main" }}
+{{/* Determine slug for lookup (content front matter can set slug explicitly) */}}
+{{ $slug := .Params.slug | default .File.BaseFileName }}
+{{ $fromData := index (where .Site.Data.people.people "slug" $slug) 0 }}
+
+{{/* Merge precedence: page params override data file if set */}}
+{{ $person := dict
+  "name"           (default (index $fromData "name") .Params.title)
+  "first_name"     (default (index $fromData "first_name") .Params.first_name)
+  "last_name"      (default (index $fromData "last_name") .Params.last_name)
+  "email"          (default (index $fromData "email") .Params.email)
+  "affiliation"    (default (index $fromData "affiliation") .Params.affiliation)
+  "role"           (default (index $fromData "role") .Params.role)
+  "project"        (default (index $fromData "project") .Params.project)
+  "personnel_type" (default (index $fromData "personnel_type") .Params.personnel_type)
+  "photo"          (default (index $fromData "photo") .Params.photo)
+  "website"        (default (index $fromData "website") .Params.website)
+  "orcid"          (default (index $fromData "orcid") .Params.orcid)
+  "github"         (default (index $fromData "github") .Params.github)
+  "links"          (default (index $fromData "links") .Params.links)
+  "bio"            (default (index $fromData "bio") (.RawContent | plainify | default "" ))
+}}
+
+<section class="person-wrap">
+  <div class="person-grid">
+    <!-- Left: Photo + Buttons -->
+    <aside class="person-aside">
+      <div class="person-photo">
+        {{ with (index $person "photo") }}
+          <img src="{{ . }}" alt="Photo de {{ index $person "name" }}">
+        {{ else }}
+          <div class="person-initials">
+            {{ substr (default "" (index $person "first_name")) 0 1 }}{{ substr (default "" (index $person "last_name")) 0 1 }}
+          </div>
+        {{ end }}
+      </div>
+
+      <div class="person-actions">
+        {{ with (index $person "email") }}
+          <a class="pbtn" href="mailto:{{ . }}" aria-label="Envoyer un email">
+            <!-- envelope icon -->
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v1.2l10 5.8 10-5.8V6a2 2 0 0 0-2-2Zm0 5.4-8.8 5.1a1 1 0 0 1-1 0L2 9.4V18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9.4Z" fill="currentColor"/></svg>
+            <span>Email</span>
+          </a>
+        {{ end }}
+
+        {{ with (index $person "website") }}
+          <a class="pbtn" href="{{ . }}" target="_blank" rel="noopener" aria-label="Site web">
+            <!-- link icon -->
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l2.83-2.83a5 5 0 0 0-7.07-7.07L11 4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M14 11a5 5 0 0 0-7.07 0L4.1 13.83a5 5 0 1 0 7.07 7.07L13 20" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            <span>Site</span>
+          </a>
+        {{ end }}
+
+        {{ with (index $person "orcid") }}
+          <a class="pbtn" href="https://orcid.org/{{ . }}" target="_blank" rel="noopener" aria-label="ORCID">
+            <!-- ORCID circle -->
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="currentColor"/><text x="12" y="16" text-anchor="middle" font-size="10" fill="#fff" font-family="system-ui, sans-serif">iD</text></svg>
+            <span>ORCID</span>
+          </a>
+        {{ end }}
+
+        {{ with (index $person "github") }}
+          <a class="pbtn" href="https://github.com/{{ . }}" target="_blank" rel="noopener" aria-label="GitHub">
+            <!-- GitHub mark -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            <span>GitHub</span>
+          </a>
+        {{ end }}
+
+        {{ with (index $person "links") }}
+          {{ range . }}
+            {{ $label := .label | default .url }}
+            {{ $url := .url }}
+            {{ $isLinkedIn := (in (lower $url) "linkedin.com") }}
+            <a class="pbtn{{ if $isLinkedIn }} pbtn-ln{{ end }}" href="{{ $url }}" target="_blank" rel="noopener">
+              {{ if $isLinkedIn }}
+                <!-- LinkedIn icon -->
+                <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.49 1s2.49 1.12 2.49 2.5ZM.5 8.5h4V23h-4V8.5Zm7 0h3.8v2h.1c.5-.9 1.9-2.2 3.9-2.2 4.2 0 5 2.8 5 6.4V23h-4v-6.5c0-1.6 0-3.7-2.2-3.7s-2.5 1.7-2.5 3.6V23h-4V8.5Z" fill="currentColor"/></svg>
+              {{ end }}
+              <span>{{ $label }}</span>
+            </a>
+          {{ end }}
+        {{ end }}
+      </div>
+    </aside>
+
+    <!-- Right: Name + Meta + Bio -->
+    <main class="person-main">
+      <h1 class="person-name">{{ index $person "name" }}</h1>
+
+      <div class="person-meta">
+        {{ with (index $person "role") }}<span class="pill">{{ . }}</span>{{ end }}
+        {{ with (index $person "affiliation") }}<span class="pill">{{ . }}</span>{{ end }}
+        {{ with (index $person "project") }}<span class="pill">Projet: {{ . }}</span>{{ end }}
+        {{ with (index $person "personnel_type") }}
+          {{ if reflect.IsSlice . }}
+            {{ range . }}<span class="pill">{{ . }}</span>{{ end }}
+          {{ else }}
+            <span class="pill">{{ . }}</span>
+          {{ end }}
+        {{ end }}
+      </div>
+
+      {{ with .Content }}
+        <div class="prose">{{ . }}</div>
+      {{ else }}
+        {{ with (index $person "bio") }}
+          <divdiv class="prose">{{ . | markdownify }}</div>
+        {{ end }}
+      {{ end }}
+    </main>
+  </div>
+</section>
+
+<style>
+/* Layout */
+.person-wrap { max-width: 1100px; margin: 0 auto; padding: 2rem 1rem; }
+.person-grid { display: grid; grid-template-columns: 320px 1fr; gap: 2rem; }
+@media (max-width: 900px) { .person-grid { grid-template-columns: 1fr; } }
+
+/* Photo */
+.person-photo { width: 260px; height: 260px; border-radius: 1.25rem; overflow: hidden; background: #e5e7eb; }
+.person-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.person-initials { width: 260px; height: 260px; border-radius: 1.25rem; display:flex; align-items:center; justify-content:center; font-size: 2rem; font-weight: 700; color:#374151; background:#e5e7eb; }
+@media (max-width: 900px) { .person-photo, .person-initials { width: 220px; height: 220px; } }
+
+/* Buttons */
+.person-actions { margin-top: 1rem; display: grid; grid-template-columns: 1fr 1fr; gap: .5rem; }
+@media (max-width: 480px) { .person-actions { grid-template-columns: 1fr; } }
+.pbtn { display: inline-flex; align-items: center; gap: .5rem; padding: .55rem .8rem; border: 1px solid #e5e7eb; border-radius: .65rem; background: #f9fafb; color: #111827; text-decoration: none; font-size: .95rem; line-height: 1; }
+.pbtn:hover { background: #f3f4f6; }
+.pbtn:active { background: #e5e7eb; }
+.pbtn svg { flex: 0 0 auto; }
+.pbtn-ln { background: #0a66c2; border-color: #0a66c2; color: #fff; }
+.pbtn-ln:hover { background: #0959a8; }
+
+/* Main content */
+.person-name { font-size: 2rem; font-weight: 650; margin: 0 0 .25rem; }
+.person-meta { display:flex; flex-wrap: wrap; gap: .5rem; margin: .5rem 0 1rem; }
+.pill { display:inline-block; padding: .25rem .6rem; font-size: .85rem; border-radius: 999px; background: #eef2ff; color: #1e3a8a; border: 1px solid #c7d2fe; }
+
+/* Prose (lightweight) */
+.prose { margin-top: 1rem; }
+.prose p { margin: .75rem 0; }
+.prose a { color: #1d4ed8; text-decoration: underline; }
+.prose ul, .prose ol { padding-left: 1.25rem; margin: .5rem 0; }
+</style>
+{{ end }}
+
