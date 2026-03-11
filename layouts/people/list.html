@@ -27,7 +27,31 @@
         {{ $seen := dict }}
         {{ range .Site.Data.people.people }}
           {{ with .role }}
-            {{ if not (index $seen .) }}
+            {{ if and (eq . "Coordinator") (not (index $seen .)) }}
+              <option value="{{ . }}">{{ if $isFr }}{{ or (index $roleTranslations .) . }}{{ else }}{{ . }}{{ end }}</option>
+              {{ $seen = merge $seen (dict . true) }}
+            {{ end }}
+          {{ end }}
+        {{ end }}
+        {{ range .Site.Data.people.people }}
+          {{ with .role }}
+            {{ if and (eq . "Codes and Workflows Platform") (not (index $seen .)) }}
+              <option value="{{ . }}">{{ if $isFr }}{{ or (index $roleTranslations .) . }}{{ else }}{{ . }}{{ end }}</option>
+              {{ $seen = merge $seen (dict . true) }}
+            {{ end }}
+          {{ end }}
+        {{ end }}
+        {{ range .Site.Data.people.people }}
+          {{ with .role }}
+            {{ if and (eq . "Materials Database Infrastructure") (not (index $seen .)) }}
+              <option value="{{ . }}">{{ if $isFr }}{{ or (index $roleTranslations .) . }}{{ else }}{{ . }}{{ end }}</option>
+              {{ $seen = merge $seen (dict . true) }}
+            {{ end }}
+          {{ end }}
+        {{ end }}
+        {{ range .Site.Data.people.people }}
+          {{ with .role }}
+            {{ if and (ne . "Coordinator") (ne . "Codes and Workflows Platform") (ne . "Materials Database Infrastructure") (not (index $seen .)) }}
               <option value="{{ . }}">{{ if $isFr }}{{ or (index $roleTranslations .) . }}{{ else }}{{ . }}{{ end }}</option>
               {{ $seen = merge $seen (dict . true) }}
             {{ end }}

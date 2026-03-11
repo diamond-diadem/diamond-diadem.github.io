@@ -10,7 +10,7 @@ mainSections:
   - news
 diamond:
   enableNews: true
-  enableTeamPage: false
+  enableTeamPage: true
   sectionsIcons: true
   cookiesConsent: true
   enableScrollFade: true
