@@ -55,7 +55,10 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     window.gtag = gtag;
     gtag('js', new Date());
-    gtag('config', window.analyticsSettings.gaId);
+    gtag('config', window.analyticsSettings.gaId, {
+      // GitHub Pages runs on a public suffix; pin the cookie domain to the current host.
+      cookie_domain: window.location.hostname
+    });
   }
 
   function adjustFontSize(placeholder) {
