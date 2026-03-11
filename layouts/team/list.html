@@ -9,10 +9,15 @@
     "Machine Learning Interatomic Potentials" "Potentiels Interatomiques Machine Learning"
     "Materials Database Infrastructure" "Infrastructure de Bases de Données Matériaux"
   }}
-  {{ $typeTranslations := dict
+  {{ $typeTranslationsFr := dict
     "Project Coordinator" "Coordinateur de projet"
     "Scientifique" "Scientifique"
     "Responsable scientifique" "Responsable scientifique"
+  }}
+  {{ $typeTranslationsEn := dict
+    "Project Coordinator" "Project Coordinator"
+    "Scientifique" "Scientist"
+    "Responsable scientifique" "Scientific Lead"
   }}
 
   <!-- Filters -->
@@ -70,13 +75,13 @@
             {{ if reflect.IsSlice . }}
               {{ range . }}
                 {{ if not (index $seen .) }}
-                  <option value="{{ . }}">{{ if $isFr }}{{ or (index $typeTranslations .) . }}{{ else }}{{ . }}{{ end }}</option>
+                  <option value="{{ . }}">{{ if $isFr }}{{ or (index $typeTranslationsFr .) . }}{{ else }}{{ or (index $typeTranslationsEn .) . }}{{ end }}</option>
                   {{ $seen = merge $seen (dict . true) }}
                 {{ end }}
               {{ end }}
             {{ else }}
               {{ if not (index $seen .) }}
-                <option value="{{ . }}">{{ if $isFr }}{{ or (index $typeTranslations .) . }}{{ else }}{{ . }}{{ end }}</option>
+                <option value="{{ . }}">{{ if $isFr }}{{ or (index $typeTranslationsFr .) . }}{{ else }}{{ or (index $typeTranslationsEn .) . }}{{ end }}</option>
                 {{ $seen = merge $seen (dict . true) }}
               {{ end }}
             {{ end }}
