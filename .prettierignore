@@ -4,7 +4,6 @@
 *.jp*g
 *.toml
 *.*ignore
-<<<<<<< HEAD
 *.svg
 *.xml
 LICENSE
@@ -12,11 +11,3 @@ LICENSE
 .gitkeep
 *.woff*
 assets/js/flexsearch*.js
-=======
-*.svg
-*.xml
-LICENSE
-.npmrc
-.gitkeep
-*.woff*
->>>>>>> team-page
