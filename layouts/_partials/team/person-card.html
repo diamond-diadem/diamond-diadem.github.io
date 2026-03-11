@@ -1,3 +1,21 @@
+{{ $isFr := eq site.Language.Lang "fr" }}
+{{ $roleTranslations := dict
+  "Codes and Workflows Platform" "Plateforme Codes et Workflows"
+  "Coordinator" "Coordination"
+  "Machine Learning Interatomic Potentials" "Potentiels Interatomiques Machine Learning"
+  "Machine Learning Interatomic Potemtials" "Potentiels Interatomiques Machine Learning"
+  "Materials Database Infrastructure" "Infrastructure de Bases de Donnees Materiaux"
+}}
+{{ $typeTranslationsFr := dict
+  "Project Coordinator" "Coordinateur de projet"
+  "Scientifique" "Scientifique"
+  "Responsable scientifique" "Responsable scientifique"
+}}
+{{ $typeTranslationsEn := dict
+  "Project Coordinator" "Project Coordinator"
+  "Scientifique" "Scientist"
+  "Responsable scientifique" "Scientific Lead"
+}}
 <div class="person-card" data-person
      data-name="{{ .name }}"
      data-role="{{ .role }}"
@@ -7,7 +25,7 @@
      data-email="{{ .email }}">
   <div class="flex items-start gap-3">
     {{ with .photo }}
-      <img class="person-avatar" src="{{ . }}" alt="Photo de {{ $.name }}">
+      <img class="person-avatar" src="{{ . }}" alt="{{ if $isFr }}Photo de{{ else }}Photo of{{ end }} {{ $.name }}">
     {{ else }}
       <div class="person-avatar person-avatar-fallback">
         {{ (index (split (default "" $.first_name) "") 0) }}{{ (index (split (default "" $.last_name) "") 0) }}
@@ -18,7 +36,7 @@
       <div class="person-name">
         <a href="{{ (printf "/team/%s/" .slug) | relLangURL }}">{{ .name }}</a>
       </div>
-      {{ with .role }}<div class="person-role">{{ . }}</div>{{ end }}
+      {{ with .role }}<div class="person-role">{{ if $isFr }}{{ or (index $roleTranslations .) . }}{{ else }}{{ . }}{{ end }}</div>{{ end }}
       {{ with .affiliation }}<div class="person-affil">{{ . }}</div>{{ end }}
 
       {{ with .bio }}
@@ -31,17 +49,17 @@
         {{ with .personnel_type }}
           {{ if reflect.IsSlice . }}
             {{ range . }}
-              <span class="pill">{{ . }}</span>
+              <span class="pill">{{ if $isFr }}{{ or (index $typeTranslationsFr .) . }}{{ else }}{{ or (index $typeTranslationsEn .) . }}{{ end }}</span>
             {{ end }}
           {{ else }}
-            <span class="pill">{{ . }}</span>
+            <span class="pill">{{ if $isFr }}{{ or (index $typeTranslationsFr .) . }}{{ else }}{{ or (index $typeTranslationsEn .) . }}{{ end }}</span>
           {{ end }}
         {{ end }}
       </div>
 
       <div class="mt-2 text-sm">
         {{ with .email }}<a href="mailto:{{ . }}">{{ . }}</a>{{ end }}
-        {{ with .website }} · <a href="{{ . }}" target="_blank" rel="noopener">Site</a>{{ end }}
+        {{ with .website }} · <a href="{{ . }}" target="_blank" rel="noopener">{{ if $isFr }}Site{{ else }}Website{{ end }}</a>{{ end }}
         {{ with .orcid }} · <a href="https://orcid.org/{{ . }}" target="_blank" rel="noopener">ORCID</a>{{ end }}
         {{ with .github }} · <a href="https://github.com/{{ . }}" target="_blank" rel="noopener">GitHub</a>{{ end }}
       </div>

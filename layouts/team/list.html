@@ -7,6 +7,7 @@
     "Codes and Workflows Platform" "Plateforme Codes et Workflows"
     "Coordinator" "Coordination"
     "Machine Learning Interatomic Potentials" "Potentiels Interatomiques Machine Learning"
+    "Machine Learning Interatomic Potemtials" "Potentiels Interatomiques Machine Learning"
     "Materials Database Infrastructure" "Infrastructure de Bases de Données Matériaux"
   }}
   {{ $typeTranslationsFr := dict
@@ -129,7 +130,7 @@
     <button id="people-next" type="button" class="people-page-btn">{{ if eq .Site.Language.Lang "fr" }}Suivant{{ else }}Next{{ end }}</button>
   </div>
 
-  <p id="no-results" class="hidden mt-4 text-gray-600">Aucun résultat.</p>
+  <p id="no-results" class="hidden mt-4 text-gray-600">{{ if eq .Site.Language.Lang "fr" }}Aucun resultat.{{ else }}No results.{{ end }}</p>
 </section>
 
 <style>

@@ -8,4 +8,4 @@ filter3: Affiliation
 searchboxtext: Search (name, role, affiliation)…
 ---
 
-List of the people that make the DIAMOND projec.
+List of the people who make up the DIAMOND project.

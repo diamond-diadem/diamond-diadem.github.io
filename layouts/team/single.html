@@ -3,6 +3,35 @@
 {{/* Determine slug for lookup (content front matter can set slug explicitly) */}}
 {{ $slug := .Params.slug | default .File.BaseFileName }}
 {{ $fromData := index (where .Site.Data.team.team "slug" $slug) 0 }}
+{{ $isFr := eq .Site.Language.Lang "fr" }}
+{{ $roleTranslations := dict
+  "Codes and Workflows Platform" "Plateforme Codes et Workflows"
+  "Coordinator" "Coordination"
+  "Machine Learning Interatomic Potentials" "Potentiels Interatomiques Machine Learning"
+  "Machine Learning Interatomic Potemtials" "Potentiels Interatomiques Machine Learning"
+  "Materials Database Infrastructure" "Infrastructure de Bases de Donnees Materiaux"
+}}
+{{ $typeTranslationsFr := dict
+  "Project Coordinator" "Coordinateur de projet"
+  "Scientifique" "Scientifique"
+  "Responsable scientifique" "Responsable scientifique"
+}}
+{{ $typeTranslationsEn := dict
+  "Project Coordinator" "Project Coordinator"
+  "Scientifique" "Scientist"
+  "Responsable scientifique" "Scientific Lead"
+}}
+{{ $renderedContent := "" }}
+{{ if .RawContent }}
+  {{ $renderedContent = .RawContent }}
+  {{ if not $isFr }}
+    {{ $renderedContent = replaceRE "\\*\\*R[oô]le ?:?\\*\\*" "**Role:**" $renderedContent }}
+    {{ $renderedContent = replaceRE "\\*\\*Affiliation ?:?\\*\\*" "**Affiliation:**" $renderedContent }}
+    {{ $renderedContent = replaceRE "\\*\\*Type ?:?\\*\\*" "**Type:**" $renderedContent }}
+    {{ $renderedContent = replaceRE "Responsable scientifique" "Scientific Lead" $renderedContent }}
+    {{ $renderedContent = replaceRE "Scientifique" "Scientist" $renderedContent }}
+  {{ end }}
+{{ end }}
 
 {{/* Merge precedence: page params override data file if set */}}
 {{ $person := dict
@@ -28,7 +57,7 @@
     <aside class="person-aside">
       <div class="person-photo">
         {{ with (index $person "photo") }}
-          <img src="{{ . }}" alt="Photo de {{ index $person "name" }}">
+          <img src="{{ . }}" alt="{{ if $isFr }}Photo de{{ else }}Photo of{{ end }} {{ index $person "name" }}">
         {{ else }}
           <div class="person-initials">
             {{ substr (default "" (index $person "first_name")) 0 1 }}{{ substr (default "" (index $person "last_name")) 0 1 }}
@@ -38,7 +67,7 @@
 
       <div class="person-actions">
         {{ with (index $person "email") }}
-          <a class="pbtn" href="mailto:{{ . }}" aria-label="Envoyer un email">
+          <a class="pbtn" href="mailto:{{ . }}" aria-label="{{ if $isFr }}Envoyer un email{{ else }}Send an email{{ end }}">
             <!-- envelope icon -->
             <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v1.2l10 5.8 10-5.8V6a2 2 0 0 0-2-2Zm0 5.4-8.8 5.1a1 1 0 0 1-1 0L2 9.4V18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9.4Z" fill="currentColor"/></svg>
             <span>Email</span>
@@ -46,10 +75,10 @@
         {{ end }}
 
         {{ with (index $person "website") }}
-          <a class="pbtn" href="{{ . }}" target="_blank" rel="noopener" aria-label="Site web">
+          <a class="pbtn" href="{{ . }}" target="_blank" rel="noopener" aria-label="{{ if $isFr }}Site web{{ else }}Website{{ end }}">
             <!-- link icon -->
             <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l2.83-2.83a5 5 0 0 0-7.07-7.07L11 4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M14 11a5 5 0 0 0-7.07 0L4.1 13.83a5 5 0 1 0 7.07 7.07L13 20" fill="none" stroke="currentColor" stroke-width="2"/></svg>
-            <span>Site</span>
+            <span>{{ if $isFr }}Site{{ else }}Website{{ end }}</span>
           </a>
         {{ end }}
 
@@ -98,23 +127,23 @@
       <h1 class="person-name">{{ index $person "name" }}</h1>
 
       <div class="person-meta">
-        {{ with (index $person "role") }}<span class="pill">{{ . }}</span>{{ end }}
+        {{ with (index $person "role") }}<span class="pill">{{ if $isFr }}{{ or (index $roleTranslations .) . }}{{ else }}{{ . }}{{ end }}</span>{{ end }}
         {{ with (index $person "affiliation") }}<span class="pill">{{ . }}</span>{{ end }}
-        {{ with (index $person "project") }}<span class="pill">Projet: {{ . }}</span>{{ end }}
+        {{ with (index $person "project") }}<span class="pill">{{ . }}</span>{{ end }}
         {{ with (index $person "personnel_type") }}
           {{ if reflect.IsSlice . }}
-            {{ range . }}<span class="pill">{{ . }}</span>{{ end }}
+            {{ range . }}<span class="pill">{{ if $isFr }}{{ or (index $typeTranslationsFr .) . }}{{ else }}{{ or (index $typeTranslationsEn .) . }}{{ end }}</span>{{ end }}
           {{ else }}
-            <span class="pill">{{ . }}</span>
+            <span class="pill">{{ if $isFr }}{{ or (index $typeTranslationsFr .) . }}{{ else }}{{ or (index $typeTranslationsEn .) . }}{{ end }}</span>
           {{ end }}
         {{ end }}
       </div>
 
-      {{ with .Content }}
-        <div class="prose">{{ . }}</div>
+      {{ with $renderedContent }}
+        <div class="prose">{{ . | markdownify }}</div>
       {{ else }}
         {{ with (index $person "bio") }}
-          <divdiv class="prose">{{ . | markdownify }}</div>
+          <div class="prose">{{ . | markdownify }}</div>
         {{ end }}
       {{ end }}
     </main>
