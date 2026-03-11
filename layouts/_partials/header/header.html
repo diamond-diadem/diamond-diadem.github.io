@@ -150,7 +150,7 @@
           {{ $displayNews := (ge (len ($newsPages)) 1) }}
           {{ range .Site.Menus.main -}}
             {{- $displayTeam := site.Params.diamond.enableTeamPage | default true -}}
-            {{- $isTeamEntry := or (eq .URL "people/") (eq .URL "en/people/") -}}
+            {{- $isTeamEntry := or (eq .URL "team/") (eq .URL "en/team/") -}}
             {{- if and (not $displayTeam) $isTeamEntry -}}
               {{- continue -}}
             {{- end -}}
