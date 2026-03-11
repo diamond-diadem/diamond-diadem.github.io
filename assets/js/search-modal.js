@@ -90,39 +90,50 @@ import { Modal } from 'bootstrap';
   document.addEventListener(
     'keydown',
     function (event) {
-      const len = searchResults.getElementsByTagName('article').length - 1;
+      const articles = searchResults.getElementsByTagName('article');
+      const len = articles.length - 1;
+
+      if (len < 0) {
+        if (searchResultSelected) {
+          removeClass(searchResultSelected, 'selected');
+          searchResultSelected = undefined;
+          index = -1;
+        }
+        return;
+      }
+
       if (event.key === 'ArrowDown') {
         index++;
         if (searchResultSelected) {
           removeClass(searchResultSelected, 'selected');
-          const next = searchResults.getElementsByTagName('article')[index];
+          const next = articles[index];
           if (typeof next !== 'undefined' && index <= len) {
             searchResultSelected = next;
           } else {
             index = 0;
-            searchResultSelected = searchResults.getElementsByTagName('article')[0];
+            searchResultSelected = articles[0];
           }
           addClass(searchResultSelected, 'selected');
         } else {
           index = 0;
-          searchResultSelected = searchResults.getElementsByTagName('article')[0];
+          searchResultSelected = articles[0];
           addClass(searchResultSelected, 'selected');
         }
       } else if (event.key === 'ArrowUp') {
         if (searchResultSelected) {
           removeClass(searchResultSelected, 'selected');
           index--;
-          const next = searchResults.getElementsByTagName('article')[index];
+          const next = articles[index];
           if (typeof next !== 'undefined' && index >= 0) {
             searchResultSelected = next;
           } else {
             index = len;
-            searchResultSelected = searchResults.getElementsByTagName('article')[len];
+            searchResultSelected = articles[len];
           }
           addClass(searchResultSelected, 'selected');
         } else {
           index = 0;
-          searchResultSelected = searchResults.getElementsByTagName('article')[len];
+          searchResultSelected = articles[len];
           addClass(searchResultSelected, 'selected');
         }
       }
