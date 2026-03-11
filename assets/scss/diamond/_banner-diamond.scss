@@ -93,8 +93,6 @@
     top: 0.35em;
 }
 
-
-
 @include color-mode(dark) {
     .section-title-lead-landing-page::before {
         background-image: url(images/banner-diamond/banner-diamond-dark.png);
@@ -111,9 +109,6 @@
         width: 100%;
     }
 }
-
-
-
 
 @include media-breakpoint-down(sm) {
     .section-title-lead-landing-page {

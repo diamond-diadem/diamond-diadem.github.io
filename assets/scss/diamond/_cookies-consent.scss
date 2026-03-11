@@ -278,13 +278,11 @@
                 transition: background-color 0.2s ease;
 
                 &.validate-preferences {
-
                     @extend .btn;
                     @extend .btn-primary;
                 }
 
                 &.cancel-preferences {
-
                     @extend .btn;
                     @extend .btn-secondary;
                 }

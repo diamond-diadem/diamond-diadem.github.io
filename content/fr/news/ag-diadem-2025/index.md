@@ -45,7 +45,7 @@ seo:
 
 L'Assemblée Générale 2025 du PEPR DIADEM, programme de France 2030 piloté par le CEA et le CNRS et dédié à la découverte accélérée de matériaux innovants assistée par Intelligence Artificielle, s'est tenue du 24 au 26 novembre 2025 à l'ENS Paris Saclay.
 
- Etait au programme :
+Etait au programme :
 
 - Une session ouverte à tous a eu lieu le lundi 24 novembre de 13h30 à 18h30, permettant de découvrir les avancées majeures du PEPR DIADEM depuis son lancement en 2022. Une table ronde a été organisée pour échanger sur les initiatives inter-PEPR. La journée s'est terminée par une conférence grand public.
 

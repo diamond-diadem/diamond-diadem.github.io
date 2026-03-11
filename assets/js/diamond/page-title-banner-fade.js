@@ -23,11 +23,7 @@ if (pageTitleBanners.length > 0) {
             fadeStartPx + 16,
             bannerRect.height
         );
-        const sideFadeEndPx = clamp(
-            Math.max(24, bannerRect.width * 0.06),
-            20,
-            bannerRect.width * 0.12
-        );
+        const sideFadeEndPx = clamp(Math.max(24, bannerRect.width * 0.06), 20, bannerRect.width * 0.12);
 
         banner.style.setProperty('--page-title-fade-side-end', `${sideFadeEndPx}px`);
         banner.style.setProperty('--page-title-fade-start', `${fadeStartPx}px`);

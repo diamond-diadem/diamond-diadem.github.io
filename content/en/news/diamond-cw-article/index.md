@@ -43,11 +43,10 @@ seo:
 
 <big>
 
-The article has been accepted for publication in a special issue of *Advanced Engineering Materials* dedicated to the PEPR DIADEM. It presents the work conducted by the "Codes & Workflows" group of the DIAMOND project.
+The article has been accepted for publication in a special issue of _Advanced Engineering Materials_ dedicated to the PEPR DIADEM. It presents the work conducted by the "Codes & Workflows" group of the DIAMOND project.
 
 Discover the preprint <a href="https://hal.science/hal-05430774v1/" target="_blank">on HAL</a> or <a href="https://doi.org/10.48550/arXiv.2512.13826" target="_blank">on arXiv</a>.
 
 </big>
 
 </div>
-

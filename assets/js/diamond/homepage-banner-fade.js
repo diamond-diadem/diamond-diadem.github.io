@@ -15,10 +15,8 @@ if (homepageBanner) {
             return;
         }
 
-        const contentBottom = Math.max(
-            titleRect?.bottom ?? bannerRect.top,
-            leadRect?.bottom ?? bannerRect.top
-        ) - bannerRect.top;
+        const contentBottom =
+            Math.max(titleRect?.bottom ?? bannerRect.top, leadRect?.bottom ?? bannerRect.top) - bannerRect.top;
 
         const fadeStartPx = clamp(
             contentBottom + window.innerHeight * 0.04,
@@ -30,16 +28,8 @@ if (homepageBanner) {
             fadeStartPx + 24,
             bannerRect.height
         );
-        const topFadeEndPx = clamp(
-            Math.max(40, bannerRect.height * 0.12),
-            32,
-            bannerRect.height * 0.3
-        );
-        const sideFadeEndPx = clamp(
-            Math.max(28, bannerRect.width * 0.08),
-            24,
-            bannerRect.width * 0.16
-        );
+        const topFadeEndPx = clamp(Math.max(40, bannerRect.height * 0.12), 32, bannerRect.height * 0.3);
+        const sideFadeEndPx = clamp(Math.max(28, bannerRect.width * 0.08), 24, bannerRect.width * 0.16);
 
         homepageBanner.style.setProperty('--banner-fade-top-start', '0px');
         homepageBanner.style.setProperty('--banner-fade-top-end', `${topFadeEndPx}px`);
