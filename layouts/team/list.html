@@ -21,7 +21,7 @@
   }}
 
   <!-- Filters -->
-  <div id="filters" class="grid gap-4 md:grid-cols-4 mb-6">
+  <div id="filters" class="grid mb-6">
     <input id="q" type="search" placeholder={{ .Page.Param "searchboxtext" }}
            class="border rounded px-3 py-2 w-full" />
 
@@ -133,6 +133,33 @@
 </section>
 
 <style>
+  #filters {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  #filters > * {
+    width: 100%;
+    min-width: 0;
+  }
+  #filters select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.75' d='m4 6 4 4 4-4'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: 0.9rem;
+    background-position: right 0.9rem center;
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    #filters {
+      grid-template-columns: repeat(2, 50%);
+    }
+  }
+  @media (min-width: 992px) {
+    #filters {
+      grid-template-columns: repeat(4, 25%);
+    }
+  }
   .person-card {
     --person-card-border: #e5e7eb;
     --person-text-muted: #4b5563;
