@@ -1,0 +1,10 @@
+{{- $featuredPeople := .featuredPeople | default (slice) -}}
+{{- $fallbackPeople := .fallbackPeople | default (slice) -}}
+<div id="people-grid" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+  {{ range $featuredPeople }}
+    {{ partial "team/person-card.html" . }}
+  {{ end }}
+  {{ range $fallbackPeople }}
+    {{ partial "team/person-card.html" . }}
+  {{ end }}
+</div>

@@ -35,6 +35,10 @@
 {{/* Track clipboard copy events in Google Analytics */}}
 {{ partial "footer/esbuild" (dict "src" "js/clipboard.js" "load" "async" "transpile" false) -}}
 
+{{ if and (eq .Type "team") (eq .Kind "section") }}
+  {{ partial "footer/esbuild" (dict "src" "js/diamond/team-list.js" "transpile" false) -}}
+{{ end }}
+
 {{ if site.Params.diamond.enableScrollFade }}
   {{ partial "footer/esbuild" (dict "src" "js/diamond/scroll-fade.js" "load" "async" "transpile" false) -}}
 {{ end }}
