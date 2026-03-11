@@ -7,7 +7,7 @@ email: benjamin.arrondeau@univ-grenoble-alpes.fr
 affiliation: GRICAD Grenoble
 role: WP1 - Codes and Workflows
 project: DIAMOND
-personnel_type: Scientifique
+personnel_type: Scientist
 photo: /images/team/NA.png
 ---
 
@@ -17,6 +17,6 @@ photo: /images/team/NA.png
 
 **Projet :** DIAMOND
 
-**Type :** Scientifique
+**Type :** Scientist
 
 **Email :** [benjamin.arrondeau@univ-grenoble-alpes.fr](mailto:benjamin.arrondeau@univ-grenoble-alpes.fr)

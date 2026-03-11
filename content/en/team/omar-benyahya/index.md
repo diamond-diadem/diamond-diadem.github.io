@@ -6,7 +6,7 @@ last_name: Benyahya
 email: omar.benyahya@cea.fr
 affiliation: CEA Saclay
 project: DIAMOND
-personnel_type: Scientifique
+personnel_type: Scientist
 photo: /images/team/NA.png
 ---
 
@@ -14,6 +14,6 @@ photo: /images/team/NA.png
 
 **Projet :** DIAMOND
 
-**Type :** Scientifique
+**Type :** Scientist
 
 **Email :** [omar.benyahya@cea.fr](mailto:omar.benyahya@cea.fr)

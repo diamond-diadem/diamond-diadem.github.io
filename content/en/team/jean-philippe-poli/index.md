@@ -7,7 +7,7 @@ email: jean-philippe.poli@cea.fr
 affiliation: CEA Saclay
 role: WP2 - Materials Database Infrastructure
 project: DIAMOND
-personnel_type: Scientifique
+personnel_type: Scientist
 photo: /images/team/NA.png
 ---
 
@@ -17,6 +17,6 @@ photo: /images/team/NA.png
 
 **Projet :** DIAMOND
 
-**Type :** Scientifique
+**Type :** Scientist
 
 **Email :** [jean-philippe.poli@cea.fr](mailto:jean-philippe.poli@cea.fr)

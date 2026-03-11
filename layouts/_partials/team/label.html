@@ -12,8 +12,8 @@
 {{- else if eq $kind "personnel_type" -}}
   {{- $key = index (dict
     "Project Coordinator" "team_personnel_type_project_coordinator"
-    "Scientifique" "team_personnel_type_scientist"
-    "Responsable scientifique" "team_personnel_type_scientific_lead"
+    "Scientist" "team_personnel_type_scientist"
+    "Scientific Lead" "team_personnel_type_scientific_lead"
   ) $value -}}
 {{- end -}}
 

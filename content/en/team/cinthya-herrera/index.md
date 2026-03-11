@@ -7,7 +7,7 @@ email: cinthya.herreracontreras@cea.fr
 affiliation: CEA Grenoble
 role: WP2 - Materials Database Infrastructure
 project: DIAMOND
-personnel_type: Scientifique
+personnel_type: Scientist
 photo: /images/team/ch.png
 orcid: 0000-0001-6405-0785
 github: cnherrera

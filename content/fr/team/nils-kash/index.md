@@ -7,7 +7,7 @@ email: nils.kasch@cea.fr
 affiliation: CEA Saclay
 role: WP1 - Codes and Workflows
 project: DIAMOND
-personnel_type: Scientifique
+personnel_type: Scientist
 photo: /images/team/NA.png
 links:
 - label: LinkedIn

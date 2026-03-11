@@ -8,7 +8,7 @@
       "affiliation": "SIMaP Grenoble",
       "role": "WP1 - Codes and Workflows",
       "project": "DIAMOND",
-      "personnel_type": "Scientifique",
+      "personnel_type": "Scientist",
       "slug": "joao-paulo-almeida",
       "photo": "/images/team/jpam.png",
       "bio": "I work with bioinspired and machine learning algorithms, applying them to materials science (and some other complex systems, just for fun).",
@@ -36,7 +36,7 @@
       "project": "DIAMOND",
       "personnel_type": [
         "Project Coordinator",
-        "Responsable scientifique"
+        "Scientific Lead"
       ],
       "slug": "no-l-jakse",
       "photo": "/images/team/nj.png"
@@ -64,8 +64,8 @@
       "role": "WP3 - Machine Learning Interatomic Potentials",
       "project": "DIAMOND",
       "personnel_type": [
-        "Scientifique",
-        "Responsable scientifique"
+        "Scientist",
+        "Scientific Lead"
       ],
       "slug": "marco-saitta",
       "photo": "/images/team/ms.png"
@@ -78,7 +78,7 @@
       "affiliation": "CEA Saclay",
       "role": "WP2 - Materials Database Infrastructure",
       "project": "DIAMOND",
-      "personnel_type": "Scientifique",
+      "personnel_type": "Scientist",
       "slug": "vincent-bergeaud",
       "photo": "/images/team/NA.png"
     },
@@ -91,8 +91,8 @@
       "role": "WP2 - Materials Database Infrastructure",
       "project": "DIAMOND",
       "personnel_type": [
-        "Scientifique",
-        "Responsable scientifique"
+        "Scientist",
+        "Scientific Lead"
       ],
       "slug": "thierry-deutsch",
       "photo": "/images/team/NA.png"
@@ -105,7 +105,7 @@
       "affiliation": "ILM Lyon",
       "role": "WP1 - Codes and Workflows",
       "project": "DIAMOND",
-      "personnel_type": "Scientifique",
+      "personnel_type": "Scientist",
       "slug": "david-rodney",
       "photo": "/images/team/NA.png"
     },
@@ -117,7 +117,7 @@
       "affiliation": "CEA Saclay",
       "role": "WP2 - Materials Database Infrastructure",
       "project": "DIAMOND",
-      "personnel_type": "Scientifique",
+      "personnel_type": "Scientist",
       "slug": "jean-philippe-poli",
       "photo": "/images/team/NA.png"
     },
@@ -129,7 +129,7 @@
       "affiliation": "GRICAD Grenoble",
       "role": "WP1 - Codes and Workflows",
       "project": "DIAMOND",
-      "personnel_type": "Scientifique",
+      "personnel_type": "Scientist",
       "slug": "benjamin-arrondeau",
       "photo": "/images/team/NA.png"
     },
@@ -141,7 +141,7 @@
       "affiliation": "UAR GRICAD/CNRS",
       "role": "WP1 - Codes and Workflows",
       "project": "DIAMOND",
-      "personnel_type": "Scientifique",
+      "personnel_type": "Scientist",
       "slug": "pierre-antoine-bouttier",
       "bio": "I am a reseach engineer specialized in software engineering and applied mathematics. I am currently the deputy director of [GRICAD](https://gricad.univ-grenoble-alpes.fr/)",
       "photo": "/images/team/NA.png",
@@ -160,7 +160,7 @@
       "affiliation": "CEA Saclay",
       "role": "WP1 - Codes and Workflows",
       "project": "DIAMOND",
-      "personnel_type": "Scientifique",
+      "personnel_type": "Scientist",
       "slug": "adrien-bruneton",
       "photo": "/images/team/NA.png"
     },
@@ -172,7 +172,7 @@
       "affiliation": "CEA Saclay",
       "role": "WP1 - Codes and Workflows",
       "project": "DIAMOND",
-      "personnel_type": "Scientifique",
+      "personnel_type": "Scientist",
       "slug": "nicolas-crouzet",
       "photo": "/images/team/NA.png"
     },
@@ -184,7 +184,7 @@
       "affiliation": "CEA Saclay",
       "role": "WP1 - Codes and Workflows",
       "project": "DIAMOND",
-      "personnel_type": "Scientifique",
+      "personnel_type": "Scientist",
       "slug": "geoffrey-daniel",
       "photo": "/images/team/NA.png"
     },
@@ -196,7 +196,7 @@
       "affiliation": "CEA Saclay",
       "role": "WP1 - Codes and Workflows",
       "project": "DIAMOND",
-      "personnel_type": "Scientifique",
+      "personnel_type": "Scientist",
       "slug": "jonathan-daubin",
       "photo": "/images/team/NA.png"
     },
@@ -208,7 +208,7 @@
       "affiliation": "CEA Saclay",
       "role": "WP1 - Codes and Workflows",
       "project": "DIAMOND",
-      "personnel_type": "Scientifique",
+      "personnel_type": "Scientist",
       "slug": "nils-kasch",
       "bio": "I am an engineer working on parallel material simulation codes and their deployment on HPC.",
       "photo": "/images/team/NA.png",
@@ -227,7 +227,7 @@
       "affiliation": "ILM Lyon",
       "role": "WP1 - Codes and Workflows",
       "project": "DIAMOND",
-      "personnel_type": "Scientifique",
+      "personnel_type": "Scientist",
       "slug": "david-martin-calle",
       "photo": "/images/team/NA.png"
     },
@@ -239,7 +239,7 @@
       "affiliation": "Sorbonne Université",
       "role": "WP1 - Codes and Workflows",
       "project": "DIAMOND",
-      "personnel_type": "Scientifique",
+      "personnel_type": "Scientist",
       "slug": "lorenzo-paulatto",
       "photo": "/images/team/NA.png"
     },
@@ -251,7 +251,7 @@
       "affiliation": "SIMaP Grenoble",
       "role": "WP3 - Machine Learning Interatomic Potentials",
       "project": "DIAMOND",
-      "personnel_type": "Scientifique",
+      "personnel_type": "Scientist",
       "slug": "irina-piazza",
       "photo": "/images/team/irina.png",
       "bio": "I am a reseach engineer buiding automated workflows for machine learning interatomic potential in HCP and I am integrating exsting MLIP workflow inside the DIAMOND platform.",
@@ -275,7 +275,7 @@
       "affiliation": "CEA Grenoble",
       "role": "WP1 - Codes and Workflows",
       "project": "DIAMOND",
-      "personnel_type": "Scientifique",
+      "personnel_type": "Scientist",
       "slug": "dorian-rolland",
       "photo": "/images/team/NA.png"
     },
@@ -287,7 +287,7 @@
       "affiliation": "SIMaP Grenoble",
       "role": "WP1 - Codes and Workflows",
       "project": "DIAMOND",
-      "personnel_type": "Scientifique",
+      "personnel_type": "Scientist",
       "slug": "martin-uhrin",
       "photo": "/images/team/NA.png"
     },
@@ -299,7 +299,7 @@
       "affiliation": "Sorbonne Université",
       "role": "WP1 - Codes and Workflows",
       "project": "DIAMOND",
-      "personnel_type": "Scientifique",
+      "personnel_type": "Scientist",
       "slug": "aadhityan-arivazhagan",
       "photo": "/images/team/NA.png"
     },
@@ -310,7 +310,7 @@
       "email": "omar.benyahya@cea.fr",
       "affiliation": "CEA Saclay",
       "project": "DIAMOND",
-      "personnel_type": "Scientifique",
+      "personnel_type": "Scientist",
       "slug": "omar-benyahya",
       "photo": "/images/team/NA.png"
     },
@@ -322,7 +322,7 @@
       "affiliation": "CEA Saclay",
       "role": "WP2 - Materials Database Infrastructure",
       "project": "DIAMOND",
-      "personnel_type": "Scientifique",
+      "personnel_type": "Scientist",
       "slug": "ahmed-amrani",
       "photo": "/images/team/NA.png"
     },
@@ -334,7 +334,7 @@
       "affiliation": "CEA Grenoble",
       "role": "WP2 - Materials Database Infrastructure",
       "project": "DIAMOND",
-      "personnel_type": "Scientifique",
+      "personnel_type": "Scientist",
       "slug": "arawinth-camatchy",
       "photo": "/images/team/NA.png"
     },
@@ -346,7 +346,7 @@
       "affiliation": "CEA Saclay",
       "role": "WP2 - Materials Database Infrastructure",
       "project": "DIAMOND",
-      "personnel_type": "Scientifique",
+      "personnel_type": "Scientist",
       "slug": "imanol-setoain",
       "photo": "/images/team/NA.png"
     },
@@ -358,7 +358,7 @@
       "affiliation": "CEA Grenoble",
       "role": "WP2 - Materials Database Infrastructure",
       "project": "DIAMOND",
-      "personnel_type": "Scientifique",
+      "personnel_type": "Scientist",
       "slug": "nicola-vigano",
       "photo": "/images/team/NA.png"
     },
@@ -370,7 +370,7 @@
       "affiliation": "CEA Grenoble",
       "role": "WP2 - Materials Database Infrastructure",
       "project": "DIAMOND",
-      "personnel_type": "Scientifique",
+      "personnel_type": "Scientist",
       "slug": "cinthya-herrera",
       "photo": "/images/team/ch.png",
       "bio": "I’m a research engineer working on standardizing databases and workflows, I use ontologies to make data and tools speak the same language.",
@@ -391,7 +391,7 @@
       "affiliation": "CEA Saclay",
       "role": "WP3 - Machine Learning Interatomic Potentials",
       "project": "DIAMOND",
-      "personnel_type": "Scientifique",
+      "personnel_type": "Scientist",
       "slug": "mihai-cosmin-marinica",
       "photo": "/images/team/NA.png"
     },
@@ -402,7 +402,7 @@
       "email": "Anruo.ZHONG@cea.fr",
       "role": "WP3 - Machine Learning Interatomic Potentials",
       "project": "DIAMOND",
-      "personnel_type": "Scientifique",
+      "personnel_type": "Scientist",
       "slug": "anruo-zhong",
       "photo": "/images/team/NA.png"
     },
@@ -414,7 +414,7 @@
       "affiliation": "Sorbonne Université",
       "role": "WP3 - Machine Learning Interatomic Potentials",
       "project": "DIAMOND",
-      "personnel_type": "Scientifique",
+      "personnel_type": "Scientist",
       "slug": "arthur-france-lanord",
       "photo": "/images/team/NA.png"
     },
@@ -426,7 +426,7 @@
       "affiliation": "IMPMC, Sorbonne University",
       "role": "WP3 - Machine Learning Interatomic Potentials",
       "project": "DIAMOND",
-      "personnel_type": "Scientifique",
+      "personnel_type": "Scientist",
       "slug": "akshay-ammothum-kandy",
       "photo": "/images/team/NA.png",
       "bio": "I am a research engineer building databases and automated workflows for MLIPs.",
@@ -451,7 +451,7 @@
       "affiliation": "GRICAD Grenoble",
       "role": "WP1 - Codes and Workflows",
       "project": "DIAMOND",
-      "personnel_type": "Scientifique",
+      "personnel_type": "Scientist",
       "slug": "leo-orveillon",
       "photo": "/images/team/lo.png",
       "bio": "I am an engineer working on efficient way to packages and deploy scientific codes on HPC infrastructures.",

@@ -7,7 +7,7 @@ email: geoffrey.daniel@cea.fr
 affiliation: CEA Saclay
 role: WP1 - Codes and Workflows
 project: DIAMOND
-personnel_type: Scientifique
+personnel_type: Scientist
 photo: /images/team/NA.png
 ---
 
@@ -17,6 +17,6 @@ photo: /images/team/NA.png
 
 **Projet :** DIAMOND
 
-**Type :** Scientifique
+**Type :** Scientist
 
 **Email :** [geoffrey.daniel@cea.fr](mailto:geoffrey.daniel@cea.fr)

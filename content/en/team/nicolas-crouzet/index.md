@@ -7,7 +7,7 @@ email: nicolas.crouzet@cea.fr
 affiliation: CEA Saclay
 role: WP1 - Codes and Workflows
 project: DIAMOND
-personnel_type: Scientifique
+personnel_type: Scientist
 photo: /images/team/NA.png
 ---
 
@@ -17,6 +17,6 @@ photo: /images/team/NA.png
 
 **Projet :** DIAMOND
 
-**Type :** Scientifique
+**Type :** Scientist
 
 **Email :** [nicolas.crouzet@cea.fr](mailto:nicolas.crouzet@cea.fr)

@@ -7,7 +7,7 @@ email: akshaykrishnaak9@gmail.com
 affiliation: IMPMC, Sorbonne University
 role: 
 project: DIAMOND
-personnel_type: Scientifique
+personnel_type: Scientist
 photo: /images/team/NA.png
 orcid: 0000-0002-9880-4482
 github: aksam432

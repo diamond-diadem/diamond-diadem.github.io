@@ -8,8 +8,8 @@ affiliation: CEA Grenoble
 role: WP2 - Materials Database Infrastructure
 project: DIAMOND
 personnel_type:
-- Scientifique
-- Responsable scientifique
+- Scientist
+- Scientific Lead
 photo: /images/team/NA.png
 ---
 
@@ -19,6 +19,6 @@ photo: /images/team/NA.png
 
 **Projet :** DIAMOND
 
-**Type :** Scientifique, Responsable scientifique
+**Type :** Scientist, Scientific Lead
 
 **Email :** [thierry.deutsch@cea.fr](mailto:thierry.deutsch@cea.fr)

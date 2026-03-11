@@ -7,7 +7,7 @@ email: irina.piazza@grenoble-inp.fr
 affiliation: SIMaP Grenoble
 role: 
 project: DIAMOND
-personnel_type: Scientifique
+personnel_type: Scientist
 photo: /images/team/irina.png
 github: irina-piazza
 links:

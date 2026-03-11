@@ -8,8 +8,8 @@ affiliation: Sorbonne Université
 role: WP3 - Machine Learning Interatomic Potentials
 project: DIAMOND
 personnel_type:
-- Scientifique
-- Responsable scientifique
+- Scientist
+- Scientific Lead
 photo: /images/team/ms.png
 ---
 
@@ -19,6 +19,6 @@ photo: /images/team/ms.png
 
 **Projet :** DIAMOND
 
-**Type :** Scientifique, Responsable scientifique
+**Type :** Scientist, Scientific Lead
 
 **Email :** [marco.saitta@sorbonne-universite.fr](mailto:marco.saitta@sorbonne-universite.fr)

@@ -7,7 +7,7 @@ email: joao-paulo.almeida-de-mendonca@grenoble-inp.fr
 affiliation: SIMaP Grenoble
 role: WP1
 project: DIAMOND
-personnel_type: Scientifique
+personnel_type: Scientist
 photo: /images/team/jpam.png
 website: https://jpalastus.github.io/
 orcid: 0000-0003-3253-1220

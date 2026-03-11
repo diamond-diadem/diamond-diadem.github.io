@@ -7,7 +7,7 @@ email: Lorenzo.paulatto@sorbonne-universite.fr
 affiliation: Sorbonne Université
 role: WP1 - Codes and Workflows
 project: DIAMOND
-personnel_type: Scientifique
+personnel_type: Scientist
 photo: /images/team/NA.png
 ---
 
@@ -17,6 +17,6 @@ photo: /images/team/NA.png
 
 **Projet :** DIAMOND
 
-**Type :** Scientifique
+**Type :** Scientist
 
 **Email :** [Lorenzo.paulatto@sorbonne-universite.fr](mailto:Lorenzo.paulatto@sorbonne-universite.fr)

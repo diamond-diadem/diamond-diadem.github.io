@@ -9,7 +9,7 @@ role: WP1 - Codes and Workflows
 project: DIAMOND
 personnel_type:
 - Project Coordinator
-- Responsable scientifique
+- Scientific Lead
 photo: /images/team/nj.png
 ---
 
@@ -19,6 +19,6 @@ photo: /images/team/nj.png
 
 **Projet :** DIAMOND
 
-**Type :** Project Coordinator, Responsable scientifique
+**Type :** Project Coordinator, Scientific Lead
 
 **Email :** [noel.jakse@grenoble-inp.fr](mailto:noel.jakse@grenoble-inp.fr)

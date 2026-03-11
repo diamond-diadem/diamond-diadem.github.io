@@ -7,7 +7,7 @@ email: arthur.france-lanord@sorbonne-universite.fr
 affiliation: Sorbonne Université
 role: WP3 - Machine Learning Interatomic Potentials
 project: DIAMOND
-personnel_type: Scientifique
+personnel_type: Scientist
 photo: /images/team/NA.png
 ---
 
@@ -17,6 +17,6 @@ photo: /images/team/NA.png
 
 **Projet :** DIAMOND
 
-**Type :** Scientifique
+**Type :** Scientist
 
 **Email :** [arthur.france-lanord@sorbonne-universite.fr](mailto:arthur.france-lanord@sorbonne-universite.fr)
