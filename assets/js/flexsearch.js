@@ -63,7 +63,7 @@ import Index from 'flexsearch';
             && item.title.trim() !== ''
             && typeof item.permalink === 'string'
             && item.permalink.trim() !== '';
-        })
+        }).slice(0, recentSelectionLimit)
         : [];
     } catch (error) {
       return [];
@@ -100,6 +100,13 @@ import Index from 'flexsearch';
 
   function renderRecentSearches() {
     const recentSelections = getRecentSelections();
+
+    try {
+      window.localStorage.setItem(recentSelectionStorageKey, JSON.stringify(recentSelections));
+    } catch (error) {
+      // Ignore storage failures so search still works in restricted browsers.
+    }
+
     const results = document.querySelector('.search-results');
     results.textContent = '';
 
