@@ -3,6 +3,8 @@ title: CODES CONTENEURISÉS
 linkTitle: Accueil
 weight: 1
 sidebar_link: /codes/home/
+aliases:
+  - /codes/start-here/home/
 # tablerIcon: "tabler-icons/outline/home"
 toc: false
 # layout: codes-home

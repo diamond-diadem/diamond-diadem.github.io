@@ -302,7 +302,7 @@ content
 │  │  │  ├── wannier90.md
 │  │  │  ├── z-set.md
 │  │  │  └── zeo++.md
-│  │  ├── start-here
+│  │  ├── home
 │  │  │  ├── home
 │  │  │  │  ├── index.md
 │  │  │  │  ├── part-1.md
@@ -339,7 +339,7 @@ content
 │  │  │  ├── apptainer-windows.md
 │  │  │  ├── install-apptainer.md
 │  │  │  └── install-guix.md
-│  │  ├── start-here
+│  │  ├── home
 │  │  │  ├── _index.md
 │  │  │  └── home.md
 │  │  ├── use
@@ -365,7 +365,7 @@ content
 │  │  │  ├── _index.md
 │  │  │  ├── description.md
 │  │  │  └── tutorial.md
-│  │  ├── start-here
+│  │  ├── home
 │  │  │  ├── _index.md
 │  │  │  └── home.md
 │  │  └── _index.md
@@ -404,7 +404,7 @@ content
    │  │  ├── wannier90.md
    │  │  ├── z-set.md
    │  │  └── zeo++.md
-   │  ├── start-here
+   │  ├── home
    │  │  ├── home
    │  │  │  ├── index.md
    │  │  │  ├── part-1.md
@@ -441,7 +441,7 @@ content
    │  │  ├── apptainer-windows.md
    │  │  ├── install-apptainer.md
    │  │  └── install-guix.md
-   │  ├── start-here
+   │  ├── home
    │  │  ├── _index.md
    │  │  └── home.md
    │  ├── use
@@ -466,7 +466,7 @@ content
    │  │  ├── _index.md
    │  │  ├── description.md
    │  │  └── tutorial.md
-   │  ├── start-here
+   │  ├── home
    │  │  ├── _index.md
    │  │  └── home.md
    │  └── _index.md
@@ -493,14 +493,14 @@ Aussi, un fichier `scss` dédié, `assets/diamond/_responsive-about.scss`, gère
 
 ##### "Codes"
 
-C'est pour l'instant, avec "Documentation", le coeur du site web et de ce qu'il propose. Il contient une page d'accueil `codes/start-here/home`, et une page pour chaque code proposé sous forme conteneurisée par la plateforme. Ces pages de codes sont répartis entre `scientific-computing` et `visualisation`, selon la nature du code proposé.
+C'est pour l'instant, avec "Documentation", le coeur du site web et de ce qu'il propose. Il contient une page d'accueil `codes/home`, et une page pour chaque code proposé sous forme conteneurisée par la plateforme. Ces pages de codes sont répartis entre `scientific-computing` et `visualisation`, selon la nature du code proposé.
 
 Voir `CONTRIBUTING.md` pour la démarche à faire pour ajouter un nouveau code.
 
 Cette démarchera passera par la mise à jour de la page d'accueil, qui fait l'inventaire des codes disponibles, et qui est séparée en trois fichiers Markdown pour plus de lisibilité et de facilité d'édition, compte tenu de la longueur du fichier total.
 
 ```markdown
-start-here
+home
 ├── home
 │  ├── index.md
 │  ├── part-1.md

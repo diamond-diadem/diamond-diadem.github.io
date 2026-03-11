@@ -2,6 +2,8 @@
 title: WORKFLOWS
 linkTitle: Accueil
 weight: 1
+aliases:
+  - /workflows/start-here/home/
 toc: false
 ---
 
