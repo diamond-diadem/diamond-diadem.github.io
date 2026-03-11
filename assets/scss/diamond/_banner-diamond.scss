@@ -140,6 +140,7 @@
     --page-title-fade-side-end: 36px;
     --page-title-fade-start: 100px;
     --page-title-fade-end: 150px;
+    --page-title-offset-y: 0px;
 }
 
 .container-h1-default-page::before {
@@ -203,9 +204,8 @@
 }
 
 .container-h1-default-page h1 {
-    position: relative;
     z-index: 1;
-    top: -0.18em;
     margin-top: 0;
     margin-bottom: 0;
+    transform: translateY(var(--page-title-offset-y));
 }
