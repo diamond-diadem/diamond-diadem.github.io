@@ -2,9 +2,9 @@
 title: Équipe
 slug: people
 layout: people
-filter1: Tous Work Package
-filter2: Tous types
-filter3: Toutes affiliations
+filter1: Groupe de travail
+filter2: Rôle
+filter3: Affiliation
 searchboxtext: Rechercher (nom, rôle, affiliation)…
 ---
 
