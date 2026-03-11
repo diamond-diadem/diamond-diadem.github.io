@@ -5,7 +5,7 @@ first_name: Thierry
 last_name: Deutsch
 email: thierry.deutsch@cea.fr
 affiliation: CEA Grenoble
-role: Materials Database Infrastructure
+role: WP2 - Materials Database Infrastructure
 project: DIAMOND
 personnel_type:
 - Scientifique
@@ -13,7 +13,7 @@ personnel_type:
 photo: /images/team/NA.png
 ---
 
-**Rôle :** Materials Database Infrastructure
+**Rôle :** WP2 - Materials Database Infrastructure
 
 **Affiliation :** CEA Grenoble
 

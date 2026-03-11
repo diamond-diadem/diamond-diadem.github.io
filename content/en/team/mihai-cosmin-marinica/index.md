@@ -5,13 +5,13 @@ first_name: Mihai-Cosmin
 last_name: Marinica
 email: cosmin.marinica@cea.fr
 affiliation: CEA Saclay
-role: Machine Learning Interatomic Potemtials
+role: WP3 - Machine Learning Interatomic Potentials
 project: DIAMOND
 personnel_type: Scientifique
 photo: /images/team/NA.png
 ---
 
-**Rôle :** Machine Learning Interatomic Potemtials
+**Rôle :** WP3 - Machine Learning Interatomic Potentials
 
 **Affiliation :** CEA Saclay
 

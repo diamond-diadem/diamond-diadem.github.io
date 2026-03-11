@@ -5,13 +5,13 @@ first_name: Geoffrey
 last_name: Daniel
 email: geoffrey.daniel@cea.fr
 affiliation: CEA Saclay
-role: Codes and Workflows Platform
+role: WP1 - Codes and Workflows
 project: DIAMOND
 personnel_type: Scientifique
 photo: /images/team/NA.png
 ---
 
-**Rôle :** Codes and Workflows Platform
+**Rôle :** WP1 - Codes and Workflows
 
 **Affiliation :** CEA Saclay
 

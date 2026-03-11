@@ -5,13 +5,13 @@ first_name: Benjamin
 last_name: Arrondeau
 email: benjamin.arrondeau@univ-grenoble-alpes.fr
 affiliation: GRICAD Grenoble
-role: Codes and Workflows Platform
+role: WP1 - Codes and Workflows
 project: DIAMOND
 personnel_type: Scientifique
 photo: /images/team/NA.png
 ---
 
-**Rôle :** Codes and Workflows Platform
+**Rôle :** WP1 - Codes and Workflows
 
 **Affiliation :** GRICAD Grenoble
 

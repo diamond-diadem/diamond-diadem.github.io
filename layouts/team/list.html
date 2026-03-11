@@ -4,11 +4,11 @@
   <h1 class="text-3xl font-semibold mb-6">{{ .Page.Param "title" }}</h1>
   {{ $isFr := eq .Site.Language.Lang "fr" }}
   {{ $roleTranslations := dict
-    "Codes and Workflows Platform" "Plateforme Codes et Workflows"
     "Coordinator" "Coordination"
-    "Machine Learning Interatomic Potentials" "Potentiels Interatomiques Machine Learning"
-    "Machine Learning Interatomic Potemtials" "Potentiels Interatomiques Machine Learning"
-    "Materials Database Infrastructure" "Infrastructure de Bases de Données Matériaux"
+    "WP1 - Codes and Workflows" "WP1 - Codes et Workflows"
+    "WP2 - Materials Database Infrastructure" "WP2 - Infrastructure de Bases de Données Matériaux"
+    "WP3 - Machine Learning Interatomic Potentials" "WP3 - Potentiels Interatomiques Machine Learning"
+    "WP3 - Machine Learning Interatomic Potentials" "WP3 - Potentiels Interatomiques Machine Learning"
   }}
   {{ $typeTranslationsFr := dict
     "Project Coordinator" "Coordinateur de projet"
@@ -41,7 +41,7 @@
         {{ end }}
         {{ range .Site.Data.team.team }}
           {{ with .role }}
-            {{ if and (eq . "Codes and Workflows Platform") (not (index $seen .)) }}
+            {{ if and (eq . "WP1 - Codes and Workflows") (not (index $seen .)) }}
               <option value="{{ . }}">{{ if $isFr }}{{ or (index $roleTranslations .) . }}{{ else }}{{ . }}{{ end }}</option>
               {{ $seen = merge $seen (dict . true) }}
             {{ end }}
@@ -49,7 +49,7 @@
         {{ end }}
         {{ range .Site.Data.team.team }}
           {{ with .role }}
-            {{ if and (eq . "Materials Database Infrastructure") (not (index $seen .)) }}
+            {{ if and (eq . "WP2 - Materials Database Infrastructure") (not (index $seen .)) }}
               <option value="{{ . }}">{{ if $isFr }}{{ or (index $roleTranslations .) . }}{{ else }}{{ . }}{{ end }}</option>
               {{ $seen = merge $seen (dict . true) }}
             {{ end }}
@@ -57,7 +57,15 @@
         {{ end }}
         {{ range .Site.Data.team.team }}
           {{ with .role }}
-            {{ if and (ne . "Coordinator") (ne . "Codes and Workflows Platform") (ne . "Materials Database Infrastructure") (not (index $seen .)) }}
+            {{ if and (eq . "WP3 - Machine Learning Interatomic Potentials") (not (index $seen .)) }}
+              <option value="{{ . }}">{{ if $isFr }}{{ or (index $roleTranslations .) . }}{{ else }}{{ . }}{{ end }}</option>
+              {{ $seen = merge $seen (dict . true) }}
+            {{ end }}
+          {{ end }}
+        {{ end }}
+        {{ range .Site.Data.team.team }}
+          {{ with .role }}
+            {{ if and (ne . "Coordinator") (ne . "WP1 - Codes and Workflows") (ne . "WP2 - Materials Database Infrastructure") (ne . "WP3 - Machine Learning Interatomic Potentials") (not (index $seen .)) }}
               <option value="{{ . }}">{{ if $isFr }}{{ or (index $roleTranslations .) . }}{{ else }}{{ . }}{{ end }}</option>
               {{ $seen = merge $seen (dict . true) }}
             {{ end }}

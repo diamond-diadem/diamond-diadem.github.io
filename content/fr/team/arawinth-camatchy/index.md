@@ -5,13 +5,13 @@ first_name: Arawinth
 last_name: Camatchy
 email: arawinth.camatchy@cea.fr
 affiliation: CEA Grenoble
-role: Materials Database Infrastructure
+role: WP2 - Materials Database Infrastructure
 project: DIAMOND
 personnel_type: Scientifique
 photo: /images/team/NA.png
 ---
 
-**Rôle :** Materials Database Infrastructure
+**Rôle :** WP2 - Materials Database Infrastructure
 
 **Affiliation :** CEA Grenoble
 

@@ -1,7 +1,7 @@
 ---
 title: "CECAM Flagship Workshop"
 description: ""
-summary: "Machine Learning Interatomic Potentials and Accessible Databases"
+summary: " and Accessible Databases"
 eventDate: "September 9 to 11, 2024"
 backgroundImage: "images/news/backgrounds/background-cecam-workshop.jpg"
 backgroundOpacity: 0.18
@@ -23,7 +23,7 @@ seo:
   noindex: false # false (default) or true
 ---
 
-## Machine Learning Interatomic Potentials and Accessible Databases
+##  and Accessible Databases
 
 ![Group photo of the participants](group-photo.jpg)
 
@@ -38,7 +38,7 @@ seo:
 
 <div align="justify">
 
-Machine Learning Interatomic Potentials (MLIPs) have positioned themselves as a key tool for atomistic modeling in materials science. MLIPs cover an expansive range of systems, taking advantage of the highly accurate electronic structure calculations based on quantum mechanics, but at a significantly lower computational cost. They allow to scale up atomistic simulations to larger systems, longer timescales, and more complex phenomena; they therefore significantly contribute to the acceleration of the discovery of novel structural and functional materials, and in the advancements in our understanding of matter. Ground-breaking bodies of work have been published since the seminal work of Behler and Parrinello in 2007, transforming the field into a rapidly evolving research discipline. However, alongside these advancements, a crucial challenge emerges: the need for standardized protocols for MLIP generation and storage, as well as comprehensive, accessible databases for _ab initio_ datasets.
+ (MLIPs) have positioned themselves as a key tool for atomistic modeling in materials science. MLIPs cover an expansive range of systems, taking advantage of the highly accurate electronic structure calculations based on quantum mechanics, but at a significantly lower computational cost. They allow to scale up atomistic simulations to larger systems, longer timescales, and more complex phenomena; they therefore significantly contribute to the acceleration of the discovery of novel structural and functional materials, and in the advancements in our understanding of matter. Ground-breaking bodies of work have been published since the seminal work of Behler and Parrinello in 2007, transforming the field into a rapidly evolving research discipline. However, alongside these advancements, a crucial challenge emerges: the need for standardized protocols for MLIP generation and storage, as well as comprehensive, accessible databases for _ab initio_ datasets.
 
 </div>
 

@@ -5,7 +5,7 @@ first_name: Cinthya
 last_name: Herrera
 email: cinthya.herreracontreras@cea.fr
 affiliation: CEA Grenoble
-role: Materials Database Infrastructure
+role: WP2 - Materials Database Infrastructure
 project: DIAMOND
 personnel_type: Scientifique
 photo: /images/team/ch.png

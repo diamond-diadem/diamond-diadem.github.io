@@ -5,13 +5,13 @@ first_name: Arthur
 last_name: France-Lanord
 email: arthur.france-lanord@sorbonne-universite.fr
 affiliation: Sorbonne Université
-role: Machine Learning Interatomic Potemtials
+role: WP3 - Machine Learning Interatomic Potentials
 project: DIAMOND
 personnel_type: Scientifique
 photo: /images/team/NA.png
 ---
 
-**Rôle :** Machine Learning Interatomic Potemtials
+**Rôle :** WP3 - Machine Learning Interatomic Potentials
 
 **Affiliation :** Sorbonne Université
 

@@ -5,13 +5,13 @@ first_name: Ahmed
 last_name: Amrani
 email: ahmed.amrani@cea.fr
 affiliation: CEA Saclay
-role: Materials Database Infrastructure
+role: WP2 - Materials Database Infrastructure
 project: DIAMOND
 personnel_type: Scientifique
 photo: /images/team/NA.png
 ---
 
-**Rôle :** Materials Database Infrastructure
+**Rôle :** WP2 - Materials Database Infrastructure
 
 **Affiliation :** CEA Saclay
 

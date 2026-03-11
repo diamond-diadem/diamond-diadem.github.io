@@ -5,7 +5,7 @@ first_name: Marco
 last_name: Saitta
 email: marco.saitta@sorbonne-universite.fr
 affiliation: Sorbonne Université
-role: Machine Learning Interatomic Potemtials
+role: WP3 - Machine Learning Interatomic Potentials
 project: DIAMOND
 personnel_type:
 - Scientifique
@@ -13,7 +13,7 @@ personnel_type:
 photo: /images/team/ms.png
 ---
 
-**Rôle :** Machine Learning Interatomic Potemtials
+**Rôle :** WP3 - Machine Learning Interatomic Potentials
 
 **Affiliation :** Sorbonne Université
 

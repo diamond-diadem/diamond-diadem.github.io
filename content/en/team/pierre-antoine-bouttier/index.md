@@ -5,7 +5,7 @@ first_name: Pierre-Antoine
 last_name: Bouttier
 email: pierre-antoine.bouttier@univ-grenoble-alpes.fr
 affiliation: UAR GRICAD/CNRS
-role: Codes and Workflows Platform
+role: WP1 - Codes and Workflows
 project: DIAMOND
 personnel_type: Scientifique
 photo: /images/team/NA.png

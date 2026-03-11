@@ -5,7 +5,7 @@ first_name: Léo
 last_name: Orveillon
 email: leo.orveillon@univ-grenoble-alpes.fr
 affiliation: GRICAD Grenoble
-role: Codes and Workflows Platform
+role: WP1 - Codes and Workflows
 project: DIAMOND
 personnel_type: Scientifique
 photo: /images/team/lo.png

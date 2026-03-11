@@ -4,13 +4,13 @@ slug: anruo-zhong
 first_name: Anruo
 last_name: Zhong
 email: Anruo.ZHONG@cea.fr
-role: Machine Learning Interatomic Potemtials
+role: WP3 - Machine Learning Interatomic Potentials
 project: DIAMOND
 personnel_type: Scientifique
 photo: /images/team/NA.png
 ---
 
-**Rôle :** Machine Learning Interatomic Potemtials
+**Rôle :** WP3 - Machine Learning Interatomic Potentials
 
 **Projet :** DIAMOND
 

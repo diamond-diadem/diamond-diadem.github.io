@@ -5,13 +5,13 @@ first_name: Jonathan
 last_name: Daubin
 email: jonathan.daubin@cea.fr
 affiliation: CEA Saclay
-role: Codes and Workflows Platform
+role: WP1 - Codes and Workflows
 project: DIAMOND
 personnel_type: Scientifique
 photo: /images/team/NA.png
 ---
 
-**Rôle :** Codes and Workflows Platform
+**Rôle :** WP1 - Codes and Workflows
 
 **Affiliation :** CEA Saclay
 

@@ -5,7 +5,7 @@ first_name: Nils
 last_name: Kasch
 email: nils.kasch@cea.fr
 affiliation: CEA Saclay
-role: Codes and Workflows Platform
+role: WP1 - Codes and Workflows
 project: DIAMOND
 personnel_type: Scientifique
 photo: /images/team/NA.png

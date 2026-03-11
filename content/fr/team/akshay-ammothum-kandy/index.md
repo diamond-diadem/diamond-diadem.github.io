@@ -5,7 +5,7 @@ first_name: Akshay
 last_name: Ammothum kandy
 email: akshaykrishnaak9@gmail.com
 affiliation: IMPMC, Sorbonne University
-role: Machine Learning Interatomic Potentials
+role: 
 project: DIAMOND
 personnel_type: Scientifique
 photo: /images/team/NA.png

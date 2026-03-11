@@ -5,7 +5,7 @@ first_name: Noël
 last_name: Jakse
 email: noel.jakse@grenoble-inp.fr
 affiliation: Grenoble INP
-role: Codes and Workflows Platform
+role: WP1 - Codes and Workflows
 project: DIAMOND
 personnel_type:
 - Project Coordinator
@@ -13,7 +13,7 @@ personnel_type:
 photo: /images/team/nj.png
 ---
 
-**Rôle :** Codes and Workflows Platform
+**Rôle :** WP1 - Codes and Workflows
 
 **Affiliation :** Grenoble INP
 

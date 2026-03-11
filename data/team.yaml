@@ -6,7 +6,7 @@ team:
   last_name: Almeida de Mendonca
   email: joao-paulo.almeida-de-mendonca@grenoble-inp.fr
   affiliation: SIMaP Grenoble
-  role: Codes and Workflows Platform
+  role: WP1 - Codes and Workflows
   project: DIAMOND
   personnel_type: Scientifique
   slug: joao-paulo-almeida
@@ -28,7 +28,7 @@ team:
   last_name: Jakse
   email: noel.jakse@grenoble-inp.fr
   affiliation: Grenoble INP
-  role: Codes and Workflows Platform
+  role: WP1 - Codes and Workflows
   project: DIAMOND
   personnel_type: 
     - Project Coordinator
@@ -53,7 +53,7 @@ team:
   last_name: Saitta
   email: marco.saitta@sorbonne-universite.fr
   affiliation: Sorbonne Université
-  role: Machine Learning Interatomic Potentials
+  role: WP3 - Machine Learning Interatomic Potentials
   project: DIAMOND
   personnel_type: 
     - Scientifique
@@ -66,7 +66,7 @@ team:
   last_name: Bergeaud
   email: vincent.bergeaud@cea.fr
   affiliation: CEA Saclay
-  role: Materials Database Infrastructure
+  role: WP2 - Materials Database Infrastructure
   project: DIAMOND
   personnel_type: Scientifique
   slug: vincent-bergeaud
@@ -77,7 +77,7 @@ team:
   last_name: Deutsch
   email: thierry.deutsch@cea.fr
   affiliation: CEA Grenoble
-  role: Materials Database Infrastructure
+  role: WP2 - Materials Database Infrastructure
   project: DIAMOND
   personnel_type: 
     - Scientifique
@@ -90,7 +90,7 @@ team:
   last_name: Rodney
   email: david.rodney@univ-lyon1.fr
   affiliation: ILM Lyon
-  role: Codes and Workflows Platform
+  role: WP1 - Codes and Workflows
   project: DIAMOND
   personnel_type: Scientifique
   slug: david-rodney
@@ -101,7 +101,7 @@ team:
   last_name: Poli
   email: jean-philippe.poli@cea.fr
   affiliation: CEA Saclay
-  role: Materials Database Infrastructure
+  role: WP2 - Materials Database Infrastructure
   project: DIAMOND
   personnel_type: Scientifique
   slug: jean-philippe-poli
@@ -112,7 +112,7 @@ team:
   last_name: Arrondeau
   email: benjamin.arrondeau@univ-grenoble-alpes.fr
   affiliation: GRICAD Grenoble
-  role: Codes and Workflows Platform
+  role: WP1 - Codes and Workflows
   project: DIAMOND
   personnel_type: Scientifique
   slug: benjamin-arrondeau
@@ -124,7 +124,7 @@ team:
   last_name: Bouttier
   email: pierre-antoine.bouttier@univ-grenoble-alpes.fr
   affiliation: UAR GRICAD/CNRS
-  role: Codes and Workflows Platform
+  role: WP1 - Codes and Workflows
   project: DIAMOND
   personnel_type: Scientifique
   slug: pierre-antoine-bouttier
@@ -140,7 +140,7 @@ team:
   last_name: Bruneton
   email: adrien.bruneton@cea.fr
   affiliation: CEA Saclay
-  role: Codes and Workflows Platform
+  role: WP1 - Codes and Workflows
   project: DIAMOND
   personnel_type: Scientifique
   slug: adrien-bruneton
@@ -151,7 +151,7 @@ team:
   last_name: Crouzet
   email: nicolas.crouzet@cea.fr
   affiliation: CEA Saclay
-  role: Codes and Workflows Platform
+  role: WP1 - Codes and Workflows
   project: DIAMOND
   personnel_type: Scientifique
   slug: nicolas-crouzet
@@ -162,7 +162,7 @@ team:
   last_name: Daniel
   email: geoffrey.daniel@cea.fr
   affiliation: CEA Saclay
-  role: Codes and Workflows Platform
+  role: WP1 - Codes and Workflows
   project: DIAMOND
   personnel_type: Scientifique
   slug: geoffrey-daniel
@@ -173,7 +173,7 @@ team:
   last_name: Daubin
   email: jonathan.daubin@cea.fr
   affiliation: CEA Saclay
-  role: Codes and Workflows Platform
+  role: WP1 - Codes and Workflows
   project: DIAMOND
   personnel_type: Scientifique
   slug: jonathan-daubin
@@ -185,7 +185,7 @@ team:
   last_name: Kasch
   email: nils.kasch@cea.fr
   affiliation: CEA Saclay
-  role: Codes and Workflows Platform
+  role: WP1 - Codes and Workflows
   project: DIAMOND
   personnel_type: Scientifique
   slug: nils-kasch
@@ -200,7 +200,7 @@ team:
   last_name: Martin-Calle
   email: david.martin-calle@univ-lyon1.fr
   affiliation: ILM Lyon
-  role: Codes and Workflows Platform
+  role: WP1 - Codes and Workflows
   project: DIAMOND
   personnel_type: Scientifique
   slug: david-martin-calle
@@ -211,7 +211,7 @@ team:
   last_name: Paulatto
   email: Lorenzo.paulatto@sorbonne-universite.fr
   affiliation: Sorbonne Université
-  role: Codes and Workflows Platform
+  role: WP1 - Codes and Workflows
   project: DIAMOND
   personnel_type: Scientifique
   slug: lorenzo-paulatto
@@ -222,7 +222,7 @@ team:
   last_name: Piazza
   email: irina.piazza@grenoble-inp.fr
   affiliation: SIMaP Grenoble
-  role: Machine Learning Interatomic Potentials
+  role: WP3 - Machine Learning Interatomic Potentials
   project: DIAMOND
   personnel_type: Scientifique
   slug: irina-piazza
@@ -240,7 +240,7 @@ team:
   last_name: Rolland
   email: dorian.rolland@cea.fr
   affiliation: CEA Grenoble
-  role: Codes and Workflows Platform
+  role: WP1 - Codes and Workflows
   project: DIAMOND
   personnel_type: Scientifique
   slug: dorian-rolland
@@ -251,7 +251,7 @@ team:
   last_name: Uhrin
   email: martin.uhrin@grenoble-inp.fr
   affiliation: SIMaP Grenoble
-  role: Codes and Workflows Platform
+  role: WP1 - Codes and Workflows
   project: DIAMOND
   personnel_type: Scientifique
   slug: martin-uhrin
@@ -262,7 +262,7 @@ team:
   last_name: Arivazhagan
   email: aadhityan.arivazhagan@sorbonne-universite.fr
   affiliation: Sorbonne Université
-  role: Codes and Workflows Platform
+  role: WP1 - Codes and Workflows
   project: DIAMOND
   personnel_type: Scientifique
   slug: aadhityan-arivazhagan
@@ -283,7 +283,7 @@ team:
   last_name: Amrani
   email: ahmed.amrani@cea.fr
   affiliation: CEA Saclay
-  role: Materials Database Infrastructure
+  role: WP2 - Materials Database Infrastructure
   project: DIAMOND
   personnel_type: Scientifique
   slug: ahmed-amrani
@@ -294,7 +294,7 @@ team:
   last_name: Camatchy
   email: arawinth.camatchy@cea.fr
   affiliation: CEA Grenoble
-  role: Materials Database Infrastructure
+  role: WP2 - Materials Database Infrastructure
   project: DIAMOND
   personnel_type: Scientifique
   slug: arawinth-camatchy
@@ -305,7 +305,7 @@ team:
   last_name: Setoain
   email: imanol.setoain@cea.fr
   affiliation: CEA Saclay
-  role: Materials Database Infrastructure
+  role: WP2 - Materials Database Infrastructure
   project: DIAMOND
   personnel_type: Scientifique
   slug: imanol-setoain
@@ -316,7 +316,7 @@ team:
   last_name: Vigano
   email: nicola.vigano@cea.fr
   affiliation: CEA Grenoble
-  role: Materials Database Infrastructure
+  role: WP2 - Materials Database Infrastructure
   project: DIAMOND
   personnel_type: Scientifique
   slug: nicola-vigano
@@ -328,7 +328,7 @@ team:
   last_name: Herrera
   email: cinthya.herreracontreras@cea.fr
   affiliation: CEA Grenoble
-  role: Materials Database Infrastructure
+  role: WP2 - Materials Database Infrastructure
   project: DIAMOND
   personnel_type: Scientifique
   slug: cinthya-herrera
@@ -346,7 +346,7 @@ team:
   last_name: Marinica
   email: cosmin.marinica@cea.fr
   affiliation: CEA Saclay
-  role: Machine Learning Interatomic Potentials
+  role: WP3 - Machine Learning Interatomic Potentials
   project: DIAMOND
   personnel_type: Scientifique
   slug: mihai-cosmin-marinica
@@ -356,7 +356,7 @@ team:
   first_name: Anruo
   last_name: Zhong
   email: Anruo.ZHONG@cea.fr
-  role: Machine Learning Interatomic Potentials
+  role: WP3 - Machine Learning Interatomic Potentials
   project: DIAMOND
   personnel_type: Scientifique
   slug: anruo-zhong
@@ -367,7 +367,7 @@ team:
   last_name: France-Lanord
   email: arthur.france-lanord@sorbonne-universite.fr
   affiliation: Sorbonne Université
-  role: Machine Learning Interatomic Potentials
+  role: WP3 - Machine Learning Interatomic Potentials
   project: DIAMOND
   personnel_type: Scientifique
   slug: arthur-france-lanord
@@ -378,7 +378,7 @@ team:
   last_name: Ammothum kandy  
   email: akshaykrishnaak9@gmail.com
   affiliation: IMPMC, Sorbonne University
-  role: Machine Learning Interatomic Potentials
+  role: WP3 - Machine Learning Interatomic Potentials
   project: DIAMOND
   personnel_type: Scientifique
   slug: akshay-ammothum-kandy
@@ -397,7 +397,7 @@ team:
   last_name: Orveillon
   email: leo.orveillon@univ-grenoble-alpes.fr
   affiliation: GRICAD Grenoble
-  role: Codes and Workflows Platform
+  role: WP1 - Codes and Workflows
   project: DIAMOND
   personnel_type: Scientifique
   slug: leo-orveillon
