@@ -110,6 +110,13 @@
     }
 }
 
+@include media-breakpoint-down(lg) {
+    .section-title-lead-landing-page {
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+}
+
 @include media-breakpoint-down(sm) {
     .section-title-lead-landing-page {
         max-width: 120%;
@@ -118,12 +125,10 @@
         left: -10%;
     }
     .container-title-homepage h1 {
-        font-size: calc(#{$h2-font-size} * 0.8);
         position: relative;
         top: -0.1em;
     }
     .container-lead-homepage .lead {
-        font-size: calc(#{$h4-font-size} * 0.8);
         position: relative;
         top: 0.1em;
     }
