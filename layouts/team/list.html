@@ -2,24 +2,6 @@
 {{ if site.Params.diamond.enableTeamPage | default true }}
 <section class="container mx-auto px-4 py-8 mb-5">
   <h1 class="text-3xl font-semibold mb-6">{{ .Page.Param "title" }}</h1>
-  {{ $isFr := eq .Site.Language.Lang "fr" }}
-  {{ $roleTranslations := dict
-    "Coordinator" "Coordination"
-    "WP1 - Codes and Workflows" "WP1 - Codes et Workflows"
-    "WP2 - Materials Database Infrastructure" "WP2 - Infrastructure de Bases de Données Matériaux"
-    "WP3 - Machine Learning Interatomic Potentials" "WP3 - Potentiels Interatomiques Machine Learning"
-    "WP3 - Machine Learning Interatomic Potentials" "WP3 - Potentiels Interatomiques Machine Learning"
-  }}
-  {{ $typeTranslationsFr := dict
-    "Project Coordinator" "Coordinateur de projet"
-    "Scientifique" "Scientifique"
-    "Responsable scientifique" "Responsable scientifique"
-  }}
-  {{ $typeTranslationsEn := dict
-    "Project Coordinator" "Project Coordinator"
-    "Scientifique" "Scientist"
-    "Responsable scientifique" "Scientific Lead"
-  }}
 
   <!-- Filters -->
   <div id="filters" class="grid mb-6">
@@ -29,12 +11,12 @@
     <select id="f-project" class="border rounded px-3 py-2 w-full">
       <option value="" selected disabled hidden>{{ .Page.Param "filter1" }}</option>
       <optgroup label="{{ .Page.Param "filter1" }}">
-        <option value="__all__">{{ if eq .Site.Language.Lang "fr" }}Tous{{ else }}All{{ end }}</option>
+        <option value="__all__">{{ i18n "team_all" }}</option>
         {{ $seen := dict }}
         {{ range .Site.Data.team.team }}
           {{ with .role }}
             {{ if and (eq . "Coordinator") (not (index $seen .)) }}
-              <option value="{{ . }}">{{ if $isFr }}{{ or (index $roleTranslations .) . }}{{ else }}{{ . }}{{ end }}</option>
+              <option value="{{ . }}">{{ partial "team/label.html" (dict "kind" "role" "value" .) }}</option>
               {{ $seen = merge $seen (dict . true) }}
             {{ end }}
           {{ end }}
@@ -42,7 +24,7 @@
         {{ range .Site.Data.team.team }}
           {{ with .role }}
             {{ if and (eq . "WP1 - Codes and Workflows") (not (index $seen .)) }}
-              <option value="{{ . }}">{{ if $isFr }}{{ or (index $roleTranslations .) . }}{{ else }}{{ . }}{{ end }}</option>
+              <option value="{{ . }}">{{ partial "team/label.html" (dict "kind" "role" "value" .) }}</option>
               {{ $seen = merge $seen (dict . true) }}
             {{ end }}
           {{ end }}
@@ -50,7 +32,7 @@
         {{ range .Site.Data.team.team }}
           {{ with .role }}
             {{ if and (eq . "WP2 - Materials Database Infrastructure") (not (index $seen .)) }}
-              <option value="{{ . }}">{{ if $isFr }}{{ or (index $roleTranslations .) . }}{{ else }}{{ . }}{{ end }}</option>
+              <option value="{{ . }}">{{ partial "team/label.html" (dict "kind" "role" "value" .) }}</option>
               {{ $seen = merge $seen (dict . true) }}
             {{ end }}
           {{ end }}
@@ -58,7 +40,7 @@
         {{ range .Site.Data.team.team }}
           {{ with .role }}
             {{ if and (eq . "WP3 - Machine Learning Interatomic Potentials") (not (index $seen .)) }}
-              <option value="{{ . }}">{{ if $isFr }}{{ or (index $roleTranslations .) . }}{{ else }}{{ . }}{{ end }}</option>
+              <option value="{{ . }}">{{ partial "team/label.html" (dict "kind" "role" "value" .) }}</option>
               {{ $seen = merge $seen (dict . true) }}
             {{ end }}
           {{ end }}
@@ -66,7 +48,7 @@
         {{ range .Site.Data.team.team }}
           {{ with .role }}
             {{ if and (ne . "Coordinator") (ne . "WP1 - Codes and Workflows") (ne . "WP2 - Materials Database Infrastructure") (ne . "WP3 - Machine Learning Interatomic Potentials") (not (index $seen .)) }}
-              <option value="{{ . }}">{{ if $isFr }}{{ or (index $roleTranslations .) . }}{{ else }}{{ . }}{{ end }}</option>
+              <option value="{{ . }}">{{ partial "team/label.html" (dict "kind" "role" "value" .) }}</option>
               {{ $seen = merge $seen (dict . true) }}
             {{ end }}
           {{ end }}
@@ -77,20 +59,20 @@
     <select id="f-type" class="border rounded px-3 py-2 w-full">
       <option value="" selected disabled hidden>{{ .Page.Param "filter2" }}</option>
       <optgroup label="{{ .Page.Param "filter2" }}">
-        <option value="__all__">{{ if eq .Site.Language.Lang "fr" }}Tous{{ else }}All{{ end }}</option>
+        <option value="__all__">{{ i18n "team_all" }}</option>
         {{ $seen := dict }}
         {{ range .Site.Data.team.team }}
           {{ with .personnel_type }}
             {{ if reflect.IsSlice . }}
               {{ range . }}
                 {{ if not (index $seen .) }}
-                  <option value="{{ . }}">{{ if $isFr }}{{ or (index $typeTranslationsFr .) . }}{{ else }}{{ or (index $typeTranslationsEn .) . }}{{ end }}</option>
+                  <option value="{{ . }}">{{ partial "team/label.html" (dict "kind" "personnel_type" "value" .) }}</option>
                   {{ $seen = merge $seen (dict . true) }}
                 {{ end }}
               {{ end }}
             {{ else }}
               {{ if not (index $seen .) }}
-                <option value="{{ . }}">{{ if $isFr }}{{ or (index $typeTranslationsFr .) . }}{{ else }}{{ or (index $typeTranslationsEn .) . }}{{ end }}</option>
+                <option value="{{ . }}">{{ partial "team/label.html" (dict "kind" "personnel_type" "value" .) }}</option>
                 {{ $seen = merge $seen (dict . true) }}
               {{ end }}
             {{ end }}
@@ -103,7 +85,7 @@
     <select id="f-affil" class="border rounded px-3 py-2 w-full">
       <option value="" selected disabled hidden>{{ .Page.Param "filter3" }}</option>
       <optgroup label="{{ .Page.Param "filter3" }}">
-        <option value="__all__">{{ if eq .Site.Language.Lang "fr" }}Toutes{{ else }}All{{ end }}</option>
+        <option value="__all__">{{ i18n "team_all_feminine" }}</option>
         {{ $seen3 := dict }}
         {{ range .Site.Data.team.team }}
           {{ with .affiliation }}
@@ -133,12 +115,12 @@
   </div>
 
   <div id="people-pagination" class="people-pagination mt-4" aria-label="People pagination">
-    <button id="people-prev" type="button" class="people-page-btn">{{ if eq .Site.Language.Lang "fr" }}Précédent{{ else }}Previous{{ end }}</button>
+    <button id="people-prev" type="button" class="people-page-btn">{{ i18n "team_previous" }}</button>
     <span id="people-page-info" class="people-page-info"></span>
-    <button id="people-next" type="button" class="people-page-btn">{{ if eq .Site.Language.Lang "fr" }}Suivant{{ else }}Next{{ end }}</button>
+    <button id="people-next" type="button" class="people-page-btn">{{ i18n "team_next" }}</button>
   </div>
 
-  <p id="no-results" class="hidden mt-4 text-gray-600">{{ if eq .Site.Language.Lang "fr" }}Aucun resultat.{{ else }}No results.{{ end }}</p>
+  <p id="no-results" class="hidden mt-4 text-gray-600">{{ i18n "team_no_results" }}</p>
 </section>
 
 <style>

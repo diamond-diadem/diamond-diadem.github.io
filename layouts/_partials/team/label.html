@@ -1,0 +1,24 @@
+{{- $kind := .kind -}}
+{{- $value := .value | default "" -}}
+{{- $key := "" -}}
+
+{{- if eq $kind "role" -}}
+  {{- $key = index (dict
+    "Coordinator" "team_role_coordinator"
+    "WP1 - Codes and Workflows" "team_role_wp1"
+    "WP2 - Materials Database Infrastructure" "team_role_wp2"
+    "WP3 - Machine Learning Interatomic Potentials" "team_role_wp3"
+  ) $value -}}
+{{- else if eq $kind "personnel_type" -}}
+  {{- $key = index (dict
+    "Project Coordinator" "team_personnel_type_project_coordinator"
+    "Scientifique" "team_personnel_type_scientist"
+    "Responsable scientifique" "team_personnel_type_scientific_lead"
+  ) $value -}}
+{{- end -}}
+
+{{- if $key -}}
+  {{- or (i18n $key) $value -}}
+{{- else -}}
+  {{- $value -}}
+{{- end -}}

@@ -28,3 +28,18 @@ video_unsupported: Your browser doesn't support embedded videos, but don't worry
   you can <a href="{{ .RelPermalink }}">download it</a> and watch it with your favorite
   video player!
 faq: Frequently asked questions
+team_all: All
+team_all_feminine: All
+team_next: Next
+team_no_results: No results.
+team_photo_of: Photo of
+team_previous: Previous
+team_role_coordinator: Coordinator
+team_role_wp1: WP1 - Codes and Workflows
+team_role_wp2: WP2 - Materials Database Infrastructure
+team_role_wp3: WP3 - Machine Learning Interatomic Potentials
+team_personnel_type_project_coordinator: Project Coordinator
+team_personnel_type_scientific_lead: Scientific Lead
+team_personnel_type_scientist: Scientist
+team_send_email: Send an email
+team_website: Website
