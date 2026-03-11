@@ -149,6 +149,11 @@
           {{ $newsPages := where .Site.RegularPages "Section" "news" }}
           {{ $displayNews := (ge (len ($newsPages)) 1) }}
           {{ range .Site.Menus.main -}}
+            {{- $displayTeam := site.Params.diamond.enableTeamPage | default true -}}
+            {{- $isTeamEntry := or (eq .URL "people/") (eq .URL "en/people/") -}}
+            {{- if and (not $displayTeam) $isTeamEntry -}}
+              {{- continue -}}
+            {{- end -}}
             {{- $active := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) -}}
             {{- $active = or $active (eq .Name $current.Title) -}}
             {{- $active = or $active (and (eq .Name ($section | humanize)) (eq $current.Section $section)) -}}

@@ -1,4 +1,5 @@
 {{ define "main" }}
+{{ if site.Params.diamond.enableTeamPage | default true }}
 {{/* Determine slug for lookup (content front matter can set slug explicitly) */}}
 {{ $slug := .Params.slug | default .File.BaseFileName }}
 {{ $fromData := index (where .Site.Data.people.people "slug" $slug) 0 }}
@@ -195,4 +196,5 @@ html[data-bs-theme="dark"] .prose a {
   color: #b3c7ff;
 }
 </style>
+{{ end }}
 {{ end }}
