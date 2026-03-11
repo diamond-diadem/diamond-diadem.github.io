@@ -10,7 +10,7 @@
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "joao-paulo-almeida",
-      "photo": "/website/staging/images/people/jpam.png",
+      "photo": "/images/people/jpam.png",
       "bio": "I work with bioinspired and machine learning algorithms, applying them to materials science (and some other complex systems, just for fun).",
       "links": [
         {
@@ -39,7 +39,7 @@
         "Responsable scientifique"
       ],
       "slug": "no-l-jakse",
-      "photo": "/website/staging/images/people/nj.png"
+      "photo": "/images/people/nj.png"
     },
     {
       "name": "François Willaime",
@@ -53,7 +53,7 @@
         "Project Coordinator"
       ],
       "slug": "fran-ois-willaime",
-      "photo": "/website/staging/images/people/NA.png"
+      "photo": "/images/people/NA.png"
     },
     {
       "name": "Marco Saitta",
@@ -68,7 +68,7 @@
         "Responsable scientifique"
       ],
       "slug": "marco-saitta",
-      "photo": "/website/staging/images/people/ms.png"
+      "photo": "/images/people/ms.png"
     },
     {
       "name": "Vincent Bergeaud",
@@ -80,7 +80,7 @@
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "vincent-bergeaud",
-      "photo": "/website/staging/images/people/NA.png"
+      "photo": "/images/people/NA.png"
     },
     {
       "name": "Thierry Deutsch",
@@ -95,7 +95,7 @@
         "Responsable scientifique"
       ],
       "slug": "thierry-deutsch",
-      "photo": "/website/staging/images/people/NA.png"
+      "photo": "/images/people/NA.png"
     },
     {
       "name": "David Rodney",
@@ -107,7 +107,7 @@
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "david-rodney",
-      "photo": "/website/staging/images/people/NA.png"
+      "photo": "/images/people/NA.png"
     },
     {
       "name": "Jean-Philippe Poli",
@@ -119,7 +119,7 @@
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "jean-philippe-poli",
-      "photo": "/website/staging/images/people/NA.png"
+      "photo": "/images/people/NA.png"
     },
     {
       "name": "Benjamin Arrondeau",
@@ -131,7 +131,7 @@
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "benjamin-arrondeau",
-      "photo": "/website/staging/images/people/NA.png"
+      "photo": "/images/people/NA.png"
     },
     {
       "name": "Pierre-Antoine Bouttier",
@@ -144,7 +144,7 @@
       "personnel_type": "Scientifique",
       "slug": "pierre-antoine-bouttier",
       "bio": "I am a reseach engineer specialized in software engineering and applied mathematics. I am currently the deputy director of [GRICAD](https://gricad.univ-grenoble-alpes.fr/)",
-      "photo": "/website/staging/images/people/NA.png",
+      "photo": "/images/people/NA.png",
       "links": [
         {
           "label": "LinkedIn",
@@ -162,7 +162,7 @@
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "adrien-bruneton",
-      "photo": "/website/staging/images/people/NA.png"
+      "photo": "/images/people/NA.png"
     },
     {
       "name": "Nicolas Crouzet",
@@ -174,7 +174,7 @@
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "nicolas-crouzet",
-      "photo": "/website/staging/images/people/NA.png"
+      "photo": "/images/people/NA.png"
     },
     {
       "name": "Geoffrey Daniel",
@@ -186,7 +186,7 @@
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "geoffrey-daniel",
-      "photo": "/website/staging/images/people/NA.png"
+      "photo": "/images/people/NA.png"
     },
     {
       "name": "Jonathan Daubin",
@@ -198,7 +198,7 @@
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "jonathan-daubin",
-      "photo": "/website/staging/images/people/NA.png"
+      "photo": "/images/people/NA.png"
     },
     {
       "name": "Nils Kasch",
@@ -211,7 +211,7 @@
       "personnel_type": "Scientifique",
       "slug": "nils-kasch",
       "bio": "I am an engineer working on parallel material simulation codes and their deployment on HPC.",
-      "photo": "/website/staging/images/people/NA.png",
+      "photo": "/images/people/NA.png",
       "links": [
         {
           "label": "LinkedIn",
@@ -229,7 +229,7 @@
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "david-martin-calle",
-      "photo": "/website/staging/images/people/NA.png"
+      "photo": "/images/people/NA.png"
     },
     {
       "name": "Lorenzo Paulatto",
@@ -241,7 +241,7 @@
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "lorenzo-paulatto",
-      "photo": "/website/staging/images/people/NA.png"
+      "photo": "/images/people/NA.png"
     },
     {
       "name": "Irina Piazza",
@@ -253,7 +253,7 @@
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "irina-piazza",
-      "photo": "/website/staging/images/people/irina.png",
+      "photo": "/images/people/irina.png",
       "bio": "I am a reseach engineer buiding automated workflows for machine learning interatomic potential in HCP and I am integrating exsting MLIP workflow inside the DIAMOND platform.",
       "links": [
         {
@@ -277,7 +277,7 @@
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "dorian-rolland",
-      "photo": "/website/staging/images/people/NA.png"
+      "photo": "/images/people/NA.png"
     },
     {
       "name": "Martin Uhrin",
@@ -289,7 +289,7 @@
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "martin-uhrin",
-      "photo": "/website/staging/images/people/NA.png"
+      "photo": "/images/people/NA.png"
     },
     {
       "name": "Aadhityan Arivazhagan",
@@ -301,7 +301,7 @@
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "aadhityan-arivazhagan",
-      "photo": "/website/staging/images/people/NA.png"
+      "photo": "/images/people/NA.png"
     },
     {
       "name": "Omar Benyahya",
@@ -312,7 +312,7 @@
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "omar-benyahya",
-      "photo": "/website/staging/images/people/NA.png"
+      "photo": "/images/people/NA.png"
     },
     {
       "name": "Ahmed Amrani",
@@ -324,7 +324,7 @@
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "ahmed-amrani",
-      "photo": "/website/staging/images/people/NA.png"
+      "photo": "/images/people/NA.png"
     },
     {
       "name": "Arawinth Camatchy",
@@ -336,7 +336,7 @@
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "arawinth-camatchy",
-      "photo": "/website/staging/images/people/NA.png"
+      "photo": "/images/people/NA.png"
     },
     {
       "name": "Imanol Setoain",
@@ -348,7 +348,7 @@
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "imanol-setoain",
-      "photo": "/website/staging/images/people/NA.png"
+      "photo": "/images/people/NA.png"
     },
     {
       "name": "Nicola Vigano",
@@ -360,7 +360,7 @@
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "nicola-vigano",
-      "photo": "/website/staging/images/people/NA.png"
+      "photo": "/images/people/NA.png"
     },
     {
       "name": "Cinthya Herrera",
@@ -372,7 +372,7 @@
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "cinthya-herrera",
-      "photo": "/website/staging/images/people/ch.png",
+      "photo": "/images/people/ch.png",
       "bio": "I’m a research engineer working on standardizing databases and workflows, I use ontologies to make data and tools speak the same language.",
       "links": [
         {
@@ -393,7 +393,7 @@
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "mihai-cosmin-marinica",
-      "photo": "/website/staging/images/people/NA.png"
+      "photo": "/images/people/NA.png"
     },
     {
       "name": "Anruo Zhong",
@@ -404,7 +404,7 @@
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "anruo-zhong",
-      "photo": "/website/staging/images/people/NA.png"
+      "photo": "/images/people/NA.png"
     },
     {
       "name": "Arthur France-Lanord",
@@ -416,7 +416,7 @@
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "arthur-france-lanord",
-      "photo": "/website/staging/images/people/NA.png"
+      "photo": "/images/people/NA.png"
     },
     {
       "name": "Akshay Krishna Ammothum Kandy",
@@ -428,7 +428,7 @@
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "akshay-ammothum-kandy",
-      "photo": "/website/staging/images/people/NA.png",
+      "photo": "/images/people/NA.png",
       "bio": "I am a research engineer building databases and automated workflows for MLIPs.",
       "links": [
         {
@@ -453,7 +453,7 @@
       "project": "DIAMOND",
       "personnel_type": "Scientifique",
       "slug": "leo-orveillon",
-      "photo": "/website/staging/images/people/lo.png",
+      "photo": "/images/people/lo.png",
       "bio": "I am an engineer working on efficient way to packages and deploy scientific codes on HPC infrastructures.",
       "links": [
         {

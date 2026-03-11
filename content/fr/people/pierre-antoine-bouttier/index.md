@@ -8,7 +8,7 @@ affiliation: UAR GRICAD/CNRS
 role: Codes and Workflows Platform
 project: DIAMOND
 personnel_type: Scientifique
-photo: /website/staging/images/people/NA.png
+photo: /images/people/NA.png
 links:
 - label: LinkedIn
   url: https://www.linkedin.com/in/pierre-antoine-bouttier/

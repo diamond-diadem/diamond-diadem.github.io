@@ -1,5 +1,5 @@
 ---
-title: Personnes
+title: Équipe
 slug: people
 layout: people
 filter1: Tous Work Package

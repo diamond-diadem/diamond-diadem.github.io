@@ -32,11 +32,11 @@ main:
   - name: Data
     url: en/data/
     weight: 40
-  - name: People
-    url: en/people/
-    weight: 45
   - name: Documentation
     url: en/documentation/home/
+    weight: 45
+  - name: Team
+    url: en/people/
     weight: 50
   - name: Contact
     url: en/contact/

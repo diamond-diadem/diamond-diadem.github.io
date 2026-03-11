@@ -8,7 +8,7 @@ affiliation: IMPMC, Sorbonne University
 role: Machine Learning Interatomic Potentials
 project: DIAMOND
 personnel_type: Scientifique
-photo: /website/staging/images/people/NA.png
+photo: /images/people/NA.png
 orcid: 0000-0002-9880-4482
 github: aksam432
 links:

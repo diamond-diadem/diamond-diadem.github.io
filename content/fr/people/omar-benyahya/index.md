@@ -7,7 +7,7 @@ email: omar.benyahya@cea.fr
 affiliation: CEA Saclay
 project: DIAMOND
 personnel_type: Scientifique
-photo: /website/staging/images/people/NA.png
+photo: /images/people/NA.png
 ---
 
 **Affiliation :** CEA Saclay

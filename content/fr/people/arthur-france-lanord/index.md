@@ -8,7 +8,7 @@ affiliation: Sorbonne Université
 role: Machine Learning Interatomic Potemtials
 project: DIAMOND
 personnel_type: Scientifique
-photo: /website/staging/images/people/NA.png
+photo: /images/people/NA.png
 ---
 
 **Rôle :** Machine Learning Interatomic Potemtials

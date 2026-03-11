@@ -8,7 +8,7 @@ affiliation: SIMaP Grenoble
 role: Machine Learning Interatomic Potentials
 project: DIAMOND
 personnel_type: Scientifique
-photo: /website/staging/images/people/irina.png
+photo: /images/people/irina.png
 github: irina-piazza
 links:
 - label: Google Scholar

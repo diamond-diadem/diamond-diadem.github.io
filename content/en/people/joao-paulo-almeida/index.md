@@ -8,7 +8,7 @@ affiliation: SIMAP, Grenoble
 role: WP1
 project: DIAMOND
 personnel_type: Scientifique
-photo: /website/staging/images/people/jpam.png
+photo: /images/people/jpam.png
 ---
 
 I work with bioinspired and machine learning algorithms, applying them to materials science (and some other complex systems, just for fun).

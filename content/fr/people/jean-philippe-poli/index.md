@@ -8,7 +8,7 @@ affiliation: CEA Saclay
 role: Materials Database Infrastructure
 project: DIAMOND
 personnel_type: Scientifique
-photo: /website/staging/images/people/NA.png
+photo: /images/people/NA.png
 ---
 
 **Rôle :** Materials Database Infrastructure

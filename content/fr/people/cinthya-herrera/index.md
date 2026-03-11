@@ -8,7 +8,7 @@ affiliation: CEA Grenoble
 role: Materials Database Infrastructure
 project: DIAMOND
 personnel_type: Scientifique
-photo: /website/staging/images/people/ch.png
+photo: /images/people/ch.png
 orcid: 0000-0001-6405-0785
 github: cnherrera
 links:

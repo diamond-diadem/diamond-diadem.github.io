@@ -8,7 +8,7 @@ affiliation: ILM Lyon
 role: Codes and Workflows Platform
 project: DIAMOND
 personnel_type: Scientifique
-photo: /website/staging/images/people/NA.png
+photo: /images/people/NA.png
 ---
 
 **Rôle :** Codes and Workflows Platform

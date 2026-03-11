@@ -9,7 +9,7 @@ role: Coordinator
 project: DIAMOND
 personnel_type:
 - Project Coordinator
-photo: /website/staging/images/people/NA.png
+photo: /images/people/NA.png
 ---
 
 **Rôle :** Coordinator

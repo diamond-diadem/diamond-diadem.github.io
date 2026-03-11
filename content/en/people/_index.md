@@ -1,5 +1,5 @@
 ---
-title: "People"
+title: "Team"
 slug: "people"
 layout: "people"
 filter1: All Work Packages

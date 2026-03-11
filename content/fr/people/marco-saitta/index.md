@@ -10,7 +10,7 @@ project: DIAMOND
 personnel_type:
 - Scientifique
 - Responsable scientifique
-photo: /website/staging/images/people/ms.png
+photo: /images/people/ms.png
 ---
 
 **Rôle :** Machine Learning Interatomic Potemtials

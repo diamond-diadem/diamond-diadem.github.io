@@ -10,7 +10,7 @@ project: DIAMOND
 personnel_type:
 - Project Coordinator
 - Responsable scientifique
-photo: /website/staging/images/people/nj.png
+photo: /images/people/nj.png
 ---
 
 **Rôle :** Codes and Workflows Platform

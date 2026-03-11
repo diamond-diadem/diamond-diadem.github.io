@@ -8,7 +8,7 @@ affiliation: GRICAD Grenoble
 role: Codes and Workflows Platform
 project: DIAMOND
 personnel_type: Scientifique
-photo: /website/staging/images/people/lo.png
+photo: /images/people/lo.png
 github: periodLeo
 links:
 - label: LinkedIn

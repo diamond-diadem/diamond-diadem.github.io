@@ -7,23 +7,23 @@
      data-email="{{ .email }}">
   <div class="flex items-start gap-3">
     {{ with .photo }}
-      <img src="{{ . }}" alt="Photo de {{ $.name }}" style="width:64px;height:64px;border-radius:9999px;object-fit:cover;">
+      <img class="person-avatar" src="{{ . }}" alt="Photo de {{ $.name }}">
     {{ else }}
-      <div style="width:64px;height:64px;border-radius:9999px;background:#e5e7eb;display:flex;align-items:center;justify-content:center;font-weight:600;">
+      <div class="person-avatar person-avatar-fallback">
         {{ (index (split (default "" $.first_name) "") 0) }}{{ (index (split (default "" $.last_name) "") 0) }}
       </div>
     {{ end }}
 
     <div class="min-w-0">
       <div class="person-name">
-        <a href="{{ (printf "/website/staging/people/%s/" .slug) | relLangURL }}">{{ .name }}</a>
+        <a href="{{ (printf "/people/%s/" .slug) | relLangURL }}">{{ .name }}</a>
       </div>
       {{ with .role }}<div class="person-role">{{ . }}</div>{{ end }}
       {{ with .affiliation }}<div class="person-affil">{{ . }}</div>{{ end }}
 
       {{ with .bio }}
         {{ $plain := . | markdownify | plainify }}
-        <p class="mt-2 text-sm text-gray-600">{{ substr $plain 0 140 }}{{ if gt (len $plain) 140 }}…{{ end }}</p>
+        <p class="mt-2 text-sm person-bio">{{ substr $plain 0 140 }}{{ if gt (len $plain) 140 }}…{{ end }}</p>
       {{ end }}
 
       <div class="mt-2">
