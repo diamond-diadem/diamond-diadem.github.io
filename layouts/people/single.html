@@ -73,10 +73,17 @@
             {{ $label := .label | default .url }}
             {{ $url := .url }}
             {{ $isLinkedIn := (in (lower $url) "linkedin.com") }}
+            {{ $isGoogleScholar := or (in (lower $url) "scholar.google") (eq (lower $label) "google scholar") }}
             <a class="pbtn{{ if $isLinkedIn }} pbtn-ln{{ end }}" href="{{ $url }}" target="_blank" rel="noopener">
               {{ if $isLinkedIn }}
                 <!-- LinkedIn icon -->
                 <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.49 1s2.49 1.12 2.49 2.5ZM.5 8.5h4V23h-4V8.5Zm7 0h3.8v2h.1c.5-.9 1.9-2.2 3.9-2.2 4.2 0 5 2.8 5 6.4V23h-4v-6.5c0-1.6 0-3.7-2.2-3.7s-2.5 1.7-2.5 3.6V23h-4V8.5Z" fill="currentColor"/></svg>
+              {{ else if $isGoogleScholar }}
+                <!-- Google Scholar icon -->
+                <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                  <path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3Z" fill="currentColor"/>
+                  <path d="M6 12.27V16c0 1.8 2.69 3.5 6 3.5s6-1.7 6-3.5v-3.73l-6 3.27-6-3.27Z" fill="currentColor" opacity=".65"/>
+                </svg>
               {{ end }}
               <span>{{ $label }}</span>
             </a>
@@ -128,12 +135,24 @@
 /* Buttons */
 .person-actions { margin-top: 1rem; display: grid; grid-template-columns: 1fr 1fr; gap: .5rem; }
 @media (max-width: 480px) { .person-actions { grid-template-columns: 1fr; } }
-.pbtn { display: inline-flex; align-items: center; gap: .5rem; padding: .55rem .8rem; border: 1px solid #e5e7eb; border-radius: .65rem; background: #f9fafb; color: #111827; text-decoration: none; font-size: .95rem; line-height: 1; }
-.pbtn:hover { background: #f3f4f6; }
+.pbtn {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .55rem .8rem;
+  border: 1px solid #e5e7eb;
+  border-radius: .65rem;
+  background: #f9fafb;
+  color: #111827;
+  text-decoration: none;
+  font-size: .95rem;
+  line-height: 1;
+}
+.pbtn:hover { background: #f3f4f6; color: #111827; }
 .pbtn:active { background: #e5e7eb; }
 .pbtn svg { flex: 0 0 auto; }
 .pbtn-ln { background: #0a66c2; border-color: #0a66c2; color: #fff; }
-.pbtn-ln:hover { background: #0959a8; }
+.pbtn-ln:hover { background: #0959a8; color: #fff; }
 
 /* Main content */
 .person-name { font-size: 2rem; font-weight: 650; margin: 0 0 .25rem; }
@@ -145,6 +164,35 @@
 .prose p { margin: .75rem 0; }
 .prose a { color: #1d4ed8; text-decoration: underline; }
 .prose ul, .prose ol { padding-left: 1.25rem; margin: .5rem 0; }
+
+html[data-bs-theme="dark"] .pbtn {
+  border-color: #475569;
+  background: #334155;
+  color: #f8fafc;
+}
+html[data-bs-theme="dark"] .pbtn:hover {
+  background: #3f4d63;
+  color: #f8fafc;
+}
+html[data-bs-theme="dark"] .pbtn:active {
+  background: #475569;
+}
+html[data-bs-theme="dark"] .pbtn-ln {
+  border-color: #3b82f6;
+  background: #0a66c2;
+  color: #fff;
+}
+html[data-bs-theme="dark"] .pbtn-ln:hover {
+  background: #0959a8;
+  color: #fff;
+}
+html[data-bs-theme="dark"] .pill {
+  background: #334155;
+  color: #e5e7eb;
+  border-color: #475569;
+}
+html[data-bs-theme="dark"] .prose a {
+  color: #b3c7ff;
+}
 </style>
 {{ end }}
-
