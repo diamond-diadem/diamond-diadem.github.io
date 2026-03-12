@@ -44,18 +44,19 @@
     background: transparent;
 }
 
-.person-card-content {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.75rem;
-    height: 100%;
-}
-
 .person-card-body {
     display: flex;
     flex: 1 1 auto;
     flex-direction: column;
     min-width: 0;
+    height: 100%;
+}
+
+.person-card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.25rem;
 }
 
 .person-name {
@@ -81,6 +82,26 @@
 }
 .person-links {
     margin-top: auto;
+}
+
+@include media-breakpoint-down(sm) {
+    .person-card-body {
+        width: 100%;
+    }
+
+    .person-card-header {
+        align-items: center;
+    }
+
+    .person-avatar {
+        width: 88px;
+        height: 88px;
+        flex-basis: 88px;
+    }
+
+    .person-bio {
+        display: none;
+    }
 }
 
 .pill {

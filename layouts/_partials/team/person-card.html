@@ -6,17 +6,19 @@
      data-ptype="{{ if reflect.IsSlice .personnel_type }}{{ delimit .personnel_type "," }}{{ else }}{{ .personnel_type }}{{ end }}"
      data-email="{{ .email }}">
   <div class="person-card-content">
-    {{ with .photo }}
-      <img class="person-avatar" src="{{ . }}" alt="{{ i18n "team_photo_of" }} {{ $.name }}">
-    {{ else }}
-      <div class="person-avatar person-avatar-fallback">
-        {{ (index (split (default "" $.first_name) "") 0) }}{{ (index (split (default "" $.last_name) "") 0) }}
-      </div>
-    {{ end }}
-
     <div class="person-card-body">
-      <div class="person-name">
-        <a href="{{ (printf "/team/%s/" .slug) | relLangURL }}">{{ .name }}</a>
+      <div class="person-card-header">
+        {{ with .photo }}
+          <img class="person-avatar" src="{{ . }}" alt="{{ i18n "team_photo_of" }} {{ $.name }}">
+        {{ else }}
+          <div class="person-avatar person-avatar-fallback">
+            {{ (index (split (default "" $.first_name) "") 0) }}{{ (index (split (default "" $.last_name) "") 0) }}
+          </div>
+        {{ end }}
+
+        <div class="person-name">
+          <a href="{{ (printf "/team/%s/" .slug) | relLangURL }}">{{ .name }}</a>
+        </div>
       </div>
       {{ with .role }}<div class="person-role">{{ partial "team/label.html" (dict "kind" "role" "value" .) }}</div>{{ end }}
       {{ with .affiliation }}<div class="person-affil">{{ . }}</div>{{ end }}
