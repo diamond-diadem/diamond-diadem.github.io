@@ -1,38 +1,14 @@
 {{ define "main" }}
 {{ if site.Params.diamond.enableTeamPage | default true }}
-{{/* Determine slug for lookup (content front matter can set slug explicitly) */}}
 {{ $slug := .Params.slug | default .File.BaseFileName }}
 {{ $fromData := index (where .Site.Data.team.team "slug" $slug) 0 }}
-{{ $isFr := eq .Site.Language.Lang "fr" }}
-{{ $renderedContent := "" }}
-{{ if .RawContent }}
-  {{ $renderedContent = .RawContent }}
-  {{ if not $isFr }}
-    {{ $renderedContent = replaceRE "\\*\\*R[oô]le ?:?\\*\\*" "**Role:**" $renderedContent }}
-    {{ $renderedContent = replaceRE "\\*\\*Affiliation ?:?\\*\\*" "**Affiliation:**" $renderedContent }}
-    {{ $renderedContent = replaceRE "\\*\\*Type ?:?\\*\\*" "**Type:**" $renderedContent }}
-    {{ $renderedContent = replaceRE "Responsable scientifique" "Scientific Lead" $renderedContent }}
-    {{ $renderedContent = replaceRE "Scientifique" "Scientist" $renderedContent }}
-  {{ end }}
-{{ end }}
-
-{{/* Merge precedence: page params override data file if set */}}
-{{ $person := dict
-  "name"           (default (index $fromData "name") .Params.title)
-  "first_name"     (default (index $fromData "first_name") .Params.first_name)
-  "last_name"      (default (index $fromData "last_name") .Params.last_name)
-  "email"          (default (index $fromData "email") .Params.email)
-  "affiliation"    (default (index $fromData "affiliation") .Params.affiliation)
-  "role"           (default (index $fromData "role") .Params.role)
-  "project"        (default (index $fromData "project") .Params.project)
-  "personnel_type" (default (index $fromData "personnel_type") .Params.personnel_type)
-  "photo"          (default (index $fromData "photo") .Params.photo)
-  "website"        (default (index $fromData "website") .Params.website)
-  "orcid"          (default (index $fromData "orcid") .Params.orcid)
-  "github"         (default (index $fromData "github") .Params.github)
-  "links"          (default (index $fromData "links") .Params.links)
-  "bio"            (default (index $fromData "bio") (.RawContent | plainify | default "" ))
-}}
+{{ if not $fromData }}
+  <section class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-semibold mb-4">{{ .Title }}</h1>
+    <p>No team data found for slug <code>{{ $slug }}</code>.</p>
+  </section>
+{{ else }}
+{{ $person := $fromData }}
 
 <section class="person-wrap">
   <div class="person-grid">
@@ -122,12 +98,8 @@
         {{ end }}
       </div>
 
-      {{ with $renderedContent }}
+      {{ with (index $person "bio_long") }}
         <div class="prose">{{ . | markdownify }}</div>
-      {{ else }}
-        {{ with (index $person "bio") }}
-          <div class="prose">{{ . | markdownify }}</div>
-        {{ end }}
       {{ end }}
     </main>
   </div>
@@ -208,5 +180,6 @@ html[data-bs-theme="dark"] .prose a {
   color: #b3c7ff;
 }
 </style>
+{{ end }}
 {{ end }}
 {{ end }}

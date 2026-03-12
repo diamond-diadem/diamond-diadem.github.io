@@ -11,7 +11,13 @@ team:
   personnel_type: Scientist
   slug: joao-paulo-almeida
   photo: /images/team/jpam.png
-  bio: I work with bioinspired and machine learning algorithms, applying them to materials science (and some other complex systems, just for fun).     #Markdown, idealy short
+  bio_short: I work with bioinspired and machine learning algorithms, applying them to materials science (and some other complex systems, just for fun).
+  bio_long: |-
+    I work with bioinspired and machine learning algorithms, applying them to materials science (and some other complex systems, just for fun).
+
+    - Interests: DFT, MLIPs, nanoparticles/nanoclusters, bioinspired optimisation.
+    - One of my funniest pubs: [Modeling a Hypothetical Zombie Outbreak Can Save Us from Real-World Monsters](https://link.springer.com/article/10.1007/s00283-019-09893-9)
+    - Notebooks for Tutorials: [In my github repository.](https://github.com/jpalastus/Notebooks)
   links:
     - label: Google Scholar
       url: https://scholar.google.com/citations?user=KtS3vY4AAAAJ
@@ -128,7 +134,8 @@ team:
   project: DIAMOND
   personnel_type: Scientist
   slug: pierre-antoine-bouttier
-  bio: I am a reseach engineer specialized in software engineering and applied mathematics. I am currently the deputy director of [GRICAD](https://gricad.univ-grenoble-alpes.fr/)
+  bio_short: I am a reseach engineer specialized in software engineering and applied mathematics.
+  bio_long: I am a reseach engineer specialized in software engineering and applied mathematics. I am currently the deputy director of [GRICAD](https://gricad.univ-grenoble-alpes.fr/)
   photo: /images/team/NA.png
   links:
     - label: LinkedIn
@@ -189,7 +196,8 @@ team:
   project: DIAMOND
   personnel_type: Scientist
   slug: nils-kasch
-  bio: I am an engineer working on parallel material simulation codes and their deployment on HPC.
+  bio_short: I am an engineer working on parallel material simulation codes and their deployment on HPC.
+  bio_long: I am an engineer working on parallel material simulation codes and their deployment on HPC.
   photo: /images/team/NA.png
   links:
     - label: LinkedIn
@@ -227,7 +235,8 @@ team:
   personnel_type: Scientist
   slug: irina-piazza
   photo: /images/team/irina.png
-  bio: I am a reseach engineer buiding automated workflows for machine learning interatomic potential in HCP and I am integrating exsting MLIP workflow inside the DIAMOND platform. #Markdown, idealy short
+  bio_short: I am a reseach engineer buiding automated workflows for machine learning interatomic potential in HCP.
+  bio_long: I am a reseach engineer buiding automated workflows for machine learning interatomic potential in HCP and I am integrating exsting MLIP workflow inside the DIAMOND platform.
   links:
     - label: Google Scholar
       url: https://scholar.google.com/citations?user=BlPP-x4AAAAJ&hl=fr&oi=ao
@@ -333,7 +342,8 @@ team:
   personnel_type: Scientist
   slug: cinthya-herrera
   photo: /images/team/ch.png
-  bio: I’m a research engineer working on standardizing databases and workflows, I use ontologies to make data and tools speak the same language.
+  bio_short: I’m a research engineer working on standardizing databases and workflows.
+  bio_long: I’m a research engineer working on standardizing databases and workflows, I use ontologies to make data and tools speak the same language.
   links:
     - label: LinkedIn
       url: https://www.linkedin.com/in/cinthyaherrera/
@@ -383,7 +393,8 @@ team:
   personnel_type: Scientist
   slug: akshay-ammothum-kandy
   photo: /images/team/NA.png
-  bio: I am a research engineer building databases and automated workflows for MLIPs. #Markdown, idealy short
+  bio_short: I am a research engineer building databases and automated workflows for MLIPs.
+  bio_long: I am a research engineer building databases and automated workflows for MLIPs.
   links:
     - label: Google Scholar
       url: https://scholar.google.com/citations?user=iE9GGREAAAAJ&hl=sv
@@ -402,7 +413,8 @@ team:
   personnel_type: Scientist
   slug: leo-orveillon
   photo: /images/team/lo.png
-  bio: I am an engineer working on efficient way to packages and deploy scientific codes on HPC infrastructures.  #Markdown
+  bio_short: I am an engineer working on efficient ways to package and deploy scientific codes on HPC infrastructures.
+  bio_long: I am an engineer working on efficient ways to package and deploy scientific codes on HPC infrastructures.
   links:                                # Optional custom links list
     - label: LinkedIn
       url: https://www.linkedin.com/in/leo-orveillon/

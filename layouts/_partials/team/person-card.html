@@ -23,7 +23,7 @@
       {{ with .role }}<div class="person-role">{{ partial "team/label.html" (dict "kind" "role" "value" .) }}</div>{{ end }}
       {{ with .affiliation }}<div class="person-affil">{{ . }}</div>{{ end }}
 
-      {{ with .bio }}
+      {{ with .bio_short }}
         {{ $plain := . | markdownify | plainify }}
         <p class="mt-2 text-sm person-bio">{{ substr $plain 0 140 }}{{ if gt (len $plain) 140 }}…{{ end }}</p>
       {{ end }}
