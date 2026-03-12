@@ -44,6 +44,20 @@
     background: transparent;
 }
 
+.person-card-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    height: 100%;
+}
+
+.person-card-body {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    min-width: 0;
+}
+
 .person-name {
     font-weight: 600;
     font-size: 1.125rem;
@@ -64,6 +78,9 @@
 .person-bio {
     color: var(--person-text-muted);
     font-size: 0.95rem;
+}
+.person-links {
+    margin-top: auto;
 }
 
 .pill {

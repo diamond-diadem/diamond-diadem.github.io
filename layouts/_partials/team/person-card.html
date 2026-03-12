@@ -5,7 +5,7 @@
      data-project="{{ .project }}"
      data-ptype="{{ if reflect.IsSlice .personnel_type }}{{ delimit .personnel_type "," }}{{ else }}{{ .personnel_type }}{{ end }}"
      data-email="{{ .email }}">
-  <div class="flex items-start gap-3">
+  <div class="person-card-content">
     {{ with .photo }}
       <img class="person-avatar" src="{{ . }}" alt="{{ i18n "team_photo_of" }} {{ $.name }}">
     {{ else }}
@@ -14,7 +14,7 @@
       </div>
     {{ end }}
 
-    <div class="min-w-0">
+    <div class="person-card-body">
       <div class="person-name">
         <a href="{{ (printf "/team/%s/" .slug) | relLangURL }}">{{ .name }}</a>
       </div>
@@ -26,7 +26,7 @@
         <p class="mt-2 text-sm person-bio">{{ substr $plain 0 140 }}{{ if gt (len $plain) 140 }}…{{ end }}</p>
       {{ end }}
 
-      <div class="mt-2">
+      <div class="mt-2 person-tags">
         {{ with .project }}<span class="pill">{{ . }}</span>{{ end }}
         {{ with .personnel_type }}
           {{ if reflect.IsSlice . }}
@@ -39,7 +39,7 @@
         {{ end }}
       </div>
 
-      <div class="mt-2 text-sm">
+      <div class="mt-2 text-sm person-links">
         {{ with .email }}<a href="mailto:{{ . }}">{{ . }}</a>{{ end }}
         {{ with .website }} · <a href="{{ . }}" target="_blank" rel="noopener">{{ i18n "team_website" }}</a>{{ end }}
         {{ with .orcid }} · <a href="https://orcid.org/{{ . }}" target="_blank" rel="noopener">ORCID</a>{{ end }}

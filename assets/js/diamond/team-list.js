@@ -9,7 +9,6 @@
   const next = document.getElementById('people-next');
   const pageInfo = document.getElementById('people-page-info');
   const empty = document.getElementById('no-results');
-
   if (!q || !proj || !type || !aff || !grid || !pagination || !prev || !next || !pageInfo || !empty) {
     return;
   }
@@ -17,6 +16,7 @@
   const cards = Array.from(grid.querySelectorAll('[data-person]'));
   const pageSize = 8;
   let currentPage = 1;
+  let resizeTimer;
 
   function norm(value) {
     return (value || '').toLowerCase();
@@ -25,6 +25,35 @@
   function resetSelectPlaceholder(select) {
     if (select && select.value === '__all__') {
       select.value = '';
+    }
+  }
+
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function syncCardHeights() {
+    if (!cards.length) {
+      return;
+    }
+
+    const originalDisplays = cards.map((card) => card.style.display);
+    let tallest = 0;
+
+    cards.forEach((card) => {
+      card.style.height = 'auto';
+      card.style.display = '';
+    });
+
+    cards.forEach((card) => {
+      tallest = Math.max(tallest, card.offsetHeight);
+    });
+
+    if (tallest > 0) {
+      cards.forEach((card, index) => {
+        card.style.height = tallest + 'px';
+        card.style.display = originalDisplays[index];
+      });
     }
   }
 
@@ -95,6 +124,7 @@
       renderPage(matches);
     }
 
+    syncCardHeights();
     empty.classList.toggle('hidden', matches.length !== 0);
   }
 
@@ -102,12 +132,14 @@
     if (currentPage > 1) {
       currentPage -= 1;
       apply(false);
+      scrollToTop();
     }
   });
 
   next.addEventListener('click', function () {
     currentPage += 1;
     apply(false);
+    scrollToTop();
   });
 
   [q, proj, type, aff].forEach((el) => el && el.addEventListener('input', function () { apply(true); }));
@@ -115,6 +147,14 @@
     resetSelectPlaceholder(el);
     apply(true);
   }));
+
+  window.addEventListener('resize', function () {
+    window.clearTimeout(resizeTimer);
+    resizeTimer = window.setTimeout(function () {
+      syncCardHeights();
+      apply(false);
+    }, 100);
+  });
 
   apply(true);
 })();
