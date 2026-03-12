@@ -1,13 +1,24 @@
 {{ define "main" }}
 {{ if site.Params.diamond.enableTeamPage | default true }}
 {{ $people := sort .Site.Data.team.team "last_name" }}
-{{ $featuredPeople := slice }}
-{{ $fallbackPeople := slice }}
+{{ $featuredPeopleWithBio := slice }}
+{{ $featuredPeopleWithoutBio := slice }}
+{{ $fallbackPeopleWithBio := slice }}
+{{ $fallbackPeopleWithoutBio := slice }}
 {{ range $people }}
+  {{ $hasBio := or .bio_short .bio_long }}
   {{ if and .photo (not (strings.HasSuffix .photo "/NA.png")) }}
-    {{ $featuredPeople = $featuredPeople | append . }}
+    {{ if $hasBio }}
+      {{ $featuredPeopleWithBio = $featuredPeopleWithBio | append . }}
+    {{ else }}
+      {{ $featuredPeopleWithoutBio = $featuredPeopleWithoutBio | append . }}
+    {{ end }}
   {{ else }}
-    {{ $fallbackPeople = $fallbackPeople | append . }}
+    {{ if $hasBio }}
+      {{ $fallbackPeopleWithBio = $fallbackPeopleWithBio | append . }}
+    {{ else }}
+      {{ $fallbackPeopleWithoutBio = $fallbackPeopleWithoutBio | append . }}
+    {{ end }}
   {{ end }}
 {{ end }}
 
@@ -58,6 +69,8 @@
 {{ end }}
 {{ $typeOptions = sort $typeOptions }}
 {{ $affiliationOptions = sort $affiliationOptions }}
+{{ $featuredPeople := $featuredPeopleWithBio | append $featuredPeopleWithoutBio }}
+{{ $fallbackPeople := $fallbackPeopleWithBio | append $fallbackPeopleWithoutBio }}
 <section class="container mx-auto px-4 py-8 mb-5">
   <h1 class="text-3xl font-semibold mb-6">{{ .Page.Param "title" }}</h1>
   {{ partial "team/list-filters.html" (dict
