@@ -1,0 +1,13 @@
+{{ range .Site.Data.team.team }}
+  {{ if not .slug }}
+    {{ errorf "Missing slug for team member %q" .name }}
+  {{ end }}
+  {{ $params := dict "slug" .slug }}
+  {{ $page := dict
+    "kind" "page"
+    "params" $params
+    "path" .slug
+    "title" .name
+  }}
+  {{ $.AddPage $page }}
+{{ end }}
