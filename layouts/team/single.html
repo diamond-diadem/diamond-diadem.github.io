@@ -9,6 +9,10 @@
   </section>
 {{ else }}
 {{ $person := $fromData }}
+{{ $bioLong := index $person "bio_long" }}
+{{ if eq .Lang "fr" }}
+  {{ $bioLong = index $person "bio_long_fr" | default $bioLong }}
+{{ end }}
 
 <section class="person-wrap">
   <div class="person-grid">
@@ -98,7 +102,7 @@
         {{ end }}
       </div>
 
-      {{ with (index $person "bio_long") }}
+      {{ with $bioLong }}
         <div class="prose">{{ . | markdownify }}</div>
       {{ end }}
     </main>

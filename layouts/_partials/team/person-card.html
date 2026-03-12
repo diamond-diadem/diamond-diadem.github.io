@@ -1,36 +1,42 @@
+{{- $person := .person -}}
+{{- $lang := .lang | default "en" -}}
+{{- $bioShort := index $person "bio_short" -}}
+{{- if eq $lang "fr" -}}
+  {{- $bioShort = index $person "bio_short_fr" | default $bioShort -}}
+{{- end -}}
 <div class="person-card" data-person
-     data-name="{{ .name }}"
-     data-role="{{ .role }}"
-     data-affiliation="{{ .affiliation }}"
-     data-project="{{ .project }}"
-     data-ptype="{{ if reflect.IsSlice .personnel_type }}{{ delimit .personnel_type "," }}{{ else }}{{ .personnel_type }}{{ end }}"
-     data-email="{{ .email }}">
+     data-name="{{ $person.name }}"
+     data-role="{{ $person.role }}"
+     data-affiliation="{{ $person.affiliation }}"
+     data-project="{{ $person.project }}"
+     data-ptype="{{ if reflect.IsSlice $person.personnel_type }}{{ delimit $person.personnel_type "," }}{{ else }}{{ $person.personnel_type }}{{ end }}"
+     data-email="{{ $person.email }}">
   <div class="person-card-content">
     <div class="person-card-body">
       <div class="person-card-header">
-        {{ with .photo }}
-          <img class="person-avatar" src="{{ . }}" alt="{{ i18n "team_photo_of" }} {{ $.name }}">
+        {{ with $person.photo }}
+          <img class="person-avatar" src="{{ . }}" alt="{{ i18n "team_photo_of" }} {{ $person.name }}">
         {{ else }}
           <div class="person-avatar person-avatar-fallback">
-            {{ (index (split (default "" $.first_name) "") 0) }}{{ (index (split (default "" $.last_name) "") 0) }}
+            {{ (index (split (default "" $person.first_name) "") 0) }}{{ (index (split (default "" $person.last_name) "") 0) }}
           </div>
         {{ end }}
 
         <div class="person-name">
-          <a href="{{ (printf "/team/%s/" .slug) | relLangURL }}">{{ .name }}</a>
+          <a href="{{ (printf "/team/%s/" $person.slug) | relLangURL }}">{{ $person.name }}</a>
         </div>
       </div>
-      {{ with .role }}<div class="person-role">{{ partial "team/label.html" (dict "kind" "role" "value" .) }}</div>{{ end }}
-      {{ with .affiliation }}<div class="person-affil">{{ . }}</div>{{ end }}
+      {{ with $person.role }}<div class="person-role">{{ partial "team/label.html" (dict "kind" "role" "value" .) }}</div>{{ end }}
+      {{ with $person.affiliation }}<div class="person-affil">{{ . }}</div>{{ end }}
 
-      {{ with .bio_short }}
+      {{ with $bioShort }}
         {{ $plain := . | markdownify | plainify }}
-        <p class="mt-2 text-sm person-bio">{{ substr $plain 0 140 }}{{ if gt (len $plain) 140 }}…{{ end }}</p>
+        <p class="mt-2 text-sm person-bio">{{ substr $plain 0 220 }}{{ if gt (len $plain) 220 }}…{{ end }}</p>
       {{ end }}
 
       <div class="mt-2 person-tags">
-        {{ with .project }}<span class="pill">{{ . }}</span>{{ end }}
-        {{ with .personnel_type }}
+        {{ with $person.project }}<span class="pill">{{ . }}</span>{{ end }}
+        {{ with $person.personnel_type }}
           {{ if reflect.IsSlice . }}
             {{ range . }}
               <span class="pill">{{ partial "team/label.html" (dict "kind" "personnel_type" "value" .) }}</span>
@@ -42,10 +48,10 @@
       </div>
 
       <div class="mt-2 text-sm person-links">
-        {{ with .email }}<a href="mailto:{{ . }}">{{ . }}</a>{{ end }}
-        {{ with .website }} · <a href="{{ . }}" target="_blank" rel="noopener">{{ i18n "team_website" }}</a>{{ end }}
-        {{ with .orcid }} · <a href="https://orcid.org/{{ . }}" target="_blank" rel="noopener">ORCID</a>{{ end }}
-        {{ with .github }} · <a href="https://github.com/{{ . }}" target="_blank" rel="noopener">GitHub</a>{{ end }}
+        {{ with $person.email }}<a href="mailto:{{ . }}">{{ . }}</a>{{ end }}
+        {{ with $person.website }} · <a href="{{ . }}" target="_blank" rel="noopener">{{ i18n "team_website" }}</a>{{ end }}
+        {{ with $person.orcid }} · <a href="https://orcid.org/{{ . }}" target="_blank" rel="noopener">ORCID</a>{{ end }}
+        {{ with $person.github }} · <a href="https://github.com/{{ . }}" target="_blank" rel="noopener">GitHub</a>{{ end }}
       </div>
     </div>
   </div>

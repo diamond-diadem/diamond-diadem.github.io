@@ -80,6 +80,15 @@
     color: var(--person-text-muted);
     font-size: 0.95rem;
 }
+
+.person-bio {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    overflow: hidden;
+}
+
 .person-links {
     margin-top: auto;
 }

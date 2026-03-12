@@ -6,7 +6,7 @@
 {{ $fallbackPeopleWithBio := slice }}
 {{ $fallbackPeopleWithoutBio := slice }}
 {{ range $people }}
-  {{ $hasBio := or .bio_short .bio_long }}
+  {{ $hasBio := or .bio_short .bio_long .bio_short_fr .bio_long_fr }}
   {{ if and .photo (not (strings.HasSuffix .photo "/NA.png")) }}
     {{ if $hasBio }}
       {{ $featuredPeopleWithBio = $featuredPeopleWithBio | append . }}
@@ -86,6 +86,7 @@
   {{ partial "team/list-grid.html" (dict
     "featuredPeople" $featuredPeople
     "fallbackPeople" $fallbackPeople
+    "lang" .Lang
   ) }}
 
   {{ partial "team/list-pagination.html" . }}

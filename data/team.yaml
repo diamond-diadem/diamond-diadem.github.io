@@ -12,12 +12,19 @@ team:
   slug: joao-paulo-almeida
   photo: /images/team/jpam.png
   bio_short: I work with bioinspired and machine learning algorithms, applying them to materials science (and some other complex systems, just for fun).
+  bio_short_fr: Je travaille avec des algorithmes bio-inspirés et d\'apprentissage automatique, que j\'applique à la science des matériaux.
   bio_long: |-
     I work with bioinspired and machine learning algorithms, applying them to materials science (and some other complex systems, just for fun).
 
     - Interests: DFT, MLIPs, nanoparticles/nanoclusters, bioinspired optimisation.
     - One of my funniest pubs: [Modeling a Hypothetical Zombie Outbreak Can Save Us from Real-World Monsters](https://link.springer.com/article/10.1007/s00283-019-09893-9)
     - Notebooks for Tutorials: [In my github repository.](https://github.com/jpalastus/Notebooks)
+  bio_long_fr: |-
+    Je travaille avec des algorithmes bio-inspirés et d'apprentissage automatique, que j\'applique à la science des matériaux, et parfois à d'autres systèmes complexes, pour le plaisir.
+
+    - Intérêts : DFT, MLIPs, nanoparticules/nanoclusters, optimisation bio-inspirée.
+    - Une de mes publications les plus amusantes : [Modeling a Hypothetical Zombie Outbreak Can Save Us from Real-World Monsters](https://link.springer.com/article/10.1007/s00283-019-09893-9)
+    - Notebooks pour les tutoriels : [Dans mon dépôt GitHub.](https://github.com/jpalastus/Notebooks)
   links:
     - label: Google Scholar
       url: https://scholar.google.com/citations?user=KtS3vY4AAAAJ
@@ -135,7 +142,9 @@ team:
   personnel_type: Scientist
   slug: pierre-antoine-bouttier
   bio_short: I am a reseach engineer specialized in software engineering and applied mathematics.
+  bio_short_fr: Je suis ingénieur de recherche, spécialisé en génie logiciel et en mathématiques appliquées.
   bio_long: I am a reseach engineer specialized in software engineering and applied mathematics. I am currently the deputy director of [GRICAD](https://gricad.univ-grenoble-alpes.fr/)
+  bio_long_fr: Je suis ingénieur de recherche, spécialisé en génie logiciel et en mathématiques appliquées. Je suis actuellement directeur adjoint de [GRICAD](https://gricad.univ-grenoble-alpes.fr/).
   photo: /images/team/NA.png
   links:
     - label: LinkedIn
@@ -197,7 +206,9 @@ team:
   personnel_type: Scientist
   slug: nils-kasch
   bio_short: I am an engineer working on parallel material simulation codes and their deployment on HPC.
+  bio_short_fr: Je suis ingénieur et je travaille sur des codes parallèles de simulation des matériaux ainsi que sur leur déploiement sur des infrastructures HPC.
   bio_long: I am an engineer working on parallel material simulation codes and their deployment on HPC.
+  bio_long_fr: Je suis ingénieur et je travaille sur des codes parallèles de simulation des matériaux ainsi que sur leur déploiement sur des infrastructures HPC.
   photo: /images/team/NA.png
   links:
     - label: LinkedIn
@@ -236,7 +247,9 @@ team:
   slug: irina-piazza
   photo: /images/team/irina.png
   bio_short: I am a reseach engineer buiding automated workflows for machine learning interatomic potential in HCP.
+  bio_short_fr: Je suis ingénieure de recherche et je développe des workflows automatisés pour les potentiels interatomiques d\'apprentissage automatique sur des infrastructures HPC.
   bio_long: I am a reseach engineer buiding automated workflows for machine learning interatomic potential in HCP and I am integrating exsting MLIP workflow inside the DIAMOND platform.
+  bio_long_fr: Je suis ingénieure de recherche et je développe des workflows automatisés pour les potentiels interatomiques d\'apprentissage automatique sur des infrastructures HPC. J'intègre également des workflows MLIP existants dans la plateforme DIAMOND.
   links:
     - label: Google Scholar
       url: https://scholar.google.com/citations?user=BlPP-x4AAAAJ&hl=fr&oi=ao
@@ -342,8 +355,10 @@ team:
   personnel_type: Scientist
   slug: cinthya-herrera
   photo: /images/team/ch.png
-  bio_short: I’m a research engineer working on standardizing databases and workflows.
-  bio_long: I’m a research engineer working on standardizing databases and workflows, I use ontologies to make data and tools speak the same language.
+  bio_short: I am a research engineer working on standardizing databases and workflows.
+  bio_short_fr: Je suis ingénieure de recherche et je travaille sur la standardisation des bases de données et des workflows.
+  bio_long: I am a research engineer working on standardizing databases and workflows, I use ontologies to make data and tools speak the same language.
+  bio_long_fr: Je suis ingénieure de recherche et je travaille sur la standardisation des bases de données et des workflows. J'utilise des ontologies pour faire parler les données et les outils dans le même langage.
   links:
     - label: LinkedIn
       url: https://www.linkedin.com/in/cinthyaherrera/
@@ -394,7 +409,9 @@ team:
   slug: akshay-ammothum-kandy
   photo: /images/team/NA.png
   bio_short: I am a research engineer building databases and automated workflows for MLIPs.
+  bio_short_fr: Je suis ingénieur de recherche et je développe des bases de données et des workflows automatisés pour les MLIPs.
   bio_long: I am a research engineer building databases and automated workflows for MLIPs.
+  bio_long_fr: Je suis ingénieur de recherche et je développe des bases de données et des workflows automatisés pour les MLIPs.
   links:
     - label: Google Scholar
       url: https://scholar.google.com/citations?user=iE9GGREAAAAJ&hl=sv
@@ -414,7 +431,9 @@ team:
   slug: leo-orveillon
   photo: /images/team/lo.png
   bio_short: I am an engineer working on efficient ways to package and deploy scientific codes on HPC infrastructures.
+  bio_short_fr: Je suis ingénieur et je travaille sur des méthodes efficaces pour empaqueter et déployer des codes scientifiques sur des infrastructures HPC.
   bio_long: I am an engineer working on efficient ways to package and deploy scientific codes on HPC infrastructures.
+  bio_long_fr: Je suis ingénieur et je travaille sur des méthodes efficaces pour empaqueter et déployer des codes scientifiques sur des infrastructures HPC.
   links:                                # Optional custom links list
     - label: LinkedIn
       url: https://www.linkedin.com/in/leo-orveillon/
