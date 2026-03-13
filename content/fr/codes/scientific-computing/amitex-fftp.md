@@ -29,6 +29,13 @@ Le code combine une **implémentation massivement parallèle** avec une **interf
 - petites déformations et grandes déformations,
 - possibilité d’ajuster finement les sorties (résultats).
 
+### Contenu principal de l'image:
+
+- **amitex_fftp** : /gnu/store/kvj82gw5j78zrmpwfb16wx0fl71v9fsb-amitex_fftp-8.17.14/bin/amitex_fftp
+- **LICENCE_AMITEX.pdf** : /gnu/store/kvj82gw5j78zrmpwfb16wx0fl71v9fsb-amitex_fftp-8.17.14/share/doc/amitex_fftp-8.17.14/LICENCE_AMITEX.pdf
+- **gnuplot** : /gnu/store/gghd7a7wmcqrjir0r2kl5xb2gkcdq3iz-gnuplot-6.0.1/bin/gnuplot
+- **mfront** : /gnu/store/m51plz005xw9g3n9zi9rbrxzsy6ix7qp-mfront-TFEL-4.2.1/bin/mfront
+
 </div>
 
 <h3 class="mb-1">Tutoriel</h3>
@@ -39,7 +46,7 @@ Le code combine une **implémentation massivement parallèle** avec une **interf
 
 {{< card-grid >}}
 {{< link-card title="Site officiel" href="https://amitexfftp.github.io/AMITEX/index.html" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
-{{< link-card title="Documentation officielle" href="https://amitexfftp.github.io/AMITEX/user_guide/to_begin.html" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
+{{< link-card title="Documentation officielle" href="https://amitexfftp.github.io/AMITEX/user_guide/map-site-user.html" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
 {{< /card-grid >}}
 
 
