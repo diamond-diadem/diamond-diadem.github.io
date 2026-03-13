@@ -52,4 +52,4 @@ The code combines **massively parallel implementation** with a **versatile user 
 
 <h3 class="mb-1 mt-3">Examples</h3>
 
-{{< link-card title="Content to be added" description="<i>Download input files</i>" href="#bottom" icon="tabler-icons/outline/file-export" disabled="true" class="mb-0" >}}
+{{< link-card title="Download input files" href="/downloads/amitex-tutorial-inputs.tar.gz" icon="tabler-icons/outline/file-export" >}}

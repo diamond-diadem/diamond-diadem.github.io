@@ -12,13 +12,17 @@ weight: 7
 
 - Avoir installé **Apptainer** [(guide d'installation)](/documentation/install/install-apptainer/)
 - Avoir téléchargé l'image **amitex-fftp.sif** [disponible ici](/codes/scientific-computing/amitex-fftp/)
-- Avoir téléchargé les **fichiers d’entrées** [disponibles ici](/codes/scientific-computing/amitex-fftp/)
+- Avoir téléchargé les **fichiers d’entrées** [disponibles ici](/downloads/amitex-tutorial-inputs.tar.gz)
 
 Pour plus d'informations sur les conteneurs Apptainer, veuillez consulter la [page dédiée](/about/apptainer/) ou suivre [ce tutoriel](/documentation/use/apptainer-image/) pour s'approprier les principales commandes d'Apptainer.
 
 {{< /callout >}}
 
-Créez un dossier contenant l'image **amitex-fftp.sif** et les **fichiers d'entrées** puis placez-vous dans ce dossier.
+Créez un dossier contenant l'image **amitex-fftp.sif** et l'archive des **fichiers d'entrées**. Placez-vous dans ce dossier et décompressez l'archive comme ceci:
+```bash
+tar -xzf amitex-tutorial-inputs.tar.gz # Extrait le contenu de l'archive.
+```
+
 
 ## Commande en une ligne
 

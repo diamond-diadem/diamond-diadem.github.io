@@ -52,4 +52,4 @@ Le code combine une **implémentation massivement parallèle** avec une **interf
 
 <h3 class="mb-1 mt-3">Exemples</h3>
 
-{{< link-card title="Contenu à venir" description="<i>Téléchargez des fichiers d'entrée</i>" href="#bottom" icon="tabler-icons/outline/file-export" disabled="true" class="mb-0" >}}
+{{< link-card title="Téléchargez des fichiers d'entrée" href="/downloads/amitex-tutorial-inputs.tar.gz" icon="tabler-icons/outline/file-export" class="mb-0" >}}
