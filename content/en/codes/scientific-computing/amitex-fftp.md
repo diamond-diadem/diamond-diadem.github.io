@@ -40,7 +40,7 @@ The code combines **massively parallel implementation** with a **versatile user 
 
 <h3 class="mb-1">Tutorial</h3>
 
-{{< link-card title="Content to be added" description="<i>Learn to use this container image</i>" href="#bottom" icon="tabler-icons/outline/package" disabled="true" class="mb-0" >}}
+{{< link-card title="Learn to use this container image" href="/en/documentation/by-container/amitex" icon="tabler-icons/outline/package" class="mb-0" >}}
 
 <h3 class="mb-1 mt-3">AMITEX_FFTP documentation</h3>
 
