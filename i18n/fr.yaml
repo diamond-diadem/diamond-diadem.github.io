@@ -12,25 +12,47 @@ last_updated: Last updated on
 location: à
 minute: minutes
 on_this_page: Sur cette page
-reading_time: Estimated reading time
+reading_time: Temps de lecture estimé
+
+### Search ###
 search_cancel: Annuler
 search_close: fermer
-search_loading: Loading search index…
+search_loading: Chargement de l'index de recherche…
 search_navigate: parcourir
 search_no_recent: Pas de recherches récentes
 search_recent_label: Recherches récentes
 search_no_results: Pas de résultats pour
 search_placeholder: Recherchez sur ce site
 search_select: sélectionner
-search_title: Search
-video_unsupported: Your browser doesn't support embedded videos, but don't worry,
-  you can <a href="{{ .RelPermalink }}">download it</a> and watch it with your favorite
-  video player!
+search_title: Recherche
+
+video_unsupported: Votre navigateur ne prend pas en charge les vidéos intégrées, mais ne vous inquiétez pas,
+  vous pouvez <a href="{{ .RelPermalink }}">télécharger la vidéo</a> et la regarder avec votre lecteur vidéo préféré.
 faq: Foire aux questions
+
+### Home page ###
+home_codes_body: <a href="/codes/home/">Calcul scientifique et visualisation de
+  données</a>.
+home_codes_title: Récupérez nos images Apptainer de codes populaires
+home_documentation_body: <a href="/documentation/install/install-apptainer/">Installez
+  Apptainer</a>, et <a href="/documentation/use/apptainer-image/">apprenez à utiliser
+  nos images de conteneurs</a>.
+home_documentation_title: Consultez la documentation
+home_faq_body: <a href="/documentation/faq/">Consultez notre FAQ</a>.
+home_faq_title: Foire aux questions
+home_featured_news_title: Actualités en vedette
+home_learn_more_body: Sur <a href="/about/diamond/">DIAMOND</a>, le <a href="/about/diadem/">PEPR
+  DIADEM</a>, les <a href="/about/containers/">conteneurs</a> et <a href="/about/apptainer/">Apptainer</a>.
+home_learn_more_title: Apprenez-en plus
+home_workflows_body: <a href="/workflows/home/">Workflows disponibles</a>.<br/><a href="/data/">Contactez
+  l'équipe bases de données</a>.
+home_workflows_title: Workflows & bases de données
+
+### Team page ###
 team_all: Tous
 team_all_feminine: Toutes
 team_next: Suivant
-team_no_results: Aucun resultat.
+team_no_results: Aucun résultat.
 team_photo_of: Photo de
 team_previous: Précédent
 team_role_coordinator: Coordination

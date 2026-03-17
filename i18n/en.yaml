@@ -28,6 +28,25 @@ video_unsupported: Your browser doesn't support embedded videos, but don't worry
   you can <a href="{{ .RelPermalink }}">download it</a> and watch it with your favorite
   video player!
 faq: Frequently asked questions
+
+### Home page ###
+home_codes_body: <a href="/en/codes/home/">Scientific computing and data visualisation</a>.
+home_codes_title: Get our Apptainer images for popular codes
+home_documentation_body: <a href="/en/documentation/install/install-apptainer/">Install
+  Apptainer</a>, and <a href="/en/documentation/use/apptainer-image/">learn to
+  use our container images</a>.
+home_documentation_title: Browse the documentation
+home_faq_body: <a href="/en/documentation/faq/">Check out our FAQ</a>.
+home_faq_title: Frequently asked questions
+home_featured_news_title: Featured News
+home_learn_more_body: About <a href="/en/about/diamond/">DIAMOND</a>, <a href="/en/about/diadem/">the
+  PEPR DIADEM</a>, <a href="/en/about/containers/">containers</a> and <a href="/en/about/apptainer/">Apptainer</a>.
+home_learn_more_title: Learn more
+home_workflows_body: <a href="/en/workflows/home/">Available workflows</a>.<br/><a
+  href="/en/data/">Contact the database team</a>.
+home_workflows_title: Workflows & databases
+
+### Team page ###
 team_all: All
 team_all_feminine: All
 team_next: Next
