@@ -12,7 +12,7 @@ seo:
 <div class="row about-diamond">
 
   <div class="left about-diamond">
-    <img alt="DIAMOND" class="logo-diamond about-diamond"/>
+    <span class="logo-diamond about-diamond" aria-hidden="true"></span>
   </div>
 
   <div class="right about-diamond">
