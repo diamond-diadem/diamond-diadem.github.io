@@ -15,7 +15,7 @@
 <section class="section container-fluid mt-n4 pb-0 section-logo">
   <div class="row text-center">
     <div class="container-fluid text-center">
-          <img class="logo-diamond homepage"/>
+          <span class="logo-diamond homepage" aria-hidden="true"></span>
       {{ .Content }}
     </div>
   </div>
@@ -31,35 +31,35 @@
     <div class="row justify-content-center text-center">
       <div class="col-lg-5 scroll-fade">
         {{ if site.Params.diamond.sectionsIcons }}
-        <img alt="about-icon" class="section-icon homepage about"/>
+        <span class="section-icon homepage about" aria-hidden="true"></span>
         {{ end }}
         <h2 class="h4">{{ i18n "home_learn_more_title" }}</h2>
         <p>{{ i18n "home_learn_more_body" | safeHTML }}</p>
       </div>
       <div class="col-lg-6 scroll-fade">
         {{ if site.Params.diamond.sectionsIcons }}
-        <img alt="about-icon" class="section-icon homepage containers"/>
+        <span class="section-icon homepage containers" aria-hidden="true"></span>
         {{ end }}
         <h2 class="h4">{{ i18n "home_codes_title" }}</h2>
         <p>{{ i18n "home_codes_body" | safeHTML }}</p>
       </div>
       <div class="col-lg-5 scroll-fade">
         {{ if site.Params.diamond.sectionsIcons }}
-        <img alt="about-icon" class="section-icon homepage wfs-dbs"/>
+        <span class="section-icon homepage wfs-dbs" aria-hidden="true"></span>
         {{ end }}
         <h2 class="h4">{{ i18n "home_workflows_title" }}</h2>
         <p>{{ i18n "home_workflows_body" | safeHTML }}</p>
       </div>
       <div class="col-lg-6 scroll-fade">
         {{ if site.Params.diamond.sectionsIcons }}
-        <img alt="about-icon" class="section-icon homepage documentation"/>
+        <span class="section-icon homepage documentation" aria-hidden="true"></span>
         {{ end }}
         <h2 class="h4">{{ i18n "home_documentation_title" }}</h2>
         <p>{{ i18n "home_documentation_body" | safeHTML }}</p>
       </div>
       <div class="col-lg-6 scroll-fade">
         {{ if site.Params.diamond.sectionsIcons }}
-        <img alt="faq-icon" class="section-icon homepage faq"/>
+        <span class="section-icon homepage faq" aria-hidden="true"></span>
         {{ end }}
         <h2 class="h4">{{ i18n "home_faq_title" }}</h2>
         <p>{{ i18n "home_faq_body" | safeHTML }}</p>

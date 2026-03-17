@@ -35,6 +35,23 @@
 
 // logo diamond homepage (responsive) //
 
+.logo-diamond.homepage {
+    display: block;
+    aspect-ratio: 500 / 418;
+    background-image: url(images/diamond/logo-diamond-light-smaller.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@include color-mode(dark) {
+    .logo-diamond.homepage {
+        background-image: url(images/diamond/logo-diamond-dark-smaller.png);
+    }
+}
+
 @include media-breakpoint-up(xl) {
     .logo-diamond.homepage {
         width: 38%;
