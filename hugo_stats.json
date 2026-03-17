@@ -1,6 +1,7 @@
 {
   "htmlElements": {
     "tags": [
+      "?xml",
       "a",
       "article",
       "aside",
@@ -561,7 +562,6 @@
       "4-set-up-the-codes",
       "5-lancer-et-suivre-un-calcul",
       "5-run-and-monitor-a-calculation",
-      "MathJax-script",
       "about-packages",
       "accès-aux-fichiers",
       "additional-isolation",

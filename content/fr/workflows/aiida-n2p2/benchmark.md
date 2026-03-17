@@ -3,6 +3,7 @@ title: Étude comparative des performances
 linkTitle: Benchmark
 toc: false
 draft: true
+math: true
 ---
 
 ### Condition optimale pour exécuter le workflow

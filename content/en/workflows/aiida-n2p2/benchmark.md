@@ -3,6 +3,7 @@ title: Benchmark investigation
 linkTitle: Benchmark
 toc: false
 draft: true
+math: true
 ---
 
 ### Optimal condition to run n2p2 WF.
