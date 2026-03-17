@@ -10,7 +10,7 @@ seo:
 
 <div class="row about diadem">
   <div class="left-about-diadem">
-    <img alt="PEPR DIADEM" class="logo-diadem about"/>
+    <span class="logo-diadem about" aria-hidden="true"></span>
   </div>
   <div class="right-about-diadem">
 

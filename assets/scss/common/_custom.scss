@@ -114,20 +114,30 @@ u {
 }
 
 .logo-apptainer {
-    content: url(images/apptainer/apptainer-logo.svg);
+    display: block;
+    aspect-ratio: 117.40221 / 113.8;
+    background-image: url(images/apptainer/apptainer-logo.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }
 @include color-mode(dark) {
     .logo-apptainer {
-        content: url(images/apptainer/apptainer-logo-dark.svg);
+        background-image: url(images/apptainer/apptainer-logo-dark.svg);
     }
 }
 
 .logo-guix {
-    content: url(images/guix/guix-logo-light.svg);
+    display: block;
+    aspect-ratio: 595 / 204.92203;
+    background-image: url(images/guix/guix-logo-light.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }
 @include color-mode(dark) {
     .logo-guix {
-        content: url(images/guix/guix-logo-dark.svg);
+        background-image: url(images/guix/guix-logo-dark.svg);
     }
 }
 

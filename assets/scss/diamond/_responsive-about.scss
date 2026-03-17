@@ -90,7 +90,12 @@
 // about diadem //
 
 .logo-diadem {
-    content: url(images/diadem/logo-diadem-processed.png);
+    display: block;
+    aspect-ratio: 250 / 242;
+    background-image: url(images/diadem/logo-diadem-processed.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }
 
 @include media-breakpoint-up(xl) {

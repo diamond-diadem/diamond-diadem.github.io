@@ -11,7 +11,7 @@ seo:
 <div class="row about apptainer">
 
   <div class="left-about-apptainer">
-    <img alt="Apptainer" class="logo-apptainer about"/>
+    <span class="logo-apptainer about" aria-hidden="true"></span>
   </div>
 
   <div class="right-about-apptainer">
