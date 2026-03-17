@@ -8,7 +8,7 @@ weight: 1
 ---
 
 <a href="https://www.lammps.org/" target="_blank" class="codes-pages-top-logo">
-    <img class="logo-lammps" alt="LAMMPS">
+    <span class="logo-lammps" aria-hidden="true"></span>
 </a>
 
 ### Retrieve the Apptainer image

@@ -7,7 +7,7 @@ weight: 18
 ---
 
 <a href="https://www.dftbplus.org/" target="_blank" class="codes-pages-top-logo">
-  <img alt="DFTB+" class="logo-dftbplus"/>
+  <span class="logo-dftbplus" aria-hidden="true"></span>
 </a>
 
 ### Récupérez l'image Apptainer

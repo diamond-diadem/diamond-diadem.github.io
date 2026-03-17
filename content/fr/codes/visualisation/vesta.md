@@ -10,7 +10,7 @@ weight: 3
 <div class="codes-pages-top-logo">
 
 <a href="https://jp-minerals.org/vesta/" target="blank" class="codes-pages-top-logo mb-0">
-   <img alt="VESTA" class="logo-vesta"/>
+   <span class="logo-vesta" aria-hidden="true"></span>
 </a>
 
 <h4 align="center">"<b>V</b>isualization for <b>E</b>lectronic and <b>ST</b>ructural <b>A</b>nalysis"</h4>

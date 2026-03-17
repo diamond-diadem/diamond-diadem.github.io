@@ -10,7 +10,7 @@ weight: 8
 <div class="codes-pages-top-logo">
 
 <a href="https://www.plumed.org/" target="_blank" class="codes-pages-top-logo mb-0">
-    <img alt="PLUMED" class="logo-plumed">
+    <span class="logo-plumed" aria-hidden="true"></span>
 </a>
 
 <h3 style="font-weight: 500;" align="center">The community-developed PLUgin for MolEcular Dynamics</h3>

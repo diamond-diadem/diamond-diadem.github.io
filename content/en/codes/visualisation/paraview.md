@@ -8,7 +8,7 @@ weight: 2
 ---
 
 <a href="https://www.paraview.org/" target="_blank" class="codes-pages-top-logo">
-    <img alt="ParaView" class="logo-paraview"/>
+    <span class="logo-paraview" aria-hidden="true"></span>
 </a>
 
 ### Retrieve the Apptainer image

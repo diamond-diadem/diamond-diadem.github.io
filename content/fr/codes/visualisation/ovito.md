@@ -8,7 +8,7 @@ weight: 1
 ---
 
 <a href="https://www.ovito.org/" target="_blank" class="codes-pages-top-logo">
-    <img alt="Ovito" class="logo-ovito"/>
+    <span class="logo-ovito" aria-hidden="true"></span>
 </a>
 
 ### Récupérez l'image Apptainer

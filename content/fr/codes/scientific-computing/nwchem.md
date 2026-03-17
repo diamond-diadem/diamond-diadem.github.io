@@ -8,7 +8,7 @@ weight: 14
 ---
 
 <a href="https://www.nwchem-sw.org/" target="_blank" class="codes-pages-top-logo">
-  <img alt="NWChem" class="logo-nwchem"/>
+  <span class="logo-nwchem" aria-hidden="true"></span>
 </a>
 
 ### Récupérez l'image Apptainer

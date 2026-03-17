@@ -8,7 +8,7 @@ weight: 3
 ---
 
 <a href="https://www.abinit.org/" target="_blank" class="codes-pages-top-logo">
-    <img alt="Abinit" class="logo-abinit">
+    <span class="logo-abinit" aria-hidden="true"></span>
 </a>
 
 ### Récupérez l'image Apptainer

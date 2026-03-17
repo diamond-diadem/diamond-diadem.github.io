@@ -7,7 +7,7 @@ weight: 16
 ---
 
 <a href="https://www.cp2k.org/" target="_blank" class="codes-pages-top-logo">
-  <img alt="CP2K" class="logo-cp2k"/>
+  <span class="logo-cp2k" aria-hidden="true"></span>
 </a>
 
 ### Retrieve the Apptainer image

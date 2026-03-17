@@ -8,7 +8,7 @@ weight: 6
 ---
 
 <a href="https://www.opencalphad.com/" target="_blank" class="codes-pages-top-logo">
-    <img alt="OpenCalphad" class="logo-opencalphad">
+    <span class="logo-opencalphad" aria-hidden="true"></span>
 </a>
 
 ### Récupérez l'image Apptainer

@@ -8,7 +8,7 @@ weight: 5
 ---
 
 <a href="http://www.xcrysden.org/" target="blank" class="codes-pages-top-logo">
-    <img alt="XCrySDen" class="logo-xcrysden"/>
+    <span class="logo-xcrysden" aria-hidden="true"></span>
 </a>
 
 ### Récupérez l'image Apptainer

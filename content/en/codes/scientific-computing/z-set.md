@@ -8,7 +8,7 @@ weight: 4
 ---
 
 <a href="http://www.zset-software.com/" target="_blank" class="codes-pages-top-logo">
-    <img alt="Z-set" class="logo-z-set">
+    <span class="logo-z-set" aria-hidden="true"></span>
 </a>
 
 ### Retrieve the Apptainer image

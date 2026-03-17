@@ -8,7 +8,7 @@ weight: 4
 ---
 
 <a href="https://www.ks.uiuc.edu/Research/vmd/" target="blank" class="codes-pages-top-logo">
-    <img alt="VMD" class="logo-vmd"/>
+    <span class="logo-vmd" aria-hidden="true"></span>
 </a>
 
 ### Récupérez l'image Apptainer

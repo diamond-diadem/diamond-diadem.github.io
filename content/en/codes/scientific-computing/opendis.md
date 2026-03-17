@@ -8,7 +8,7 @@ weight: 12
 ---
 
 <a href="https://opendis.github.io/OpenDiS/" target="_blank" class="codes-pages-top-logo">
-  <img alt="OpenDiS" class="logo-opendis"/>
+  <span class="logo-opendis" aria-hidden="true"></span>
 </a>
 
 ### Retrieve the Apptainer image

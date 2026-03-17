@@ -8,7 +8,7 @@ weight: 13
 ---
 
 <a href="https://wannier.org/" target="_blank" class="codes-pages-top-logo">
-  <img alt="Wannier90" class="logo-wannier90"/>
+  <span class="logo-wannier90" aria-hidden="true"></span>
 </a>
 
 ### Récupérez l'image Apptainer

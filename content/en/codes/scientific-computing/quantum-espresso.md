@@ -8,7 +8,7 @@ weight: 2
 ---
 
 <a href="https://www.quantum-espresso.org/" target="_blank" class="codes-pages-top-logo">
-    <img alt="Quantum ESPRESSO" class="logo-quantum-espresso">
+    <span class="logo-quantum-espresso" aria-hidden="true"></span>
 </a>
 
 ### Retrieve the Apptainer image

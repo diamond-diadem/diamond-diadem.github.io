@@ -8,7 +8,7 @@ weight: 10
 ---
 
 <a href="https://www.zeoplusplus.org/" target="_blank" class="codes-pages-top-logo">
-    <img alt="Zeo++" class="logo-zeoplusplus">
+    <span class="logo-zeoplusplus" aria-hidden="true"></span>
 </a>
 
 ### Récupérez l'image Apptainer

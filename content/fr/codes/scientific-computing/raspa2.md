@@ -8,7 +8,7 @@ weight: 11
 ---
 
 <a href="https://github.com/iRASPA/RASPA2" target="_blank" class="codes-pages-top-logo">
-  <img alt="RASPA2" class="logo-raspa2"/>
+  <span class="logo-raspa2" aria-hidden="true"></span>
 </a>
 
 ### Récupérez l'image Apptainer

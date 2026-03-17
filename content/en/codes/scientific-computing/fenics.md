@@ -8,7 +8,7 @@ weight: 15
 ---
 
 <a href="https://fenicsproject.org/" target="_blank" class="codes-pages-top-logo">
-  <img alt="FEniCS" class="logo-fenics"/>
+  <span class="logo-fenics" aria-hidden="true"></span>
 </a>
 
 ### Retrieve the Apptainer image

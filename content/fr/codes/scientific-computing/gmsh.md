@@ -8,7 +8,7 @@ weight: 9
 ---
 
 <a href="https://gmsh.info/" target="_blank" class="codes-pages-top-logo">
-    <img alt="Gmsh" class="logo-gmsh">
+    <span class="logo-gmsh" aria-hidden="true"></span>
 </a>
 
 ### Récupérez l'image Apptainer

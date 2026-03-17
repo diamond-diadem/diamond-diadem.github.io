@@ -8,7 +8,7 @@ weight: 5
 ---
 
 <a href="https://freefem.org/" target="_blank" class="codes-pages-top-logo">
-    <img alt="FreeFEM" class="logo-freefem">
+    <span class="logo-freefem" aria-hidden="true"></span>
 </a>
 
 ### Retrieve the Apptainer image

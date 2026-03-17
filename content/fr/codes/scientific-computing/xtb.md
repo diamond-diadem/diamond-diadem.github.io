@@ -7,7 +7,7 @@ weight: 19
 ---
 
 <a href="https://github.com/grimme-lab/xtb" target="_blank" class="codes-pages-top-logo">
-  <img alt="XTB" class="logo-xtb"/>
+  <span class="logo-xtb" aria-hidden="true"></span>
 </a>
 
 ### Récupérez l'image Apptainer
