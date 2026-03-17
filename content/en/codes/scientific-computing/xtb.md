@@ -6,7 +6,7 @@ icon: icon-xtb
 weight: 19
 ---
 
-<a href="https://github.com/grimme-lab/xtb" target="_blank" class="codes-pages-top-logo">
+<a href="https://github.com/grimme-lab/xtb" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo">
   <span class="logo-xtb" aria-hidden="true"></span>
 </a>
 

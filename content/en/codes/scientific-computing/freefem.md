@@ -7,7 +7,7 @@ toc: false
 weight: 5
 ---
 
-<a href="https://freefem.org/" target="_blank" class="codes-pages-top-logo">
+<a href="https://freefem.org/" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo">
     <span class="logo-freefem" aria-hidden="true"></span>
 </a>
 

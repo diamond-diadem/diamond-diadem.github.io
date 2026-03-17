@@ -7,7 +7,7 @@ toc: false
 weight: 15
 ---
 
-<a href="https://fenicsproject.org/" target="_blank" class="codes-pages-top-logo">
+<a href="https://fenicsproject.org/" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo">
   <span class="logo-fenics" aria-hidden="true"></span>
 </a>
 

@@ -46,14 +46,14 @@ Les potentiels interatomiques par apprentissage automatique (MLIPs) se sont impo
 
 #### Slides
 
-- **Jörg BEHLER** <a href="/downloads/2024-09-CECAM-Workshop/slides-behler-2024-09-09-CECAM-workshop.pdf" target="_blank">The Cambrian Explosion of Machine Learning Potentials</a>
-- **Martin UHRIN** <a href="/downloads/2024-09-CECAM-Workshop/slides-uhrin-2024-09-09-CECAM-workshop.pdf" target="_blank">Symmetry-aware models beyond energies and forces</a>
-- **Johannes SANDBERG** <a href="/downloads/2024-09-CECAM-Workshop/slides-sandberg-2024-09-10-CECAM-workshop.pdf" target="_blank">Feature selection for neural network potentials with the adaptive group lasso</a>
-- **François-Xavier COUDERT** <a href="/downloads/2024-09-CECAM-Workshop/slides-coudert-2024-09-10-CECAM-workshop.pdf" target="_blank">Data-based methods to accelerate discovery of novel materials and find new properties in old ones</a>
-- **Julia YANG** <a href="/downloads/2024-09-CECAM-Workshop/slides-yang-2024-09-10-CECAM-workshop.pdf" target="_blank">Development of MLIP workflow for reactive, organic solvents</a>
-- **Gian-Marco RIGNANESE** <a href="/downloads/2024-09-CECAM-Workshop/slides-rignanese-2024-09-11-CECAM-workshop.pdf" target="_blank">Systematic assessment of various universal machine-learning interatomic potentials</a>
-- **Thierry DEUTSCH** <a href="/downloads/2024-09-CECAM-Workshop/slides-deutsch-2024-09-11-CECAM-workshop.pdf" target="_blank">Setting up data tools as part of the DIADEM program</a>
-- **Kristjan EIMRE** <a href="/downloads/2024-09-CECAM-Workshop/slides-eimre-2024-09-11-CECAM-workshop.pdf" target="_blank">Generating and publishing datasets using AiiDA and Materials Cloud</a>
+- **Jörg BEHLER** <a href="/downloads/2024-09-CECAM-Workshop/slides-behler-2024-09-09-CECAM-workshop.pdf" target="_blank" rel="noopener noreferrer">The Cambrian Explosion of Machine Learning Potentials</a>
+- **Martin UHRIN** <a href="/downloads/2024-09-CECAM-Workshop/slides-uhrin-2024-09-09-CECAM-workshop.pdf" target="_blank" rel="noopener noreferrer">Symmetry-aware models beyond energies and forces</a>
+- **Johannes SANDBERG** <a href="/downloads/2024-09-CECAM-Workshop/slides-sandberg-2024-09-10-CECAM-workshop.pdf" target="_blank" rel="noopener noreferrer">Feature selection for neural network potentials with the adaptive group lasso</a>
+- **François-Xavier COUDERT** <a href="/downloads/2024-09-CECAM-Workshop/slides-coudert-2024-09-10-CECAM-workshop.pdf" target="_blank" rel="noopener noreferrer">Data-based methods to accelerate discovery of novel materials and find new properties in old ones</a>
+- **Julia YANG** <a href="/downloads/2024-09-CECAM-Workshop/slides-yang-2024-09-10-CECAM-workshop.pdf" target="_blank" rel="noopener noreferrer">Development of MLIP workflow for reactive, organic solvents</a>
+- **Gian-Marco RIGNANESE** <a href="/downloads/2024-09-CECAM-Workshop/slides-rignanese-2024-09-11-CECAM-workshop.pdf" target="_blank" rel="noopener noreferrer">Systematic assessment of various universal machine-learning interatomic potentials</a>
+- **Thierry DEUTSCH** <a href="/downloads/2024-09-CECAM-Workshop/slides-deutsch-2024-09-11-CECAM-workshop.pdf" target="_blank" rel="noopener noreferrer">Setting up data tools as part of the DIADEM program</a>
+- **Kristjan EIMRE** <a href="/downloads/2024-09-CECAM-Workshop/slides-eimre-2024-09-11-CECAM-workshop.pdf" target="_blank" rel="noopener noreferrer">Generating and publishing datasets using AiiDA and Materials Cloud</a>
 
 <h4 class="mb-n2"><a href="/downloads/2024-09-CECAM-Workshop/cecam-workshop-photos.zip" class="d-flex">Téléchargez les photos de l'évènement{{< inline-svg src="tabler-icons/outline/camera-spark" class="svg-inline-end" >}}</a></h4>
 
@@ -61,7 +61,7 @@ Prises par Joao Paulo Almeida De Mendonca
 
 <br>
 
-<!-- **Adresse :** amphithéâtre Besson, campus Phelma, Batiment A, 1130 rue de la Piscine, 38400 Saint Martin d'Hères. <a href="https://dropsu.sorbonne-universite.fr/s/gdMJ2o5FZtKn48Z" target="_blank">Plan du campus</a> (cherchez le bâtiment A, campus Phelma):
+<!-- **Adresse :** amphithéâtre Besson, campus Phelma, Batiment A, 1130 rue de la Piscine, 38400 Saint Martin d'Hères. <a href="https://dropsu.sorbonne-universite.fr/s/gdMJ2o5FZtKn48Z" target="_blank" rel="noopener noreferrer">Plan du campus</a> (cherchez le bâtiment A, campus Phelma):
 
 **Comment se rendre à l'événement ?** La navette de l'aéroport vous déposera à la gare de Grenoble. De là, prenez le tram B (direction "Gières, Plaine des Sports") et descendez à l'arrêt "Bibliothèques Universitaires". Marchez vers le nord et atteignez le Bâtiment A sur la carte.
 

@@ -24,7 +24,7 @@ Many package managers exist: some, like `apt` or `rpm`, are specific to certain 
 
 In the context of the DIAMOND project, which imposes stringent requirements related to scientific reproducibility and high-performance computing, we have chosen the [GNU Guix](https://guix.gnu.org) package manager for the following reasons:
 
-<a href="https://guix.gnu.org" target="_blank">
+<a href="https://guix.gnu.org" target="_blank" rel="noopener noreferrer">
   <span class="logo-guix about" aria-hidden="true"></span>
 </a>
 

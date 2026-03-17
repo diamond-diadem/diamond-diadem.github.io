@@ -7,7 +7,7 @@ toc: false
 weight: 4
 ---
 
-<a href="https://www.ks.uiuc.edu/Research/vmd/" target="blank" class="codes-pages-top-logo">
+<a href="https://www.ks.uiuc.edu/Research/vmd/" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo">
     <span class="logo-vmd" aria-hidden="true"></span>
 </a>
 

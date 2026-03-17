@@ -7,7 +7,7 @@ toc: false
 weight: 9
 ---
 
-<a href="https://gmsh.info/" target="_blank" class="codes-pages-top-logo">
+<a href="https://gmsh.info/" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo">
     <span class="logo-gmsh" aria-hidden="true"></span>
 </a>
 

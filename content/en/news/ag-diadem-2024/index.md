@@ -24,7 +24,7 @@ seo:
 
 <h3 align="center">
 
-2024 <a href="https://pepr-diadem.fr" target="_blank">PEPR DIADEM</a> General Assembly took place from November 13 to 15, 2024, at the Doua campus in Lyon.
+2024 <a href="https://pepr-diadem.fr" target="_blank" rel="noopener noreferrer">PEPR DIADEM</a> General Assembly took place from November 13 to 15, 2024, at the Doua campus in Lyon.
 
 </h3>
 

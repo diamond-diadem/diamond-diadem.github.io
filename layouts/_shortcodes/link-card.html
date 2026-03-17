@@ -5,7 +5,7 @@
   "description" .Params.description
   "target" .Params.target
   "class" .Params.class
-  "rel" .Params.rel
+  "rel" (or .Params.rel (cond (or (eq .Params.target "_blank") (eq .Params.target "blank")) "noopener noreferrer" ""))
   "icon" .Params.icon
   "disabled" .Params.disabled
 }}
@@ -39,5 +39,4 @@
     </div>
   </div>
 {{- end -}}
-
 

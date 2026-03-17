@@ -7,7 +7,7 @@ toc: false
 weight: 2
 ---
 
-<a href="https://www.quantum-espresso.org/" target="_blank" class="codes-pages-top-logo">
+<a href="https://www.quantum-espresso.org/" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo">
     <span class="logo-quantum-espresso" aria-hidden="true"></span>
 </a>
 

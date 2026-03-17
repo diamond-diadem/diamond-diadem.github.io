@@ -7,7 +7,7 @@ toc: false
 weight: 5
 ---
 
-<a href="http://www.xcrysden.org/" target="blank" class="codes-pages-top-logo">
+<a href="http://www.xcrysden.org/" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo">
     <span class="logo-xcrysden" aria-hidden="true"></span>
 </a>
 

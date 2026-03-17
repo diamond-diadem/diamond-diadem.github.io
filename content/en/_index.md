@@ -1,6 +1,6 @@
 ---
 title: Welcome to DIAMOND
-lead: The digital platform of <a href="https://pepr-diadem.fr" target="_blank">PEPR DIADEM</a>
+lead: The digital platform of <a href="https://pepr-diadem.fr" target="_blank" rel="noopener noreferrer">PEPR DIADEM</a>
 seo:
   title: DIAMOND
   description: Digital platform of PEPR DIADEM, Materials Science, France 2030, CNRS,

@@ -9,7 +9,7 @@ weight: 3
 
 <div class="codes-pages-top-logo">
 
-<a href="https://jp-minerals.org/vesta/" target="blank" class="codes-pages-top-logo mb-0">
+<a href="https://jp-minerals.org/vesta/" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo mb-0">
    <span class="logo-vesta" aria-hidden="true"></span>
 </a>
 

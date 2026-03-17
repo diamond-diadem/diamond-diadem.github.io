@@ -7,7 +7,7 @@ toc: false
 weight: 11
 ---
 
-<a href="https://github.com/iRASPA/RASPA2" target="_blank" class="codes-pages-top-logo">
+<a href="https://github.com/iRASPA/RASPA2" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo">
   <span class="logo-raspa2" aria-hidden="true"></span>
 </a>
 

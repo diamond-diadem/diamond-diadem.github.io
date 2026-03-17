@@ -9,7 +9,7 @@ weight: 8
 
 <div class="codes-pages-top-logo">
 
-<a href="https://www.plumed.org/" target="_blank" class="codes-pages-top-logo mb-0">
+<a href="https://www.plumed.org/" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo mb-0">
     <span class="logo-plumed" aria-hidden="true"></span>
 </a>
 

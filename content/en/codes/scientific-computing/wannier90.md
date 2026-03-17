@@ -7,7 +7,7 @@ toc: false
 weight: 13
 ---
 
-<a href="https://wannier.org/" target="_blank" class="codes-pages-top-logo">
+<a href="https://wannier.org/" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo">
   <span class="logo-wannier90" aria-hidden="true"></span>
 </a>
 

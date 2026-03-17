@@ -7,7 +7,7 @@ toc: false
 weight: 14
 ---
 
-<a href="https://www.nwchem-sw.org/" target="_blank" class="codes-pages-top-logo">
+<a href="https://www.nwchem-sw.org/" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo">
   <span class="logo-nwchem" aria-hidden="true"></span>
 </a>
 

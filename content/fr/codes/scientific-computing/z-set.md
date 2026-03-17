@@ -7,7 +7,7 @@ toc: false
 weight: 4
 ---
 
-<a href="http://www.zset-software.com/" target="_blank" class="codes-pages-top-logo">
+<a href="http://www.zset-software.com/" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo">
     <span class="logo-z-set" aria-hidden="true"></span>
 </a>
 

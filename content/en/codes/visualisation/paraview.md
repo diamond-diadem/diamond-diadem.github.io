@@ -7,7 +7,7 @@ toc: false
 weight: 2
 ---
 
-<a href="https://www.paraview.org/" target="_blank" class="codes-pages-top-logo">
+<a href="https://www.paraview.org/" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo">
     <span class="logo-paraview" aria-hidden="true"></span>
 </a>
 

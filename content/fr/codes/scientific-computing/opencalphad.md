@@ -7,7 +7,7 @@ toc: false
 weight: 6
 ---
 
-<a href="https://www.opencalphad.com/" target="_blank" class="codes-pages-top-logo">
+<a href="https://www.opencalphad.com/" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo">
     <span class="logo-opencalphad" aria-hidden="true"></span>
 </a>
 

@@ -7,7 +7,7 @@ toc: false
 weight: 3
 ---
 
-<a href="https://www.abinit.org/" target="_blank" class="codes-pages-top-logo">
+<a href="https://www.abinit.org/" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo">
     <span class="logo-abinit" aria-hidden="true"></span>
 </a>
 

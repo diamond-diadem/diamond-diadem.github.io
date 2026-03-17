@@ -6,7 +6,7 @@ icon: icon-dftbplus
 weight: 18
 ---
 
-<a href="https://www.dftbplus.org/" target="_blank" class="codes-pages-top-logo">
+<a href="https://www.dftbplus.org/" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo">
   <span class="logo-dftbplus" aria-hidden="true"></span>
 </a>
 

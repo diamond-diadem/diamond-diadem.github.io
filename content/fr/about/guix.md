@@ -24,7 +24,7 @@ De nombreux gestionnaires de paquets existent : certains comme `apt` ou `rpm` so
 
 Dans le cadre du projet DIAMOND, imposant des exigences fortes relatives à la reproductibilité scientifique et au calcul haute performance, nous avons opté pour le gestionnaire de paquets [GNU Guix](https://guix.gnu.org) pour les raisons suivantes :
 
-<a href="https://guix.gnu.org" target="_blank">
+<a href="https://guix.gnu.org" target="_blank" rel="noopener noreferrer">
   <span class="logo-guix about" aria-hidden="true"></span>
 </a>
 
