@@ -133,10 +133,10 @@ To include links in Markdown, use the following syntax:
 To open a link in a new tab, use the following HTML syntax:
 
 ```html
-<a href="https://example.com" target="_blank">Example</a>
+<a href="https://example.com" target="_blank" rel="noopener noreferrer">Example</a>
 ```
 
-The `target="_blank"` attribute ensures the link opens in a new tab.
+The `target="_blank"` attribute ensures the link opens in a new tab. Always pair it with `rel="noopener noreferrer"` for external links. The `link-card` shortcode adds this `rel` value automatically when used with `target="_blank"`.
 
 ### Internal Links
 
@@ -171,23 +171,32 @@ If an image needs to adapt to light and dark themes, create two files: `image-li
 Then use:
 
 ```html
-<img alt="Alternative text for the image" class="custom-image" />
+<span class="custom-image" aria-hidden="true"></span>
 ```
 
 Add this code in `assets/scss/_custom.scss`:
 
 ```scss
 .custom-image {
-  content: url(/images/image-light.png);
+  display: block;
+  background-image: url(/images/image-light.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
+
 @include color-mode(dark) {
   .custom-image {
-    content: url(/images/image-dark.png);
+    background-image: url(/images/image-dark.png);
   }
 }
 ```
 
-This ensures the image automatically adapts to the user's chosen theme.
+This keeps decorative, theme-dependent artwork out of the document semantics while still adapting to the user's chosen theme. If the image conveys content rather than decoration, use a real `<img src="..." alt="...">` or `<picture>`.
+
+### Quarantining Likely-Unused Static Files
+
+When an asset in `static/` looks unused, move it to the matching path under `static.old/` first instead of deleting it immediately. This keeps the build clean while preserving a safe review period before the files are removed from the project.
 
 ## Codes section
 
@@ -212,6 +221,8 @@ $$
 (...)
 $$
 ```
+
+Math rendering is loaded only on pages that declare `math: true` in front matter. Add that flag when introducing a page with LaTeX content.
 
 ## YouTube Video Integration (Tutorials)
 
