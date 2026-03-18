@@ -13,7 +13,7 @@
 */}}
 
 
-{{ partial "footer/esbuild" (dict "src" "js/to-top.js" "load" "async" "transpile" false) -}}
+{{ partial "footer/esbuild" (dict "src" "js/to-top.js" "load" "defer" "transpile" false) -}}
 
 {{ if site.Params.analytics.enable }}
 <script>
