@@ -9,7 +9,7 @@
     background-size: contain;
 
     @if $dark != null {
-        @include color-mode(dark) {
+        html[data-bs-theme="dark"] & {
             background-image: url($dark);
         }
     }
