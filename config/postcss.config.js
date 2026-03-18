@@ -1,6 +1,46 @@
+const fs = require('fs');
+const path = require('path');
 const autoprefixer = require('autoprefixer');
-const { purgeCSSPlugin } = require('@fullhuman/postcss-purgecss');
-const whitelister = require('purgecss-whitelister');
+const purgeCSSPlugin = require('@fullhuman/postcss-purgecss');
+
+function collectScssFiles(dir) {
+    if (!fs.existsSync(dir)) {
+        return [];
+    }
+
+    const entries = fs.readdirSync(dir, { withFileTypes: true });
+
+    return entries.flatMap((entry) => {
+        const entryPath = path.join(dir, entry.name);
+
+        if (entry.isDirectory()) {
+            return collectScssFiles(entryPath);
+        }
+
+        return entry.isFile() && entryPath.endsWith('.scss') ? [entryPath] : [];
+    });
+}
+
+function extractSelectors(filePath) {
+    if (!fs.existsSync(filePath)) {
+        return [];
+    }
+
+    const content = fs.readFileSync(filePath, 'utf8');
+    const selectors = content.match(/\.[_a-zA-Z]+[\w-]*/g) || [];
+    return selectors.map((selector) => selector.slice(1));
+}
+
+function buildSafelistFromScss() {
+    const files = [
+        ...collectScssFiles(path.resolve(__dirname, '../assets/scss')),
+        path.resolve(__dirname, '../node_modules/@thulite/doks-core/assets/scss/components/_code.scss'),
+        path.resolve(__dirname, '../node_modules/@thulite/doks-core/assets/scss/components/_expressive-code.scss'),
+        path.resolve(__dirname, '../node_modules/@thulite/doks-core/assets/scss/common/_syntax.scss')
+    ];
+
+    return [...new Set(files.flatMap(extractSelectors))];
+}
 
 module.exports = {
     plugins: [
@@ -57,7 +97,7 @@ module.exports = {
                 'page-item',
                 'page-link',
                 'not-content',
-                ...whitelister(['./assets/scss/**/*.scss', './node_modules/@thulite/doks-core/assets/scss/components/_code.scss', './node_modules/@thulite/doks-core/assets/scss/components/_expressive-code.scss', './node_modules/@thulite/doks-core/assets/scss/common/_syntax.scss'])
+                ...buildSafelistFromScss()
             ]
         })
     ]
