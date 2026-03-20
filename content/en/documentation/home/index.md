@@ -44,8 +44,12 @@ Here are the links for quick access to the documentation section for the tools y
             <td><a href="/en/documentation/by-container/paraview/"><i class="icon-paraview"></i>ParaView</a></td>
         </tr>
         <tr>
-            <td class="table-cell-left"><a href="/en/documentation/by-container/aiida/"><i class="icon-aiida"></i>AiiDA</td>
+            <td class="table-cell-left"><a href="/en/documentation/by-container/amitex/"><i class="icon-amitex-fftp"></i>AMITEX_FFTP</a></td>
             <td><a href="/en/documentation/by-container/vmd/"><i class="icon-vmd"></i>VMD</a></td>
+        </tr>
+        <tr>
+            <td class="table-cell-left"><a href="/en/documentation/by-container/aiida/"><i class="icon-aiida"></i>AiiDA</a></td>
+            <td></td>
         </tr>
     </tbody>
 </table>
