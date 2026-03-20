@@ -6,9 +6,7 @@ weight: 7
 
 <div align="justify">
 
-{{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
-
-### Prerequisites
+{{< callout context="note" title="Prerequisites" icon="tabler-icons/outline/info-circle" >}}
 
 - Have **Apptainer** installed [(installation guide)](/en/documentation/install/install-apptainer/)
 - Have downloaded the **amitex_fftp.sif** image [available here](/en/codes/scientific-computing/amitex-fftp/)
