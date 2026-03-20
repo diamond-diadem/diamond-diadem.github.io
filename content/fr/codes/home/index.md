@@ -346,7 +346,7 @@ apptainer pull gateway.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond
 <div id="content-option21A" class="hidden">
 
 ```bash
-apptainer pull amitex-fftp.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/amitex_fftp-from-guix.sif:latest
+apptainer pull amitex_fftp.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/amitex_fftp-from-guix.sif:latest
 ```
 
 </div>
@@ -567,7 +567,7 @@ apptainer pull gateway.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond
 <div id="content-option21B" style="margin-top: -1rem;" class="hidden">
 
 ```bash
-apptainer pull amitex-fftp.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/amitex_fftp-from-guix.sif:latest
+apptainer pull amitex_fftp.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/amitex_fftp-from-guix.sif:latest
 ```
 
 </div>
