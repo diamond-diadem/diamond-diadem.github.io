@@ -8,7 +8,7 @@ weight: 7
 
 {{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
 
-### Prerequisites:
+### Prerequisites
 
 - Have **Apptainer** installed [(installation guide)](/en/documentation/install/install-apptainer/)
 - Have downloaded the **amitex_fftp.sif** image [available here](/en/codes/scientific-computing/amitex-fftp/)
@@ -16,14 +16,13 @@ weight: 7
 
 For more information on Apptainer containers, please look at [this page](/en/about/apptainer/) or refer to [this tutorial](/en/documentation/use/apptainer-image/) to have a quick look at Apptainer's main commands.
 
-
 {{< /callout >}}
 
 Create a directory containing the **amitex_fftp.sif** image and the archive of the **input files**. Move into this directory and extract the archive as follows:
+
 ```bash
 tar -xzf amitex-tutorial-inputs.tar.gz # Extracts the contents of the archive.
 ```
-
 
 ## One-line command
 
@@ -32,8 +31,6 @@ For those in a hurry, here is how to launch an **Amitex_FFTP** computation:
 ```bash
 apptainer exec amitex_fftp.sif mpirun -np <N> amitex_fftp <args>
 ```
-
-
 
 ## Introduction
 
@@ -50,14 +47,14 @@ apptainer exec amitex_fftp.sif mpirun amitex_fftp -nm concrete.vtk -m material.x
 
 Note that the command first launches **apptainer**, which then executes `mpirun amitex_fftp <args>` inside the container.
 
-
 ## Cluster simulation (hybrid MPI)
 
 ### Launch with the SLURM scheduler (recommended)
 
 Example of a minimal launch script **job.sh**:
 
-```
+
+```bash {frame="none"}
 #!/bin/bash
 
 #SBATCH --job-name=test_amitex
@@ -69,12 +66,12 @@ Example of a minimal launch script **job.sh**:
 srun apptainer run amitex_fftp.sif -nm concrete.vtk -m material.xml -c loading.xml -a algorithm.xml -s out
 ```
 
+
 The computation can then be launched with the command:
 
 ```bash
 sbatch job.sh
 ```
-
 
 ### Launch without a scheduler
 
@@ -85,10 +82,6 @@ mpirun -np <N> apptainer run amitex_fftp.sif -nm concrete.vtk -m material.xml -c
 ***The `mpirun` command must come from OpenMPI 4 for this to work.**
 
 For reference, `apptainer run amitex_fftp.sif` is a shortcut for `apptainer exec amitex_fftp.sif amitex_fftp`.
-
-
-
-
 
 ## Visualizing the results
 
@@ -109,12 +102,7 @@ apptainer run paraview.sif concrete.vtk
 # Then in the top menu bar select "Surface" in the drop-down menu instead of "Outline".
 ```
 
-
-
-
-
 ## (Advanced) User-defined material behavior law
-
 
 ### UMAT Behaviors
 
@@ -228,7 +216,6 @@ You can now run the computation with the new behavior law, after removing `<Load
 apptainer exec amitex_fftp.sif mpirun amitex_fftp -nm concrete.vtk -m material.xml -c loading.xml -a algorithm.xml -s out
 ```
 
-
 ### MFRONT Behaviors
 
 It is also possible to define custom material behavior laws using **mfront**. Here we present an example of a material behavior defined with mfront, then used with AMITEX_FFTP. The first step is to generate the dynamic library containing the UMAT function:
@@ -237,7 +224,7 @@ It is also possible to define custom material behavior laws using **mfront**. He
 apptainer exec amitex_fftp.sif mfront --obuild --interface=umat Mazars.mfront
 ```
 
-This creates `src/libUmatBehaviour.so`. You must then modify **material.xml** to call this new behavior law, replacing for example ` <Material numM="2" Lib="" Law="elasiso"> [...] </Material>` by:
+This creates `src/libUmatBehaviour.so`. You must then modify **material.xml** to call this new behavior law, replacing for example `<Material numM="2" Lib="" Law="elasiso"> [...] </Material>` by:
 
 ```xml
     <Material numM="2" Lib="src/libUmatBehaviour.so" Law="umatmazars" >
@@ -265,7 +252,7 @@ apptainer exec amitex_fftp.sif mpirun amitex_fftp -nm concrete.vtk -m material.x
 
 Then visualize the results:
 
-```bash	
+```bash 
 apptainer exec amitex_fftp.sif gnuplot < plot.gp
 ```
 

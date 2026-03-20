@@ -59,7 +59,7 @@ On remarque que la commande commence par lancer **apptainer**, qui exécute ensu
 
 Exemple de script minimal de lancement **job.sh** :
 
-```
+```bash {frame="none"}
 #!/bin/bash
 
 #SBATCH --job-name=test_amitex
