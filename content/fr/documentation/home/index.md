@@ -44,8 +44,12 @@ Voici les liens pour accéder rapidement à la section de documentation des outi
             <td><a href="/documentation/by-container/paraview/"><i class="icon-paraview"></i>ParaView</a></td>
         </tr>
         <tr>
-            <td class="table-cell-left"><a href="/documentation/by-container/aiida/"><i class="icon-aiida"></i>AiiDA</td>
+            <td class="table-cell-left"><a href="/documentation/by-container/amitex/"><i class="icon-amitex-fftp"></i>AMITEX_FFTP</a></td>
             <td><a href="/documentation/by-container/vmd/"><i class="icon-vmd"></i>VMD</a></td>
+        </tr>
+        <tr>
+            <td class="table-cell-left"><a href="/documentation/by-container/aiida/"><i class="icon-aiida"></i>AiiDA</a></td>
+            <td></td>
         </tr>
     </tbody>
 </table>

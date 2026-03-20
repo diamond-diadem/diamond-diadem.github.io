@@ -140,6 +140,10 @@ icon="tabler-icons/outline/settings-question" >}}
             <td><a href="/codes/scientific-computing/gateway/"><i class="icon-gateway"></i>GaTewAY</a></td>
             <td></td>
         </tr>
+        <tr>
+            <td class="table-cell-left"><a href="/codes/scientific-computing/amitex-fftp/"><i class="icon-amitex-fftp"></i>AMITEX_FFTP</a></td>
+            <td></td>
+        </tr>
     </tbody>
 </table>
 
@@ -172,6 +176,7 @@ icon="tabler-icons/outline/settings-question" >}}
                 <option value="option18A">DFTB+</option>
                 <option value="option19A">XTB</option>
                 <option value="option20A">GaTewAY</option>
+                <option value="option21A">AMITEX_FFTP</option>
             </optgroup>
         </select>
     </div>
@@ -337,6 +342,14 @@ apptainer pull gateway.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond
 <!--  -->
 <!--  -->
 
+<div id="content-option21A" class="hidden">
+
+```bash
+apptainer pull amitex_fftp.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/amitex_fftp-from-guix.sif:latest
+```
+
+</div>
+
 <div id="content-optionaA" class="hidden">
 
 ```bash
@@ -402,6 +415,7 @@ apptainer pull xcrysden.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamon
             <option value="option18B">DFTB+</option>
             <option value="option19B">XTB</option>
             <option value="option20B">GaTewAY</option>
+            <option value="option21B">AMITEX_FFTP</option>
         </optgroup>
     </select>
 </div>
@@ -545,6 +559,14 @@ apptainer pull xtb.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/app
 
 ```bash
 apptainer pull gateway.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/gateway.sif:latest
+```
+
+</div>
+
+<div id="content-option21B" style="margin-top: -1rem;" class="hidden">
+
+```bash
+apptainer pull amitex_fftp.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/amitex_fftp-from-guix.sif:latest
 ```
 
 </div>

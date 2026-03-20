@@ -854,6 +854,16 @@ body:not(.has-scroll-fade) .scroll-fade {
     padding-bottom: 40px;
 }
 
+// // // class="tree" used for tree like content // // //
+// // // ├── example1
+// // // └── example2
+
+.tree {
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+  }
+
 .n2p2_benchmark_R_vs_process_log2_total_time3 {
     content: url(/images/workflows/n2p2/n2p2_benchmark_R_vs_process_log2_colored-light.png);
     min-height: 300px;
