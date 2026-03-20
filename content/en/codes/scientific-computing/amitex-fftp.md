@@ -14,7 +14,7 @@ weight: 20
 ### Retrieve the Apptainer image
 
 ```bash
-apptainer pull amitex-fftp.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/amitex_fftp-from-guix.sif:latest
+apptainer pull amitex_fftp.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/amitex_fftp-from-guix.sif:latest
 ```
 
 <div align="justify">
@@ -31,10 +31,19 @@ The code combines **massively parallel implementation** with a **versatile user 
 
 ### Main content of the image:
 
-- **amitex_fftp** : /gnu/store/kvj82gw5j78zrmpwfb16wx0fl71v9fsb-amitex_fftp-8.17.14/bin/amitex_fftp
-- **LICENCE_AMITEX.pdf** : /gnu/store/kvj82gw5j78zrmpwfb16wx0fl71v9fsb-amitex_fftp-8.17.14/share/doc/amitex_fftp-8.17.14/LICENCE_AMITEX.pdf
+- **amitex_fftp** : /gnu/store/df6rv9zlllzrp8rrwxlc5ixf20kylmnf-amitex_fftp-8.17.14/bin/amitex_fftp
+<pre class="tree">
+     ├── openmpi
+     └── fftw
+</pre>
+- **LICENCE_AMITEX.pdf** : /gnu/store/df6rv9zlllzrp8rrwxlc5ixf20kylmnf-amitex_fftp-8.17.14/share/doc/amitex_fftp-8.17.14/LICENCE_AMITEX.pdf
 - **gnuplot** : /gnu/store/gghd7a7wmcqrjir0r2kl5xb2gkcdq3iz-gnuplot-6.0.1/bin/gnuplot
 - **mfront** : /gnu/store/m51plz005xw9g3n9zi9rbrxzsy6ix7qp-mfront-TFEL-4.2.1/bin/mfront
+<pre class="tree">
+     ├── gcc
+     └── g++
+</pre>
+- **gfortran** : /gnu/store/7c98v6yhp4kwga380y9jjg1pf5cicxvd-gfortran-toolchain-14.3.0/bin/gfortran
 
 </div>
 
