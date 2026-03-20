@@ -144,7 +144,6 @@ icon="tabler-icons/outline/settings-question" >}}
             <td class="table-cell-left"><a href="/codes/scientific-computing/amitex-fftp/"><i class="icon-amitex-fftp"></i>AMITEX_FFTP</a></td>
             <td></td>
         </tr>
-
     </tbody>
 </table>
 
