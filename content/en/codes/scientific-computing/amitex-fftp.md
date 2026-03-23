@@ -58,8 +58,8 @@ The code combines **massively parallel implementation** with a **versatile user 
 <h3 class="mb-1 mt-3">AMITEX_FFTP documentation</h3>
 
 {{< card-grid >}}
-{{< link-card title="Official website" href="<https://amitexfftp.github.io/AMITEX/index.html>" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
-{{< link-card title="Official documentation" href="<https://amitexfftp.github.io/AMITEX/user_guide/map-site-user.html>" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
+{{< link-card title="Official website" href="https://amitexfftp.github.io/AMITEX/index.html" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
+{{< link-card title="Official documentation" href="https://amitexfftp.github.io/AMITEX/user_guide/map-site-user.html" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
 {{< /card-grid >}}
 
 <h3 class="mb-1 mt-3">Examples</h3>

@@ -58,8 +58,8 @@ Le code combine une **implémentation massivement parallèle** avec une **interf
 <h3 class="mb-1 mt-3">Documentation AMITEX_FFTP</h3>
 
 {{< card-grid >}}
-{{< link-card title="Site officiel" href="<https://amitexfftp.github.io/AMITEX/index.html>" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
-{{< link-card title="Documentation officielle" href="<https://amitexfftp.github.io/AMITEX/user_guide/map-site-user.html>" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
+{{< link-card title="Site officiel" href="https://amitexfftp.github.io/AMITEX/index.html" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
+{{< link-card title="Documentation officielle" href="https://amitexfftp.github.io/AMITEX/user_guide/map-site-user.html" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
 {{< /card-grid >}}
 
 <h3 class="mb-1 mt-3">Exemples</h3>

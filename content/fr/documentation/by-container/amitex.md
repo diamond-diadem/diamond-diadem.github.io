@@ -117,7 +117,7 @@ apptainer run paraview.sif concrete.vtk
 
 ### Comportements UMAT
 
-Il est possible de définir ses propres lois de comportement matériau via une procédure compatible **UMAT**. Nous allons voir un exemple d'un comportement matériau défini par l'utilisateur, puis utilisé avec AMITEX_FFTP. On peut récupérer l'example fourni dans le conteneur grâce à :
+Il est possible de définir ses propres lois de comportement matériau via une procédure compatible **UMAT**. Nous allons voir un exemple d'un comportement matériau défini par l'utilisateur, puis utilisé avec AMITEX_FFTP. On peut récupérer l'exemple fourni dans le conteneur grâce à :
 
 ```bash
 apptainer exec amitex_fftp.sif cp -r /gnu/store/df6rv9zlllzrp8rrwxlc5ixf20kylmnf-amitex_fftp-8.17.14/cas_tests/comportements/polyxCC/comportement_umat .
