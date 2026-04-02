@@ -13,8 +13,16 @@ weight: 1
 
 ### Retrieve the Apptainer image
 
+**Generic CPU Image**
+
 ```bash
 apptainer pull lammps.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/lammps-from-guix.sif:latest
+```
+
+**Image for Kraken-GPU computer (Gricad)**
+
+```bash
+apptainer pull lammps.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/lammps-gpu.sif:latest
 ```
 
 <div align="justify">
