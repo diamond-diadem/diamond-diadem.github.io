@@ -439,3 +439,35 @@ team:
       url: https://www.linkedin.com/in/leo-orveillon/
   github: periodLeo
   
+- name: Karim Aït Ammar
+  first_name: Karim
+  last_name: Aït Ammar
+  email: karim.aitammar@cea.fr
+  affiliation: CEA Saclay
+  role: WP1 - Codes and Workflows
+  project: DIAMOND
+  personnel_type: Scientist
+  slug: kaitammar
+  photo: /images/team/kai.jpg
+  bio_short: I work on the professionalization of research codes in materials science.
+  bio_short_fr: Je travaille sur la professionnalisation de codes de recherche en sciences des matériaux.
+  bio_long: |-
+    I work on the professionalization of research codes in materials science (containerization of parallelized and HPC code using Apptainer and Guix, porting to clusters, compilation with CMake, etc.).
+  bio_long_fr: |-
+    Je travaille sur la professionnalisation de codes de recherche en sciences des matériaux (conteneurisation de codes parallélisés et HPC via Apptainer & guix, portage sur clusters, compilation avec CMake, ...).
+
+
+
+- name: Yaidel Toledo
+  first_name: Yaidel
+  last_name: Toledo Gonzalez
+  email: yaidel.toledogonzalez@cea.fr
+  affiliation: CEA Saclay
+  role: WP1 - Codes and Workflows
+  project: DIAMOND
+  personnel_type: Scientist
+  slug: yaidel
+  photo: /images/team/NA.png
+  bio_short: I\'m a research engineer working on software profesionalization, cleaning, and improvement, as well as codes containerization.
+  bio_short_fr: Je suis ingénieur de recherche et je travaille sur la professionnalisation, le nettoyage et l\'amélioration des logiciels, ainsi que sur la conteneurisation des codes.
+  github: yaideltg
