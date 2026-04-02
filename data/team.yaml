@@ -457,7 +457,6 @@ team:
     Je travaille sur la professionnalisation de codes de recherche en sciences des matériaux (conteneurisation de codes parallélisés et HPC via Apptainer & guix, portage sur clusters, compilation avec CMake, ...).
 
 
-
 - name: Yaidel Toledo
   first_name: Yaidel
   last_name: Toledo Gonzalez
@@ -471,3 +470,33 @@ team:
   bio_short: I\'m a research engineer working on software profesionalization, cleaning, and improvement, as well as codes containerization.
   bio_short_fr: Je suis ingénieur de recherche et je travaille sur la professionnalisation, le nettoyage et l\'amélioration des logiciels, ainsi que sur la conteneurisation des codes.
   github: yaideltg
+
+- name: Gabriele Cassetta
+  first_name: Gabriele
+  last_name: Cassetta
+  email: gabriele.cassetta@cea.fr
+  affiliation: CEA Saclay
+  role: WP2 - Codes and Workflows
+  project: DIAMOND
+  personnel_type: Research Engineer
+  slug: meisdabosch
+  photo: /images/team/NA.png
+  bio_short: I work at the intersection of machine learning and experimental physics, focusing on LIBS data and machine learning for materials science.
+  bio_short_fr: Je travaille à l'intersection de l'apprentissage automatique et de la physique expérimentale, en me concentrant sur les données LIBS et la modélisation scientifique pour la science des matériaux.
+  bio_long: |-
+    I am a research engineer working on machine learning methods for scientific applications, with a focus on LIBS (Laser-Induced Breakdown Spectroscopy) data within the DIAMOND project.
+
+    - Interests: machine learning for science, LIBS spectroscopy, scientific computing.
+    - Background: computer engineering with specialization in AI and data analytics.
+    - Tools: Python, PyTorch, scientific computing.
+  bio_long_fr: |-
+    Je suis ingénieur de recherche et je travaille sur des méthodes d'apprentissage automatique appliquées aux sciences, avec un focus sur les données LIBS (Laser-Induced Breakdown Spectroscopy) dans le cadre du projet DIAMOND.
+
+    - Intérêts : apprentissage automatique pour les sciences, spectroscopie LIBS, calcul scientifique.
+    - Formation : ingénierie informatique avec spécialisation en IA et analyse de données.
+    - Outils : Python, PyTorch, calcul scientifique.
+  links:
+    - label: LinkedIn
+      url: https://www.linkedin.com/in/gabriele-cassetta/
+  orcid: 0009-0006-2277-0622
+  github: merhametsize
