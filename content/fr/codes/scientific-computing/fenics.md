@@ -14,7 +14,7 @@ weight: 15
 ### Récupérez l'image Apptainer
 
 ```bash
-apptainer pull fenics.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/fenics-from-guix.sif:latest
+apptainer pull fenics.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/fenics.sif:latest
 ```
 
 <div align="justify">

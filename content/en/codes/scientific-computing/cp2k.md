@@ -13,7 +13,7 @@ weight: 16
 ### Retrieve the Apptainer image
 
 ```bash
-apptainer pull cp2k.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/cp2k-from-guix.sif:latest
+apptainer pull cp2k.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/cp2k.sif:latest
 ```
 
 <div align="justify">

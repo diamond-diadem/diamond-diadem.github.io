@@ -14,7 +14,7 @@ weight: 13
 ### Retrieve the Apptainer image
 
 ```bash
-apptainer pull wannier90.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/wannier90-from-guix.sif:latest
+apptainer pull wannier90.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/wannier90.sif:latest
 ```
 
 <div align="justify">

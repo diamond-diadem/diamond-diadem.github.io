@@ -14,7 +14,7 @@ weight: 12
 ### Récupérez l'image Apptainer
 
 ```bash
-apptainer pull opendis.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/opendis-from-guix.sif:latest
+apptainer pull opendis.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/opendis.sif:latest
 ```
 
 <div align="justify">

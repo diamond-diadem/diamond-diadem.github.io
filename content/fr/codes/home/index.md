@@ -275,14 +275,14 @@ apptainer pull raspa2.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/
 <div id="content-option12A" class="hidden">
 
 ```bash
-apptainer pull opendis.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/opendis-from-guix.sif:latest
+apptainer pull opendis.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/opendis.sif:latest
 ```
 
 </div>
 <div id="content-option13A" class="hidden">
 
 ```bash
-apptainer pull wannnier90.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/wannier90-from-guix.sif:latest
+apptainer pull wannnier90.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/wannier90.sif:latest
 ```
 
 </div>
@@ -296,21 +296,21 @@ apptainer pull nwchem.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/
 <div id="content-option15A" class="hidden">
 
 ```bash
-apptainer pull fenics.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/fenics-from-guix.sif:latest
+apptainer pull fenics.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/fenics.sif:latest
 ```
 
 </div>
 <div id="content-option16A" class="hidden">
 
 ```bash
-apptainer pull cp2k.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/cp2k-from-guix.sif:latest
+apptainer pull cp2k.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/cp2k.sif:latest
 ```
 
 </div>
 <div id="content-option17A" class="hidden">
 
 ```bash
-apptainer pull n2p2.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/n2p2-from-guix.sif:latest
+apptainer pull n2p2.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/n2p2.sif:latest
 ```
 
 </div>
@@ -324,7 +324,7 @@ apptainer pull dftbplus.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamon
 <div id="content-option19A" class="hidden">
 
 ```bash
-apptainer pull xtb.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/xtb-from-guix.sif:latest
+apptainer pull xtb.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/xtb.sif:latest
 ```
 
 </div>
@@ -345,7 +345,7 @@ apptainer pull gateway.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond
 <div id="content-option21A" class="hidden">
 
 ```bash
-apptainer pull amitex_fftp.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/amitex_fftp-from-guix.sif:latest
+apptainer pull amitex_fftp.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/amitex_fftp.sif:latest
 ```
 
 </div>
@@ -502,14 +502,14 @@ apptainer pull raspa2.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/
 <div id="content-option12B" style="margin-top: -1rem;" class="hidden">
 
 ```bash
-apptainer pull opendis.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/opendis-from-guix.sif:latest
+apptainer pull opendis.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/opendis.sif:latest
 ```
 
 </div>
 <div id="content-option13B" style="margin-top: -1rem;" class="hidden">
 
 ```bash
-apptainer pull wannnier90.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/wannier90-from-guix.sif:latest
+apptainer pull wannnier90.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/wannier90.sif:latest
 ```
 
 </div>
@@ -523,21 +523,21 @@ apptainer pull nwchem.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/
 <div id="content-option15B" style="margin-top: -1rem;" class="hidden">
 
 ```bash
-apptainer pull fenics.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/fenics-from-guix.sif:latest
+apptainer pull fenics.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/fenics.sif:latest
 ```
 
 </div>
 <div id="content-option16B" style="margin-top: -1rem;" class="hidden">
 
 ```bash
-apptainer pull cp2k.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/cp2k-from-guix.sif:latest
+apptainer pull cp2k.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/cp2k.sif:latest
 ```
 
 </div>
 <div id="content-option17B" style="margin-top: -1rem;" class="hidden">
 
 ```bash
-apptainer pull n2p2.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/n2p2-from-guix.sif:latest
+apptainer pull n2p2.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/n2p2.sif:latest
 ```
 
 </div>
@@ -551,7 +551,7 @@ apptainer pull dftbplus.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamon
 <div id="content-option19B" style="margin-top: -1rem;" class="hidden">
 
 ```bash
-apptainer pull xtb.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/xtb-from-guix.sif:latest
+apptainer pull xtb.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/xtb.sif:latest
 ```
 
 </div>
@@ -566,7 +566,7 @@ apptainer pull gateway.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond
 <div id="content-option21B" style="margin-top: -1rem;" class="hidden">
 
 ```bash
-apptainer pull amitex_fftp.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/amitex_fftp-from-guix.sif:latest
+apptainer pull amitex_fftp.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/amitex_fftp.sif:latest
 ```
 
 </div>
