@@ -232,7 +232,7 @@ apptainer pull z-set.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/a
 <div id="content-option5A" class="hidden">
 
 ```bash
-apptainer pull freefemplusplus.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/freefemplusplus.sif:latest
+apptainer pull freefem.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/freefem.sif:latest
 ```
 
 </div>
@@ -465,7 +465,7 @@ apptainer pull z-set.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/a
 <div id="content-option5B" style="margin-top: -1rem;" class="hidden">
 
 ```bash
-apptainer pull freefemplusplus.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/freefemplusplus.sif:latest
+apptainer pull freefem.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/freefem.sif:latest
 ```
 
 </div>
