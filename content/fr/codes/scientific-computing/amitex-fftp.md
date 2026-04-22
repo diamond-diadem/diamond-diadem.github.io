@@ -11,11 +11,23 @@ weight: 20
     <img alt="Abinit" class="logo-amitex">
 </a>
 
-### Récupérez l'image Apptainer
+### Récupérez l'image Amitex_fftp
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
 
 ```bash
 apptainer pull amitex_fftp.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/amitex_fftp.sif:latest
 ```
+
+{{< /tab >}}
+{{< tab "Docker" >}}
+
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/amitex_fftp
+```
+
+{{< /tab >}}
+{{< /tabs >}}
 
 <div align="justify">
 
@@ -31,7 +43,7 @@ Le code combine une **implémentation massivement parallèle** avec une **interf
 
 ### Contenu principal de l'image
 
-- **amitex_fftp** : `/gnu/store/df6rv9zlllzrp8rrwxlc5ixf20kylmnf-amitex_fftp-8.17.14/bin/amitex_fftp`
+- **amitex_fftp v8.17.14** : `/gnu/store/df6rv9zlllzrp8rrwxlc5ixf20kylmnf-amitex_fftp-8.17.14/bin/amitex_fftp`
 
 ```
      ├── openmpi
