@@ -13,9 +13,22 @@ weight: 20
 
 ### Retrieve the Apptainer image
 
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+
 ```bash
 apptainer pull amitex_fftp.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/amitex_fftp.sif:latest
 ```
+
+{{< /tab >}}
+{{< tab "Docker" >}}
+
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/amitex_fftp
+```
+
+{{< /tab >}}
+{{< /tabs >}}
 
 <div align="justify">
 
@@ -31,23 +44,20 @@ The code combines **massively parallel implementation** with a **versatile user 
 
 ### Main content of the image
 
-- **amitex_fftp** : `/gnu/store/df6rv9zlllzrp8rrwxlc5ixf20kylmnf-amitex_fftp-8.17.14/bin/amitex_fftp`
-
+- **amitex_fftp v8.17.14** : `/bin/amitex_fftp`
 ```
      ├── openmpi
      └── fftw
 ```
 
-- **LICENCE_AMITEX.pdf** : `/gnu/store/df6rv9zlllzrp8rrwxlc5ixf20kylmnf-amitex_fftp-8.17.14/share/doc/amitex_fftp-8.17.14/LICENCE_AMITEX.pdf`
-- **gnuplot** : `/gnu/store/gghd7a7wmcqrjir0r2kl5xb2gkcdq3iz-gnuplot-6.0.1/bin/gnuplot`
-- **mfront** : `/gnu/store/m51plz005xw9g3n9zi9rbrxzsy6ix7qp-mfront-TFEL-4.2.1/bin/mfront`
-
+- **LICENCE_AMITEX.pdf** : `/share/doc/amitex_fftp-8.17.14/LICENCE_AMITEX.pdf`
+- **gnuplot** : `/bin/gnuplot`
+- **mfront** : `/bin/mfront`
 ```
      ├── gcc
-     └── g++
+     ├── g++
+     └── gfortran
 ```
-
-- **gfortran** : `/gnu/store/7c98v6yhp4kwga380y9jjg1pf5cicxvd-gfortran-toolchain-14.3.0/bin/gfortran`
 
 </div>
 

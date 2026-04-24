@@ -44,7 +44,6 @@ Le code combine une **implémentation massivement parallèle** avec une **interf
 ### Contenu principal de l'image
 
 - **amitex_fftp v8.17.14** : `/bin/amitex_fftp`
-
 ```
      ├── openmpi
      └── fftw
@@ -53,7 +52,6 @@ Le code combine une **implémentation massivement parallèle** avec une **interf
 - **LICENCE_AMITEX.pdf** : `/share/doc/amitex_fftp-8.17.14/LICENCE_AMITEX.pdf`
 - **gnuplot** : `/bin/gnuplot`
 - **mfront** : `/bin/mfront`
-
 ```
      ├── gcc
      ├── g++
