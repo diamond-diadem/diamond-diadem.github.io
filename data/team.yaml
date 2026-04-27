@@ -454,7 +454,11 @@ team:
   bio_long: |-
     I work on the professionalization of research codes in materials science (containerization of parallelized and HPC code using Apptainer and Guix, porting to clusters, compilation with CMake, etc.).
   bio_long_fr: |-
-    Je travaille sur la professionnalisation de codes de recherche en sciences des matériaux (conteneurisation de codes parallélisés et HPC via Apptainer & guix, portage sur clusters, compilation avec CMake, ...).
+    Je travaille sur la professionnalisation de codes de recherche en sciences des matériaux (conteneurisation de codes parallélisés et HPC via Apptainer & guix, portage sur clusters, compilation avec CMake, ...). 
+  links:
+    - label: LinkedIn
+      url: https://fr.linkedin.com/in/karim-a%C3%AFt-ammar-0067b31ba
+  website: https://cv.hal.science/karim-ait-ammar 
 
 
 - name: Yaidel Toledo
