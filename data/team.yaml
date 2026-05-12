@@ -89,14 +89,27 @@ team:
   first_name: Thierry
   last_name: Deutsch
   email: thierry.deutsch@cea.fr
-  affiliation: CEA Grenoble
-  role: WP2 - Materials Database Infrastructure
+  affiliation: MEM, Grenoble
+  role: WP2 - Materials databases infrastructure
   project: DIAMOND
-  personnel_type: 
-    - Scientist
-    - Scientific Lead
+  personnel_type: Scientist
   slug: thierry-deutsch
   photo: /images/team/NA.png
+  bio_short: I am a specialist in Materials simulation using HPC.
+  bio_short_fr: Je suis un spécialiste des simulations sur les matériaux en utilisant le calcul à haute performance.
+  bio_long: |-
+    I am a specialist in Materials simulation using HPC. I am director of the MEM laboratory (Materials Exploration and Modelling) which are teams specialists of advanced characterisations and simulation applied to Materials.
+    - Interests: DFT, HPC, quantum mechanics
+  bio_long_fr: |-
+    Je suis un spécialiste des simulations sur les matériaux en utilisant le calcul à haute performance. Je suis directeur du laboratoire MEM (modélisation et exploration de la matière) qui regroupe des équipes spécialistes de caractérisations avancées et de simulations sur les matériaux du quantique jusqu'à la biologie.
+    - Intérêts : DFT, HPC, mécanique quantique
+  links:
+    - label: Google Scholar
+      url: https://scholar.google.com/citations?user=MgmU20AAAAJ
+    - label: LinkedIn
+      url: https://www.linkedin.com/in/thierry-deutsch-a4970139/
+  website: https://www.mem-lab.fr/Pages/Bio/Thierry-Deutsch.aspx
+  orcid: 0000-0001-7503-3390  
 
 - name: David Rodney
   first_name: David
