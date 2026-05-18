@@ -1,8 +1,8 @@
 ---
-title: "Article accepté pour publication - DIAMOND-CW"
+title: "Article publié - DIAMOND-CW"
 description: ""
 summary: "<b>Reproducible container solutions for codes and workflows in materials science</b><br/><em>Advanced Engineering Materials</em>"
-eventDate: "4 février 2026"
+eventDate: "9 avril 2026"
 backgroundImage: "images/news/backgrounds/diamond-cw-article.png"
 backgroundOpacity: 0.18
 # location: ""
@@ -43,9 +43,9 @@ seo:
 
 <big>
 
-L'article a été accepté pour publication dans un numéro spécial de la revue _Advanced Engineering Materials_ consacré au PEPR DIADEM. Il présente le travail effectué par le groupe "Codes & Workflows" du projet DIAMOND.<a>
+L'article a été publié dans un numéro spécial de la revue _Advanced Engineering Materials_ consacré au PEPR DIADEM. Il présente le travail effectué par le groupe "Codes & Workflows" du projet DIAMOND.
 
-Découvrez la prépublication <a href="https://hal.science/hal-05430774v1/" target="_blank" rel="noopener noreferrer">sur HAL</a> ou <a href="https://doi.org/10.48550/arXiv.2512.13826" target="_blank" rel="noopener noreferrer">sur arXiv</a>.
+Découvrez <a href="https://doi.org/10.1002/adem.202503185" target="_blank" rel="noopener noreferrer"> l'article</a>
 
 </big>
 
