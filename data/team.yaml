@@ -90,9 +90,11 @@ team:
   last_name: Deutsch
   email: thierry.deutsch@cea.fr
   affiliation: MEM, Grenoble
-  role: WP2 - Materials databases infrastructure
+  role: WP2 - Materials Database Infrastructure
   project: DIAMOND
-  personnel_type: Scientist
+  personnel_type: 
+    - Scientist
+    - Scientific Lead
   slug: thierry-deutsch
   photo: /images/team/NA.png
   bio_short: I am a specialist in Materials simulation using HPC.
@@ -495,7 +497,7 @@ team:
   affiliation: CEA Saclay
   role: WP2 - Codes and Workflows
   project: DIAMOND
-  personnel_type: Research Engineer
+  personnel_type: Scientist
   slug: meisdabosch
   photo: /images/team/NA.png
   bio_short: I work at the intersection of machine learning and experimental physics, focusing on LIBS data and machine learning for materials science.
