@@ -28,11 +28,13 @@ mpirun -n num_proccess --bind-to core
 where `num_process` is the number of processes requested, and `num_process ∈ [1, 2, 4, 8, 16, 32, 64]`. In the specific case of `num_process = 64`, the number of nodes is set to 2. The `-bind-to core` option is important to ensure correct parallelization of the processes without overloading a single socket. More information can be found in the official mpirun documentation [mpirun documentation](https://www.open-mpi.org/doc/v4.0/man1/mpirun.1.php).
 
 
-The plot in Figure 2 shows the efficiency (R) as a function of the number of processes, and it can be observed that the maximum efficiency occurs for `mpirun -n 1`, then decreases as the number of processes increases. 
+The plot in Figure 2 shows the efficiency (R) as a function of the number of processes, and it can be observed that the maximum efficiency occurs for `mpirun -n 1`, then decreases as the number of processes increases. Moreover, a comparison between the native installation and the Apptainer installation within a Guix environment is presented, showing that the performance loss when using the Apptainer version is minimal.
 
  <p align="center">
-  <img alt="n2p2" class="n2p2_benchmark_R_vs_process_log2_total_time3">
+  <img alt="n2p2" class="n2p2_benchmark_total_time_normal_installation_VS_apptainer_B">
 </p>
 <p align="center"><i>Figure 2: Efficiency R as a function of number of processed asked. x-axes in log2 scale  </i></p>
 
-From the present investigation, we can conclude that, for n2p2 calculations, the optimal configuration is `NODES=2`, `CORES=32`, `THREADS=1`, and mpirun processes equal to 64. In fact, as shown in Figure 2, at 64 ranks there is a loss of approximately 0.36 in efficiency compared to the initial value, which still represents a good compromise to speed up the calculation.
+From the present investigation, we can conclude that, for n2p2 calculations, the optimal configuration is `NODES=1`, `CORES=8`, `THREADS=1`, and mpirun processes equal to 32. In fact, as shown in Figure 2, after 8 processes we lose the linear scaling trend; consequently, the total execution time increases exponentially. Further analysis will be performed for 64 processes to complete the investigation.
+
+Concerning the comparison between the native installation and the Apptainer version, we observe that the Apptainer execution is slower. In particular, it requires approximately 20–25% more total execution time. Nevertheless, it allows calculations to be reproduced much more easily, which represents a good compromise. In the specific case of `NODES=1`, `CORES=8`, `THREADS=1`, 100 epochs run in 7h and 22 minutes and 6h and 8 minutes respectively for Apptainer vs normal installation.  
