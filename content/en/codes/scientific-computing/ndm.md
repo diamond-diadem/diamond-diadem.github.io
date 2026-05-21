@@ -1,10 +1,15 @@
 ---
 title: NDM
-title_visible: true
+title_visible: false
 linkTitle: NDM
+icon: icon-ndm
 toc: false
 weight: 21
 ---
+
+<a href="https://github.com/jpcroc/NDM" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo">
+    <span class="logo-ndm" aria-hidden="true"></span>
+</a>
 
 ### Retrieve the Apptainer image
 
@@ -14,7 +19,7 @@ apptainer pull ndm.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/app
 
 <div align="justify">
 
-NDM is a fortran code computing empirical potential molecular dynamics
+NDM is a fortran code computing empirical potential molecular dynamics.
 
 </div>
 
