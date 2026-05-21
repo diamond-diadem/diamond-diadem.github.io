@@ -19,9 +19,15 @@ apptainer pull ndm.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/app
 
 <div align="justify">
 
-NDM is a fortran code computing empirical potential molecular dynamics.
+**NDM** is a **distributed** Fortran code for empirical potential molecular dynamics compuations.
 
 </div>
+
+### Main content of the image
+
+**NDM** main executable: `/bin/rundm90_ndm_mpi`
+
+This image of **NDM** is built using **MKL** Intel libraries and **GNU** compilers.
 
 <h3 class="mb-1">Tutorial</h3>
 
