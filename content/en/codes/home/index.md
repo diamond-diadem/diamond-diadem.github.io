@@ -354,9 +354,18 @@ docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-s
 </div>
 <div id="content-option11A" class="hidden">
 
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
 ```bash
 apptainer pull raspa2.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/raspa2.sif:latest
 ```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/raspa2
+```
+{{< /tab >}}
+{{< /tabs >}}
 
 </div>
 <div id="content-option12A" class="hidden">
@@ -668,9 +677,18 @@ docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-s
 </div>
 <div id="content-option11B" style="margin-top: -1rem;" class="hidden">
 
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
 ```bash
 apptainer pull raspa2.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/raspa2.sif:latest
 ```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/raspa2
+```
+{{< /tab >}}
+{{< /tabs >}}
 
 </div>
 <div id="content-option12B" style="margin-top: -1rem;" class="hidden">
