@@ -434,9 +434,18 @@ docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-s
 </div>
 <div id="content-option16A" class="hidden">
 
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
 ```bash
 apptainer pull cp2k.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/cp2k.sif:latest
 ```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/cp2k
+```
+{{< /tab >}}
+{{< /tabs >}}
 
 </div>
 <div id="content-option17A" class="hidden">
@@ -793,9 +802,18 @@ docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-s
 </div>
 <div id="content-option16B" style="margin-top: -1rem;" class="hidden">
 
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
 ```bash
 apptainer pull cp2k.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/cp2k.sif:latest
 ```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/cp2k
+```
+{{< /tab >}}
+{{< /tabs >}}
 
 </div>
 <div id="content-option17B" style="margin-top: -1rem;" class="hidden">
