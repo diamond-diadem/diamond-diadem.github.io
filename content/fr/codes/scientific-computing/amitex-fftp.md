@@ -14,18 +14,14 @@ weight: 20
 ### Récupérez l'image Amitex_fftp
 {{< tabs "apptainer_docker" >}}
 {{< tab "Apptainer" >}}
-
 ```bash
 apptainer pull amitex_fftp.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/amitex_fftp.sif:latest
 ```
-
 {{< /tab >}}
 {{< tab "Docker" >}}
-
 ```bash
 docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/amitex_fftp
 ```
-
 {{< /tab >}}
 {{< /tabs >}}
 

@@ -69,7 +69,7 @@ Exemple de script minimal de lancement **job.sh** :
 #SBATCH --ntasks=12
 #SBATCH --time=00:05:00
 
-srun apptainer run amitex_fftp.sif -nm concrete.vtk -m material.xml -c loading.xml -a algorithm.xml -s out
+srun apptainer exec amitex_fftp.sif amitex_fftp -nm concrete.vtk -m material.xml -c loading.xml -a algorithm.xml -s out
 ```
 
 Il est ensuite possible de lancer le calcul avec la commande :
@@ -82,14 +82,10 @@ sbatch job.sh
 ### Lancement sans scheduler
 
 ```bash
-mpirun -np <N> apptainer run amitex_fftp.sif -nm concrete.vtk -m material.xml -c loading.xml -a algorithm.xml -s out
+mpirun -np <N> apptainer exec amitex_fftp.sif amitex_fftp -nm concrete.vtk -m material.xml -c loading.xml -a algorithm.xml -s out
 ```
 
 ***La commande mpirun doit provenir d'OpenMPI 4 pour que cela fonctionne.**
-
-Pour information, `apptainer run amitex_fftp.sif` est un raccourci d' `apptainer exec amitex_fftp.sif amitex_fftp`
-
-
 
 
 
