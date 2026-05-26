@@ -258,9 +258,18 @@ apptainer pull z-set.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/a
 </div>
 <div id="content-option5A" class="hidden">
 
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
 ```bash
 apptainer pull freefem.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/freefem.sif:latest
 ```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/freefem
+```
+{{< /tab >}}
+{{< /tabs >}}
 
 </div>
 <div id="content-option6A" class="hidden">
@@ -521,9 +530,18 @@ apptainer pull z-set.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/a
 </div>
 <div id="content-option5B" style="margin-top: -1rem;" class="hidden">
 
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
 ```bash
 apptainer pull freefem.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/freefem.sif:latest
 ```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/freefem
+```
+{{< /tab >}}
+{{< /tabs >}}
 
 </div>
 <div id="content-option6B" style="margin-top: -1rem;" class="hidden">
