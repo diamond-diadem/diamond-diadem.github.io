@@ -13,9 +13,18 @@ weight: 9
 
 ### Retrieve the Apptainer image
 
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
 ```bash
 apptainer pull gmsh.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/gmsh.sif:latest
 ```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/gmsh
+```
+{{< /tab >}}
+{{< /tabs >}}
 
 <div align="justify">
 
