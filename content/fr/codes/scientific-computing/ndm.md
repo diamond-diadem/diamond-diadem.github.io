@@ -1,10 +1,15 @@
 ---
 title: NDM
-title_visible: true
+title_visible: false
 linkTitle: NDM
+icon: icon-ndm
 toc: false
 weight: 21
 ---
+
+<a href="https://github.com/jpcroc/NDM" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo">
+    <span class="logo-ndm" aria-hidden="true"></span>
+</a>
 
 ### Récupérez l'image Apptainer
 
@@ -14,13 +19,19 @@ apptainer pull ndm.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/app
 
 <div align="justify">
 
-NDM est un code de calcul en Fortran pour la dynamique moléculaire en potentiels empiriques.
+**NDM** est un code de calcul **distribué** en Fortran pour la dynamique moléculaire en potentiels empiriques.
 
 </div>
 
+### Contenu principal de l'image
+
+Exécutable **NDM** : `/bin/rundm90_ndm_mpi`
+
+L'image **NDM** est compilée avec la librairie **MKL** distribuée par Intel et le compilateur **GNU**.
+
 <h3 class="mb-1">Tutoriel</h3>
 
-{{< link-card title="Contenu à venir" description="<i>Apprenez à utiliser cette image de conteneur</i>" href="#bottom" icon="tabler-icons/outline/package" disabled="true" class="mb-0" >}}
+{{< link-card title="Apprenez à utiliser cette image de conteneur" href="/documentation/by-container/ndm" icon="tabler-icons/outline/package" class="mb-0" >}}
 
 <h3 class="mb-1 mt-3">Documentation NDM</h3>
 
@@ -32,4 +43,4 @@ NDM est un code de calcul en Fortran pour la dynamique moléculaire en potentiel
 
 <h3 class="mb-1 mt-3">Exemples</h3>
 
-{{< link-card title="Contenu à venir" description="<i>Téléchargez des fichiers d'entrée</i>" href="#bottom" icon="tabler-icons/outline/file-export" disabled="true" class="mb-0" >}}
+{{< link-card title="Téléchargez des fichiers d'entrée" href="/downloads/ndm-tutorial-inputs.tar.gz" icon="tabler-icons/outline/file-export" >}}
