@@ -1,7 +1,7 @@
 ---
 title: "How to use the NDM Apptainer image ?"
 linkTitle: NDM tutorial
-weight: 7
+weight: 8
 ---
 
 <div align="justify">
@@ -32,7 +32,7 @@ apptainer exec ndm.sif mpirun -np <N> rundm90_ndm_mpi
 
 ## Introduction
 
-**NDM** is a distributed Fortran code for empirical potential molecular dynamics compuations built around the MPI standard, allowing the computational workload to be distributed across multiple processes. There are two ways to run the containerized code in parallel:
+**NDM** is a distributed Fortran code for empirical potential molecular dynamics computations built around the MPI standard, allowing the computational workload to be distributed across multiple processes. There are two ways to run the containerized code in parallel:
 
 - **MPI embedded** in the container => guaranteed to work, but limited to a single machine (a single node)
 - **Hybrid MPI** using the host machine’s MPI => works across multiple nodes but may introduce compatibility issues.

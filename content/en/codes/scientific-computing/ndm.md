@@ -19,7 +19,7 @@ apptainer pull ndm.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/app
 
 <div align="justify">
 
-**NDM** is a **distributed** Fortran code for empirical potential molecular dynamics compuations.
+**NDM** is a **distributed** Fortran code for empirical potential molecular dynamics computations.
 
 </div>
 
