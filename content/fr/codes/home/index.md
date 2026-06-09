@@ -144,6 +144,11 @@ icon="tabler-icons/outline/settings-question" >}}
             <td class="table-cell-left"><a href="/codes/scientific-computing/amitex-fftp/"><i class="icon-amitex-fftp"></i>AMITEX_FFTP</a></td>
             <td></td>
         </tr>
+        <tr>
+            <td class="table-cell-left"><a href="/codes/scientific-computing/ndm/"><i class="icon-ndm"></i>NDM</a></td>
+            <td></td>
+        </tr>
+
     </tbody>
 </table>
 
@@ -177,6 +182,7 @@ icon="tabler-icons/outline/settings-question" >}}
                 <option value="option19A">XTB</option>
                 <option value="option20A">GaTewAY</option>
                 <option value="option21A">AMITEX_FFTP</option>
+                <option value="option22A">NDM</option>
             </optgroup>
         </select>
     </div>
@@ -350,6 +356,14 @@ apptainer pull amitex_fftp.sif oras://gricad-registry.univ-grenoble-alpes.fr/dia
 
 </div>
 
+<div id="content-option22A" class="hidden">
+
+```bash
+apptainer pull ndm.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/ndm.sif:latest
+```
+
+</div>
+
 <div id="content-optionaA" class="hidden">
 
 ```bash
@@ -416,6 +430,7 @@ apptainer pull xcrysden.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamon
             <option value="option19B">XTB</option>
             <option value="option20B">GaTewAY</option>
             <option value="option21B">AMITEX_FFTP</option>
+            <option value="option22B">NDM</option>
         </optgroup>
     </select>
 </div>
@@ -567,6 +582,14 @@ apptainer pull gateway.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond
 
 ```bash
 apptainer pull amitex_fftp.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/amitex_fftp.sif:latest
+```
+
+</div>
+
+<div id="content-option22B" style="margin-top: -1rem;" class="hidden">
+
+```bash
+apptainer pull ndm.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/ndm.sif:latest
 ```
 
 </div>

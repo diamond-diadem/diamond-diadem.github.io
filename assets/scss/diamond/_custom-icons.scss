@@ -218,4 +218,14 @@
     @extend .custom-icon;
 }
 
+.icon-ndm {
+    background-image: url(images/codes/ndm/ndm-icon-light.png);
+    @extend .custom-icon;
+}
+
+@include color-mode(dark) {
+    .icon-ndm {
+        background-image: url(images/codes/ndm/ndm-icon-dark.png);
+    }
+}
 // // // END custom icons END // // //

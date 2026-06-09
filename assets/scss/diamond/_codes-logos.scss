@@ -217,4 +217,9 @@
 
 // // END Amitex logo END // //
 
+.logo-ndm {
+    width: 80%;
+    @include code-logo("images/codes/ndm/ndm-logo.png", 265 / 155);
+}
+
 // // // END Codes pages top logos END // // //
