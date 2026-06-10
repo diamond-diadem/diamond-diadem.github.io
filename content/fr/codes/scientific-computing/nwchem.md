@@ -11,7 +11,7 @@ weight: 14
   <span class="logo-nwchem" aria-hidden="true"></span>
 </a>
 
-### Récupérez l'image Apptainer
+### Récupérez le conteneur
 
 {{< tabs "apptainer_docker" >}}
 {{< tab "Apptainer" >}}

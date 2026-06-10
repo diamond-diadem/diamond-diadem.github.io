@@ -8,7 +8,7 @@ import { stdin as input, stdout as output } from 'node:process';
 const LOCALE_STRINGS = {
     en: {
         label: 'English',
-        retrieveHeading: 'Retrieve the Apptainer image',
+        retrieveHeading: 'Retrieve the container',
         tutorialHeading: 'Tutorial',
         documentationHeading: (name) => `${name} documentation`,
         documentationWebsiteLabel: 'Official website',
@@ -21,7 +21,7 @@ const LOCALE_STRINGS = {
     },
     fr: {
         label: 'Français',
-        retrieveHeading: "Récupérez l'image Apptainer",
+        retrieveHeading: "Récupérez le conteneur",
         tutorialHeading: 'Tutoriel',
         documentationHeading: (name) => `Documentation ${name}`,
         documentationWebsiteLabel: 'Site officiel',

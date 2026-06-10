@@ -11,7 +11,7 @@ weight: 21
     <span class="logo-ndm" aria-hidden="true"></span>
 </a>
 
-### Récupérez l'image Apptainer
+### Récupérez le conteneur
 
 ```bash
 apptainer pull ndm.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/ndm.sif:latest

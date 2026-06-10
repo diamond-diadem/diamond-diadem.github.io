@@ -11,7 +11,7 @@ weight: 9
     <span class="logo-gmsh" aria-hidden="true"></span>
 </a>
 
-### Retrieve the Apptainer image
+### Retrieve the container
 
 {{< tabs "apptainer_docker" >}}
 {{< tab "Apptainer" >}}

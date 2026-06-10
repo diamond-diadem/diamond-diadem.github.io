@@ -10,7 +10,7 @@ weight: 19
   <span class="logo-xtb" aria-hidden="true"></span>
 </a>
 
-### Retrieve the Apptainer image
+### Retrieve the container
 
 {{< tabs "apptainer_docker" >}}
 {{< tab "Apptainer" >}}

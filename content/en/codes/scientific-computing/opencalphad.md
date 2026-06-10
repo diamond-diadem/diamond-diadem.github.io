@@ -11,7 +11,7 @@ weight: 6
     <span class="logo-opencalphad" aria-hidden="true"></span>
 </a>
 
-### Retrieve the Apptainer image
+### Retrieve the container
 
 {{< tabs "apptainer_docker" >}}
 {{< tab "Apptainer" >}}

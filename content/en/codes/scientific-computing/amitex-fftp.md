@@ -11,7 +11,7 @@ weight: 20
     <img alt="Abinit" class="logo-amitex">
 </a>
 
-### Retrieve the Apptainer image
+### Retrieve the container
 
 {{< tabs "apptainer_docker" >}}
 {{< tab "Apptainer" >}}

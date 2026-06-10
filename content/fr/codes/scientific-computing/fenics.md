@@ -11,7 +11,7 @@ weight: 15
   <span class="logo-fenics" aria-hidden="true"></span>
 </a>
 
-### Récupérez l'image Apptainer
+### Récupérez le conteneur
 
 {{< tabs "apptainer_docker" >}}
 {{< tab "Apptainer" >}}

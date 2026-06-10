@@ -10,7 +10,7 @@ weight: 19
   <span align="center" class="logo-gateway"><b>GaTewAY</b></span>
 </div>
 
-### Retrieve the Apptainer image
+### Retrieve the container
 
 ```bash
 apptainer pull gateway.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/gateway.sif:latest

@@ -11,7 +11,7 @@ weight: 7
   <span class="home-neper" aria-hidden="true"></span>
 </a>
 
-### Récupérez l'image Apptainer
+### Récupérez le conteneur
 
 {{< tabs "apptainer_docker" >}}
 {{< tab "Apptainer" >}}
