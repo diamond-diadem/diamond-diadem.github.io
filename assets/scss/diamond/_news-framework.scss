@@ -41,6 +41,11 @@
 
 // // END news page END // //
 
+@include swap-image(".img-denoiser-wide",
+    "/images/news/raman-denoising-article/denoiser-wide.png",
+    "/images/news/raman-denoising-article/denoiser-wide-dark.png"
+);
+
 .event-date {
     font-style: italic;
     font-size: x-large;
