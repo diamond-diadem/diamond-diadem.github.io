@@ -147,8 +147,7 @@ icon="tabler-icons/outline/settings-question" >}}
         <tr>
             <td class="table-cell-left"><a href="/codes/scientific-computing/ndm/"><i class="icon-ndm"></i>NDM</a></td>
             <td></td>
-        </tr>
-
+        </tr>    
     </tbody>
 </table>
 
