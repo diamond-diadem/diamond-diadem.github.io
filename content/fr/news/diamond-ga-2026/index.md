@@ -43,7 +43,7 @@ Trams **T1** et **T4** depuis la gare Part-Dieu — arrêts : *Université Lyon 
 
 ### Jeudi 11 juin
 
-- **9h00 – 11h30** — Formation : Analyse de données en science des matériaux *(Salle Anne-Marie JURDYC, Bât. Lippmann — animateurs : A. Amrani, J.-P. Poli, L. Orveillon)*
+- **9h00 – 11h30** — Formation : Analyse de données en science des matériaux *(Salle Anne-Marie JURDYC, Bât. Lippmann — animateurs : A. Amrani, J.-P. Poli, L. Orveillon)* [lien formation](https://gricad-gitlab.univ-grenoble-alpes.fr/diamond/jupyter/training-diamond-ag-2026)
 - **12h00 – 13h30** — Buffet d'accueil
 - **13h00 – 15h00** — Conférences invitées
   - **13h30 – 14h15** — Heiko WEBER (Friedrich-Alexander-Universität) — Projet FAIRmat

@@ -43,7 +43,7 @@ Trams **T1** and **T4** from Gare de Lyon Part-Dieu — stop: *Université Lyon 
 
 ### Thursday, June 11
 
-- **9:00 – 11:30** — Training: Data analysis in materials science *(Salle Anne-Marie JURDYC, Bât. Lippmann — led by A. Amrani, J.-P. Poli, L. Orveillon)*
+- **9:00 – 11:30** — Training: Data analysis in materials science *(Salle Anne-Marie JURDYC, Bât. Lippmann — led by A. Amrani, J.-P. Poli, L. Orveillon)* [training content](https://gricad-gitlab.univ-grenoble-alpes.fr/diamond/jupyter/training-diamond-ag-2026)
 - **12:00 – 13:30** — Welcome buffet
 - **13:00 – 15:00** — Invited presentations
   - **13:30 – 14:15** — Heiko WEBER (Friedrich-Alexander-Universität) — FAIRmat project
