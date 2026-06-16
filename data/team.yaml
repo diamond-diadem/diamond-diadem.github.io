@@ -493,7 +493,7 @@ team:
   last_name: Cassetta
   email: gabriele.cassetta@cea.fr
   affiliation: CEA Saclay
-  role: WP2 - Codes and Workflows
+  role: WP1 - Codes and Workflows
   project: DIAMOND
   personnel_type: Research Engineer
   slug: meisdabosch
@@ -516,4 +516,29 @@ team:
     - label: LinkedIn
       url: https://www.linkedin.com/in/gabriele-cassetta/
   orcid: 0009-0006-2277-0622
+
+
+- name: Yiran Lu
+   first_name: Yiran
+   last_name: Lu
+   email: yiran.lu@grenoble-inp.fr
+   affiliation: GRICAD Grenoble
+   role: WP1 - Codes and Workflows
+   project: DIAMOND
+   personnel_type: Research Engineer
+   slug: yiran-lu
+   photo: /images/team/yl.png
+   bio_short: I work with scientific codes and workflows for materials science on HPC infrastructures.
+   bio_short_fr: Je travaille avec des codes scientifiques et des flux de travail pour la science des matériaux sur des infrastructures HPC.
+   bio_long: |-
+     I am research engineer at GRICAD. I work on delivering scientific codes and workflows for materials science on HPC infrastructures. I am also interested in the development of software tools for scientific computing and data analysis.
+   bio_long_fr: |-
+     Je suis ingénieur de recherche à GRICAD. Je travaille sur la livraison de codes scientifiques et de flux de travail pour la science des matériaux sur des infrastructures HPC. Je m'intéresse également au développement d'outils logiciels pour le calcul scientifique et l'analyse de données.
+   links:
+     - label: LinkedIn
+       url: https://www.linkedin.com/in/yiran-lu-66424012a
+   website: https://yiranlus.github.io/
+   github: yiranlus
+
   github: merhametsize
+
