@@ -401,18 +401,9 @@ docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-s
 </div>
 <div id="content-option14A" class="hidden">
 
-{{< tabs "apptainer_docker" >}}
-{{< tab "Apptainer" >}}
 ```bash
 apptainer pull nwchem.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/nwchem.sif:latest
 ```
-{{< /tab >}}
-{{< tab "Docker" >}}
-```bash
-docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/nwchem
-```
-{{< /tab >}}
-{{< /tabs >}}
 
 </div>
 <div id="content-option15A" class="hidden">
@@ -832,18 +823,9 @@ docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-s
 </div>
 <div id="content-option14B" style="margin-top: -1rem;" class="hidden">
 
-{{< tabs "apptainer_docker" >}}
-{{< tab "Apptainer" >}}
 ```bash
 apptainer pull nwchem.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/nwchem.sif:latest
 ```
-{{< /tab >}}
-{{< tab "Docker" >}}
-```bash
-docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/nwchem
-```
-{{< /tab >}}
-{{< /tabs >}}
 
 </div>
 <div id="content-option15B" style="margin-top: -1rem;" class="hidden">

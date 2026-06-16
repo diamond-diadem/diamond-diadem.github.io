@@ -13,18 +13,9 @@ weight: 14
 
 ### Retrieve the container
 
-{{< tabs "apptainer_docker" >}}
-{{< tab "Apptainer" >}}
 ```bash
 apptainer pull nwchem.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/nwchem.sif:latest
 ```
-{{< /tab >}}
-{{< tab "Docker" >}}
-```bash
-docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/nwchem
-```
-{{< /tab >}}
-{{< /tabs >}}
 
 <div align="justify">
 
