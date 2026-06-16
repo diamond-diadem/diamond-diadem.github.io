@@ -277,16 +277,18 @@ Créez un dossier contenant l'archive des **fichiers d'entrées**. Placez-vous d
 tar -xzf amitex-tutorial-inputs.tar.gz # Extrait le contenu de l'archive.
 chmod -R a+rwx $(pwd) # Donne les droits aux autres utilisateurs sur les fichiers.
 ```
+Il est nécessaire de donner les droits d’accès aux autres utilisateurs sur les fichiers, car nous allons exécuter Docker en spécifiant un utilisateur différent.
 
-On entre ensuite dans le conteneur, avec l'option `-v=$(pwd):/workdir` pour monter le répertoire courant dans le conteneur et avoir accès aux fichiers d'entrées dans `/workdir`.
+On entre ensuite dans le conteneur avec la commande suivante :
 ```bash
-docker run -v=$(pwd):/workdir --user=1000:1000 -it --entrypoint=bash gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/amitex_fftp
+docker run -v=$(pwd):/workdir -w=/workdir --user=1000:1000 --entrypoint=bash -it --rm gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/amitex_fftp
 ```
 
-Une fois dans le conteneur, on se place dans `/workdir` :
-```bash
-cd /workdir
-```
+- `-v=$(pwd):/workdir` permet de monter le répertoire courant dans `/workdir` du conteneur.
+- `-w=/workdir` permet de se placer dans le répertoire de travail `/workdir`.
+- `--user=1000:1000` spécifie l’utilisateur avec l’UID `1000` et le GID `1000` dans le conteneur. Cela permet d’éviter d’exécuter les commandes en tant que `root`, ce qui est plus sûr et nécessaire pour utiliser `mpirun`.
+- `--entrypoint=bash` et `-it` permettent de lancer un shell Bash interactif.
+- `--rm` supprime automatiquement le conteneur lorsqu’on quitte le shell
 
 ## Commande en une ligne
 
@@ -490,7 +492,7 @@ Puis visualiser les résultats :
 gnuplot < plot.gp
 ```
 
-**Certains fichiers peuvent être crées avec des droits ne permettant pas de les modifier/supprimer depuis l'extérieur du conteneur. Il est possible de changer les droits depuis le conteneur avec par exemple : `chmod a+rwx <mon_fichier>`.**
+**Certains fichiers peuvent être crées avec des droits ne permettant pas de les modifier/supprimer depuis l'extérieur du conteneur. Il est possible de changer les droits en exécutant par exemple : `chmod -R a+rwx $(pwd)` à l'intérieur du conteneur.**
 
 {{< /tab >}}
 {{< /tabs >}}

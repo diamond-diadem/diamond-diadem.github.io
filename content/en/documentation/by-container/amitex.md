@@ -266,17 +266,19 @@ tar -xzf amitex-tutorial-inputs.tar.gz # Extracts the contents of the archive.
 chmod -R a+rwx $(pwd) # Grants read, write, and execute permissions to all users on the files.
 ```
 
-Then enter the container, using the `-v=$(pwd):/workdir` option to mount the current directory inside the container and access the input files in `/workdir`.
+It is necessary to grant access permissions to other users on the files, because we will run Docker by specifying a different user.
+
+We then enter the container with the following command:
 
 ```bash
-docker run -v=$(pwd):/workdir --user=1000:1000 -it --entrypoint=bash gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/amitex_fftp
+docker run -v=$(pwd):/workdir -w=/workdir --user=1000:1000 --entrypoint=bash -it --rm gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/amitex_fftp
 ```
 
-Once inside the container, move to `/workdir`:
-
-```bash
-cd /workdir
-```
+- `-v=$(pwd):/workdir` mounts the current directory into the `/workdir` directory inside the container.
+- `-w=/workdir` sets `/workdir` as the working directory inside the container.
+- `--user=1000:1000` specifies the user with UID `1000` and GID `1000` inside the container. This prevents commands from being executed as `root`, which is safer and required to use `mpirun`.
+- `--entrypoint=bash` and `-it` allow an interactive Bash shell to be launched.
+- `--rm` automatically removes the container when exiting the shell.
 
 ## One-line command
 
@@ -474,7 +476,7 @@ Then visualize the results:
 gnuplot < plot.gp
 ```
 
-**Some files may be created with permissions that prevent them from being modified or deleted from outside the container. It is possible to change permissions from inside the container using for example: `chmod a+rwx <my_file>`.**
+**Some files may be created with permissions that prevent them from being modified or deleted from outside the container. It is possible to change permissions from inside the container using for example: `chmod -R a+rwx $(pwd)`.**
 
 
 {{< /tab >}}
