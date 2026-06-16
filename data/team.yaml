@@ -527,7 +527,7 @@ team:
    project: DIAMOND
    personnel_type: Research Engineer
    slug: yiran-lu
-   photo: /images/team/yl.png
+   photo: /images/team/yl.jpg
    bio_short: I work with scientific codes and workflows for materials science on HPC infrastructures.
    bio_short_fr: Je travaille avec des codes scientifiques et des flux de travail pour la science des matériaux sur des infrastructures HPC.
    bio_long: |-
