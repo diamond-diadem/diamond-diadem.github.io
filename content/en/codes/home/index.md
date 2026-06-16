@@ -507,9 +507,18 @@ apptainer pull amitex_fftp.sif oras://gricad-registry.univ-grenoble-alpes.fr/dia
 
 <div id="content-option22A" class="hidden">
 
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
 ```bash
 apptainer pull ndm.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/ndm.sif:latest
 ```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/ndm
+```
+{{< /tab >}}
+{{< /tabs >}}
 
 </div>
 
@@ -926,9 +935,18 @@ apptainer pull amitex_fftp.sif oras://gricad-registry.univ-grenoble-alpes.fr/dia
 
 <div id="content-option22B" style="margin-top: -1rem;" class="hidden">
 
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
 ```bash
 apptainer pull ndm.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/ndm.sif:latest
 ```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/ndm
+```
+{{< /tab >}}
+{{< /tabs >}}
 
 </div>
 
