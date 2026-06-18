@@ -11,7 +11,7 @@ weight: 2
     <span class="logo-paraview" aria-hidden="true"></span>
 </a>
 
-### Récupérez le conteneur
+### Récupérez l'image de conteneur
 
 {{< tabs "apptainer_docker" >}}
 {{< tab "Apptainer" >}}

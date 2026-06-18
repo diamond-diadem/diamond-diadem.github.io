@@ -11,7 +11,7 @@ weight: 20
     <img alt="Abinit" class="logo-amitex">
 </a>
 
-### Récupérez le conteneur
+### Récupérez l'image de conteneur
 {{< tabs "apptainer_docker" >}}
 {{< tab "Apptainer" >}}
 ```bash

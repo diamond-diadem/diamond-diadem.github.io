@@ -11,7 +11,7 @@ weight: 1
     <span class="logo-lammps" aria-hidden="true"></span>
 </a>
 
-### Récupérez le conteneur
+### Récupérez l'image de conteneur
 
 **Image générique pour CPU**
 

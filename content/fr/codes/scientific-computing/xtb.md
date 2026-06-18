@@ -10,7 +10,7 @@ weight: 19
   <span class="logo-xtb" aria-hidden="true"></span>
 </a>
 
-### Récupérez le conteneur
+### Récupérez l'image de conteneur
 
 {{< tabs "apptainer_docker" >}}
 {{< tab "Apptainer" >}}
