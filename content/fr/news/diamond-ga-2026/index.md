@@ -9,7 +9,7 @@ backgroundOpacity: 0.18
 # publishDate:
 # lastmod:
 # expiryDate:
-draft: false
+draft: true
 weight: 20
 categories: []
 tags: []
