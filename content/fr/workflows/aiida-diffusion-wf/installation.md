@@ -25,7 +25,7 @@ pip install -e .
 En principe, il est possible d'utiliser n’importe quel exécutable officiel de LAMMPS fourni par le canal officiel. Cependant, pour des raisons de reproductibilité, il est recommanédé de télécharger une version conteneurisée de LAMMPS avec la commande suivante :
 
 ```bash
-apptainer pull lammps-2Apr2025_serial.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/lammps_serial.sif:test
+apptainer pull lammps-2Apr2025_serial.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/lammps.sif:latest
 ```
 
 #### Configuration d’AiiDA

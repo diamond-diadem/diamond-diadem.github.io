@@ -10,11 +10,20 @@ weight: 18
   <span class="logo-dftbplus" aria-hidden="true"></span>
 </a>
 
-### Récupérez l'image Apptainer
+### Récupérez l'image de conteneur
 
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
 ```bash
 apptainer pull dftbplus.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/dftbplus.sif:latest
 ```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/dftbplus
+```
+{{< /tab >}}
+{{< /tabs >}}
 
 <div align="justify">
 

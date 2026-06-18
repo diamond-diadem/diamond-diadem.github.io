@@ -11,11 +11,20 @@ weight: 2
     <span class="logo-quantum-espresso" aria-hidden="true"></span>
 </a>
 
-### Retrieve the Apptainer image
+### Retrieve the container image
 
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
 ```bash
 apptainer pull quantum-espresso.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/quantum-espresso.sif:latest
 ```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/quantum-espresso
+```
+{{< /tab >}}
+{{< /tabs >}}
 
 <div align="justify">
 

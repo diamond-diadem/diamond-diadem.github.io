@@ -11,13 +11,22 @@ weight: 1
     <span class="logo-lammps" aria-hidden="true"></span>
 </a>
 
-### Retrieve the Apptainer image
+### Retrieve the container image
 
 **Generic CPU Image**
 
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
 ```bash
 apptainer pull lammps.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/lammps.sif:latest
 ```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/lammps
+```
+{{< /tab >}}
+{{< /tabs >}}
 
 **Image for Kraken-GPU computer (Gricad)**
 

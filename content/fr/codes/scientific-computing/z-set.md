@@ -11,7 +11,7 @@ weight: 4
     <span class="logo-z-set" aria-hidden="true"></span>
 </a>
 
-### Récupérez l'image Apptainer
+### Récupérez l'image de conteneur
 
 ```bash
 apptainer pull z-set.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/z-set.sif:latest

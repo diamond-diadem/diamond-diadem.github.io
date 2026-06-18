@@ -11,11 +11,20 @@ weight: 16
   <span class="logo-cp2k" aria-hidden="true"></span>
 </a>
 
-### Récupérez l'image Apptainer
+### Récupérez l'image de conteneur
 
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
 ```bash
 apptainer pull cp2k.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/cp2k.sif:latest
 ```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/cp2k
+```
+{{< /tab >}}
+{{< /tabs >}}
 
 <div align="justify">
 

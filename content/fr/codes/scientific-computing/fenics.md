@@ -11,11 +11,20 @@ weight: 15
   <span class="logo-fenics" aria-hidden="true"></span>
 </a>
 
-### Récupérez l'image Apptainer
+### Récupérez l'image de conteneur
 
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
 ```bash
 apptainer pull fenics.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/fenics.sif:latest
 ```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/fenics
+```
+{{< /tab >}}
+{{< /tabs >}}
 
 <div align="justify">
 

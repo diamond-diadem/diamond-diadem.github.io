@@ -11,11 +11,20 @@ weight: 5
     <span class="logo-freefem" aria-hidden="true"></span>
 </a>
 
-### Récupérez l'image Apptainer
+### Récupérez l'image de conteneur
 
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
 ```bash
-apptainer pull freefemplusplus.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/freefemplusplus.sif:latest
+apptainer pull freefem.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/freefem.sif:latest
 ```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/freefem
+```
+{{< /tab >}}
+{{< /tabs >}}
 
 <div align="justify">
 

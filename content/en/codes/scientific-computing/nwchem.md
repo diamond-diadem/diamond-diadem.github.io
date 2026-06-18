@@ -11,7 +11,7 @@ weight: 14
   <span class="logo-nwchem" aria-hidden="true"></span>
 </a>
 
-### Retrieve the Apptainer image
+### Retrieve the container image
 
 ```bash
 apptainer pull nwchem.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/nwchem.sif:latest

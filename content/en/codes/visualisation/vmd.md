@@ -11,11 +11,20 @@ weight: 4
     <span class="logo-vmd" aria-hidden="true"></span>
 </a>
 
-### Retrieve the Apptainer image
+### Retrieve the container image
 
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
 ```bash
 apptainer pull vmd.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/vmd.sif:latest
 ```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/vmd
+```
+{{< /tab >}}
+{{< /tabs >}}
 
 <div align="justify">
 

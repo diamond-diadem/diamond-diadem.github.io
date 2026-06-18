@@ -11,11 +11,20 @@ weight: 3
     <span class="logo-abinit" aria-hidden="true"></span>
 </a>
 
-### Retrieve the Apptainer image
+### Retrieve the container image
 
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
 ```bash
 apptainer pull abinit.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/abinit.sif:latest
 ```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/abinit
+```
+{{< /tab >}}
+{{< /tabs >}}
 
 <div align="justify">
 
