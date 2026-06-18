@@ -13,7 +13,7 @@
                                   "permalink" $element.RelPermalink
                                   "tags" ($element.Params.tags | default slice)
                                   "content" $element.Plain
-                                  "summary" (replaceRE `(Récupérez le conteneur|Retrieve the container) apptainer pull .*sif\:[a-z]+` "" $element.Summary)
+                                  "summary" (replaceRE `(Récupérez l'image de conteneur|Retrieve the container image) apptainer pull .*sif\:[a-z]+` "" $element.Summary)
                                   "date" (time.Format (site.Params.searchDateFormat | default "2006-01-02") $element.Date)
                                 )
   -}}
