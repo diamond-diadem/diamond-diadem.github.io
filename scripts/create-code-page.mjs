@@ -8,7 +8,7 @@ import { stdin as input, stdout as output } from 'node:process';
 const LOCALE_STRINGS = {
     en: {
         label: 'English',
-        retrieveHeading: 'Retrieve the container',
+        retrieveHeading: 'Retrieve the container image',
         tutorialHeading: 'Tutorial',
         documentationHeading: (name) => `${name} documentation`,
         documentationWebsiteLabel: 'Official website',
@@ -21,7 +21,7 @@ const LOCALE_STRINGS = {
     },
     fr: {
         label: 'Français',
-        retrieveHeading: "Récupérez le conteneur",
+        retrieveHeading: "Récupérez l'image de conteneur",
         tutorialHeading: 'Tutoriel',
         documentationHeading: (name) => `Documentation ${name}`,
         documentationWebsiteLabel: 'Site officiel',
@@ -43,6 +43,9 @@ const CATEGORY_CHOICES = {
 
 const DEFAULT_REGISTRY_PREFIX =
     'oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects';
+
+const DEFAULT_DOCKER_REGISTRY_PREFIX =
+    'gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects';
 
 const LAST_RUN_LOG = path.join(process.cwd(), '.last-generated-code-pages.json');
 const UNDO_FLAGS = new Set(['--undo', '--cancel']);
@@ -231,9 +234,18 @@ function buildPage(locale, data) {
 
 ### ${strings.retrieveHeading}
 
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
 \`\`\`bash
 ${data.apptainerCommand}
 \`\`\`
+{{< /tab >}}
+{{< tab "Docker" >}}
+\`\`\`bash
+${data.dockerCommand}
+\`\`\`
+{{< /tab >}}
+{{< /tabs >}}
 
 <div align="justify">
 
@@ -565,17 +577,32 @@ async function updateCodesTable(locale, data, changeLog) {
     });
 }
 
-function buildScientificBlocks(index, command) {
+function buildTabsBlock(data) {
+    return (
+        `{{< tabs "apptainer_docker" >}}\n` +
+        `{{< tab "Apptainer" >}}\n` +
+        `\`\`\`bash\n${data.apptainerCommand}\n\`\`\`\n` +
+        `{{< /tab >}}\n` +
+        `{{< tab "Docker" >}}\n` +
+        `\`\`\`bash\n${data.dockerCommand}\n\`\`\`\n` +
+        `{{< /tab >}}\n` +
+        `{{< /tabs >}}`
+    );
+}
+
+function buildScientificBlocks(index, data) {
+    const tabs = buildTabsBlock(data);
     return {
-        large: `<div id="content-option${index}A" class="hidden">\n\n\`\`\`bash\n${command}\n\`\`\`\n\n</div>\n\n`,
-        small: `<div id="content-option${index}B" style="margin-top: -1rem;" class="hidden">\n\n\`\`\`bash\n${command}\n\`\`\`\n\n</div>\n\n`
+        large: `<div id="content-option${index}A" class="hidden">\n\n${tabs}\n\n</div>\n\n`,
+        small: `<div id="content-option${index}B" style="margin-top: -1rem;" class="hidden">\n\n${tabs}\n\n</div>\n\n`
     };
 }
 
-function buildVisualBlocks(letter, command) {
+function buildVisualBlocks(letter, data) {
+    const tabs = buildTabsBlock(data);
     return {
-        large: `\n<div id="content-option${letter}A" class="hidden">\n\n\`\`\`bash\n${command}\n\`\`\`\n\n</div>`,
-        small: `<div id="content-option${letter}B" class="hidden">\n\n\`\`\`bash\n${command}\n\`\`\`\n\n</div>\n\n`
+        large: `\n<div id="content-option${letter}A" class="hidden">\n\n${tabs}\n\n</div>`,
+        small: `<div id="content-option${letter}B" class="hidden">\n\n${tabs}\n\n</div>\n\n`
     };
 }
 
@@ -597,7 +624,7 @@ function updateScientificPart3(content, locale, data) {
         large: `    <option value="option${newIndex}A">${data.linkTitle}</option>\n            `,
         small: `    <option value="option${newIndex}B">${data.linkTitle}</option>\n        `
     };
-    const blocks = buildScientificBlocks(newIndex, data.apptainerCommand);
+    const blocks = buildScientificBlocks(newIndex, data);
 
     let updated = insertOptionInOccurrence(content, label, optionSnippets.large, 1);
     updated = insertOptionInOccurrence(updated, label, optionSnippets.small, 2);
@@ -615,7 +642,7 @@ function updateVisualPart3(content, locale, data) {
     const nextCode = Math.max(highestLetter, 96) + 1;
     const letter = String.fromCharCode(nextCode);
     const optionSnippets = buildVisualOptionSnippets(letter, data.linkTitle);
-    const blocks = buildVisualBlocks(letter, data.apptainerCommand);
+    const blocks = buildVisualBlocks(letter, data);
 
     let updated = insertOptionInOccurrence(content, label, optionSnippets.large, 1);
     updated = insertOptionInOccurrence(updated, label, optionSnippets.small, 2);
@@ -753,6 +780,8 @@ async function main() {
         }
         const apptainerRegistryReference = `${DEFAULT_REGISTRY_PREFIX}/${registryFilename}:latest`;
         const apptainerCommand = `apptainer pull ${apptainerFilename} ${apptainerRegistryReference}`;
+        const dockerRegistryImage = `${DEFAULT_DOCKER_REGISTRY_PREFIX}/${registryFilename.replace(/\.sif$/, '')}`;
+        const dockerCommand = `docker pull ${dockerRegistryImage}`;
 
         const descriptions = {};
         for (const locale of locales) {
@@ -769,6 +798,7 @@ async function main() {
             officialWebsite,
             documentationUrl,
             apptainerCommand,
+            dockerCommand,
             descriptions
         };
 
