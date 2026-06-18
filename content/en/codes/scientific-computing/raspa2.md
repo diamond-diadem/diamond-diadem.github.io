@@ -11,7 +11,7 @@ weight: 11
   <span class="logo-raspa2" aria-hidden="true"></span>
 </a>
 
-### Retrieve the container
+### Retrieve the container image
 
 {{< tabs "apptainer_docker" >}}
 {{< tab "Apptainer" >}}

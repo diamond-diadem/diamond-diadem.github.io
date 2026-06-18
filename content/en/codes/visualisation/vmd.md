@@ -11,7 +11,7 @@ weight: 4
     <span class="logo-vmd" aria-hidden="true"></span>
 </a>
 
-### Retrieve the container
+### Retrieve the container image
 
 {{< tabs "apptainer_docker" >}}
 {{< tab "Apptainer" >}}

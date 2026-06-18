@@ -19,7 +19,7 @@ weight: 3
 
 <hr>
 
-### Retrieve the container
+### Retrieve the container image
 
 {{< tabs "apptainer_docker" >}}
 {{< tab "Apptainer" >}}

@@ -11,7 +11,7 @@ weight: 1
     <span class="logo-ovito" aria-hidden="true"></span>
 </a>
 
-### Retrieve the container
+### Retrieve the container image
 
 ```bash
 apptainer pull ovito.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/ovito.sif:latest

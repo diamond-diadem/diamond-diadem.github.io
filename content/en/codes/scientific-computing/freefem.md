@@ -11,7 +11,7 @@ weight: 5
     <span class="logo-freefem" aria-hidden="true"></span>
 </a>
 
-### Retrieve the container
+### Retrieve the container image
 
 {{< tabs "apptainer_docker" >}}
 {{< tab "Apptainer" >}}

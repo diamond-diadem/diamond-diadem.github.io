@@ -11,7 +11,7 @@ weight: 10
     <span class="logo-zeoplusplus" aria-hidden="true"></span>
 </a>
 
-### Retrieve the container
+### Retrieve the container image
 
 {{< tabs "apptainer_docker" >}}
 {{< tab "Apptainer" >}}

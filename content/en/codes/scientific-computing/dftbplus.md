@@ -10,7 +10,7 @@ weight: 18
   <span class="logo-dftbplus" aria-hidden="true"></span>
 </a>
 
-### Retrieve the container
+### Retrieve the container image
 
 {{< tabs "apptainer_docker" >}}
 {{< tab "Apptainer" >}}

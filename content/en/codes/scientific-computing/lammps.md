@@ -11,7 +11,7 @@ weight: 1
     <span class="logo-lammps" aria-hidden="true"></span>
 </a>
 
-### Retrieve the container
+### Retrieve the container image
 
 **Generic CPU Image**
 

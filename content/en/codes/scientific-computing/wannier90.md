@@ -11,7 +11,7 @@ weight: 13
   <span class="logo-wannier90" aria-hidden="true"></span>
 </a>
 
-### Retrieve the container
+### Retrieve the container image
 
 {{< tabs "apptainer_docker" >}}
 {{< tab "Apptainer" >}}
