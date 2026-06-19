@@ -42,7 +42,8 @@ En tant que projet open-source, Abinit bénéficie d'une communauté active de d
 
 <h3 class="mb-1">Tutoriel</h3>
 
-{{< link-card title="Contenu à venir" description="<i>Apprenez à utiliser cette image de conteneur</i>" href="#bottom" icon="tabler-icons/outline/package" disabled="true" class="mb-0" >}}
+{{< link-card title="Apprenez à utiliser cette image de conteneur" href="/documentation/by-container/abinit" icon="tabler-icons/outline/package" class="mb-0" >}}
+
 
 <h3 class="mb-1 mt-3">Documentation Abinit</h3>
 
@@ -53,4 +54,4 @@ En tant que projet open-source, Abinit bénéficie d'une communauté active de d
 
 <h3 class="mb-1 mt-3">Exemples</h3>
 
-{{< link-card title="Contenu à venir" description="<i>Téléchargez des fichiers d'entrée</i>" href="#bottom" icon="tabler-icons/outline/file-export" disabled="true" class="mb-0" >}}
+{{< link-card title="Téléchargez des fichiers d'entrée" href="/downloads/abinit-tutorial-inputs.tar.gz" icon="tabler-icons/outline/file-export" >}}
