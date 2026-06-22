@@ -1,5 +1,5 @@
 ---
-title: Comment interagir avec un paquet Guix ?
+title: Accéder aux paquets Guix de DIAMOND
 weight: 5
 ---
 
@@ -13,57 +13,101 @@ Ce tutoriel explicite les principales commandes permettant d'interagir avec les 
 
 {{< /callout >}}
 
-## Comment accéder aux paquets diamond ?
+## Accéder aux paquets Diamond
 
-Quand vous utilisez Guix, l'ensemble des paquets disponibles proviennent du canal guix par défaut : [GNU Guix](https://hpc.guix.info/browse). Cependant, il est possible d'ajouter des _canaux_ pour étendre la liste des paquets disponible. Dans le cadre du projet DIAMOND, certains codes ont été packagés via Guix et son disponible dans le canal [guix-channel](https://gricad-gitlab.univ-grenoble-alpes.fr/diamond/guix/guix-channel). Pour ajouter ce canal précis et donc pouvoir installer les paquets à l'aide de la commande `guix install`, il faut créer un fichier `~/.config/guix/channels.scm` sur votre machine ou sur l'infrastructure HPC que vous utiliserez. Ce fichier doit contenir les lignes suivantes :
+Il existe deux façons d’accéder aux paquets Guix de Diamond.
+
+### Méthode 1 : utiliser la configuration stable du canal
+
+La méthode la plus fiable consiste à utiliser le fichier `channels-stable.scm` fourni dans le dépôt [apptainer-singularity-projects](https://gricad-gitlab.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects).
+
+Avec ce fichier, les commandes Guix peuvent être exécutées via :
 
 ```bash
-;; Add gricad packages to those Guix provides.
+guix time-machine -C channels-stable.scm -- <commande>
+```
+
+Cela garantit que les bonnes versions de toutes les dépendances sont utilisées.
+Par exemple, après avoir cloné le dépôt, vous pouvez reconstruire l’un des conteneurs Diamond avec :
+
+```bash
+guix time-machine -C channels-stable.scm -- pack -f squashfs -S /bin=bin -S /share=share -m src/manifests/<image>.manifest
+```
+
+### Méthode 2 : ajouter le canal Guix de Diamond à la configuration de Guix.
+
+Vous pouvez également ajouter le canal Guix de Diamond à votre configuration locale Guix. Les paquets Diamond seront alors disponibles aux côtés des paquets GNU Guix standards, sans avoir besoin d’utiliser `guix time-machine`.
+
+Pour ceci, créez le fichier `~/.config/guix/channels.scm` et ajoutez-y le contenu suivant :
+
+```scheme
+;; Ajouter les paquets DIAMOND à ceux fournis par GNU Guix.
 (cons (channel
         (name 'guix-channel)
-        (branch "public-packages")
         (url "https://gricad-gitlab.univ-grenoble-alpes.fr/diamond/guix/guix-channel.git"))
       %default-channels)
 ```
 
-Une fois ceci fait, la commande `guix pull` va mettre à jour la collection de paquets à partir du canal par défaut (GNU Guix) et du canal Diamond (`guix-channel`).
+Puis mettez à jour votre liste de paquets :
+
+```bash
+guix pull
+```
+
+Cette commande met à jour à la fois les paquets GNU Guix standards et les paquets Diamond.
 
 **Attention**
 
-> Une fois `guix pull` terminé, il est important d'exécuter les commandes suivantes, pour être sûr d'utiliser la commande `guix` à jour :
->
-> ```
+> Une fois `guix pull` terminé, il est important d’exécuter les commandes suivantes afin de vous assurer que vous utilisez bien la version la plus récente de la commande `guix` :
+> ```bash
 > GUIX_PROFILE="$HOME/.config/guix/current"
 > . "$GUIX_PROFILE/etc/profile"
 > ```
 
-Enfin, pour vérifier que vous avez bien accès aux paquets Diamond, vous pouvez essayer de rechercher le paquet `quantum-espresso` :
+Vous pouvez vérifier que les paquets Diamond sont disponibles avec :
 
 ```bash
 guix search quantum-espresso
 ```
 
-## Comment utiliser les paquets guix ?
-
-### La commande `guix shell`
-
-Cette commande fait apparaître un environnement logiciel temporaire contenant les dépendances permettant d'utiliser le code comme on le souhaite. En général, il est recommandé d'utiliser le flag `--pure` ainsi qu'un fichier `manifest.scm`. Pour le premier, il joue un rôle similaire au flag `--cleanenv` d'[Apptainer](/documentation/use/apptainer-isolation-flags/) et permet de nettoyer les variables d'environnement du système hôte avant l'apparition de l'environnement logiciel temporaire. Le fichier `manifest.scm` liste l'ensemble des paquets nécessaires à la bonne exécution du code. Plusieurs exemples de manifests sont disponible sur un dépôt Gitlab dédié du projet Diamond : [guix-packages](https://gricad-gitlab.univ-grenoble-alpes.fr/diamond/guix/guix-packages/-/tree/master/manifests?ref_type=heads).
-
-Une utilisation classique de la commande `guix shell` peut donc se résumer à la ligne suivante :
+Ensuite, par exemple, `quantum-espresso` et `OpenMPI` peuvent être installés avec :
 
 ```bash
-guix shell --pure -m lammps_mpi_manifest.scm
+guix install quantum-espresso openmpi@4
 ```
 
-### La commande `guix time-machine`
 
-Certains paquets requièrent une version spécifique d'une ou plusieurs dépendances. Cependant, si vous avez exécuté la commande `guix pull`, alors vous disposez des dernières versions de l'ensemble des paquets. Vous pouvez donc vous retrouvez dans un cas où le code que vous voulez utiliser ne se construit pas. Pas de panique, Guix a une solution tout faîte pour ces problèmes ! En effet, la commande `guix time-machine` vous permet de revenir à un commit précédent, et donc d'avoir accès à des versions antérieures des dépendances. En pratique, il est recommandé d'utiliser un fichier `channels.scm` qui contient les informations relatives au commit voulu. Encore une fois, plusieurs exemples de fichiers channels sont disponible sur le dépôt Gitlab dédié : [guix-packages](https://gricad-gitlab.univ-grenoble-alpes.fr/diamond/guix/guix-packages/-/tree/master/manifests/with_time_machine?ref_type=heads).
+## Utilisation des paquets Guix
 
-Une utilisation classique de la commande `guix time-machine` peut donc se résumer à la ligne suivante :
+### Utilisation de `guix shell`
+
+La commande `guix shell` crée un environnement temporaire contenant toute la stack logiciel nécessaire à l’exécution d’un programme.
+
+Il est recommandé d’utiliser :
+
+* l’option `--pure`, qui supprime les variables d’environnement héritées du système hôte (similaire à l’option `--cleanenv` d’Apptainer) ;
+* un fichier `manifest.scm`, qui liste tous les paquets nécessaires.
+
+Des exemples de fichiers manifest sont disponibles dans le dépôt [apptainer-singularity-projects](https://gricad-gitlab.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/-/tree/main/src/manifests).
+
+Une utilisation typique est :
 
 ```bash
-guix time-machine --channels=quantum-espresso_channels.scm \
-    -- shell --pure -m quantum-espresso_manifest.scm
+guix shell --pure -m quantum-espresso.manifest
 ```
+
+Cette commande démarre un environnement propre contenant tous les paquets listés dans le manifeste.
+
+### Utilisation de `guix time-machine`
+
+Certaines applications nécessitent des versions spécifiques de leurs dépendances. Si vous avez mis à jour vos paquets avec `guix pull` vous pouvez disposer de versions plus récentes qui ne sont pas compatibles avec le code que vous souhaitez utiliser. La commande `guix time-machine` permet d’utiliser une ancienne collection de paquets Guix en restaurant l’état précédent des canaux. Diamond fournit le fichier `channels-stable.scm` dans le dépôt [apptainer-singularity-projects](https://gricad-gitlab.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects). Ce fichier fixe des versions compatibles de toutes les dépendances nécessaires. Il permet ainsi d’utiliser les paquets Diamond de manière fiable.
+
+Par exemple, pour créer un environnement contenant `quantum-espresso` et OpenMPI :
+
+```bash
+guix time-machine -C channels-stable.scm -- shell --pure quantum-espresso openmpi@4 bash bash-completion
+```
+
+Cette commande crée un environnement reproductible avec les versions correctes des paquets et de leurs dépendances.
 
 </div>
