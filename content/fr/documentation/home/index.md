@@ -51,5 +51,9 @@ Voici les liens pour accéder rapidement à la section de documentation des outi
             <td class="table-cell-left"><a href="/documentation/by-container/aiida/"><i class="icon-aiida"></i>AiiDA</a></td>
             <td></td>
         </tr>
+        <tr>
+            <td class="table-cell-left"><a href="/documentation/by-container/abinit/"><i class="icon-abinit"></i>Abinit</a></td>
+            <td></td>
+        </tr>
     </tbody>
 </table>
