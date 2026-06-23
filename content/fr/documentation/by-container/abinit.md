@@ -18,12 +18,12 @@ Pour plus d'informations sur les conteneurs Apptainer, veuillez consulter la [pa
 
 ## Fichiers d'entrée
 
-Pour illustrer les différentes commandes, un ensemble de fichiers d'entrée pour abinit est disponible sous forme d'archive via [ce lien](/downloads/abinit-tutorial-inputs.tar.gz).
+Pour illustrer les différentes commandes, un ensemble de fichiers d'entrée pour Abinit est disponible sous forme d'archive via [ce lien](/downloads/abinit-tutorial-inputs.tar.gz).
 
-Ces fichiers correspondent à un tutoriel issu de la [documentation officielle](https://docs.abinit.org/tutorial/base1/) d'abinit. L'archive contient les fichiers suivants :
+Ces fichiers correspondent à un tutoriel issu de la [documentation officielle](https://docs.abinit.org/tutorial/base1/) d'Abinit. L'archive contient les fichiers suivants :
 
 - `H8.psp8` : pseudo-potentiels pour l'atome d'hydrogène,
-- `input.abi` : fichier d'entrée abinit.
+- `input.abi` : fichier d'entrée Abinit.
 
 Dans ce tutoriel, nous supposerons que les fichiers d'entrée contenus dans cette archive se trouvent dans le répertoire courant. Pour les extraire :
 
@@ -33,15 +33,15 @@ tar -xzf abinit-tutorial-inputs.tar.gz
 
 ## Guide de démarrage rapide
 
-Pour les plus impatients, voici comment lancer un calcul abinit parallèle sur `N` cœurs avec Apptainer, dans le cas où le répertoire courant contient l'image `abinit.sif` ainsi que tous les fichiers d'entrée nécessaires :
+Pour les plus impatients, voici comment lancer un calcul Abinit parallèle sur `N` cœurs avec Apptainer, dans le cas où le répertoire courant contient l'image `abinit.sif` ainsi que tous les fichiers d'entrée nécessaires :
 
 ```bash
 apptainer exec abinit.sif mpirun -np <N> abinit input.abi
 ```
 
-## Utilisation détaillée du conteneur abinit
+## Utilisation détaillée du conteneur Abinit
 
-Cette section présente différentes façons d'utiliser l'image abinit. Pour plus de détails sur les commandes Apptainer, veuillez consulter [ce tutoriel](/documentation/use/apptainer-image/#apptainer-crash-course).
+Cette section présente différentes façons d'utiliser l'image Abinit. Pour plus de détails sur les commandes Apptainer, veuillez consulter [ce tutoriel](/documentation/use/apptainer-image/#apptainer-crash-course).
 
 ### Introduction
 
@@ -53,9 +53,9 @@ L'exécutable principal de l'image se nomme `abinit`. La licence du code se trou
 apptainer exec abinit.sif cat /share/doc/abinit-10.4.7/COPYING
 ```
 
-### Utilisation du conteneur abinit pour les calculs parallèles
+### Utilisation du conteneur Abinit pour les calculs parallèles
 
-Le fichier d'entrée `input.abi` permet d'obtenir la pseudo-énergie totale, la longueur de liaison, la densité de charge et l'énergie d'atomisation de la molécule $H_2$ en suivant le [tutoriel de la documentation officielle](https://docs.abinit.org/tutorial/base1/). Une fois les fichiers d'entrée extraits, abinit peut être exécuté en parallèle sur `N` cœurs comme suit :
+Le fichier d'entrée `input.abi` permet d'obtenir la pseudo-énergie totale, la longueur de liaison, la densité de charge et l'énergie d'atomisation de la molécule $H_2$ en suivant le [tutoriel de la documentation officielle](https://docs.abinit.org/tutorial/base1/). Une fois les fichiers d'entrée extraits, Abinit peut être exécuté en parallèle sur `N` cœurs comme suit :
 
 ```bash
 apptainer exec abinit.sif mpirun -np <N> abinit input.abi

@@ -1,5 +1,5 @@
 ---
-title: How to use abinit Apptainer image?
+title: How to use Abinit Apptainer image?
 linkTitle: Abinit tutorial
 weight: 1
 ---
@@ -19,12 +19,12 @@ For more information on Apptainer containers, please look at [this page](/en/abo
 
 ## Input files
 
-To illustrate the various commands, a set of abinit input files is available in the form of an archive via [this link](/downloads/abinit-tutorial-inputs.tar.gz). 
+To illustrate the various commands, a set of Abinit input files is available in the form of an archive via [this link](/downloads/abinit-tutorial-inputs.tar.gz). 
 
-Those files correspond to a tutorial example from the abinit [official documentation](https://docs.abinit.org/tutorial/base1/). The archive contains the following files:
+Those files correspond to a tutorial example from the Abinit [official documentation](https://docs.abinit.org/tutorial/base1/). The archive contains the following files:
 
 - `H8.psp8`: pseudo-potentials for the hydrogen atom,
-- `input.abi`: abinit input file.
+- `input.abi`: Abinit input file.
 
 In this tutorial, we will assume that the input files contained in this archive are in the current directory. To extract them:
 
@@ -34,15 +34,15 @@ tar -xzf abinit-tutorial-inputs.tar.gz
 
 ## Quickstart
 
-For impatient folks, here is how to launch a parallel abinit computation on `N` cores using the container image in the case where the current directory contains the `abinit.sif` container image and all necessary abinit input files :
+For impatient folks, here is how to launch a parallel Abinit computation on `N` cores using the container image in the case where the current directory contains the `abinit.sif` container image and all necessary Abinit input files :
 
 ```bash
 apptainer exec abinit.sif mpirun -np <N> abinit input.abi
 ```
 
-## Detailed usage for the abinit container
+## Detailed usage for the Abinit container
 
-This section presents different ways to use the abinit image. For more details about Apptainer commands, please look at [this tutorial](/en/documentation/use/apptainer-image/#apptainer-crash-course).
+This section presents different ways to use the Abinit image. For more details about Apptainer commands, please look at [this tutorial](/en/documentation/use/apptainer-image/#apptainer-crash-course).
 
 ### Introduction
 
@@ -54,9 +54,9 @@ The main executable in the image is the `abinit` executable. The code license ca
 apptainer exec abinit.sif cat /share/doc/abinit-10.4.7/COPYING
 ```
 
-### Using the abinit container for parallel runs
+### Using the Abinit container for parallel runs
 
-The input file `input.abi` allows to get the pseudo total energy, the bond length, the charge density and the atomisation energy of the $H_2$ molecule following the [official documentation tutorial](https://docs.abinit.org/tutorial/base1/). Once the input files have been extracted, abinit can be run in parallel on `N` cores as follows:
+The input file `input.abi` allows to get the pseudo total energy, the bond length, the charge density and the atomisation energy of the $H_2$ molecule following the [official documentation tutorial](https://docs.abinit.org/tutorial/base1/). Once the input files have been extracted, Abinit can be run in parallel on `N` cores as follows:
 
 ```bash
 apptainer exec abinit.sif mpirun -np <N> abinit input.abi
