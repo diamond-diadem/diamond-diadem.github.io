@@ -61,6 +61,6 @@ Le fichier d'entrée `input.abi` permet d'obtenir la pseudo-énergie totale, la 
 apptainer exec abinit.sif mpirun -np <N> abinit input.abi
 ```
 
-La commande ci-dessus utilise le mode parallèle « embarqué » d'Apptainer. Plus d'informations sur l'utilisation des conteneurs Apptainer en parallèle, y compris sur clusters, sur [cette page](/documentation/use/apptainer-parallel).
+La commande ci-dessus utilise le mode parallèle « embarqué » d'Apptainer. Plus d'informations sur l'utilisation des conteneurs Apptainer en parallèle, y compris sur les clusters, sur [cette page](/documentation/use/apptainer-parallel).
 
 </div>

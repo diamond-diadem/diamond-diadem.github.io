@@ -19,7 +19,7 @@ For more information on Apptainer containers, please look at [this page](/en/abo
 
 ## Input files
 
-To illustrate the various commands, a set of Abinit input files is available in the form of an archive via [this link](/downloads/abinit-tutorial-inputs.tar.gz). 
+To illustrate the various commands, a set of Abinit input files is available in the form of an archive via [this link](/downloads/abinit-tutorial-inputs.tar.gz).
 
 Those files correspond to a tutorial example from the Abinit [official documentation](https://docs.abinit.org/tutorial/base1/). The archive contains the following files:
 
@@ -34,7 +34,7 @@ tar -xzf abinit-tutorial-inputs.tar.gz
 
 ## Quickstart
 
-For impatient folks, here is how to launch a parallel Abinit computation on `N` cores using the container image in the case where the current directory contains the `abinit.sif` container image and all necessary Abinit input files :
+For impatient folks, here is how to launch a parallel Abinit computation on `N` cores using the container image in the case where the current directory contains the `abinit.sif` container image and all necessary Abinit input files:
 
 ```bash
 apptainer exec abinit.sif mpirun -np <N> abinit input.abi
@@ -46,7 +46,7 @@ This section presents different ways to use the Abinit image. For more details a
 
 ### Introduction
 
-Abinit is an MPI-parallelized open-source software suite for computing material properties via density functional theory (DFT). 
+Abinit is an MPI-parallelized open-source software suite for computing material properties via density functional theory (DFT).
 
 The main executable in the image is the `abinit` executable. The code license can be found under the following path: `/share/doc/abinit-10.4.7/COPYING`, and can be accessed from outside the container as follows:
 
@@ -56,12 +56,12 @@ apptainer exec abinit.sif cat /share/doc/abinit-10.4.7/COPYING
 
 ### Using the Abinit container for parallel runs
 
-The input file `input.abi` allows to get the pseudo total energy, the bond length, the charge density and the atomisation energy of the $H_2$ molecule following the [official documentation tutorial](https://docs.abinit.org/tutorial/base1/). Once the input files have been extracted, Abinit can be run in parallel on `N` cores as follows:
+The input file `input.abi` allows us to get the pseudo total energy, the bond length, the charge density and the atomisation energy of the $H_2$ molecule following the [official documentation tutorial](https://docs.abinit.org/tutorial/base1/). Once the input files have been extracted, Abinit can be run in parallel on `N` cores as follows:
 
 ```bash
 apptainer exec abinit.sif mpirun -np <N> abinit input.abi
 ```
 
-The command above uses Apptainer "embedded" parallel mode. More information on using Apptainer containers in parallel, including usage on clusters and difference between embedded and hybrid parallel modes, on [this page](/en/documentation/use/apptainer-parallel).
+The command above uses Apptainer "embedded" parallel mode. More information on using Apptainer containers in parallel, including usage on clusters and difference between embedded and hybrid parallel modes, can be found on [this page](/en/documentation/use/apptainer-parallel).
 
 </div>
