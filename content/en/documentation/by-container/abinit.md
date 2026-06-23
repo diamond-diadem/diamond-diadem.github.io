@@ -1,5 +1,5 @@
 ---
-title: How to use abinit Apptainer image ?
+title: How to use abinit Apptainer image?
 linkTitle: Abinit tutorial
 weight: 1
 ---
@@ -23,7 +23,7 @@ To illustrate the various commands, a set of abinit input files is available in 
 
 Those files correspond to a tutorial example from the abinit [official documentation](https://docs.abinit.org/tutorial/base1/). The archive contains the following files:
 
-- `H8.psp8`: peudo-potentials for the hydrogen atom,
+- `H8.psp8`: pseudo-potentials for the hydrogen atom,
 - `input.abi`: abinit input file.
 
 In this tutorial, we will assume that the input files contained in this archive are in the current directory. To extract them:
@@ -63,3 +63,5 @@ apptainer exec abinit.sif mpirun -np <N> abinit input.abi
 ```
 
 The command above uses Apptainer "embedded" parallel mode. More information on using Apptainer containers in parallel, including usage on clusters and difference between embedded and hybrid parallel modes, on [this page](/en/documentation/use/apptainer-parallel).
+
+</div>

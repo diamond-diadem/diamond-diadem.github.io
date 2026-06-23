@@ -6,7 +6,7 @@ weight: 1
 
 <div align="justify">
 
-{{< callout context="note" title="Prerequisites" icon="tabler-icons/outline/info-circle" >}}
+{{< callout context="note" title="Prérequis" icon="tabler-icons/outline/info-circle" >}}
 
 - Avoir installé **Apptainer** [(guide d'installation)](/documentation/install/install-apptainer/)
 - Avoir téléchargé l'image **abinit.sif** [disponible ici](/codes/scientific-computing/abinit/)
@@ -53,7 +53,7 @@ L'exécutable principal de l'image se nomme `abinit`. La licence du code se trou
 apptainer exec abinit.sif cat /share/doc/abinit-10.4.7/COPYING
 ```
 
-### Using the abinit container for parallel runs
+### Utilisation du conteneur abinit pour les calculs parallèles
 
 Le fichier d'entrée `input.abi` permet d'obtenir la pseudo-énergie totale, la longueur de liaison, la densité de charge et l'énergie d'atomisation de la molécule $H_2$ en suivant le [tutoriel de la documentation officielle](https://docs.abinit.org/tutorial/base1/). Une fois les fichiers d'entrée extraits, abinit peut être exécuté en parallèle sur `N` cœurs comme suit :
 
@@ -62,3 +62,5 @@ apptainer exec abinit.sif mpirun -np <N> abinit input.abi
 ```
 
 La commande ci-dessus utilise le mode parallèle « embarqué » d'Apptainer. Plus d'informations sur l'utilisation des conteneurs Apptainer en parallèle, y compris sur clusters, sur [cette page](/documentation/use/apptainer-parallel).
+
+</div>
