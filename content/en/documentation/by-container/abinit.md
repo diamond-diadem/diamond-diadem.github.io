@@ -23,7 +23,7 @@ To illustrate the various commands, a set of Abinit input files is available in 
 
 Those files correspond to a tutorial example from the Abinit [official documentation](https://docs.abinit.org/tutorial/base1/). The archive contains the following files:
 
-- `H8.psp8`: pseudo-potentials for the hydrogen atom,
+- `H8.psp8`: pseudopotentials for the hydrogen atom,
 - `input.abi`: Abinit input file.
 
 In this tutorial, we will assume that the input files contained in this archive are in the current directory. To extract them:
@@ -62,6 +62,6 @@ The input file `input.abi` allows us to get the pseudo total energy, the bond le
 apptainer exec abinit.sif mpirun -np <N> abinit input.abi
 ```
 
-The command above uses Apptainer "embedded" parallel mode. More information on using Apptainer containers in parallel, including usage on clusters and difference between embedded and hybrid parallel modes, can be found on [this page](/en/documentation/use/apptainer-parallel).
+The command above uses Apptainer "embedded" parallel mode. More information on using Apptainer containers in parallel, including usage on clusters and the difference between embedded and hybrid parallel modes, can be found on [this page](/en/documentation/use/apptainer-parallel).
 
 </div>
