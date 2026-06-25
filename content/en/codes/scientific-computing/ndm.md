@@ -28,7 +28,15 @@ docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-s
 
 <div align="justify">
 
-**NDM** is a **distributed** Fortran code for empirical potential molecular dynamics computations.
+**NDM** (originally *Notre Dynamique Moléculaire*) is a Molecular Dynamics (MD) code developed at CEA Saclay/SRMP hosted on [GitHub](https://github.com/jpcroc/NDM/).
+
+The code is designed for 3D periodic boundary conditions (though it can work with lower periodic boundary conditions). Native potentials include EAM and pair potentials with or without Coulombic charge interactions. The latter can be dealt with by Ewald or Wolf summations. Tersoff, Stillinger-Weber and Ju Li ZrC potentials are also included but are no longer maintained. A connection is built in to use **LAMMPS** as a force and energy engine, giving access to all the potentials available in this code. A similar connection is under construction for the ML code **Milady**.
+
+**NDM** includes the standard molecular dynamics algorithms : Verlet, Velocity Verlet, Parrinello-Rahman, various constant temperature scheme (Nose, Nose-Hoover, Berendsen, Langevin). It also allows to perform "Adaptatively Restrained Particle Simulations" with pair or EAM potentials. NEB and climbing NEB are included as well as force matrix for phonons (at the gamma point), Path Monte-Carlo for chemical potentials and point defect accumulation calculations.
+
+The code is parallelized in MPI. The code parallelization is a domain decomposition. Higher levels of parallelization are coded, e.g. over images for NEB calculations.
+
+**NDM** is coded in Fortran, mostly at the 2003 standard level (classes, etc..). **NDM** is not conceived to replace well-known more stable codes such as **LAMMPS**. However, it offers a framework to test and develop new algorithms within a modern Fortran code.
 
 </div>
 
