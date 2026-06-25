@@ -7,3 +7,6 @@
 {{ if .Param "math" }}
     {{ partialCached "math.html" . }}
 {{ end }}
+{{ if eq .Type "contact" }}
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+{{ end }}

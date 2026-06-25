@@ -16,6 +16,7 @@
 @import "diamond/responsive-use-gitlab";
 @import "diamond/search-results";
 @import "diamond/team-list";
+@import "diamond/contact-form";
 
 @include color-mode(dark) {
     .dropdown-menu {

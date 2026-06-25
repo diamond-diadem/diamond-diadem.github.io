@@ -39,6 +39,10 @@
   {{ partial "footer/esbuild" (dict "src" "js/diamond/team-list.js" "transpile" false) -}}
 {{ end }}
 
+{{ if eq .Type "contact" }}
+  {{ partial "footer/esbuild" (dict "src" "js/diamond/contact-form.js" "transpile" false) -}}
+{{ end }}
+
 {{ if site.Params.diamond.enableScrollFade }}
   {{ partial "footer/esbuild" (dict "src" "js/diamond/scroll-fade.js" "load" "async" "transpile" false) -}}
 {{ end }}
