@@ -1,0 +1,10 @@
+{{ define "main" }}
+<main style="display:flex;flex-direction:column;flex:1;padding:0;margin:0;">
+  <iframe
+    src="{{ "onto-viewer/" | relURL }}"
+    style="flex:1;width:100%;border:none;display:block;min-height:calc(100vh - 70px);"
+    title="{{ .Title }}"
+    allow="fullscreen"
+  ></iframe>
+</main>
+{{ end }}

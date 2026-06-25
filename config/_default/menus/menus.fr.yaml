@@ -23,6 +23,10 @@ main:
     url: about/guix/
     weight: 15
     parent: about-fr
+  - name: Ontologie
+    url: about/onto-viewer/
+    weight: 16
+    parent: about-fr
   - name: Codes
     url: codes/home/
     weight: 20
