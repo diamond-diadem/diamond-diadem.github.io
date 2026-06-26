@@ -16,7 +16,7 @@ if (form) {
     errorDiv.classList.add('d-none');
 
     try {
-      const response = await fetch('https://diamond-helpdesk.pages.dev/', {
+      const response = await fetch('https://diamond-contact-backend.diamond-helpdesk.workers.dev/', {
         method: 'POST',
         body: new FormData(form),
       });
