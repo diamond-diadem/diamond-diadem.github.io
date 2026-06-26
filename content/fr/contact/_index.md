@@ -29,7 +29,7 @@ Ce formulaire utilise Cloudflare Turnstile pour la protection contre le spam, qu
 </label>
 </div>
 </div>
-<div class="cf-turnstile d-flex justify-content-center mb-3" data-sitekey="0x4AAAAAAC2n6ABSzicq0QE7"></div>
+<div class="cf-turnstile d-flex justify-content-center mb-3" data-sitekey="0x4AAAAAADrVIyJ51RUnlL-u"></div>
 <button type="submit" id="contact-submit-btn" class="btn btn-primary w-100" data-sending="Envoi en cours…">
 Envoyer la demande
 </button>
