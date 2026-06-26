@@ -1,131 +1,167 @@
 ---
-title: Utiliser Apptainer en parallèle
-linkTitle: Utiliser Apptainer en parallèle
+title: Utilisation des conteneurs sur les clusters HPC
+linkTitle: Utilisation des conteneurs sur les clusters HPC
 weight: 2
 ---
 
 <div align="justify">
 
-Si l'image Apptainer que vous voulez utiliser supporte le calcul parallèle, alors OpenMPI fait partie des librairies inclues au sein du conteneur. Dans ce cas, il est intéressant d'utiliser cette solution de parallélisation pour accélèrer votre calcul. Si on se réfère à la [documentation](https://apptainer.org/docs/user/latest/mpi.html) officielle d'Apptainer, il existe deux modes d'utilisation d'OpenMPI avec Apptainer : le mode hybride et le mode de liaison. Ces modes sont plébiscités lorsque lorsque le conteneur est utilisé sur des infrastructures de type HPC. Cependant, un troisième mode peut être employé si le conteneur est lancé sur une machine personnelle : le mode embarqué. Dans cette documentation, nous détaillerons :
+Une partie importante des codes fournis par la plateforme DIAMOND est conçue pour fonctionner sur les plateformes de calcul haute performance (**HPC — High Performance Computing**). Il existe plusieurs façons d’utiliser les clusters HPC, et nous distinguerons deux cas :
 
-- le mode [embarqué]({{< ref "#embedded_mode" >}}),
-- le mode [hybride]({{< ref "#hybrid_mode" >}}).
+- l’exécution de codes mono-processus ou parallélisés en mémoire partagée ;
+- l’exécution de codes parallélisés en mémoire distribuée (**MPI**).
 
-**Remarque**
+La solution choisie pour la plateforme DIAMOND (**Apptainer** pour la conteneurisation et **Guix** pour la gestion des paquets) permet aux utilisateurs d’exécuter tout type de code, avec toutefois certaines précautions pour les codes parallélisés avec MPI.
 
-> Les commandes Apptainer ci-dessous ont été simplifiées au maximum dans un but de lisibilité. Il est possible de combiner l'utilisation des commandes `mpirun` avec le flag `--containall`, tout en montant des dossiers spécifiques au conteneur avec les flags `--bind` et en renseignant des variables d'environnement `--env`. Les possibilités sont multiples. Nous vous conseillons donc de jeter un oeil à la documentation relative à ces [sujets](/documentation/use/apptainer-image).
+## Codes mono-processus ou parallélisés en mémoire partagée
 
-## Exemple pratique : image avec OpenMPI
+Il suffit de disposer d’un lanceur de conteneur pour pouvoir exécuter des codes mono-processus et des codes parallélisés en mémoire partagée. Nous recommandons l’utilisation d’**Apptainer** pour sa simplicité d’installation et d’utilisation. Dans cette catégorie, on inclut généralement les codes utilisant le parallélisme OpenMP, qui peut être géré à l’aide de la variable d’environnement `OMP_NUM_THREADS`.
 
-Une image sur mesure dédiée à la mise en pratique de ce tutoriel est disponible en tapant la commande suivante :
+## Codes parallélisés en mémoire distribuée (MPI)
 
-```bash
- apptainer pull tutorial-openmpi.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/tutorial-openmpi.sif:latest
-```
+Certains des codes que nous fournissons prennent en charge la parallélisation en mémoire distribuée avec **MPI**. Dans ces cas, **OpenMPI** est inclus dans les bibliothèques du conteneur.
+*(Il est possible de vérifier si MPI est disponible dans le conteneur en exécutant `mpirun --version`. Si `mpirun` n’est pas trouvé, cela signifie que le code ne prend pas en charge MPI.)*
 
-Ainsi, vous récupérez une image Apptainer (format de fichier `.sif`). Cette image est un fichier relocalisable et renommable, qu'il est recommandé de placer dans un répertoire dédié pour facilement la retrouver ; celui-ci peut-être quelconque, et dans le cadre de ce tutoriel nous assumerons que vous l'avez placée dans un répertoire nommé `$HOME/apptainer-images` :
+Il existe deux modes d’utilisation de MPI avec nos conteneurs :
 
-```bash
-mkdir -p $HOME/apptainer-images
-mv ./tutorial.sif $HOME/apptainer-images/tutorial-openmpi.sif
-```
+- le [mode embarqué]({{< ref "#embedded_mode" >}}) (`mpirun` exécuté à l’intérieur du conteneur)
 
-Cette image vous permettra de créer des conteneurs embarquant un code parallélisé avec **OpenMPI**. Ce code `omn3` effectue une série de multiplications de matrices $N \times N$ carrées aléatoires ; la taille des matrices $N$ et le nombre de multiplications $M$ peuvent être précisés en argument. Par exemple, pour paralléliser sur $8$ cœurs $M=1000$ multiplications de matrices $N \times N = 100 \times 100$ :
+  => fonctionnement garanti
 
-```bash
-mpirun -np 8 omn3 100 1e3
-```
+  => limité à une seule machine physique (un seul nœud)
 
-Le coût total est d'ordre $O(MN^3)$, afin d'ajuster facilement la durée de calcul sur différentes machines aux performances variées.
+- le [mode hybride]({{< ref "#hybrid_mode" >}}) (`mpirun` exécuté à l’extérieur du conteneur)
 
-Enfin, l'image inclut également un outil évaluant en arrière-plan l'utilisation par le programme des cœurs réservés. Après l'exécution, vous trouverez l'utilisation moyenne par cœur dans le fichier `CPU-usage`.
+  => fonctionne sur plusieurs nœuds
 
-## Le mode embarqué {#embedded_mode}
+  => peut présenter des problèmes de compatibilité
 
-Si vous voulez utilisez votre image Apptainer en parallèle sur votre machine locale, alors vous pouvez utiliser la librairie OpenMPI qui a été embarquée lors de la création de l'image de conteneur.
-Cette approche a l'énorme avantage de vous exempter de tout souci relatif à la version d'OpenMPI installée sur votre machine, et même de savoir si cette librairie est installée tout court.
 
-Il est alors très simple, grâce à la commande `apptainer exec`, d'exécuter des commandes `mpirun` qui appellent les outils de parallélisation inclus dans votre image de conteneur :
+## Mode embarqué {#embedded_mode}
+
+Ce mode repose entièrement sur l'installation OpenMPI embarquée pour l’exécution. Son avantage est qu’il évite les problèmes de compatibilité avec l’installation MPI de la machine hôte, mais il est généralement limité à **une seule machine physique**, c’est-à-dire votre machine locale ou un seul nœud d'un cluster. L’autre inconvénient est que nous avons constaté que l’utilisation CPU peut plafonner à environ 85 à 90 % dans certains cas.
+
+Le mode embarqué consiste donc à utiliser la commande **`mpirun` à l’intérieur du conteneur**. Par exemple, on peut utiliser la commande `apptainer exec` pour exécuter `mpirun` dans le conteneur comme ceci :
 
 ```bash
-apptainer exec \
-  image_apptainer.sif \
-  mpirun -np nb_procs commande ...
+apptainer exec <image>.sif mpirun -np <nb_procs> <command>
 ```
 
-Toutefois, cette utilisation en mode embarqué d'OpenMPI est principalement utile lorsque l'on veut faire tourner des tests sur une machine locale, lorsque les performances numériques ne sont pas une priorité majeure. En effet, cette simplicité d'utilisation s'accompagne d'un contrecoup majeur, puisque l'on ne tire pas pleinement parti des ressources matérielles de la machine hôte : la version d'OpenMPI présente au sein du conteneur n'est pas optimisée pour votre machine précise, et dans la plupart des cas observés pour l'écriture de ce tutoriel on plafonne à une utilisation maximale du CPU de l'ordre de 85-90%.
 
-Une autre contrainte du mode embarqué est que l'image Apptainer doit être exécutée sur une même machine physique. Sur une machine locale, cela se fait implicitement puisqu'il n'y a qu'une seule carte mère, qu'un seul CPU, etc ... Sur une infrastructure de type HPC, les processus sont exécutés sur des nœuds de calcul. Utilise l'image Apptainer sur un seul nœud est semblable à ce qu'il se passe sur une machine personnelle : le conteneur s'exécute et utilise autant de processeurs que demandé car tout est situé sur un même nœud. Les problèmes apparaissent lorsque vous voulez utiliser au moins deux nœuds de calcul. Par défaut, la commande `apptainer exec` ne fait apparaître qu'un seul conteneur, qui ne peut pas s'exécuter sur plusieurs machines physiques (nœuds de calcul). La solution serait de faire apparaître autant de conteneurs que de noeuds utilisés, et de faire dialoguer ces derniers. En pratique, on procède plutôt de la manière recommandée dans la documentation d'Apptainer en utilisant le mode hybride. Cela permet de faire apparaître autant de conteneurs que de processeurs utilisés, et de faciliter la communication grâce au protocole MPI.
+## Mode hybride {#hybrid_mode}
 
-## Le mode hybride {#hybrid_mode}
-
-Nous venons de voir que l'utilisation d'OpenMPI en mode embarqué sur des infrastrucutres de type HPC, où l'efficacité numérique est centrale, ne serait pas souhaitable en raisons de performances numériques suboptimales. Comme expliqué dans la documentation d'Apptainer, il est préférable d'utiliser le mode hybride sur des infrastructures de type HPC. Dans ce cas, il y faut mettre en place un "dialogue" qui s'opère entre OpenMPI de la machine hôte (sur l'infrastucture de type HPC) et OpenMPI embarqué dans l'image Apptainer. Pour mieux comprendre la différence conceptuelle entre ce mode hybride et le mode embarqué discuté plus haut, on peut jeter un œil au schéma ci-dessous.
-
-<!-- (NOTE : INCLURE SCHÉMA OPENMPI EMBARQUÉ/HYBRIDE ICI). -->
+Ce mode consiste à utiliser **`mpirun`** (ou une commande de lancement similaire) **à l’extérieur du conteneur**, directement devant la commande `apptainer`. Cela fonctionne nativement avec Apptainer, qui a été conçu pour ça, contrairement à Docker qui nécessiterait la configuration de nombreuses options que nous ne détaillerons pas ici. En mode hybride, le lanceur MPI est fourni par le système hôte, tandis que l’application MPI s’exécute dans l’image Apptainer. Les bibliothèques MPI présentes dans le conteneur doivent rester compatibles avec l’implémentation MPI du système hôte afin de permettre la communication avec les interconnexions HPC. La différence entre ce mode hybride et le mode embarqué est illustrée dans le schéma ci-dessous :
 
 <div class="text-center mt-4 mb-4">
         <img alt="OpenMPI Hybride" class="hybrid-ompi">
 </div>
 
-Pour de la parallélisation hybride, l'appel à la commande OpenMPI (`mpirun`) ne se fait plus au sein du conteneur - c'est-à-dire après `apptainer exec` comme pour le mode embarqué - mais à l'extérieur de celui-ci. On utilise donc une commande de la forme :
+Avec cette approche hybride, nous recommandons d’utiliser, lorsque cela est possible, la **même version d’OpenMPI** sur le cluster que dans le conteneur. Il existe également une compatibilité entre les différentes versions mineures d’OpenMPI, mais l’utilisation de versions différentes peut entraîner des [baisses de performance](https://github.com/ckhroulev/apptainer-with-ompi/tree/main). Dans le PEPR DIADEM, les images de conteneurs sont construites sans connaissance préalable des machines sur lesquelles elles seront exécutées. Nous utilisons donc une configuration OpenMPI portable fournie par Guix, conçue pour [fonctionner sur différents environnements matériels](https://hpc.guix.info/blog/2019/12/optimized-and-portable-open-mpi-packaging/).
+
+Pour vérifier la version d’OpenMPI incluse dans une image donnée et obtenir d'autres informations utiles, vous pouvez utiliser `ompi_info` comme ceci :
 
 ```bash
-mpirun -np nb_procs <options-OpenMPI> \
-        apptainer exec image_apptainer.sif \
-        commande ...
-
+apptainer exec <image>.sif ompi_info
 ```
 
-Par cette approche, c'est la version d'OpenMPI installée sur la machine hôte qui sera appelée, et qui échangera avec la version de la librairie et le code installés au sein du conteneur instancié par `apptainer exec`. Selon les spécificités de la machine hôte, quelques options OpenMPI (`<option-OpenMPI>`) peuvent être nécessaires, et sont discutées plus bas.
 
-Dans les faits, afin d'optimiser réellement les performances, il faut passer par une complexité supplémentaire via l'utilisation des instances Apptainer. Cela permet en effet d'homogénéiser les namespaces des processus OpenMPI, favorisant ainsi la communication entre les processus. Pour cela, on procède de la manière suivante :
+## Mode hybride avec l’ordonnanceur SLURM (recommandé)
+
+Exemple d’un script minimal de lancement **job.sh** :
 
 ```bash
-# on lance une instance apptainer sur chaque nœud de calcul
-mpirun -npernode 1 \
-        apptainer instance start \
-        image_apptainer.sif nom_instance
+#!/bin/bash
+#SBATCH --job-name=test_containers
+#SBATCH --output=slurm-%j.out
+#SBATCH --error=slurm-%j.err
+#SBATCH --ntasks=2
+#SBATCH --time=00:05:00
 
-# on lance le code/script avec la commande MPI
-mpirun -np nb_procs \
-        apptainer exec instance://nom_instance \
-        /bin/bash -c "commande..."
-
-# on stoppe les instances apptainer sur chaque nœud de calcul
-mpirun -npernode 1 \
-        apptainer instance stop nom_instance
+srun apptainer exec <image>.sif <command>
 ```
 
-Si vous voulez utiliser des flags spécifiques pour exécuter votre conteneur, il faut le faire à la création de l'instance. Par exemple, pour monter des dossiers spécifiques avec le paramètre `--bind`, cela donne :
+**Si vous rencontrez des problèmes avec `srun`, vous pouvez essayer : `srun --mpi=pmi2` ou `srun --mpi=pmix`**
+
+Le calcul peut ensuite être soumis avec :
 
 ```bash
-mpirun -npernode 1 \
-        apptainer instance start \
-        --bind chemin_dossier_machine_hote:chemin_dossier_conteneur \
-        image_apptainer.sif nom_instance
+sbatch job.sh
 ```
 
-## Conseils et bonnes pratiques
 
-### Paramètres OpenMPI
+## Mode hybride sans ordonnanceur
 
-En pratique, l'exécution de commandes OpenMPI peut nécessiter des arguments ou options supplémentaires comme le `--prefix`, le `plm_rsh_agent` ou `OMP_NUM_THREADS`. Étant donné que ces paramètres peuvent évoluer d'une infrastructure à l'autre, il est recommandé de se référer aux documentations des infrastuctures en question. En voici quelques unes en lien avec le PEPR DIADEM :
+```bash
+# module load openmpi-x.x.x ou équivalent peut être nécessaire pour accéder à la bonne commande mpirun
+mpirun -np <nb_procs> apptainer exec <image>.sif <command>
+```
+
+
+## Optimisations possibles du mode hybride
+
+Une optimisation possible consiste à partager l’espace de noms (**namespace**) Apptainer entre les rangs MPI exécutés sur un même nœud, ce qui peut améliorer les performances dans certains cas.
+
+Il existe deux façons de procéder. La plus simple consiste à utiliser l’option dédiée `--sharens`. Par exemple :
+
+```bash
+mpirun -np <nb_procs> apptainer exec --sharens <image>.sif <command>
+```
+
+Il est également possible de le faire manuellement avec les commandes suivantes :
+
+```bash
+# lancer une instance Apptainer sur chaque nœud de calcul
+mpirun -npernode 1 apptainer instance start <image>.sif instance_name
+
+# exécuter le code/script avec la commande MPI
+mpirun -np <nb_procs> apptainer exec instance://instance_name /bin/bash -c "<command>"
+
+# arrêter les instances Apptainer sur chaque nœud de calcul
+mpirun -npernode 1 apptainer instance stop instance_name
+```
+
+
+# Documentation spécifique aux clusters
+
+Documentation officielle sur l'utilisation des conteneurs :
 
 - [Gricad](https://gricad-doc.univ-grenoble-alpes.fr/hpc/softenv/container/)
+
 - [TGCC](https://www-hpc.cea.fr/tgcc-public/en/html/toc/fulldoc/Virtualization.html?highlight=singularity)
-- et bien d'autres ...
 
-### Inter-compatibilité de versions
 
-Bien qu'il existe une compatibilité OpenMPI inter-version, l'utilisation de versions différentes d'OpenMPI peut résulter en des [baisses de performances](https://github.com/ckhroulev/apptainer-with-ompi/tree/main). Il est donc plus simple, quand c'est possible d'utiliser la même version d'OpenMPI sur la machine hôte que dans le conteneur. Pour cela, on peut fonctionner de deux manières : en sélectionnant, quand c'est possible, la version la plus adaptée d'OpenMPI disponible sur le cluster HPC que vous utilisez, ou alors à l'inverse en installant directement la même version d'OpenMPI que celle du cluster dans l'image Apptainer lors de sa construction.
-Dans le cadre du PEPR DIADEM, les images de conteneurs mises à disponibilité sont construites sans connaissance préalable exhaustive des machines sur lesquelles elles seront utilisées ; il est donc ardu de choisir _a priori_ la version qu'il **vous** faut pour l'inclure dans le conteneur.
+# Spécificités TGCC-DIAMOND
 
-Si vous voulez connaître la version d'OpenMPI inclue dans une image donnée, ainsi que d'autres informations utiles, vous pouvez appeler `ompi_info` comme ceci :
+L’exécution des conteneurs DIAMOND au TGCC est légèrement différente, car le lanceur de conteneurs **`pcocc-rs`** remplace Apptainer. L’utilisateur doit d’abord télécharger le conteneur `<image>.sif` depuis le site web de DIAMOND, puis le copier sur le cluster avec `rsync`.
+
+Ensuite, comme indiqué dans la documentation officielle, il faut d’abord importer le conteneur avec :
 
 ```bash
-apptainer exec \
-  image_apptainer.sif \
-  ompi_info
+pcocc-rs image import sif:<image>.sif <image>
+```
+
+Il est ensuite possible d’exécuter les conteneurs avec :
+
+- `pcocc-rs run --no-ep <image> <command>` équivalent à `apptainer exec <image>.sif <command>`
+
+- `pcocc-rs run <image> <args>` équivalent à `apptainer run <image>.sif <args>`
+
+Pour exécuter des conteneurs MPI sur plusieurs nœuds, vous pouvez utiliser la commande dédiée `ccc_mprun -C` avec deux modules spécifiques : `openmpi-4.1.4` et `guix`.
+
+Voici un exemple de script minimal pouvant être soumis avec `ccc_msub` :
+
+```bash {frame="none"}
+#!/usr/bin/env bash
+#MSUB -r test_containers           # Job name
+#MSUB -n 2                         # Number of tasks to use
+#MSUB -T 3600                      # Elapsed time limit in seconds of the job
+#MSUB -q milan                     # Partition name
+#MSUB -m work,scratch              # To access storage
+
+module load mpi/openmpi/4.1.4
+module load pcocc-module/guix
+
+ccc_mprun -C <image> -E '--ctr-module openmpi-4.1.4,guix' -- <command>
 ```
 
 </div>

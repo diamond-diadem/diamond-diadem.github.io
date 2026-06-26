@@ -6,19 +6,19 @@ weight: 2
 
 <div align="justify">
 
-An important part of the codes provided by the DIAMOND platform are compatible with and designed to run on High Performance Computing (HPC) platforms.There are multiple ways of using HPC clusters, and we will differentiate between two cases:
+An important part of the codes provided by the DIAMOND platform are compatible with and designed to run on High Performance Computing (HPC) platforms. There are multiple ways of using HPC clusters, and we will differentiate between two cases:
 - running single-process or shared-memory parallelized codes
-- running distributed-memory parallelized codes (MPI).
+- running distributed-memory parallelized codes (**MPI**).
 
-The solution chosen for the DIAMOND platform (Apptainer for containerization and Guix for packaging) allows users to run any kind of codes, with some care required for MPI-parallelized codes.
+The solution chosen for the DIAMOND platform (**Apptainer** for containerization and **Guix** for packaging) allows users to run any kind of codes, with some care required for MPI-parallelized codes.
 
 ## Single-process or shared-memory parallelized codes
 
-The only requirement for running single-process and shared-memory parallelized codes is a container launcher. We recommend using Apptainer because of its simplicity of installation and use. In this category we typically include codes that have OpenMP parallelism which can be tuned with the `OMP_NUM_THREADS` environment variable.
+The only requirement for running single-process and shared-memory parallelized codes is a container launcher. We recommend using **Apptainer** because of its simplicity of installation and use. In this category we typically include codes that have OpenMP parallelism which can be tuned with the `OMP_NUM_THREADS` environment variable.
 
 ## Distributed memory parallelized codes (MPI)
 
-Some of the codes that we provide support distributed-memory parallelization with MPI. In those cases, OpenMPI is included within the container's libraries. *(It is possible to check whether MPI is available in the container by running `mpirun --version`. If mpirun is not found, then the code does not support MPI)*
+Some of the codes that we provide support distributed-memory parallelization with **MPI**. In those cases, **OpenMPI** is included within the container's libraries. *(It is possible to check whether MPI is available in the container by running `mpirun --version`. If mpirun is not found, then the code does not support MPI)*
 
 There are two modes of using MPI with our containers:
 
@@ -36,7 +36,7 @@ There are two modes of using MPI with our containers:
 
 ### Embedded Mode {#embedded_mode}
 
-This mode relies entirely on the embedded OpenMPI library to run. The advantage is that this mode avoids compatibility issues with the host MPI installation, but it is generally limited to **one physical machine**, so your local machine or a single node on a cluster. The other drawback is that we noticed CPU usage can peak at around 85-90% in some cases.
+This mode relies entirely on the embedded OpenMPI installation to run. The advantage is that this mode avoids compatibility issues with the host MPI installation, but it is generally limited to **one physical machine**, so your local machine or a single node on a cluster. The other drawback is that we noticed CPU usage can peak at around 85-90% in some cases.
 
 The embedded mode therefore consists of using the **`mpirun` command inside the container**. For example, one can use the `apptainer exec` command to execute `mpirun` commands inside the container :
 
@@ -54,7 +54,7 @@ This mode consists of using the **`mpirun`** or a similar launcher command **out
         <img alt="OpenMPI Hybride" class="hybrid-ompi">
 </div>
 
-With this hybrid approach, we recommend using the same OpenMPI version on the cluster and inside the container whenever possible. There is also inter-version compatibility for OpenMPI but using different versions of OpenMPI can result in [performance drops](https://github.com/ckhroulev/apptainer-with-ompi/tree/main). In PEPR DIADEM, container images are built without prior knowledge of target machines, so we use a portable OpenMPI configuration provided by Guix that is designed to [work across different hardware environments](https://hpc.guix.info/blog/2019/12/optimized-and-portable-open-mpi-packaging/)
+With this hybrid approach, we recommend using the **same OpenMPI version** on the cluster and inside the container whenever possible. There is also inter-version compatibility for OpenMPI but using different versions of OpenMPI can result in [performance drops](https://github.com/ckhroulev/apptainer-with-ompi/tree/main). In PEPR DIADEM, container images are built without prior knowledge of target machines, so we use a portable OpenMPI configuration provided by Guix that is designed to [work across different hardware environments](https://hpc.guix.info/blog/2019/12/optimized-and-portable-open-mpi-packaging/)
 
 To check which version of OpenMPI is included in a given image, as well as other useful information, you can call `ompi_info` as follows:
 
