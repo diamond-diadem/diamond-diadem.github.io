@@ -125,7 +125,7 @@ mpirun -npernode 1 apptainer instance stop instance_name
 
 ## Cluster specific documentation
 
-Official container documentation:
+Official documentation on the use of containers:
 
 - [Gricad](https://gricad-doc.univ-grenoble-alpes.fr/hpc/softenv/container/)
 
@@ -137,7 +137,7 @@ Official container documentation:
 
 Running DIAMOND containers at TGCC is a bit different since `pcocc-rs` container launcher replaces Apptainer on the clusters. The user should first download the container `<image>.sif` from the DIAMOND website, and copy it to the cluster with `rsync`
 
-Then, as described in their documentation you should first import the container with:
+Then, as described in the official documentation you should first import the container with:
 
 ```bash
 pcocc-rs image import sif:<image>.sif <image>
