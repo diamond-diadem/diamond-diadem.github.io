@@ -39,7 +39,7 @@
   {{ partial "footer/esbuild" (dict "src" "js/diamond/team-list.js" "transpile" false) -}}
 {{ end }}
 
-{{ if eq .Type "contact" }}
+{{ if and (eq .Type "contact") (site.Params.diamond.enableContactForm) }}
   {{ partial "footer/esbuild" (dict "src" "js/diamond/contact-form.js" "transpile" false) -}}
 {{ end }}
 
