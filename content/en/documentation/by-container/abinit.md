@@ -62,6 +62,6 @@ The input file `input.abi` allows us to get the pseudo total energy, the bond le
 apptainer exec abinit.sif mpirun -np <N> abinit input.abi
 ```
 
-The command above uses Apptainer "embedded" parallel mode. More information on using Apptainer containers in parallel, including usage on clusters and the difference between embedded and hybrid parallel modes, can be found on [this page](/en/documentation/use/apptainer-parallel).
+The command above uses Apptainer "embedded" parallel mode. More information on using Apptainer containers in parallel, including usage on clusters and the difference between embedded and hybrid parallel modes, can be found on [this page](/en/documentation/use/apptainer-hpc).
 
 </div>
