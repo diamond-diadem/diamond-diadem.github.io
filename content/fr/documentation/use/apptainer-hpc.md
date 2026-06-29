@@ -146,7 +146,7 @@ Il est ensuite possible d’exécuter les conteneurs avec :
 
 - `pcocc-rs run <image> <args>` équivalent à `apptainer run <image>.sif <args>`
 
-Pour exécuter des conteneurs MPI sur plusieurs nœuds, vous pouvez utiliser la commande dédiée `ccc_mprun -C` avec deux modules spécifiques : `openmpi-4.1.4` et `guix`.
+Pour lancer les conteneurs MPI du projet DIAMOND, vous pouvez utiliser la commande dédiée `ccc_mprun -C` avec deux modules spécifiques : `openmpi-4.1.4` et `guix`.
 
 Voici un exemple de script minimal pouvant être soumis avec `ccc_msub` :
 

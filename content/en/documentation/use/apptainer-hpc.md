@@ -149,7 +149,7 @@ It is then possible to run containers with:
 
 - `pcocc-rs run <image> <args>` equivalent to `apptainer run <image>.sif <args>`
 
-To run MPI containers on multiple nodes, you can use the dedicated command `ccc_mprun -C` with two specific modules: `openmpi-4.1.4` and `guix`. Here is an example of a minimal script that can be submitted with `ccc_msub`:
+To run MPI containers from the DIAMOND project, you can use the dedicated command `ccc_mprun -C` with two specific modules: `openmpi-4.1.4` and `guix`. Here is an example of a minimal script that can be submitted with `ccc_msub`:
 
 ```bash {frame="none"}
 #!/usr/bin/env bash
