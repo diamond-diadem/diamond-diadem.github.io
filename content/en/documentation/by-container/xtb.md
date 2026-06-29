@@ -137,7 +137,7 @@ apptainer exec $HOME/apptainer-images/xtb.sif xtb h2o.xyz --opt --alpb water
 
 ## Using the xTB container for parallel runs
 
-xTB mainly uses shared-memory parallelization. In practice, this means that one usually controls the number of CPU threads with OpenMP-related environment variables.
+xTB uses shared-memory parallelization. In practice, this means that one usually controls the number of CPU threads with OpenMP-related environment variables.
 
 For example, to run xTB using 4 OpenMP threads:
 
@@ -159,10 +159,14 @@ apptainer exec \
 ```
 
 For production calculations, especially on larger systems, it is recommended to set the OpenMP environment variables explicitly so that the number of threads used by xTB is controlled and reproducible.
+For faster calculation, you can increase the number of threads with `OMP_NUM_THREADS=X,1` up to the number of CPU cores available. (You can display it by using `nproc`)
+
+Still, the memory per thread (i. e. `OMP_STACKSIZE`) time the number of threads, should not exceed the available memory on the system.
+So if you need to compute on bigger atomic system, you should increase `OMP_STACKSIZE` while decreasing `OMP_NUM_THREADS` to keep optimal performances.
 
 **Remark**
 
-> xTB does not need to be launched with `mpirun` for the usual single-node use cases shown in this tutorial. The examples above use shared-memory parallelism inside one container execution.
+> xTB can't be launched with `mpirun` wich mean it can only run on a single-node. 
 
 ## Display help
 
