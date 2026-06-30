@@ -101,7 +101,7 @@ apptainer run $HOME/apptainer-images/paraview.sif tutorial-disk.ex2 # the "parav
 Finally, you can directly call the image as an executable, which is strictly identical to using `apptainer run` (for the sake of formality, let's change the configuration file).
 
 ```bash
-$HOME/apptainer-images/paraview tutorial-can.ex2
+$HOME/apptainer-images/paraview.sif tutorial-can.ex2
 ```
 
 ### Isolation between the container and the host machine

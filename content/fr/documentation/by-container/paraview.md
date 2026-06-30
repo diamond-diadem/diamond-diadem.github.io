@@ -102,7 +102,7 @@ apptainer run $HOME/apptainer-images/paraview.sif tutorial-disk.ex2 # la command
 On peut enfin appeler directement l'image comme un exécutable, ce qui est strictement identique à l'utilisation de `apptainer run` (pour la forme, changeons de fichier de configuration).
 
 ```bash
-$HOME/apptainer-images/paraview tutorial-can.ex2
+$HOME/apptainer-images/paraview.sif tutorial-can.ex2
 ```
 
 ### Isolation entre le conteneur et la machine hôte

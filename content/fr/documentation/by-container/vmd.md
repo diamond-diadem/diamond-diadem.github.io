@@ -103,7 +103,7 @@ apptainer run $HOME/apptainer-images/vmd.sif tutorial-ubq1.pdb # la commande "vm
 On peut enfin appeler directement l'image comme un exécutable, ce qui est strictement identique à l'utilisation de `apptainer run` (pour la forme, changeons de fichier de configuration).
 
 ```bash
-$HOME/apptainer-images/vmd tutorial-ubiquitin.psf tutorial-pulling.dcd
+$HOME/apptainer-images/vmd.sif tutorial-ubiquitin.psf tutorial-pulling.dcd
 ```
 
 ### Isolation entre le conteneur et la machine hôte

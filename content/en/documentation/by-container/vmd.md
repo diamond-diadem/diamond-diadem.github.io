@@ -103,7 +103,7 @@ apptainer run $HOME/apptainer-images/vmd.sif tutorial-ubq1.pdb # the "vmd" comma
 Finally, you can directly call the image as an executable, which is strictly identical to using `apptainer run` (for the sake of formality, let's change the configuration file).
 
 ```bash
-$HOME/apptainer-images/vmd tutorial-ubiquitin.psf tutorial-pulling.dcd
+$HOME/apptainer-images/vmd.sif tutorial-ubiquitin.psf tutorial-pulling.dcd
 ```
 
 ### Isolation between the container and the host machine
