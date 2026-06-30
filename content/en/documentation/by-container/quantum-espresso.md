@@ -202,7 +202,7 @@ Example of a possible answer:
 apptainer exec \
   --containall \
   --env OMP_NUM_THREADS=2 \
-  --bind $HOME/quantum-espresso-examples/exercice/=$HOME \
+  --bind $HOME/quantum-espresso-examples/exercice/:$HOME \
   $HOME/apptainer-images/quantum-espresso.sif \
   mpirun -np 8 pw.x -in qe-tutorial.in
 ```

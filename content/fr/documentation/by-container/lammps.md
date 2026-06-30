@@ -271,7 +271,7 @@ Exemple de réponse possible
 apptainer exec \
   --containall \
   --env OMP_NUM_THREADS=2 \
-  --bind $HOME/lammps-examples/exercice/=$HOME \
+  --bind $HOME/lammps-examples/exercice/:$HOME \
   $HOME/apptainer-images/lammps.sif \
   mpirun -np 8 lmp_mpi -in in.file
 ```
