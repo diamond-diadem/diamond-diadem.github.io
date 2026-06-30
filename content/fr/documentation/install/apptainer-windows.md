@@ -25,7 +25,7 @@ Dès lors, il ne reste plus qu'à redémarrer la machine puis à configurer le s
 # Installation d'Ubuntu 24.04
 wsl.exe --install Ubuntu-24.04
 # Définition d'Ubuntu comme sous-système Linux à utiliser par défaut
-wsl --set-default Ubuntu-24-04
+wsl --set-default Ubuntu-24.04
 ```
 
 Notez que, pour l'installation d'Ubuntu 24.04, vous aurez à renseigner un identifiant ainsi qu'un mot de passe utilisateur.

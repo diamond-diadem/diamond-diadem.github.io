@@ -25,7 +25,7 @@ Then, you only need to restart the machine and configure the Linux subsystem you
 # Installing Ubuntu 24.04
 wsl.exe --install Ubuntu-24.04
 # Setting Ubuntu as the default Linux subsystem
-wsl --set-default Ubuntu-24-04
+wsl --set-default Ubuntu-24.04
 ```
 
 Note that for the installation of Ubuntu 24.04, you will need to provide a username and a password.
