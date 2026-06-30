@@ -54,7 +54,7 @@ L'image **NDM** est compilée avec la librairie **MKL** distribuée par Intel et
 
 {{< card-grid >}}
 {{< link-card title="Site officiel" href="https://github.com/jpcroc/NDM" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
-{{< link-card title="Documentation officielle" href="https://github.com/jpcroc/NDM" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
+{{< link-card title="Documentation officielle" href="https://github.com/jpcroc/NDM/blob/ndm2025/README.md" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
 {{< /card-grid >}}
 
 

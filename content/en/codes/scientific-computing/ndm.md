@@ -54,7 +54,7 @@ This image of **NDM** is built using **MKL** Intel libraries and **GNU** compile
 
 {{< card-grid >}}
 {{< link-card title="Official website" href="https://github.com/jpcroc/NDM" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
-{{< link-card title="Official documentation" href="https://github.com/jpcroc/NDM" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
+{{< link-card title="Official documentation" href="https://github.com/jpcroc/NDM/blob/ndm2025/README.md" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
 {{< /card-grid >}}
 
 
