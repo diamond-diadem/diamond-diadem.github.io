@@ -20,7 +20,7 @@ main:
     weight: 14
     parent: about-en
   - name: Guix
-    url: en/about/guix
+    url: en/about/guix/
     weight: 15
     parent: about-en
   - name: Ontology
