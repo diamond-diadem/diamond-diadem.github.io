@@ -227,7 +227,7 @@ team:
   photo: /images/team/NA.png
   links:
     - label: LinkedIn
-      url: www.linkedin.com/in/nils-kasch
+      url: https://linkedin.com/in/nils-kasch
 
 - name: David Martin-Calle
   first_name: David
@@ -431,7 +431,7 @@ team:
     - label: Google Scholar
       url: https://scholar.google.com/citations?user=iE9GGREAAAAJ&hl=sv
     - label: LinkedIn
-      url: www.linkedin.com/in/aksam432
+      url: https://linkedin.com/in/aksam432
   orcid: 0000-0002-9880-4482
   github: aksam432
   
