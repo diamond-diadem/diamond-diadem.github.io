@@ -8,7 +8,7 @@ weight: 20
 ---
 
 <a href="https://amitexfftp.github.io/AMITEX/index.html" target="_blank" class="codes-pages-top-logo">
-    <img alt="Abinit" class="logo-amitex">
+    <img alt="AMITEX-FFTP" class="logo-amitex">
 </a>
 
 ### Récupérez l'image de conteneur
