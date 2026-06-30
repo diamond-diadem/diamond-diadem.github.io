@@ -74,7 +74,7 @@ La journée sera consacrée à plusieurs conférences données par des chercheur
 - **15h40-16h00 :** Pause café
 
 - **16h00-16h40 :** Emmanuel FRANCK (UNISTRA) _Hybrid ML approaches in Material Science: the contribution of PINNs_
-- **16h40-17h20 :** Martin URHIN (Université Grenoble Alpes) _When GenAI meets Material Science_
+- **16h40-17h20 :** Martin UHRIN (Université Grenoble Alpes) _When GenAI meets Material Science_
 - **17h20- :** Discussion et Conclusion
 
 <br/>
