@@ -4,7 +4,7 @@ title_visible: false
 linkTitle: AMITEX_FFTP
 icon: icon-amitex-fftp
 toc: false
-weight: 20
+weight: 21
 ---
 
 <a href="https://amitexfftp.github.io/AMITEX/index.html" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo">

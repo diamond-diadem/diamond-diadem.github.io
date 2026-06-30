@@ -3,7 +3,7 @@ title: GaTewAY
 title_visible: false
 linkTitle: GaTewAY
 icon: icon-gateway
-weight: 19
+weight: 20
 ---
 
 <div class="codes-pages-top-logo container-logo-gateway">
