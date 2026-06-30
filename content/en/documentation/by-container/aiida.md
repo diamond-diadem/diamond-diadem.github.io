@@ -174,7 +174,7 @@ To check that the installation has been done correctly, you can run the `verdi c
 
 ## Step 4: Start a workflow
 
-Once the AiiDA environment is set up correctly, you're ready to use the image and configure workflows. As mentioned above, you can use the `shell` or `exec` commands to interact with the container. We recommend that you use the `shell` command to access the container. You should also copy your workflow to the `/tmp' folder.
+Once the AiiDA environment is set up correctly, you're ready to use the image and configure workflows. As mentioned above, you can use the `shell` or `exec` commands to interact with the container. We recommend that you use the `shell` command to access the container. You should also copy your workflow to the `/tmp` folder.
 
 To start a workflow, simply run the command :
 
