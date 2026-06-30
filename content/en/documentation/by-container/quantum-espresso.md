@@ -35,10 +35,10 @@ mkdir -p $HOME/apptainer-images
 mv quantum-espresso.sif $HOME/apptainer-images/quantum-espresso.sif
 ```
 
-To illustrate the different commands, a set of Quantum Espresso input files is available in the form of an archive via [this link](/downloads/qe-tutorial-inputs.tar.gz). The archive contains the necessary files to perform an energy calculation for an organic system containing carbon, magnesium, sulfur, nitrogen, and hydrogen. The files are as follows:
+To illustrate the different commands, a set of Quantum Espresso input files is available in the form of an archive via [this link](/downloads/qe-tutorial-inputs.tar.gz). The archive contains the necessary files to perform a self-consistent field (SCF) energy calculation for a Silicon crystal (2 Si atoms, FCC structure). The files are as follows:
 
 - `qe-tutorial.in` is the main input file for Quantum Espresso, containing the parameters necessary to perform the calculation. The atom positions as well as the definition of the simulation box are also in this file. Finally, we specify where to find the pseudopotentials to describe the exchange-correlation interactions within the system (see below).
-- The `pseudo` directory contains the pseudopotential file to model interactions between Silicon atoms in the system (`Si.pz-vbc.UPF`).
+- The `pseudo` directory contains the pseudopotential file used to model Silicon atoms (`Si.pz-vbc.UPF`).
 
 In this tutorial, we will assume that the input files contained in this archive are in the current directory:
 
