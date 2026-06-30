@@ -156,7 +156,7 @@ icon="tabler-icons/outline/settings-question" >}}
 
 <div class="row">
     <div class="col-6 col-diamond container-select container-select-1" align="left">
-        <label for="options1" style="font-size: larger;"><b>Scientific Computing</b></label>
+        <label for="options1A" style="font-size: larger;"><b>Scientific Computing</b></label>
         <select class="form-select select-options" align="left" id="options1A">
             <option value="option0" disabled="disabled" selected="selected" hidden="hidden">--- Select a code ---</option>
             <optgroup label="Scientific Computing">
@@ -186,7 +186,7 @@ icon="tabler-icons/outline/settings-question" >}}
         </select>
     </div>
     <div class="col-6 col-diamond container-select container-select-2 container-rtl" align="right">
-        <label for="options2" style="font-size: larger;"><b>Visualisation</b></label>
+        <label for="options2A" style="font-size: larger;"><b>Visualisation</b></label>
         <select class="form-select select-options" align="right" id="options2A">
             <option value="option0" disabled="disabled" selected="selected" hidden="hidden">--- Select a code ---</option>
             <optgroup label="Visualisation">
@@ -608,7 +608,7 @@ docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-s
 <div class="container-pulls-small">
 
 <div class="col-6 col-diamond container-select container-select-1" align="left">
-    <label for="options1" style="font-size: larger;"><b>Scientific Computing</b></label>
+    <label for="options1B" style="font-size: larger;"><b>Scientific Computing</b></label>
     <select class="form-select select-options" align="left" id="options1B">
         <option value="option0" disabled="disabled" selected="selected" hidden="hidden">--- Select a code ---</option>
         <optgroup label="Scientific Computing">
@@ -969,7 +969,7 @@ docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-s
 </div>
 
 <div class="col-6 col-diamond container-select container-select-2 container-rtl" align="right">
-    <label for="options2" style="font-size: larger;"><b>Visualisation</b></label>
+    <label for="options2B" style="font-size: larger;"><b>Visualisation</b></label>
     <select class="form-select select-options" align="right" id="options2B">
         <option value="option0" disabled="disabled" selected="selected" hidden="hidden">--- Select a code ---</option>
         <optgroup label="Visualisation">
