@@ -154,7 +154,7 @@ cat $PWD/test-host.txt $PWD/test-container.txt
 
 If this tutorial helped you to discover the basci usage of Apptainer, you can also take a look at the following pages to better take the platform tools into your own hands:
 
-- [How to use a containerized code in parallel?](/en/documentation/use/apptainer-parallel/)
+- [How to use containers on HPC clusters?](/en/documentation/use/apptainer-hpc/)
 - [What are the options to isolate a container from its host?](/en/documentation/use/apptainer-isolation-flags/)
 - [What about Guix packages?](/en/documentation/use/guix-package/)
 - [How to ask for help?](/en/documentation/use/ask-help/)
