@@ -147,7 +147,7 @@ ssh-copy-id dahu.ciment
 
 > Note that you'll have to enter your PERSEUS account password at each step.
 
-To check that everything is working correctly, you can try to connect to the `dahu` cluster (with the command `ssh dahu.cement`).
+To check that everything is working correctly, you can try to connect to the `dahu` cluster (with the command `ssh dahu.ciment`).
 
 ### Installing a computer
 
