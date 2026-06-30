@@ -7,7 +7,7 @@ toc: false
 weight: 20
 ---
 
-<a href="https://amitexfftp.github.io/AMITEX/index.html" target="_blank" class="codes-pages-top-logo">
+<a href="https://amitexfftp.github.io/AMITEX/index.html" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo">
     <img alt="AMITEX-FFTP" class="logo-amitex">
 </a>
 
