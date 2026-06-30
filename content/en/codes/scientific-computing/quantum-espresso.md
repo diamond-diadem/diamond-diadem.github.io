@@ -30,7 +30,7 @@ docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-s
 
 Quantum ESPRESSO is an electronic structure calculation software based on density functional theory (DFT) and electronic perturbation theory. It is designed to perform simulations of electronic and structural properties of atomic and molecular systems. Quantum ESPRESSO offers a comprehensive set of tools for studying materials at the atomic scale, including crystals, surfaces, and nanostructures.
 
-The software supports various calculation methods, such as plane wave methods, quantum Monte Carlo methods, and DFT-based methods. It enables researchers to model and analyze electronic properties, forces, and energies associated with the studied systems. Quantum ESPRESSO is commonly utilized in condensed matter physics research, theoretical chemistry, and materials science to understand and predict the quantum-scale behavior of materials. It is primarily intended for scientists and researchers working in the field of quantum simulation and modeling.
+The software supports various calculation methods, such as plane-wave DFT, density functional perturbation theory (DFPT), and time-dependent DFT (TDDFT). It enables researchers to model and analyze electronic properties, forces, and energies associated with the studied systems. Quantum ESPRESSO is commonly utilized in condensed matter physics research, theoretical chemistry, and materials science to understand and predict the quantum-scale behavior of materials. It is primarily intended for scientists and researchers working in the field of quantum simulation and modeling.
 
 </div>
 
