@@ -8,7 +8,7 @@ weight: 7
 ---
 
 <a href="https://neper.info/" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo">
-  <span class="home-neper" aria-hidden="true"></span>
+  <span class="logo-neper" aria-hidden="true"></span>
 </a>
 
 ### Récupérez l'image de conteneur
