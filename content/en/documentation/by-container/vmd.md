@@ -108,7 +108,7 @@ $HOME/apptainer-images/vmd.sif tutorial-ubiquitin.psf tutorial-pulling.dcd
 
 ### Isolation between the container and the host machine
 
-By default, Apptainer does not fully isolate the container from the host machine's system; for partial or total isolation, respectively, the `--no-mount` or `--no-home` and `--containall` flags should be used (see [this link](/en/documentation/use/apptainer-image/) for more information). In cases where the `--containall` option is activated, we encounter two difficulties.
+By default, Apptainer does not fully isolate the container from the host machine's system; for partial or total isolation, respectively, the `--no-mount` or `--no-home` and `--containall` flags should be used (see [this link](/en/documentation/use/apptainer-isolation-flags/) for more information). In cases where the `--containall` option is activated, we encounter two difficulties.
 
 #### Sharing graphical resources
 
