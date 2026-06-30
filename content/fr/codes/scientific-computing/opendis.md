@@ -28,7 +28,7 @@ docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-s
 
 <div align="justify">
 
-**OpenDiS (Open Dislocation Simulator)** est un logiciel open-source conçu pour simuler et analyser les dislocations dans les matériaux cristallins à l'échelle atomique. Ce programme est utilisé principalement dans les domaines de la physique des matériaux et de la science des matériaux pour modéliser les interactions complexes entre les dislocations, les défauts cristallins, et les contraintes externes appliquées. Basé sur des méthodes numériques avancées, OpenDiS permet de visualiser les mouvements des dislocations et d'étudier leurs impacts sur les propriétés mécaniques et thermiques des matériaux. Le logiciel est compatible avec plusieurs plateformes et dispose d’une interface flexible pour l’intégration avec d’autres outils de simulation et d’analyse.
+**OpenDiS (Open Dislocation Simulator)** est un logiciel open-source conçu pour simuler et analyser les dislocations dans les matériaux cristallins à l'échelle mésoscopique. Ce programme est utilisé principalement dans les domaines de la physique des matériaux et de la science des matériaux pour modéliser les interactions complexes entre les dislocations, les défauts cristallins, et les contraintes externes appliquées. Basé sur des méthodes numériques avancées, OpenDiS permet de visualiser les mouvements des dislocations et d'étudier leurs impacts sur les propriétés mécaniques et thermiques des matériaux. Le logiciel est compatible avec plusieurs plateformes et dispose d’une interface flexible pour l’intégration avec d’autres outils de simulation et d’analyse.
 
 </div>
 
