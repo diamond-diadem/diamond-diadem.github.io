@@ -40,7 +40,7 @@ docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-s
 
 {{< card-grid >}}
 {{< link-card title="Site officiel" href="https://wannier.org/" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
-{{< link-card title="Documentation officielle" href="https://github.com/wannier-developers/wannier90/tree/develop/docs" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
+{{< link-card title="Documentation officielle" href="https://wannier.org/support/" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
 {{< /card-grid >}}
 
 <h3 class="mb-1 mt-3">Exemples</h3>

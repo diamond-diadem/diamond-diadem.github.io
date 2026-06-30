@@ -7,7 +7,7 @@ toc: false
 weight: 6
 ---
 
-<a href="https://www.opencalphad.com/" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo">
+<a href="https://github.com/sundmanbo/opencalphad" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo">
     <span class="logo-opencalphad" aria-hidden="true"></span>
 </a>
 
@@ -47,8 +47,8 @@ In summary, OpenCalphad is a powerful, open-source tool for thermodynamic modeli
 <h3 class="mb-1 mt-3">OpenCalphad documentation</h3>
 
 {{< card-grid >}}
-{{< link-card title="Official website" href="https://www.opencalphad.com/" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
-{{< link-card title="Official documentation" href="https://www.opencalphad.com/OC6-macros.pdf" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
+{{< link-card title="Official website" href="https://github.com/sundmanbo/opencalphad" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
+{{< link-card title="Official documentation" href="https://github.com/sundmanbo/opencalphad" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
 {{< /card-grid >}}
 
 <h3 class="mb-1 mt-3">Examples</h3>

@@ -42,7 +42,7 @@ Le logiciel prend en charge plusieurs méthodologies, notamment la théorie de l
 
 {{< card-grid >}}
 {{< link-card title="Site officiel" href="https://www.cp2k.org/" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
-{{< link-card title="Documentation officielle" href="https://manual.cp2k.org/trunk/" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
+{{< link-card title="Documentation officielle" href="https://manual.cp2k.org/" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
 {{< /card-grid >}}
 
 <h3 class="mb-1 mt-3">Exemples</h3>

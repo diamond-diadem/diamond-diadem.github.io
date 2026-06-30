@@ -7,7 +7,7 @@ toc: false
 weight: 6
 ---
 
-<a href="https://www.opencalphad.com/" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo">
+<a href="https://github.com/sundmanbo/opencalphad" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo">
     <span class="logo-opencalphad" aria-hidden="true"></span>
 </a>
 
@@ -47,8 +47,8 @@ En résumé, OpenCalphad est un outil puissant et open-source pour la modélisat
 <h3 class="mb-1 mt-3">Documentation OpenCalphad</h3>
 
 {{< card-grid >}}
-{{< link-card title="Site officiel" href="https://www.opencalphad.com/" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
-{{< link-card title="Documentation officielle" href="https://www.opencalphad.com/OC6-macros.pdf" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
+{{< link-card title="Site officiel" href="https://github.com/sundmanbo/opencalphad" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
+{{< link-card title="Documentation officielle" href="https://github.com/sundmanbo/opencalphad" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
 {{< /card-grid >}}
 
 <h3 class="mb-1 mt-3">Exemples</h3>
