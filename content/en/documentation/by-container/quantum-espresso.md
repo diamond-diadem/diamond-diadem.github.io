@@ -180,7 +180,7 @@ Example of a possible answer:
 
 ```bash
 apptainer exec \
-  --env OMP_NUM_THREADS=1
+  --env OMP_NUM_THREADS=1 \
   $HOME/apptainer-images/quantum-espresso.sif \
   mpirun -np 16 pw.x -in qe-tutorial.in
 ```
