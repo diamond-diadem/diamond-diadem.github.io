@@ -9,7 +9,7 @@ team:
   role: WP1 - Codes and Workflows
   project: DIAMOND
   personnel_type: Scientist
-  slug: joao-paulo-almeida
+  slug: joao-paulo-almeida-de-mendonca
   photo: /images/team/jpam.png
   bio_short: I work with bioinspired and machine learning algorithms, applying them to materials science (and some other complex systems, just for fun).
   bio_short_fr: Je travaille avec des algorithmes bio-inspirés et d\'apprentissage automatique, que j\'applique à la science des matériaux.
@@ -46,7 +46,7 @@ team:
   personnel_type: 
     - Project Coordinator
     - Scientific Lead
-  slug: no-l-jakse
+  slug: noel-jakse
   photo: /images/team/nj.png
 
 - name: François Willaime
@@ -58,7 +58,7 @@ team:
   project: DIAMOND
   personnel_type:
     - Project Coordinator
-  slug: fran-ois-willaime
+  slug: francois-willaime
   photo: /images/team/NA.png
 
 - name: Marco Saitta
@@ -498,7 +498,7 @@ team:
   role: WP1 - Codes and Workflows
   project: DIAMOND
   personnel_type: Scientist
-  slug: meisdabosch
+  slug: gabriele-cassetta
   photo: /images/team/NA.png
   bio_short: I work at the intersection of machine learning and experimental physics, focusing on LIBS data and machine learning for materials science.
   bio_short_fr: Je travaille à l'intersection de l'apprentissage automatique et de la physique expérimentale, en me concentrant sur les données LIBS et la modélisation scientifique pour la science des matériaux.
