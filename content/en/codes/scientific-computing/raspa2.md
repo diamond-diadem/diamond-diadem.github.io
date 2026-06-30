@@ -28,7 +28,7 @@ docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-s
 
 <div align="justify">
 
-**RASPA2** is an advanced software package designed for the simulation of adsorption and diffusion in porous materials. It is widely used in computational chemistry and materials science for tasks such as gas adsorption modeling, diffusion calculations, and the evaluation of molecular interactions within frameworks like metal-organic frameworks (MOFs), zeolites, and other porous systems. RASPA2 employs Monte Carlo and molecular dynamics methods to explore thermodynamic and transport properties under various conditions. The software supports a variety of force fields and allows for the customization of parameters, making it highly versatile for both academic and industrial research. RASPA2 is open-source and written in C++, with an intuitive interface for setting up simulations and processing results.
+**RASPA2** is an advanced software package designed for the simulation of adsorption and diffusion in porous materials. It is widely used in computational chemistry and materials science for tasks such as gas adsorption modeling, diffusion calculations, and the evaluation of molecular interactions within frameworks like metal-organic frameworks (MOFs), zeolites, and other porous systems. RASPA2 employs Monte Carlo and molecular dynamics methods to explore thermodynamic and transport properties under various conditions. The software supports a variety of force fields and allows for the customization of parameters, making it highly versatile for both academic and industrial research. RASPA2 is open-source and written in C, with an intuitive interface for setting up simulations and processing results.
 
 </div>
 
