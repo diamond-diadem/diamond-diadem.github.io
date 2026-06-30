@@ -192,7 +192,7 @@ icon="tabler-icons/outline/settings-question" >}}
             <optgroup label="Visualisation">
                 <option value="optionaA">Ovito</option>
                 <option value="optionbA">ParaView</option>
-                <option value="optioncA">Vesta</option>
+                <option value="optioncA">VESTA</option>
                 <option value="optiondA">VMD</option>
                 <option value="optioneA">XCrySDen</option>
             </optgroup>
@@ -978,7 +978,7 @@ docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-s
         <optgroup label="Visualisation">
             <option value="optionaB">Ovito</option>
             <option value="optionbB">ParaView</option>
-            <option value="optioncB">Vesta</option>
+            <option value="optioncB">VESTA</option>
             <option value="optiondB">VMD</option>
             <option value="optioneB">XCrySDen</option>
         </optgroup>
