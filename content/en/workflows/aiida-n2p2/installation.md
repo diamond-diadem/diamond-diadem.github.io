@@ -179,7 +179,7 @@ Here is an example for a `lammps_dahu.yml` file:
 
 ```yaml
 ---
-label: lamps
+label: lammps
 description: "Guix-based LAMMPS as set in DAHU."
 default_calc_job_plugin: "lammps.raw"
 filepath_executable: "/home/username/.guix-profile/bin/lmp_mpi"
