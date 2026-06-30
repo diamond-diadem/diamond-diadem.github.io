@@ -156,9 +156,9 @@ team:
   project: DIAMOND
   personnel_type: Scientist
   slug: pierre-antoine-bouttier
-  bio_short: I am a reseach engineer specialized in software engineering and applied mathematics.
+  bio_short: I am a research engineer specialized in software engineering and applied mathematics.
   bio_short_fr: Je suis ingénieur de recherche, spécialisé en génie logiciel et en mathématiques appliquées.
-  bio_long: I am a reseach engineer specialized in software engineering and applied mathematics. I am currently the deputy director of [GRICAD](https://gricad.univ-grenoble-alpes.fr/)
+  bio_long: I am a research engineer specialized in software engineering and applied mathematics. I am currently the deputy director of [GRICAD](https://gricad.univ-grenoble-alpes.fr/)
   bio_long_fr: Je suis ingénieur de recherche, spécialisé en génie logiciel et en mathématiques appliquées. Je suis actuellement directeur adjoint de [GRICAD](https://gricad.univ-grenoble-alpes.fr/).
   photo: /images/team/NA.png
   links:
@@ -243,7 +243,7 @@ team:
 - name: Lorenzo Paulatto
   first_name: Lorenzo
   last_name: Paulatto
-  email: Lorenzo.paulatto@sorbonne-universite.fr
+  email: lorenzo.paulatto@sorbonne-universite.fr
   affiliation: Sorbonne Université
   role: WP1 - Codes and Workflows
   project: DIAMOND
@@ -261,9 +261,9 @@ team:
   personnel_type: Scientist
   slug: irina-piazza
   photo: /images/team/irina.png
-  bio_short: I am a reseach engineer buiding automated workflows for machine learning interatomic potential in HCP.
+  bio_short: I am a research engineer building automated workflows for machine learning interatomic potential in HCP.
   bio_short_fr: Je suis ingénieure de recherche et je développe des workflows automatisés pour les potentiels interatomiques d\'apprentissage automatique sur des infrastructures HPC.
-  bio_long: I am a reseach engineer buiding automated workflows for machine learning interatomic potential in HCP and I am integrating exsting MLIP workflow inside the DIAMOND platform.
+  bio_long: I am a research engineer building automated workflows for machine learning interatomic potential in HCP and I am integrating existing MLIP workflow inside the DIAMOND platform.
   bio_long_fr: Je suis ingénieure de recherche et je développe des workflows automatisés pour les potentiels interatomiques d\'apprentissage automatique sur des infrastructures HPC. J'intègre également des workflows MLIP existants dans la plateforme DIAMOND.
   links:
     - label: Google Scholar
@@ -395,7 +395,7 @@ team:
 - name: Anruo Zhong
   first_name: Anruo
   last_name: Zhong
-  email: Anruo.ZHONG@cea.fr
+  email: anruo.zhong@cea.fr
   role: WP3 - Machine Learning Interatomic Potentials
   project: DIAMOND
   personnel_type: Scientist
@@ -486,7 +486,7 @@ team:
   personnel_type: Scientist
   slug: yaidel
   photo: /images/team/NA.png
-  bio_short: I\'m a research engineer working on software profesionalization, cleaning, and improvement, as well as codes containerization.
+  bio_short: I\'m a research engineer working on software professionalization, cleaning, and improvement, as well as codes containerization.
   bio_short_fr: Je suis ingénieur de recherche et je travaille sur la professionnalisation, le nettoyage et l\'amélioration des logiciels, ainsi que sur la conteneurisation des codes.
   github: yaideltg
 
