@@ -113,7 +113,7 @@ seo:
     blogPosting:
       - news
     product: []
-math: false
+math: true
 
 analytics:
   enable: false
