@@ -31,7 +31,7 @@ docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-s
 **Image pour Kraken-GPU (Gricad)**
 
 ```bash
-apptainer pull lammps.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/lammps-gpu.sif:latest
+apptainer pull lammps-gpu.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/lammps-gpu.sif:latest
 ```
 <div align="justify">
 
