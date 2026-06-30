@@ -5,6 +5,7 @@ linkTitle: Abinit
 icon: icon-abinit
 toc: false
 weight: 3
+description: "Abinit est un code de calcul DFT et TDDFT pour les propriétés électroniques des matériaux, disponible en conteneur Apptainer sur la plateforme DIAMOND."
 ---
 
 <a href="https://www.abinit.org/" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo">

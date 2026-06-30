@@ -1,6 +1,7 @@
 ---
 title: "Comment installer Apptainer ?"
 weight: 1
+description: "Guide d'installation du logiciel de conteneurisation Apptainer sur Linux pour accéder aux images de codes scientifiques de la plateforme DIAMOND."
 ---
 
 <div align="justify">

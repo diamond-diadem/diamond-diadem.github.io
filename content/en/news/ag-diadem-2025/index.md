@@ -1,6 +1,6 @@
 ---
 title: "General Assembly 2025 - PEPR DIADEM"
-description: ""
+description: "PEPR DIADEM 2025 Annual General Assembly, presenting the progress of the DIAMOND project and prospects for the digital materials simulation platform."
 summary: "Took place at ENS Saclay. 3 days of presentations and exchanges on the advances of the DIADEM project."
 eventDate: "November 24 to 26, 2025"
 backgroundImage: "images/news/backgrounds/ag-diadem-2025.jpg"

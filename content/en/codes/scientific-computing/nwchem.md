@@ -5,6 +5,7 @@ linkTitle: NWChem
 icon: icon-nwchem
 toc: false
 weight: 14
+description: "NWChem is a high-performance computational quantum chemistry suite for molecular and electronic property calculations, available as a container on DIAMOND."
 ---
 
 <a href="https://www.nwchem-sw.org/" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo">

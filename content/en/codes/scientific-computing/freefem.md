@@ -5,6 +5,7 @@ linkTitle: FreeFEM
 icon: icon-freefem
 toc: false
 weight: 5
+description: "FreeFEM is a finite element simulation software for solving systems of partial differential equations, available as a container on DIAMOND."
 ---
 
 <a href="https://freefem.org/" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo">

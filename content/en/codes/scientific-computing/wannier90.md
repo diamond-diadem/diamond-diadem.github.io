@@ -5,6 +5,7 @@ linkTitle: Wannier90
 icon: icon-wannier90
 toc: false
 weight: 13
+description: "Wannier90 computes maximally localized Wannier functions to analyze the electronic properties of materials, available as a container on DIAMOND."
 ---
 
 <a href="https://wannier.org/" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo">

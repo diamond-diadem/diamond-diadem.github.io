@@ -5,6 +5,7 @@ linkTitle: Ovito
 icon: icon-ovito
 toc: false
 weight: 1
+description: "OVITO est un logiciel de visualisation et d'analyse de données de simulation atomistique, disponible en conteneur Apptainer sur la plateforme DIAMOND."
 ---
 
 <a href="https://www.ovito.org/" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo">

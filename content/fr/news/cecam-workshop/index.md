@@ -18,7 +18,7 @@ pinned: false
 homepage: false
 seo:
   title: "" # custom title (optional)
-  description: "" # custom description (recommended)
+  description: "Atelier phare du CECAM sur les potentiels interatomiques par apprentissage automatique (MLIPs) et les bases de données accessibles, septembre 2024." # custom description (recommended)
   canonical: "" # custom canonical URL (optional)
   noindex: false # false (default) or true
 ---

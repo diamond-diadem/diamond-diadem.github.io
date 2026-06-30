@@ -1,6 +1,7 @@
 ---
 title: How to install Apptainer ?
 weight: 1
+description: "Installation guide for the Apptainer containerization software on Linux to access scientific code images available on the DIAMOND platform."
 ---
 
 <div align="justify">

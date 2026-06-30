@@ -1,6 +1,7 @@
 ---
 title: "Comment installer Guix ?"
 weight: 3
+description: "Guide d'installation du gestionnaire de paquets Guix sur Linux pour accéder aux paquets de codes scientifiques disponibles sur la plateforme DIAMOND."
 ---
 
 <div align="justify">

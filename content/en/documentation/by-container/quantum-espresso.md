@@ -2,6 +2,7 @@
 title: How to use Quantum ESPRESSO Apptainer image?
 linkTitle: Quantum ESPRESSO tutorial
 weight: 3
+description: "Tutorial on using the DIAMOND Quantum ESPRESSO Apptainer container: pulling the image and running DFT electronic structure calculations."
 ---
 
 <div align="justify">

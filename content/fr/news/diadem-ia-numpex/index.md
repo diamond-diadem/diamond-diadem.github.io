@@ -19,7 +19,7 @@ pinned: false
 homepage: false
 seo:
   title: "" # custom title (optional)
-  description: "" # custom description (recommended)
+  description: "Journée inter-PEPR réunissant DIADEM, PEPR IA et NumPex sur les interfaces entre science des matériaux, IA et calcul haute performance." # custom description (recommended)
   canonical: "" # custom canonical URL (optional)
   noindex: false # false (default) or true
 ---

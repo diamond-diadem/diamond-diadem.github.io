@@ -1,6 +1,7 @@
 ---
 title: AiiDA tutorial
 weight: 6
+description: "Tutorial on using AiiDA via the DIAMOND Apptainer container to automate materials calculation workflows with automated provenance tracking."
 ---
 
 <div align="justify">

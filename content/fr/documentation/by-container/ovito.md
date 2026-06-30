@@ -2,6 +2,7 @@
 title: Comment utiliser l'image Apptainer d'Ovito ?
 linkTitle: Tutoriel Ovito
 weight: 2
+description: "Tutoriel sur l'utilisation de l'image Apptainer OVITO de DIAMOND pour la visualisation et l'analyse de données de simulation atomistique."
 ---
 
 <div align="justify">

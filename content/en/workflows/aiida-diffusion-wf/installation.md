@@ -2,6 +2,7 @@
 title: Installation of aiida-diffusion-wf
 linkTitle: Installation
 toc: false
+description: "Installation guide for the AiiDA-diffusion-wf workflow for simulating atomic diffusion and defect mobility in materials on the DIAMOND platform."
 ---
 
 ### Development mode

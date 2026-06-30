@@ -18,7 +18,7 @@ pinned: true
 homepage: true
 seo:
   title: "" # custom title (optional)
-  description: "" # custom description (recommended)
+  description: "Article publié dans Advanced Engineering Materials sur les solutions de conteneurs reproductibles pour les codes et workflows en science des matériaux." # custom description (recommended)
   canonical: "" # custom canonical URL (optional)
   noindex: false # false (default) or true
 ---

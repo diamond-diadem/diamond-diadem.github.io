@@ -2,6 +2,7 @@
 title: n2p2 Workflow Installation
 linkTitle: Installation
 toc: false
+description: "Guide d'installation du workflow AiiDA-n2p2 pour l'entraînement de potentiels interatomiques MLIPs sur la plateforme DIAMOND avec AiiDA et Apptainer."
 ---
 
 ## Installation

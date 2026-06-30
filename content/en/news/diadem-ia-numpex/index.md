@@ -18,7 +18,7 @@ pinned: false
 homepage: false
 seo:
   title: "" # custom title (optional)
-  description: "" # custom description (recommended)
+  description: "Inter-PEPR day gathering DIADEM, PEPR IA and NumPex on research directions at the interface between materials science, AI and high-performance computing." # custom description (recommended)
   canonical: "" # custom canonical URL (optional)
   noindex: false # false (default) or true
 aliases:

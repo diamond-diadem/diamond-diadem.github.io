@@ -2,6 +2,7 @@
 title: "Coût numérique de l'utilisation de conteneurs"
 toc: false
 weight: 3
+description: "Analyse du coût numérique de l'utilisation des conteneurs Apptainer et des paquets Guix pour les simulations scientifiques sur DIAMOND."
 ---
 
 <div align="justify">

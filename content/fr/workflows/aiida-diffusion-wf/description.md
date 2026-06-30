@@ -2,6 +2,7 @@
 title: MOFLearning AIIDA+LAMMPS Description
 linkTitle: Description
 toc: false
+description: "Description du workflow AiiDA de simulation de diffusion atomique par dynamique moléculaire pour l'étude de la mobilité des défauts dans les matériaux."
 ---
 
 Ce package est une bibliothèque de workflows basés sur AiiDA (via le plugin [`aiida-lammps`](https://github.com/aiidaplugins/aiida-lammps)) qui réalise des simulations de Dynamique Moléculaire (MD) avec des champs de force classiques afin d’étudier la diffusion d’un gaz dans les matériaux poreux cristallins tels que les réseaux métallo-organiques (MOFs).

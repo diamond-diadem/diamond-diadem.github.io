@@ -18,7 +18,7 @@ pinned: true
 homepage: true
 seo:
   title: "" # custom title (optional)
-  description: "" # custom description (recommended)
+  description: "Assemblée Générale 2027 du PEPR DIADEM, organisée au Palais des Congrès de Nancy (Centre Prouvé) du 26 au 28 janvier 2027." # custom description (recommended)
   canonical: "" # custom canonical URL (optional)
   noindex: false # false (default) or true
 ---

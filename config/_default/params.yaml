@@ -95,6 +95,14 @@ seo:
   title:
     separator: " | "
     suffix: ""
+  description:
+    length:
+      errorLevel: warning
+    lengthIgnores:
+      - "^/categories$"
+      - "^/tags$"
+      - "^/contributors$"
+      - "^/team/"
   favicons:
     sizes: []
     icon: favicon.png

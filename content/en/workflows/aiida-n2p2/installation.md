@@ -2,6 +2,7 @@
 title: n2p2 Workflow Installation
 linkTitle: Installation
 toc: false
+description: "Installation guide for the AiiDA-n2p2 workflow for training machine learning interatomic potentials on the DIAMOND platform with AiiDA and Apptainer."
 ---
 
 ## Installation

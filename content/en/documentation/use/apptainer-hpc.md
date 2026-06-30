@@ -2,6 +2,7 @@
 title: Using containers on HPC clusters
 linktitle: Using containers on HPC clusters
 weight: 2
+description: "Guide for using DIAMOND Apptainer containers on high-performance computing clusters, covering both interactive and batch execution modes."
 ---
 
 <div align="justify">

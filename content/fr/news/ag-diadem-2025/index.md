@@ -1,6 +1,6 @@
 ---
 title: "Assemblée Générale 2025 - PEPR DIADEM"
-description: ""
+description: "Assemblée générale annuelle 2025 du PEPR DIADEM, présentant l'avancement du projet DIAMOND et les perspectives de la plateforme numérique de matériaux."
 summary: "A eu lieu à l'ENS Saclay. 3 jours de présentations et d'échanges sur les avancées du projet DIADEM."
 eventDate: "24-26 novembre 2025"
 backgroundImage: "images/news/backgrounds/ag-diadem-2025.jpg"

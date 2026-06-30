@@ -5,6 +5,7 @@ linkTitle: XCrySDen
 icon: icon-xcrysden
 toc: false
 weight: 5
+description: "XCrySDen is a crystal and molecular structure visualization software for electronic structure calculations, available as a container on DIAMOND."
 ---
 
 <a href="http://www.xcrysden.org/" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo">

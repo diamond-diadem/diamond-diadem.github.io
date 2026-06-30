@@ -4,6 +4,7 @@ title_visible: false
 linkTitle: DFTB+
 icon: icon-dftbplus
 weight: 18
+description: "DFTB+ est un logiciel de chimie quantique semi-empirique basé sur la méthode DFTB pour les simulations atomistiques rapides, disponible sur DIAMOND."
 ---
 
 <a href="https://www.dftbplus.org/" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo">

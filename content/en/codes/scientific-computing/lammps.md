@@ -5,6 +5,7 @@ linkTitle: LAMMPS
 icon: icon-lammps
 toc: false
 weight: 1
+description: "LAMMPS is a massively parallel molecular dynamics simulator for large-scale atomistic simulations, available as an Apptainer container on DIAMOND."
 ---
 
 <a href="https://www.lammps.org/" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo">

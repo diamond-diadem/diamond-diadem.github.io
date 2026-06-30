@@ -5,6 +5,7 @@ linkTitle: ParaView
 icon: icon-paraview
 toc: false
 weight: 2
+description: "ParaView is an open-source high-performance scientific visualization software for simulation data, available as an Apptainer container on DIAMOND."
 ---
 
 <a href="https://www.paraview.org/" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo">

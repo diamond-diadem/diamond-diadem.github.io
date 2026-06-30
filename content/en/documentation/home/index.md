@@ -4,8 +4,7 @@ linkTitle: Home
 toc: false
 weight: 1
 seo:
-  description: Start here for DIAMOND documentation with Apptainer tutorials, Guix guides,
-    and scientific container help.
+  description: "Start here for DIAMOND user documentation: Apptainer tutorials, Guix package guides, and help for using scientific containers on HPC clusters."
 ---
 
 {{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}

@@ -2,6 +2,7 @@
 title: Simple Adsorption Workflow Description
 linkTitle: Description
 toc: false
+description: "Description of the simple-adsorption-workflow for grand canonical Monte Carlo simulation of gas adsorption in nanoporous materials on DIAMOND."
 ---
 
 This workflow measures adsorption properties in porous media.

@@ -5,6 +5,7 @@ linkTitle: Gmsh
 icon: icon-gmsh
 toc: false
 weight: 9
+description: "Gmsh is an open-source 3D mesh generator with a built-in CAD engine for finite element simulations, available as a container on DIAMOND."
 ---
 
 <a href="https://gmsh.info/" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo">

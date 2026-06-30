@@ -5,6 +5,7 @@ linkTitle: VESTA
 icon: icon-vesta
 toc: false
 weight: 3
+description: "VESTA est un logiciel de visualisation 3D de structures cristallines et densités électroniques pour la science des matériaux, disponible sur DIAMOND."
 ---
 
 <div class="codes-pages-top-logo">

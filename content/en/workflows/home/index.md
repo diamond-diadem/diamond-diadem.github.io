@@ -5,6 +5,7 @@ weight: 1
 aliases:
   - /en/workflows/start-here/home/
 toc: false
+description: "Introduction to workflow managers for materials science: automating calculations, ensuring data traceability and managing code execution on DIAMOND."
 ---
 
 <div align="justify" class="mt-4">

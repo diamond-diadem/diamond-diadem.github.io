@@ -2,6 +2,7 @@
 title: MOFLearning AIIDA+LAMMPS Description
 linkTitle: Description
 toc: false
+description: "Description of the AiiDA diffusion workflow for simulating atomic diffusion via molecular dynamics to study defect mobility in materials on DIAMOND."
 ---
 
 This package is a library of workflows based on Aiida (through the [`aiida-lammps`](https://github.com/aiidaplugins/aiida-lammps) plugin) that performs Molecular Dynamics (MD) simulations with classical Force Fields in order to study the diffusion of a gas in crystalline porous materials like Metal Organic frameworks (MOFs).

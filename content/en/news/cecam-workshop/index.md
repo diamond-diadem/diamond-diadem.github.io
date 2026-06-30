@@ -18,7 +18,7 @@ pinned: false
 homepage: false
 seo:
   title: "" # custom title (optional)
-  description: "" # custom description (recommended)
+  description: "CECAM flagship workshop on Machine Learning Interatomic Potentials (MLIPs) and accessible databases, held in September 2024 in Grenoble, France." # custom description (recommended)
   canonical: "" # custom canonical URL (optional)
   noindex: false # false (default) or true
 ---

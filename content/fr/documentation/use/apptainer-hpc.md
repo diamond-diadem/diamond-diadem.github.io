@@ -2,6 +2,7 @@
 title: Utilisation des conteneurs sur les clusters HPC
 linkTitle: Utilisation des conteneurs sur les clusters HPC
 weight: 2
+description: "Guide d'utilisation des conteneurs Apptainer de DIAMOND sur les clusters de calcul haute performance : modes d'accès interactif et batch."
 ---
 
 <div align="justify">

@@ -1,6 +1,7 @@
 ---
 title: How to install Guix ?
 weight: 3
+description: "Installation guide for the Guix package manager on Linux to access scientific software packages available on the DIAMOND platform."
 ---
 
 <div align="justify">

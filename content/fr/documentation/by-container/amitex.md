@@ -2,6 +2,7 @@
 title: "Comment utiliser l'image Apptainer d'AMITEX_FFTP ?"
 linkTitle: Tutoriel AMITEX_FFTP
 weight: 7
+description: "Tutoriel sur l'utilisation de l'image Apptainer AMITEX_FFTP de DIAMOND : récupération du conteneur et exécution de simulations mécaniques par FFT."
 ---
 
 <div align="justify">

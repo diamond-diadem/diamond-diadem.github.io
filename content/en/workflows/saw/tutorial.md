@@ -1,6 +1,7 @@
 ---
 title: Tutorial simple-adsorption-workflow
 linkTitle: Tutorial
+description: "Tutorial for the simple-adsorption-workflow: grand canonical Monte Carlo simulation of gas adsorption in nanoporous materials using RASPA2 on DIAMOND."
 ---
 
 ## Prerequisites

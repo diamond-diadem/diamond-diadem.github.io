@@ -1,6 +1,7 @@
 ---
 title: How do you ask for help or give feedback?
 weight: 6
+description: "How to request help, report a bug, or suggest new features for DIAMOND platform containers and codes via the GRICAD GitLab issue tracker."
 ---
 
 {{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}

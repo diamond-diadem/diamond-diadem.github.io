@@ -2,6 +2,7 @@
 title: How to use LAMMPS Apptainer image ?
 linkTitle: LAMMPS tutorial
 weight: 1
+description: "Tutorial on using the DIAMOND LAMMPS Apptainer container: pulling the image, running simulations, and usage examples for molecular dynamics."
 ---
 
 <div align="justify">

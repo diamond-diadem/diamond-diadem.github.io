@@ -1,6 +1,7 @@
 ---
 title: Accéder aux paquets Guix de DIAMOND
 weight: 5
+description: "Comment accéder et utiliser les paquets Guix de codes scientifiques de la plateforme DIAMOND pour des simulations de matériaux reproductibles."
 ---
 
 <div align="justify">

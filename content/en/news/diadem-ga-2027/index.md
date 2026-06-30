@@ -18,7 +18,7 @@ pinned: true
 homepage: true
 seo:
   title: "" # custom title (optional)
-  description: "" # custom description (recommended)
+  description: "PEPR DIADEM 2027 General Assembly, to be held at the Nancy Convention Center (Centre Prouvé) from January 26 to 28, 2027." # custom description (recommended)
   canonical: "" # custom canonical URL (optional)
   noindex: false # false (default) or true
 ---

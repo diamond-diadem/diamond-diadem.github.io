@@ -1,6 +1,7 @@
 ---
 title: How to interact with an Apptainer image?
 weight: 1
+description: "Guide to essential Apptainer commands for interacting with DIAMOND scientific container images: shell, exec, and run command usage and examples."
 ---
 
 <div align="justify">

@@ -1,6 +1,7 @@
 ---
 title: "Apptainer sous Windows ?"
 weight: 2
+description: "Comment installer et utiliser Apptainer sous Windows via WSL2 pour accéder aux conteneurs et codes scientifiques de la plateforme DIAMOND."
 ---
 
 <div align="justify">

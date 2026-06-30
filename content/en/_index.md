@@ -3,8 +3,5 @@ title: Welcome to DIAMOND
 lead: The digital platform of <a href="https://pepr-diadem.fr" target="_blank" rel="noopener noreferrer">PEPR DIADEM</a>
 seo:
   title: DIAMOND
-  description: Digital platform of PEPR DIADEM, Materials Science, France 2030, CNRS,
-    CEA, French National Research Agency, containers, Apptainer, scientific computing,
-    visualisation, workflows, databases, and documentation dedicated to materials
-    informatics, scientific workflows, and materials research in France.
+  description: "DIAMOND is the digital platform of PEPR DIADEM for materials simulation, offering Apptainer containers, scientific workflows, and materials databases."
 ---
