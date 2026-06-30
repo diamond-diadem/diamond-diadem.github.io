@@ -6,7 +6,7 @@ toc: false
 
 ### Development mode
 
-In the current stage, the package is not ready as a aiida plugin, otr pip package, and can only be installed by source :
+In the current stage, the package is not ready as a aiida plugin, or pip package, and can only be installed by source :
 
 ```bash
 git clone https://gricad-gitlab.univ-grenoble-alpes.fr/diamond/aiida/workflows/aiida-diffusion-wf.git
@@ -87,7 +87,7 @@ apptainer shell instance://aiida
 source $PACKAGE_DIR/aiida-diffusion-wf/bin/activate
 ```
 
-One need to adapt the path depending on where the python environment have been created. Note that this path must be accessible inside the aiida container, it can be useful to properly create the instance in the previous step in a appropriate location and using `--bind $PWD:$PWD` to acces to the python environment.
+One need to adapt the path depending on where the python environment has been created. Note that this path must be accessible inside the aiida container, it can be useful to properly create the instance in the previous step in a appropriate location and using `--bind $PWD:$PWD` to acces to the python environment.
 
 > Note : in a future implementation, we will package the whole workflow in a single apptainer image (instead of using `aiida_raspa`, so that the libraries can be directly imported inside the container.
 

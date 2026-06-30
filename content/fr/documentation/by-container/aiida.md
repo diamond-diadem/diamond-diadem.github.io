@@ -65,7 +65,7 @@ apptainer instance start \
         {apptainer_image_name}.sif {instance_name}
 ```
 
-avec, `$my_path` qui est une variable d'environnement qui réfère à `/chemin/vers/le/dossier/de/votre/choix` et les flags `-B` qui permettent de monter des dossiers spécifiques du système hôte dans l'image Apptainer. Une fois l'instance demarrée, vous pouvez soit entrer dans le conteneur ou y exécuter des commandes :
+avec, `$my_path` qui est une variable d'environnement qui réfère à `/chemin/vers/le/dossier/de/votre/choix` et les flags `-B` qui permettent de monter des dossiers spécifiques du système hôte dans l'image Apptainer. Une fois l'instance démarrée, vous pouvez soit entrer dans le conteneur ou y exécuter des commandes :
 
 ```bash
 # pour accéder au conteneur
@@ -99,7 +99,7 @@ Si c'est la **première fois** que vous utilisez cette image Apptainer d'AiiDA, 
 
 ### Configurer un profil utilisateur
 
-Un utilisateur par défaut est disponible dans le conteneur : `aiida_user`. Nénamoins, vous pouvez créer votre propre profil utilisateur en utilisant les commandes suivantes :
+Un utilisateur par défaut est disponible dans le conteneur : `aiida_user`. Néanmoins, vous pouvez créer votre propre profil utilisateur en utilisant les commandes suivantes :
 
 ```bash
 verdi quicksetup --profile {your_profile} --email {your@mail} --first-name {your_firstname} --last-name {your_lastname} --institution {your_institution}
@@ -202,7 +202,7 @@ Des codes et des workflows requièrent des données pour fonctionner correctemen
 verdi data vasp-potcar uploadfamily --path=/tmp/{archive} --name=PBE.54 --description="PBE potentials version 54"
 ```
 
-Pour vérifier que l'installation se soit déroulée correctement, vous pouvez exécuter la commande `verdi data vasp-potcar listfamilies`. La sortie de cette commande **ne doit pas être vide**.
+Pour vérifier que l'installation s'est déroulée correctement, vous pouvez exécuter la commande `verdi data vasp-potcar listfamilies`. La sortie de cette commande **ne doit pas être vide**.
 
 > Une fois que vous avez installé les données, nous vous recommandons d'arrêter l'instance et d'en démarrer une nouvelle sans monter le dossier `/tmp` au conteneur.
 
@@ -212,9 +212,9 @@ Vous devez spécifier un projet PERSEUS si vous voulez lancer des workflows sur 
 
 ## Problèmes connus
 
-Here is a list of all the known issues so far:
+Voici la liste de tous les problèmes connus à ce jour :
 
-- No backward compatibility of Apptainer images from version **1.3.X** to version **1.2.X**. Building an image with apptainer **v1.3.X** will prevent it from being downloaded from the `gitlab-gricad` registry with apptainer **v1.2.X**.
-- The postgresql service won't start is the 5432 port is already in use on that machine. In this case, it is impossible to create a profile for AiiDA.
+- Aucune compatibilité ascendante des images Apptainer de la version **1.3.X** vers la version **1.2.X**. Construire une image avec Apptainer **v1.3.X** empêchera son téléchargement depuis le registre `gitlab-gricad` avec Apptainer **v1.2.X**.
+- Le service postgresql ne démarrera pas si le port 5432 est déjà utilisé sur cette machine. Dans ce cas, il est impossible de créer un profil pour AiiDA.
 
 </div>

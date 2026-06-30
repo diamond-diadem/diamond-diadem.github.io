@@ -20,7 +20,7 @@ A type of archive containing a computer program (in source or executable form) a
 
 ### The chosen solution for DIAMOND
 
-Many package managers exist: some, like `apt` or `rpm`, are specific to certain operating systems, while others, like `pip`, are specific to programming languages. It is also common to use several simultaneously, choosing which tool to use based on the context because it offers a wide range of solutions, another for security reasons as it is better maintained, etc.
+Many package managers exist: some, like `apt` or `rpm`, are specific to certain operating systems, while others, like `pip`, are specific to programming languages. It is also common to use several simultaneously, choosing one because it offers a wide range of solutions, another for security reasons as it is better maintained, etc.
 
 In the context of the DIAMOND project, which imposes stringent requirements related to scientific reproducibility and high-performance computing, we have chosen the [GNU Guix](https://guix.gnu.org) package manager for the following reasons:
 

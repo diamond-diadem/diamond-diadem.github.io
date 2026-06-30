@@ -35,7 +35,7 @@ apptainer exec ndm.sif mpirun -np <N> rundm90_ndm_mpi
 
 ## Introduction
 
-**NDM** est un est un code de calcul distribué en Fortran pour la dynamique moléculaire en potentiels empiriques construit autour du standard MPI permettant de distribuer la charge de calcul sur différents processus. Il existe deux façons de lancer le code conteneurisé en parallèle :
+**NDM** est un code de calcul distribué en Fortran pour la dynamique moléculaire en potentiels empiriques construit autour du standard MPI permettant de distribuer la charge de calcul sur différents processus. Il existe deux façons de lancer le code conteneurisé en parallèle :
 
 - **MPI embarqué** dans le conteneur => fonctionnement garanti, mais limité à une seule machine (un seul nœud)
 - **MPI hybride** avec celui de la machine hôte => fonctionne sur plusieurs nœuds, mais il peut exister des incompatibilités.

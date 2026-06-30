@@ -9,7 +9,7 @@ toc: false
 ```shell
 pip install aiida-n2p2
 verdi quicksetup  # better to set up a new profile
-verdi plugin list aiida.calculations  # should now show your calclulation plugins
+verdi plugin list aiida.calculations  # should now show your calculation plugins
 ```
 
 ## Usage
@@ -23,9 +23,9 @@ verdi daemon start     # make sure the daemon is running
 cd examples
 ```
 
-You can have acces two example both in local and super computer.
+You can have access to two examples both in local and super computer.
 
-### Tree of n2p2 adida plugin
+### Tree of n2p2 aiida plugin
 
 ```
 ├── aiida_n2p2
@@ -75,7 +75,7 @@ Go to 1.Al folder and run the jupter notebook `AiidA-n2p2_demo.ipynb`
 
 ### Run on the HPC
 
-Before to submit your calculation on the supercomputer be sure that your have made a set up for your local computer with a scheduler to menage your calculation on the super computer.
+Before submitting your calculation on the supercomputer be sure that your have made a set up for your local computer with a scheduler to menage your calculation on the super computer.
 This set up is very dependent from which supercomputer you will submit your calculation. Below a typical setup on [GRICAD](https://gricad-doc.univ-grenoble-alpes.fr/hpc/connexion/) that using OAR scheduler.
 
 ## 1. Install the OAR Scheduler Plugin, specific case for gricad hpc.

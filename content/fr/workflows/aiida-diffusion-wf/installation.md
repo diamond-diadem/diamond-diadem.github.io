@@ -22,7 +22,7 @@ pip install -e .
 
 #### Télécharger l’exécutable de LAMMPS
 
-En principe, il est possible d'utiliser n’importe quel exécutable officiel de LAMMPS fourni par le canal officiel. Cependant, pour des raisons de reproductibilité, il est recommanédé de télécharger une version conteneurisée de LAMMPS avec la commande suivante :
+En principe, il est possible d'utiliser n’importe quel exécutable officiel de LAMMPS fourni par le canal officiel. Cependant, pour des raisons de reproductibilité, il est recommandé de télécharger une version conteneurisée de LAMMPS avec la commande suivante :
 
 ```bash
 apptainer pull lammps-2Apr2025_serial.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/lammps.sif:latest
@@ -87,7 +87,7 @@ apptainer shell instance://aiida
 source $PACKAGE_DIR/aiida-diffusion-wf/bin/activate
 ```
 
-Il faut adapter le chemin en fonction de l’endroit où l’environnement Python
+Il faut adapter le chemin en fonction de l’endroit où l’environnement Python a été installé.
 
 > Remarque : dans une implémentation future, nous empaqueterons l’ensemble du workflow dans une seule image Apptainer (au lieu d’utiliser `aiida_raspa`), de sorte que les bibliothèques puissent être directement importées à l’intérieur du conteneur.
 

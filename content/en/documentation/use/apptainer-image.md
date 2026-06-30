@@ -54,7 +54,7 @@ $ apptainer exec $HOME/apptainer-images/tutorial.sif echo "Hi from the container
 
 creates a container from the `$HOME/apptainer-images/tutorial.sif` image, invokes the `echo "Hi from the container !"` command within the container, and then destroys it.
 
-- The `shell` argument allows to enter an interactive shell inside the container (the `Apptainer>` _prompt_ then appears on the left of the command line), run successive commands, then exit the container using `exit` or `Crtl+D`, which also destroys it. For example :
+- The `shell` argument allows to enter an interactive shell inside the container (the `Apptainer>` _prompt_ then appears on the left of the command line), run successive commands, then exit the container using `exit` or `Ctrl+D`, which also destroys it. For example :
 
 ```bash
 $ apptainer shell $HOME/apptainer-images/tutorial.sif
@@ -126,7 +126,7 @@ WARNING: Environment variable USER already has value [newusername], will not for
 
 ## Isolation between the host and the container
 
-By default, pptainer does not fully isolate the container from the host system, but there are options to alter this behavior at different degrees. These options, and the directories share by default, are extensively discussed in a [dedicated tutorial section](/en/documentation/use/apptainer-isolation-flags/).
+By default, Apptainer does not fully isolate the container from the host system, but there are options to alter this behavior at different degrees. These options, and the directories share by default, are extensively discussed in a [dedicated tutorial section](/en/documentation/use/apptainer-isolation-flags/).
 
 Here, we only present the most general option (`--containall`), which allows to isolate the container's environment and file system from the host at once.
 
@@ -152,7 +152,7 @@ cat $PWD/test-host.txt $PWD/test-container.txt
 
 ## See also
 
-If this tutorial helped you to discover the basci usage of Apptainer, you can also take a look at the following pages to better take the platform tools into your own hands:
+If this tutorial helped you to discover the basic usage of Apptainer, you can also take a look at the following pages to better take the platform tools into your own hands:
 
 - [How to use containers on HPC clusters?](/en/documentation/use/apptainer-hpc/)
 - [What are the options to isolate a container from its host?](/en/documentation/use/apptainer-isolation-flags/)

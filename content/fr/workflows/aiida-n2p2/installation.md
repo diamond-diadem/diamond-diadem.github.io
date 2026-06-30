@@ -9,7 +9,7 @@ toc: false
 ```shell
 pip install aiida-n2p2
 verdi quicksetup  # better to set up a new profile
-verdi plugin list aiida.calculations  # should now show your calclulation plugins
+verdi plugin list aiida.calculations  # should now show your calculation plugins
 ```
 
 ## Utilisation
@@ -25,7 +25,7 @@ cd examples
 
 Vous pouvez accéder à deux exemples, à la fois en local et sur un supercalculateur.
 
-### Arborescence du plugin n2p2 adida
+### Arborescence du plugin n2p2 aiida
 
 ```
 ├── aiida_n2p2

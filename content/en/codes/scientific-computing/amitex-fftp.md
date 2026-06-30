@@ -36,7 +36,7 @@ The code combines **massively parallel implementation** with a **versatile user 
 - various loadings conditions,
 - various behavior laws (user defined),
 - small strain and finite strain simulations,
-- possiblity to finely tune the outputs.
+- possibility to finely tune the outputs.
 
 ### Main content of the image
 

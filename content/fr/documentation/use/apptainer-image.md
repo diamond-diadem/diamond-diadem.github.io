@@ -54,7 +54,7 @@ $ apptainer exec $HOME/apptainer-images/tutorial.sif echo "Hi from the container
 
 crée un conteneur à partir de l'image `$HOME/apptainer-images/tutorial.sif`, invoque la commande `echo "Hi from the container !"` du shell dans le conteneur puis détruit le conteneur.
 
-- l'argument `shell` permet d'ouvrir un shell interactif au sein du conteneur (le _prompt_ `Apptainer>` apparaît alors à gauche de la ligne de commande) et d'y effectuer plusieurs commandes successives, puis d'en sortir en détruisant le conteneur avec `exit` ou `Crtl+D`. Par exemple :
+- l'argument `shell` permet d'ouvrir un shell interactif au sein du conteneur (le _prompt_ `Apptainer>` apparaît alors à gauche de la ligne de commande) et d'y effectuer plusieurs commandes successives, puis d'en sortir en détruisant le conteneur avec `exit` ou `Ctrl+D`. Par exemple :
 
 ```bash
 $ apptainer shell $HOME/apptainer-images/tutorial.sif
@@ -104,7 +104,7 @@ où la variable `$GREET` est définie pour renvoyer "Welcome" par défaut au sei
 
 La variable `$USER` est récupérée pour que sa valeur dans le conteneur soit identique à celle de la machine hôte. Ce fonctionnement n'est pas spécifique à l'image étudiée lors de ce tutoriel, il s'agit d'un des nombreux comportements standards d'Apptainer pour faciliter l'utilisation de conteneurs au sein d'environnements de calcul haute performance.
 
-Ces deux variables d'environmmement peuvent être redéfinies :
+Ces deux variables d'environnement peuvent être redéfinies :
 
 ```bash
 apptainer run --env GREET=Hello $HOME/apptainer-images/tutorial.sif
@@ -126,7 +126,7 @@ WARNING: Environment variable USER already has value [newusername], will not for
 
 ## Isolation entre l'hôte et le conteneur
 
-Par défaut, Apptainer n'isole pas totalement le conteneur du système de la machine hôte, mais il existe des optionsœ permettant d'altérer plus ou moins finement ce comportement. Ces options, ainsi que les répertoires partagés par défaut, sont discutés extensivement dans une [section dédiée de la documentation](/documentation/use/apptainer-isolation-flags/).
+Par défaut, Apptainer n'isole pas totalement le conteneur du système de la machine hôte, mais il existe des options permettant d'altérer plus ou moins finement ce comportement. Ces options, ainsi que les répertoires partagés par défaut, sont discutés extensivement dans une [section dédiée de la documentation](/documentation/use/apptainer-isolation-flags/).
 
 Ici, on se contente de présenter l'option la plus générale (`--containall`) permettant d'isoler à la fois l'environnement logiciel et le système de fichiers du conteneur vis-à-vis de ceux de l'hôte.
 

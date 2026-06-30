@@ -100,7 +100,7 @@ apptainer exec --no-mount dev <image> ls /dev
 
 En conséquence, il convient d'utiliser ce flag avec parcimonie, _a fortiori_ lorsque le répertoire en question contient des ressources importantes (notamment `/proc`).
 
-Le flag `--contain` (ou `-c`) est quand à lui voué à une utilisation plus générale : il nettoie les répertoires partagés par défaut sans pour autant en supprimer l'intégralité du contenu. On peut voir cette option comme une version alternative de `--no-mount tmp,home,cwd,dev`, avec les différentes suivantes :
+Le flag `--contain` (ou `-c`) est quant à lui voué à une utilisation plus générale : il nettoie les répertoires partagés par défaut sans pour autant en supprimer l'intégralité du contenu. On peut voir cette option comme une version alternative de `--no-mount tmp,home,cwd,dev`, avec les différences suivantes :
 
 - `--no-mount home,cwd` supprime complètement le `$HOME` de l'utilisateur ou de l'utilisatrice ainsi que le chemin menant au répertoire courant, là où `--contain` en crée une copie vide.
 - `--no-mount dev` supprime l'intégralité du contenu de `/dev`, alors que `--contain` en nettoie une large partie par rapport au comportement par défaut mais conserve tout de même quelques fichiers et répertoires importants.
@@ -127,7 +127,7 @@ apptainer exec --contain --bind $PWD:$HOME <image> <exécutable> input.file
 
 ### Le flag `--containall`
 
-Il s'agit de la dernière option disponibe pour isoler un conteneur de la machine hôte. On peut considérer que le flag `--containall` (ou `-C`) comme une conjonction de `--cleanenv` et `--contain`.
+Il s'agit de la dernière option disponible pour isoler un conteneur de la machine hôte. On peut considérer que le flag `--containall` (ou `-C`) comme une conjonction de `--cleanenv` et `--contain`.
 
 Ainsi, cette option nettoie d'une part l'environnement logiciel de manière identique à `--cleanenv` et filtre la quasi-intégralité des variables d'environnement de l'hôte au conteneur (voir la [section dédiée](#le-flag---cleanenv) plus haut).
 

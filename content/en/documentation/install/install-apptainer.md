@@ -7,7 +7,7 @@ weight: 1
 
 {{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
 
-This tutorial summarizes how to install the container management software [Apptainer](https://apptainer.org/). It is largely based on [official installation instructions](https://apptainer.org/docs/admin/1.2/installation.html#install-from-pre-built-packages), and one should read these more exhaustive ressources for more details.
+This tutorial summarizes how to install the container management software [Apptainer](https://apptainer.org/). It is largely based on [official installation instructions](https://apptainer.org/docs/admin/1.2/installation.html#install-from-pre-built-packages), and one should read these more exhaustive resources for more details.
 
 Apptainer works on any modern Linux distribution ; however, it is not compatible with Windows and MacOS host kernels and does not run natively on those. It is recommended to use virtualization solutions or a Docker container in such cases, which will not be covered in this topic : see more information [here](https://apptainer.org/docs/admin/1.2/installation.html#installation-on-windows-or-mac).
 

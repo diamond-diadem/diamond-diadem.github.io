@@ -38,7 +38,7 @@ mv paraview.sif $HOME/apptainer-images/paraview.sif
 Pour illustrer le fonctionnement du programme de visualisation, un jeu de fichiers lisibles avec ParaView est disponible sous forme d'archive via [ce lien](/downloads/paraview-tutorial-inputs.tar.gz). Cette archive contient les fichiers suivants :
 
 - `tutorial-disk.ex2`, l'un des fichiers d'exemples fournis par défaut avec ParaView contenant la structure d'un cylindre creux au format _ex2_, typiquement utilisé avec le code d'élément finis _ExodusII_.
-- `tutorial-can.ex2`, également fourni par défaut avec ParaView et qui permet de reproduire l'évoultion d'un objet cylindrique (comme une canette) écrasé par un objet contondant.
+- `tutorial-can.ex2`, également fourni par défaut avec ParaView et qui permet de reproduire l'évolution d'un objet cylindrique (comme une canette) écrasé par un objet contondant.
 
 Dans ce tutoriel, on supposera que les fichiers d'entrée contenus dans cette archive sont dans le répertoire courant :
 
@@ -74,7 +74,7 @@ où les fichiers d'entrée `input.file.*` sont optionnels et permettent de charg
 Avec Apptainer, le fonctionnement est similaire, à quelques détails près :
 
 - il faut appeler Apptainer pour lancer le conteneur (une ligne de commande).
-- si on souhaite isoler le conteneur de notre machine, alors il faut s'assurer de pouvoir accéder aux fichiers que l'on souhaite charger dans ParaView (deux options dans la ligne de commande précedente).
+- si on souhaite isoler le conteneur de notre machine, alors il faut s'assurer de pouvoir accéder aux fichiers que l'on souhaite charger dans ParaView (deux options dans la ligne de commande précédente).
 - il faut s'assurer, le cas échéant, que le conteneur a bien accès aux ressources graphiques de la machine hôte (une autre option).
 
 Chacun de ces points est détaillé dans les sections suivantes.
@@ -96,7 +96,7 @@ Cette commande fonctionne comme suit :
 On peut répliquer le même comportement avec `apptainer run` qui appelle directement la commande par défaut de l'image, `paraview`, à laquelle on peut adjoindre des arguments.
 
 ```bash
-apptainer run $HOME/apptainer-images/paraview.sif tutorial-disk.ex2 # la commande "paraview" est implicitement appellée.
+apptainer run $HOME/apptainer-images/paraview.sif tutorial-disk.ex2 # la commande "paraview" est implicitement appelée.
 ```
 
 On peut enfin appeler directement l'image comme un exécutable, ce qui est strictement identique à l'utilisation de `apptainer run` (pour la forme, changeons de fichier de configuration).
@@ -195,7 +195,7 @@ Comment visualiser une animation contenue dans un fichier avec un conteneur Para
 >
 > - L'image est située au chemin suivant : `$HOME/apptainer-images/paraview.sif`
 > - Le fichier contenant l'animation nous intéressant est situé dans `$PWD/tutorial-can.ex2` sur la machine hôte.
-> - Pour afficher les données chargées, il faut appliquer un rendu visuel en cliquant sur le bouton `Apply` du panneau `Properties` aparaissant sur la gauche.
+> - Pour afficher les données chargées, il faut appliquer un rendu visuel en cliquant sur le bouton `Apply` du panneau `Properties` apparaissant sur la gauche.
 > - Il est possible de jouer avec le panneau `Properties` et de modifier le point de vue afin de mettre en valeur l'animation.
 > - Au sein de ParaView, l'export au format `avi` peut se faire via `File > Save Animation`.
 > - On tentera de donner une solution non isolée de la machine hôte, et une solution isolant au maximum le conteneur de la machine hôte.
