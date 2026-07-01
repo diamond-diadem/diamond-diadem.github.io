@@ -11,7 +11,7 @@ mainSections:
 diamond:
   enableNews: true
   enableTeamPage: true
-  enableContactForm: false
+  enableContactForm: true
   sectionsIcons: true
   cookiesConsent: true
   enableScrollFade: true
