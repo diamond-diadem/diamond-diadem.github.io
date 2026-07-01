@@ -8,7 +8,7 @@ seo:
 ---
 
 {{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
-**If you have any problems using the tools on the platform or if you have any queries**, please follow the instructions on this [link](/en/documentation/use/ask-help/).
+**If you have any problems using the tools on the platform or if you have any queries**, please get in touch with us via this [contact form](/en/contact/).
 {{< /callout >}}
 
 The main purpose of this documentation is to help you get to grips with the various platform tools offered by [DIAMOND](/en/about/diamond/).

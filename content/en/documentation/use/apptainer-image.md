@@ -158,6 +158,6 @@ If this tutorial helped you to discover the basic usage of Apptainer, you can al
 - [How to use containers on HPC clusters?](/en/documentation/use/apptainer-hpc/)
 - [What are the options to isolate a container from its host?](/en/documentation/use/apptainer-isolation-flags/)
 - [What about Guix packages?](/en/documentation/use/guix-package/)
-- [How to ask for help?](/en/documentation/use/ask-help/)
+- [How to ask for help?](/en/contact/)
 
 </div>

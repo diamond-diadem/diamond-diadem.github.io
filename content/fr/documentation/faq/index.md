@@ -24,7 +24,7 @@ Une fois que vous avez fini d'utiliser le conteneur, nous vous recommandons de r
 
 **Note**
 
-> Ce problème nous a uniquement été signalé, pour le moment, sur les sessions basées sur `wayland`. En conséquence, la solution proposée n'a pu être éprouvée que dans ce cas particulier. Si vous rencontrez ce problème dans d'autres conditions et/ou que la solution ci-dessus ne fonctionne pas pour vous, merci de nous le [signaler](/documentation/use/ask-help/).
+> Ce problème nous a uniquement été signalé, pour le moment, sur les sessions basées sur `wayland`. En conséquence, la solution proposée n'a pu être éprouvée que dans ce cas particulier. Si vous rencontrez ce problème dans d'autres conditions et/ou que la solution ci-dessus ne fonctionne pas pour vous, merci de nous le [signaler](/contact/).
 
 ### Comment lancer un conteneur de visualisation sur les frontales HPC ?
 

@@ -158,6 +158,6 @@ Si ce tutoriel vous a été utile pour découvrir les bases d'Apptainer, vous po
 - [Comment utiliser les conteneurs sur clusters HPC ?](/documentation/use/apptainer-hpc/)
 - [Quelles sont les options d'isolation entre un conteneur et sa machine hôte ?](/documentation/use/apptainer-isolation-flags/)
 - [Et pour les paquets Guix ?](/documentation/use/guix-package)
-- [Comment demander de l'aide ?](/documentation/use/ask-help)
+- [Comment demander de l'aide ?](/contact/)
 
 </div>

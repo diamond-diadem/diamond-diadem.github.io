@@ -9,7 +9,7 @@ fr:
       ANR-22-PEXD-0015
     alertText: '<a class="alert-link stretched-link fw-normal"
       href="news/diamond-ga-2026/">Assemblée générale DIAMOND 2026 : 11-12 juin à Lyon !</a>'
-    docSidebarRef: /documentation/use/ask-help
+    docSidebarRef: /contact/
     docSidebarText: Contacter le support
 en:
   languageName: EN
@@ -23,5 +23,5 @@ en:
     alertText: '<a class="alert-link stretched-link fw-normal"
       href="en/news/diamond-ga-2026">DIAMOND General Assembly 2026: June 11-12 in Lyon !</a>'
     description: Digital platform for PEPR DIADEM
-    docSidebarRef: /en/documentation/use/ask-help
+    docSidebarRef: /en/contact/
     docSidebarText: Contact the support

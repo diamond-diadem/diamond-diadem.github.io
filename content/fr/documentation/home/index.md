@@ -9,7 +9,7 @@ seo:
 ---
 
 {{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
-**Pour tout problème relatif à l’utilisation des outils de la plateforme ou pour toute requête**, merci de suivre les instructions renseignées sur ce [lien](/documentation/use/ask-help/).
+**Pour tout problème relatif à l’utilisation des outils de la plateforme ou pour toute requête**, merci de nous contacter via ce [formulaire de contact](/contact/).
 {{< /callout >}}
 
 Cette documentation a pour premier objectif de vous permettre de prendre en main les différents outils de la plateforme proposés par [DIAMOND](/about/diamond/).
