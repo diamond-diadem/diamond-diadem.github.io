@@ -29,7 +29,7 @@ This form uses Cloudflare Turnstile for spam protection, which analyzes technica
 </label>
 </div>
 </div>
-<div class="cf-turnstile d-flex justify-content-center mb-3" data-sitekey="0x4AAAAAADrVIyJ51RUnlL-u"></div>
+<div class="cf-turnstile d-flex justify-content-center mb-3" data-sitekey="0x4AAAAAADrVIyJ51RUnlL-u" data-language="en"></div>
 <button type="submit" id="contact-submit-btn" class="btn btn-primary w-100" data-sending="Sending…">
 Submit Enquiry
 </button>
