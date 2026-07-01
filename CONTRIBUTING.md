@@ -12,8 +12,8 @@ It is possible to edit the site directly on [the Github.com repository](https://
 
 To run the site locally in development mode, you need to install the following dependencies:
 
-- **Node.js** - `v25.2.1` — run `node -v` to check.
-- **Hugo extended** - `v0.152.2` — run `hugo version` to check.
+- **Node.js** - `v24.18.0` — run `node -v` to check.
+- **Hugo extended** - `v0.156.0` — run `hugo version` to check.
 
 ### Installing Prerequisites for Linux
 
@@ -35,10 +35,10 @@ List available Node.js versions
 nvm ls-remote
 ```
 
-Install the `25.2.1` LTS version
+Install the `24.18.0` LTS version
 
 ```bash
-nvm install v25.2.1
+nvm install v24.18.0
 ```
 
 Finally, verify the installation
@@ -50,11 +50,11 @@ npm -v
 
 - #### Hugo extended
 
-Download and install Hugo Extended version 0.152.2 for Linux amd64. If you are using a different operating system or architecture, adjust the download link accordingly.
+Download and install Hugo Extended version 0.156.0 for Linux amd64. If you are using a different operating system or architecture, adjust the download link accordingly.
 
 ```bash
-wget https://github.com/gohugoio/hugo/releases/download/v0.152.2/hugo_extended_0.152.2_linux-amd64.tar.gz
-tar -xzf hugo_extended_0.152.2_linux-amd64.tar.gz
+wget https://github.com/gohugoio/hugo/releases/download/v0.156.0/hugo_extended_0.156.0_linux-amd64.tar.gz
+tar -xzf hugo_extended_0.156.0_linux-amd64.tar.gz
 ```
 
 If you have superuser rights on your machine, run

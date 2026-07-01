@@ -44,7 +44,7 @@ sitemap:
   filename: sitemap.xml
   priority: 0.5
 caches:
-  getjson:
+  getresource:
     dir: :cacheDir/:project
     maxAge: -1
 taxonomies:
