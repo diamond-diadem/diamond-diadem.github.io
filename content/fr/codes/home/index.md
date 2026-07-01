@@ -151,7 +151,7 @@ icon="tabler-icons/outline/settings-question" >}}
     </tbody>
 </table>
 
-<h3 align="center" class="mb-5">{{< inline-svg src="tabler-icons/outline/table-shortcut" class="svg-inline-shortcut">}}Raccourci : choisissez votre code et récupérez-le avec Apptainer</h3>
+<h3 align="center" class="mb-5">{{< inline-svg src="tabler-icons/outline/table-shortcut" class="svg-inline-shortcut">}}Raccourci : choisissez votre code et récupérez-le avec Apptainer ou Docker</h3>
 <div class="container-pulls-large">
 
 <div class="row">

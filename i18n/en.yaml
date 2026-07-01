@@ -31,7 +31,7 @@ faq: Frequently asked questions
 
 ### Home page ###
 home_codes_body: <a href="/en/codes/home/">Scientific computing and data visualisation</a>.
-home_codes_title: Get our Apptainer images for popular codes
+home_codes_title: Get our container images for popular codes
 home_documentation_body: <a href="/en/documentation/install/install-apptainer/">Install
   Apptainer</a>, and <a href="/en/documentation/use/apptainer-image/">learn to
   use our container images</a>.

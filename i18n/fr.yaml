@@ -33,7 +33,7 @@ faq: Foire aux questions
 ### Home page ###
 home_codes_body: <a href="/codes/home/">Calcul scientifique et visualisation de
   données</a>.
-home_codes_title: Récupérez nos images Apptainer de codes populaires
+home_codes_title: Récupérez nos images de conteneurs de codes populaires
 home_documentation_body: <a href="/documentation/install/install-apptainer/">Installez
   Apptainer</a>, et <a href="/documentation/use/apptainer-image/">apprenez à utiliser
   nos images de conteneurs</a>.
