@@ -11,11 +11,15 @@ mounts:
   # content
   - source: content/fr
     target: content
-    lang: fr
+    sites:
+      matrix:
+        languages: [fr]
 
   - source: content/en
     target: content
-    lang: en
+    sites:
+      matrix:
+        languages: [en]
 
   # data
   - source: node_modules/@thulite/doks-core/data

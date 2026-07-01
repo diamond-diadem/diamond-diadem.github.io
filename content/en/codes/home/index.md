@@ -4,7 +4,7 @@ linkTitle: Home
 weight: 1
 sidebar_link: /en/codes/home/
 aliases:
-  - /en/codes/start-here/home/
+  - /codes/start-here/home/
 # tablerIcon: "tabler-icons/outline/home"
 # layout: codes-home
 seo:
