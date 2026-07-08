@@ -51,7 +51,7 @@ $HOME/apptainer-images/gpumd.sif
 
 ## Input files for the liquid Indium example
 
-To illustrate the different commands, a set of GPUMD input files is provided for a molecular dynamics example in liquid Indium. The files are as follows:
+To illustrate the different commands, a set of GPUMD input files is provided for a molecular dynamics example in liquid Indium. The files can be downloaded via [this link](/downloads/gpumd-tutorial-inputs.tar.gz) and are as follows:
 
 - `run.in` is the main GPUMD input file. It defines the simulation protocol and the GPUMD commands to execute.
 - `model.xyz` contains the initial atomic structure used by the simulation.
@@ -66,17 +66,17 @@ ls
 
 **Disclaimer**
 
-> The commands presented here are for using the `gpumd` executable. This is also the executable called by default by the `apptainer run` command. To call another executable included in the image, such as `nep` or `NepTrainKit`, use `apptainer exec <options> <image> <executable-name>`.
+> The commands presented here are for using the `gpumd` executable. To call another executable included in the image, such as `nep` or `NepTrainKit`, use `apptainer exec <options> <image> <executable-name>`.
 
 ## One liner command
 
 For impatient folks, here is how to launch the GPUMD liquid Indium example using the container image, previously downloaded and stored in `$HOME/apptainer-images/gpumd.sif`:
 
 ```bash
-apptainer run --nv $HOME/apptainer-images/gpumd.sif
+apptainer exec --nv $HOME/apptainer-images/gpumd.sif gpumd
 ```
 
-The `--nv` flag gives the container access to NVIDIA GPU devices and drivers from the host. On a system where GPU access is handled differently, adapt this flag to the local Apptainer/GPU configuration.
+The `--nv` flag gives the container access to NVIDIA GPU devices and drivers from the host. If you reprocuced this image for a system where GPU access is handled differently, adapt this flag to the local Apptainer/GPU configuration.
 
 ## Detailed usage for the GPUMD container
 
@@ -100,17 +100,6 @@ To do the same inside a container, we can run three equivalent commands. In each
 apptainer exec --nv $HOME/apptainer-images/gpumd.sif gpumd
 ```
 
-- One can use `apptainer run` to call the container's _default_ command, namely the `gpumd` executable.
-
-```bash
-apptainer run --nv $HOME/apptainer-images/gpumd.sif # "gpumd" is implicitly called by "run"
-```
-
-- One can eventually execute the image as a binary, which is strictly identical to using `apptainer run` without additional Apptainer options. This form is only appropriate when your local configuration does not require options such as `--nv`.
-
-```bash
-$HOME/apptainer-images/gpumd.sif # "gpumd" is implicitly called
-```
 
 ### Accessing the other executables in the image
 
@@ -122,42 +111,14 @@ For example, to call the `nep` executable:
 apptainer exec --nv $HOME/apptainer-images/gpumd.sif nep
 ```
 
-To call `NepTrainKit`:
+To call `NepTrain` from NepTrainKit:
 
 ```bash
-apptainer exec --nv $HOME/apptainer-images/gpumd.sif NepTrainKit
-```
-
-To check that the executables are available in the container:
-
-```bash
-apptainer exec $HOME/apptainer-images/gpumd.sif which gpumd
-apptainer exec $HOME/apptainer-images/gpumd.sif which nep
-apptainer exec $HOME/apptainer-images/gpumd.sif which NepTrainKit
+apptainer exec --nv $HOME/apptainer-images/gpumd.sif NepTrain
 ```
 
 For the expected input files and options of `gpumd` and `nep`, please refer to the [GPUMD documentation](https://gpumd.org/).
 
-### Selecting a GPU
-
-On GPU nodes, the selected GPU is usually controlled by the job scheduler. On a local machine, or when manual selection is needed, one can pass environment variables to the container. For example, to expose only GPU `0` to the application:
-
-```bash
-apptainer exec \
-  --nv \
-  --env CUDA_VISIBLE_DEVICES=0 \
-  $HOME/apptainer-images/gpumd.sif \
-  gpumd
-```
-
-The same can be written using `apptainer run`, since `run` calls `gpumd` by default:
-
-```bash
-apptainer run \
-  --nv \
-  --env CUDA_VISIBLE_DEVICES=0 \
-  $HOME/apptainer-images/gpumd.sif
-```
 
 ### Display help and metadata
 
@@ -180,21 +141,10 @@ By default, Apptainer does not fully isolate the container from the host system.
 Whenever `--containall` is activated, the directory on the host machine containing the GPUMD input files cannot be accessed from the container unless it is explicitly mounted.
 
 ```bash
-apptainer run --nv --containall $HOME/apptainer-images/gpumd.sif # run.in not found!
+apptainer exec --nv --containall $HOME/apptainer-images/gpumd.sif gpumd # run.in not found!
 ```
 
 It is then required to manually mount the directory containing `run.in`, `model.xyz`, and `nep.txt` using the `--bind` flag. For instance, if the input files are in the current directory:
-
-```bash
-apptainer run \
-  --nv \
-  --containall \
-  --bind $PWD:/work \
-  --pwd /work \
-  $HOME/apptainer-images/gpumd.sif
-```
-
-The same command can be written with `apptainer exec`:
 
 ```bash
 apptainer exec \
@@ -234,11 +184,9 @@ How to use the container image to run the GPUMD liquid Indium example?
 > - The image is located at: `$HOME/apptainer-images/gpumd.sif`
 > - Input files `nep.txt`, `model.xyz`, and `run.in` are located in the current directory: `$PWD`
 
-Possible answers:
+Possible answer:
 
-- `apptainer run --nv $HOME/apptainer-images/gpumd.sif`
-- or `apptainer exec --nv $HOME/apptainer-images/gpumd.sif gpumd`
-- or, only when no additional Apptainer option is required, `$HOME/apptainer-images/gpumd.sif`
+- `apptainer exec --nv $HOME/apptainer-images/gpumd.sif gpumd`
 
 ### Third exercise
 
@@ -252,12 +200,12 @@ How to use the container image to run the GPUMD liquid Indium example while full
 Example of a possible answer:
 
 ```bash
-apptainer run \
+apptainer exec \
   --nv \
   --containall \
   --bind $HOME/gpumd-examples/liquid-indium:/work \
   --pwd /work \
-  $HOME/apptainer-images/gpumd.sif
+  $HOME/apptainer-images/gpumd.sif gpumd
 ```
 
 ### Fourth exercise
