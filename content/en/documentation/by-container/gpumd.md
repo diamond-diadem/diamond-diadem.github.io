@@ -16,7 +16,6 @@ The image contains the following tools:
 
 - `gpumd`, the molecular dynamics executable;
 - `nep`, the Neuroevolution Potential executable;
-- `NepTrainKit`, a toolkit for preparing and analysing NEP training data.
 
 For more information on Apptainer containers, please look at [this page](/en/about/apptainer/).
 
@@ -66,7 +65,7 @@ ls
 
 **Disclaimer**
 
-> The commands presented here are for using the `gpumd` executable. To call another executable included in the image, such as `nep` or `NepTrainKit`, use `apptainer exec <options> <image> <executable-name>`.
+> The commands presented here are for using the `gpumd` executable. To call another executable included in the image, such as `nep`, use `apptainer exec <options> <image> <executable-name>`.
 
 ## One liner command
 
@@ -103,18 +102,10 @@ apptainer exec --nv $HOME/apptainer-images/gpumd.sif gpumd
 
 ### Accessing the other executables in the image
 
-The image also contains `nep` and `NepTrainKit`. These programs are not the container's default command, so they must be launched with `apptainer exec`.
-
-For example, to call the `nep` executable:
+The image also contains `nep`. For example, to call the `nep` executable you can use:
 
 ```bash
 apptainer exec --nv $HOME/apptainer-images/gpumd.sif nep
-```
-
-To call `NepTrain` from NepTrainKit:
-
-```bash
-apptainer exec --nv $HOME/apptainer-images/gpumd.sif NepTrain
 ```
 
 For the expected input files and options of `gpumd` and `nep`, please refer to the [GPUMD documentation](https://gpumd.org/).
