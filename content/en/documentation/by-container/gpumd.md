@@ -33,15 +33,6 @@ apptainer pull $HOME/apptainer-images/gpumd.sif \
   oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/gpumd.sif:latest
 ```
 
-If you prefer to keep the name used during download, you can also run:
-
-```bash
-apptainer pull gpu.sif \
-  oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/gpumd.sif:latest
-mkdir -p $HOME/apptainer-images
-mv gpu.sif $HOME/apptainer-images/gpumd.sif
-```
-
 In the rest of this tutorial, we suppose that the image is available at:
 
 ```bash
