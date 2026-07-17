@@ -55,5 +55,13 @@ Voici les liens pour accéder rapidement à la section de documentation des outi
             <td class="table-cell-left"><a href="/documentation/by-container/amitex/"><i class="icon-amitex-fftp"></i>AMITEX_FFTP</a></td>
             <td></td>
         </tr>
+        <tr>
+            <td class="table-cell-left"><a href="/documentation/by-container/freefem/"><i class="icon-freefem"></i>FreeFEM</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="table-cell-left"><a href="/documentation/by-container/ndm/"><i class="icon-ndm"></i>NDM</a></td>
+            <td></td>
+        </tr>
     </tbody>
 </table>

@@ -54,5 +54,13 @@ Here are the links for quick access to the documentation section for the tools y
             <td class="table-cell-left"><a href="/en/documentation/by-container/amitex/"><i class="icon-amitex-fftp"></i>AMITEX_FFTP</a></td>
             <td></td>
         </tr>
+        <tr>
+            <td class="table-cell-left"><a href="/en/documentation/by-container/freefem/"><i class="icon-freefem"></i>FreeFEM</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="table-cell-left"><a href="/en/documentation/by-container/ndm/"><i class="icon-ndm"></i>NDM</a></td>
+            <td></td>
+        </tr>
     </tbody>
 </table>
