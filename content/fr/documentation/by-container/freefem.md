@@ -25,7 +25,7 @@ Pour illustrer les différentes commandes, un ensemble de fichiers d'entrée pou
 Ces fichiers correspondent à deux exemples de tutoriels issus de la documentation officielle de FreeFEM :
 
 - `poisson.edp` : un fichier d'entrée FreeFEM pour résoudre l'équation de Poisson sur une géométrie en forme de L avec adaptation de maillage et visualisation graphique en séquentiel issu de cet [exemple](https://doc.freefem.org/examples/misc.html#poisson-s-equation),
-- `MPIGMRES2d.edp` : un fichier d'entrée FreeFEM pour résoudre un problème de type Poisson sur un carré unitaire en utilisant une méthode de décomposition de domaine en parallèle, issu de cet [exemple](https://doc.freefem.org/examples/parallelization.html#mpi-gmres-2d).
+- `MPIGMRES2D.edp` : un fichier d'entrée FreeFEM pour résoudre un problème de type Poisson sur un carré unitaire en utilisant une méthode de décomposition de domaine en parallèle, issu de cet [exemple](https://doc.freefem.org/examples/parallelization.html#mpi-gmres-2d).
 
 Dans ce tutoriel, nous supposerons que les fichiers d'entrée contenus dans cette archive se trouvent dans le répertoire courant. Pour les extraire :
 
@@ -85,7 +85,7 @@ Les images du maillage final et de la solution attendus sont disponibles dans la
 
 Le fichier d'entrée `MPIGMRES2D.edp` permet de résoudre un problème de type Poisson sur un carré unitaire décomposé en sous-domaines en parallèle sur plusieurs cœurs avec MPI. Le domaine est d'abord partitionné avec METIS, puis un maillage et une partition de l'unité sont construits automatiquement pour échanger des données entre les sous-domaines voisins. Le système linéaire est ensuite résolu avec un algorithme de type GMRES préconditionné par une méthode de Schwarz additive à un niveau (`-gmres 2`). L'argument `-k` contrôle le raffinement appliqué à chaque sous-domaine après partitionnement, et l'argument `-n` définit la résolution du maillage global.
 
-Pour exécuter cette simulation, le conteneur FreeFEM peut être utilisé de deux manières différentes : le mode embarqué, où la bibliothèque MPI intégré dans le conteneur est utilisée pour lancer les processus ou le mode hybride, où la bibliothèque MPI de l'hôte lance le conteneur lui-même pour chaque tâche.
+Pour exécuter cette simulation, le conteneur FreeFEM peut être utilisé de deux manières différentes : le mode embarqué, où la bibliothèque MPI intégrée dans le conteneur est utilisée pour lancer les processus ou le mode hybride, où la bibliothèque MPI de l'hôte lance le conteneur lui-même pour chaque tâche.
 
 **Mode embarqué** :
 

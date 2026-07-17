@@ -25,7 +25,7 @@ To illustrate the various commands, a set of FreeFEM input files is available in
 Those files correspond to two tutorial examples from the FreeFEM official documentation:
 
 - `poisson.edp`: A FreeFEM [sequential example](https://doc.freefem.org/examples/misc.html#poisson-s-equation) input file to solve the Poisson equation on a basic L-shaped geometry with mesh adaptation and graphic visualization,
-- `MPIGMRES2d.edp`: A FreeFEM [parallel example](https://doc.freefem.org/examples/parallelization.html#mpi-gmres-2d) input file solving a Poisson-type problem on a unit square using domain decomposition.
+- `MPIGMRES2D.edp`: A FreeFEM [parallel example](https://doc.freefem.org/examples/parallelization.html#mpi-gmres-2d) input file solving a Poisson-type problem on a unit square using domain decomposition.
 
 In this tutorial, we will assume that the input files contained in this archive are in the current directory. To extract them:
 
