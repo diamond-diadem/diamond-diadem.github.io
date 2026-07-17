@@ -599,6 +599,20 @@ tr {
 
 // // END mprove toc behaviour (while scrolling) END // //
 
+// // Keep anchor-linked headings clear of the sticky navbar // //
+
+html {
+    scroll-padding-top: 7rem;
+}
+
+@include media-breakpoint-up(lg) {
+    html {
+        scroll-padding-top: 8rem;
+    }
+}
+
+// // END keep anchor-linked headings clear of the sticky navbar END // //
+
 // // // END modify _global.scss END // // //
 
 .btn-toggle {
