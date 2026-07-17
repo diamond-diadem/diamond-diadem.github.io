@@ -1,7 +1,7 @@
 ---
 title: "How to use the VMD Apptainer image?"
 linkTitle: VMD tutorial
-weight: 4
+weight: 10
 description: "Tutorial on using the DIAMOND VMD Apptainer container for molecular dynamics visualization, including container setup and usage examples."
 ---
 

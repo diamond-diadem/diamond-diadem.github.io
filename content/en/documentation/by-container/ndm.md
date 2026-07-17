@@ -1,7 +1,7 @@
 ---
 title: "How to use the NDM Apptainer image ?"
 linkTitle: NDM tutorial
-weight: 8
+weight: 7
 description: "Tutorial on using the DIAMOND NDM Apptainer container: pulling the image, running simulations, and usage examples for molecular dynamics."
 ---
 

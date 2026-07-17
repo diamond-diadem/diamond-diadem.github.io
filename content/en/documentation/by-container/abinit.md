@@ -1,7 +1,7 @@
 ---
 title: How to use Abinit Apptainer image?
 linkTitle: Abinit tutorial
-weight: 1
+weight: 4
 description: "Tutorial on using the DIAMOND Abinit Apptainer container: pulling the image, running calculations, and usage examples for DFT computations."
 ---
 
