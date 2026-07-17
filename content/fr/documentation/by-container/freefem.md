@@ -43,7 +43,7 @@ apptainer exec freefem.sif ff-mpirun -np N MPIGMRES2D.edp -d 1 -k 1 -gmres 2 -n 
 
 ## Utilisation détaillée du conteneur FreeFEM
 
-Cette section présente différentes façons d'utiliser l'image FreeFEM. Pour plus de détails sur les commandes Apptainer, veuillez consulter [ce tutoriel](/documentation/use/apptainer-image/#apptainer-crash-course).
+Cette section présente différentes façons d'utiliser l'image FreeFEM. Pour plus de détails sur les commandes Apptainer, veuillez consulter [ce tutoriel](/documentation/use/apptainer-image/#apptainer--cours-accéléré).
 
 ### Introduction
 

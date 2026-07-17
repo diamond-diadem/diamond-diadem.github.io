@@ -45,7 +45,6 @@ With an active community and continuous development, FreeFEM remains at the fore
 
 {{< link-card title="Learn to use this container image" href="/en/documentation/by-container/freefem" icon="tabler-icons/outline/package" class="mb-0" >}}
 
-
 <h3 class="mb-1 mt-3">FreeFEM documentation</h3>
 
 {{< card-grid >}}
