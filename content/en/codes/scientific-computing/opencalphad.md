@@ -49,7 +49,7 @@ In summary, OpenCalphad is a powerful, open-source tool for thermodynamic modeli
 
 {{< card-grid >}}
 {{< link-card title="Official website" href="http://opencalphad.org" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
-{{< link-card title="Official documentation" href="https://github.com/sundmanbo/opencalphad" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
+{{< link-card title="Official documentation" href="https://github.com/sundmanbo/opencalphad/tree/v.6.0/documentation" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
 {{< /card-grid >}}
 
 <h3 class="mb-1 mt-3">Examples</h3>
