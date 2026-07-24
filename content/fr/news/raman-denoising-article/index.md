@@ -1,8 +1,8 @@
 ---
-title: "Article accepté - Débruitage Raman Noise2Noise"
+title: "Article publié - Débruitage Raman Noise2Noise"
 description: ""
 summary: "<b>A Practical Noise2Noise Denoising Pipeline for High-Throughput Raman Spectroscopy</b><br/><em>Advanced Engineering Materials</em>"
-eventDate: "4 juin 2026"
+eventDate: "23 juillet 2026"
 backgroundImage: "images/news/backgrounds/raman-denoising-article.png"
 backgroundOpacity: 0.18
 # location: ""
@@ -51,11 +51,11 @@ seo:
 
 <big>
 
-L'article a été accepté pour publication. Il présente un pipeline de débruitage pratique basé sur l'approche Noise2Noise pour la spectroscopie Raman haut débit, développé dans le cadre d'une collaboration du projet DIAMOND avec la plateforme <a href="https://www.pepr-diadem.fr/projet/libelul/" target="_blank" rel="noopener noreferrer">LIBELUL</a>. L'approche repose sur un auto-encodeur convolutif 1D léger entraîné de manière auto-supervisée, ne nécessitant ni bibliothèque spectrale externe ni spectres de référence à rapport signal/bruit élevé. Le pipeline permet un gain de temps d'environ 65× sur l'ensemble du flux de travail, tout en préservant la fidélité spectrale et la discrimination de phase.
+L'article a été publié en ligne et en accès ouvert par *Advanced Engineering Materials* (Wiley). Il présente un pipeline de débruitage pratique basé sur l'approche Noise2Noise pour la spectroscopie Raman haut débit, développé dans le cadre d'une collaboration du projet DIAMOND avec la plateforme <a href="https://www.pepr-diadem.fr/projet/libelul/" target="_blank" rel="noopener noreferrer">LIBELUL</a>. L'approche repose sur un auto-encodeur convolutif 1D léger entraîné de manière auto-supervisée, ne nécessitant ni bibliothèque spectrale externe ni spectres de référence à rapport signal/bruit élevé. Le pipeline permet un gain de temps d'environ 65× sur l'ensemble du flux de travail, tout en préservant la fidélité spectrale et la discrimination de phase.
 
 Le code du pipeline est disponible en open source sur <a href="https://doi.org/10.5281/zenodo.18154207" target="_blank" rel="noopener noreferrer">Zenodo</a>.
 
-Retrouvez le preprint sur <a href="https://arxiv.org/abs/2605.18511" target="_blank" rel="noopener noreferrer">arXiv</a> ou <a href="https://hal.science/hal-05621385v1" target="_blank" rel="noopener noreferrer">HAL</a>.
+Accédez à <a href="https://doi.org/10.1002/adem.71032" target="_blank" rel="noopener noreferrer">l'article publié</a>.
 
 </big>
 
