@@ -62,5 +62,9 @@ Here are the links for quick access to the documentation section for the tools y
             <td class="table-cell-left"><a href="/en/documentation/by-container/ndm/"><i class="icon-ndm"></i>NDM</a></td>
             <td></td>
         </tr>
+        <tr>
+            <td class="table-cell-left"><a href="/en/documentation/by-container/opencalphad/"><i class="icon-opencalphad"></i>OpenCalphad</a></td>
+            <td></td>
+        </tr>
     </tbody>
 </table>
