@@ -42,17 +42,17 @@ apptainer exec opencalphad.sif oc6P input.OCM
 
 ## Utilisation détaillée du conteneur OpenCalphad
 
-Cette section présente différentes façons d'utiliser l'image OpenCalphad pour calculer et tracer le diagramme de phases classique du système C-Fe. Pour plus de détails sur les commandes Apptainer, veuillez consulter [ce tutoriel](/documentation/use/apptainer-image/#apptainer-crash-course).
+Cette section explique comment utiliser l'image OpenCalphad pour calculer et tracer le diagramme de phases classique du système C-Fe. Pour plus de détails sur les commandes Apptainer, veuillez consulter [ce tutoriel](/documentation/use/apptainer-image/#apptainer-crash-course).
 
 ### Introduction
 
-OpenCalphad est une suite logicielle open-source parallélisée avec OpenMP, conçue pour les calculs thermodynamiques pour des systèmes multicomposants.
+OpenCalphad est une suite logicielle open-source parallélisée avec OpenMP, conçue pour les calculs thermodynamiques de systèmes multicomposants.
 
 L'exécutable principal de l'image est `oc6P`. Les diagrammes produits par OpenCalphad sont tracés avec l'exécutable `gnuplot`, également embarqué par le conteneur.
 
 ### Utilisation de l'exemple du tutoriel avec OpenCalphad
 
-Le fichier d'entrée `input.OCM` permet de tracer le diagramme de phases du système C-Fe. Il a été par adaptation de l'exemple `map1.OCM` du répertoire *macros* du [dépôt officiel](https://github.com/sundmanbo/opencalphad/tree/v.6.0/macros) correspondant à la version du logiciel intégrée dans le conteneur (`v.6.0`). Une description de cet exemple se trouve dans la [documentation](https://github.com/sundmanbo/opencalphad/blob/v.6.0/documentation/OC-macros.pdf) officielle à la page 14, section 4.3.3 : *Phase diagram for C-Fe*.
+Le fichier d'entrée `input.OCM` permet de tracer le diagramme de phases du système C-Fe. Il a été obtenu par adaptation de l'exemple `map1.OCM` du répertoire *macros* du [dépôt officiel](https://github.com/sundmanbo/opencalphad/tree/v.6.0/macros) correspondant à la version du logiciel intégrée dans le conteneur (`v.6.0`). Une description de cet exemple se trouve dans la [documentation](https://github.com/sundmanbo/opencalphad/blob/v.6.0/documentation/OC-macros.pdf) officielle à la page 14, section 4.3.3 : *Phase diagram for C-Fe*.
 
 Pour lancer le calcul :
 
@@ -66,7 +66,7 @@ Cette commande affiche différents diagrammes `gnuplot`, tels qu'un diagramme de
 
 ### Exécution d'autres exemples avec l'image du conteneur OpenCalphad
 
-La [documentation](https://github.com/sundmanbo/opencalphad/blob/v.6.0/documentation/OC-macros.pdf) officielle décrit de nombreux autres exemples simples pour présenter les capacités du logiciel OpenCalphad. Les fichiers d'entrée associés se trouvent dans le répertoire [macros](https://github.com/sundmanbo/opencalphad/tree/v.6.0/macros) du dépôt de la version. Une légère adaptation est nécessaire pour exécuter ces exemples avec la version conteneurisée du logiciel. Pour permettre l'exécution d'un script `.OCM` avec l'image du conteneur OpenCalphad, ajouter simplement les lignes suivantes au tout début du script :
+La [documentation](https://github.com/sundmanbo/opencalphad/blob/v.6.0/documentation/OC-macros.pdf) officielle décrit de nombreux autres exemples simples pour présenter les capacités du logiciel OpenCalphad. Les fichiers d'entrée associés se trouvent dans le répertoire [macros](https://github.com/sundmanbo/opencalphad/tree/v.6.0/macros) du dépôt de cette version. Une légère adaptation est nécessaire pour exécuter ces exemples avec la version conteneurisée du logiciel. Pour permettre l'exécution d'un script `.OCM` avec l'image du conteneur OpenCalphad, ajouter simplement les lignes suivantes au tout début du script :
 
 ```txt
 enter gnuplot_term

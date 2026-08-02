@@ -49,11 +49,11 @@ This section explains how to use the OpenCalphad image to compute and plot the c
 
 OpenCalphad is an OpenMP-parallelized open-source software suite designed for thermodynamic calculations in multicomponent systems.
 
-The main executable in the image is the `oc6P` executable. The diagrams produced by OpenCalphad are plotted with the `gnuplot` executable, also embedded in the image. 
+The main executable in the image is the `oc6P` executable. The diagrams produced by OpenCalphad are plotted with the `gnuplot` executable, also embedded in the image.
 
-### Using the OpenCalphad on the tutorial example
+### Using OpenCalphad on the tutorial example
 
-The input file `input.OCM` allows us to plot the phase diagram for the C-Fe system. It is adapted from the `map1.OCM` example from the *macros* directory of the [official repository](https://github.com/sundmanbo/opencalphad/tree/v.6.0/macros) corresponding to the release version of the software embedded in the container (`v.6.0`). A description of this example can be found in the official [documentation](https://github.com/sundmanbo/opencalphad/blob/v.6.0/documentation/OC-macros.pdf) at page 14 under section 4.3.3: *Phase diagram for C-Fe*.
+The input file `input.OCM` allows us to plot the phase diagram for the C-Fe system. It is adapted from the `map1.OCM` example from the *macros* directory of the [official repository](https://github.com/sundmanbo/opencalphad/tree/v.6.0/macros) corresponding to the release version of the software embedded in the container (`v.6.0`). A description of this example can be found in the official [documentation](https://github.com/sundmanbo/opencalphad/blob/v.6.0/documentation/OC-macros.pdf) on page 14, under section 4.3.3: *Phase diagram for C-Fe*.
 
 To run the computation:
 
@@ -63,7 +63,7 @@ apptainer exec opencalphad.sif oc6P input.OCM
 
 This command displays different `gnuplot` diagrams such as a phase diagram for the system where the whole carbon range up to graphite is included and the metastable C-Fe system phase diagram with cementite. After each plot, the user is invited to hit the `Enter` key inside their shell to trigger the next plot. Some of the expected plots are shown in the example [documentation](https://github.com/sundmanbo/opencalphad/blob/v.6.0/documentation/OC-macros.pdf).
 
-At the end of the computation, an interactive shell is opened by OpenCalphad. This shell can be safely closed with the `Ctrl/Command + C` keys combination. 
+At the end of the computation, an interactive shell is opened by OpenCalphad. This shell can be safely closed with the `Ctrl/Command + C` keys combination.
 
 ### Running other examples with the OpenCalphad container image
 
@@ -77,7 +77,7 @@ x11 size 600,500 font "Arial,16"
 
 These lines ensure that `gnuplot` uses the `X11` window system instead of the `Qt` library which is not embedded in the container.
 
-In most of the examples scripts, the `@&` keyword is used at multiple places to pause the execution until a key is pressed. These commands can be safely deleted for convenience when they are not placed between two plots. Else, when they do separate plots, these pauses should not be deleted as doing so would make `gnuplot` display the same diagram twice in a row. 
+In most of the example scripts, the `@&` keyword is used at multiple places to pause the execution until a key is pressed. These commands can be safely deleted for convenience when they are not placed between two plots. Otherwise, when they do separate plots, these pauses should not be deleted as doing so would make `gnuplot` display the same diagram twice in a row.
 
 Similarly, the `set inter` command at the end of an OpenCalphad script is responsible for triggering the interactive shell at the end of the script execution. Deleting this command makes the executable exit with an error at the end of a script.
 
