@@ -42,7 +42,7 @@ apptainer exec opencalphad.sif oc6P input.OCM
 
 ## Utilisation détaillée du conteneur OpenCalphad
 
-Cette section explique comment utiliser l'image OpenCalphad pour calculer et tracer le diagramme de phases classique du système C-Fe. Pour plus de détails sur les commandes Apptainer, veuillez consulter [ce tutoriel](/documentation/use/apptainer-image/#apptainer-crash-course).
+Cette section explique comment utiliser l'image OpenCalphad pour calculer et tracer le diagramme de phases classique du système C-Fe. Pour plus de détails sur les commandes Apptainer, veuillez consulter [ce tutoriel](/documentation/use/apptainer-image/#apptainer--cours-accéléré).
 
 ### Introduction
 

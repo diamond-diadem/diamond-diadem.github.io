@@ -43,7 +43,7 @@ apptainer exec opencalphad.sif oc6P input.OCM
 
 ## Detailed usage for the OpenCalphad container
 
-This section explains how to use the OpenCalphad image to compute and plot the classical phase diagram for C-Fe. For more details about Apptainer commands, please look at [this tutorial](/en/documentation/use/apptainer-image/#apptainer-crash-course).
+This section explains how to use the OpenCalphad image to compute and plot the classical phase diagram for C-Fe. For more details about Apptainer commands, please look at [this tutorial](/en/documentation/use/apptainer-image/#apptainer--crash-course).
 
 ### Introduction
 

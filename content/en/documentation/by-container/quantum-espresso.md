@@ -62,7 +62,7 @@ apptainer exec $HOME/apptainer-images/quantum-espresso.sif mpirun -np <N> pw.x -
 
 ## Detailed usage for the Quantum Espresso container
 
-This section presents different ways to use the Quantum Espresso image. For more details about Apptainer commands, please look at [this tutorial](/en/documentation/use/apptainer-image/#apptainer-crash-course).
+This section presents different ways to use the Quantum Espresso image. For more details about Apptainer commands, please look at [this tutorial](/en/documentation/use/apptainer-image/#apptainer--crash-course).
 
 ### Using the Quantum Espresso container
 
