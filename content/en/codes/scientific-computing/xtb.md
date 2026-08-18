@@ -34,7 +34,7 @@ docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-s
 
 <h3 class="mb-1">Tutorial</h3>
 
-{{< link-card title="Content to be added" description="<i>Learn to use this container image</i>" href="#bottom" icon="tabler-icons/outline/package" disabled="true" class="mb-0" >}}
+{{< link-card title="Learn to use this container image" href="/en/documentation/by-container/xtb" icon="tabler-icons/outline/package" >}}
 
 <h3 class="mb-1 mt-3">XTB documentation</h3>
 
