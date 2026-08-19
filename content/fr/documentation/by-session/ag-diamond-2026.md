@@ -28,6 +28,8 @@ Cette session de formation a été organisée en amont de l'assemblée général
 
 La formation a été construite par Ahmed AMRANI et co-supervisée par Ahmed, Jean-Philippe POLI et Léo ORVEILLON.
 
-L'intégralité de son contenu ainsi que les explications pour l'effectuer sont disponibles sous le lien suivant [gitlab: Formation IA](https://gricad-gitlab.univ-grenoble-alpes.fr/diamond/jupyter/training-diamond-ag-2026)
+L'intégralité de son contenu ainsi que les explications pour l'effectuer sont disponibles dans le dépôt du tutoriel : lien ci-dessous.
 
 </div>
+
+{{< link-card title="GitLab : Formation IA" description="Accéder aux notebooks et aux instructions" href="https://gricad-gitlab.univ-grenoble-alpes.fr/diamond/jupyter/training-diamond-ag-2026" target="_blank" icon="tabler-icons/outline/brand-gitlab" class="mb-0" >}}
