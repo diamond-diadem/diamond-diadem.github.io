@@ -49,7 +49,7 @@ Additionally, PLUMED supports a scripting interface that enables users to set up
 
 <h3 class="mb-1">Tutorial</h3>
 
-{{< link-card title="Content to be added" description="<i>Learn to use this container image</i>" href="#bottom" icon="tabler-icons/outline/package" disabled="true" class="mb-0" >}}
+{{< link-card title="Learn to use this container image" href="/en/documentation/by-container/plumed" icon="tabler-icons/outline/package" class="mb-0" >}}
 
 <h3 class="mb-1 mt-3">PLUMED documentation</h3>
 
@@ -60,4 +60,4 @@ Additionally, PLUMED supports a scripting interface that enables users to set up
 
 <h3 class="mb-1 mt-3">Examples</h3>
 
-{{< link-card title="Content to be added" description="<i>Download input files</i>" href="#bottom" icon="tabler-icons/outline/file-export" disabled="true" class="mb-0" >}}
+{{< link-card title="Download input files" href="/downloads/plumed-tutorial-inputs.tar.gz" icon="tabler-icons/outline/file-export" >}}
