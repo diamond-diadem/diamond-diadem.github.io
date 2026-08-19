@@ -5,11 +5,11 @@ weight: 1
 description: "Tutoriel pour explorer l'utilisation de l'IA pour la science des matériaux, en partant des données brutes jusqu'à l'inférence du modèle."
 ---
 
+<div align="justify">
+
 Ce tutoriel propose une série de notebooks pédagogiques pour découvrir l’application de l’intelligence artificielle à la science des matériaux.
 
 À travers des exemples pratiques, les notebooks présentent progressivement différentes approches, depuis l’analyse et l’exploration des données jusqu’à la prédiction, la découverte de relations causales et l’optimisation bayésienne.
-
-<div align="justify">
 
 {{< callout context="note" title="Prérequis" icon="tabler-icons/outline/info-circle" >}}
 

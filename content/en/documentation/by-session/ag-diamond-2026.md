@@ -5,10 +5,11 @@ weight: 1
 description: "Tutorial to discover some use of AI for material science, using a complete pipeline from raw data to model inference."
 ---
 
+<div align="justify">
+
 This tutorial offers a series of educational notebooks designed to introduce the application of artificial intelligence to materials science.
 
 Through practical examples, the notebooks progressively introduce different approaches, ranging from data analysis and exploration to prediction, the discovery of causal relationships, and Bayesian optimization.
-<div align="justify">
 
 {{< callout context="note" title="Prerequisites" icon="tabler-icons/outline/info-circle" >}}
 
