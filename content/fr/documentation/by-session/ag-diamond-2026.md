@@ -11,6 +11,8 @@ Ce tutoriel propose une série de notebooks pédagogiques pour découvrir l’ap
 
 À travers des exemples pratiques, les notebooks présentent progressivement différentes approches, depuis l’analyse et l’exploration des données jusqu’à la prédiction, la découverte de relations causales et l’optimisation bayésienne.
 
+</div>
+
 {{< callout context="note" title="Prérequis" icon="tabler-icons/outline/info-circle" >}}
 
 Pour effectuer ce tutoriel, il vous faudra au choix :
@@ -19,6 +21,8 @@ Pour effectuer ce tutoriel, il vous faudra au choix :
 - **OU** avoir installé **Python 3.10+** avec **uv** ainsi que **Graphviz** (plus d'informations sur comment les installer dans le tutoriel).
 
 {{< /callout >}}
+
+<div align="justify">
 
 Cette session de formation a été organisée en amont de l'assemblée générale de Diamond 2026 à Lyon.
 
