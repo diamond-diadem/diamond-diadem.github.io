@@ -15,8 +15,8 @@ Through practical examples, the notebooks progressively introduce different appr
 
 To complete this tutorial, you will need one of the following:
  - **Apptainer** installed [(installation guide)](/documentation/install/install-apptainer/)
- - **OR** Have **Docker** installed
- - **OR** Have **Python 3.10+** installed with **uv** and **Graphviz** (more information on how to install them is provided in the tutorial).
+ - **OR** have **Docker** installed
+ - **OR** have **Python 3.10+** installed with **uv** and **Graphviz** (more information on how to install them is provided in the tutorial).
 
 {{< /callout >}}
 

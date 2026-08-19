@@ -15,8 +15,8 @@ Ce tutoriel propose une série de notebooks pédagogiques pour découvrir l’ap
 
 Pour effectuer ce tutoriel, il vous faudra au choix :
 - Avoir installé **Apptainer** [(guide d'installation)](/documentation/install/install-apptainer/)
-- **OU** Avoir installé **Docker**
-- **OU** Avoir installé **Python 3.10+** avec **uv** ainsi que **Graphviz** (plus d'informations sur comment les installer dans le tutoriel).
+- **OU** avoir installé **Docker**
+- **OU** avoir installé **Python 3.10+** avec **uv** ainsi que **Graphviz** (plus d'informations sur comment les installer dans le tutoriel).
 
 {{< /callout >}}
 
