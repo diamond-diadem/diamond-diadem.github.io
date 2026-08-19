@@ -65,4 +65,4 @@ Here are the links for quick access to the documentation section for the tools y
     </tbody>
 </table>
 
-#### Also have a look at the [Tutorial Diamond GA 2026](/en/documentation/by-session/diamond-ga-2026/), a session-specific tutorial on discovering AI for material science.
+#### The [DIAMOND GA 2026 tutorial](/en/documentation/by-session/diamond-ga-2026/) revisits the AI training session held ahead of the DIAMOND 2026 general meeting in Lyon, introducing AI applied to materials science
