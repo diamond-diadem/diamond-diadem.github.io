@@ -65,3 +65,5 @@ Voici les liens pour accéder rapidement à la section de documentation des outi
         </tr>
     </tbody>
 </table>
+
+#### Consultez également le [Tutoriel AG Diamond 2026](/documentation/by-session/diamond-ga-2026/), un tutoriel de session pour découvrir l'IA appliquée à la science des matériaux.
