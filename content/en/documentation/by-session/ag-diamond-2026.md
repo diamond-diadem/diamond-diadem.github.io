@@ -1,6 +1,6 @@
 ---
-title: "Tutorial Diamond GA 2026"
-linkTitle: Tutorial Diamond GA 2026
+title: "Tutorial DIAMOND GA 2026"
+linkTitle: Tutorial DIAMOND GA 2026
 weight: 1
 description: "Tutorial to discover some use of AI for material science, using a complete pipeline from raw data to model inference."
 ---
@@ -24,9 +24,9 @@ To complete this tutorial, you will need one of the following:
 
 <div align="justify">
 
-This training session was organized ahead of the Diamond 2026 general meeting in Lyon.
+This training session was organized ahead of the DIAMOND 2026 general meeting in Lyon.
 
-The training program was developed by Ahmed AMRANI and co-supervised by Ahmed, Jean-Philippe POLI and Léo ORVEILLON.
+The training program was developed by Ahmed AMRANI and co-supervised by Ahmed AMRANI, Jean-Philippe POLI and Léo ORVEILLON.
 
 The full content, along with instructions on how to do it, is available in the tutorial's repository: link below.
 

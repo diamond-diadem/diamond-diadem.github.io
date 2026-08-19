@@ -1,6 +1,6 @@
 ---
-title: "Tutoriel AG Diamond 2026"
-linkTitle: Tutoriel AG Diamond 2026
+title: "Tutoriel AG DIAMOND 2026"
+linkTitle: Tutoriel AG DIAMOND 2026
 weight: 1
 description: "Tutoriel pour explorer l'utilisation de l'IA pour la science des matériaux, en partant des données brutes jusqu'à l'inférence du modèle."
 ---
@@ -24,9 +24,9 @@ Pour effectuer ce tutoriel, il vous faudra au choix :
 
 <div align="justify">
 
-Cette session de formation a été organisée en amont de l'assemblée générale de Diamond 2026 à Lyon.
+Cette session de formation a été organisée en amont de l'assemblée générale de DIAMOND 2026 à Lyon.
 
-La formation a été construite par Ahmed AMRANI et co-supervisée par Ahmed, Jean-Philippe POLI et Léo ORVEILLON.
+La formation a été construite par Ahmed AMRANI et co-supervisée par Ahmed AMRANI, Jean-Philippe POLI et Léo ORVEILLON.
 
 L'intégralité de son contenu ainsi que les explications pour l'effectuer sont disponibles dans le dépôt du tutoriel : lien ci-dessous.
 
