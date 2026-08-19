@@ -24,3 +24,5 @@ This training session was organized ahead of the Diamond 2026 general meeting in
 The training program was developed by Ahmed AMRANI and co-supervised by Ahmed, Jean-Philippe POLI and Léo ORVEILLON.
 
 The full content, along with instructions on how to do it, is available at the following link [gitlab: AI Training](https://gricad-gitlab.univ-grenoble-alpes.fr/diamond/jupyter/training-diamond-ag-2026)
+
+</div>
