@@ -1,7 +1,6 @@
 {
   "htmlElements": {
     "tags": [
-      "?xml",
       "a",
       "article",
       "aside",
@@ -528,7 +527,6 @@
       "tabler-icons/outline/camera-spark",
       "tabler-icons/outline/file-export",
       "tabler-icons/outline/info-circle",
-      "tabler-icons/outline/notebook",
       "tabler-icons/outline/package",
       "tabler-icons/outline/question-mark",
       "tabler-icons/outline/settings-question",
@@ -741,7 +739,6 @@
       "guide-de-démarrage-rapide",
       "h-rh-i-0",
       "here-are-the-links-for-quick-access-to-image-specific-tutorials",
-      "here-are-the-links-for-quick-access-to-session-specific-tutorials",
       "how-to-install-wsl2-on-windows",
       "how-to-run-a-visualization-container-on-hpc-frontends",
       "how-to-run-a-visualization-container-without-superuser-rights",
@@ -914,7 +911,6 @@
       "svg-camera-spark",
       "svg-file-export",
       "svg-info-circle",
-      "svg-notebook",
       "svg-package",
       "svg-question-mark",
       "svg-settings-question",
@@ -967,7 +963,6 @@
       "visualiser-les-résultats",
       "visualize-the-md-trajectory",
       "visualizing-the-results",
-      "voici-les-liens-pour-accéder-rapidement-aux-tutoriels-par-session-",
       "voici-les-liens-pour-accéder-rapidement-aux-tutoriels-spécifiques-par-image-",
       "voir-aussi",
       "what-are-the-benefits",

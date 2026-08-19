@@ -16,7 +16,7 @@ Through practical examples, the notebooks progressively introduce different appr
 {{< callout context="note" title="Prerequisites" icon="tabler-icons/outline/info-circle" >}}
 
 To complete this tutorial, you will need one of the following:
- - **Apptainer** installed [(installation guide)](/documentation/install/install-apptainer/)
+ - **Apptainer** installed [(installation guide)](/en/documentation/install/install-apptainer/)
  - **OR** have **Docker** installed
  - **OR** have **Python 3.10+** installed with **uv** and **Graphviz** (more information on how to install them is provided in the tutorial).
 
