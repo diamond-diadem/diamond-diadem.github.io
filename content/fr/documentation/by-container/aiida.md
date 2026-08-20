@@ -1,6 +1,6 @@
 ---
 title: Tutoriel AiiDA
-weight: 6
+weight: 1
 description: "Tutoriel sur l'utilisation d'AiiDA via le conteneur Apptainer de DIAMOND pour automatiser des workflows de calcul de matériaux avec traçabilité."
 ---
 

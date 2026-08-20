@@ -2,7 +2,7 @@
 
 title: Comment utiliser l'image Apptainer de xTB ?
 linkTitle: Tutoriel xTB
-weight: 3
+weight: 7
 description: "Tutoriel sur l'utilisation de l'image Apptainer xTB de DIAMOND : récupération du conteneur, exécution et cas d'usage pour la chimie quantique."
 ---
 
