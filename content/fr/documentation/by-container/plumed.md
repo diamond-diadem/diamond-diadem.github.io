@@ -23,7 +23,7 @@ Pour illustrer les différentes commandes, un ensemble de fichiers d'entrée pou
 
 Ces fichiers correspondent à un tutoriel issu de la [documentation officielle](https://www.plumed.org/doc-v2.9/user-doc/html/masterclass-21-1.html) de PLUMED. L'archive contient les fichiers suivants :
 
-- `5-HT1B.pdb`: conformation de référence du récepteur 5-HT1B avec le ligand sérotonine,,
+- `5-HT1B.pdb`: conformation de référence du récepteur 5-HT1B avec le ligand sérotonine,
 - `5-HT1B.xtc`: trajectoire de dynamique moléculaire du récepteur 5-HT1B avec le ligand sérotonine, pré-calculée par le logiciel GROMACS,
 - `plumed.dat` : un script d'entrée PLUMED. 
 
