@@ -2,7 +2,7 @@
 title: Comment utiliser l'image Apptainer PLUMED ?
 linkTitle: Tutoriel PLUMED
 weight: 9
-description: "Tutoriel sur l'utilisation de l'image Apptainer PLUMED de DIAMOND : récupération du conteneur, exécution et cas d'usage pour l'analyse de trajectoires de dynamique moléculaire pré-calculées."
+description: "Tutoriel sur l'utilisation de l'image Apptainer PLUMED de DIAMOND : récupération du conteneur, exécution et analyse de trajectoires de dynamique moléculaire"
 ---
 
 <div align="justify">
