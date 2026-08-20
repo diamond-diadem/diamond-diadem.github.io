@@ -48,7 +48,7 @@ En résumé, OpenCalphad est un outil puissant et open-source pour la modélisat
 <h3 class="mb-1 mt-3">Documentation OpenCalphad</h3>
 
 {{< card-grid >}}
-{{< link-card title="Site officiel" href="http://opencalphad.org" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
+{{< link-card title="Site officiel" href="https://www.opencalphad.com/" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
 {{< link-card title="Documentation officielle" href="https://github.com/sundmanbo/opencalphad/tree/v.6.0/documentation" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
 {{< /card-grid >}}
 
