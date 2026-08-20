@@ -63,6 +63,10 @@ Voici les liens pour accéder rapidement à la section de documentation des outi
             <td class="table-cell-left"><a href="/documentation/by-container/gpumd/"><i class="icon-gpumd"></i>GPUMD</a></td>
             <td></td>
         </tr>
+        <tr>
+            <td class="table-cell-left"><a href="/documentation/by-container/plumed/"><i class="icon-plumed"></i>PLUMED</a></td>
+            <td></td>
+        </tr>
     </tbody>
 </table>
 
