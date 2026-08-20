@@ -1,7 +1,7 @@
 ---
 title: "How to use the ParaView Apptainer image?"
 linkTitle: ParaView tutorial
-weight: 11
+weight: 13
 description: "Tutorial on using the DIAMOND ParaView Apptainer container for scientific data visualization, including container setup and usage examples."
 ---
 

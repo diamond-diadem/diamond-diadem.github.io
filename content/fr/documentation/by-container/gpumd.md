@@ -1,7 +1,7 @@
 ---
 title: Comment utiliser l'image Apptainer de GPUMD ? 
 linkTitle: Tutoriel GPUMD
-weight: 8
+weight: 11
 description: "Tutoriel sur l'utilisation de l'image Apptainer GPUMD de DIAMOND : récupération du conteneur, exécution et exemples pour la dynamique moléculaire GPU."
 ---
 
