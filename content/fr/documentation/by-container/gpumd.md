@@ -34,7 +34,7 @@ apptainer pull $HOME/apptainer-images/gpumd.sif \
   oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/gpumd.sif:latest
 ```
 
-In the rest of this tutorial, we suppose that the image is available at:
+Dans la suite de ce tutoriel, nous supposons que l'image est disponible à l'emplacement suivant :
 
 ```bash
 $HOME/apptainer-images/gpumd.sif
