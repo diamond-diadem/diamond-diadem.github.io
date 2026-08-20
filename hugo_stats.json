@@ -1,6 +1,7 @@
 {
   "htmlElements": {
     "tags": [
+      "?xml",
       "a",
       "article",
       "aside",
@@ -274,6 +275,7 @@
       "icon-freefem",
       "icon-gateway",
       "icon-gmsh",
+      "icon-gpumd",
       "icon-lammps",
       "icon-n2p2",
       "icon-ndm",

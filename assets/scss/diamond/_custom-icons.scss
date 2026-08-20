@@ -223,6 +223,11 @@
     @extend .custom-icon;
 }
 
+.icon-gpumd {
+    background-image: url(images/codes/gpumd/gpumd-logo.png);
+    @extend .custom-icon;
+}
+
 @include color-mode(dark) {
     .icon-ndm {
         background-image: url(images/codes/ndm/ndm-icon-dark.png);
