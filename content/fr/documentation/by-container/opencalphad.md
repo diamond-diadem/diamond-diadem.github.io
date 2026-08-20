@@ -52,7 +52,7 @@ L'exécutable principal de l'image est `oc6P`. Les diagrammes produits par OpenC
 
 ### Utilisation de l'exemple du tutoriel avec OpenCalphad
 
-Le fichier d'entrée `input.OCM` permet de tracer le diagramme de phases du système C-Fe. Il a été obtenu par adaptation de l'exemple `map1.OCM` du répertoire *macros* du [dépôt officiel](https://github.com/sundmanbo/opencalphad/tree/v.6.0/macros) correspondant à la version du logiciel intégrée dans le conteneur (`v.6.0`). Une description de cet exemple se trouve dans la [documentation](https://github.com/sundmanbo/opencalphad/blob/v.6.0/documentation/OC-macros.pdf) officielle à la page 14, section 4.3.3 : *Phase diagram for C-Fe*.
+Le fichier d'entrée `input.OCM` permet de tracer le diagramme de phases du système C-Fe. Il a été obtenu par adaptation de l'exemple `map3.OCM` du répertoire *macros* du [dépôt officiel](https://github.com/sundmanbo/opencalphad/tree/v.6.0/macros) correspondant à la version du logiciel intégrée dans le conteneur (`v.6.0`). Une description de cet exemple se trouve dans la [documentation](https://github.com/sundmanbo/opencalphad/blob/v.6.0/documentation/OC-macros.pdf) officielle à la page 14, section 4.3.3 : *Phase diagram for C-Fe*.
 
 Pour lancer le calcul :
 
@@ -60,7 +60,7 @@ Pour lancer le calcul :
 apptainer exec opencalphad.sif oc6P input.OCM
 ```
 
-Cette commande affiche différents diagrammes `gnuplot`, tels qu'un diagramme de phases pour le système incluant toute la gamme des fractions volumiques de carbone jusqu'au graphite, ainsi que le diagramme de phases métastable du système C-Fe avec la cémentite. Après chaque tracé, l'utilisateur est invité à appuyer sur la touche `Entrée` dans son terminal pour déclencher le tracé suivant. Certains des diagrammes attendus sont présentés dans la [documentation](https://github.com/sundmanbo/opencalphad/blob/v.6.0/documentation/OC-macros.pdf) de l'exemple.
+Cette commande affiche différents diagrammes `gnuplot`, tels qu'un diagramme de phases pour le système incluant toute la gamme de teneurs en carbone jusqu'au graphite, ainsi que le diagramme de phases métastable du système C-Fe avec la cémentite. Après chaque tracé, l'utilisateur est invité à appuyer sur la touche `Entrée` dans son terminal pour déclencher le tracé suivant. Certains des diagrammes attendus sont présentés dans la [documentation](https://github.com/sundmanbo/opencalphad/blob/v.6.0/documentation/OC-macros.pdf) de l'exemple.
 
 À la fin du calcul, un shell interactif est ouvert par OpenCalphad. Ce shell peut être fermé en toute sécurité avec la combinaison de touches `Ctrl/Command + C`.
 

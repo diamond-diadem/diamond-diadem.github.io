@@ -53,7 +53,7 @@ The main executable in the image is the `oc6P` executable. The diagrams produced
 
 ### Using OpenCalphad on the tutorial example
 
-The input file `input.OCM` allows us to plot the phase diagram for the C-Fe system. It is adapted from the `map1.OCM` example from the *macros* directory of the [official repository](https://github.com/sundmanbo/opencalphad/tree/v.6.0/macros) corresponding to the release version of the software embedded in the container (`v.6.0`). A description of this example can be found in the official [documentation](https://github.com/sundmanbo/opencalphad/blob/v.6.0/documentation/OC-macros.pdf) on page 14, under section 4.3.3: *Phase diagram for C-Fe*.
+The input file `input.OCM` allows us to plot the phase diagram for the C-Fe system. It is adapted from the `map3.OCM` example from the *macros* directory of the [official repository](https://github.com/sundmanbo/opencalphad/tree/v.6.0/macros) corresponding to the release version of the software embedded in the container (`v.6.0`). A description of this example can be found in the official [documentation](https://github.com/sundmanbo/opencalphad/blob/v.6.0/documentation/OC-macros.pdf) on page 14, under section 4.3.3: *Phase diagram for C-Fe*.
 
 To run the computation:
 
