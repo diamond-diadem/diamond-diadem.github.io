@@ -8,7 +8,7 @@ weight: 6
 description: "OpenCalphad is a thermodynamic software based on the CALPHAD method for computing phase diagrams and materials equilibria, available on DIAMOND."
 ---
 
-<a href="https://github.com/sundmanbo/opencalphad" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo">
+<a href="https://www.opencalphad.com/" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo">
     <span class="logo-opencalphad" aria-hidden="true"></span>
 </a>
 

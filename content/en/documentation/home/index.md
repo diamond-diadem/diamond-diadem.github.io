@@ -55,11 +55,15 @@ Here are the links for quick access to the documentation section for the tools y
             <td></td>
         </tr>
         <tr>
-            <td class="table-cell-left"><a href="/en/documentation/by-container/freefem/"><i class="icon-freefem"></i>FreeFEM</a></td>
+            <td class="table-cell-left"><a href="/en/documentation/by-container/xtb/"><i class="icon-xtb"></i>xTB</a></td>
             <td></td>
         </tr>
         <tr>
-            <td class="table-cell-left"><a href="/en/documentation/by-container/ndm/"><i class="icon-ndm"></i>NDM</a></td>
+            <td class="table-cell-left"><a href="/en/documentation/by-container/gpumd/"><i class="icon-gpumd"></i>GPUMD</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="table-cell-left"><a href="/en/documentation/by-container/plumed/"><i class="icon-plumed"></i>PLUMED</a></td>
             <td></td>
         </tr>
         <tr>
@@ -68,3 +72,5 @@ Here are the links for quick access to the documentation section for the tools y
         </tr>
     </tbody>
 </table>
+
+#### The [DIAMOND GA 2026 tutorial](/en/documentation/by-session/diamond-ga-2026/) revisits the AI training session held ahead of the DIAMOND 2026 general meeting in Lyon, introducing AI applied to materials science
