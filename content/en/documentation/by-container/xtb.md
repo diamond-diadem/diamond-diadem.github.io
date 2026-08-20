@@ -11,7 +11,7 @@ weight: 3
 
 In preamble, you need to have Apptainer installed on your machine; see [this link](/en/documentation/install/install-apptainer/) for more details.
 
-This tutorial focuses on using the xTB container image. The image can be downloaded read to use from the GRICAD registry with Apptainer and allows directly running the `xtb` executable.
+This tutorial focuses on using the xTB container image. The image can be downloaded ready to use from the GRICAD registry with Apptainer and allows directly running the `xtb` executable.
 
 For more information on Apptainer containers, please look at [this page](/en/about/apptainer/).
 
@@ -46,7 +46,7 @@ In this tutorial, we will assume that the input file `h2o.xyz` is located in the
 
 > The commands presented here use the `xtb` executable through `apptainer exec`. This is the most explicit way to use the image, as it directly calls the program inside the container.
 >
-> Like some other container images available in the DIAMOND, `apptainer run` is configured to call `xtb` directly by default, with no need to include it in the comand line.
+> Like some other container images available in the DIAMOND, `apptainer run` is configured to call `xtb` directly by default, with no need to include it in the command line.
 > The use of `run` or `exec` is up to user discretion.
 
 ## One liner command
@@ -161,12 +161,12 @@ apptainer exec \
 For production calculations, especially on larger systems, it is recommended to set the OpenMP environment variables explicitly so that the number of threads used by xTB is controlled and reproducible.
 For faster calculation, you can increase the number of threads with `OMP_NUM_THREADS=X,1` up to the number of CPU cores available. (You can display it by using `nproc`)
 
-Still, the memory per thread (i. e. `OMP_STACKSIZE`) time the number of threads, should not exceed the available memory on the system.
+Still, the memory per thread (i. e. `OMP_STACKSIZE`) times the number of threads, should not exceed the available memory on the system.
 So if you need to compute on bigger atomic system, you should increase `OMP_STACKSIZE` while decreasing `OMP_NUM_THREADS` to keep optimal performances.
 
 **Remark**
 
-> xTB can't be launched with `mpirun` wich mean it can only run on a single-node. 
+> xTB can't be launched with `mpirun` which means it can only run on a single node.
 
 ## Display help
 

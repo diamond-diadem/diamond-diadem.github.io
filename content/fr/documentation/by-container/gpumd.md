@@ -11,7 +11,7 @@ weight: 3
 
 En préalable de ces explications, il est nécessaire d’avoir installé Apptainer sur votre machine ; voir [ce lien](/fr/documentation/install/install-apptainer/) pour plus de détails.
 
-Ce tutoriel détaille l'utilisation del'image de conteneur du code GPUMD. GPUMD signifie **Graphics Processing Units Molecular Dynamics** et est un code de dynamique moléculaire implémenté pour tirer profits des GPUs. Pour plus d'informations sur GPUMD, ses fichiers d'entrées et les mots-clés disponibles, veuillez consulter [la documentation officielle de GPUMD](https://gpumd.org/).
+Ce tutoriel détaille l'utilisation de l'image de conteneur du code GPUMD. GPUMD signifie **Graphics Processing Units Molecular Dynamics** et est un code de dynamique moléculaire implémenté pour tirer profits des GPUs. Pour plus d'informations sur GPUMD, ses fichiers d'entrées et les mots-clés disponibles, veuillez consulter [la documentation officielle de GPUMD](https://gpumd.org/).
 
 L'image contient les outils suivants :
 
@@ -60,7 +60,7 @@ ls
 
 ## Execution en une ligne
 
-Pour les plus impatients, voici comment lancer l'exemple « GPUMD - Indium liquide » à l'aide de l'image de conteneur préalablement téléchargée et enregistrée dans`$HOME/apptainer-images/gpumd.sif`:
+Pour les plus impatients, voici comment lancer l'exemple « GPUMD - Indium liquide » à l'aide de l'image de conteneur préalablement téléchargée et enregistrée dans `$HOME/apptainer-images/gpumd.sif`:
 
 ```bash
 apptainer exec --nv $HOME/apptainer-images/gpumd.sif gpumd
@@ -187,7 +187,7 @@ How to use the container image to run the GPUMD liquid Indium example while full
 > - L'image est située à l'endroit suivant : `$HOME/apptainer-images/gpumd.sif`
 > - Les fichiers d'entrée `nep.txt`, `model.xyz` et `run.in` sont dans le répertoire courant : `$PWD`
 
-Exmple de réponse :
+Exemple de réponse :
 
 ```bash
 apptainer exec \

@@ -66,7 +66,7 @@ For impatient folks, here is how to launch the GPUMD liquid Indium example using
 apptainer exec --nv $HOME/apptainer-images/gpumd.sif gpumd
 ```
 
-The `--nv` flag gives the container access to NVIDIA GPU devices and drivers from the host. If you reprocuced this image for a system where GPU access is handled differently, adapt this flag to the local Apptainer/GPU configuration.
+The `--nv` flag gives the container access to NVIDIA GPU devices and drivers from the host. If you use this image on a system where GPU access is handled differently, adapt this flag to the local Apptainer/GPU configuration.
 
 ## Detailed usage for the GPUMD container
 

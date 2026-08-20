@@ -41,9 +41,9 @@ EOF
 
 **Attention**
 
-> Les commandes présentées ici utilisent l'executable `xtb` via `apptainer exec`. C'est la manière la plus explicite d'utiliser l'image, qui appele le programme depuis l'environnement du conteneur.
+> Les commandes présentées ici utilisent l'executable `xtb` via `apptainer exec`. C'est la manière la plus explicite d'utiliser l'image, qui appelle le programme depuis l'environnement du conteneur.
 >
-> Comme pour d'autre images disponible sur le site de DIAMOND, `apptainer run` est configuré pour appeler `xtb` par défaut.
+> Comme pour d'autres images disponibles sur le site de DIAMOND, `apptainer run` est configuré pour appeler `xtb` par défaut.
 > L'utilisation de `run` ou `exec` est au choix de l'utilisateur.
 
 ## Execution en une ligne
@@ -163,7 +163,7 @@ Ainsi, si vous devez effectuer des calculs sur un système atomique plus grand, 
 
 **Remarque**
 
-> xTB ne peut pas être lancé avec `mpirun` et ne peut donc pas tourner sur plus plusieurs nœuds.
+> xTB ne peut pas être lancé avec `mpirun` et ne peut donc pas tourner sur plusieurs nœuds.
 
 ## Afficher de l'aide
 
