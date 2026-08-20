@@ -82,7 +82,7 @@ gpumd
 
 where all GPUMD input files, including `run.in`, `model.xyz`, and `nep.txt`, are stored in the current directory.
 
-To do the same inside a container, we can run three equivalent commands. In each case, we suppose the Apptainer image `gpumd.sif` can be found at `$HOME/apptainer-images/gpumd.sif`.
+To do the same inside a container, we can use two equivalent approaches. In each case, we suppose the Apptainer image `gpumd.sif` can be found at `$HOME/apptainer-images/gpumd.sif`.
 
 - One can use `apptainer exec` to execute a specific command in the container.
 
@@ -90,6 +90,16 @@ To do the same inside a container, we can run three equivalent commands. In each
 apptainer exec --nv $HOME/apptainer-images/gpumd.sif gpumd
 ```
 
+- Alternatively, one can start an interactive shell inside the container environment.
+
+```bash
+apptainer shell --nv $HOME/apptainer-images/gpumd.sif
+(env) gpumd
+...
+(env) exit
+```
+
+The `exit` command returns to the original shell once you are done using the container.
 
 ### Accessing the other executables in the image
 
