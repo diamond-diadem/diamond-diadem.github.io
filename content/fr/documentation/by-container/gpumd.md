@@ -179,13 +179,12 @@ Exemple de réponse :
 
 ### Exercice 3
 
-Comment utiliser l'image pour exécuter l'exemple sur l'Indium liquide avec GPUMD, en isolant enti
-How to use the container image to run the GPUMD liquid Indium example while fully isolating the container from the host system?
+Comment utiliser l'image pour exécuter l'exemple sur l'Indium liquide avec GPUMD, en isolant entièrement le conteneur du système hôte ?
 
 **Données**
 
 > - L'image est située à l'endroit suivant : `$HOME/apptainer-images/gpumd.sif`
-> - Les fichiers d'entrée `nep.txt`, `model.xyz` et `run.in` sont dans le répertoire courant : `$PWD`
+> - Les fichiers d'entrée `nep.txt`, `model.xyz` et `run.in` sont situés à : `$HOME/gpumd-examples/liquid-indium/`
 
 Exemple de réponse :
 
