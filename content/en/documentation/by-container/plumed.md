@@ -1,7 +1,7 @@
 ---
 title: How to use PLUMED Apptainer image?
 linkTitle: PLUMED tutorial
-weight: 4
+weight: 9
 description: "Tutorial on using the DIAMOND PLUMED Apptainer container: pulling the image, running calculations, and usage examples for the analyze of pre-existing molecular dynamics trajectories."
 ---
 
