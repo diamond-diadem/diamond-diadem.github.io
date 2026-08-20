@@ -42,7 +42,7 @@ apptainer exec abinit.sif mpirun -np <N> abinit input.abi
 
 ## Utilisation détaillée du conteneur Abinit
 
-Cette section présente différentes façons d'utiliser l'image Abinit. Pour plus de détails sur les commandes Apptainer, veuillez consulter [ce tutoriel](/documentation/use/apptainer-image/#apptainer-crash-course).
+Cette section présente différentes façons d'utiliser l'image Abinit. Pour plus de détails sur les commandes Apptainer, veuillez consulter [ce tutoriel](/documentation/use/apptainer-image/#apptainer--cours-accéléré).
 
 ### Introduction
 

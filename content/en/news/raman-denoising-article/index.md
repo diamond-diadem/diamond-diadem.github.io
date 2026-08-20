@@ -1,8 +1,8 @@
 ---
-title: "Article Accepted - Noise2Noise Raman Denoising"
+title: "Article Published - Noise2Noise Raman Denoising"
 description: ""
 summary: "<b>A Practical Noise2Noise Denoising Pipeline for High-Throughput Raman Spectroscopy</b><br/><em>Advanced Engineering Materials</em>"
-eventDate: "June 4, 2026"
+eventDate: "July 23, 2026"
 backgroundImage: "images/news/backgrounds/raman-denoising-article.png"
 backgroundOpacity: 0.18
 # location: ""
@@ -51,11 +51,11 @@ seo:
 
 <big>
 
-The article has been accepted for publication. It presents a practical Noise2Noise-based denoising pipeline for high-throughput Raman spectroscopy, developed within the DIAMOND project in collaboration with the <a href="https://www.pepr-diadem.fr/projet/libelul-en/" target="_blank" rel="noopener noreferrer">LIBELUL platform</a>. The approach relies on a lightweight one-dimensional convolutional autoencoder trained using a self-supervised strategy, requiring neither external spectral libraries nor high signal-to-noise reference spectra. The pipeline achieves an effective workflow speedup of approximately 65× while preserving spectral fidelity and phase discrimination.
+The article has been published online, in open access, by *Advanced Engineering Materials* (Wiley). It presents a practical Noise2Noise-based denoising pipeline for high-throughput Raman spectroscopy, developed within the DIAMOND project in collaboration with the <a href="https://www.pepr-diadem.fr/projet/libelul-en/" target="_blank" rel="noopener noreferrer">LIBELUL platform</a>. The approach relies on a lightweight one-dimensional convolutional autoencoder trained using a self-supervised strategy, requiring neither external spectral libraries nor high signal-to-noise reference spectra. The pipeline achieves an effective workflow speedup of approximately 65× while preserving spectral fidelity and phase discrimination.
 
 The production pipeline code is openly available on <a href="https://doi.org/10.5281/zenodo.18154207" target="_blank" rel="noopener noreferrer">Zenodo</a>.
 
-Read the preprint on <a href="https://arxiv.org/abs/2605.18511" target="_blank" rel="noopener noreferrer">arXiv</a> or <a href="https://hal.science/hal-05621385v1" target="_blank" rel="noopener noreferrer">HAL</a>.
+Read the <a href="https://doi.org/10.1002/adem.71032" target="_blank" rel="noopener noreferrer">published article</a>.
 
 </big>
 

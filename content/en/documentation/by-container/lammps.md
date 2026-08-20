@@ -58,7 +58,7 @@ apptainer exec $HOME/apptainer-images/lammps.sif mpirun -np <N> lmp_mpi -in <inp
 
 ## Detailed usage for the LAMMPS container
 
-This section presents different ways to use the LAMMPS image. For more details about Apptainer commands, please look at [this tutorial](/en/documentation/use/apptainer-image/#apptainer-crash-course).
+This section presents different ways to use the LAMMPS image. For more details about Apptainer commands, please look at [this tutorial](/en/documentation/use/apptainer-image/#apptainer--crash-course).
 
 ### Using the LAMMPS container for sequential runs
 

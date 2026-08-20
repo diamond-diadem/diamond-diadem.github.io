@@ -65,3 +65,5 @@ Voici les liens pour accéder rapidement à la section de documentation des outi
         </tr>
     </tbody>
 </table>
+
+#### Le [tutoriel AG DIAMOND 2026](/documentation/by-session/diamond-ga-2026/) reprend la formation IA organisée en amont de l'assemblée générale DIAMOND 2026 à Lyon, pour découvrir l'IA appliquée à la science des matériaux
