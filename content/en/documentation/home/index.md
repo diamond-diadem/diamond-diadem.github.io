@@ -55,11 +55,11 @@ Here are the links for quick access to the documentation section for the tools y
             <td></td>
         </tr>
         <tr>
-            <td class="table-cell-left"><a href="/en/documentation/by-container/freefem/"><i class="icon-freefem"></i>FreeFEM</a></td>
+            <td class="table-cell-left"><a href="/en/documentation/by-container/xtb/"><i class="icon-xtb"></i>xTB</a></td>
             <td></td>
         </tr>
         <tr>
-            <td class="table-cell-left"><a href="/en/documentation/by-container/ndm/"><i class="icon-ndm"></i>NDM</a></td>
+            <td class="table-cell-left"><a href="/en/documentation/by-container/gpumd/"><i class="icon-gpumd"></i>GPUMD</a></td>
             <td></td>
         </tr>
     </tbody>
