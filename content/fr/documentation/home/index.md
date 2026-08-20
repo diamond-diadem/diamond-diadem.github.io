@@ -67,6 +67,10 @@ Voici les liens pour accéder rapidement à la section de documentation des outi
             <td class="table-cell-left"><a href="/documentation/by-container/plumed/"><i class="icon-plumed"></i>PLUMED</a></td>
             <td></td>
         </tr>
+        <tr>
+            <td class="table-cell-left"><a href="/documentation/by-container/opencalphad/"><i class="icon-opencalphad"></i>OpenCalphad</a></td>
+            <td></td>
+        </tr>
     </tbody>
 </table>
 

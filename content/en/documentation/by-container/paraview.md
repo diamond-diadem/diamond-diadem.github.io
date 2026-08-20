@@ -58,7 +58,7 @@ apptainer run $HOME/apptainer-images/paraview.sif <input.file>
 
 ### Detail of using the ParaView container
 
-This section presents the various ways to use the ParaView image. For more details on Apptainer commands, please refer to [this tutorial](/en/documentation/use/apptainer-image/#apptainer-crash-course).
+This section presents the various ways to use the ParaView image. For more details on Apptainer commands, please refer to [this tutorial](/en/documentation/use/apptainer-image/#apptainer--crash-course).
 
 To run ParaView without any containerization, one would use the command:
 

@@ -43,7 +43,7 @@ In summary, OpenCalphad is a powerful, open-source tool for thermodynamic modeli
 
 <h3 class="mb-1">Tutorial</h3>
 
-{{< link-card title="Content to be added" description="<i>Learn to use this container image</i>" href="#bottom" icon="tabler-icons/outline/package" disabled="true" class="mb-0" >}}
+{{< link-card title="Learn to use this container image" href="/en/documentation/by-container/opencalphad" icon="tabler-icons/outline/package" class="mb-0" >}}
 
 <h3 class="mb-1 mt-3">OpenCalphad documentation</h3>
 
@@ -54,4 +54,4 @@ In summary, OpenCalphad is a powerful, open-source tool for thermodynamic modeli
 
 <h3 class="mb-1 mt-3">Examples</h3>
 
-{{< link-card title="Content to be added" description="<i>Download input files</i>" href="#bottom" icon="tabler-icons/outline/file-export" disabled="true" class="mb-0" >}}
+{{< link-card title="Download input files" href="/downloads/opencalphad-tutorial-inputs.tar.gz" icon="tabler-icons/outline/file-export" >}}
