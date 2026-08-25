@@ -881,8 +881,13 @@ body:not(.has-scroll-fade) .scroll-fade {
   }
 
 .n2p2_benchmark_total_time_normal_installation_VS_apptainer_B {
-    content: url(/images/workflows/n2p2/n2p2_benchmark_total_time_normal_installation_VS_apptainer_B.png);
+    content: url(/images/workflows/n2p2/n2p2_benchmark_total_time_normal_installation_VS_apptainer_B-light.png);
     min-height: 300px;
+}
+@include color-mode(dark) {
+    .n2p2_benchmark_total_time_normal_installation_VS_apptainer_B {
+        content: url(/images/workflows/n2p2/n2p2_benchmark_total_time_normal_installation_VS_apptainer_B-dark.png);
+    }
 }
 
 .n2p2_throughput_vs_structures {
