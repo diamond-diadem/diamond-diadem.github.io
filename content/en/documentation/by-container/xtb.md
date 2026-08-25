@@ -2,7 +2,7 @@
 
 title: How to use xTB Apptainer image?
 linkTitle: xTB tutorial
-weight: 8
+weight: 9
 description: "Tutorial on using the DIAMOND xTB Apptainer container: pulling the image, running calculations, and usage examples for quantum chemistry."
 ---
 
