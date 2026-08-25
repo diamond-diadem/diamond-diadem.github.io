@@ -19,7 +19,7 @@ Pour plus d'informations sur les conteneurs Apptainer, veuillez consulter la [pa
 
 ## Fichiers d'entrée
 
-Pour illustrer les différentes commandes, un fichier d'entrée Zeo++ est disponible sous forme d'archive via [ce lien](/downloads/zeo++-tutorial-inputs.tar.gz). Ce fichier, nommé `EDI.cssr`, correspond à une fichier d'exemple CSSR pour la zéolite EDI.
+Pour illustrer les différentes commandes, un fichier d'entrée Zeo++ est disponible sous forme d'archive via [ce lien](/downloads/zeo++-tutorial-inputs.tar.gz). Ce fichier, nommé `EDI.cssr`, correspond à un fichier d'exemple CSSR pour la zéolite EDI.
 
 Dans ce tutoriel, nous supposerons que le fichier d'entrée contenu dans cette archive se trouve dans le répertoire courant. Pour l'extraire :
 
