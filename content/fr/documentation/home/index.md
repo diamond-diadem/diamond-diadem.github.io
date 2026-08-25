@@ -64,6 +64,10 @@ Voici les liens pour accéder rapidement à la section de documentation des outi
             <td></td>
         </tr>
         <tr>
+            <td class="table-cell-left"><a href="/documentation/by-container/gmsh/"><i class="icon-gmsh"></i>Gmsh</a></td>
+            <td></td>
+        </tr>
+        <tr>
             <td class="table-cell-left"><a href="/documentation/by-container/xtb/"><i class="icon-xtb"></i>xTB</a></td>
             <td></td>
         </tr>
