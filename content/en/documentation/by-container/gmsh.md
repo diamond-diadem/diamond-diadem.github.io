@@ -87,7 +87,7 @@ Alternatively, the script can be directly loaded when opening Gmsh GUI with the 
 apptainer exec gmsh.sif gmsh t1.geo
 ```
 
-Once the geometry is imported, in can be simply meshed with the *Mesh->2D* button. The resulting mesh can eventually be saved in a `t1.msh` file with the *File->Save Mesh* button.
+Once the geometry is imported, it can be simply meshed with the *Mesh->2D* button. The resulting mesh can eventually be saved in a `t1.msh` file with the *File->Save Mesh* button.
 
 ### Using Gmsh graphical interface to modify a mesh
 

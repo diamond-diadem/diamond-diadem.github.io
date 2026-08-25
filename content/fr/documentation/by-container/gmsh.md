@@ -19,7 +19,7 @@ Pour plus d'informations sur les conteneurs Apptainer, veuillez consulter la [pa
 
 ## Fichiers d'entrée
 
-Pour illustrer les différentes commandes, un fichier d'entrée d'entrée pour Gmsh est disponible sous forme d'archive via [ce lien](/downloads/gmsh-tutorial-inputs.tar.gz). Ce fichier contient un script Gmsh qui définit un maillage sur une surface rectangulaire simple en 2D. Il correspond au premier tutoriel de la [documentation officielle](https://gmsh.info/doc/texinfo/gmsh.html#Gmsh-tutorial) de Gmsh intitulé *Geometry basics, elementary entities, physical groups*.
+Pour illustrer les différentes commandes, un fichier d'entrée pour Gmsh est disponible sous forme d'archive via [ce lien](/downloads/gmsh-tutorial-inputs.tar.gz). Ce fichier contient un script Gmsh qui définit un maillage sur une surface rectangulaire simple en 2D. Il correspond au premier tutoriel de la [documentation officielle](https://gmsh.info/doc/texinfo/gmsh.html#Gmsh-tutorial) de Gmsh intitulé *Geometry basics, elementary entities, physical groups*.
 
 Dans la suite de ce tutoriel, on supposera que le fichier d'entrée contenu dans l'archive est dans le répertoire courant. Pour l'extraire :
 
