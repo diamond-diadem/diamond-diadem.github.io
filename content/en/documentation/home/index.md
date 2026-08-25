@@ -63,6 +63,10 @@ Here are the links for quick access to the documentation section for the tools y
             <td></td>
         </tr>
         <tr>
+            <td class="table-cell-left"><a href="/en/documentation/by-container/zeo++/"><i class="icon-zeoplusplus"></i>Zeo++</a></td>
+            <td></td>
+        </tr>
+        <tr>
             <td class="table-cell-left"><a href="/en/documentation/by-container/xtb/"><i class="icon-xtb"></i>xTB</a></td>
             <td></td>
         </tr>
