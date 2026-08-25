@@ -36,7 +36,7 @@ Zeo++ est un logiciel open-source conçu pour l'analyse et la caractérisation d
 La commande suivante calcule les diamètres des plus grandes sphères incluse, libre et incluse le long de la trajectoire de la sphère libre à l'aide de l'image de conteneur Zeo++ :
 
 ```shell
-apptainer exec network -ha -res EDI.cssr
+apptainer exec zeoplusplus.sif network -ha -res EDI.cssr
 ```
 
 Les résultats sont automatiquement écrits dans un fichier de sortie nommé `EDI.res`. Ce fichier contient trois valeurs, une par diamètre, ainsi que le nom du fichier de sortie `EDI.res`.

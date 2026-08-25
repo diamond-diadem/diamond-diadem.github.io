@@ -37,7 +37,7 @@ Zeo++ is an open-source software designed for the analysis and characterization 
 The following command computes diameters of the largest included sphere, free sphere and included sphere along free sphere path using the Zeo++ container image:
 
 ```shell
-apptainer exec network -ha -res EDI.cssr
+apptainer exec zeoplusplus.sif network -ha -res EDI.cssr
 ```
 
 The results are automatically written in a `EDI.res` output file. It should contain three values, one for each diameter, as well as the name of the output file `EDI.res`. 
