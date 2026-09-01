@@ -35,7 +35,7 @@ Neper is an advanced software designed for the modeling and simulation of polycr
 
 <h3 class="mb-1">Tutorial</h3>
 
-{{< link-card title="Content to be added" description="<i>Learn to use this container image</i>" href="#bottom" icon="tabler-icons/outline/package" disabled="true" class="mb-0" >}}
+{{< link-card title="Learn to use this container image" href="/en/documentation/by-container/neper" icon="tabler-icons/outline/package" class="mb-0" >}}
 
 <h3 class="mb-1 mt-3">Neper documentation</h3>
 
@@ -43,7 +43,3 @@ Neper is an advanced software designed for the modeling and simulation of polycr
 {{< link-card title="Official website" href="https://neper.info/" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
 {{< link-card title="Official documentation" href="https://neper.info/doc/index.html" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
 {{< /card-grid >}}
-
-<h3 class="mb-1 mt-3">Examples</h3>
-
-{{< link-card title="Content to be added" description="<i>Download input files</i>" href="#bottom" icon="tabler-icons/outline/file-export" disabled="true" class="mb-0" >}}
