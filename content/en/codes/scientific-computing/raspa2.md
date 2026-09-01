@@ -40,8 +40,8 @@ docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-s
 <h3 class="mb-1 mt-3">RASPA2 documentation</h3>
 
 {{< card-grid >}}
-{{< link-card title="Official website" href="https://github.com/iRASPA/RASPA2" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
-{{< link-card title="Official documentation" href="https://github.com/iRASPA/RASPA2/tree/master/Docs" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
+{{< link-card title="Official website" href="https://iraspa.org/raspa/" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
+{{< link-card title="Official documentation" href="https://iraspa.org/download/raspa-manual-23-may-2021/" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
 {{< /card-grid >}}
 
 <h3 class="mb-1 mt-3">Examples</h3>
