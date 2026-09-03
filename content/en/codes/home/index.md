@@ -542,12 +542,12 @@ docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-s
 {{< tabs "apptainer_docker" >}}
 {{< tab "Apptainer" >}}
 ```bash
-apptainer pull ptyrad.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/ptyrad.sif:latest
+apptainer pull ptyrad.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/ptyrad-cuda.sif:latest
 ```
 {{< /tab >}}
 {{< tab "Docker" >}}
 ```bash
-docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/ptyrad
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/ptyrad-cuda
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -997,12 +997,12 @@ docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-s
 {{< tabs "apptainer_docker" >}}
 {{< tab "Apptainer" >}}
 ```bash
-apptainer pull ptyrad.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/ptyrad.sif:latest
+apptainer pull ptyrad.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/ptyrad-cuda.sif:latest
 ```
 {{< /tab >}}
 {{< tab "Docker" >}}
 ```bash
-docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/ptyrad
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/ptyrad-cuda
 ```
 {{< /tab >}}
 {{< /tabs >}}
