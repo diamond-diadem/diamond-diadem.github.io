@@ -40,7 +40,7 @@ docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-s
 <h3 class="mb-1 mt-3">Documentation NWChem</h3>
 
 {{< card-grid >}}
-{{< link-card title="Site officiel" href="https://www.nwchem-sw.org/" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
+{{< link-card title="Site officiel" href="https://nwchemgit.github.io/" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
 {{< link-card title="Documentation officielle" href="https://github.com/nwchemgit/nwchem/wiki" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
 {{< /card-grid >}}
 
