@@ -148,6 +148,10 @@ icon="tabler-icons/outline/settings-question" >}}
             <td class="table-cell-left"><a href="/codes/scientific-computing/ndm/"><i class="icon-ndm"></i>NDM</a></td>
             <td></td>
         </tr>    
+        <tr>
+            <td><a href="/codes/scientific-computing/gpumd/"><i class="icon-gpumd"></i>GPUMD</a></td>
+            <td></td>
+        </tr>
     </tbody>
 </table>
 
@@ -182,6 +186,7 @@ icon="tabler-icons/outline/settings-question" >}}
                 <option value="option20A">GaTewAY</option>
                 <option value="option21A">AMITEX_FFTP</option>
                 <option value="option22A">NDM</option>
+                <option value="option23A">GPUMD</option>
             </optgroup>
         </select>
     </div>
@@ -534,6 +539,15 @@ docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-s
 
 </div>
 
+<div id="content-option23A" class="hidden">
+
+```bash
+apptainer pull gpumd.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/gpumd.sif:latest
+```
+
+</div>
+
+
 <div id="content-optionaA" class="hidden">
 
 ```bash
@@ -637,6 +651,7 @@ docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-s
             <option value="option20B">GaTewAY</option>
             <option value="option21B">AMITEX_FFTP</option>
             <option value="option22B">NDM</option>
+            <option value="option23B">GPUMD</option>
         </optgroup>
     </select>
 </div>
@@ -968,6 +983,14 @@ docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-s
 ```
 {{< /tab >}}
 {{< /tabs >}}
+
+</div>
+
+<div id="content-option23B" style="margin-top: -1rem;" class="hidden">
+
+```bash
+apptainer pull gpumd.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/gpumd.sif:latest
+```
 
 </div>
 
