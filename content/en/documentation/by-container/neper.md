@@ -2,7 +2,7 @@
 title: How to use Neper Apptainer image?
 linkTitle: Neper tutorial
 weight: 7
-description: "Tutorial on using the DIAMOND Neper Apptainer container: pulling the image, running calculations, and usage example on a simple tesselation mesh generation."
+description: "Tutorial on using the DIAMOND Neper Apptainer container: pulling the image and usage example on the generation and meshing of a simple tessellation."
 ---
 
 <div align="justify">
@@ -24,7 +24,7 @@ This section explains how to use the Neper image. For more details about Apptain
 
 Neper is a software for modeling and simulating polycrystalline materials, generating and analyzing 2D/3D grain microstructures via Voronoi tessellations and experimental data meshing. It's a robust, efficient tool widely used by materials scientists for grain boundary, texture, and finite element analysis of polycrystals.
 
-The main executable in the image is `neper`. The software version embedded in the container image can be displayed with the following command: 
+The main executable in the image is `neper`. The software version embedded in the container image can be displayed with the following command:
 
 ```bash
 apptainer exec neper.sif neper --version
@@ -47,7 +47,7 @@ The Neper executable within the `neper.sif` container image can be interacted wi
 apptainer exec neper.sif neper -T -n 100
 ```
 
-This tessellation can be visualized through the following command that generates a PNG file name `img1.png` that should look like the image represented in the tutorial:
+This tessellation can be visualized through the following command that generates a PNG file named `img1.png` that should look like the image represented in the tutorial:
 
 ```bash
 apptainer exec neper.sif neper -V n100-id1.tess -print img1
@@ -59,7 +59,7 @@ It can be meshed with the following command:
 apptainer exec neper.sif neper -M n100-id1.tess
 ```
 
-The mesh can be visualized through the following command that generates a PNG file name `img2.png` that, again, should look like the meshed image represented in the tutorial:
+The mesh can be visualized through the following command that generates a PNG file named `img2.png` that, again, should look like the meshed image represented in the tutorial:
 
 ```bash
 apptainer exec neper.sif neper -V n100-id1.tess,n100-id1.msh -print img2

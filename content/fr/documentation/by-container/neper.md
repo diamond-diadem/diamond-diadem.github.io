@@ -2,7 +2,7 @@
 title: Comment utiliser l'image Apptainer Neper ?
 linkTitle: Tutoriel Neper
 weight: 7
-description: "Tutoriel sur l'utilisation du conteneur Apptainer Neper de DIAMOND : récupération de l'image, exécution de calculs et exemple d'utilisation pour la génération d'un maillage de tessellation simple."
+description: "Tutoriel sur l'utilisation du conteneur Apptainer Neper de DIAMOND : récupération de l'image et cas d'usage pour la génération et le maillage d'une tessellation simple."
 ---
 
 <div align="justify">
