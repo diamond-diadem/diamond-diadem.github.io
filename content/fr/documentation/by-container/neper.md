@@ -18,7 +18,7 @@ Pour plus d'informations sur les conteneurs Apptainer, veuillez consulter [cette
 
 ## Utilisation détaillée du conteneur Neper
 
-Cette section explique comment utiliser l'image Neper. Pour plus de détails sur les commandes Apptainer, veuillez consulter [ce tutoriel](/documentation/use/apptainer-image/#apptainer--crash-course).
+Cette section explique comment utiliser l'image Neper. Pour plus de détails sur les commandes Apptainer, veuillez consulter [ce tutoriel](/documentation/use/apptainer-image/#apptainer--cours-accéléré).
 
 ### Introduction
 
