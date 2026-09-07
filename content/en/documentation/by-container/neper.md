@@ -1,7 +1,7 @@
 ---
 title: How to use Neper Apptainer image?
 linkTitle: Neper tutorial
-weight: 4
+weight: 7
 description: "Tutorial on using the DIAMOND Neper Apptainer container: pulling the image, running calculations, and usage example on a simple tesselation mesh generation."
 ---
 
