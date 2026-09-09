@@ -59,6 +59,10 @@ Here are the links for quick access to the documentation section for the tools y
             <td></td>
         </tr>
         <tr>
+            <td class="table-cell-left"><a href="/en/documentation/by-container/neper/"><i class="icon-neper"></i>Neper</a></td>
+            <td></td>
+        </tr>
+        <tr>
             <td class="table-cell-left"><a href="/en/documentation/by-container/plumed/"><i class="icon-plumed"></i>PLUMED</a></td>
             <td></td>
         </tr>
