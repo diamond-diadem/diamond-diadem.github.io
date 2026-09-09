@@ -59,9 +59,9 @@ apptainer exec raspa2.sif cat /gnu/store/$raspa_path/share/doc/raspa2-2.0.48/LIC
 
 The input file `MC_methane.input` corresponds to the first basic example of the RASPA2 [manual](https://iraspa.org/raspa/) titled *Example 1: Monte Carlo of methane in a box*, presented as:
 
-> A Monte Carlo run of 100 methane molecules in a 30 × 30 × 30 Å box. 
+> A Monte Carlo run of 100 methane molecules in a 30 × 30 × 30 Å box.
 
-The input file has been extracted from the software [repository](https://github.com/iRASPA/RASPA2/tree/master/examples/Basic/1_MC_Methane_in_Box), under *examples/Basic/1_MC_Methane_in_Box/simulation.input*. 
+The input file has been extracted from the software [repository](https://github.com/iRASPA/RASPA2/tree/master/examples/Basic/1_MC_Methane_in_Box), under *examples/Basic/1_MC_Methane_in_Box/simulation.input*.
 
 ### Running the simulation
 
@@ -74,8 +74,8 @@ apptainer exec raspa2.sif simulate -i MC_methane.input -d /
 In order to run the previous simulation, the software needs to have access to some additional files, namely:
 
 - `pseudo_atoms.def`: contains pseudo-potentials for various atomic and molecular species,
-- `force_field_mixing_rules.def` : defines interaction parameters and mixing rules for the force field,
-- `methane.def` : defines the molecular properties of methane.
+- `force_field_mixing_rules.def`: defines interaction parameters and mixing rules for the force field,
+- `methane.def`: defines the molecular properties of methane.
 
 Those files are stored in the container image, under the `/share/raspa/forcefield/ExampleMoleculeForceField` path for the first two files and under the `/share/raspa/molecules/ExampleDefinitions` for the last one. As a generalizable example, the following command copies `methane.def` in the current directory:
 
@@ -83,13 +83,13 @@ Those files are stored in the container image, under the `/share/raspa/forcefiel
 apptainer exec raspa2.sif cp /share/raspa/forcefield/ExampleMoleculeForceField/methane.def ./
 ```
 
-The `-d` option in the `simulate` command is used to set the path to RASPA2 directory containing the previous files. The software then automatically looks for the needed files in `/share/raspa`. When this option is not provided, the software looks for the needed file in the current directory. This can be useful when working with custom pseudo-potentials, force fields or molecule properties.
+The `-d` option in the `simulate` command is used to set the path to the RASPA2 directory containing the previous files. The software then automatically looks for the needed files in `/share/raspa`. When this option is not provided, the software looks for the needed files in the current directory. This can be useful when working with custom pseudo-potentials, force fields or molecule properties.
 
-The simulation produces four different folder: *Movies*, *Output*, *Restart* and *VTK*.
+The simulation produces four different folders: *Movies*, *Output*, *Restart* and *VTK*.
 
 ### Visualizing the simulation movies with VMD software
 
-VMD software can be used to visualize the movies produced by the simulation. The VMD [container image of the Diamond project](/en/codes/visualisation/vmd/) can be used for this purpose. 
+VMD software can be used to visualize the movies produced by the simulation. The VMD [container image of the DIAMOND project](/en/codes/visualisation/vmd/) can be used for this purpose.
 
 The following command opens the visualization software graphical user interface (GUI):
 
@@ -97,7 +97,7 @@ The following command opens the visualization software graphical user interface 
 apptainer exec vmd.sif vmd
 ```
 
-The `.pdb` movies in the *Movies/System_0* can be opened from the GUI with the *File/New molecule/Browse* button, then loaded with the *Load* button. The names of the files embed the external temperature (here $300~K$) as well as the pressure ($0~Pa$ here) set by the simulation.
+The `.pdb` movies in the *Movies/System_0* directory can be opened from the GUI with the *File/New molecule/Browse* button, then loaded with the *Load* button. The names of the files embed the external temperature (here $300~K$) as well as the pressure ($0~Pa$ here) set by the simulation.
 
 Once the chosen file is loaded in VMD GUI, a simple representation can be created from the *Graphics/Representations* menu by selecting *VDW* for the *Drawing Method* and *Name* for the *Coloring Method*, as shown below.
 

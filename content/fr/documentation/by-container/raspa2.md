@@ -19,7 +19,7 @@ Pour plus d'informations sur les conteneurs Apptainer, veuillez consulter la [pa
 
 ## Fichiers d'entrée
 
-Pour illustrer les différentes commandes, un fichier d'entrée pour RASPA2 est disponible sous forme d'archive via [ce lien](/downloads/raspa2-tutorial-inputs.tar.gz). Ce fichier nommé `MC_methane.input` correspond à un exemple issu du [manuel](https://iraspa.org/raspa/) de RASPA2. 
+Pour illustrer les différentes commandes, un fichier d'entrée pour RASPA2 est disponible sous forme d'archive via [ce lien](/downloads/raspa2-tutorial-inputs.tar.gz). Ce fichier nommé `MC_methane.input` correspond à un exemple issu du [manuel](https://iraspa.org/raspa/) de RASPA2.
 
 Dans ce tutoriel, nous supposerons que le fichier d'entrée contenu dans cette archive se trouve dans le répertoire courant. Pour l'extraire :
 
@@ -73,7 +73,7 @@ apptainer exec raspa2.sif simulate -i MC_methane.input -d /
 Pour exécuter cette simulation, le code a besoin d'accéder à certains fichiers supplémentaires, à savoir :
 
 - `pseudo_atoms.def` : contient les valeurs des pseudo-potentiels pour plusieurs espèces atomiques et moléculaires,
-- ` force_field_mixing_rules.def` : définit les paramètres d'interaction et les règles de mélange pour le champ de force,
+- `force_field_mixing_rules.def` : définit les paramètres d'interaction et les règles de mélange pour le champ de force,
 - `methane.def` : définit les propriétés moléculaires du méthane.
 
 Ces fichiers sont stockés dans le conteneur, dans le répertoire `/share/raspa/forcefield/ExampleMoleculeForceField` pour les deux premiers, et dans `/share/raspa/molecules/ExampleDefinitions` pour le dernier. À titre d'exemple, la commande suivante permet de copier le fichier `methane.def` dans le répertoire courant :
@@ -88,7 +88,7 @@ La simulation produit quatre répertoires différents : *Movies*, *Output*, *Res
 
 ### Visualisation du film de la simulation avec VMD
 
-Le programme de visualisation VMD peut être utilisé pour visualiser les films produits par la simulation. Pour ce faire, on pourra à titre d'exemple utiliser le [conteneur VMD fourni par le projet Diamond](/codes/visualisation/vmd/).
+Le programme de visualisation VMD peut être utilisé pour visualiser les films produits par la simulation. Pour ce faire, on pourra à titre d'exemple utiliser le [conteneur VMD fourni par le projet DIAMOND](/codes/visualisation/vmd/).
 
 La commande suivante permet d'ouvrir l'interface graphique utilisateur (GUI) du programme :
 
@@ -96,11 +96,11 @@ La commande suivante permet d'ouvrir l'interface graphique utilisateur (GUI) du 
 apptainer exec vmd.sif vmd
 ```
 
-Les fichiers `.pdb` du répertoire *Movies/System_0* peuvent être ouverts depuis le menu *File/New molecule/Browse* de l'interface, puis chargés avec le bouton *Load*. Les noms des fichiers résultats comportent systématiquement la température extérieure (ici $300~K$) ainsi que la pression ($0~Pa$ ici) déterminées par la simulation. 
+Les fichiers `.pdb` du répertoire *Movies/System_0* peuvent être ouverts depuis le menu *File/New molecule/Browse* de l'interface, puis chargés avec le bouton *Load*. Les noms des fichiers résultats comportent systématiquement la température extérieure (ici $300~K$) ainsi que la pression ($0~Pa$ ici) déterminées par la simulation.
 
 Une fois le fichier choisi chargé dans l'interface VMD, une représentation graphique simple peut être paramétrée depuis le menu *Graphics/Representations*, en sélectionnant *VDW* dans le champ *Drawing Method*, et *Name* dans le champ *Coloring Method*, comme indiqué ci-dessous.
 
-<img alt="Capture d'écran des paramètres de représentation graphique sur le GUi de VMD" src="/images/tutorials/raspa2-tutorial/vmd_representation_settings.png" />
+<img alt="Capture d'écran des paramètres de représentation graphique sur le GUI de VMD" src="/images/tutorials/raspa2-tutorial/vmd_representation_settings.png" />
 
 Une fois ces paramètres appliqués, le bouton en forme de flèche noire dans le coin inférieur droit de l'interface principale de VMD permet de lancer l'animation. La capture d'écran ci-dessous montre un exemple d'image issue du film `Movie_Box_1.1.1_300.000000_0.000000_allcomponents.pdb`.
 
@@ -108,7 +108,7 @@ Une fois ces paramètres appliqués, le bouton en forme de flèche noire dans le
 
 ### Analyse des résultats de la simulation
 
-Les résultats de la simulation sont écrits dans le fichier texte *Output/System_0/output_Box_1.1.1_300.000000_0.data*. L'une des informations clé contenue dans ce fichier concerne l'état de dérive énergetique :
+Les résultats de la simulation sont écrits dans le fichier texte *Output/System_0/output_Box_1.1.1_300.000000_0.data*. L'une des informations clés contenues dans ce fichier concerne l'état de dérive énergétique :
 
 ```text
 Total energy-drift: -7.21955e-11
