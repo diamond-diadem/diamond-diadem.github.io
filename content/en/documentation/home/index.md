@@ -20,6 +20,7 @@ Here are the links for quick access to the documentation section for the tools y
 - [Using an Apptainer image](/en/documentation/use/apptainer-image/)
 - [Using a Guix package](/en/documentation/use/guix-package/)
 - [Frequently asked questions (FAQ)](/en/documentation/faq/)
+- [DIAMOND GA 2026 tutorial](/en/documentation/by-session/diamond-ga-2026/): AI applied to materials science
 
 #### Here are the links for quick access to image-specific tutorials:
 
@@ -96,5 +97,3 @@ Here are the links for quick access to the documentation section for the tools y
         </tr>
     </tbody>
 </table>
-
-#### The [DIAMOND GA 2026 tutorial](/en/documentation/by-session/diamond-ga-2026/) revisits the AI training session held ahead of the DIAMOND 2026 general meeting in Lyon, introducing AI applied to materials science
