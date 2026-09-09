@@ -1,7 +1,7 @@
 ---
 title: How to use RASPA2 Apptainer image?
 linkTitle: RASPA2 tutorial
-weight: 1
+weight: 10
 description: "Tutorial on using the DIAMOND RASPA2 Apptainer container: pulling the image and usage examples for MD computation with MC."
 ---
 
