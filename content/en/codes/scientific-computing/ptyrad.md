@@ -42,7 +42,3 @@ PtyRAD also supports hyperparameter tuning and running on multi-GPU. Additional 
 {{< link-card title="Official documentation" href="https://ptyrad.readthedocs.io/" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
 {{< /card-grid >}}
 
-
-<h3 class="mb-1 mt-3">Examples</h3>
-
-{{< link-card title="Content to be added" description="<i>Download input files</i>" href="#bottom" icon="tabler-icons/outline/file-export" disabled="true" class="mb-0" >}}

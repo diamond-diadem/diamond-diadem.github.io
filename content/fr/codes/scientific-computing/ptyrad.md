@@ -34,10 +34,9 @@ PtyRAD prend également en charge le réglage des hyperparamètres et l'exécuti
 
 </div>
 
-<h3 class="mb-1">Tutoriel</h3>
+<h3 class="mb-1">Tutorial</h3>
 
-{{< link-card title="Contenu à venir" description="<i>Apprenez à utiliser cette image de conteneur</i>" href="#bottom" icon="tabler-icons/outline/package" disabled="true" class="mb-0" >}}
-
+{{< link-card title="Apprenez à utiliser cette image de conteneur" href="/documentation/by-container/ptyrad" icon="tabler-icons/outline/package" class="mb-0" >}}
 <h3 class="mb-1 mt-3">Documentation PtyRAD</h3>
 
 {{< card-grid >}}
@@ -45,7 +44,3 @@ PtyRAD prend également en charge le réglage des hyperparamètres et l'exécuti
 {{< link-card title="Documentation officielle" href="https://ptyrad.readthedocs.io/" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
 {{< /card-grid >}}
 
-
-<h3 class="mb-1 mt-3">Exemples</h3>
-
-{{< link-card title="Contenu à venir" description="<i>Téléchargez des fichiers d'entrée</i>" href="#bottom" icon="tabler-icons/outline/file-export" disabled="true" class="mb-0" >}}
