@@ -147,6 +147,11 @@ icon="tabler-icons/outline/settings-question" >}}
             <td><a href="/en/codes/scientific-computing/ndm/"><i class="icon-ndm"></i>NDM</a></td>
             <td></td>
         </tr>
+        <tr>
+            <td><a href="/en/codes/scientific-computing/ptyrad/"><i class="icon-ptyrad"></i>PtyRAD</a></td>
+            <td></td>
+        </tr>
+
     </tbody>
 </table>
 
@@ -182,6 +187,7 @@ icon="tabler-icons/outline/settings-question" >}}
                 <option value="option20A">GaTewAY</option>
                 <option value="option21A">AMITEX_FFTP</option>
                 <option value="option22A">NDM</option>
+                <option value="option23A">PtyRAD</option>
             </optgroup>
         </select>
     </div>
@@ -531,6 +537,23 @@ docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-s
 
 </div>
 
+<div id="content-option23A" class="hidden">
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull ptyrad.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/ptyrad-cuda.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/ptyrad-cuda
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+</div>
+
 <div id="content-optionaA" class="hidden">
 
 ```bash
@@ -634,6 +657,7 @@ docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-s
             <option value="option20B">GaTewAY</option>
             <option value="option21B">AMITEX_FFTP</option>
             <option value="option22B">NDM</option>
+            <option value="option23B">PtyRAD</option>
         </optgroup>
     </select>
 </div>
@@ -962,6 +986,23 @@ apptainer pull ndm.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/app
 {{< tab "Docker" >}}
 ```bash
 docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/ndm
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+</div>
+
+<div id="content-option23B" style="margin-top: -1rem;" class="hidden">
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull ptyrad.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/ptyrad-cuda.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/ptyrad-cuda
 ```
 {{< /tab >}}
 {{< /tabs >}}
