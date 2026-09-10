@@ -222,4 +222,13 @@
     @include code-logo("images/codes/ndm/ndm-logo-light.png", 265 / 155, "images/codes/ndm/ndm-logo-dark.png");
 }
 
+// // GPUMD logo // //
+
+.logo-gpumd {
+    width: 65%;
+    @include code-logo("images/codes/gpumd/gpumd-logo.png", 265 / 155);
+}
+
+// // END GPUMD logo END // //
+
 // // // END Codes pages top logos END // // //
