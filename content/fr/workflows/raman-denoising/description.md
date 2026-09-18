@@ -5,6 +5,14 @@ toc: false
 description: "Description du pipeline de débruitage Noise2Noise pour la spectroscopie Raman haut débit, développé dans le cadre du projet DIAMOND."
 ---
 
+<div align="center">
+
+<img src="/images/news/raman-denoising-article/denoiser-wide.png" alt="Pipeline de débruitage Noise2Noise : spectre Raman bruité → auto-encodeur convolutif 1D → spectre débruité" class="img-denoiser-wide" style="max-width: 100%;">
+
+</div>
+
+<br/>
+
 Ce workflow met en œuvre un pipeline de débruitage pratique basé sur l'approche Noise2Noise pour la spectroscopie Raman haut débit, développé dans le cadre du projet DIAMOND en collaboration avec la [plateforme LIBELUL](https://www.pepr-diadem.fr/projet/libelul/). L'approche repose sur un auto-encodeur convolutif 1D léger entraîné de manière auto-supervisée, ne nécessitant ni bibliothèque spectrale externe ni spectres de référence à rapport signal/bruit élevé. Le pipeline permet un gain de temps d'environ 65× sur l'ensemble du flux de travail, tout en préservant la fidélité spectrale et la discrimination de phase.
 
 La méthode et sa validation sont décrites dans :

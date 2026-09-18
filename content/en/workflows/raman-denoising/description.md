@@ -5,6 +5,14 @@ toc: false
 description: "Description of the Noise2Noise-based denoising pipeline for high-throughput Raman spectroscopy developed within the DIAMOND project."
 ---
 
+<div align="center">
+
+<img src="/images/news/raman-denoising-article/denoiser-wide.png" alt="Noise2Noise denoising pipeline: noisy Raman spectrum → 1D convolutional autoencoder → denoised spectrum" class="img-denoiser-wide" style="max-width: 100%;">
+
+</div>
+
+<br/>
+
 This workflow provides a practical Noise2Noise denoising pipeline for high-throughput Raman spectroscopy, developed within the DIAMOND project in collaboration with the [LIBELUL platform](https://www.pepr-diadem.fr/projet/libelul-en/). It relies on a lightweight one-dimensional convolutional autoencoder trained using a self-supervised strategy, requiring neither external spectral libraries nor high signal-to-noise reference spectra. The pipeline achieves an effective workflow speedup of approximately 65× while preserving spectral fidelity and phase discrimination.
 
 The method and its validation are described in:
