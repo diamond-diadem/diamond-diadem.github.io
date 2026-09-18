@@ -7,7 +7,7 @@ description: "Description du pipeline de débruitage Noise2Noise pour la spectro
 
 <div align="center">
 
-<img src="/images/news/raman-denoising-article/denoiser-wide.png" alt="Pipeline de débruitage Noise2Noise : spectre Raman bruité → auto-encodeur convolutif 1D → spectre débruité" class="img-denoiser-wide" style="max-width: 100%;">
+<img src="/images/news/raman-denoising-article/denoiser-wide.png" alt="Pipeline de débruitage Noise2Noise : spectre Raman bruité → auto-encodeur convolutif 1D → spectre débruité" class="img-denoiser-wide" style="max-width: 100%; margin-top: 1.5rem; margin-bottom: 1.5rem;">
 
 </div>
 

@@ -7,7 +7,7 @@ description: "Description of the Noise2Noise-based denoising pipeline for high-t
 
 <div align="center">
 
-<img src="/images/news/raman-denoising-article/denoiser-wide.png" alt="Noise2Noise denoising pipeline: noisy Raman spectrum → 1D convolutional autoencoder → denoised spectrum" class="img-denoiser-wide" style="max-width: 100%;">
+<img src="/images/news/raman-denoising-article/denoiser-wide.png" alt="Noise2Noise denoising pipeline: noisy Raman spectrum → 1D convolutional autoencoder → denoised spectrum" class="img-denoiser-wide" style="max-width: 100%; margin-top: 1.5rem; margin-bottom: 1.5rem;">
 
 </div>
 
