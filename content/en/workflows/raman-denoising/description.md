@@ -13,7 +13,7 @@ description: "Description of the Noise2Noise-based denoising pipeline for high-t
 
 <br/>
 
-This workflow provides a practical Noise2Noise denoising pipeline for high-throughput Raman spectroscopy, developed within the DIAMOND project in collaboration with the [LIBELUL platform](https://www.pepr-diadem.fr/projet/libelul-en/). It relies on a lightweight one-dimensional convolutional autoencoder trained using a self-supervised strategy, requiring neither external spectral libraries nor high signal-to-noise reference spectra. The pipeline achieves an effective workflow speedup of approximately 65× while preserving spectral fidelity and phase discrimination.
+Artificial intelligence and deep learning are core to DIAMOND's expertise for the PEPR DIADEM community. This workflow illustrates that expertise applied to experimental characterization: a practical Noise2Noise deep learning pipeline for denoising high-throughput Raman spectroscopy data, developed within the DIAMOND project in collaboration with the [LIBELUL platform](https://www.pepr-diadem.fr/projet/libelul-en/). It relies on a lightweight one-dimensional convolutional autoencoder trained using a self-supervised deep learning strategy, requiring neither external spectral libraries nor high signal-to-noise reference spectra. The pipeline achieves an effective workflow speedup of approximately 65× while preserving spectral fidelity and phase discrimination.
 
 The method and its validation are described in:
 
