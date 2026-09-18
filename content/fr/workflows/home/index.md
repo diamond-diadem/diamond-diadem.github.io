@@ -35,3 +35,8 @@ Pour résumer, des workflows bien conçus permettent non seulement de gagner du 
 - ### MOFLearning-AIIDA-LAMMPS-workflow
   - [Description](/workflows/aiida-diffusion-wf/description)
   - [Installation](/workflows/aiida-diffusion-wf/installation)
+
+- ### pipeline-debruitage-raman
+
+  Pipeline de débruitage Noise2Noise pour la spectroscopie Raman haut débit
+  - [Description](/workflows/raman-denoising/description)
