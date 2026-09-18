@@ -1,5 +1,5 @@
 ---
-title: Raman Denoising Pipeline Description
+title: Raman Denoising Pipeline
 linkTitle: Description
 toc: false
 description: "Description of the Noise2Noise-based denoising pipeline for high-throughput Raman spectroscopy developed within the DIAMOND project."

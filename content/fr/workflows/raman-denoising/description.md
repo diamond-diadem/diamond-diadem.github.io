@@ -1,5 +1,5 @@
 ---
-title: Description du pipeline de débruitage Raman
+title: Pipeline de débruitage Raman
 linkTitle: Description
 toc: false
 description: "Description du pipeline de débruitage Noise2Noise pour la spectroscopie Raman haut débit, développé dans le cadre du projet DIAMOND."
