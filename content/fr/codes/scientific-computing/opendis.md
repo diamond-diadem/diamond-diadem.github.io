@@ -12,7 +12,7 @@ description: "OpenDiS est un logiciel open-source de simulation de dislocations 
   <span class="logo-opendis" aria-hidden="true"></span>
 </a>
 
-### Récupérez l'image de conteneur
+## Récupérez l'image de conteneur
 
 {{< tabs "apptainer_docker" >}}
 {{< tab "Apptainer" >}}
@@ -20,6 +20,7 @@ description: "OpenDiS est un logiciel open-source de simulation de dislocations 
 apptainer pull opendis.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/opendis.sif:latest
 ```
 {{< /tab >}}
+
 {{< tab "Docker" >}}
 ```bash
 docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/opendis
@@ -27,23 +28,19 @@ docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-s
 {{< /tab >}}
 {{< /tabs >}}
 
-<div align="justify">
-
 **OpenDiS (Open Dislocation Simulator)** est un logiciel open-source conçu pour simuler et analyser les dislocations dans les matériaux cristallins à l'échelle mésoscopique. Ce programme est utilisé principalement dans les domaines de la physique des matériaux et de la science des matériaux pour modéliser les interactions complexes entre les dislocations, les défauts cristallins, et les contraintes externes appliquées. Basé sur des méthodes numériques avancées, OpenDiS permet de visualiser les mouvements des dislocations et d'étudier leurs impacts sur les propriétés mécaniques et thermiques des matériaux. Le logiciel est compatible avec plusieurs plateformes et dispose d’une interface flexible pour l’intégration avec d’autres outils de simulation et d’analyse.
 
-</div>
-
-<h3 class="mb-1">Tutoriel</h3>
+## Tutoriel
 
 {{< link-card title="Apprenez à utiliser cette image de conteneur" href="/documentation/by-container/opendis" icon="tabler-icons/outline/package" class="mb-0" >}}
 
-<h3 class="mb-1 mt-3">Documentation OpenDiS</h3>
+## Documentation OpenDiS
 
 {{< card-grid >}}
 {{< link-card title="Site officiel" href="https://opendis.github.io/OpenDiS/" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
 {{< link-card title="Documentation officielle" href="https://opendis.github.io/OpenDiS/tutorials/index.html" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
 {{< /card-grid >}}
 
-<h3 class="mb-1 mt-3">Exemples</h3>
+## Exemples
 
 {{< link-card title="Téléchargez des fichiers d'entrée" href="/downloads/opendis-tutorial-inputs.tar.gz" icon="tabler-icons/outline/file-export" >}}

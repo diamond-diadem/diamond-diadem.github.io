@@ -1,21 +1,19 @@
 ---
-title: Comment utiliser l'image Apptainer OpenDis ?
+title: Comment utiliser l'image Apptainer OpenDis
 linkTitle: Tutoriel OpenDis
 weight: 1
 description: "Tutoriel sur l'utilisation de l'image Apptainer OpenDis de DIAMOND : récupération du conteneur, exécution et cas d'usage pour les calculs de dynamiques des dislocations."
 ---
 
-<div align="justify">
+{{< callout title="Prérequis" >}}
 
-{{< callout context="note" title="Prérequis" icon="tabler-icons/outline/info-circle" >}}
+- Apptainer (voir soit [notre guide d'installation]({{% ref "/documentation/install/install-apptainer" %}}), soit [la documentation officiel](https://apptainer.org/docs/user/latest/quick_start.html#installation))
+- L'image [`opendis.sif`]({{% ref "/codes/scientific-computing/opendis/" %}})
+- Les [fichiers d'entrée](/downloads/opendis-tutorial-inputs.tar.gz)
 
-- Avoir installé **Apptainer** [(guide d'installation)](/documentation/install/install-apptainer/)
-- Avoir téléchargé l'image **opendis.sif** [disponible ici](/codes/scientific-computing/opendis/)
-- Avoir téléchargé les **fichiers d’entrée** [disponibles ici](/downloads/opendis-tutorial-inputs.tar.gz)
-
-Pour plus d'informations sur les conteneurs Apptainer, veuillez consulter la [page dédiée](/about/apptainer/) ou suivre [ce tutoriel](/documentation/use/apptainer-image/) pour s'approprier les principales commandes d'Apptainer.
 {{< /callout >}}
 
+Pour plus d'informations sur les conteneurs Apptainer et leur utilisation, nous mettons à votre disposition [une description d'Apptainer]({{% ref "/about/apptainer" %}}), un guide rapide sur [comment utiliser Apptainer]( {{% ref "/documentation/use/apptainer-image" %}}), sans oublier bien sûr la [documentation officielle d'Apptainer](https://apptainer.org/docs/user/latest/).
 
 ## Fichiers d'entrée
 
@@ -107,4 +105,3 @@ Le nouvel objet `G1` peut alors être manipulé de la même manière qu'à la se
 
 La [documentation officielle](https://opendis.github.io/OpenDiS/tutorials/index.html) d'OpenDis contient plusieurs tutoriels présentant les différentes fonctionnalités du code. Les scripts Python associés sont présents dans le répertoire *examples/* du [dépôt](https://github.com/OpenDiS/OpenDiS/tree/main/examples). Les commandes présentées dans le présent tutoriel peuvent facilement être extrapolées pour lancer ces exemples avec le conteneur OpenDis.
 
-</div>

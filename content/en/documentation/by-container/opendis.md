@@ -1,22 +1,19 @@
 ---
-title: How to use OpenDis Apptainer image?
+title: How to use OpenDis Apptainer image
 linkTitle: OpenDis tutorial
 weight: 1
 description: "Tutorial on using the DIAMOND OpenDis Apptainer container: pulling the image, running calculations, and usage examples for dislocation dynamics computations."
 ---
 
-<div align="justify">
+{{< callout title="Prerequisites" >}}
 
-{{< callout context="note" title="Prerequisites" icon="tabler-icons/outline/info-circle" >}}
-
-- Have **Apptainer** installed [(installation guide)](/en/documentation/install/install-apptainer/)
-- Have downloaded the **opendis.sif** image [available here](/en/codes/scientific-computing/opendis/)
-- Have downloaded the **input files** [available here](/downloads/opendis-tutorial-inputs.tar.gz)
-
-For more information on Apptainer containers, please look at [this page](/en/about/apptainer/) or refer to [this tutorial](/en/documentation/use/apptainer-image/) to have a quick look at Apptainer's main commands.
+- Apptainer (see either [our installation guide]({{% ref "/documentation/install/install-apptainer" %}}) or [the official documentation](https://apptainer.org/docs/user/latest/quick_start.html#installation))
+- The [`opendis.sif` image]({{% ref "/codes/scientific-computing/opendis/" %}})
+- The [input files](/downloads/opendis-tutorial-inputs.tar.gz)
 
 {{< /callout >}}
 
+For more information on Apptainer containers and their use, we provide [a description of Apptainer]({{% ref "/about/apptainer" %}}), a crash course on [how to use Apptainer]({{% ref "/documentation/use/apptainer-image" %}}), and of course there's also the [official Apptainer's documentation](https://apptainer.org/docs/user/latest/).
 
 ## Input files
 
@@ -107,5 +104,3 @@ The new `G1` object can then be interacted with exactly as previously.
 ### To go further
 
 OpenDis [official documentation](https://opendis.github.io/OpenDiS/tutorials/index.html) contains multiple tutorials presenting the features of the software. The associated Python input scripts can be found in the [code repository](https://github.com/OpenDiS/OpenDiS/tree/main/examples) *examples/* directory. The commands presented in this tutorial can be easily extrapolated to run those examples with the OpenDis image container.
-
-</div>
