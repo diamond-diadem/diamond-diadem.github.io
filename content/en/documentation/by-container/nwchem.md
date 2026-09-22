@@ -1,22 +1,19 @@
 ---
-title: How to use NWChem Apptainer image?
+title: How to use NWChem Apptainer image
 linkTitle: NWChem tutorial
 weight: 1
 description: "Tutorial on using the DIAMOND NWChem Apptainer container: pulling the image and usage example for geometry optimization."
 ---
 
-<div align="justify">
-
 {{< callout context="note" title="Prerequisites" icon="tabler-icons/outline/info-circle" >}}
 
-- Have **Apptainer** installed [(installation guide)](/en/documentation/install/install-apptainer/)
-- Have downloaded the **nwchem.sif** image [available here](/en/codes/scientific-computing/nwchem/)
-- Have downloaded the **input files** [available here](/downloads/nwchem-tutorial-inputs.tar.gz)
-
-For more information on Apptainer containers, please look at [this page](/en/about/apptainer/) or refer to [this tutorial](/en/documentation/use/apptainer-image/) to have a quick look at Apptainer's main commands.
+- Apptainer (see either [our installation guide]({{% ref "/documentation/install/install-apptainer" %}}) or [the official documentation](https://apptainer.org/docs/user/latest/quick_start.html#installation))
+- The [`nwchem.sif` image]({{% ref "/codes/scientific-computing/nwchem/" %}})
+- The [input files](/downloads/nwchem-tutorial-inputs.tar.gz)
 
 {{< /callout >}}
 
+For more information on Apptainer containers and their use, we provide [a description of Apptainer]({{% ref "/about/apptainer" %}}), a crash course on [how to use Apptainer]({{% ref "/documentation/use/apptainer-image" %}}), and of course there's also the [official Apptainer's documentation](https://apptainer.org/docs/user/latest/).
 
 ## Input files
 
@@ -77,4 +74,3 @@ The `> output.txt` at the end of the command captures the logs of the simulation
 
 The [Getting Started](https://nwchemgit.github.io/Getting-Started.html#water-molecule-sample-input-file) and the [official documentation](https://nwchemgit.github.io/index.html) pages contain multiple examples and tutorials presenting how to use the features of the software. Interested readers can easily extrapolate the commands shown in this tutorial to run those examples.
 
-</div>

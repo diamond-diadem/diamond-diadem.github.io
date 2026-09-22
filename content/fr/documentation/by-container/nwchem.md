@@ -1,21 +1,19 @@
 ---
-title: Comment utiliser l'image Apptainer NWChem ?
+title: Comment utiliser l'image Apptainer NWChem
 linkTitle: Tutoriel NWChem
 weight: 1
 description: "Tutoriel sur l'utilisation de l'image Apptainer NWChem de DIAMOND : récupération du conteneur et cas d'usage pour des calculs d'opimisation de géométrie."
 ---
 
-<div align="justify">
-
 {{< callout context="note" title="Prérequis" icon="tabler-icons/outline/info-circle" >}}
 
-- Avoir installé **Apptainer** [(guide d'installation)](/documentation/install/install-apptainer/)
-- Avoir téléchargé l'image **nwchem.sif** [disponible ici](/codes/scientific-computing/nwchem/)
-- Avoir téléchargé les **fichiers d’entrée** [disponibles ici](/downloads/nwchem-tutorial-inputs.tar.gz)
+- Apptainer (voir soit [notre guide d'installation]({{% ref "/documentation/install/install-apptainer" %}}), soit [la documentation officiel](https://apptainer.org/docs/user/latest/quick_start.html#installation))
+- L'image [`nwchem.sif`]({{% ref "/codes/scientific-computing/nwchem/" %}})
+- Les [fichiers d'entrée](/downloads/nwchem-tutorial-inputs.tar.gz)
 
-Pour plus d'informations sur les conteneurs Apptainer, veuillez consulter la [page dédiée](/about/apptainer/) ou suivre [ce tutoriel](/documentation/use/apptainer-image/) pour s'approprier les principales commandes d'Apptainer.
 {{< /callout >}}
 
+Pour plus d'informations sur les conteneurs Apptainer et leur utilisation, nous mettons à votre disposition [une description d'Apptainer]({{% ref "/about/apptainer" %}}), un guide rapide sur [comment utiliser Apptainer]( {{% ref "/documentation/use/apptainer-image" %}}), sans oublier bien sûr la [documentation officielle d'Apptainer](https://apptainer.org/docs/user/latest/).
 
 ## Fichiers d'entrée
 
@@ -75,5 +73,3 @@ Le mot-clé `> output.txt` à la fin de la commande permet de rediriger la sorti
 ### Pour aller plus loin
 
 La [page d'introduction](https://nwchemgit.github.io/Getting-Started.html#water-molecule-sample-input-file) et la [documentation officielle](https://nwchemgit.github.io/index.html) contiennent de nombreux exemples qui présentent les différentes fonctionnalités du code. Les commandes présentées dans le présent tutoriel peuvent être facilement extrapolées pour lancer ces exemples.
-
-</div>

@@ -12,7 +12,7 @@ description: "NWChem is a high-performance computational quantum chemistry suite
   <span class="logo-nwchem" aria-hidden="true"></span>
 </a>
 
-### Retrieve the container image
+## Retrieve the container image
 
 {{< tabs "apptainer_docker" >}}
 {{< tab "Apptainer" >}}
@@ -27,23 +27,19 @@ docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-s
 {{< /tab >}}
 {{< /tabs >}}
 
-<div align="justify">
-
 **NWChem** is a computational chemistry software designed to perform calculations on chemical systems ranging from small molecules to solid-state materials and macromolecules. This open-source program provides a comprehensive suite of computational methods, including quantum mechanics (ab initio, DFT), molecular dynamics, and multi-scale simulations. NWChem is optimized for parallel and scalable computing architectures, enabling efficient handling of complex problems. It is primarily used for modeling structures, analyzing chemical interactions, and predicting electronic, spectroscopic, and thermodynamic properties.
 
-</div>
-
-<h3 class="mb-1">Tutorial</h3>
+## Tutorial
 
 {{< link-card title="Learn to use this container image" href="/en/documentation/by-container/nwchem" icon="tabler-icons/outline/package" class="mb-0" >}}
 
-<h3 class="mb-1 mt-3">NWChem documentation</h3>
+## NWChem documentation
 
 {{< card-grid >}}
 {{< link-card title="Official website" href="https://nwchemgit.github.io/" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
 {{< link-card title="Official documentation" href="https://github.com/nwchemgit/nwchem/wiki" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
 {{< /card-grid >}}
 
-<h3 class="mb-1 mt-3">Examples</h3>
+## Examples
 
 {{< link-card title="Download input files" href="/downloads/nwchem-tutorial-inputs.tar.gz" icon="tabler-icons/outline/file-export" >}}
