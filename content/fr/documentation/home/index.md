@@ -21,6 +21,7 @@ Voici les liens pour accéder rapidement à la section de documentation des outi
 - [Utiliser une image Apptainer](/documentation/use/apptainer-image/)
 - [Utiliser un paquet Guix](/documentation/use/guix-package/)
 - [Foire aux questions (FAQ)](/documentation/faq/)
+- [Tutoriel AG DIAMOND 2026](/documentation/by-session/diamond-ga-2026/) : l'IA appliquée à la science des matériaux
 
 #### Voici les liens pour accéder rapidement aux tutoriels spécifiques par image :
 
@@ -60,6 +61,10 @@ Voici les liens pour accéder rapidement à la section de documentation des outi
             <td></td>
         </tr>
         <tr>
+            <td class="table-cell-left"><a href="/documentation/by-container/neper/"><i class="icon-neper"></i>Neper</a></td>
+            <td></td>
+        </tr>
+        <tr>
             <td class="table-cell-left"><a href="/documentation/by-container/plumed/"><i class="icon-plumed"></i>PLUMED</a></td>
             <td></td>
         </tr>
@@ -69,6 +74,10 @@ Voici les liens pour accéder rapidement à la section de documentation des outi
         </tr>
         <tr>
             <td class="table-cell-left"><a href="/documentation/by-container/zeo++/"><i class="icon-zeoplusplus"></i>Zeo++</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="table-cell-left"><a href="/documentation/by-container/raspa2/"><i class="icon-raspa2"></i>RASPA2</a></td>
             <td></td>
         </tr>
         <tr>
@@ -89,5 +98,3 @@ Voici les liens pour accéder rapidement à la section de documentation des outi
         </tr>
     </tbody>
 </table>
-
-#### Le [tutoriel AG DIAMOND 2026](/documentation/by-session/diamond-ga-2026/) reprend la formation IA organisée en amont de l'assemblée générale DIAMOND 2026 à Lyon, pour découvrir l'IA appliquée à la science des matériaux

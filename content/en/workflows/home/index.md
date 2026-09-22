@@ -35,3 +35,8 @@ In summary, well-designed workflows not only save time but also reduce the risk 
 - ### MOFLearning-AIIDA-LAMMPS-workflow
   - [Description](/en/workflows/aiida-diffusion-wf/description)
   - [Installation](/en/workflows/aiida-diffusion-wf/installation)
+
+- ### raman-denoising-pipeline
+
+  Noise2Noise denoising pipeline for high-throughput Raman spectroscopy
+  - [Description](/en/workflows/raman-denoising/description)

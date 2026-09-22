@@ -2,6 +2,7 @@
 title: Étude comparative des performances
 linkTitle: Benchmark
 toc: false
+description: "Étude des performances du workflow AiiDA-n2p2 : parallélisation MPI et OpenMP, taille du jeu de données et comparaison native/Apptainer."
 ---
 
 ### Condition optimale pour exécuter le workflow

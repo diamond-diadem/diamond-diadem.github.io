@@ -12,7 +12,7 @@ description: "NWChem est une suite de chimie quantique haute performance pour le
   <span class="logo-nwchem" aria-hidden="true"></span>
 </a>
 
-### Récupérez l'image de conteneur
+## Récupérez l'image de conteneur
 
 {{< tabs "apptainer_docker" >}}
 {{< tab "Apptainer" >}}
@@ -27,23 +27,19 @@ docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-s
 {{< /tab >}}
 {{< /tabs >}}
 
-<div align="justify">
-
 **NWChem** est un logiciel de chimie computationnelle conçu pour exécuter des calculs sur des systèmes chimiques allant des petites molécules aux matériaux à l'état solide et aux macromolécules. Ce programme open source offre une gamme complète de méthodes de calculs, notamment la mécanique quantique (ab initio, DFT), la dynamique moléculaire et les simulations multi-échelles. NWChem est optimisé pour s'exécuter sur des architectures informatiques parallèles et scalables, permettant de traiter des problèmes complexes avec une efficacité accrue. Il est principalement utilisé pour la modélisation de structures, l'analyse des interactions chimiques et la prédiction des propriétés électroniques, spectroscopiques et thermodynamiques.
 
-</div>
+## Tutoriel
 
-<h3 class="mb-1">Tutoriel</h3>
+{{< link-card title="Apprenez à utiliser cette image de conteneur" href="/documentation/by-container/nwchem" icon="tabler-icons/outline/package" class="mb-0" >}}
 
-{{< link-card title="Contenu à venir" description="<i>Apprenez à utiliser cette image de conteneur</i>" href="#bottom" icon="tabler-icons/outline/package" disabled="true">}}
-
-<h3 class="mb-1 mt-3">Documentation NWChem</h3>
+## Documentation NWChem
 
 {{< card-grid >}}
-{{< link-card title="Site officiel" href="https://www.nwchem-sw.org/" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
+{{< link-card title="Site officiel" href="https://nwchemgit.github.io/" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
 {{< link-card title="Documentation officielle" href="https://github.com/nwchemgit/nwchem/wiki" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
 {{< /card-grid >}}
 
-<h3 class="mb-1 mt-3">Exemples</h3>
+## Exemples
 
-{{< link-card title="Contenu à venir" description="<i>Téléchargez des fichiers d'entrée</i>" href="#bottom" icon="tabler-icons/outline/file-export" disabled="true" class="mb-0" >}}
+{{< link-card title="Téléchargez des fichiers d'entrée" href="/downloads/nwchem-tutorial-inputs.tar.gz" icon="tabler-icons/outline/file-export" >}}

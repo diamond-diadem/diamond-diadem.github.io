@@ -2,6 +2,7 @@
 title: Benchmark investigation
 linkTitle: Benchmark
 toc: false
+description: "Benchmark of the AiiDA-n2p2 workflow: MPI and OpenMP parallelization, dataset size scaling, and native versus Apptainer performance comparison."
 ---
 
 ### Optimal condition to run n2p2 WF.
