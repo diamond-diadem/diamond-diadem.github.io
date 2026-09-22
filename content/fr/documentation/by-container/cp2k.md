@@ -1,21 +1,19 @@
 ---
-title: Comment utiliser l'image Apptainer CP2K ?
+title: Comment utiliser l'image Apptainer CP2K
 linkTitle: Tutoriel CP2K
 weight: 1
 description: "Tutoriel sur l'utilisation de l'image Apptainer CP2K de DIAMOND : récupération du conteneur et cas d'usage pour les calculs DFT."
 ---
 
-<div align="justify">
+{{< callout context="note" title="Prérequis" >}}
 
-{{< callout context="note" title="Prérequis" icon="tabler-icons/outline/info-circle" >}}
+- Apptainer (voir soit [notre guide d'installation]({{% ref "/documentation/install/install-apptainer" %}}), soit [la documentation officiel](https://apptainer.org/docs/user/latest/quick_start.html#installation))
+- L'image [`cp2k.sif`]({{% ref "/codes/scientific-computing/cp2k/" %}})
+- Les [fichiers d'entrée](/downloads/cp2k-tutorial-inputs.tar.gz)
 
-- Avoir installé **Apptainer** [(guide d'installation)](/documentation/install/install-apptainer/)
-- Avoir téléchargé l'image **cp2k.sif** [disponible ici](/codes/scientific-computing/cp2k/)
-- Avoir téléchargé les **fichiers d’entrée** [disponibles ici](/downloads/cp2k-tutorial-inputs.tar.gz)
-
-Pour plus d'informations sur les conteneurs Apptainer, veuillez consulter la [page dédiée](/about/apptainer/) ou suivre [ce tutoriel](/documentation/use/apptainer-image/) pour s'approprier les principales commandes d'Apptainer.
 {{< /callout >}}
 
+Pour plus d'informations sur les conteneurs Apptainer et leur utilisation, nous mettons à votre disposition [une description d'Apptainer]({{% ref "/about/apptainer" %}}), un guide rapide sur [comment utiliser Apptainer]( {{% ref "/documentation/use/apptainer-image" %}}), sans oublier bien sûr la [documentation officielle d'Apptainer](https://apptainer.org/docs/user/latest/).
 
 ## Fichiers d'entrée
 
@@ -103,4 +101,3 @@ Le fichier de sortie (`Si_bulk8.out`) comprend plusieurs sections:
 
 L’énergie totale et les forces sont exprimées en unités atomiques (u.a.). Pour les systèmes métalliques ou ceux présentant de faibles bandes interdites, un lissage peut être ajouté afin de stabiliser le calcul, ce qui introduit un terme d’énergie entropique électronique dans les résultats. La [page de l'exemple](https://www.cp2k.org/howto:static_calculation) explique comment procéder pour la simulation en cours. Les commandes présentées dans ce tutoriel peuvent être facilement adaptées pour exécuter cette section supplémentaire.
 
-</div>

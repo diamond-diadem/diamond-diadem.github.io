@@ -1,22 +1,19 @@
 ---
-title: How to use CP2K Apptainer image?
+title: How to use CP2K Apptainer image
 linkTitle: CP2K tutorial
 weight: 1
 description: "Tutorial on using the DIAMOND CP2K Apptainer container: pulling the image and usage example for DFT computations."
 ---
 
-<div align="justify">
+{{< callout context="note" title="Prerequisites" >}}
 
-{{< callout context="note" title="Prerequisites" icon="tabler-icons/outline/info-circle" >}}
-
-- Have **Apptainer** installed [(installation guide)](/en/documentation/install/install-apptainer/)
-- Have downloaded the **cp2k.sif** image [available here](/en/codes/scientific-computing/cp2k/)
-- Have downloaded the **input files** [available here](/downloads/cp2k-tutorial-inputs.tar.gz)
-
-For more information on Apptainer containers, please look at [this page](/en/about/apptainer/) or refer to [this tutorial](/en/documentation/use/apptainer-image/) to have a quick look at Apptainer's main commands.
+- Apptainer (see either [our installation guide]({{% ref "/documentation/install/install-apptainer" %}}) or [the official documentation](https://apptainer.org/docs/user/latest/quick_start.html#installation))
+- The [`cp2k.sif` image]({{% ref "/codes/scientific-computing/cp2k/" %}})
+- The [input files](/downloads/cp2k-tutorial-inputs.tar.gz)
 
 {{< /callout >}}
 
+For more information on Apptainer containers and their use, we provide [a description of Apptainer]({{% ref "/about/apptainer" %}}), a crash course on [how to use Apptainer]({{% ref "/documentation/use/apptainer-image" %}}), and of course there's also the [official Apptainer's documentation](https://apptainer.org/docs/user/latest/).
 
 ## Input files
 
@@ -104,4 +101,3 @@ The output file (`Si_bulk8.out`) includes:
 
 The total energy and forces are printed in atomic units (a.u.). For metallic systems or those with small band gaps, smearing can be added to stabilize the calculation, introducing an electronic entropic energy term in the output. The [official example page](https://www.cp2k.org/howto:static_calculation) explains how to do so for the current simulation. The commands presented in the present tutorial can be easily extrapolated to run this additional section.
 
-</div>

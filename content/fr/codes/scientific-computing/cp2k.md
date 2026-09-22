@@ -12,7 +12,7 @@ description: "CP2K est un logiciel de chimie quantique et de dynamique molécula
   <span class="logo-cp2k" aria-hidden="true"></span>
 </a>
 
-### Récupérez l'image de conteneur
+## Récupérez l'image de conteneur
 
 {{< tabs "apptainer_docker" >}}
 {{< tab "Apptainer" >}}
@@ -27,25 +27,21 @@ docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-s
 {{< /tab >}}
 {{< /tabs >}}
 
-<div align="justify">
-
 **CP2K** est un logiciel open source de calcul scientifique conçu pour effectuer des simulations atomistiques dans le domaine de la chimie, de la physique et des matériaux. Il est principalement utilisé pour des calculs de dynamique moléculaire, de structure électronique, et pour d'autres méthodes multi-échelles telles que QM/MM (quantum mechanics/molecular mechanics). CP2K est optimisé pour fonctionner sur des systèmes parallèles de haute performance, ce qui le rend efficace pour des simulations complexes à grande échelle.
 
 Le logiciel prend en charge plusieurs méthodologies, notamment la théorie de la fonctionnelle de la densité (DFT), les champs de force classiques, et les approches semi-empiriques. Il offre une flexibilité dans les types de modélisation grâce à une infrastructure modulaire permettant de combiner différentes approches théoriques et techniques de calcul. Les applications typiques incluent l'étude des propriétés électroniques, la modélisation des réactions chimiques, et la simulation de systèmes condensés et biologiques.
 
-</div>
-
-<h3 class="mb-1">Tutoriel</h3>
+## Tutoriel
 
 {{< link-card title="Apprenez à utiliser cette image de conteneur" href="/documentation/by-container/cp2k" icon="tabler-icons/outline/package" class="mb-0" >}}
 
-<h3 class="mb-1 mt-3">Documentation CP2K</h3>
+## Documentation CP2K
 
 {{< card-grid >}}
 {{< link-card title="Site officiel" href="https://www.cp2k.org/" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
 {{< link-card title="Documentation officielle" href="https://manual.cp2k.org/" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
 {{< /card-grid >}}
 
-<h3 class="mb-1 mt-3">Exemples</h3>
+## Exemples
 
 {{< link-card title="Téléchargez des fichiers d'entrée" href="/downloads/cp2k-tutorial-inputs.tar.gz" icon="tabler-icons/outline/file-export" >}}

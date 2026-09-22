@@ -11,7 +11,7 @@ description: "CP2K is a quantum chemistry and molecular dynamics software for mo
   <span class="logo-cp2k" aria-hidden="true"></span>
 </a>
 
-### Retrieve the container image
+## Retrieve the container image
 
 {{< tabs "apptainer_docker" >}}
 {{< tab "Apptainer" >}}
@@ -26,25 +26,21 @@ docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-s
 {{< /tab >}}
 {{< /tabs >}}
 
-<div align="justify">
-
 **CP2K** is an open-source scientific software designed for atomistic simulations in the fields of chemistry, physics, and materials science. It is primarily used for molecular dynamics, electronic structure calculations, and other multi-scale methods such as QM/MM (quantum mechanics/molecular mechanics). CP2K is optimized for operation on high-performance parallel systems, making it efficient for large-scale complex simulations.
 
 The software supports various methodologies, including density functional theory (DFT), classical force fields, and semi-empirical approaches. It provides flexibility in modeling through a modular infrastructure that allows the combination of different theoretical approaches and computational techniques. Typical applications include studying electronic properties, modeling chemical reactions, and simulating condensed matter and biological systems.
 
-</div>
-
-<h3 class="mb-1">Tutorial</h3>
+## Tutorial
 
 {{< link-card title="Learn to use this container image" href="/en/documentation/by-container/cp2k" icon="tabler-icons/outline/package" class="mb-0" >}}
 
-<h3 class="mb-1 mt-3">CP2K documentation</h3>
+## CP2K documentation
 
 {{< card-grid >}}
 {{< link-card title="Official website" href="https://www.cp2k.org/" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
 {{< link-card title="Official documentation" href="https://manual.cp2k.org/" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
 {{< /card-grid >}}
 
-<h3 class="mb-1 mt-3">Examples</h3>
+## Examples
 
 {{< link-card title="Download input files" href="/downloads/cp2k-tutorial-inputs.tar.gz" icon="tabler-icons/outline/file-export" >}}
