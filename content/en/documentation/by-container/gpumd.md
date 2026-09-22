@@ -1,15 +1,15 @@
 ---
-title: How to use the GPUMD Apptainer image?
+title: How to use the GPUMD Apptainer image
 linkTitle: GPUMD tutorial
 weight: 14
 description: "Tutorial on using the DIAMOND GPUMD Apptainer container: pulling the image, running simulations, and usage examples for GPU molecular dynamics"
 ---
 
-<div align="justify">
+{{< callout context="note" title="Prerequisites" >}}
 
-{{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
+- Apptainer (see either [our installation guide]({{% ref "/documentation/install/install-apptainer" %}}) or [the official documentation](https://apptainer.org/docs/user/latest/quick_start.html#installation))
 
-Before starting, you need to have Apptainer installed on your machine; see [this link](/en/documentation/install/install-apptainer/) for more details.
+{{< /callout >}}
 
 This tutorial focuses on using the GPUMD container image. GPUMD stands for **Graphics Processing Units Molecular Dynamics** and is a molecular dynamics package implemented for GPUs. For further information about GPUMD, its input files, and the available keywords, please refer to the [official GPUMD documentation](https://gpumd.org/).
 
@@ -18,11 +18,7 @@ The image contains the following tools:
 - `gpumd`, the molecular dynamics executable;
 - `nep`, the Neuroevolution Potential executable;
 
-For more information on Apptainer containers, please look at [this page](/en/about/apptainer/).
-
-To have a quick look at Apptainer's main commands, you may refer to [this tutorial](/en/documentation/use/apptainer-image/).
-
-{{< /callout >}}
+For more information on Apptainer containers and their use, we provide [a description of Apptainer]({{% ref "/about/apptainer" %}}), a crash course on [how to use Apptainer]({{% ref "/documentation/use/apptainer-image" %}}), and of course there's also the [official Apptainer's documentation](https://apptainer.org/docs/user/latest/).
 
 ## Recovering the image
 
@@ -214,5 +210,3 @@ Example of a possible answer:
 ```bash
 apptainer exec --nv $HOME/apptainer-images/gpumd.sif nep
 ```
-
-</div>

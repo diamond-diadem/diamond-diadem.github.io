@@ -148,6 +148,9 @@ icon="tabler-icons/outline/settings-question" >}}
             <td></td>
         </tr>
         <tr>
+            <td><a href="/codes/scientific-computing/gpumd/"><i class="icon-gpumd"></i>GPUMD</a></td>
+            <td></td>
+        </tr>
             <td><a href="/en/codes/scientific-computing/ptyrad/"><i class="icon-ptyrad"></i>PtyRAD</a></td>
             <td></td>
         </tr>
@@ -187,7 +190,8 @@ icon="tabler-icons/outline/settings-question" >}}
                 <option value="option20A">GaTewAY</option>
                 <option value="option21A">AMITEX_FFTP</option>
                 <option value="option22A">NDM</option>
-                <option value="option23A">PtyRAD</option>
+                <option value="option23A">GPUMD</option>
+                <option value="option24A">PtyRAD</option>
             </optgroup>
         </select>
     </div>
@@ -542,6 +546,21 @@ docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-s
 {{< tabs "apptainer_docker" >}}
 {{< tab "Apptainer" >}}
 ```bash
+apptainer pull gpumd.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/gpumd.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+Unavailable
+{{< /tab >}}
+{{< /tabs >}}
+
+</div>
+
+<div id="content-option24A" class="hidden">
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
 apptainer pull ptyrad.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/ptyrad-cuda.sif:latest
 ```
 {{< /tab >}}
@@ -553,6 +572,7 @@ docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-s
 {{< /tabs >}}
 
 </div>
+
 
 <div id="content-optionaA" class="hidden">
 
@@ -657,7 +677,8 @@ docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-s
             <option value="option20B">GaTewAY</option>
             <option value="option21B">AMITEX_FFTP</option>
             <option value="option22B">NDM</option>
-            <option value="option23B">PtyRAD</option>
+            <option value="option23B">GPUMD</option>
+            <option value="option24B">PtyRAD</option>
         </optgroup>
     </select>
 </div>
@@ -993,6 +1014,21 @@ docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-s
 </div>
 
 <div id="content-option23B" style="margin-top: -1rem;" class="hidden">
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull gpumd.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/gpumd.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+Unavailable
+{{< /tab >}}
+{{< /tabs >}}
+
+</div>
+
+<div id="content-option24B" style="margin-top: -1rem;" class="hidden">
 
 {{< tabs "apptainer_docker" >}}
 {{< tab "Apptainer" >}}
