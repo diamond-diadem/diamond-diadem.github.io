@@ -1,22 +1,19 @@
 ---
-title: How to use FEniCS Apptainer image?
+title: How to use FEniCS Apptainer image
 linkTitle: FEniCS tutorial
 weight: 1
 description: "Tutorial on using the DIAMOND FEniCS Apptainer container: pulling the image and usage example for FE computations."
 ---
 
-<div align="justify">
+{{< callout context="note" title="Prerequisites" >}}
 
-{{< callout context="note" title="Prerequisites" icon="tabler-icons/outline/info-circle" >}}
-
-- Have **Apptainer** installed [(installation guide)](/en/documentation/install/install-apptainer/)
-- Have downloaded the **fenics.sif** image [available here](/en/codes/scientific-computing/fenics/)
-- Have downloaded the **input files** [available here](/downloads/fenics-tutorial-inputs.tar.gz)
-
-For more information on Apptainer containers, please look at [this page](/en/about/apptainer/) or refer to [this tutorial](/en/documentation/use/apptainer-image/) to have a quick look at Apptainer's main commands.
+- Apptainer (see either [our installation guide]({{% ref "/documentation/install/install-apptainer" %}}) or [the official documentation](https://apptainer.org/docs/user/latest/quick_start.html#installation))
+- The [`fenics.sif` image]({{% ref "/codes/scientific-computing/fenics/" %}})
+- The [input files](/downloads/fenics-tutorial-inputs.tar.gz)
 
 {{< /callout >}}
 
+For more information on Apptainer containers and their use, we provide [a description of Apptainer]({{% ref "/about/apptainer" %}}), a crash course on [how to use Apptainer]({{% ref "/documentation/use/apptainer-image" %}}), and of course there's also the [official Apptainer's documentation](https://apptainer.org/docs/user/latest/).
 
 ## Input files
 
@@ -179,4 +176,3 @@ apptainer run paraview.sif out_poisson/poisson.xdmf
 
 The [official documentation](https://docs.fenicsproject.org/dolfinx/v0.10.0.post5/python/index.html) provides multiple examples exhibiting the features of the software. Those examples can be easily run with the FEniCS container image by extrapolating the commands presented in this tutorial.
 
-</div>

@@ -1,21 +1,19 @@
 ---
-title: Comment utiliser l'image Apptainer FEniCS ?
+title: Comment utiliser l'image Apptainer FEniCS
 linkTitle: Tutoriel FEniCS
 weight: 1
 description: "Tutoriel sur l'utilisation de l'image Apptainer FEniCS de DIAMOND : récupération du conteneur et cas d'usage pour les simulations EF."
 ---
 
-<div align="justify">
+{{< callout context="note" title="Prérequis" >}}
 
-{{< callout context="note" title="Prérequis" icon="tabler-icons/outline/info-circle" >}}
+- Apptainer (voir soit [notre guide d'installation]({{% ref "/documentation/install/install-apptainer" %}}), soit [la documentation officiel](https://apptainer.org/docs/user/latest/quick_start.html#installation))
+- L'image [`fenics.sif`]({{% ref "/codes/scientific-computing/fenics/" %}})
+- Les [fichiers d'entrée](/downloads/fenics-tutorial-inputs.tar.gz)
 
-- Avoir installé **Apptainer** [(guide d'installation)](/documentation/install/install-apptainer/)
-- Avoir téléchargé l'image **fenics.sif** [disponible ici](/codes/scientific-computing/fenics/)
-- Avoir téléchargé les **fichiers d’entrée** [disponibles ici](/downloads/fenics-tutorial-inputs.tar.gz)
-
-Pour plus d'informations sur les conteneurs Apptainer, veuillez consulter la [page dédiée](/about/apptainer/) ou suivre [ce tutoriel](/documentation/use/apptainer-image/) pour s'approprier les principales commandes d'Apptainer.
 {{< /callout >}}
 
+Pour plus d'informations sur les conteneurs Apptainer et leur utilisation, nous mettons à votre disposition [une description d'Apptainer]({{% ref "/about/apptainer" %}}), un guide rapide sur [comment utiliser Apptainer]( {{% ref "/documentation/use/apptainer-image" %}}), sans oublier bien sûr la [documentation officielle d'Apptainer](https://apptainer.org/docs/user/latest/).
 
 ## Fichiers d'entrée
 
@@ -178,4 +176,3 @@ apptainer run paraview.sif out_poisson/poisson.xdmf
 
 La [documentation officielle](https://docs.fenicsproject.org/dolfinx/v0.10.0.post5/python/index.html) propose de nombreux exemples illustrant les fonctionnalités du logiciel. Ces exemples peuvent être facilement exécutés avec l'image de conteneur FEniCS en adaptant les commandes présentées dans ce tutoriel.
 
-</div>
