@@ -1,16 +1,16 @@
 ---
-title: Comment utiliser l'image Apptainer de GPUMD ? 
+title: Comment utiliser l'image Apptainer de GPUMD
 linkTitle: Tutoriel GPUMD
 weight: 12
 description: "Tutoriel sur l'utilisation de l'image Apptainer GPUMD de DIAMOND : récupération du conteneur, exécution et exemples pour la dynamique moléculaire GPU."
 ---
 
-<div align="justify">
-
-{{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
+{{< callout context="note" title="Prérequis" >}}
 
 
-En préalable de ces explications, il est nécessaire d’avoir installé Apptainer sur votre machine ; voir [ce lien](/fr/documentation/install/install-apptainer/) pour plus de détails.
+- Apptainer (voir soit [notre guide d'installation]({{% ref "/documentation/install/install-apptainer" %}}), soit [la documentation officiel](https://apptainer.org/docs/user/latest/quick_start.html#installation))
+
+{{< /callout >}}
 
 Ce tutoriel détaille l'utilisation de l'image de conteneur du code GPUMD. GPUMD signifie **Graphics Processing Units Molecular Dynamics** et est un code de dynamique moléculaire implémenté pour tirer profits des GPUs. Pour plus d'informations sur GPUMD, ses fichiers d'entrées et les mots-clés disponibles, veuillez consulter [la documentation officielle de GPUMD](https://gpumd.org/).
 
@@ -19,11 +19,7 @@ L'image contient les outils suivants :
 - `gpumd`, l'exécutable de dynamique moléculaire ;
 - `nep`, l'exécutable Neuroevolution Potential ;
 
-Pour plus d'informations sur les conteneurs Apptainer, veuillez consulter [cette page](/en/about/apptainer/).
-
-Pour avoir un aperçu rapide des principales commandes d'Apptainer, vous pouvez vous référer à [ce tutoriel](/en/documentation/use/apptainer-image/).
-
-{{< /callout >}}
+Pour plus d'informations sur les conteneurs Apptainer et leur utilisation, nous mettons à votre disposition [une description d'Apptainer]({{% ref "/about/apptainer" %}}), un guide rapide sur [comment utiliser Apptainer]( {{% ref "/documentation/use/apptainer-image" %}}), sans oublier bien sûr la [documentation officielle d'Apptainer](https://apptainer.org/docs/user/latest/).
 
 ## Récuperer l'image
 
@@ -212,4 +208,3 @@ Exemple de réponse :
 apptainer exec --nv $HOME/apptainer-images/gpumd.sif nep
 ```
 
-</div>
