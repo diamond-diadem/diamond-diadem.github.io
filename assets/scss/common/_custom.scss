@@ -116,20 +116,6 @@ u {
     text-underline-offset: 6px;
 }
 
-.logo-apptainer {
-    display: block;
-    aspect-ratio: 117.40221 / 113.8;
-    background-image: url(images/apptainer/apptainer-logo.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-}
-@include color-mode(dark) {
-    .logo-apptainer {
-        background-image: url(images/apptainer/apptainer-logo-dark.svg);
-    }
-}
-
 .logo-guix {
     display: block;
     aspect-ratio: 595 / 204.92203;
