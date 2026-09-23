@@ -1,5 +1,5 @@
 ---
-title: Comment demander de l'aide ou donner un feedback  ?
+title: Comment demander de l'aide ou donner un feedback ?
 weight: 6
 description: "Comment demander de l'aide, signaler un bug ou suggérer une fonctionnalité pour les conteneurs et codes de la plateforme DIAMOND via Gitlab."
 build:

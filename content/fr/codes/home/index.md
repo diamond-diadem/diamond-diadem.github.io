@@ -1,5 +1,5 @@
 ---
-title: CODES CONTENEURISÉS
+title: Codes conteneurisés
 linkTitle: Accueil
 weight: 1
 sidebar_link: /codes/home/
@@ -133,7 +133,7 @@ icon="tabler-icons/outline/settings-question" >}}
             <td></td>
         </tr>
         <tr>
-            <td><a href="/codes/scientific-computing/xtb/"><i class="icon-xtb"></i>XTB</a></td>
+            <td><a href="/codes/scientific-computing/xtb/"><i class="icon-xtb"></i>xTB</a></td>
             <td></td>
         </tr>
         <tr>
@@ -186,7 +186,7 @@ icon="tabler-icons/outline/settings-question" >}}
                 <option value="option16A">CP2K</option>
                 <option value="option17A">n2p2</option>
                 <option value="option18A">DFTB+</option>
-                <option value="option19A">XTB</option>
+                <option value="option19A">xTB</option>
                 <option value="option20A">GaTewAY</option>
                 <option value="option21A">AMITEX_FFTP</option>
                 <option value="option22A">NDM</option>
@@ -675,7 +675,7 @@ docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-s
             <option value="option16B">CP2K</option>
             <option value="option17B">n2p2</option>
             <option value="option18B">DFTB+</option>
-            <option value="option19B">XTB</option>
+            <option value="option19B">xTB</option>
             <option value="option20B">GaTewAY</option>
             <option value="option21B">AMITEX_FFTP</option>
             <option value="option22B">NDM</option>

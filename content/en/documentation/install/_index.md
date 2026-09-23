@@ -1,5 +1,5 @@
 ---
-title: Install the plateform tools
+title: Install the platform tools
 weight: 2
 exclude_search: true
 build:

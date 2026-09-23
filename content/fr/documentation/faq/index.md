@@ -1,6 +1,6 @@
 ---
-title: Foire Aux Questions
-linkTitle: Foire Aux Questions
+title: Foire aux questions
+linkTitle: Foire aux questions
 toc: true
 weight: 10
 description: "Foire Aux Questions de la plateforme DIAMOND : ressources informatiques, accès aux codes, utilisation des conteneurs Apptainer et des paquets Guix."

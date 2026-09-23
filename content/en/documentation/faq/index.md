@@ -1,6 +1,6 @@
 ---
-title: Frequently Asked Questions
-linkTitle: Frequently Asked Questions
+title: Frequently asked questions
+linkTitle: Frequently asked questions
 toc: true
 weight: 10
 description: "Frequently Asked Questions about DIAMOND: computational resources, code access, Apptainer container usage, and Guix package management."

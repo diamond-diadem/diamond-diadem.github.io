@@ -1,8 +1,8 @@
 ---
-title: How to use OpenDis Apptainer image
-linkTitle: OpenDis tutorial
+title: How to use OpenDiS Apptainer image
+linkTitle: OpenDiS tutorial
 weight: 1
-description: "Tutorial on using the DIAMOND OpenDis Apptainer container: pulling the image, running calculations, and usage examples for dislocation dynamics computations."
+description: "Tutorial on using the DIAMOND OpenDiS Apptainer container: pulling the image, running calculations, and usage examples for dislocation dynamics computations."
 ---
 
 {{< callout title="Prerequisites" >}}
@@ -17,7 +17,7 @@ For more information on Apptainer containers and their use, we provide [a descri
 
 ## Input files
 
-To illustrate the various commands, a set of OpenDis input files is available in the form of an archive via [this link](/downloads/opendis-tutorial-inputs.tar.gz). Those files correspond to a tutorial example from the OpenDis [official documentation](https://opendis.github.io/OpenDiS/tutorials/frank_read_src/index.html). The archive contains two Python scripts describing the same simulation for OpenDis using two different modules, a sequential one (PyDis) and a multi-threaded one (ExaDis):
+To illustrate the various commands, a set of OpenDiS input files is available in the form of an archive via [this link](/downloads/opendis-tutorial-inputs.tar.gz). Those files correspond to a tutorial example from the OpenDiS [official documentation](https://opendis.github.io/OpenDiS/tutorials/frank_read_src/index.html). The archive contains two Python scripts describing the same simulation for OpenDiS using two different modules, a sequential one (PyDis) and a multi-threaded one (ExaDis):
 
 - `test_frank_read_src_pydis.py`,
 - `test_frank_read_src_exadis.py`.
@@ -30,19 +30,19 @@ tar -xzf opendis-tutorial-inputs.tar.gz
 
 ## Quickstart
 
-For impatient folks, here is how to launch a multi-threaded OpenDis computation on in the case where the current directory contains the `opendis.sif` container image and all necessary OpenDis input files:
+For impatient folks, here is how to launch a multi-threaded OpenDiS computation on in the case where the current directory contains the `opendis.sif` container image and all necessary OpenDiS input files:
 
 ```bash
 apptainer exec opendis.sif python3 test_frank_read_src_exadis.py
 ```
 
-## Detailed usage for the OpenDis container
+## Detailed usage for the OpenDiS container
 
-This section presents different ways to use the OpenDis image. For more details about Apptainer commands, please look at [this tutorial](/en/documentation/use/apptainer-image/#apptainer--crash-course).
+This section presents different ways to use the OpenDiS image. For more details about Apptainer commands, please look at [this tutorial](/en/documentation/use/apptainer-image/#apptainer--crash-course).
 
 ### Introduction
 
-OpenDis is a parallelized open-source software designed to simulate and analyze dislocations in crystalline materials at the mesoscale. The code license can be accessed from outside the container as follows:
+OpenDiS is a parallelized open-source software designed to simulate and analyze dislocations in crystalline materials at the mesoscale. The code license can be accessed from outside the container as follows:
 
 ```bash
 opendis_path=$(apptainer exec opendis.sif ls /gnu/store | grep opendis)
@@ -50,7 +50,7 @@ license_path=$(apptainer exec opendis.sif find /gnu/store/$opendis_path/share -n
 apptainer exec opendis.sif cat $license_path
 ```
 
-The current tutorial corresponds to the *Frank-Read Source* tutorial from OpenDis [official documentation](https://opendis.github.io/OpenDiS/tutorials/frank_read_src/index.html). The Python scripts contained in the input archive can also be found in the *examples/02_frank_read_src* directory of the software [GitHub repository](https://github.com/OpenDiS/OpenDiS/tree/main/examples/02_frank_read_src).
+The current tutorial corresponds to the *Frank-Read Source* tutorial from OpenDiS [official documentation](https://opendis.github.io/OpenDiS/tutorials/frank_read_src/index.html). The Python scripts contained in the input archive can also be found in the *examples/02_frank_read_src* directory of the software [GitHub repository](https://github.com/OpenDiS/OpenDiS/tree/main/examples/02_frank_read_src).
 
 ### Simulation description
 
@@ -103,4 +103,4 @@ The new `G1` object can then be interacted with exactly as previously.
 
 ### To go further
 
-OpenDis [official documentation](https://opendis.github.io/OpenDiS/tutorials/index.html) contains multiple tutorials presenting the features of the software. The associated Python input scripts can be found in the [code repository](https://github.com/OpenDiS/OpenDiS/tree/main/examples) *examples/* directory. The commands presented in this tutorial can be easily extrapolated to run those examples with the OpenDis image container.
+OpenDiS [official documentation](https://opendis.github.io/OpenDiS/tutorials/index.html) contains multiple tutorials presenting the features of the software. The associated Python input scripts can be found in the [code repository](https://github.com/OpenDiS/OpenDiS/tree/main/examples) *examples/* directory. The commands presented in this tutorial can be easily extrapolated to run those examples with the OpenDiS image container.

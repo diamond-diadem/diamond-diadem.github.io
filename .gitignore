@@ -10,3 +10,6 @@ hugo_build.lock
 .last-generated-code-pages.json
 
 hugo_stats.json
+
+# Emacs temp files
+*~

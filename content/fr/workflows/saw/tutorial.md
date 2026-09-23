@@ -1,5 +1,5 @@
 ---
-title: Tutoriel simple-adsorption-workflow
+title: Tutoriel du Simple Adsorption Workflow
 linkTitle: Tutoriel
 description: "Tutoriel du workflow simple-adsorption-workflow : simulation Monte Carlo d'adsorption de gaz dans des matériaux nanoporeux avec RASPA2 sur DIAMOND."
 ---

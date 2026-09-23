@@ -1,7 +1,7 @@
 ---
-title: XTB
+title: xTB
 title_visible: false
-linkTitle: XTB
+linkTitle: xTB
 icon: icon-xtb
 weight: 19
 description: "xTB est un logiciel de chimie quantique semi-empirique basé sur la méthode GFN-xTB de liaisons serrées, disponible en conteneur Apptainer sur DIAMOND."
@@ -28,7 +28,7 @@ docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-s
 
 <div align="justify">
 
-**XTB** est un logiciel open source de calcul scientifique conçu pour effectuer des simulations atomistiques dans le domaine de la chimie quantique. Il peut notamment être utilisé pour l'optimisation de géométrie ou de la dynamique moléculaire. XTB est paramétré pour une grande partie du tableau périodique, jusqu'au Radon (Rn, Z=86).
+**xTB** est un logiciel open source de calcul scientifique conçu pour effectuer des simulations atomistiques dans le domaine de la chimie quantique. Il peut notamment être utilisé pour l'optimisation de géométrie ou de la dynamique moléculaire. xTB est paramétré pour une grande partie du tableau périodique, jusqu'au Radon (Rn, Z=86).
 
 </div>
 
@@ -36,7 +36,7 @@ docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-s
 
 {{< link-card title="Apprenez à utiliser cette image de conteneur" href="/documentation/by-container/xtb" icon="tabler-icons/outline/package" class="mb-0" >}}
 
-<h3 class="mb-1 mt-3">Documentation XTB</h3>
+<h3 class="mb-1 mt-3">Documentation xTB</h3>
 
 {{< card-grid >}}
 {{< link-card title="Site officiel" href="https://github.com/grimme-lab/xtb" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}

@@ -1,5 +1,5 @@
 ---
-title: Installation de aiida-diffusion-wf
+title: Installation du workflow MOFLearning AiiDA+LAMMPS
 linkTitle: Installation
 toc: false
 description: "Guide d'installation du workflow AiiDA-diffusion-wf pour les simulations de mobilité des défauts dans les matériaux, disponible sur la plateforme DIAMOND."

@@ -31,7 +31,7 @@ main:
     url: en/codes/home/
     weight: 20
   - name: Workflows
-    url: en/workflows/home/
+    url: en/workflows/
     weight: 30
   - name: Data
     url: en/data/

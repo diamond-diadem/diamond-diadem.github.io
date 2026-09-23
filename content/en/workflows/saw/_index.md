@@ -1,8 +1,12 @@
 ---
-title: Simple adsorption workflow
-description: >-
-    Description of the simple-adsorption-workflow for grand canonical Monte Carlo simulation of gas
-    adsorption in nanoporous materials on DIAMOND.
+title: "Simple Adsorption Workflow"
+weight: 2
+summary: "Containerized program for the study of adsorption in porous materials"
+description: "Description of the simple-adsorption-workflow for grand canonical Monte Carlo simulation of gas adsorption in nanoporous materials on DIAMOND."
+tablerIcon: tabler-icons/outline/grain
+toc: false
+aliases:
+  - /workflows/saw/description/
 ---
 
 This workflow measures adsorption properties in porous media.
@@ -29,4 +33,3 @@ Four actions are possible:
 - **plot**: plot adsorption isotherms using the integrated user interface
 
 The available materials are sourced from the [CoRE MOF 2019](https://doi.org/10.1021/acs.jced.9b00835) database, a structural database of MOFs (Metal-Organic Frameworks). However, advanced users can use structures in CIF format, provided they undergo a curation step.
-

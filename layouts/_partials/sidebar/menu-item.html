@@ -1,0 +1,47 @@
+{{- /*
+  Renders one sidebar entry for a page inside a section's menu, recursing
+  into the page's own children when it has any (`.IsNode`). A node whose
+  own body has content gets a "Description" entry linking to itself,
+  listed first among its children (see section-page-link.html).
+
+  @param {page}   page        The page to render.
+  @param {string} currentDir  Directory of the page being rendered, for fuzzy active-state matching.
+  @param {string} currentPath File path of the page being rendered, for exact active-state matching.
+  @param {bool}   [top]       True for a top section's direct children: larger spacing, no indent, and button-styled leaves.
+*/ -}}
+{{- $page := .page -}}
+{{- $currentDir := .currentDir -}}
+{{- $currentPath := .currentPath -}}
+{{- $top := .top | default false -}}
+{{- if $page.IsNode -}}
+  {{- $active := partial "sidebar/is-active" (dict "currentDir" $currentDir "currentPath" $currentPath "candidate" $page) -}}
+  <li class="{{ cond $top "mb-1" "my-1 ms-3" }}">
+    {{- if $page.Params.sidebar_link }}
+    <a class="btn btn-toggle {{ cond $top "no-caret rounded" "no-caret align-items-center rounded" }}{{ if $active }} active{{ end }}" href="{{ $page.Params.sidebar_link | relURL }}">
+      {{ or $page.LinkTitle $page.Title }}
+    </a>
+    {{- else }}
+    <button class="btn btn-toggle {{ cond $top "rounded" "align-items-center rounded" }} collapsed" data-bs-toggle="collapse" data-bs-target="#section-{{ md5 $page.Title }}" aria-expanded="{{ if $active }}true{{ else }}false{{ end }}">
+      {{ or $page.LinkTitle $page.Title }}
+    </button>
+    <div class="collapse{{ if $active }} show{{ end }}" id="section-{{ md5 $page.Title }}">
+      <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+        {{ partial "sidebar/section-page-link.html" (dict "section" $page "label" (T "section_description") "currentPath" $currentPath "linkClass" "docs-link rounded") }}
+        {{ range $page.Pages.ByWeight }}
+          {{ partial "sidebar/menu-item.html" (dict "page" . "currentDir" $currentDir "currentPath" $currentPath) }}
+        {{ end }}
+      </ul>
+    </div>
+    {{- end }}
+  </li>
+{{- else -}}
+  {{- $active := partial "sidebar/is-active" (dict "currentDir" $currentDir "currentPath" $currentPath "candidate" $page "exact" true) -}}
+  {{- $icons := "" -}}
+  {{- if $top }}
+  <li class="mb-1"><a class="btn btn-toggle no-caret rounded{{ if $active }} active{{ end }}" href="{{ $page.Permalink }}">
+    {{ if $page.Params.tablerIcon }}{{ partial "inline-svg" (dict "src" $page.Params.tablerIcon "class" "svg-inline-sidebar") }}{{ end }}{{ if $page.Params.Icon }}<i class="sidebar-icon {{ $page.Params.Icon }}"></i>{{ end }}{{ or $page.LinkTitle $page.Title }}
+  </a></li>
+  {{- else }}
+  <li><a class="docs-link rounded{{ if $active }} active{{ end }}" href="{{ $page.Permalink }}">{{ if $page.Params.tablerIcon }}{{ partial "inline-svg" (dict "src" $page.Params.tablerIcon "class" "svg-inline-sidebar") }}{{ end }}{{ if $page.Params.Icon }}<i class="sidebar-icon {{ $page.Params.Icon }}"></i>{{ end }}{{ or $page.LinkTitle $page.Title }}</a></li>
+  {{- end }}
+{{- end -}}

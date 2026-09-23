@@ -1,5 +1,5 @@
 ---
-title: Scientific Computing Codes
+title: Scientific computing codes
 weight: 2
 exclude_search: true
 build:

@@ -1,0 +1,15 @@
+{{- /*
+  Sidebar entry linking to a section's own page, shown only when that page
+  has a body to show (sections with no content of their own, e.g. those
+  declared with `build.render: never`, get no entry).
+
+  @param {page}   section     The section to link to.
+  @param {string} label       Link text.
+  @param {string} currentPath File path of the page being rendered, to flag the active entry.
+  @param {string} itemClass   CSS classes of the list item.
+  @param {string} linkClass   CSS classes of the link.
+*/ -}}
+{{- if and .section.Permalink .section.Content }}
+  {{- $active := partial "sidebar/is-active" (dict "currentPath" .currentPath "candidate" .section "exact" true) }}
+  <li{{ with .itemClass }} class="{{ . }}"{{ end }}><a class="{{ .linkClass }}{{ if $active }} active{{ end }}" href="{{ .section.Permalink }}">{{ .label }}</a></li>
+{{- end }}

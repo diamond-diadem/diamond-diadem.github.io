@@ -1,71 +1,64 @@
-{{ define "main" }}
+{{- /*
+  Renders a documentation-style page: section sidebar, table of contents and content.
+
+  @param {page}     page           The page to render.
+  @param {template.HTML} [afterContent] Extra HTML rendered below the page content.
+*/ -}}
+{{- $page := .page -}}
 	<div class="row flex-xl-nowrap">
-		{{ if (in site.Params.doks.sectionNav .Section) -}}
+		{{ if (in site.Params.doks.sectionNav $page.Section) -}}
 		<div class="col-lg-5 col-xl-4 diamond-docs-sidebar-container d-none d-lg-block">
 			<div class="col-lg-5 col-xl-4 docs-sidebar{{ if ne site.Params.doks.navbarSticky true }} docs-sidebar-top{{ end }}{{ if site.Params.doks.headerBar }} docs-sidebar-offset{{ end }} d-none d-lg-block">
 				<nav {{ if eq site.Params.doks.menu.section.collapsibleSidebar false }}id="sidebar-default" {{ end }}class="docs-links" aria-label="Main navigation">
-					{{ partial "sidebar/docs-menu.html" . }}
+					{{ partial "sidebar/docs-menu.html" $page }}
 					<a class="btn btn-primary rounded-pill ms-3 me-2 px-4 order-lg-3 d-none d-lg-block btn-doc-sidebar" href="{{ site.Params.docSidebarRef }}" role="button">{{ site.Params.docSidebarText }}</a>
 				</nav>
 			</div>
 		</div>
 		{{ end -}}
-		{{ if and (eq site.Params.doks.containerBreakpoint "fluid") (in .Site.Params.mainSections .Type) }}
+		{{ if and (eq site.Params.doks.containerBreakpoint "fluid") (in site.Params.mainSections $page.Type) }}
 			<div class="col container-fw d-lg-flex flex-lg-row justify-content-center mx-auto">
 		{{ end }}
-		{{ if ne .Params.toc false -}}
+		{{ if ne $page.Params.toc false -}}
 		<nav class="docs-toc{{ if ne site.Params.doks.navbarSticky true }} docs-toc-top{{ end }}{{ if site.Params.doks.headerBar }} docs-toc-offset{{ end }} d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
-			{{ partial "sidebar/docs-toc-desktop.html" . }}
+			{{ partial "sidebar/docs-toc-desktop.html" $page }}
 		</nav>
 		{{ end -}}
-		{{ if .Params.toc -}}
+		{{ if $page.Params.toc -}}
 		<main class="docs-content col-lg-11 col-xl-9 diamond-content">
 		{{ else -}}
 		<main class="docs-content col-lg-11 col-xl-9 mx-xl-auto diamond-content">
 		{{ end -}}
 			{{ if site.Params.doks.breadcrumbTrail -}}
-				<!-- https://discourse.gohugo.io/t/breadcrumb-navigation-for-highly-nested-content/27359/6 -->
+				{{/* https://discourse.gohugo.io/t/breadcrumb-navigation-for-highly-nested-content/27359/6 */}}
 				<nav aria-label="breadcrumb">
 					<ol class="breadcrumb">
-						{{ partial "main/breadcrumb" . -}}
-						<li class="breadcrumb-item active" aria-current="page">{{ .Title }}</li>
+						{{ partial "main/breadcrumb" $page -}}
+						<li class="breadcrumb-item active" aria-current="page">{{ $page.Title }}</li>
 					</ol>
 				</nav>
 			{{ end }}
-			{{ if default true .Params.title_visible -}}
-			<h1>{{ .Title }}</h1>
+			{{ if default true $page.Params.title_visible -}}
+			<h1>{{ $page.Title }}</h1>
 			{{ end -}}
-			<p class="lead">{{ .Params.lead | safeHTML }}</p>
-			<!-- {{ if ne .Params.toc false -}}
-			<nav class="toc-mobile d-xl-none" aria-label="Quaternary navigation">
-				{{ partial "sidebar/docs-toc-mobile.html" . }}
-			</nav>
-			{{ end -}} -->
+			<p class="lead">{{ $page.Params.lead | safeHTML }}</p>
 
 			{{ if site.Params.doks.headlineHash -}}
-				{{ partial "main/headline-hash" .Content }}
+				{{ partial "main/headline-hash" $page.Content }}
 			{{ else -}}
-				{{ .Content }}
+				{{ $page.Content }}
 			{{ end -}}
+			{{ .afterContent }}
 			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
 				{{ if site.Params.doks.lastMod -}}
-					{{ partial "main/last-modified.html" . }}
+					{{ partial "main/last-modified.html" $page }}
 				{{ end -}}
 				{{ if site.Params.doks.editPage -}}
-					{{ partial "main/edit-page.html" . }}
+					{{ partial "main/edit-page.html" $page }}
 				{{ end -}}
 			</div>
-			<!-- {{ partial "main/docs-navigation.html" . }} -->
-			<!--
-			{{ if not .Site.Params.options.collapsibleSidebar -}}
-				{{ partial "main/docs-navigation.html" . }}
-			{{ else -}}
-				<div class="my-n3"></div>
-			{{ end -}}
-			-->
 		</main>
-		{{ if and (eq site.Params.doks.containerBreakpoint "fluid") (in .Site.Params.mainSections .Type) }}
+		{{ if and (eq site.Params.doks.containerBreakpoint "fluid") (in site.Params.mainSections $page.Type) }}
 			</div>
 		{{ end }}
 	</div>
-{{ end }}

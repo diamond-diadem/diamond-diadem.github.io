@@ -1,8 +1,8 @@
 ---
-title: Comment utiliser l'image Apptainer OpenDis
-linkTitle: Tutoriel OpenDis
+title: Comment utiliser l'image Apptainer OpenDiS
+linkTitle: Tutoriel OpenDiS
 weight: 1
-description: "Tutoriel sur l'utilisation de l'image Apptainer OpenDis de DIAMOND : récupération du conteneur, exécution et cas d'usage pour les calculs de dynamiques des dislocations."
+description: "Tutoriel sur l'utilisation de l'image Apptainer OpenDiS de DIAMOND : récupération du conteneur, exécution et cas d'usage pour les calculs de dynamiques des dislocations."
 ---
 
 {{< callout title="Prérequis" >}}
@@ -17,7 +17,7 @@ Pour plus d'informations sur les conteneurs Apptainer et leur utilisation, nous 
 
 ## Fichiers d'entrée
 
-Pour illustrer les différentes commandes, un ensemble de fichiers d'entrée pour OpenDis est disponible sous forme d'archive via [ce lien](/downloads/opendis-tutorial-inputs.tar.gz). Ces fichiers correspondent à un tutoriel issu de la [documentation officielle](ttps://opendis.github.io/OpenDiS/tutorials/frank_read_src/index.html) d'OpenDis. L'archive contient deux scripts Python qui décrivent la même simulation OpenDis en utilisant deux modules différents, l'un séquentiel (PyDis) et l'autre multi-threadé (ExaDis) :
+Pour illustrer les différentes commandes, un ensemble de fichiers d'entrée pour OpenDiS est disponible sous forme d'archive via [ce lien](/downloads/opendis-tutorial-inputs.tar.gz). Ces fichiers correspondent à un tutoriel issu de la [documentation officielle](ttps://opendis.github.io/OpenDiS/tutorials/frank_read_src/index.html) d'OpenDiS. L'archive contient deux scripts Python qui décrivent la même simulation OpenDiS en utilisant deux modules différents, l'un séquentiel (PyDis) et l'autre multi-threadé (ExaDis) :
 
 - `test_frank_read_src_pydis.py`,
 - `test_frank_read_src_exadis.py`.
@@ -30,19 +30,19 @@ tar -xzf opendis-tutorial-inputs.tar.gz
 
 ## Guide de démarrage rapide
 
-Pour les plus impatients, voici comment lancer un calcul OpenDis multi-threadé, dans le cas où le répertoire courant contient l'image `opendis.sif` ainsi que tous les fichiers d'entrée nécessaires :
+Pour les plus impatients, voici comment lancer un calcul OpenDiS multi-threadé, dans le cas où le répertoire courant contient l'image `opendis.sif` ainsi que tous les fichiers d'entrée nécessaires :
 
 ```bash
 apptainer exec opendis.sif python3 test_frank_read_src_exadis.py
 ```
 
-## Utilisation détaillée du conteneur OpenDis
+## Utilisation détaillée du conteneur OpenDiS
 
-Cette section présente différentes façons d'utiliser l'image OpenDis. Pour plus de détails sur les commandes Apptainer, veuillez consulter [ce tutoriel](/documentation/use/apptainer-image/#apptainer--cours-accéléré).
+Cette section présente différentes façons d'utiliser l'image OpenDiS. Pour plus de détails sur les commandes Apptainer, veuillez consulter [ce tutoriel](/documentation/use/apptainer-image/#apptainer--cours-accéléré).
 
 ### Introduction
 
-OpenDis est un code open-source parallélisé conçu pour simuler et analyser les dislocations dans les matériaux cristallins à l’échelle mésoscopique. La licence du code peut être consultée depuis l'extérieur du conteneur comme suit :
+OpenDiS est un code open-source parallélisé conçu pour simuler et analyser les dislocations dans les matériaux cristallins à l’échelle mésoscopique. La licence du code peut être consultée depuis l'extérieur du conteneur comme suit :
 
 ```bash
 opendis_path=$(apptainer exec opendis.sif ls /gnu/store | grep opendis)
@@ -103,5 +103,5 @@ Le nouvel objet `G1` peut alors être manipulé de la même manière qu'à la se
 
 ### Pour aller plus loin
 
-La [documentation officielle](https://opendis.github.io/OpenDiS/tutorials/index.html) d'OpenDis contient plusieurs tutoriels présentant les différentes fonctionnalités du code. Les scripts Python associés sont présents dans le répertoire *examples/* du [dépôt](https://github.com/OpenDiS/OpenDiS/tree/main/examples). Les commandes présentées dans le présent tutoriel peuvent facilement être extrapolées pour lancer ces exemples avec le conteneur OpenDis.
+La [documentation officielle](https://opendis.github.io/OpenDiS/tutorials/index.html) d'OpenDiS contient plusieurs tutoriels présentant les différentes fonctionnalités du code. Les scripts Python associés sont présents dans le répertoire *examples/* du [dépôt](https://github.com/OpenDiS/OpenDiS/tree/main/examples). Les commandes présentées dans le présent tutoriel peuvent facilement être extrapolées pour lancer ces exemples avec le conteneur OpenDiS.
 

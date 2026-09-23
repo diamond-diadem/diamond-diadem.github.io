@@ -27,7 +27,7 @@ main:
     url: codes/home/
     weight: 20
   - name: Workflows
-    url: workflows/home/
+    url: workflows/
     weight: 30
   - name: Données
     url: data/

@@ -30,6 +30,10 @@ video_unsupported: Votre navigateur ne prend pas en charge les vidéos intégré
   vous pouvez <a href="{{ .RelPermalink }}">télécharger la vidéo</a> et la regarder avec votre lecteur vidéo préféré.
 faq: Foire aux questions
 
+### Sections ###
+available_workflows: Workflows disponibles
+section_description: Description
+
 ### Home page ###
 home_codes_body: <a href="/codes/home/">Calcul scientifique et visualisation de
   données</a>.
@@ -44,7 +48,7 @@ home_featured_news_title: Actualités en vedette
 home_learn_more_body: Sur <a href="/about/diamond/">DIAMOND</a>, le <a href="/about/diadem/">PEPR
   DIADEM</a>, les <a href="/about/containers/">conteneurs</a> et <a href="/about/apptainer/">Apptainer</a>.
 home_learn_more_title: Apprenez-en plus
-home_workflows_body: <a href="/workflows/home/">Workflows disponibles</a>.<br/><a href="/data/">Contactez
+home_workflows_body: <a href="/workflows/">Workflows disponibles</a>.<br/><a href="/data/">Contactez
   l'équipe bases de données</a>.
 home_workflows_title: Workflows & bases de données
 

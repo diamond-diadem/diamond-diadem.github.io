@@ -1,0 +1,33 @@
+{{- /*
+  Renders a clickable card linking to a page or resource.
+
+  @param {string} href        Link target.
+  @param {string} title       Card title (HTML allowed).
+  @param {string} [description] Text shown under the title (HTML allowed).
+  @param {string} [icon]      Inline SVG path, e.g. "tabler-icons/outline/book".
+  @param {string} [target]    Link target attribute, e.g. "_blank".
+  @param {string} [rel]       Link rel attribute; defaults to "noopener noreferrer" for blank targets.
+  @param {string} [class]     Extra CSS classes for the card.
+  @param {bool}   [disabled]  Renders the card without a usable link.
+*/ -}}
+{{- $opensNewTab := in (slice "_blank" "blank") .target -}}
+{{- $rel := or .rel (cond $opensNewTab "noopener noreferrer" "") -}}
+<div class="card text-end w-100{{ with .class}} {{ . }}{{ end }}">
+  <div class="card-body d-flex align-items-center">
+    {{ with .icon }}{{ partial "inline-svg" (dict "src" . "class" "card-icon") }}{{ end }}
+    <div class="d-flex flex-column me-auto text-start">
+      <h5 class="card-title my-0"><a {{ if ( not .disabled )}}href="{{ .href }}"{{ else}}href="#bottom"{{ end }}{{ with .target}} target="{{ . }}"{{ end }} class="stretched-link text-reset text-decoration-none"{{ with $rel}} rel="{{ . }}"{{ end }}>{{ .title  | safeHTML }}</a></h5>
+      {{ with .description | safeHTML }}<p class="card-text mt-1">{{ . }}</p>{{ end }}
+    </div>
+    {{ if (default true ( not .disabled ) ) }}
+    <div class="d-flex flex-column justify-content-center">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M5 12l14 0"></path>
+        <path d="M13 18l6 -6"></path>
+        <path d="M13 6l6 6"></path>
+      </svg>
+    </div>
+    {{ end }}
+  </div>
+</div>
