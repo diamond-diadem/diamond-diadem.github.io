@@ -88,6 +88,17 @@
     top: -0.35em;
 }
 
+// A soft glow in the page color separates the banner text from the busy picture
+// behind it. It follows the color mode through --bs-body-bg.
+.container-title-homepage h1,
+.container-lead-homepage .lead,
+.container-h1-default-page h1 {
+    text-shadow:
+        0 0 0.25em var(--bs-body-bg),
+        0 0 0.6em var(--bs-body-bg),
+        0 0 1.2em var(--bs-body-bg);
+}
+
 .container-lead-homepage .lead {
     position: relative;
     top: 0.35em;

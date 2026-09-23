@@ -9,3 +9,8 @@
         }
     }
 }
+
+// Lays a flat translucent veil over a background image so text drawn on top stays readable
+@mixin veiled-background-image($veil, $image) {
+    background-image: linear-gradient($veil, $veil), $image;
+}

@@ -1,0 +1,119 @@
+// Code highlighting colors from the Doks theme (GitHub based), shifted along their
+// own hue until every token reads at 5.5:1 or more against the code block
+// background, and line numbers at 4.5:1. Only the tokens below that bar are listed.
+
+// Light mode, on the #f6f7f9 code background
+$code-comment: #656556;
+$code-preprocessor: #636363;
+$code-generic-output: #646464;
+$code-number: #007070;
+$code-variable: #006e6e;
+$code-builtin: #006b8f;
+$code-string: #c50f3d;
+$code-regex: #00731c;
+$code-line-number: #717171;
+
+// Dark mode, on the #23262f code background
+$code-comment-dark: #9da5ad;
+$code-variable-dark: #79c0ff;
+$code-line-number-dark: #898d91;
+
+/*! purgecss start ignore */
+.chroma {
+    .c,
+    .c1,
+    .ch,
+    .cm {
+        color: $code-comment;
+    }
+
+    .cp,
+    .cpf,
+    .cs,
+    .bp,
+    .gh {
+        color: $code-preprocessor;
+    }
+
+    .go,
+    .gu {
+        color: $code-generic-output;
+    }
+
+    .m,
+    .mb,
+    .mf,
+    .mh,
+    .mi,
+    .mo,
+    .il {
+        color: $code-number;
+    }
+
+    .na,
+    .no,
+    .nv,
+    .vc,
+    .vg,
+    .vi {
+        color: $code-variable;
+    }
+
+    .nb {
+        color: $code-builtin;
+    }
+
+    .s,
+    .s1,
+    .s2,
+    .sa,
+    .sb,
+    .sc,
+    .sd,
+    .se,
+    .sh,
+    .si,
+    .sx,
+    .dl {
+        color: $code-string;
+    }
+
+    .sr {
+        color: $code-regex;
+    }
+
+    .ln,
+    .lnt {
+        color: $code-line-number;
+    }
+}
+
+@include color-mode(dark) {
+    .chroma {
+        .c,
+        .c1,
+        .ch,
+        .cm,
+        .cp,
+        .cpf,
+        .cs,
+        .go,
+        .gp {
+            color: $code-comment-dark;
+        }
+
+        // The theme gives these no dark color, so the light ones leaked through
+        .nb,
+        .vc,
+        .vg,
+        .vi {
+            color: $code-variable-dark;
+        }
+
+        .ln,
+        .lnt {
+            color: $code-line-number-dark;
+        }
+    }
+}
+/*! purgecss end ignore */

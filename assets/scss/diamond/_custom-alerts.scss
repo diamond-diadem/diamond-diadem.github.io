@@ -6,11 +6,15 @@
     text-decoration: none;
 }
 
-.alert {
+// The site announcement uses the DIAMOND accent colors. Other alert variants
+// (such as the contact form error) keep the Bootstrap semantic colors.
+.alert-primary {
     background-color: #ec9c2a;
+    color: $body-color;
 }
 @include color-mode(dark) {
-    .alert {
+    .alert-primary {
         background-color: #77c28d;
+        color: $body-bg-dark;
     }
 }

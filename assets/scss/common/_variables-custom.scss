@@ -3,12 +3,24 @@
 $lead-font-weight: 400;
 $lead-font-size: 175%;
 
-$primary: #4465ac;
-$body-bg-dark: #2c2c2c;
-$link-color-dark: #b3c7ff;
+// Palette tuned for comfortable reading: links and buttons reach 7:1 (WCAG AAA),
+// muted text stays above 7:1 and dark mode headings are softened from pure white
+// to limit halation. The dark background stays #2c2c2c because the dark variants
+// of the site images are drawn on that exact color.
+$primary: #3b5794;
+$body-secondary-color: rgba($body-color, 0.8);
 
+$body-bg-dark: #2c2c2c;
 $body-color-dark: hsl(224, 6%, 85%);
+$body-secondary-color-dark: rgba($body-color-dark, 0.85);
+$headings-color-dark: #ebecef;
+$link-color-dark: #b3c7ff;
 $navbar-dark-color: $body-color-dark;
+
+// Veils laid over the photos behind news cards so text keeps at least
+// 6.5:1 even over the brightest or darkest pixel of the photo
+$news-veil-light: rgba(255, 255, 255, 0.9);
+$news-veil-dark: rgba($body-bg-dark, 0.88);
 
 $grid-breakpoints: (
     xs: 0,

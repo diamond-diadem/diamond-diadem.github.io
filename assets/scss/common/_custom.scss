@@ -18,6 +18,7 @@
 @import "diamond/search-results";
 @import "diamond/team-list";
 @import "diamond/contact-form";
+@import "diamond/syntax-contrast";
 
 @include color-mode(dark) {
     .dropdown-menu {
@@ -788,7 +789,7 @@ label {
 ////////////////////////////////
 
 .card-news-homepage {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), var(--bg-image);
+    @include veiled-background-image($news-veil-light, var(--bg-image));
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -807,7 +808,7 @@ label {
 
 @include color-mode(dark) {
     .card-news-homepage {
-        background-image: linear-gradient(rgba(44, 44, 44, 0.6), rgba(44, 44, 44, 0.6)), var(--bg-image);
+        @include veiled-background-image($news-veil-dark, var(--bg-image));
         border-color: white;
     }
 }
