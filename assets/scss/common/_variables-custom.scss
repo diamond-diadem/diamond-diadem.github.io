@@ -23,3 +23,19 @@ $grid-breakpoints: (
 
 @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
 @include _assert-starts-at-zero($grid-breakpoints, "$grid-breakpoints");
+
+// Typography: Alegreya for reading text, Alegreya Sans for headings and navigation
+$font-family-body: "Alegreya", Georgia, "Times New Roman", serif;
+$font-family-ui:
+    "Alegreya Sans",
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+
+$font-family-base: $font-family-body;
+$headings-font-family: $font-family-ui;
+
+// Alegreya has a small x-height, so body text is enlarged to read at a usual size
+$body-text-scale: 1.2;

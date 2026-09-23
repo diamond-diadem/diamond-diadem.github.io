@@ -1,0 +1,22 @@
+// Body text size and the navigation elements set in the headings typeface.
+// The theme sizes body text at $font-size-base, then $font-size-md from md.
+
+body {
+    font-size: $font-size-base * $body-text-scale;
+
+    @include media-breakpoint-up(md) {
+        font-size: $font-size-md * $body-text-scale;
+    }
+}
+
+.navbar,
+.dropdown-menu,
+.docs-links,
+.docs-toc,
+.toc-mobile,
+.breadcrumb,
+.btn,
+.badge,
+.footer {
+    font-family: $headings-font-family;
+}

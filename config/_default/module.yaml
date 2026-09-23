@@ -83,3 +83,9 @@ mounts:
 
   - source: static
     target: static
+
+  - source: node_modules/@fontsource-variable/alegreya/files
+    target: static/fonts/alegreya
+
+  - source: node_modules/@fontsource/alegreya-sans/files
+    target: static/fonts/alegreya-sans
