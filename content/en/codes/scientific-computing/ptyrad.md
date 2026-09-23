@@ -2,6 +2,7 @@
 title: PtyRAD
 title_visible: true
 linkTitle: PtyRAD
+description: "PtyRAD performs ptychographic reconstruction with a PyTorch automatic differentiation framework, available as an Apptainer container on DIAMOND."
 toc: false
 weight: 23
 ---

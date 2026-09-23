@@ -1,0 +1,18 @@
+{{- /*
+  Returns scss/app.scss transpiled by Dart Sass.
+
+  The silenced deprecations all originate in Bootstrap 5 and Doks, which
+  are built on @import and legacy global functions. Bootstrap does not
+  support the Sass module system before v6, and our partials rely on its
+  mixins being global, so these cannot be fixed on our side yet.
+
+  @param {map} . Extra css.Sass options merged over the shared defaults.
+*/ -}}
+{{- $upstreamDeprecations := slice "import" "global-builtin" "color-functions" "if-function" -}}
+{{- $options := merge (dict
+  "targetPath" "main.css"
+  "transpiler" "dartsass"
+  "includePaths" (slice "node_modules")
+  "silenceDeprecations" $upstreamDeprecations
+) . -}}
+{{- return (resources.Get "scss/app.scss" | css.Sass $options) -}}

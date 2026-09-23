@@ -10,16 +10,16 @@
 {{ range (where .Site.Sections "Section" "in" $section) }}
   {{ range .Pages.ByWeight }}
     {{ $active := partial "sidebar/is-active" (dict "currentDir" $currentDir "currentPath" $currentPath "candidate" .) }}
-    {{ if .IsNode }}
+    {{ if .IsBranch }}
       <h3 class="h6 text-uppercase mb-2">{{ or .LinkTitle .Title }}</h3>
       <ul class="list-unstyled">
         {{ range .Pages.ByWeight }}
-          {{ if .IsNode }}
+          {{ if .IsBranch }}
             {{ $active := partial "sidebar/is-active" (dict "currentDir" $currentDir "currentPath" $currentPath "candidate" .) }}
             <h4 class="h6 text-uppercase ms-3 mt-3 mb-2">{{ or .LinkTitle .Title }}</h4>
             <ul class="list-unstyled ms-3">
               {{ range .Pages.ByWeight }}
-                {{ if .IsNode }}
+                {{ if .IsBranch }}
                   {{ $active := partial "sidebar/is-active" (dict "currentDir" $currentDir "currentPath" $currentPath "candidate" .) }}
                   <h5 class="h6 text-uppercase mt-2 mb-2">{{ or .LinkTitle .Title }}</h5>
                   <ul class="list-unstyled ms-3">

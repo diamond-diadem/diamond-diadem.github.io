@@ -1,5 +1,6 @@
 fr:
-  languageName: FR
+  label: FR
+  locale: fr-FR
   weight: 10
   params:
     languageISO: FR
@@ -12,7 +13,8 @@ fr:
     docSidebarRef: /contact/
     docSidebarText: Contacter le support
 en:
-  languageName: EN
+  label: EN
+  locale: en-US
   weight: 20
   params:
     languageISO: EN

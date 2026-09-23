@@ -1,0 +1,8 @@
+{{- /*
+  Renders a fingerprinted, integrity-checked stylesheet link.
+
+  @param {resource} . The CSS resource to link.
+*/ -}}
+{{- with . | resources.Fingerprint "sha512" -}}
+  <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+{{- end -}}

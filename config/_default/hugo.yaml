@@ -6,7 +6,7 @@ disableHugoGeneratorInject: true
 enableEmoji: true
 enableGitInfo: false
 enableRobotsTXT: true
-languageCode: fr-FR
+locale: fr-FR
 pagination:
   pagerSize: 3
 rssLimit: 10
@@ -70,8 +70,11 @@ related:
 imaging:
   anchor: Center
   bgColor: "#ffffff"
-  hint: photo
-  quality: 85
+  jpeg:
+    quality: 85
+  webp:
+    hint: photo
+    quality: 85
   resampleFilter: Lanczos
 # services:
 #   googleAnalytics:

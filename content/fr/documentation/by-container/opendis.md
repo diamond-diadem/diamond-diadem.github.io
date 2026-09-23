@@ -2,7 +2,7 @@
 title: Comment utiliser l'image Apptainer OpenDiS
 linkTitle: Tutoriel OpenDiS
 weight: 1
-description: "Tutoriel sur l'utilisation de l'image Apptainer OpenDiS de DIAMOND : récupération du conteneur, exécution et cas d'usage pour les calculs de dynamiques des dislocations."
+description: "Tutoriel du conteneur OpenDiS de DIAMOND : récupération de l'image, exécution et exemples de dynamique des dislocations."
 ---
 
 {{< callout title="Prérequis" >}}

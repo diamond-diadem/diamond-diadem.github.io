@@ -1,6 +1,6 @@
 {{ define "main" }}
 {{ if site.Params.diamond.enableTeamPage | default true }}
-{{ $people := sort .Site.Data.team.team "last_name" }}
+{{ $people := sort hugo.Data.team.team "last_name" }}
 {{ $featuredPeopleWithBio := slice }}
 {{ $featuredPeopleWithoutBio := slice }}
 {{ $fallbackPeopleWithBio := slice }}

@@ -1,0 +1,16 @@
+{{- /*
+  Compiles scss/app.scss with Dart Sass. Overrides the libsass-based
+  partial shipped by @thulite/core. In production the stylesheet is
+  purged by PostCSS, which reads hugo_stats.json, so that step is
+  deferred until every page has been rendered.
+*/ -}}
+{{- if hugo.IsDevelopment -}}
+  {{- partial "head/stylesheet-link" (partial "head/compile-sass" (dict "enableSourceMap" true)) -}}
+{{- else -}}
+  {{- with (templates.Defer (dict "key" "global")) -}}
+    {{- $css := partial "head/compile-sass" (dict "outputStyle" "compressed")
+      | css.PostCSS (dict "config" "config/postcss.config.js")
+    -}}
+    {{- partial "head/stylesheet-link" $css -}}
+  {{- end -}}
+{{- end -}}

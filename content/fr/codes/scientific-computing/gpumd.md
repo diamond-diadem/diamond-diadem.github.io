@@ -4,7 +4,7 @@ title_visible: false
 linkTitle: GPUMD
 icon: icon-gpumd
 weight: 23
-description: "GPUMD est un code de dynamique moléculaire générique, entierement implémenté pour fonctionner sur des processeurs graphiques (GPU)."
+description: "GPUMD est un code de dynamique moléculaire générique entièrement implémenté pour les processeurs graphiques (GPU), disponible sur DIAMOND."
 ---
 
 <a href="https://gpumd.org/dev/" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo">

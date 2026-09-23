@@ -1,4 +1,4 @@
-{{ range .Site.Data.team.team }}
+{{ range hugo.Data.team.team }}
   {{ if not .slug }}
     {{ errorf "Missing slug for team member %q" .name }}
   {{ end }}

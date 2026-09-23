@@ -1,3 +1,5 @@
+@use "sass:math";
+
 // // // Codes pages top logos // // //
 
 @mixin code-logo($light, $ratio, $dark: null) {
@@ -27,103 +29,103 @@
 
 .logo-neper {
     width: 100%;
-    @include code-logo("images/codes/neper/home-neper.png", 600 / 427);
+    @include code-logo("images/codes/neper/home-neper.png", math.div(600, 427));
 }
 
 .logo-lammps {
     width: 100%;
-    @include code-logo("images/codes/lammps/lammps-logo.jpeg", 600 / 151);
+    @include code-logo("images/codes/lammps/lammps-logo.jpeg", math.div(600, 151));
 }
 
 .logo-ovito {
     width: 100%;
-    @include code-logo("images/codes/ovito/ovito-logo-light.png", 651 / 200, "images/codes/ovito/ovito-logo-dark.png");
+    @include code-logo("images/codes/ovito/ovito-logo-light.png", math.div(651, 200), "images/codes/ovito/ovito-logo-dark.png");
 }
 
 .logo-quantum-espresso {
     width: 100%;
     @include code-logo(
         "images/codes/quantum-espresso/quantum-espresso-logo-light.png",
-        800 / 215,
+        math.div(800, 215),
         "images/codes/quantum-espresso/quantum-espresso-logo-dark.png"
     );
 }
 
 .logo-paraview {
     width: 100%;
-    @include code-logo("images/codes/paraview/paraview-logo-light.svg", 724.21 / 113.8, "images/codes/paraview/paraview-logo-dark.svg");
+    @include code-logo("images/codes/paraview/paraview-logo-light.svg", math.div(724.21, 113.8), "images/codes/paraview/paraview-logo-dark.svg");
 }
 
 .logo-vesta {
     width: 100%;
-    @include code-logo("images/codes/vesta/vesta-logo-light.svg", 526.89106 / 162.66669, "images/codes/vesta/vesta-logo-dark.svg");
+    @include code-logo("images/codes/vesta/vesta-logo-light.svg", math.div(526.89106, 162.66669), "images/codes/vesta/vesta-logo-dark.svg");
 }
 
 .logo-vmd {
     width: 100%;
-    @include code-logo("images/codes/vmd/vmd-logo-light.png", 657 / 171, "images/codes/vmd/vmd-logo-dark.png");
+    @include code-logo("images/codes/vmd/vmd-logo-light.png", math.div(657, 171), "images/codes/vmd/vmd-logo-dark.png");
 }
 
 .logo-abinit {
     width: 100%;
-    @include code-logo("images/codes/abinit/abinit-logo-light.svg", 299.84006 / 129.64514, "images/codes/abinit/abinit-logo-dark.svg");
+    @include code-logo("images/codes/abinit/abinit-logo-light.svg", math.div(299.84006, 129.64514), "images/codes/abinit/abinit-logo-dark.svg");
 }
 
 .logo-z-set {
     width: 100%;
-    @include code-logo("images/codes/z-set/z-set-light-smaller.png", 800 / 301, "images/codes/z-set/z-set-dark-smaller.png");
+    @include code-logo("images/codes/z-set/z-set-light-smaller.png", math.div(800, 301), "images/codes/z-set/z-set-dark-smaller.png");
 }
 
 .logo-freefem {
     width: 100%;
-    @include code-logo("images/codes/freefem/freefem-logo-light.svg", 353.89374 / 75.84388, "images/codes/freefem/freefem-logo-dark.svg");
+    @include code-logo("images/codes/freefem/freefem-logo-light.svg", math.div(353.89374, 75.84388), "images/codes/freefem/freefem-logo-dark.svg");
 }
 
 .logo-opencalphad {
     width: 100%;
-    @include code-logo("images/codes/opencalphad/opencalphad-logo-light.svg", 702 / 97, "images/codes/opencalphad/opencalphad-logo-dark.svg");
+    @include code-logo("images/codes/opencalphad/opencalphad-logo-light.svg", math.div(702, 97), "images/codes/opencalphad/opencalphad-logo-dark.svg");
 }
 
 .logo-plumed {
     width: 50%;
-    @include code-logo("images/codes/plumed/plumed-logo-light.svg", 95.68 / 69.440002, "images/codes/plumed/plumed-logo-dark.svg");
+    @include code-logo("images/codes/plumed/plumed-logo-light.svg", math.div(95.68, 69.440002), "images/codes/plumed/plumed-logo-dark.svg");
 }
 
 .logo-gmsh {
     width: 50%;
-    @include code-logo("images/codes/gmsh/gmsh-light.png", 787 / 758, "images/codes/gmsh/gmsh-dark.png");
+    @include code-logo("images/codes/gmsh/gmsh-light.png", math.div(787, 758), "images/codes/gmsh/gmsh-dark.png");
 }
 
 .logo-zeoplusplus {
     width: 65%;
-    @include code-logo("images/codes/zeo++/logo-zeoplusplus.png", 249 / 243);
+    @include code-logo("images/codes/zeo++/logo-zeoplusplus.png", math.div(249, 243));
 }
 
 .logo-raspa2 {
     width: 50%;
-    @include code-logo("images/codes/raspa2/raspa2-logo.png", 1 / 1);
+    @include code-logo("images/codes/raspa2/raspa2-logo.png", math.div(1, 1));
 }
 
 .logo-opendis {
     width: 60%;
-    @include code-logo("images/codes/opendis/opendis-logo.png", 843 / 664);
+    @include code-logo("images/codes/opendis/opendis-logo.png", math.div(843, 664));
 }
 
 .logo-xcrysden {
     width: 100%;
-    @include code-logo("images/codes/xcrysden/xcrysden-logo-light.png", 1792 / 240, "images/codes/xcrysden/xcrysden-logo-dark.png");
+    @include code-logo("images/codes/xcrysden/xcrysden-logo-light.png", math.div(1792, 240), "images/codes/xcrysden/xcrysden-logo-dark.png");
 }
 
 .logo-wannier90 {
     width: 100%;
-    @include code-logo("images/codes/wannier90/wannier90-logo-light.svg", 2099.3096 / 368.01568);
+    @include code-logo("images/codes/wannier90/wannier90-logo-light.svg", math.div(2099.3096, 368.01568));
 }
 
 // // NWChem logo // //
 
 .logo-nwchem {
     width: 100%;
-    @include code-logo("images/codes/nwchem/nwchem-logo-light-enhanced.png", 3996 / 1124, "images/codes/nwchem/nwchem-logo-dark-enhanced.png");
+    @include code-logo("images/codes/nwchem/nwchem-logo-light-enhanced.png", math.div(3996, 1124), "images/codes/nwchem/nwchem-logo-dark-enhanced.png");
 }
 
 // // END NWChem logo END // //
@@ -132,7 +134,7 @@
 
 .logo-fenics {
     width: 40%;
-    @include code-logo("images/codes/fenics/fenics-logo.png", 232 / 320);
+    @include code-logo("images/codes/fenics/fenics-logo.png", math.div(232, 320));
 }
 
 // // END FEniCS logo END // //
@@ -141,7 +143,7 @@
 
 .logo-cp2k {
     width: 60%;
-    @include code-logo("images/codes/cp2k/cp2k-logo.png", 781 / 505);
+    @include code-logo("images/codes/cp2k/cp2k-logo.png", math.div(781, 505));
 }
 
 // // END CP2K logo END // //
@@ -195,7 +197,7 @@
 
 .logo-dftbplus {
     width: 100%;
-    @include code-logo("images/codes/dftbplus/dftbplus-logo-light.png", 800 / 167, "images/codes/dftbplus/dftbplus-logo-dark.png");
+    @include code-logo("images/codes/dftbplus/dftbplus-logo-light.png", math.div(800, 167), "images/codes/dftbplus/dftbplus-logo-dark.png");
 }
 // // END dftbplus logo END // //
 
@@ -203,7 +205,7 @@
 
 .logo-xtb {
     width: 65%;
-    @include code-logo("images/codes/xtb/xtb-logo.svg", 100.13159 / 69.162628);
+    @include code-logo("images/codes/xtb/xtb-logo.svg", math.div(100.13159, 69.162628));
 }
 
 // // END XTB logo END // //
@@ -219,14 +221,14 @@
 
 .logo-ndm {
     width: 80%;
-    @include code-logo("images/codes/ndm/ndm-logo-light.png", 265 / 155, "images/codes/ndm/ndm-logo-dark.png");
+    @include code-logo("images/codes/ndm/ndm-logo-light.png", math.div(265, 155), "images/codes/ndm/ndm-logo-dark.png");
 }
 
 // // GPUMD logo // //
 
 .logo-gpumd {
     width: 65%;
-    @include code-logo("images/codes/gpumd/gpumd-logo.png", 265 / 155);
+    @include code-logo("images/codes/gpumd/gpumd-logo.png", math.div(265, 155));
 }
 
 // // END GPUMD logo END // //

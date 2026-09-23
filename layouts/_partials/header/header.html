@@ -24,9 +24,9 @@
 
 
     {{/*  {{ if eq site.Params.doks.multilingualMode true -}}
-      {{ $currentLanguageName := .Language.LanguageName }}
+      {{ $currentLanguageLabel := .Language.Label }}
       {{ range .Translations }}
-        <a class="btn btn-link nav-link switch-language-mobile" type="button" rel="alternate" href="{{ .RelPermalink }}">{{ .Language.LanguageName }}</a>
+        <a class="btn btn-link nav-link switch-language-mobile" type="button" rel="alternate" href="{{ .RelPermalink }}">{{ .Language.Label }}</a>
       {{ end }}
     {{ end -}}  */}}
 
@@ -87,9 +87,9 @@
     </button>
 
     {{ if eq site.Params.doks.multilingualMode true -}}
-      {{ $currentLanguageName := .Language.LanguageName }}
+      {{ $currentLanguageLabel := .Language.Label }}
       {{ range .Translations }}
-        <a class="btn btn-link nav-link order-3 switch-language-mobile" type="button" rel="alternate" href="{{ .RelPermalink }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">{{ $currentLanguageName }}</a>
+        <a class="btn btn-link nav-link order-3 switch-language-mobile" type="button" rel="alternate" href="{{ .RelPermalink }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">{{ $currentLanguageLabel }}</a>
       {{ end }}
     {{ end -}}
 
@@ -226,7 +226,7 @@
                 <path d="M12 20l4 -9l4 9"></path>
                 <path d="M19.1 18h-6.2"></path>
               </svg> -->
-              <span class="current-language-display" id="doks-language-current">{{ .Site.Language.LanguageName }}</span>
+              <span class="current-language-display" id="doks-language-current">{{ .Site.Language.Label }}</span>
               <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                 <path d="M6 9l6 6l6 -6"></path>
@@ -235,7 +235,7 @@
           </button>
           <ul class="dropdown-menu dropdown-menu-lg me-lg-2 shadow rounded" aria-labelledby="doks-languages">
 
-            <!-- <li><span class="dropdown-item current" aria-current="true">{{ .Site.Language.LanguageName }}</span></li>
+            <!-- <li><span class="dropdown-item current" aria-current="true">{{ .Site.Language.Label }}</span></li>
 
             <li><hr class="dropdown-divider"></li> -->
 
@@ -244,15 +244,17 @@
               {{ range .Translations -}}
                 {{ $translatedLangs = $translatedLangs | append .Lang }}
               {{- end }}
-              {{ range site.Languages -}}
-                {{ if and (ne $.Lang .Lang) (not (in $.Params.skipTranslations .Lang)) -}}
-                  {{ $isTranslated := in $translatedLangs .Lang -}}
-                  <li><a class="dropdown-item {{ if not $isTranslated }}untranslated{{ end }}" rel="alternate" href="{{ if $isTranslated }}{{ (index (where $.Translations "Lang" .Lang) 0).RelPermalink }}{{ else }}{{ .Lang | relURL }}{{ end }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">{{ .LanguageName }}</a></li>
+              {{ range hugo.Sites -}}
+                {{ with .Language -}}
+                  {{ if and (ne $.Lang .Lang) (not (in $.Params.skipTranslations .Lang)) -}}
+                    {{ $isTranslated := in $translatedLangs .Lang -}}
+                    <li><a class="dropdown-item {{ if not $isTranslated }}untranslated{{ end }}" rel="alternate" href="{{ if $isTranslated }}{{ (index (where $.Translations "Lang" .Lang) 0).RelPermalink }}{{ else }}{{ .Lang | relURL }}{{ end }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">{{ .Label }}</a></li>
+                  {{- end }}
                 {{- end }}
               {{- end }}
             {{ else -}}
               {{ range .Translations -}}
-                <li><a class="dropdown-item" rel="alternate" href="{{ .RelPermalink }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">{{ .Language.LanguageName }}</a></li>
+                <li><a class="dropdown-item" rel="alternate" href="{{ .RelPermalink }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">{{ .Language.Label }}</a></li>
               {{- end }}
             {{- end }}
               <!--

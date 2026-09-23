@@ -2,7 +2,7 @@
 title: How to use PtyRAD Apptainer image
 linkTitle: PtyRAD tutorial
 weight: 4
-description: "Tutorial on using the DIAMOND PtyRAD Apptainer container: pulling the image, running calculations, and usage examples for ptychographic reconstruction."
+description: "Tutorial on the DIAMOND PtyRAD Apptainer container: pulling the image, running calculations and examples for ptychographic reconstruction."
 ---
 
 {{< callout title="Prerequisites" >}}

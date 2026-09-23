@@ -1,6 +1,6 @@
 {{- /*
   Renders one sidebar entry for a page inside a section's menu, recursing
-  into the page's own children when it has any (`.IsNode`). A node whose
+  into the page's own children when it has any (`.IsBranch`). A node whose
   own body has content gets a "Description" entry linking to itself,
   listed first among its children (see section-page-link.html).
 
@@ -13,7 +13,7 @@
 {{- $currentDir := .currentDir -}}
 {{- $currentPath := .currentPath -}}
 {{- $top := .top | default false -}}
-{{- if $page.IsNode -}}
+{{- if $page.IsBranch -}}
   {{- $active := partial "sidebar/is-active" (dict "currentDir" $currentDir "currentPath" $currentPath "candidate" $page) -}}
   <li class="{{ cond $top "mb-1" "my-1 ms-3" }}">
     {{- if $page.Params.sidebar_link }}
