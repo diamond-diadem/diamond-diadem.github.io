@@ -77,6 +77,10 @@ mounts:
   - source: assets
     target: assets
 
+  # Exposes static images to Hugo Pipes so shortcodes can process them
+  - source: static/images
+    target: assets/images
+
   # static
   - source: node_modules/@thulite/doks-core/static
     target: static

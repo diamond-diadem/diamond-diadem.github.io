@@ -1,0 +1,22 @@
+{{- /*
+Renders a centered logo between two paragraphs.
+
+@param {string} src The logo path, relative to the assets directory.
+@param {string} [dark] The path of a variant shown instead in dark mode.
+@param {string} alt The text alternative describing the logo.
+
+@example {{< logo src="images/diamond/logo-light.png" dark="images/diamond/logo-dark.png" alt="DIAMOND logo" >}}
+*/ -}}
+
+{{- if not .Params.alt }}
+  {{- errorf "The %q shortcode requires an alt parameter. See %s" .Name .Position }}
+{{- end }}
+
+<div class="content-logo">
+  {{- with .Params.dark }}
+    {{- partial "main/logo-image.html" (dict "path" $.Params.src "alt" $.Params.alt "class" "logo-light" "position" $.Position) }}
+    {{- partial "main/logo-image.html" (dict "path" . "alt" $.Params.alt "class" "logo-dark" "position" $.Position) }}
+  {{- else }}
+    {{- partial "main/logo-image.html" (dict "path" $.Params.src "alt" $.Params.alt "position" $.Position) }}
+  {{- end }}
+</div>

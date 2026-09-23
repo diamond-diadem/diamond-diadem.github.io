@@ -131,6 +131,22 @@ u {
     }
 }
 
+// // // Logo shortcode // // //
+
+.content-logo {
+    margin: 2rem 0;
+    text-align: center;
+
+    img {
+        max-width: min(100%, 16rem);
+        height: auto;
+    }
+
+    .logo-dark {
+        display: none;
+    }
+}
+
 // // // Gitlab tutorial // // //
 
 .use-gitlab {

@@ -1,0 +1,23 @@
+{{- /*
+Renders a global image resource as a WebP img element with its intrinsic size.
+
+@param {string} path The image path, relative to the assets directory.
+@param {string} alt The text alternative of the image.
+@param {string} [class] The img element class attribute.
+@param {text.Position} position The calling shortcode position, for error messages.
+*/ -}}
+
+{{- with resources.Get .path }}
+  {{- $image := .Process "webp" }}
+  <img
+    src="{{ $image.RelPermalink }}"
+    width="{{ $image.Width }}"
+    height="{{ $image.Height }}"
+    alt="{{ $.alt }}"
+    {{- with $.class }} class="{{ . }}"{{ end }}
+    loading="lazy"
+    decoding="async"
+  >
+{{- else }}
+  {{- errorf "Unable to find the logo %q in the assets directory. See %s" .path .position }}
+{{- end -}}
