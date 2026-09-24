@@ -7,15 +7,15 @@ description: "Tutorial on using the DIAMOND OpenCalphad Apptainer container: pul
 
 <div align="justify">
 
-{{< callout context="note" title="Prerequisites" icon="tabler-icons/outline/info-circle" >}}
+{{< callout context="note" title="Prerequisites" >}}
 
-- Have **Apptainer** installed [(installation guide)](/en/documentation/install/install-apptainer/)
-- Have downloaded the **opencalphad.sif** image [available here](/en/codes/scientific-computing/opencalphad/)
-- Have downloaded the **input files** [available here](/downloads/opencalphad-tutorial-inputs.tar.gz)
-
-For more information on Apptainer containers, please look at [this page](/en/documentation/use/apptainer/) or refer to [this tutorial](/en/documentation/use/apptainer-image/) to have a quick look at Apptainer's main commands.
+- Apptainer (see either [our installation guide]({{% ref "/documentation/install/install-apptainer" %}}) or [the official documentation](https://apptainer.org/docs/user/latest/quick_start.html#installation))
+- The [`opencalphad.sif` image]({{% ref "/codes/scientific-computing/opencalphad/" %}})
+- The [input files](/downloads/opencalphad-tutorial-inputs.tar.gz)
 
 {{< /callout >}}
+
+For more information on Apptainer containers and their use, we provide [a description of Apptainer]({{% ref "/documentation/use/apptainer" %}}), a crash course on [how to use Apptainer]({{% ref "/documentation/use/apptainer-image" %}}), and of course there's also the [official Apptainer's documentation](https://apptainer.org/docs/user/latest/).
 
 
 ## Input files
@@ -43,7 +43,7 @@ apptainer exec opencalphad.sif oc6P input.OCM
 
 ## Detailed usage for the OpenCalphad container
 
-This section explains how to use the OpenCalphad image to compute and plot the classical phase diagram for C-Fe. For more details about Apptainer commands, please look at [this tutorial](/en/documentation/use/apptainer-image/#apptainer--crash-course).
+This section explains how to use the OpenCalphad image to compute and plot the classical phase diagram for C-Fe. For more details about Apptainer commands, please look at [this tutorial]({{% ref "/documentation/use/apptainer-image/#apptainer--crash-course" %}}).
 
 ### Introduction
 

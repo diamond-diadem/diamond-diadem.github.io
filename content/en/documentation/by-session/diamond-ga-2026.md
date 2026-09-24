@@ -13,12 +13,13 @@ Through practical examples, the notebooks progressively introduce different appr
 
 </div>
 
-{{< callout context="note" title="Prerequisites" icon="tabler-icons/outline/info-circle" >}}
+{{< callout context="note" title="Prerequisites" >}}
 
-To complete this tutorial, you will need one of the following:
- - **Apptainer** installed [(installation guide)](/en/documentation/install/install-apptainer/)
- - **OR** have **Docker** installed
- - **OR** have **Python 3.10+** installed with **uv** and **Graphviz** (more information on how to install them is provided in the tutorial).
+One of the following:
+
+- Apptainer (see either [our installation guide]({{% ref "/documentation/install/install-apptainer" %}}) or [the official documentation](https://apptainer.org/docs/user/latest/quick_start.html#installation))
+- Docker
+- Python 3.10+ with `uv` and Graphviz (installation instructions are provided in the tutorial)
 
 {{< /callout >}}
 

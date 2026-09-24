@@ -38,7 +38,7 @@ apptainer exec opendis.sif python3 test_frank_read_src_exadis.py
 
 ## Detailed usage for the OpenDiS container
 
-This section presents different ways to use the OpenDiS image. For more details about Apptainer commands, please look at [this tutorial](/en/documentation/use/apptainer-image/#apptainer--crash-course).
+This section presents different ways to use the OpenDiS image. For more details about Apptainer commands, please look at [this tutorial]({{% ref "/documentation/use/apptainer-image/#apptainer--crash-course" %}}).
 
 ### Introduction
 

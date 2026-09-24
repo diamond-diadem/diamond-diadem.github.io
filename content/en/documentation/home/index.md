@@ -8,19 +8,19 @@ seo:
 ---
 
 {{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
-**If you have any problems using the tools on the platform or if you have any queries**, please get in touch with us via this [contact form](/en/contact/).
+**If you have any problems using the tools on the platform or if you have any queries**, please get in touch with us via this [contact form]({{% ref "/contact/" %}}).
 {{< /callout >}}
 
-The main purpose of this documentation is to help you get to grips with the various platform tools offered by [DIAMOND](/en/about/diamond/).
+The main purpose of this documentation is to help you get to grips with the various platform tools offered by [DIAMOND]({{% ref "/about/diamond/" %}}).
 
 Here are the links for quick access to the documentation section for the tools you are interested in:
 
-- [Installing Apptainer](/en/documentation/install/install-apptainer/)
-- [Installing Guix](/en/documentation/install/install-guix/)
-- [Using an Apptainer image](/en/documentation/use/apptainer-image/)
-- [Using a Guix package](/en/documentation/use/guix-package/)
-- [Frequently asked questions (FAQ)](/en/documentation/faq/)
-- [DIAMOND GA 2026 tutorial](/en/documentation/by-session/diamond-ga-2026/): AI applied to materials science
+- [Installing Apptainer]({{% ref "/documentation/install/install-apptainer/" %}})
+- [Installing Guix]({{% ref "/documentation/install/install-guix/" %}})
+- [Using an Apptainer image]({{% ref "/documentation/use/apptainer-image/" %}})
+- [Using a Guix package]({{% ref "/documentation/use/guix-package/" %}})
+- [Frequently asked questions (FAQ)]({{% ref "/documentation/faq/" %}})
+- [DIAMOND GA 2026 tutorial]({{% ref "/documentation/by-session/diamond-ga-2026/" %}}): AI applied to materials science
 
 #### Here are the links for quick access to image-specific tutorials:
 

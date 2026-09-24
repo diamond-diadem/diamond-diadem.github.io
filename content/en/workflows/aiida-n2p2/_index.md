@@ -24,4 +24,4 @@ This release for n2p2-workflow uses nnp-scale and nnp-train from:
 - [lammps](https://www.lammps.org/#gsc.tab=0) for validation model.
 
 The workflow contains example for learn how use the workflow.
-Follow that [link](/en/workflows/aiida-n2p2/installation) to install it.
+Follow that [link]({{% ref "/workflows/aiida-n2p2/installation" %}}) to install it.

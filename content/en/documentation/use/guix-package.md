@@ -8,7 +8,7 @@ description: "How to access and use DIAMOND Guix packages for scientific codes, 
 
 {{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
 
-Before these explanations, it is necessary to have Guix installed on your machine; see [this link](/en/documentation/install/install-guix/) for more details.
+Before these explanations, it is necessary to have Guix installed on your machine; see [this link]({{% ref "/documentation/install/install-guix/" %}}) for more details.
 
 This tutorial explains the main commands for interacting with Guix packages to create and interact with temporary software environments.
 

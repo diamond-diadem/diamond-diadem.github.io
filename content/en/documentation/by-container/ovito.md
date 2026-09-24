@@ -9,13 +9,13 @@ description: "Tutorial on using the DIAMOND OVITO Apptainer container for visual
 
 {{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
 
-Before proceeding with these explanations, it is necessary to have Apptainer installed on your machine; see [this link](/en/documentation/install/install-apptainer/) for more details.
+Before proceeding with these explanations, it is necessary to have Apptainer installed on your machine; see [this link]({{% ref "/documentation/install/install-apptainer/" %}}) for more details.
 
-This tutorial details the usage of the Ovito code container image downloadable at [this address](/en/codes/visualisation/ovito/). By following this link, you retrieve an Apptainer image (file format `.sif`) that allows you to create containers capable of running Ovito.
+This tutorial details the usage of the Ovito code container image downloadable at [this address]({{% ref "/codes/visualisation/ovito/" %}}). By following this link, you retrieve an Apptainer image (file format `.sif`) that allows you to create containers capable of running Ovito.
 
-For more information on Apptainer containers, please refer to the [dedicated page](/en/documentation/use/apptainer/).
+For more information on Apptainer containers, please refer to the [dedicated page]({{% ref "/documentation/use/apptainer/" %}}).
 
-To quickly grasp the main Apptainer commands, you can refer to [this tutorial](/en/documentation/use/apptainer-image/).
+To quickly grasp the main Apptainer commands, you can refer to [this tutorial]({{% ref "/documentation/use/apptainer-image/" %}}).
 
 {{< /callout >}}
 
@@ -59,7 +59,7 @@ apptainer run $HOME/apptainer-images/ovito.sif <input.file>
 
 ## Details to use Ovito container
 
-This section presents the different ways to use the Ovito image. For more details on Apptainer commands, please refer to [this tutorial](/en/documentation/use/apptainer-image/#apptainer--crash-course).
+This section presents the different ways to use the Ovito image. For more details on Apptainer commands, please refer to [this tutorial]({{% ref "/documentation/use/apptainer-image/#apptainer--crash-course" %}}).
 
 To execute Ovito without any containerization, one would use the command:
 
@@ -105,7 +105,7 @@ $HOME/apptainer-images/ovito.sif POSCAR_Si-diamond
 
 ### Isolation between the container and the host machine
 
-By default, Apptainer does not fully isolate the container from the host system. One can either have partial or total isolation using respectively the flags `--no-mount` or `--no-home` and `--containall` (see [this link](/en/documentation/use/apptainer-isolation-flags/) for more information). In case the `--containall` option is activated, we encounter two difficulties.
+By default, Apptainer does not fully isolate the container from the host system. One can either have partial or total isolation using respectively the flags `--no-mount` or `--no-home` and `--containall` (see [this link]({{% ref "/documentation/use/apptainer-isolation-flags/" %}}) for more information). In case the `--containall` option is activated, we encounter two difficulties.
 
 #### Sharing graphical resources
 

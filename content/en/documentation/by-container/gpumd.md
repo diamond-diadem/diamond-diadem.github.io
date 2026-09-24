@@ -67,7 +67,7 @@ The `--nv` flag gives the container access to NVIDIA GPU devices and drivers fro
 
 ## Detailed usage for the GPUMD container
 
-This section presents different ways to use the GPUMD image. For more details about Apptainer commands, please look at [this tutorial](/en/documentation/use/apptainer-image/#apptainer-crash-course).
+This section presents different ways to use the GPUMD image. For more details about Apptainer commands, please look at [this tutorial]({{% ref "/documentation/use/apptainer-image/#apptainer-crash-course" %}}).
 
 ### Using the GPUMD container
 
@@ -125,7 +125,7 @@ apptainer inspect $HOME/apptainer-images/gpumd.sif
 
 ### Partial or total isolation
 
-By default, Apptainer does not fully isolate the container from the host system. One can either have partial or total isolation using respectively the flags `--no-mount` or `--no-home` and `--containall` (see [this link](/en/documentation/use/apptainer-isolation-flags/) for more information).
+By default, Apptainer does not fully isolate the container from the host system. One can either have partial or total isolation using respectively the flags `--no-mount` or `--no-home` and `--containall` (see [this link]({{% ref "/documentation/use/apptainer-isolation-flags/" %}}) for more information).
 
 Whenever `--containall` is activated, the directory on the host machine containing the GPUMD input files cannot be accessed from the container unless it is explicitly mounted.
 

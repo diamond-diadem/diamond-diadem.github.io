@@ -7,15 +7,15 @@ description: "Tutorial on using the DIAMOND Abinit Apptainer container: pulling 
 
 <div align="justify">
 
-{{< callout context="note" title="Prerequisites" icon="tabler-icons/outline/info-circle" >}}
+{{< callout context="note" title="Prerequisites" >}}
 
-- Have **Apptainer** installed [(installation guide)](/en/documentation/install/install-apptainer/)
-- Have downloaded the **abinit.sif** image [available here](/en/codes/scientific-computing/abinit/)
-- Have downloaded the **input files** [available here](/downloads/abinit-tutorial-inputs.tar.gz)
-
-For more information on Apptainer containers, please look at [this page](/en/documentation/use/apptainer/) or refer to [this tutorial](/en/documentation/use/apptainer-image/) to have a quick look at Apptainer's main commands.
+- Apptainer (see either [our installation guide]({{% ref "/documentation/install/install-apptainer" %}}) or [the official documentation](https://apptainer.org/docs/user/latest/quick_start.html#installation))
+- The [`abinit.sif` image]({{% ref "/codes/scientific-computing/abinit/" %}})
+- The [input files](/downloads/abinit-tutorial-inputs.tar.gz)
 
 {{< /callout >}}
+
+For more information on Apptainer containers and their use, we provide [a description of Apptainer]({{% ref "/documentation/use/apptainer" %}}), a crash course on [how to use Apptainer]({{% ref "/documentation/use/apptainer-image" %}}), and of course there's also the [official Apptainer's documentation](https://apptainer.org/docs/user/latest/).
 
 
 ## Input files
@@ -43,7 +43,7 @@ apptainer exec abinit.sif mpirun -np <N> abinit input.abi
 
 ## Detailed usage for the Abinit container
 
-This section presents different ways to use the Abinit image. For more details about Apptainer commands, please look at [this tutorial](/en/documentation/use/apptainer-image/#apptainer--crash-course).
+This section presents different ways to use the Abinit image. For more details about Apptainer commands, please look at [this tutorial]({{% ref "/documentation/use/apptainer-image/#apptainer--crash-course" %}}).
 
 ### Introduction
 
@@ -63,6 +63,6 @@ The input file `input.abi` allows us to get the pseudo total energy, the bond le
 apptainer exec abinit.sif mpirun -np <N> abinit input.abi
 ```
 
-The command above uses Apptainer "embedded" parallel mode. More information on using Apptainer containers in parallel, including usage on clusters and the difference between embedded and hybrid parallel modes, can be found on [this page](/en/documentation/use/apptainer-hpc).
+The command above uses Apptainer "embedded" parallel mode. More information on using Apptainer containers in parallel, including usage on clusters and the difference between embedded and hybrid parallel modes, can be found on [this page]({{% ref "/documentation/use/apptainer-hpc" %}}).
 
 </div>

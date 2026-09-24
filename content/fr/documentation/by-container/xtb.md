@@ -8,14 +8,14 @@ description: "Tutoriel sur l'utilisation de l'image Apptainer xTB de DIAMOND : r
 
 <div align="justify">
 
-{{< callout context="note" title="Prérequis" icon="tabler-icons/outline/info-circle" >}}
+{{< callout context="note" title="Prérequis" >}}
 
- - Avoir installé **Apptainer** [(guide d'installation)](/documentation/install/install-apptainer/)
- - Avoir téléchargé l'image **xtb.sif** [disponible ici](/codes/scientific-computing/xtb/)
-
-Pour plus d'informations sur les conteneurs Apptainer, veuillez consulter la [page dédiée](/documentation/use/apptainer/) ou suivre [ce tutoriel](/documentation/use/apptainer-image/) pour s'approprier les principales commandes d'Apptainer.
+- Apptainer (voir soit [notre guide d'installation]({{% ref "/documentation/install/install-apptainer" %}}), soit [la documentation officiel](https://apptainer.org/docs/user/latest/quick_start.html#installation))
+- L'image [`xtb.sif`]({{% ref "/codes/scientific-computing/xtb/" %}})
 
 {{< /callout >}}
+
+Pour plus d'informations sur les conteneurs Apptainer et leur utilisation, nous mettons à votre disposition [une description d'Apptainer]({{% ref "/documentation/use/apptainer" %}}), un guide rapide sur [comment utiliser Apptainer]( {{% ref "/documentation/use/apptainer-image" %}}), sans oublier bien sûr la [documentation officielle d'Apptainer](https://apptainer.org/docs/user/latest/).
 
 Cette image est un fichier relocalisable et renommable, qu’il est recommandé de placer dans un répertoire dédié pour facilement la retrouver ; celui-ci peut-être quelconque, et dans le cadre de ce tutoriel nous assumerons que vous l’avez placée dans un répertoire nommé `$HOME/apptainer-images`:
 
@@ -188,7 +188,7 @@ apptainer inspect $HOME/apptainer-images/xtb.sif
 
 ## Isolation partielle ou totale
 
-Par défaut, Apptainer n’isole pas complètement le conteneur du système hôte. Il est possible d’opter pour un isolement partiel ou total en utilisant respectivement les options `--no-mount` ou `--no-home` et `--containall` (voir [ce lien](/en/documentation/use/apptainer-isolation-flags/) pour plus d’informations).
+Par défaut, Apptainer n’isole pas complètement le conteneur du système hôte. Il est possible d’opter pour un isolement partiel ou total en utilisant respectivement les options `--no-mount` ou `--no-home` et `--containall` (voir [ce lien]({{% ref "/documentation/use/apptainer-isolation-flags/" %}}) pour plus d’informations).
 
 Lorsque l'option `--containall` est activée, le répertoire de la machine hôte contenant les fichiers d'entrée xTB n'est pas automatiquement accessible depuis le conteneur.
 

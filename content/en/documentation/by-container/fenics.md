@@ -35,7 +35,7 @@ apptainer exec fenics.sif python3 demo_poisson_2.py
 
 ## Detailed usage for the FEniCS container
 
-This section presents different ways to use the FEniCS image. For more details about Apptainer commands, please look at [this tutorial](/en/documentation/use/apptainer-image/#apptainer--crash-course).
+This section presents different ways to use the FEniCS image. For more details about Apptainer commands, please look at [this tutorial]({{% ref "/documentation/use/apptainer-image/#apptainer--crash-course" %}}).
 
 ### Introduction
 
@@ -133,7 +133,7 @@ The following command runs the simulation with the simplified set of boundary co
 apptainer exec fenics.sif python3 demo_poisson_1.py
 ```
 
-This creates a `out_poisson/poisson.xdmf` output file that can be opened using Paraview. To interact with this output file using the [Paraview container](/en/codes/visualisation/paraview/) hosted by the Diamond project:
+This creates a `out_poisson/poisson.xdmf` output file that can be opened using Paraview. To interact with this output file using the [Paraview container]({{% ref "/codes/visualisation/paraview/" %}}) hosted by the Diamond project:
 
 ```shell
 apptainer run paraview.sif out_poisson/poisson.xdmf
@@ -164,7 +164,7 @@ The following command runs the simulation with this second set of boundary condi
 apptainer exec fenics.sif python3 demo_poisson_2.py
 ```
 
-As described above, the output file can be opened with [Paraview](/en/codes/visualisation/paraview/) as follows:
+As described above, the output file can be opened with [Paraview]({{% ref "/codes/visualisation/paraview/" %}}) as follows:
 
 ```shell
 apptainer run paraview.sif out_poisson/poisson.xdmf

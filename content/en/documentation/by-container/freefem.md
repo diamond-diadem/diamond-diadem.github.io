@@ -7,15 +7,15 @@ description: "Tutorial on using the DIAMOND FreeFEM Apptainer container: pulling
 
 <div align="justify">
 
-{{< callout context="note" title="Prerequisites" icon="tabler-icons/outline/info-circle" >}}
+{{< callout context="note" title="Prerequisites" >}}
 
-- Have **Apptainer** installed [(installation guide)](/en/documentation/install/install-apptainer/)
-- Have downloaded the **freefem.sif** image [available here](/en/codes/scientific-computing/freefem/)
-- Have downloaded the **input files** [available here](/downloads/freefem-tutorial-inputs.tar.gz)
-
-For more information on Apptainer containers, please look at [this page](/en/documentation/use/apptainer/) or refer to [this tutorial](/en/documentation/use/apptainer-image/) to have a quick look at Apptainer's main commands.
+- Apptainer (see either [our installation guide]({{% ref "/documentation/install/install-apptainer" %}}) or [the official documentation](https://apptainer.org/docs/user/latest/quick_start.html#installation))
+- The [`freefem.sif` image]({{% ref "/codes/scientific-computing/freefem/" %}})
+- The [input files](/downloads/freefem-tutorial-inputs.tar.gz)
 
 {{< /callout >}}
+
+For more information on Apptainer containers and their use, we provide [a description of Apptainer]({{% ref "/documentation/use/apptainer" %}}), a crash course on [how to use Apptainer]({{% ref "/documentation/use/apptainer-image" %}}), and of course there's also the [official Apptainer's documentation](https://apptainer.org/docs/user/latest/).
 
 
 ## Input files
@@ -43,13 +43,13 @@ apptainer exec freefem.sif ff-mpirun -np N MPIGMRES2D.edp -d 1 -k 1 -gmres 2 -n 
 
 ## Detailed usage for the FreeFEM container
 
-This section presents different ways to use the FreeFEM image. For more details about Apptainer commands, please look at [this tutorial](/en/documentation/use/apptainer-image/#apptainer--crash-course).
+This section presents different ways to use the FreeFEM image. For more details about Apptainer commands, please look at [this tutorial]({{% ref "/documentation/use/apptainer-image/#apptainer--crash-course" %}}).
 
 ### Introduction
 
 FreeFEM is an open-source software package for solving partial differential equations using the finite element method, with a dedicated scripting language for defining geometries, meshes, and solvers. It supports a wide range of finite elements, adaptive mesh generation, and parallel computing (via PETSc, HPDDM, and more), running on Windows, macOS, and Linux.
 
-The main sequential executable in the image is `FreeFem++`. The parallel (MPI) executable is `FreeFem++-mpi`. It can be run with both the hybrid and embedded Apptainer parallel modes (see [this page](/en/documentation/use/apptainer-hpc) for more details on those modes). The image also contains a shortcut executable to `FreeFem++-mpi` called `ff-mpirun` that can only be called from within the container (embedded mode only). Hence, the following commands are equivalent:
+The main sequential executable in the image is `FreeFem++`. The parallel (MPI) executable is `FreeFem++-mpi`. It can be run with both the hybrid and embedded Apptainer parallel modes (see [this page]({{% ref "/documentation/use/apptainer-hpc" %}}) for more details on those modes). The image also contains a shortcut executable to `FreeFem++-mpi` called `ff-mpirun` that can only be called from within the container (embedded mode only). Hence, the following commands are equivalent:
 
 ```bash
 apptainer exec freefem.sif mpirun -np N FreeFem++-mpi # Parallel executable
@@ -104,6 +104,6 @@ apptainer exec freefem.sif ff-mpirun -np N MPIGMRES2D.edp -d 1 -k 1 -gmres 2 -n 
 mpirun -np N apptainer exec freefem.sif FreeFem++-mpi MPIGMRES2D.edp -d 1 -k 1 -gmres 2 -n 50
 ```
 
-More information on using Apptainer containers in parallel, including usage on clusters and the difference between embedded and hybrid parallel modes, can be found on [this page](/en/documentation/use/apptainer-hpc).
+More information on using Apptainer containers in parallel, including usage on clusters and the difference between embedded and hybrid parallel modes, can be found on [this page]({{% ref "/documentation/use/apptainer-hpc" %}}).
 
 </div>

@@ -53,7 +53,7 @@ Second, using the command-line interface (non-interactive reconstruction)
 
 ## Detailed usage for the PtyRAD container
 
-This section includes other ways to use the PtyRAD container. For more details about Apptainer commands, please look at [this tutorial](/en/documentation/use/apptainer-image/#apptainer--crash-course).
+This section includes other ways to use the PtyRAD container. For more details about Apptainer commands, please look at [this tutorial]({{% ref "/documentation/use/apptainer-image/#apptainer--crash-course" %}}).
 
 ### Run with GPU
 

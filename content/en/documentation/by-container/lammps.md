@@ -9,13 +9,13 @@ description: "Tutorial on using the DIAMOND LAMMPS Apptainer container: pulling 
 
 {{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
 
-In preamble, you need to have Apptainer installed on your machine ; see [this link](/en/documentation/install/install-apptainer/) for more details.
+In preamble, you need to have Apptainer installed on your machine ; see [this link]({{% ref "/documentation/install/install-apptainer/" %}}) for more details.
 
-This tutorial focuses on using the LAMMPS container image available at [this address](/en/codes/scientific-computing/lammps/). By following this link, you will get an Apptainer image (`.sif` file format) allowing you to create containers running LAMMPS.
+This tutorial focuses on using the LAMMPS container image available at [this address]({{% ref "/codes/scientific-computing/lammps/" %}}). By following this link, you will get an Apptainer image (`.sif` file format) allowing you to create containers running LAMMPS.
 
-For more information on Apptainer containers, please look at [this page](/en/documentation/use/apptainer/).
+For more information on Apptainer containers, please look at [this page]({{% ref "/documentation/use/apptainer/" %}}).
 
-To have a quick look at Apptainer's main commands, you may refer to [this tutorial](/en/documentation/use/apptainer-image/).
+To have a quick look at Apptainer's main commands, you may refer to [this tutorial]({{% ref "/documentation/use/apptainer-image/" %}}).
 
 {{< /callout >}}
 
@@ -58,7 +58,7 @@ apptainer exec $HOME/apptainer-images/lammps.sif mpirun -np <N> lmp_mpi -in <inp
 
 ## Detailed usage for the LAMMPS container
 
-This section presents different ways to use the LAMMPS image. For more details about Apptainer commands, please look at [this tutorial](/en/documentation/use/apptainer-image/#apptainer--crash-course).
+This section presents different ways to use the LAMMPS image. For more details about Apptainer commands, please look at [this tutorial]({{% ref "/documentation/use/apptainer-image/#apptainer--crash-course" %}}).
 
 ### Using the LAMMPS container for sequential runs
 
@@ -112,7 +112,7 @@ apptainer exec --env OMP_NUM_THREADS=2 $HOME/apptainer-images/lammps.sif mpirun 
 
 In the previous command, we use the `mpirun` command provided by the embedded version of **OpenMPI** in the container to communicate directly with the host machine hardware. This _embedded_ usage has a great advantage, since it uses only the tools installed in the container: it works on all host machines without requiring any installation. However, the version of **OpenMPI** present in the container is not designed to run optimally on all host machines, but to provide satisfactory performance on as wide a range of machines as possible. Typically, in the case of Quantum Espresso, processor utilisation peaks at 85-90% with embedded parallelization. Furthermore, this mode of parallelisation does not allow for distributed computing across multiple compute nodes. While easy porting at the cost of slightly degraded performance may be appropriate for simple testing on a local machine, this is not the case for a high performance computing infrastructure.
 
-In cases where numerical performance is key, we recommend using a hybrid parallelisation mode, where we use the host machine's version of **OpenMPI** as an intermediary between the container's version and the host machine's hardware. See the [dedicated page](/en/documentation/use/apptainer-hpc/) for more details.
+In cases where numerical performance is key, we recommend using a hybrid parallelisation mode, where we use the host machine's version of **OpenMPI** as an intermediary between the container's version and the host machine's hardware. See the [dedicated page]({{% ref "/documentation/use/apptainer-hpc/" %}}) for more details.
 
 ### Display help
 
@@ -148,7 +148,7 @@ $HOME/apptainer-images/lammps.sif -h
 
 ### Partial or total isolation
 
-By default, Apptainer does not fully isolate the container from the host system. One can either have partial or total isolation using respectively the flags `--no-mount` or `--no-home` and `--containall` (see [this link](/en/documentation/use/apptainer-isolation-flags/) for more information).
+By default, Apptainer does not fully isolate the container from the host system. One can either have partial or total isolation using respectively the flags `--no-mount` or `--no-home` and `--containall` (see [this link]({{% ref "/documentation/use/apptainer-isolation-flags/" %}}) for more information).
 
 Whenever `--containall` is activated, the directory on the host machine containing LAMMPS input-files cannot be accessed from the container !
 

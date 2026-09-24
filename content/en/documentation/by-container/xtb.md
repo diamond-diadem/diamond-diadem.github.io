@@ -10,13 +10,13 @@ description: "Tutorial on using the DIAMOND xTB Apptainer container: pulling the
 
 {{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
 
-In preamble, you need to have Apptainer installed on your machine; see [this link](/en/documentation/install/install-apptainer/) for more details.
+In preamble, you need to have Apptainer installed on your machine; see [this link]({{% ref "/documentation/install/install-apptainer/" %}}) for more details.
 
 This tutorial focuses on using the xTB container image. The image can be downloaded ready to use from the GRICAD registry with Apptainer and allows directly running the `xtb` executable.
 
-For more information on Apptainer containers, please look at [this page](/en/documentation/use/apptainer/).
+For more information on Apptainer containers, please look at [this page]({{% ref "/documentation/use/apptainer/" %}}).
 
-To have a quick look at Apptainer's main commands, you may refer to [this tutorial](/en/documentation/use/apptainer-image/).
+To have a quick look at Apptainer's main commands, you may refer to [this tutorial]({{% ref "/documentation/use/apptainer-image/" %}}).
 
 {{< /callout >}}
 
@@ -62,7 +62,7 @@ The optimized geometry will be written by xTB in the current working directory, 
 
 ## Detailed usage for the xTB container
 
-This section presents different ways to use the xTB image. For more details about Apptainer commands, please look at [this tutorial](/en/documentation/use/apptainer-image/#apptainer-crash-course).
+This section presents different ways to use the xTB image. For more details about Apptainer commands, please look at [this tutorial]({{% ref "/documentation/use/apptainer-image/#apptainer-crash-course" %}}).
 
 ### Using the xTB container
 
@@ -191,7 +191,7 @@ apptainer inspect $HOME/apptainer-images/xtb.sif
 
 ## Partial or total isolation
 
-By default, Apptainer does not fully isolate the container from the host system. One can either have partial or total isolation using respectively the flags `--no-mount` or `--no-home` and `--containall` (see [this link](/en/documentation/use/apptainer-isolation-flags/) for more information).
+By default, Apptainer does not fully isolate the container from the host system. One can either have partial or total isolation using respectively the flags `--no-mount` or `--no-home` and `--containall` (see [this link]({{% ref "/documentation/use/apptainer-isolation-flags/" %}}) for more information).
 
 Whenever `--containall` is activated, the directory on the host machine containing the xTB input files cannot be accessed from the container automatically.
 

@@ -6,7 +6,7 @@ description: "Tutorial for the simple-adsorption-workflow: grand canonical Monte
 
 ## Prerequisites
 
-- [Install Apptainer](/en/documentation/install/install-apptainer/)
+- [Install Apptainer]({{% ref "/documentation/install/install-apptainer/" %}})
 - Download the Apptainer image:
 
 ```bash

@@ -7,15 +7,15 @@ description: "Tutorial on using the DIAMOND AMITEX_FFTP Apptainer container: pul
 
 <div align="justify">
 
-{{< callout context="note" title="Prerequisites" icon="tabler-icons/outline/info-circle" >}}
+{{< callout context="note" title="Prerequisites" >}}
 
-- Have **Apptainer** or **Docker** installed [(installation guide)](/en/documentation/install/install-apptainer/)
-- Have downloaded the **amitex_fftp** image [available here](/en/codes/scientific-computing/amitex-fftp/)
-- Have downloaded the **input files** [available here](/downloads/amitex-tutorial-inputs.tar.gz)
-
-For more information on Apptainer containers, please look at [this page](/en/documentation/use/apptainer/) or refer to [this tutorial](/en/documentation/use/apptainer-image/) to have a quick look at Apptainer's main commands.
+- Apptainer or Docker (see either [our installation guide]({{% ref "/documentation/install/install-apptainer" %}}) or the corresponding official documentation)
+- The [`amitex_fftp.sif` image]({{% ref "/codes/scientific-computing/amitex-fftp/" %}})
+- The [input files](/downloads/amitex-tutorial-inputs.tar.gz)
 
 {{< /callout >}}
+
+For more information on Apptainer containers and their use, we provide [a description of Apptainer]({{% ref "/documentation/use/apptainer" %}}), a crash course on [how to use Apptainer]({{% ref "/documentation/use/apptainer-image" %}}), and of course there's also the [official Apptainer's documentation](https://apptainer.org/docs/user/latest/).
 
 {{< tabs "apptainer_docker" >}}
 {{< tab "Apptainer" >}}
@@ -94,7 +94,7 @@ apptainer exec amitex_fftp.sif gnuplot < plot.gp
 
 This creates `concrete_stress_strain.svg`, which can then be displayed with a standard image viewer.
 
-To visualize `.vtk` files, **Paraview** must be used. We provide a Paraview container [here](/en/codes/visualisation/paraview/). Once the Paraview container has been downloaded, the microstructure concrete.vtk can be visualized as follows:
+To visualize `.vtk` files, **Paraview** must be used. We provide a Paraview container [here]({{% ref "/codes/visualisation/paraview/" %}}). Once the Paraview container has been downloaded, the microstructure concrete.vtk can be visualized as follows:
 
 ```bash
 apptainer run paraview.sif concrete.vtk

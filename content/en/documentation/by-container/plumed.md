@@ -7,15 +7,15 @@ description: "Tutorial on using the DIAMOND PLUMED Apptainer container: pulling 
 
 <div align="justify">
 
-{{< callout context="note" title="Prerequisites" icon="tabler-icons/outline/info-circle" >}}
+{{< callout context="note" title="Prerequisites" >}}
 
-- Have **Apptainer** installed [(installation guide)](/en/documentation/install/install-apptainer/)
-- Have downloaded the **plumed.sif** image [available here](/en/codes/scientific-computing/plumed/)
-- Have downloaded the **input files** [available here](/downloads/plumed-tutorial-inputs.tar.gz)
-
-For more information on Apptainer containers, please look at [this page](/en/documentation/use/apptainer/) or refer to [this tutorial](/en/documentation/use/apptainer-image/) to have a quick look at Apptainer's main commands.
+- Apptainer (see either [our installation guide]({{% ref "/documentation/install/install-apptainer" %}}) or [the official documentation](https://apptainer.org/docs/user/latest/quick_start.html#installation))
+- The [`plumed.sif` image]({{% ref "/codes/scientific-computing/plumed/" %}})
+- The [input files](/downloads/plumed-tutorial-inputs.tar.gz)
 
 {{< /callout >}}
+
+For more information on Apptainer containers and their use, we provide [a description of Apptainer]({{% ref "/documentation/use/apptainer" %}}), a crash course on [how to use Apptainer]({{% ref "/documentation/use/apptainer-image" %}}), and of course there's also the [official Apptainer's documentation](https://apptainer.org/docs/user/latest/).
 
 
 ## Input files
@@ -44,7 +44,7 @@ apptainer exec plumed.sif plumed driver --mf_xtc 5-HT1B.xtc
 
 ## Detailed usage for the PLUMED container
 
-This section presents how to use the PLUMED image to analyze a pre-computed molecular dynamics trajectory file. For more details about Apptainer commands, please look at [this tutorial](/en/documentation/use/apptainer-image/#apptainer--crash-course).
+This section presents how to use the PLUMED image to analyze a pre-computed molecular dynamics trajectory file. For more details about Apptainer commands, please look at [this tutorial]({{% ref "/documentation/use/apptainer-image/#apptainer--crash-course" %}}).
 
 ### Introduction
 
@@ -62,7 +62,7 @@ This can be done with the following command if VMD is installed locally:
 vmd 5-HT1B.pdb 5-HT1B.xtc 
 ```
 
-Alternatively, the [VMD container](/en/codes/visualisation/vmd) provided by the Diamond website can be used as follows:
+Alternatively, the [VMD container]({{% ref "/codes/visualisation/vmd" %}}) provided by the Diamond website can be used as follows:
 
 ```shell
 apptainer exec vmd.sif vmd 5-HT1B.pdb 5-HT1B.xtc 

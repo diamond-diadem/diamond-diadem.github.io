@@ -5,7 +5,7 @@ weight: 1
 description: "Tutorial on using the DIAMOND NWChem Apptainer container: pulling the image and usage example for geometry optimization."
 ---
 
-{{< callout context="note" title="Prerequisites" icon="tabler-icons/outline/info-circle" >}}
+{{< callout context="note" title="Prerequisites" >}}
 
 - Apptainer (see either [our installation guide]({{% ref "/documentation/install/install-apptainer" %}}) or [the official documentation](https://apptainer.org/docs/user/latest/quick_start.html#installation))
 - The [`nwchem.sif` image]({{% ref "/codes/scientific-computing/nwchem/" %}})
@@ -35,7 +35,7 @@ apptainer exec nwchem.sif nwchem nwchem.nw > output.txt
 
 ## Detailed usage for the NWChem container
 
-This section explains how to use the NWChem image. For more details about Apptainer commands, please look at [this tutorial](/en/documentation/use/apptainer-image/#apptainer--crash-course).
+This section explains how to use the NWChem image. For more details about Apptainer commands, please look at [this tutorial]({{% ref "/documentation/use/apptainer-image/#apptainer--crash-course" %}}).
 
 ### Introduction
 

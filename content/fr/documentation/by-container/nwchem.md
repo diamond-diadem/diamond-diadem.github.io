@@ -5,7 +5,7 @@ weight: 1
 description: "Tutoriel sur l'utilisation de l'image Apptainer NWChem de DIAMOND : récupération du conteneur et cas d'usage pour des calculs d'opimisation de géométrie."
 ---
 
-{{< callout context="note" title="Prérequis" icon="tabler-icons/outline/info-circle" >}}
+{{< callout context="note" title="Prérequis" >}}
 
 - Apptainer (voir soit [notre guide d'installation]({{% ref "/documentation/install/install-apptainer" %}}), soit [la documentation officiel](https://apptainer.org/docs/user/latest/quick_start.html#installation))
 - L'image [`nwchem.sif`]({{% ref "/codes/scientific-computing/nwchem/" %}})

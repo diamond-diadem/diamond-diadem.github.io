@@ -8,7 +8,7 @@ description: "Tutorial on using AiiDA via the DIAMOND Apptainer container to aut
 
 {{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
 
-Before following these instructions, you must have Apptainer installed on your machine; see [this link](/en/documentation/install/install-apptainer/) for more details.
+Before following these instructions, you must have Apptainer installed on your machine; see [this link]({{% ref "/documentation/install/install-apptainer/" %}}) for more details.
 
 This tutorial explains how to interact with AiiDA's Apptainer image.
 

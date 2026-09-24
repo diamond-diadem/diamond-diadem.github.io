@@ -8,7 +8,7 @@ description: "Guide to essential Apptainer commands for interacting with DIAMOND
 
 {{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
 
-In preamble, you need to have Apptainer installed on your machine ; see [this link](/en/documentation/install/install-apptainer/) for more details.
+In preamble, you need to have Apptainer installed on your machine ; see [this link]({{% ref "/documentation/install/install-apptainer/" %}}) for more details.
 
 This tutorial explains the main ways to interact with an Apptainer image in order to generate and manage containers. Instructions presented here are in principle also valid for any other Apptainer container.
 
@@ -127,7 +127,7 @@ WARNING: Environment variable USER already has value [newusername], will not for
 
 ## Isolation between the host and the container
 
-By default, Apptainer does not fully isolate the container from the host system, but there are options to alter this behavior at different degrees. These options, and the directories share by default, are extensively discussed in a [dedicated tutorial section](/en/documentation/use/apptainer-isolation-flags/).
+By default, Apptainer does not fully isolate the container from the host system, but there are options to alter this behavior at different degrees. These options, and the directories share by default, are extensively discussed in a [dedicated tutorial section]({{% ref "/documentation/use/apptainer-isolation-flags/" %}}).
 
 Here, we only present the most general option (`--containall`), which allows to isolate the container's environment and file system from the host at once.
 
@@ -155,9 +155,9 @@ cat $PWD/test-host.txt $PWD/test-container.txt
 
 If this tutorial helped you to discover the basic usage of Apptainer, you can also take a look at the following pages to better take the platform tools into your own hands:
 
-- [How to use containers on HPC clusters?](/en/documentation/use/apptainer-hpc/)
-- [What are the options to isolate a container from its host?](/en/documentation/use/apptainer-isolation-flags/)
-- [What about Guix packages?](/en/documentation/use/guix-package/)
-- [How to ask for help?](/en/contact/)
+- [How to use containers on HPC clusters?]({{% ref "/documentation/use/apptainer-hpc/" %}})
+- [What are the options to isolate a container from its host?]({{% ref "/documentation/use/apptainer-isolation-flags/" %}})
+- [What about Guix packages?]({{% ref "/documentation/use/guix-package/" %}})
+- [How to ask for help?]({{% ref "/contact/" %}})
 
 </div>

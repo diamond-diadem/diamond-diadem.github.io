@@ -7,15 +7,15 @@ description: "Tutoriel sur l'utilisation de l'image Apptainer AMITEX_FFTP de DIA
 
 <div align="justify">
 
-{{< callout context="note" title="Prérequis" icon="tabler-icons/outline/info-circle" >}}
+{{< callout context="note" title="Prérequis" >}}
 
-- Avoir installé **Apptainer** [(guide d'installation)](/documentation/install/install-apptainer/) ou **Docker**
-- Avoir téléchargé l'image **amitex_fftp** [disponible ici](/codes/scientific-computing/amitex-fftp/)
-- Avoir téléchargé les **fichiers d’entrées** [disponibles ici](/downloads/amitex-tutorial-inputs.tar.gz)
-
-Pour plus d'informations sur les conteneurs Apptainer, veuillez consulter la [page dédiée](/documentation/use/apptainer/) ou suivre [ce tutoriel](/documentation/use/apptainer-image/) pour s'approprier les principales commandes d'Apptainer.
+- Apptainer ou Docker (voir soit [notre guide d'installation]({{% ref "/documentation/install/install-apptainer" %}}), soit la documentation officielle correspondante)
+- L'image [`amitex_fftp.sif`]({{% ref "/codes/scientific-computing/amitex-fftp/" %}})
+- Les [fichiers d'entrée](/downloads/amitex-tutorial-inputs.tar.gz)
 
 {{< /callout >}}
+
+Pour plus d'informations sur les conteneurs Apptainer et leur utilisation, nous mettons à votre disposition [une description d'Apptainer]({{% ref "/documentation/use/apptainer" %}}), un guide rapide sur [comment utiliser Apptainer]( {{% ref "/documentation/use/apptainer-image" %}}), sans oublier bien sûr la [documentation officielle d'Apptainer](https://apptainer.org/docs/user/latest/).
 
 {{< tabs "apptainer_docker" >}}
 {{< tab "Apptainer" >}}

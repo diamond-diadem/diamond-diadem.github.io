@@ -41,7 +41,7 @@ apptainer exec cp2k.sif mpirun -np <N> cp2k.psmp Si_bulk8.inp
 
 ## Detailed usage for the CP2K container
 
-This section explains how to use the CP2K image. For more details about Apptainer commands, please look at [this tutorial](/en/documentation/use/apptainer-image/#apptainer--crash-course).
+This section explains how to use the CP2K image. For more details about Apptainer commands, please look at [this tutorial]({{% ref "/documentation/use/apptainer-image/#apptainer--crash-course" %}}).
 
 ### Introduction
 
@@ -85,7 +85,7 @@ The following command runs the CP2K simulation on two cores using MPI library. T
 apptainer exec cp2k.sif mpirun -np 2 cp2k.psmp -o Si_bulk8.out Si_bulk8.inp
 ```
 
-The command above uses Apptainer "embedded" parallel mode. More information on using Apptainer containers in parallel, including usage on clusters and the difference between embedded and hybrid parallel modes, can be found on [this page](/en/documentation/use/apptainer-hpc).
+The command above uses Apptainer "embedded" parallel mode. More information on using Apptainer containers in parallel, including usage on clusters and the difference between embedded and hybrid parallel modes, can be found on [this page]({{% ref "/documentation/use/apptainer-hpc" %}}).
 
 ### Reading the results
 

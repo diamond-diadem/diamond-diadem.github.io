@@ -9,13 +9,13 @@ description: "Tutorial on using the DIAMOND VMD Apptainer container for molecula
 
 {{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
 
-Before proceeding with these explanations, it is necessary to have installed Apptainer on your machine; see [this link](/en/documentation/install/install-apptainer/) for more details.
+Before proceeding with these explanations, it is necessary to have installed Apptainer on your machine; see [this link]({{% ref "/documentation/install/install-apptainer/" %}}) for more details.
 
-This tutorial details the usage of the container image of the VMD code downloadable at [this address](/en/codes/visualisation/vmd/). By following this link, you obtain an Apptainer image (file format `.sif`) that allows you to create containers capable of running VMD.
+This tutorial details the usage of the container image of the VMD code downloadable at [this address]({{% ref "/codes/visualisation/vmd/" %}}). By following this link, you obtain an Apptainer image (file format `.sif`) that allows you to create containers capable of running VMD.
 
-For more information about Apptainer containers, please consult the [dedicated page](/en/documentation/use/apptainer/).
+For more information about Apptainer containers, please consult the [dedicated page]({{% ref "/documentation/use/apptainer/" %}}).
 
-To quickly grasp the main commands of Apptainer, you can refer to [this tutorial](/en/documentation/use/apptainer-image/).
+To quickly grasp the main commands of Apptainer, you can refer to [this tutorial]({{% ref "/documentation/use/apptainer-image/" %}}).
 
 {{< /callout >}}
 
@@ -59,7 +59,7 @@ apptainer run $HOME/apptainer-images/vmd.sif <input.file>
 
 ### Detail of using the VMD container
 
-This section presents the various ways to use the VMD image. For more details on Apptainer commands, please refer to [this tutorial](/en/documentation/use/apptainer-image/).
+This section presents the various ways to use the VMD image. For more details on Apptainer commands, please refer to [this tutorial]({{% ref "/documentation/use/apptainer-image/" %}}).
 
 To run VMD without any containerization, one would use the command:
 
@@ -109,7 +109,7 @@ $HOME/apptainer-images/vmd.sif tutorial-ubiquitin.psf tutorial-pulling.dcd
 
 ### Isolation between the container and the host machine
 
-By default, Apptainer does not fully isolate the container from the host machine's system; for partial or total isolation, respectively, the `--no-mount` or `--no-home` and `--containall` flags should be used (see [this link](/en/documentation/use/apptainer-isolation-flags/) for more information). In cases where the `--containall` option is activated, we encounter two difficulties.
+By default, Apptainer does not fully isolate the container from the host machine's system; for partial or total isolation, respectively, the `--no-mount` or `--no-home` and `--containall` flags should be used (see [this link]({{% ref "/documentation/use/apptainer-isolation-flags/" %}}) for more information). In cases where the `--containall` option is activated, we encounter two difficulties.
 
 #### Sharing graphical resources
 

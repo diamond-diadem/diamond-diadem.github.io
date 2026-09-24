@@ -13,12 +13,13 @@ Ce tutoriel propose une série de notebooks pédagogiques pour découvrir l’ap
 
 </div>
 
-{{< callout context="note" title="Prérequis" icon="tabler-icons/outline/info-circle" >}}
+{{< callout context="note" title="Prérequis" >}}
 
-Pour effectuer ce tutoriel, il vous faudra au choix :
-- Avoir installé **Apptainer** [(guide d'installation)](/documentation/install/install-apptainer/)
-- **OU** avoir installé **Docker**
-- **OU** avoir installé **Python 3.10+** avec **uv** ainsi que **Graphviz** (plus d'informations sur comment les installer dans le tutoriel).
+Au choix :
+
+- Apptainer (voir soit [notre guide d'installation]({{% ref "/documentation/install/install-apptainer" %}}), soit [la documentation officiel](https://apptainer.org/docs/user/latest/quick_start.html#installation))
+- Docker
+- Python 3.10+ avec `uv` et Graphviz (les instructions d'installation sont fournies dans le tutoriel)
 
 {{< /callout >}}
 
