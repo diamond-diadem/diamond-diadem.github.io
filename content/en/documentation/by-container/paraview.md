@@ -13,7 +13,7 @@ Before proceeding with these explanations, it is necessary to have installed App
 
 This tutorial details the usage of the container image of the ParaView code downloadable at [this address](/en/codes/visualisation/paraview/). By following this link, you obtain an Apptainer image (file format `.sif`) that allows you to create containers capable of running ParaView.
 
-For more information about Apptainer containers, please consult the [dedicated page](/en/about/apptainer/).
+For more information about Apptainer containers, please consult the [dedicated page](/en/documentation/use/apptainer/).
 
 To quickly grasp the main commands of Apptainer, you can refer to [this tutorial](/en/documentation/use/apptainer-image/).
 

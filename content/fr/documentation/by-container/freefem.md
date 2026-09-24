@@ -13,7 +13,7 @@ description: "Tutoriel sur l'utilisation du conteneur Apptainer FreeFEM de DIAMO
 - Avoir téléchargé l'image **freefem.sif** [disponible ici](/codes/scientific-computing/freefem/)
 - Avoir téléchargé les **fichiers d'entrée** [disponibles ici](/downloads/freefem-tutorial-inputs.tar.gz)
 
-Pour plus d'informations sur les conteneurs Apptainer, veuillez consulter la [page dédiée](/about/apptainer/) ou suivre [ce tutoriel](/documentation/use/apptainer-image/) pour s'approprier les principales commandes d'Apptainer.
+Pour plus d'informations sur les conteneurs Apptainer, veuillez consulter la [page dédiée](/documentation/use/apptainer/) ou suivre [ce tutoriel](/documentation/use/apptainer-image/) pour s'approprier les principales commandes d'Apptainer.
 
 {{< /callout >}}
 

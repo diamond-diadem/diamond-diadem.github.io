@@ -1,6 +1,6 @@
 ---
 title: Accessing and using DIAMOND Guix packages
-weight: 5
+weight: 8
 description: "How to access and use DIAMOND Guix packages for scientific codes, enabling reproducible materials simulation software on HPC environments."
 ---
 

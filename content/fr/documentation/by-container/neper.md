@@ -12,7 +12,7 @@ description: "Tutoriel sur le conteneur Apptainer Neper de DIAMOND : récupérat
 - Avoir installé **Apptainer** [(guide d'installation)](/documentation/install/install-apptainer/)
 - Avoir téléchargé l'image **neper.sif** [disponible ici](/codes/scientific-computing/neper/)
 
-Pour plus d'informations sur les conteneurs Apptainer, veuillez consulter [cette page](/about/apptainer/) ou vous référer à [ce tutoriel](/documentation/use/apptainer-image/) pour avoir un aperçu rapide des principales commandes d'Apptainer.
+Pour plus d'informations sur les conteneurs Apptainer, veuillez consulter [cette page](/documentation/use/apptainer/) ou vous référer à [ce tutoriel](/documentation/use/apptainer-image/) pour avoir un aperçu rapide des principales commandes d'Apptainer.
 
 {{< /callout >}}
 

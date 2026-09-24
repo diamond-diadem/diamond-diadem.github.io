@@ -1,54 +1,81 @@
 main:
-  - name: À propos
-    url: about/
-    weight: 10
-    identifier: about-fr
-  - name: DIAMOND
-    url: about/diamond/
-    weight: 11
-    parent: about-fr
-  - name: DIADEM
-    url: about/diadem/
-    weight: 12
-    parent: about-fr
-  - name: Conteneurs
-    url: about/containers/
-    weight: 13
-    parent: about-fr
-  - name: Apptainer
-    url: about/apptainer/
-    weight: 14
-    parent: about-fr
-  - name: Guix
-    url: about/guix/
-    weight: 15
-    parent: about-fr
-  - name: Ontologie
-    url: about/onto-viewer/
-    weight: 16
-    parent: about-fr
   - name: Codes
     url: codes/home/
-    weight: 20
+    weight: 10
   - name: Workflows
     url: workflows/
+    weight: 20
+  - name: Documentation
+    url: documentation/home/
     weight: 30
   - name: Données
     url: data/
     weight: 40
-  - name: Documentation
-    url: documentation/home/
-    weight: 45
-  - name: Équipe
-    url: team/
-    weight: 50
   - name: Contact
     url: contact/
+    weight: 50
+  - name: À propos
+    url: about/diamond/
     weight: 60
+    identifier: about-fr
+
+# Footer columns: each top-level entry is a column heading, its children the links.
+# An entry with params.requires is only listed when that feature is enabled.
+footer:
+  - name: À propos
+    identifier: footer-about-fr
+    weight: 10
+  - name: DIAMOND
+    pageRef: /about/diamond
+    weight: 11
+    parent: footer-about-fr
+  - name: DIADEM
+    pageRef: /about/diadem
+    weight: 12
+    parent: footer-about-fr
+  - name: Ontologie
+    pageRef: /about/onto-viewer
+    weight: 13
+    parent: footer-about-fr
+  - name: Produits
+    identifier: footer-products-fr
+    weight: 20
+  - name: Codes
+    pageRef: /codes/home
+    weight: 21
+    parent: footer-products-fr
+  - name: Workflows
+    pageRef: /workflows
+    weight: 22
+    parent: footer-products-fr
+  - name: Documentation
+    pageRef: /documentation/home
+    weight: 23
+    parent: footer-products-fr
+  - name: Données
+    pageRef: /data
+    weight: 24
+    parent: footer-products-fr
+  - name: Contact
+    identifier: footer-contact-fr
+    weight: 30
+  - name: Nous contacter
+    pageRef: /contact
+    weight: 31
+    parent: footer-contact-fr
+  - name: Équipe
+    pageRef: /team
+    weight: 32
+    parent: footer-contact-fr
+    params:
+      requires: team
   - name: Actualités
-    url: news/
-    weight: 70
-    identifier: news-fr
+    pageRef: /news
+    weight: 33
+    parent: footer-contact-fr
+    params:
+      requires: news
+
 # codes:
 #     - name: Codes
 #       weight: 10

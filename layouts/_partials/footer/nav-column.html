@@ -1,0 +1,19 @@
+{{/*
+  One footer column: a heading and the links below it.
+
+  Context: dict with
+    column - top-level entry of the footer menu (its children are the links)
+    page   - current page, to mark the link pointing to it
+*/}}
+{{- $headingID := printf "%s-heading" .column.Identifier -}}
+<nav class="site-footer-nav" aria-labelledby="{{ $headingID }}">
+  <h2 class="site-footer-heading" id="{{ $headingID }}">{{ .column.Name }}</h2>
+  <ul class="site-footer-links">
+    {{- range .column.Children }}
+      {{- if partial "main/is-feature-enabled.html" .Params.requires }}
+        {{- $current := $.page.IsMenuCurrent "footer" . }}
+        <li><a href="{{ .URL }}"{{ if $current }} aria-current="page"{{ end }}>{{ .Name }}</a></li>
+      {{- end }}
+    {{- end }}
+  </ul>
+</nav>

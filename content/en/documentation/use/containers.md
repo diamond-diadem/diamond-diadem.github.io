@@ -4,9 +4,12 @@ linkTitle: Containers
 seo:
   description: Scientific containers powering DIAMOND with portable HPC environments,
     reproducible simulations, and Apptainer-based workflows.
+weight: 1
+lead: "Lightweight, isolated environments that contain all the tools needed to run applications. They have become essential in the field of computing due to their flexibility and efficiency."
+aliases:
+  - /about/containers/
 ---
 
-<h2 class="about-lead text-center">Lightweight, isolated environments that contain all the tools needed to run applications. They have become essential in the field of computing due to their flexibility and efficiency.</h2>
 
 <div align="justify">
 
@@ -50,7 +53,7 @@ In summary, containers offer a powerful solution for application deployment, imp
   </div>
   <div class="column right-about-containers" align="justify">
 
-In practice, you can choose the technical solution you want to use locally on your machine. For the DIAMOND project, we recommend using both [Apptainer](/about/apptainer/) and [Guix](/about/guix/). On the other hand, for clusters or data centres, the solution depends on what's available. Almost half of the French mesocentres and national data centres have a container system available as a standard command (enabling the use of containers). It should be noted, however, that the other half offers the possibility of loading a container system via the `module load` command (and thus of using containers). On the other hand, the use of Guix is limited to less than 30% of all French computing centres. It's worth noting that the [MESONET](https://www.mesonet.fr/) project, which aims to pool HPC computing resources across the country, has deployed a solution for using containers on its prototyping cluster. Although not all of the project's clusters are available yet, it is highly likely that they will all feature a container system.
+In practice, you can choose the technical solution you want to use locally on your machine. For the DIAMOND project, we recommend using both [Apptainer](/documentation/use/apptainer/) and [Guix](/documentation/use/guix/). On the other hand, for clusters or data centres, the solution depends on what's available. Almost half of the French mesocentres and national data centres have a container system available as a standard command (enabling the use of containers). It should be noted, however, that the other half offers the possibility of loading a container system via the `module load` command (and thus of using containers). On the other hand, the use of Guix is limited to less than 30% of all French computing centres. It's worth noting that the [MESONET](https://www.mesonet.fr/) project, which aims to pool HPC computing resources across the country, has deployed a solution for using containers on its prototyping cluster. Although not all of the project's clusters are available yet, it is highly likely that they will all feature a container system.
 
   </div>
 </div>

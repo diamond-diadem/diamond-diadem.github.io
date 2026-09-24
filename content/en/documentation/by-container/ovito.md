@@ -13,7 +13,7 @@ Before proceeding with these explanations, it is necessary to have Apptainer ins
 
 This tutorial details the usage of the Ovito code container image downloadable at [this address](/en/codes/visualisation/ovito/). By following this link, you retrieve an Apptainer image (file format `.sif`) that allows you to create containers capable of running Ovito.
 
-For more information on Apptainer containers, please refer to the [dedicated page](/en/about/apptainer/).
+For more information on Apptainer containers, please refer to the [dedicated page](/en/documentation/use/apptainer/).
 
 To quickly grasp the main Apptainer commands, you can refer to [this tutorial](/en/documentation/use/apptainer-image/).
 

@@ -1,0 +1,10 @@
+{{/*
+  A supporter logo, with its dark theme variant when one is given.
+
+  Context: an entry of data/supporters.yaml
+*/}}
+{{- $lightClass := cond (isset . "logoDark") "theme-light-only" "" -}}
+<img class="site-footer-logo {{ $lightClass }}" src="{{ .logo | relURL }}" width="{{ .width }}" height="{{ .height }}" alt="{{ .name }}" loading="lazy">
+{{- with .logoDark }}
+<img class="site-footer-logo theme-dark-only" src="{{ . | relURL }}" width="{{ $.width }}" height="{{ $.height }}" alt="{{ $.name }}" loading="lazy">
+{{- end -}}

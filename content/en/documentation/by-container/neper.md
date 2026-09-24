@@ -12,7 +12,7 @@ description: "Tutorial on using the DIAMOND Neper Apptainer container: pulling t
 - Have **Apptainer** installed [(installation guide)](/en/documentation/install/install-apptainer/)
 - Have downloaded the **neper.sif** image [available here](/en/codes/scientific-computing/neper/)
 
-For more information on Apptainer containers, please look at [this page](/en/about/apptainer/) or refer to [this tutorial](/en/documentation/use/apptainer-image/) to have a quick look at Apptainer's main commands.
+For more information on Apptainer containers, please look at [this page](/en/documentation/use/apptainer/) or refer to [this tutorial](/en/documentation/use/apptainer-image/) to have a quick look at Apptainer's main commands.
 
 {{< /callout >}}
 

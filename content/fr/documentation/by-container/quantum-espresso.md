@@ -13,7 +13,7 @@ En préalable de ces explications, il est nécessaire d'avoir installé Apptaine
 
 Ce tutoriel détaille l'utilisation de l'image de conteneur du code Quantum Espresso téléchargeable à [cette adresse](/codes/scientific-computing/quantum-espresso/). En suivant ce lien, vous récupérez une image Apptainer (format de fichier `.sif`) qui vous permettra de créer des conteneurs à même de faire tourner Quantum Espresso.
 
-Pour plus d'informations sur les conteneurs Apptainer, veuillez consulter la [page dédiée](/about/apptainer/).
+Pour plus d'informations sur les conteneurs Apptainer, veuillez consulter la [page dédiée](/documentation/use/apptainer/).
 
 Pour rapidement s'approprier les principales commandes d'Apptainer, vous pouvez vous référer à [ce tutoriel](/documentation/use/apptainer-image/).
 

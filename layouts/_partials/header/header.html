@@ -89,14 +89,7 @@
           <ul class="navbar-nav flex-grow-1">
             {{- $current := . -}}
             {{- $section := $current.Section -}}
-            {{ $newsPages := where .Site.RegularPages "Section" "news" }}
-            {{ $displayNews := (ge (len ($newsPages)) 1) }}
             {{ range .Site.Menus.main -}}
-              {{- $displayTeam := site.Params.diamond.enableTeamPage | default true -}}
-              {{- $isTeamEntry := or (eq .URL "team/") (eq .URL "en/team/") -}}
-              {{- if and (not $displayTeam) $isTeamEntry -}}
-                {{- continue -}}
-              {{- end -}}
               {{- $active := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) -}}
               {{- $active = or $active (eq .Name $current.Title) -}}
               {{- $active = or $active (and (eq .Name ($section | humanize)) (eq $current.Section $section)) -}}
@@ -125,7 +118,7 @@
                     </ul>
                   </details>
                 </li>
-              {{ else if or $displayNews (not (in .Identifier "news")) -}}
+              {{ else -}}
                 <li class="nav-item">
                   <a class="nav-link site-menu-link{{ if $active }} active{{ end }}" href="{{ .URL | absURL }}"{{ if $active }} aria-current="page"{{ end }}>{{ .Name }}</a>
                 </li>

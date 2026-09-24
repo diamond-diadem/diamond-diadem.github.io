@@ -4,9 +4,12 @@ linkTitle: Conteneurs
 seo:
   description: Présentation des conteneurs scientifiques DIAMOND, des environnements HPC
     portables, des simulations reproductibles et de l'écosystème Apptainer/Guix.
+weight: 1
+lead: "Environnements légers et isolés incluant tous les outils nécessaires pour exécuter des applications. Ils sont devenus incontournables dans le domaine de l'informatique en raison de leur flexibilité et de leur efficacité."
+aliases:
+  - /about/containers/
 ---
 
-<h2 class="about-lead text-center">Environnements légers et isolés incluant tous les outils nécessaires pour exécuter des applications. Ils sont devenus incontournables dans le domaine de l'informatique en raison de leur flexibilité et de leur efficacité.</h2>
 
 <div align="justify">
 
@@ -50,7 +53,7 @@ En résumé, les conteneurs offrent une solution puissante pour le déploiement 
   </div>
   <div class="column right-about-containers" align="justify">
 
-En pratique, vous pouvez choisir la solution technique que vous souhaitez en local sur votre machine. Dans le cadre du projet DIAMOND, nous recommandons l'utilisation d'[Apptainer](/about/apptainer/) mais également de [Guix](/about/guix/). En revanche, sur les clusters ou les centres de calcul, la solution est dictée par ce qui est disponible. Quasiment la moitié des mésocentres et centres de calcul nationaux français possède un système de conteneurs disponible en commande par défaut (permettant donc l'utilisation des conteneurs). Il faut tout de même préciser que l'autre moitié des mésocentres offrent la possibilité de charger un système de conteneurs via la commande `module load` (et donc d'utiliser des conteneurs). En revanche, l'utilisation de Guix est limitée à moins de 30% de l'ensemble des centres de calcul français. Il est à noter que le projet [MESONET](https://www.mesonet.fr/) qui vise à mutualiser les ressources de calcul HPC à l'échelle du pays a déployé une solution pour l'utilisation des conteneurs sur leur cluster de prototypage. Bien que tous les clusters du projet ne soient pas encore disponibles, il est fort probable que ceux-ci posséderont un système de conteneurs.
+En pratique, vous pouvez choisir la solution technique que vous souhaitez en local sur votre machine. Dans le cadre du projet DIAMOND, nous recommandons l'utilisation d'[Apptainer](/documentation/use/apptainer/) mais également de [Guix](/documentation/use/guix/). En revanche, sur les clusters ou les centres de calcul, la solution est dictée par ce qui est disponible. Quasiment la moitié des mésocentres et centres de calcul nationaux français possède un système de conteneurs disponible en commande par défaut (permettant donc l'utilisation des conteneurs). Il faut tout de même préciser que l'autre moitié des mésocentres offrent la possibilité de charger un système de conteneurs via la commande `module load` (et donc d'utiliser des conteneurs). En revanche, l'utilisation de Guix est limitée à moins de 30% de l'ensemble des centres de calcul français. Il est à noter que le projet [MESONET](https://www.mesonet.fr/) qui vise à mutualiser les ressources de calcul HPC à l'échelle du pays a déployé une solution pour l'utilisation des conteneurs sur leur cluster de prototypage. Bien que tous les clusters du projet ne soient pas encore disponibles, il est fort probable que ceux-ci posséderont un système de conteneurs.
 
   </div>
 </div>

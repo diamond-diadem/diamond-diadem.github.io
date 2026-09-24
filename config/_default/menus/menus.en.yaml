@@ -1,51 +1,77 @@
 main:
-  - name: About
-    url: en/about/
-    weight: 10
-    identifier: about-en
-  - name: DIAMOND
-    url: en/about/diamond/
-    weight: 11
-    parent: about-en
-  - name: DIADEM
-    url: en/about/diadem/
-    weight: 12
-    parent: about-en
-  - name: Containers
-    url: en/about/containers/
-    weight: 13
-    parent: about-en
-  - name: Apptainer
-    url: en/about/apptainer/
-    weight: 14
-    parent: about-en
-  - name: Guix
-    url: en/about/guix/
-    weight: 15
-    parent: about-en
-  - name: Ontology
-    url: en/about/onto-viewer/
-    weight: 16
-    parent: about-en
   - name: Codes
     url: en/codes/home/
-    weight: 20
+    weight: 10
   - name: Workflows
     url: en/workflows/
+    weight: 20
+  - name: Documentation
+    url: en/documentation/home/
     weight: 30
   - name: Data
     url: en/data/
     weight: 40
-  - name: Documentation
-    url: en/documentation/home/
-    weight: 45
-  - name: Team
-    url: en/team/
-    weight: 50
   - name: Contact
     url: en/contact/
+    weight: 50
+  - name: About
+    url: en/about/diamond/
     weight: 60
+    identifier: about-en
+
+# Footer columns: each top-level entry is a column heading, its children the links.
+# An entry with params.requires is only listed when that feature is enabled.
+footer:
+  - name: About
+    identifier: footer-about-en
+    weight: 10
+  - name: DIAMOND
+    pageRef: /about/diamond
+    weight: 11
+    parent: footer-about-en
+  - name: DIADEM
+    pageRef: /about/diadem
+    weight: 12
+    parent: footer-about-en
+  - name: Ontology
+    pageRef: /about/onto-viewer
+    weight: 13
+    parent: footer-about-en
+  - name: Products
+    identifier: footer-products-en
+    weight: 20
+  - name: Codes
+    pageRef: /codes/home
+    weight: 21
+    parent: footer-products-en
+  - name: Workflows
+    pageRef: /workflows
+    weight: 22
+    parent: footer-products-en
+  - name: Documentation
+    pageRef: /documentation/home
+    weight: 23
+    parent: footer-products-en
+  - name: Data
+    pageRef: /data
+    weight: 24
+    parent: footer-products-en
+  - name: Contact
+    identifier: footer-contact-en
+    weight: 30
+  - name: Contact us
+    pageRef: /contact
+    weight: 31
+    parent: footer-contact-en
+  - name: Team
+    pageRef: /team
+    weight: 32
+    parent: footer-contact-en
+    params:
+      requires: team
   - name: News
-    url: en/news/
-    weight: 70
-    identifier: news-en
+    pageRef: /news
+    weight: 33
+    parent: footer-contact-en
+    params:
+      requires: news

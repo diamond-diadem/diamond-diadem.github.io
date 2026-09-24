@@ -1,5 +1,5 @@
 {{ define "main" }}
-{{ if site.Params.diamond.enableTeamPage | default true }}
+{{ if partial "main/is-feature-enabled.html" "team" }}
 {{ $people := sort hugo.Data.team.team "last_name" }}
 {{ $featuredPeopleWithBio := slice }}
 {{ $featuredPeopleWithoutBio := slice }}

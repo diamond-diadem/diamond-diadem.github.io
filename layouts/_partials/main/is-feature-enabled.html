@@ -1,0 +1,14 @@
+{{/*
+  Whether an optional site feature is on. An empty feature name means the
+  item does not depend on any feature.
+
+  Context: feature name (string): "", "team" or "news"
+  Returns: bool
+*/}}
+{{- $enabled := true -}}
+{{- if eq . "team" -}}
+  {{- $enabled = ne site.Params.diamond.enableTeamPage false -}}
+{{- else if eq . "news" -}}
+  {{- $enabled = gt (len (where site.RegularPages "Section" "news")) 0 -}}
+{{- end -}}
+{{- return $enabled -}}

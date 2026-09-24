@@ -3,9 +3,14 @@
     white-space: normal;
 }
 
+.contact-intro,
 #contact-form-container,
 #contact-success-container {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.contact-intro {
+    margin-bottom: 2rem;
 }

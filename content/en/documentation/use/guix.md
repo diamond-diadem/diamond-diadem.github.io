@@ -4,6 +4,9 @@ linkTitle: Guix
 seo:
   description: GNU Guix delivers reproducible HPC software stacks for DIAMOND, providing
     a dependable package manager for scientific tooling distribution.
+weight: 7
+aliases:
+  - /about/guix/
 ---
 
 <div align="justify">

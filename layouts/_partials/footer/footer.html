@@ -1,21 +1,18 @@
-<footer class="footer text-muted">
+<footer class="site-footer">
   <div class="container-{{ site.Params.doks.containerBreakpoint | default "lg" }}">
-    <div class="row">
-      <div class="col-lg-8 text-center text-lg-start">
-        <ul class="list-inline">
-          <li class="list-inline-item">{{ site.Params.footer | safeHTML }}</li>
-          {{ range .Site.Menus.footer -}}
-            <li class="list-inline-item"><a class="text-muted" href="{{ .URL | relURL }}">{{ .Name }}</a></li>
-          {{- end }}
-        </ul>
-      </div>
-      <div class="col-lg-8 text-center text-lg-end">
-        <!-- Logo "France 2030 : Matériaux émergents" -->
-        <a class="footer-logo-link" href="https://pepr-diadem.fr" target="_blank" rel="noopener noreferrer">
-          <img class="footer-logo theme-light-only" src="{{ "images/france-2030/france-2030-couleurs-smaller.png" | relURL }}" width="400" height="200" alt="France 2030 – PEPR DIADEM" loading="lazy">
-          <img class="footer-logo theme-dark-only" src="{{ "images/france-2030/france-2030-blanc-smaller.png" | relURL }}" width="400" height="200" alt="France 2030 – PEPR DIADEM" loading="lazy">
+    <div class="site-footer-main">
+      <div class="site-footer-about">
+        <a class="site-footer-brand" href="{{ relLangURL "" }}">
+          <span class="brand-mark" aria-hidden="true"></span> {{ site.Title }}
         </a>
+        <p class="site-footer-description">{{ i18n "footer_description" }}</p>
+      </div>
+      <div class="site-footer-sitemap">
+        {{ range site.Menus.footer -}}
+          {{ partial "footer/nav-column.html" (dict "column" . "page" $) }}
+        {{ end -}}
       </div>
     </div>
+    {{ partial "footer/supporters.html" . }}
   </div>
 </footer>

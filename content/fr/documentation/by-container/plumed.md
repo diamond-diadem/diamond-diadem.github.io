@@ -13,7 +13,7 @@ description: "Tutoriel sur l'utilisation de l'image Apptainer PLUMED de DIAMOND 
 - Avoir téléchargé l'image **plumed.sif** [disponible ici](/codes/scientific-computing/plumed/)
 - Avoir téléchargé les **fichiers d’entrée** [disponibles ici](/downloads/plumed-tutorial-inputs.tar.gz)
 
-Pour plus d'informations sur les conteneurs Apptainer, veuillez consulter la [page dédiée](/about/apptainer/) ou suivre [ce tutoriel](/documentation/use/apptainer-image/) pour s'approprier les principales commandes d'Apptainer.
+Pour plus d'informations sur les conteneurs Apptainer, veuillez consulter la [page dédiée](/documentation/use/apptainer/) ou suivre [ce tutoriel](/documentation/use/apptainer-image/) pour s'approprier les principales commandes d'Apptainer.
 {{< /callout >}}
 
 

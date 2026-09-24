@@ -1,0 +1,211 @@
+// Site footer: project summary and link columns, then a slim supporters strip.
+// No breakpoints: the summary and the link columns sit side by side only when
+// both reach their comfortable width, so the text never gets squeezed.
+// Without flexbox or grid support the blocks simply stack.
+
+$site-footer-rule: 1px solid rgba($body-color, 0.12);
+$site-footer-rule-dark: 1px solid rgba($white, 0.12);
+
+// Ems follow the text size, so these keep about 50 characters per line
+$site-footer-about-basis: 24em;
+$site-footer-description-measure: 30em;
+$site-footer-sitemap-basis: 34rem;
+
+.site-footer {
+    margin-top: auto;
+    padding: 3.5rem 0 1.5rem;
+    border-top: $site-footer-rule;
+    background-color: rgba($primary, 0.035);
+}
+
+.site-footer-main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem 5rem;
+}
+
+.site-footer-about {
+    flex: 1 1 $site-footer-about-basis;
+}
+
+.site-footer-sitemap {
+    display: grid;
+    flex: 1 1 $site-footer-sitemap-basis;
+    grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+    gap: 2rem 1.5rem;
+}
+
+.site-footer-brand {
+    display: inline-flex;
+    align-items: center;
+    color: $body-color;
+    font-size: 1.375rem;
+    font-weight: 700;
+    letter-spacing: -0.005em;
+    text-decoration: none;
+}
+
+.site-footer-description {
+    max-width: $site-footer-description-measure;
+    margin: 0.75rem 0 0;
+    color: $body-secondary-color;
+    font-family: $font-family-body;
+    line-height: 1.55;
+}
+
+// Headings share the look of the drawer's eyebrow label
+.site-footer-heading {
+    margin: 0 0 0.75rem;
+    color: $body-secondary-color;
+    font-family: $font-family-ui;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+.site-footer-links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+// Vertical padding keeps each link a comfortable touch target
+.site-footer-links a {
+    display: inline-block;
+    padding: 0.3rem 0;
+    color: $body-color;
+    line-height: 1.3;
+    text-decoration: none;
+    text-underline-offset: 0.2em;
+    transition: color 0.2s ease-in-out;
+}
+
+.site-footer-links a:hover,
+.site-footer-links a:focus-visible {
+    color: $link-color;
+    text-decoration: underline;
+}
+
+.site-footer-links a[aria-current="page"] {
+    color: $link-color;
+    font-weight: 700;
+}
+
+.site-footer-brand:focus-visible,
+.site-footer-links a:focus-visible,
+.site-footer-logo-link:focus-visible {
+    border-radius: 0.25rem;
+    outline: 2px solid $link-color;
+    outline-offset: 3px;
+}
+
+// Supporters: a slim strip, secondary to the links above it. Label and logos
+// stay together; the funding statement moves beside them when there is room.
+
+.site-footer-supporters {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem 3rem;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: $site-footer-rule;
+}
+
+.site-footer-backers {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem 1.5rem;
+}
+
+.site-footer-backers .site-footer-heading {
+    margin: 0;
+}
+
+.site-footer-logos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.25rem 2.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.site-footer-logo-link {
+    display: inline-block;
+    transition: transform 0.25s ease-out;
+}
+
+.site-footer-logo-link:hover {
+    transform: translateY(-2px);
+}
+
+.site-footer-logo {
+    width: auto;
+    max-width: 100%;
+    height: 3.5rem;
+}
+
+.site-footer-funding {
+    flex: 0 1 36rem;
+    margin: 0;
+    color: $body-secondary-color;
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+@include media-breakpoint-up(lg) {
+    .site-footer {
+        padding-top: 4.5rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .site-footer-links a,
+    .site-footer-logo-link {
+        transition: none;
+    }
+
+    .site-footer-logo-link:hover {
+        transform: none;
+    }
+}
+
+@include color-mode(dark) {
+    .site-footer {
+        border-top: $site-footer-rule-dark;
+        background-color: rgba($white, 0.025);
+    }
+
+    .site-footer-brand,
+    .site-footer-links a {
+        color: $body-color-dark;
+    }
+
+    .site-footer-description,
+    .site-footer-heading,
+    .site-footer-funding {
+        color: $body-secondary-color-dark;
+    }
+
+    .site-footer-links a:hover,
+    .site-footer-links a:focus-visible,
+    .site-footer-links a[aria-current="page"] {
+        color: $link-color-dark;
+    }
+
+    .site-footer-brand:focus-visible,
+    .site-footer-links a:focus-visible,
+    .site-footer-logo-link:focus-visible {
+        outline-color: $link-color-dark;
+    }
+
+    .site-footer-supporters {
+        border-top: $site-footer-rule-dark;
+    }
+}

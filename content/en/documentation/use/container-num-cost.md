@@ -1,7 +1,7 @@
 ---
 title: "Numerical cost of container use"
 toc: false
-weight: 3
+weight: 5
 description: "Analysis of the numerical performance cost of using Apptainer containers and Guix packages for scientific simulations on the DIAMOND platform."
 ---
 

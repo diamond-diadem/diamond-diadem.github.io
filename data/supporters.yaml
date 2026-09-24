@@ -1,0 +1,12 @@
+# Logos shown in the footer, in this order.
+#   name:     organization name, used as the logo alternative text (required)
+#   url:      website opened when the logo is clicked (optional)
+#   logo:     image path under static/ (required)
+#   logoDark: variant for the dark theme (optional, defaults to logo)
+#   width, height: intrinsic size of the image in pixels, to avoid layout shifts
+- name: France 2030 – PEPR DIADEM
+  url: https://pepr-diadem.fr
+  logo: images/france-2030/france-2030-couleurs-smaller.png
+  logoDark: images/france-2030/france-2030-blanc-smaller.png
+  width: 400
+  height: 200

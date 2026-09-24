@@ -13,7 +13,7 @@ description: "Tutorial on using the DIAMOND PLUMED Apptainer container: pulling 
 - Have downloaded the **plumed.sif** image [available here](/en/codes/scientific-computing/plumed/)
 - Have downloaded the **input files** [available here](/downloads/plumed-tutorial-inputs.tar.gz)
 
-For more information on Apptainer containers, please look at [this page](/en/about/apptainer/) or refer to [this tutorial](/en/documentation/use/apptainer-image/) to have a quick look at Apptainer's main commands.
+For more information on Apptainer containers, please look at [this page](/en/documentation/use/apptainer/) or refer to [this tutorial](/en/documentation/use/apptainer-image/) to have a quick look at Apptainer's main commands.
 
 {{< /callout >}}
 

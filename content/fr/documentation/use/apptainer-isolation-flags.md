@@ -1,7 +1,7 @@
 ---
 title: Options d'isolation avancées pour Apptainer
 linkTitle: Options d'isolation avancées pour Apptainer
-weight: 4
+weight: 6
 description: "Guide avancé sur les options d'isolation des conteneurs Apptainer : contrôle du partage entre hôte et conteneur pour les simulations sur DIAMOND."
 ---
 

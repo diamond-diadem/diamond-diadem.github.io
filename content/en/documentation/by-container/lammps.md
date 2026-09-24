@@ -13,7 +13,7 @@ In preamble, you need to have Apptainer installed on your machine ; see [this li
 
 This tutorial focuses on using the LAMMPS container image available at [this address](/en/codes/scientific-computing/lammps/). By following this link, you will get an Apptainer image (`.sif` file format) allowing you to create containers running LAMMPS.
 
-For more information on Apptainer containers, please look at [this page](/en/about/apptainer/).
+For more information on Apptainer containers, please look at [this page](/en/documentation/use/apptainer/).
 
 To have a quick look at Apptainer's main commands, you may refer to [this tutorial](/en/documentation/use/apptainer-image/).
 

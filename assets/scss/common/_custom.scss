@@ -24,6 +24,7 @@
 @import "diamond/team-list";
 @import "diamond/contact-form";
 @import "diamond/syntax-contrast";
+@import "diamond/site-footer";
 
 @include color-mode(dark) {
     .dropdown-menu {
@@ -135,11 +136,6 @@
     font-weight: 500;
 }
 
-.about-lead {
-    font-weight: 500;
-    margin-bottom: 3%;
-}
-
 .navbar {
     z-index: 1000;
     background-color: rgba(255, 255, 255, 0.95);
@@ -158,16 +154,6 @@
         .diamond-docs-sidebar-container {
             border-right: 1px dashed $white;
         }
-    }
-}
-
-.footer {
-    border-top: 1px solid $black;
-}
-
-@include color-mode(dark) {
-    .footer {
-        border-top: 1px solid $white;
     }
 }
 
@@ -373,11 +359,6 @@ u {
     }
 }
 
-.footer-logo {
-    width: auto;
-    height: 70px;
-}
-
 // Without JS (no data-bs-theme set) the light variant is the one shown
 .theme-dark-only {
     display: none;
@@ -411,10 +392,6 @@ u {
     .nav-logo {
         height: 50px;
     }
-}
-
-.footer {
-    margin-top: auto;
 }
 
 .diamond-docs-sidebar-container {

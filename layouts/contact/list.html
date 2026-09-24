@@ -5,6 +5,11 @@
         <h1 class="text-center">{{ .Title }}</h1>
       </div>
       {{ if site.Params.diamond.enableContactForm }}
+        {{ if partial "main/is-feature-enabled.html" "team" -}}
+          {{ with site.GetPage "/team" -}}
+            <p class="contact-intro">{{ i18n "contact_team_intro" (dict "URL" .RelPermalink) | safeHTML }}</p>
+          {{ end -}}
+        {{ end -}}
         {{ .Content }}
       {{ else }}
         {{ if eq .Lang "fr" }}

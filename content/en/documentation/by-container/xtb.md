@@ -14,7 +14,7 @@ In preamble, you need to have Apptainer installed on your machine; see [this lin
 
 This tutorial focuses on using the xTB container image. The image can be downloaded ready to use from the GRICAD registry with Apptainer and allows directly running the `xtb` executable.
 
-For more information on Apptainer containers, please look at [this page](/en/about/apptainer/).
+For more information on Apptainer containers, please look at [this page](/en/documentation/use/apptainer/).
 
 To have a quick look at Apptainer's main commands, you may refer to [this tutorial](/en/documentation/use/apptainer-image/).
 

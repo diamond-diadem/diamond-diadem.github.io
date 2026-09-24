@@ -13,7 +13,7 @@ description: "Tutoriel sur l'utilisation de l'image Apptainer xTB de DIAMOND : r
  - Avoir installé **Apptainer** [(guide d'installation)](/documentation/install/install-apptainer/)
  - Avoir téléchargé l'image **xtb.sif** [disponible ici](/codes/scientific-computing/xtb/)
 
-Pour plus d'informations sur les conteneurs Apptainer, veuillez consulter la [page dédiée](/about/apptainer/) ou suivre [ce tutoriel](/documentation/use/apptainer-image/) pour s'approprier les principales commandes d'Apptainer.
+Pour plus d'informations sur les conteneurs Apptainer, veuillez consulter la [page dédiée](/documentation/use/apptainer/) ou suivre [ce tutoriel](/documentation/use/apptainer-image/) pour s'approprier les principales commandes d'Apptainer.
 
 {{< /callout >}}
 

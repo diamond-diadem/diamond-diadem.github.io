@@ -13,7 +13,7 @@ description: "Tutoriel sur l'utilisation de l'image Apptainer AMITEX_FFTP de DIA
 - Avoir téléchargé l'image **amitex_fftp** [disponible ici](/codes/scientific-computing/amitex-fftp/)
 - Avoir téléchargé les **fichiers d’entrées** [disponibles ici](/downloads/amitex-tutorial-inputs.tar.gz)
 
-Pour plus d'informations sur les conteneurs Apptainer, veuillez consulter la [page dédiée](/about/apptainer/) ou suivre [ce tutoriel](/documentation/use/apptainer-image/) pour s'approprier les principales commandes d'Apptainer.
+Pour plus d'informations sur les conteneurs Apptainer, veuillez consulter la [page dédiée](/documentation/use/apptainer/) ou suivre [ce tutoriel](/documentation/use/apptainer-image/) pour s'approprier les principales commandes d'Apptainer.
 
 {{< /callout >}}
 

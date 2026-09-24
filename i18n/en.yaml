@@ -44,7 +44,7 @@ home_faq_body: <a href="/en/documentation/faq/">Check out our FAQ</a>.
 home_faq_title: Frequently asked questions
 home_featured_news_title: Featured News
 home_learn_more_body: About <a href="/en/about/diamond/">DIAMOND</a>, <a href="/en/about/diadem/">the
-  PEPR DIADEM</a>, <a href="/en/about/containers/">containers</a> and <a href="/en/about/apptainer/">Apptainer</a>.
+  PEPR DIADEM</a>, <a href="/en/documentation/use/containers/">containers</a> and <a href="/en/documentation/use/apptainer/">Apptainer</a>.
 home_learn_more_title: Learn more
 home_workflows_body: <a href="/en/workflows/">Available workflows</a>.<br/><a
   href="/en/data/">Contact the database team</a>.
@@ -76,3 +76,15 @@ navigation: Navigation
 search_action: Search
 section_menu_open: Open the section menu
 section_menu_close: Close the section menu
+
+### Footer ###
+footer_description: DIAMOND is the digital platform of the PEPR DIADEM. It brings
+  together simulation codes, automated workflows and materials databases to speed up
+  the discovery of new materials.
+footer_supporters: With the support of
+opens_new_tab: (opens in a new tab)
+
+### Contact page ###
+contact_team_intro: Prefer to reach someone directly? Our <a href="{{ .URL }}">team
+  page</a> lists every member of the project with their role and contact details,
+  so you can write straight to the right person.

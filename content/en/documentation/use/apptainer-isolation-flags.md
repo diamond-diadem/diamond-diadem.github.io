@@ -1,7 +1,7 @@
 ---
 title: Advanced isolation options for Apptainer
 linkTitle: Advanced isolation options for Apptainer
-weight: 4
+weight: 6
 description: "Advanced guide to Apptainer container isolation options: controlling host-container sharing for scientific simulations on the DIAMOND platform."
 ---
 

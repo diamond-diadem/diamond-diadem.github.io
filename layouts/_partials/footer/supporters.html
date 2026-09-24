@@ -1,0 +1,28 @@
+{{/*
+  Logos of the organizations supporting the project (data/supporters.yaml),
+  followed by the funding statement.
+*/}}
+{{- with hugo.Data.supporters }}
+<section class="site-footer-supporters" aria-labelledby="site-footer-supporters-heading">
+  <div class="site-footer-backers">
+    <h2 class="site-footer-heading" id="site-footer-supporters-heading">{{ i18n "footer_supporters" }}</h2>
+    <ul class="site-footer-logos">
+      {{- range . }}
+        <li>
+          {{- if .url }}
+            <a class="site-footer-logo-link" href="{{ .url }}" target="_blank" rel="noopener noreferrer">
+              {{- partial "footer/supporter-logo.html" . -}}
+              <span class="visually-hidden">{{ i18n "opens_new_tab" }}</span>
+            </a>
+          {{- else }}
+            {{- partial "footer/supporter-logo.html" . -}}
+          {{- end }}
+        </li>
+      {{- end }}
+    </ul>
+  </div>
+  {{ with site.Params.footer -}}
+    <p class="site-footer-funding">{{ . | safeHTML }}</p>
+  {{- end }}
+</section>
+{{- end }}
