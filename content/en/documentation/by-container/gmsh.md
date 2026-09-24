@@ -5,8 +5,6 @@ weight: 9
 description: "Tutorial on using the DIAMOND Gmsh Apptainer container: pulling the image and usage example on a simple geometry with both CLI and GUI."
 ---
 
-<div align="justify">
-
 {{< callout context="note" title="Prerequisites" >}}
 
 - Apptainer (see either [our installation guide]({{% ref "/documentation/install/install-apptainer" %}}) or [the official documentation](https://apptainer.org/docs/user/latest/quick_start.html#installation))
@@ -16,7 +14,6 @@ description: "Tutorial on using the DIAMOND Gmsh Apptainer container: pulling th
 {{< /callout >}}
 
 For more information on Apptainer containers and their use, we provide [a description of Apptainer]({{% ref "/documentation/use/apptainer" %}}), a crash course on [how to use Apptainer]({{% ref "/documentation/use/apptainer-image" %}}), and of course there's also the [official Apptainer's documentation](https://apptainer.org/docs/user/latest/).
-
 
 ## Input files
 
@@ -68,7 +65,6 @@ apptainer exec gmsh.sif gmsh t1.msh
 
 <img alt="2D mesh on a rectangle surface" src="/images/tutorials/gmsh-tutorial/simple_mesh.png" />
 
-
 ### Using Gmsh graphical user interface to generate and visualize a mesh
 
 Gmsh software also features a graphical user interface (GUI) that can be alternatively used to run the input script. First, the input script needs to be imported by Gmsh. The following command opens the graphical interface:
@@ -107,4 +103,3 @@ The second tool is the *Partition* tool. It uses an external library called METI
 
 The official documentation of Gmsh features many more tutorials to introduces the software tools and features. The interested reader may find this list [here](https://gmsh.info/doc/texinfo/gmsh.html#Gmsh-tutorial). The commands used in the present tutorial to run Gmsh from the container image can be easily extrapolated to run those additional examples.  
 
-</div>

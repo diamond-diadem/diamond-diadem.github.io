@@ -5,8 +5,6 @@ weight: 8
 description: "Tutorial on using the DIAMOND PLUMED Apptainer container: pulling the image, running calculations, and analyzing molecular dynamics trajectories."
 ---
 
-<div align="justify">
-
 {{< callout context="note" title="Prerequisites" >}}
 
 - Apptainer (see either [our installation guide]({{% ref "/documentation/install/install-apptainer" %}}) or [the official documentation](https://apptainer.org/docs/user/latest/quick_start.html#installation))
@@ -16,7 +14,6 @@ description: "Tutorial on using the DIAMOND PLUMED Apptainer container: pulling 
 {{< /callout >}}
 
 For more information on Apptainer containers and their use, we provide [a description of Apptainer]({{% ref "/documentation/use/apptainer" %}}), a crash course on [how to use Apptainer]({{% ref "/documentation/use/apptainer-image" %}}), and of course there's also the [official Apptainer's documentation](https://apptainer.org/docs/user/latest/).
-
 
 ## Input files
 
@@ -91,4 +88,3 @@ Note that the input script is automatically found by PLUMED as long as it is nam
 
 The official PLUMED documentation features many more tutorials listed on this [page](https://www.plumed.org/doc-v2.9/user-doc/html/tutorials.html). The commands presented in the present tutorial to run PLUMED from the PLUMED container image can be easily extrapolated to run those examples.
 
-</div>

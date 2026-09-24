@@ -5,8 +5,6 @@ weight: 3
 description: "Tutoriel sur l'utilisation de l'image Apptainer Quantum ESPRESSO de DIAMOND : récupération du conteneur et exécution de calculs DFT."
 ---
 
-<div align="justify">
-
 {{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
 
 En préalable de ces explications, il est nécessaire d'avoir installé Apptainer sur votre machine ; voir [ce lien](/documentation/install/install-apptainer/) pour plus de détails.
@@ -22,7 +20,6 @@ Pour rapidement s'approprier les principales commandes d'Apptainer, vous pouvez 
 <!-- <div class="youtube-video" data-video-id="8oKKGG0hy6A?si=1duVepl_lWvG24fC" language="fr">
     <div class="youtube-placeholder fr">
         <button class="popup-button">Consentement aux cookies</button>
-    </div>
 </div> -->
 
 {{< video-with-consent id="8oKKGG0hy6A?si=1duVepl_lWvG24fC" >}}

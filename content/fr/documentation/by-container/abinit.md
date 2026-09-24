@@ -5,8 +5,6 @@ weight: 4
 description: "Tutoriel sur l'utilisation de l'image Apptainer Abinit de DIAMOND : récupération du conteneur, exécution et cas d'usage pour les calculs DFT."
 ---
 
-<div align="justify">
-
 {{< callout context="note" title="Prérequis" >}}
 
 - Apptainer (voir soit [notre guide d'installation]({{% ref "/documentation/install/install-apptainer" %}}), soit [la documentation officiel](https://apptainer.org/docs/user/latest/quick_start.html#installation))
@@ -16,7 +14,6 @@ description: "Tutoriel sur l'utilisation de l'image Apptainer Abinit de DIAMOND 
 {{< /callout >}}
 
 Pour plus d'informations sur les conteneurs Apptainer et leur utilisation, nous mettons à votre disposition [une description d'Apptainer]({{% ref "/documentation/use/apptainer" %}}), un guide rapide sur [comment utiliser Apptainer]( {{% ref "/documentation/use/apptainer-image" %}}), sans oublier bien sûr la [documentation officielle d'Apptainer](https://apptainer.org/docs/user/latest/).
-
 
 ## Fichiers d'entrée
 
@@ -65,4 +62,3 @@ apptainer exec abinit.sif mpirun -np <N> abinit input.abi
 
 La commande ci-dessus utilise le mode parallèle « embarqué » d'Apptainer. Plus d'informations sur l'utilisation des conteneurs Apptainer en parallèle, y compris sur les clusters, sont disponibles sur [cette page](/documentation/use/apptainer-hpc).
 
-</div>

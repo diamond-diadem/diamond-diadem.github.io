@@ -5,8 +5,6 @@ weight: 5
 description: "Analysis of the numerical performance cost of using Apptainer containers and Guix packages for scientific simulations on the DIAMOND platform."
 ---
 
-<div align="justify">
-
 A user may wonder whether switching to the use of containers via Apptainer or packages via Guix will change the computational performance.
 
 To quantify a possible performance drop, we need to be able to replicate a simulation using different software environments in order to compare their execution times. The tests performed will cover three software environments:
@@ -31,6 +29,5 @@ In addition, to account for possible performance variations due to CPU load, we 
 
 <div class="text-center mt-4 mb-4">
    <img alt="bench lammps dahu" class="bench-lammps-dahu">
-</div>
 
 </div>

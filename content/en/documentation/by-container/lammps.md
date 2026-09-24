@@ -5,8 +5,6 @@ weight: 2
 description: "Tutorial on using the DIAMOND LAMMPS Apptainer container: pulling the image, running simulations, and usage examples for molecular dynamics."
 ---
 
-<div align="justify">
-
 {{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
 
 In preamble, you need to have Apptainer installed on your machine ; see [this link]({{% ref "/documentation/install/install-apptainer/" %}}) for more details.
@@ -22,7 +20,6 @@ To have a quick look at Apptainer's main commands, you may refer to [this tutori
 <!-- <div class="youtube-video" data-video-id="MheJO_FndWw?si=ASHe6wYhiFqR1te9" language="en">
     <div class="youtube-placeholder en">
         <button class="popup-button">Consent to cookies</button>
-    </div>
 </div> -->
 
 {{< video-with-consent id="MheJO_FndWw?si=ASHe6wYhiFqR1te9" >}}

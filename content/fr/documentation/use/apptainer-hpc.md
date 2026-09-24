@@ -5,8 +5,6 @@ weight: 4
 description: "Guide d'utilisation des conteneurs Apptainer de DIAMOND sur les clusters de calcul haute performance : modes d'accès interactif et batch."
 ---
 
-<div align="justify">
-
 Une partie importante des codes fournis par la plateforme DIAMOND est conçue pour fonctionner sur les plateformes de calcul haute performance (**HPC — High Performance Computing**). Il existe plusieurs façons d’utiliser les clusters HPC, et nous distinguerons deux cas :
 
 - l’exécution de codes mono-processus ou parallélisés en mémoire partagée ;
@@ -37,7 +35,6 @@ Il existe deux modes d’utilisation de MPI avec nos conteneurs :
 
   => peut présenter des problèmes de compatibilité
 
-
 ### Mode embarqué {#embedded_mode}
 
 Ce mode repose entièrement sur l'installation OpenMPI embarquée pour l’exécution. Son avantage est qu’il évite les problèmes de compatibilité avec l’installation MPI de la machine hôte, mais il est généralement limité à **une seule machine physique**, c’est-à-dire votre machine locale ou un seul nœud d'un cluster. L’autre inconvénient est que nous avons constaté que l’utilisation CPU peut plafonner à environ 85 à 90 % dans certains cas.
@@ -48,14 +45,12 @@ Le mode embarqué consiste donc à utiliser la commande **`mpirun` à l’intér
 apptainer exec <image>.sif mpirun -np <nb_procs> <command>
 ```
 
-
 ### Mode hybride {#hybrid_mode}
 
 Ce mode consiste à utiliser **`mpirun`** (ou une commande de lancement similaire) **à l’extérieur du conteneur**, directement devant la commande `apptainer`. Cela fonctionne nativement avec Apptainer, qui a été conçu pour ça, contrairement à Docker qui nécessiterait la configuration de nombreuses options que nous ne détaillerons pas ici. En mode hybride, le lanceur MPI est fourni par le système hôte, tandis que l’application MPI s’exécute dans l’image Apptainer. Les bibliothèques MPI présentes dans le conteneur doivent rester compatibles avec l’implémentation MPI du système hôte afin de permettre la communication avec les interconnexions HPC. La différence entre ce mode hybride et le mode embarqué est illustrée dans le schéma ci-dessous :
 
 <div class="text-center mt-4 mb-4">
         <img alt="OpenMPI Hybride" class="hybrid-ompi">
-</div>
 
 Avec cette approche hybride, nous recommandons d’utiliser, lorsque cela est possible, la **même version d’OpenMPI** sur le cluster que dans le conteneur. Il existe également une compatibilité entre les différentes versions mineures d’OpenMPI, mais l’utilisation de versions différentes peut entraîner des [baisses de performance](https://github.com/ckhroulev/apptainer-with-ompi/tree/main). Dans le PEPR DIADEM, les images de conteneurs sont construites sans connaissance préalable des machines sur lesquelles elles seront exécutées. Nous utilisons donc une configuration OpenMPI portable fournie par Guix, conçue pour [fonctionner sur différents environnements matériels](https://hpc.guix.info/blog/2019/12/optimized-and-portable-open-mpi-packaging/).
 
@@ -64,7 +59,6 @@ Pour vérifier la version d’OpenMPI incluse dans une image donnée et obtenir 
 ```bash
 apptainer exec <image>.sif ompi_info
 ```
-
 
 #### Mode hybride avec l’ordonnanceur SLURM (recommandé)
 
@@ -89,14 +83,12 @@ Le calcul peut ensuite être soumis avec :
 sbatch job.sh
 ```
 
-
 #### Mode hybride sans ordonnanceur
 
 ```bash
 # module load openmpi-x.x.x ou équivalent peut être nécessaire pour accéder à la bonne commande mpirun
 mpirun -np <nb_procs> apptainer exec <image>.sif <command>
 ```
-
 
 #### Optimisations possibles du mode hybride
 
@@ -121,7 +113,6 @@ mpirun -np <nb_procs> apptainer exec instance://instance_name /bin/bash -c "<com
 mpirun -npernode 1 apptainer instance stop instance_name
 ```
 
-
 ## Documentation spécifique aux clusters
 
 Documentation officielle sur l'utilisation des conteneurs :
@@ -129,7 +120,6 @@ Documentation officielle sur l'utilisation des conteneurs :
 - [Gricad](https://gricad-doc.univ-grenoble-alpes.fr/hpc/softenv/container/)
 
 - [TGCC](https://www-hpc.cea.fr/tgcc-public/en/html/toc/fulldoc/Virtualization.html?highlight=singularity)
-
 
 **Spécificités TGCC-DIAMOND**
 

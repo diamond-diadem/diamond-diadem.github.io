@@ -5,8 +5,6 @@ weight: 9
 description: "Tutoriel sur l'utilisation de l'image Apptainer Gmsh de DIAMOND : récupération du conteneur et cas d'usage sur une géométrie simple avec CLI et GUI"
 ---
 
-<div align="justify">
-
 {{< callout context="note" title="Prérequis" >}}
 
 - Apptainer (voir soit [notre guide d'installation]({{% ref "/documentation/install/install-apptainer" %}}), soit [la documentation officiel](https://apptainer.org/docs/user/latest/quick_start.html#installation))
@@ -16,7 +14,6 @@ description: "Tutoriel sur l'utilisation de l'image Apptainer Gmsh de DIAMOND : 
 {{< /callout >}}
 
 Pour plus d'informations sur les conteneurs Apptainer et leur utilisation, nous mettons à votre disposition [une description d'Apptainer]({{% ref "/documentation/use/apptainer" %}}), un guide rapide sur [comment utiliser Apptainer]( {{% ref "/documentation/use/apptainer-image" %}}), sans oublier bien sûr la [documentation officielle d'Apptainer](https://apptainer.org/docs/user/latest/).
-
 
 ## Fichiers d'entrée
 
@@ -106,4 +103,3 @@ Le second outil est un outil de partitionnement. Il se base sur la bibliothèque
 
 La documentation officielle de Gmsh propose un grand nombre de tutoriels qui introduisent les différents outils et fonctionnalités du programme, disponibles [ici](https://gmsh.info/doc/texinfo/gmsh.html#Gmsh-tutorial). Les commandes présentées dans le présent tutoriel peuvent être facilement extrapolées pour faire tourner ces exemples supplémentaires.
 
-</div>

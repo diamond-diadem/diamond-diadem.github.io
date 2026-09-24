@@ -27,11 +27,7 @@ docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-s
 {{< /tab >}}
 {{< /tabs >}}
 
-<div align="justify">
-
 Zeo++ est un outil informatique conçu pour l’analyse et la caractérisation des matériaux poreux. Il est particulièrement utilisé en science des matériaux, où il fournit des informations sur les propriétés structurelles de matériaux tels que les zéolithes, les cadres organométalliques (MOFs) et d’autres structures nanoporeuses. Zeo++ calcule diverses propriétés géométriques, y compris les surfaces accessibles, les distributions de tailles de pores et le volume libre au sein du matériau. Le logiciel utilise des algorithmes basés sur la décomposition de Voronoï pour identifier les espaces vides et leur connectivité. Ses résultats aident les chercheurs à optimiser les matériaux pour des applications telles que le stockage de gaz, la séparation et la catalyse. Zeo++ prend en charge les formats de fichiers couramment utilisés dans les simulations moléculaires, tels que CIF et XYZ, garantissant une compatibilité avec d’autres outils de modélisation.
-
-</div>
 
 <h3 class="mb-1">Tutoriel</h3>
 

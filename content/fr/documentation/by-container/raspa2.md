@@ -5,8 +5,6 @@ weight: 10
 description: "Tutoriel sur l'image Apptainer RASPA2 de DIAMOND : récupération du conteneur et exemple de calcul de dynamique moléculaire avec Monte Carlo."
 ---
 
-<div align="justify">
-
 {{< callout context="note" title="Prérequis" >}}
 
 - Apptainer (voir soit [notre guide d'installation]({{% ref "/documentation/install/install-apptainer" %}}), soit [la documentation officiel](https://apptainer.org/docs/user/latest/quick_start.html#installation))
@@ -16,7 +14,6 @@ description: "Tutoriel sur l'image Apptainer RASPA2 de DIAMOND : récupération 
 {{< /callout >}}
 
 Pour plus d'informations sur les conteneurs Apptainer et leur utilisation, nous mettons à votre disposition [une description d'Apptainer]({{% ref "/documentation/use/apptainer" %}}), un guide rapide sur [comment utiliser Apptainer]( {{% ref "/documentation/use/apptainer-image" %}}), sans oublier bien sûr la [documentation officielle d'Apptainer](https://apptainer.org/docs/user/latest/).
-
 
 ## Fichiers d'entrée
 
@@ -168,4 +165,3 @@ Le [manuel](https://iraspa.org/raspa/) détaille là aussi ce calcul :
 
 Le [manuel](https://iraspa.org/raspa/) officiel présente un grand nombre d'exemples qui détaillent les fonctionnalités du programme, rangés en exemples basiques, intermédiaires, avancés et annexes selon leur complexité. Ces exemples peuvent être facilement exécutés en adaptant et extrapolant les commandes présentées dans le présent tutoriel si besoin.
 
-</div>

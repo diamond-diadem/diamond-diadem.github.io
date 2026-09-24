@@ -5,8 +5,6 @@ weight: 13
 description: "Tutoriel sur l'utilisation de l'image Apptainer NDM de DIAMOND : récupération du conteneur, exécution et cas d'usage pour la dynamique moléculaire."
 ---
 
-<div align="justify">
-
 {{< callout context="note" title="Prérequis" >}}
 
 - Apptainer (voir soit [notre guide d'installation]({{% ref "/documentation/install/install-apptainer" %}}), soit [la documentation officiel](https://apptainer.org/docs/user/latest/quick_start.html#installation))
@@ -23,7 +21,6 @@ Créez un dossier contenant l'image **ndm.sif** et l'archive des **fichiers d'en
 tar -xzf ndm-tutorial-inputs.tar.gz # Extrait le contenu de l'archive.
 ```
 
-
 ## Commande en une ligne
 
 Pour lancer un calcul avec **NDM** sur N processeurs, lancer la commande suivante dans un dossier contenant les fichiers d'entrée :
@@ -32,16 +29,12 @@ Pour lancer un calcul avec **NDM** sur N processeurs, lancer la commande suivant
 apptainer exec ndm.sif mpirun -np <N> rundm90_ndm_mpi
 ```
 
-
-
 ## Introduction
 
 **NDM** est un code de calcul distribué en Fortran pour la dynamique moléculaire en potentiels empiriques construit autour du standard MPI permettant de distribuer la charge de calcul sur différents processus. Il existe deux façons de lancer le code conteneurisé en parallèle :
 
 - **MPI embarqué** dans le conteneur => fonctionnement garanti, mais limité à une seule machine (un seul nœud)
 - **MPI hybride** avec celui de la machine hôte => fonctionne sur plusieurs nœuds, mais il peut exister des incompatibilités.
-
-
 
 ## Simulation en local (MPI embarqué)
 
@@ -76,7 +69,6 @@ Il est ensuite possible de lancer le calcul avec la commande :
 ```bash
 sbatch job.sh
 ```
-
 
 ### Lancement sans scheduler
 

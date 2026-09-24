@@ -9,8 +9,6 @@ aliases:
   - /about/guix/
 ---
 
-<div align="justify">
-
 ## About Packages
 
 A type of archive containing a computer program (in source or executable form) along with metadata. They are essential for easily installing applications on a machine through a package manager.
@@ -38,4 +36,3 @@ In the context of the DIAMOND project, which imposes stringent requirements rela
 
 In summary, using packages via the GNU Guix manager facilitates the distribution of replicable codes and tools suitable for high-performance computing.
 
-</div>

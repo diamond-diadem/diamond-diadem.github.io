@@ -5,8 +5,6 @@ weight: 13
 description: "Tutorial on using the DIAMOND NDM Apptainer container: pulling the image, running simulations, and usage examples for molecular dynamics."
 ---
 
-<div align="justify">
-
 {{< callout context="note" title="Prerequisites" >}}
 
 - Apptainer (see either [our installation guide]({{% ref "/documentation/install/install-apptainer" %}}) or [the official documentation](https://apptainer.org/docs/user/latest/quick_start.html#installation))
@@ -51,7 +49,6 @@ Note that the command first launches **apptainer**, which then executes `mpirun 
 ### Launch with the SLURM scheduler (recommended)
 
 Example of a minimal launch script **job.sh**:
-
 
 ```bash {frame="none"}
 #!/bin/bash

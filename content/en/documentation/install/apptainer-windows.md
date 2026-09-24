@@ -4,8 +4,6 @@ weight: 2
 description: "How to install and use Apptainer on Windows via WSL2 to access the scientific containers and codes available on the DIAMOND platform."
 ---
 
-<div align="justify">
-
 Designed primarily for high-performance computing, Apptainer — the containerization solution chosen for the DIAMOND project — natively works only on Linux. If it cannot be used on a Linux distribution, it is necessary to use a virtual machine that emulates a Linux system as an intermediary between Apptainer and the kernel of any other operating system (like Windows).
 
 ## How to Install WSL2 on Windows
@@ -61,7 +59,6 @@ To account for potential performance fluctuations due to CPU load, the calculati
 
 <div class="text-center mt-4 mb-4">
    <img alt="WSL2 overhead" class="windows-overhead">
-</div>
 
 Given these average times and standard deviations, the additional costs associated with WSL2 appear to be significant. This can be verified by checking the compatibility of these samples, assuming identical mean times. We obtain (via the `ttest_rel` function in the Python `scipy.stats` module) a very small _p_-value ($2.5 \times 10^{-6}$), which strongly suggests that the measured times follow different distributions and that virtualisation with WSL2 therefore leads to a significant increase in execution time compared to a reference Linux distribution.
 

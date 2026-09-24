@@ -5,8 +5,6 @@ weight: 6
 description: "Advanced guide to Apptainer container isolation options: controlling host-container sharing for scientific simulations on the DIAMOND platform."
 ---
 
-<div align="justify">
-
 This page is dedicated to discussions about the isolation of Apptainer containers. This topic is briefly mentioned in most tutorials on the platform; this page delves deeper into the details of isolation with the goal of providing finer control over the sharing between the host and the container.
 
 ## Default behavior of Apptainer

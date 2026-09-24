@@ -4,8 +4,6 @@ weight: 1
 description: "Guide d'installation du logiciel de conteneurisation Apptainer sur Linux pour accéder aux images de codes scientifiques de la plateforme DIAMOND."
 ---
 
-<div align="justify">
-
 {{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
 
 Ce tutoriel présente succinctement le processus d'installation du logiciel de conteneurisation [Apptainer](https://apptainer.org/). Il est d'ailleurs largement basé sur les [instructions d'installations officielles](https://apptainer.org/docs/admin/1.2/installation.html#install-from-pre-built-packages), et nous vous invitons à consulter ces ressources pour plus de détails.
@@ -148,4 +146,3 @@ Pour les utilisateurs et utilisatrices Windows, une page de documentation dédi�
 
 Pour les utilisateurs Mac, il est recommandé d'utiliser Lima via Homebrew sur la [documentation d'Apptainer](https://apptainer.org/docs/admin/main/installation.html#mac).
 
-</div>

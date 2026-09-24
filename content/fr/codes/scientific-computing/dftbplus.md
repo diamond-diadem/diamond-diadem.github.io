@@ -26,11 +26,7 @@ docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-s
 {{< /tab >}}
 {{< /tabs >}}
 
-<div align="justify">
-
 **DFTB+ (Density Functional Tight Binding Plus)** est un logiciel open-source conçu pour effectuer des calculs dans le domaine de la chimie computationnelle et de la physique des matériaux. Basé sur la méthode Tight Binding dérivée de la théorie de la fonctionnelle de la densité (DFT), DFTB+ offre un compromis efficace entre précision et performance pour l'étude de systèmes électroniques. Il est utilisé pour modéliser les propriétés électroniques, géométriques et dynamiques des molécules et matériaux, y compris les grandes structures atomiques. Le logiciel supporte des calculs dans différents domaines tels que l'énergie, les forces, les vibrations, et les transitions électroniques. DFTB+ est hautement extensible et compatible avec une large gamme de types d'interactions grâce à ses modules configurables et sa documentation complète.
-
-</div>
 
 <h3 class="mb-1">Tutoriel</h3>
 

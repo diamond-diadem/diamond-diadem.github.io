@@ -27,8 +27,6 @@ docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-s
 {{< /tab >}}
 {{< /tabs >}}
 
-<div align="justify">
-
 VMD (Visual Molecular Dynamics) is a comprehensive molecular visualization program that facilitates the display, animation, and analysis of large biomolecular systems through advanced 3D graphics and integrated scripting capabilities. It was developed by the Theoretical and Computational Biophysics Group at the University of Illinois at Urbana-Champaign to support the needs of researchers working in the fields of molecular dynamics and computational biology.
 
 VMD is designed to handle a wide range of molecular dynamics simulation software and file formats, making it a versatile tool for visualizing molecular structures, simulation trajectories, and other types of molecular data. The program supports a variety of input formats including PDB, DCD, AMBER, and many more, ensuring compatibility with most common molecular dynamics packages.
@@ -40,8 +38,6 @@ Beyond visualization, VMD provides robust tools for trajectory analysis, allowin
 VMD's functionality can be extended through its support for Tcl, Python, and Perl scripting languages. This extensibility allows users to develop custom analysis tools, automate repetitive tasks, and integrate VMD with other software packages to create complex workflows tailored to specific research needs. The program’s scripting capabilities are complemented by a comprehensive plugin architecture, which enables the addition of new features and tools developed by the community.
 
 Overall, VMD is a powerful and flexible tool for molecular visualization and analysis, widely used by researchers in computational biology, chemistry, and related fields. Its combination of high-quality visualization, extensive analysis tools, and scripting extensibility makes it an essential resource for the study and understanding of biomolecular systems.
-
-</div>
 
 <h3 class="mb-1">Tutorial</h3>
 

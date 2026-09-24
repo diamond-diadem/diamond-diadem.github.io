@@ -5,8 +5,6 @@ weight: 6
 description: "Tutorial on using the DIAMOND OpenCalphad Apptainer container: pulling the image, running calculations, and usage examples for phase diagrams computation."
 ---
 
-<div align="justify">
-
 {{< callout context="note" title="Prerequisites" >}}
 
 - Apptainer (see either [our installation guide]({{% ref "/documentation/install/install-apptainer" %}}) or [the official documentation](https://apptainer.org/docs/user/latest/quick_start.html#installation))
@@ -16,7 +14,6 @@ description: "Tutorial on using the DIAMOND OpenCalphad Apptainer container: pul
 {{< /callout >}}
 
 For more information on Apptainer containers and their use, we provide [a description of Apptainer]({{% ref "/documentation/use/apptainer" %}}), a crash course on [how to use Apptainer]({{% ref "/documentation/use/apptainer-image" %}}), and of course there's also the [official Apptainer's documentation](https://apptainer.org/docs/user/latest/).
-
 
 ## Input files
 
@@ -81,4 +78,3 @@ In most of the example scripts, the `@&` keyword is used at multiple places to p
 
 Similarly, the `set inter` command at the end of an OpenCalphad script is responsible for triggering the interactive shell at the end of the script execution. Deleting this command makes the executable exit with an error at the end of a script.
 
-</div>

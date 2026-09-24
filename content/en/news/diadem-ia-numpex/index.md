@@ -42,8 +42,6 @@ aliases:
 
 </div>
 
-<div align="justify">
-
 **Call for proposal** : The Inter-PEPR Day, jointly organized by
 PEPR DIADEM, PEPR IA and PEPR NumPex aims to offer an
 overview of some promising research directions at the
@@ -52,8 +50,6 @@ Computing
 
 The day is devoted to several talks given by renowned researchers and specialists in the field. Young researchers are also invited to present their work via posters or short talks and should submit an abstract to <a href="mailto:inter-pepr-days@services.cnrs.fr">inter-pepr-days@services.cnrs.fr</a> before October 15
 
-</div>
-
 <div align="center">
 
 #### Program
@@ -61,8 +57,6 @@ The day is devoted to several talks given by renowned researchers and specialist
 </div>
 
 <br/>
-
-<div align="justify">
 
 - **8h30-9h00:** Welcoming & Coffee
 
@@ -84,8 +78,6 @@ The day is devoted to several talks given by renowned researchers and specialist
 - **16h00-16h40:** Emmanuel FRANCK (UNISTRA) _Hybrid ML approaches in Material Science : the contribution of PINNS_
 - **16h40-17h20:** Martin UHRIN (University of Grenoble Alpes) _When GenAI meets Material Science_
 - **17h20- :** Discussion and Conclusion
-
-</div>
 
 <br/>
 

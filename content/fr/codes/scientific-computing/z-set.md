@@ -18,11 +18,7 @@ description: "Z-set est une suite logicielle d'éléments finis dédiée à la m
 apptainer pull z-set.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/z-set.sif:latest
 ```
 
-<div align="justify">
-
 Z-Set est une suite logicielle complète conçue pour l'analyse computationnelle avancée dans le domaine de la science et de l'ingénierie des matériaux. Elle se spécialise dans la modélisation et la simulation du comportement des matériaux sous diverses conditions. La suite comprend une gamme de modules qui facilitent la prédiction et l'analyse des propriétés mécaniques, thermiques et thermomécaniques des matériaux.
-
-</div>
 
 Les principales fonctionnalités de Z-Set incluent :
 
@@ -31,11 +27,7 @@ Les principales fonctionnalités de Z-Set incluent :
 - **Capacités Multiphysiques** : Intègre des simulations thermiques et mécaniques pour offrir une vue d'ensemble du comportement des matériaux.
 - **Outils d'Optimisation** : Offre des outils pour l'optimisation des propriétés des matériaux et des processus de conception.
 
-<div align="justify">
-
 Z-Set est largement utilisé dans la recherche académique et les applications industrielles pour sa robustesse et sa précision dans la prédiction des performances des matériaux sous diverses conditions environnementales et de charge.
-
-</div>
 
 <h3 class="mb-1">Tutoriel</h3>
 

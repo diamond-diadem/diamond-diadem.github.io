@@ -4,8 +4,6 @@ weight: 1
 description: "Installation guide for the Apptainer containerization software on Linux to access scientific code images available on the DIAMOND platform."
 ---
 
-<div align="justify">
-
 {{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
 
 This tutorial summarizes how to install the container management software [Apptainer](https://apptainer.org/). It is largely based on [official installation instructions](https://apptainer.org/docs/admin/1.2/installation.html#install-from-pre-built-packages), and one should read these more exhaustive resources for more details.
@@ -148,4 +146,3 @@ For Windows user, a dedicated documentation page can be found [here]({{% ref "/d
 
 For Mac users, it is recommended to use Lima via Homebrew on the [Apptainer documentation](https://apptainer.org/docs/admin/main/installation.html#mac).
 
-</div>

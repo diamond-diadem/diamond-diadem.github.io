@@ -5,8 +5,6 @@ weight: 8
 description: "Tutorial on using the DIAMOND Zeo++ Apptainer container: pulling the image and usage examples for pore diameters computation."
 ---
 
-<div align="justify">
-
 {{< callout context="note" title="Prerequisites" >}}
 
 - Apptainer (see either [our installation guide]({{% ref "/documentation/install/install-apptainer" %}}) or [the official documentation](https://apptainer.org/docs/user/latest/quick_start.html#installation))
@@ -16,7 +14,6 @@ description: "Tutorial on using the DIAMOND Zeo++ Apptainer container: pulling t
 {{< /callout >}}
 
 For more information on Apptainer containers and their use, we provide [a description of Apptainer]({{% ref "/documentation/use/apptainer" %}}), a crash course on [how to use Apptainer]({{% ref "/documentation/use/apptainer-image" %}}), and of course there's also the [official Apptainer's documentation](https://apptainer.org/docs/user/latest/).
-
 
 ## Input files
 
@@ -44,4 +41,3 @@ The results are automatically written in a `EDI.res` output file. It should cont
 
 The [documentation](https://www.zeoplusplus.org/examples.html) this tutorial has been extracted from contains many more examples exhibiting the features of the software. The command presented above can be easily adapted to run these examples.
 
-</div>

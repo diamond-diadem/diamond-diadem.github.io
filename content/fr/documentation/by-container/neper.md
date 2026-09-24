@@ -5,8 +5,6 @@ weight: 7
 description: "Tutoriel sur le conteneur Apptainer Neper de DIAMOND : récupération de l'image et exemple de génération et de maillage d'une tessellation simple."
 ---
 
-<div align="justify">
-
 {{< callout context="note" title="Prérequis" >}}
 
 - Apptainer (voir soit [notre guide d'installation]({{% ref "/documentation/install/install-apptainer" %}}), soit [la documentation officiel](https://apptainer.org/docs/user/latest/quick_start.html#installation))
@@ -67,4 +65,3 @@ apptainer exec neper.sif neper -V n100-id1.tess,n100-id1.msh -print img2
 
 Le reste des commandes exposées dans le tutoriel peut être extrapolé de la même manière à partir de ces exemples.
 
-</div>

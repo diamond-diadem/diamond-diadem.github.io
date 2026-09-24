@@ -4,8 +4,6 @@ weight: 3
 description: "Installation guide for the Guix package manager on Linux to access scientific software packages available on the DIAMOND platform."
 ---
 
-<div align="justify">
-
 {{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
 
 This tutorial briefly describes the installation process for the [Guix](https://guix.gnu.org/) package management tool. It is largely based on the [official installation instructions](https://guix.gnu.org/manual/fr/html_node/Installation-binaire.html), and we invite you to consult those resources for more details.
@@ -49,4 +47,3 @@ For Windows users, you can use a [similar solution]({{% ref "/documentation/inst
 
 For MacOS users, we recommend using a virtual machine or Docker. You can check this [link](https://pagure.io/projects/MSG/%2A).
 
-</div>

@@ -6,8 +6,6 @@ weight: 10
 description: "Foire Aux Questions de la plateforme DIAMOND : ressources informatiques, accès aux codes, utilisation des conteneurs Apptainer et des paquets Guix."
 ---
 
-<div align="justify">
-
 ### Est-ce que DIAMOND fournit des ressources informatiques ou des heures de calcul ?
 
 En bref, non. Le projet DIAMOND a pour objectif d’accompagner les partenaires du PEPR DIADEM en mettant à disposition des codes conteneurisés, des chaînes de calcul scientifiques (notamment via AiiDA) ainsi qu’une expertise en intelligence artificielle. En revanche, il ne fournit pas d’accès à des ressources de calcul.
@@ -46,4 +44,3 @@ apptainer run --contain --bind $HOME --cleanenv --env DISPLAY=$DISPLAY ovito.sif
 
 > Il est déconseillé de lancer des processus lourds sur les frontales des clusters. Sur certains clusters, il existe des services tuant tous les processus qui s'exécutent plus de **X** minutes. C'est le cas notamment des frontales `dahu` et `bigfoot`.
 
-</div>

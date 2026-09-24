@@ -5,8 +5,6 @@ weight: 10
 description: "Tutorial on using the DIAMOND RASPA2 Apptainer container: pulling the image and usage examples for MD computation with MC."
 ---
 
-<div align="justify">
-
 {{< callout context="note" title="Prerequisites" >}}
 
 - Apptainer (see either [our installation guide]({{% ref "/documentation/install/install-apptainer" %}}) or [the official documentation](https://apptainer.org/docs/user/latest/quick_start.html#installation))
@@ -16,7 +14,6 @@ description: "Tutorial on using the DIAMOND RASPA2 Apptainer container: pulling 
 {{< /callout >}}
 
 For more information on Apptainer containers and their use, we provide [a description of Apptainer]({{% ref "/documentation/use/apptainer" %}}), a crash course on [how to use Apptainer]({{% ref "/documentation/use/apptainer-image" %}}), and of course there's also the [official Apptainer's documentation](https://apptainer.org/docs/user/latest/).
-
 
 ## Input files
 
@@ -168,4 +165,3 @@ The [manual](https://iraspa.org/raspa/) once again details how this computation 
 
 The official [manual](https://iraspa.org/raspa/) presents many more examples detailing the features of the software, categorized into basic, non-basic, advanced and auxiliary examples. Interested readers can easily adapt and extrapolate the presented commands to run those examples if needed.
 
-</div>

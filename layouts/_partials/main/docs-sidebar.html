@@ -10,7 +10,6 @@
   <div class="docs-sidebar{{ if ne site.Params.doks.navbarSticky true }} docs-sidebar-top{{ end }}{{ if site.Params.doks.headerBar }} docs-sidebar-offset{{ end }}">
     <nav class="docs-links" aria-label="{{ .Section | humanize }}">
       {{ partial "sidebar/docs-menu.html" . }}
-      <a class="btn btn-primary rounded-pill ms-3 me-2 px-4 order-lg-3 d-none d-lg-block btn-doc-sidebar" href="{{ site.Params.docSidebarRef }}">{{ site.Params.docSidebarText }}</a>
     </nav>
   </div>
 </div>

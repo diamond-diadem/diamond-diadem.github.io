@@ -27,8 +27,6 @@ docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-s
 {{< /tab >}}
 {{< /tabs >}}
 
-<div align="justify">
-
 **NDM** (originally *Notre Dynamique Moléculaire*) is a Molecular Dynamics (MD) code developed at CEA Saclay/SRMP hosted on [GitHub](https://github.com/jpcroc/NDM/).
 
 The code is designed for 3D periodic boundary conditions (though it can work with lower periodic boundary conditions). Native potentials include EAM and pair potentials with or without Coulombic charge interactions. The latter can be dealt with by Ewald or Wolf summations. Tersoff, Stillinger-Weber and Ju Li ZrC potentials are also included but are no longer maintained. A connection is built in to use **LAMMPS** as a force and energy engine, giving access to all the potentials available in this code. A similar connection is under construction for the ML code **Milady**.
@@ -38,8 +36,6 @@ The code is designed for 3D periodic boundary conditions (though it can work wit
 The code is parallelized in MPI. The code parallelization is a domain decomposition. Higher levels of parallelization are coded, e.g. over images for NEB calculations.
 
 **NDM** is coded in Fortran, mostly at the 2003 standard level (classes, etc..). **NDM** is not conceived to replace well-known more stable codes such as **LAMMPS**. However, it offers a framework to test and develop new algorithms within a modern Fortran code.
-
-</div>
 
 ### Main content of the image
 
@@ -57,7 +53,6 @@ This image of **NDM** is built using **MKL** Intel libraries and **GNU** compile
 {{< link-card title="Official website" href="https://github.com/jpcroc/NDM" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
 {{< link-card title="Official documentation" href="https://github.com/jpcroc/NDM/blob/ndm2025/README.md" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
 {{< /card-grid >}}
-
 
 <h3 class="mb-1 mt-3">Examples</h3>
 

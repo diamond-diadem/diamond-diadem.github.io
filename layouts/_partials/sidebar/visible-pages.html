@@ -1,0 +1,9 @@
+{{- /*
+  Returns the children of a section that the sidebar lists, by weight.
+  Pages flagged `sidebar_hidden: true` (e.g. a section's landing page,
+  already reached from the header) are left out.
+
+  @param {page} . The section whose children to list.
+  @returns {pages}
+*/ -}}
+{{- return where .Pages.ByWeight "Params.sidebar_hidden" "ne" true -}}

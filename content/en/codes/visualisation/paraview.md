@@ -27,13 +27,9 @@ docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-s
 {{< /tab >}}
 {{< /tabs >}}
 
-<div align="justify">
-
 ParaView is an open-source software dedicated to the visualization and analysis of scientific data. It provides a powerful platform for 3D visualization, manipulation of large datasets, and the creation of interactive images. Primarily developed for applications in engineering, physics, and earth sciences, ParaView supports various data formats, including meshes, point clouds, and structured datasets.
 
 This software is built on a modular architecture, allowing users to customize their workflows by integrating modules and extensions specific to their needs. ParaView offers advanced filtering, rendering, and analysis tools, facilitating in-depth exploration of complex data. It is compatible with multiple operating systems and can be used for both academic research and industrial projects requiring sophisticated scientific visualization.
-
-</div>
 
 <h3 class="mb-1">Tutorial</h3>
 

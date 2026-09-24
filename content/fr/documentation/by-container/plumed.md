@@ -5,8 +5,6 @@ weight: 8
 description: "Tutoriel sur l'utilisation de l'image Apptainer PLUMED de DIAMOND : récupération du conteneur, exécution et analyse de trajectoires de dynamique moléculaire"
 ---
 
-<div align="justify">
-
 {{< callout context="note" title="Prérequis" >}}
 
 - Apptainer (voir soit [notre guide d'installation]({{% ref "/documentation/install/install-apptainer" %}}), soit [la documentation officiel](https://apptainer.org/docs/user/latest/quick_start.html#installation))
@@ -16,7 +14,6 @@ description: "Tutoriel sur l'utilisation de l'image Apptainer PLUMED de DIAMOND 
 {{< /callout >}}
 
 Pour plus d'informations sur les conteneurs Apptainer et leur utilisation, nous mettons à votre disposition [une description d'Apptainer]({{% ref "/documentation/use/apptainer" %}}), un guide rapide sur [comment utiliser Apptainer]( {{% ref "/documentation/use/apptainer-image" %}}), sans oublier bien sûr la [documentation officielle d'Apptainer](https://apptainer.org/docs/user/latest/).
-
 
 ## Fichiers d'entrée
 
@@ -91,4 +88,3 @@ Notons que le script d'entrée est automatiquement reconnu par PLUMED à conditi
 
 La documentation officielle de PLUMED contient un grand nombre de tutoriels listés sur [cette page](https://www.plumed.org/doc-v2.9/user-doc/html/tutorials.html). Les commandes permettant d'exécuter PLUMED depuis le conteneur PLUMED présentées dans le présent tutoriel peuvent être facilement extrapolées pour lancer ces exemples.
 
-</div>

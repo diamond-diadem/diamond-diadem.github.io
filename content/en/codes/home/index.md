@@ -2,7 +2,7 @@
 title: Containerised codes
 linkTitle: Home
 weight: 1
-sidebar_link: /en/codes/home/
+sidebar_hidden: true
 aliases:
   - /codes/start-here/home/
 # tablerIcon: "tabler-icons/outline/home"
@@ -24,11 +24,7 @@ But to begin with, if you haven't gone through this step yet and if you're not f
 
 {{< /callout >}}
 
-<div align="justify">
-
 In the summer of 2023, the materials community was surveyed via LimeSurvey to identify working habits. Among other things, this highlighted a number of codes used for both computation and visualisation (see below). Currently, above $68\%$ of the codes cited by the community are containerised and/or packaged, covering all physical scales.
-
-</div>
 
 <img alt="containerised codes" class="containerised-codes en mt-4" style="width:100%">
 
@@ -572,7 +568,6 @@ docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-s
 {{< /tabs >}}
 
 </div>
-
 
 <div id="content-optionaA" class="hidden">
 

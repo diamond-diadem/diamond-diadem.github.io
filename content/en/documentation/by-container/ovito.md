@@ -5,8 +5,6 @@ weight: 15
 description: "Tutorial on using the DIAMOND OVITO Apptainer container for visualizing and analyzing atomistic simulation data, including container usage examples."
 ---
 
-<div align="justify">
-
 {{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
 
 Before proceeding with these explanations, it is necessary to have Apptainer installed on your machine; see [this link]({{% ref "/documentation/install/install-apptainer/" %}}) for more details.
@@ -22,7 +20,6 @@ To quickly grasp the main Apptainer commands, you can refer to [this tutorial]({
 <!-- <div class="youtube-video" data-video-id="YE_r67OEEFg?si=t1ZbARrAwnFjFdYj" language="en">
     <div class="youtube-placeholder en">
         <button class="popup-button">Consent to cookies</button>
-    </div>
 </div> -->
 
 {{< video-with-consent id="YE_r67OEEFg?si=t1ZbARrAwnFjFdYjnc" >}}

@@ -10,9 +10,6 @@ aliases:
   - /about/containers/
 ---
 
-
-<div align="justify">
-
 ### What is a container?
 
 - A container is a self-contained execution unit that encapsulates an application, as well as external libraries and other dependencies necessary for its execution.
@@ -28,8 +25,6 @@ aliases:
 - **Resource management:** containers share the host's operating system kernel, making them lighter than virtual machines that require more system resources.
 
 In summary, containers offer a powerful solution for application deployment, improving the flexibility, reproducibility, portability, and efficiency of development and deployment processes.
-
-</div>
 
 <style>
  /* Three image containers (use 25% for four, and 50% for two, etc) */
@@ -51,7 +46,7 @@ In summary, containers offer a powerful solution for application deployment, imp
   <div class="column left-about-containers">
     <img alt="Cluster map" class="cluster-map en">
   </div>
-  <div class="column right-about-containers" align="justify">
+  <div class="column right-about-containers">
 
 In practice, you can choose the technical solution you want to use locally on your machine. For the DIAMOND project, we recommend using both [Apptainer](/documentation/use/apptainer/) and [Guix](/documentation/use/guix/). On the other hand, for clusters or data centres, the solution depends on what's available. Almost half of the French mesocentres and national data centres have a container system available as a standard command (enabling the use of containers). It should be noted, however, that the other half offers the possibility of loading a container system via the `module load` command (and thus of using containers). On the other hand, the use of Guix is limited to less than 30% of all French computing centres. It's worth noting that the [MESONET](https://www.mesonet.fr/) project, which aims to pool HPC computing resources across the country, has deployed a solution for using containers on its prototyping cluster. Although not all of the project's clusters are available yet, it is highly likely that they will all feature a container system.
 

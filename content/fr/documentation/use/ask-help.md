@@ -21,7 +21,7 @@ Ce tutoriel explicite les différentes démarches à effectuer pour rapporter un
   <div class="left-use-gitlab">
     <img alt="use gitlab" class="use-gitlab">
   </div>
-  <div class="right-use-gitlab" align="justify">
+  <div class="right-use-gitlab">
 
 Si vous rencontrez un problème relatif à l'utilisation des outils de la plateforme ou si vous avez une requête particulière, alors vous avez la possibilité de communiquer avec les ingénieurs de la plateforme à travers ce [lien](https://gricad-gitlab.univ-grenoble-alpes.fr/diamond).
 
@@ -31,8 +31,6 @@ En pratique, vous pouvez accéder aux onglets "Issues" et "Merge requests" sur n
 
   </div>
 </div>
-
-<div align="justify">
 
 ## Consulter les tickets existants
 
@@ -95,4 +93,3 @@ Enfin, vous avez la possibilité de donner un feedback sur la documentation du p
 
 Ensuite, nous vous demandons d'être le plus exhaustif ou exhaustive possible concernant le feedback en donnant des exemples et en précisant la section de la documentation à laquelle votre feedback fait référence.
 
-</div>

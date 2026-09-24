@@ -5,8 +5,6 @@ weight: 7
 description: "Tutorial on using the DIAMOND Neper Apptainer container: pulling the image and usage example on the generation and meshing of a simple tessellation."
 ---
 
-<div align="justify">
-
 {{< callout context="note" title="Prerequisites" >}}
 
 - Apptainer (see either [our installation guide]({{% ref "/documentation/install/install-apptainer" %}}) or [the official documentation](https://apptainer.org/docs/user/latest/quick_start.html#installation))
@@ -67,4 +65,3 @@ apptainer exec neper.sif neper -V n100-id1.tess,n100-id1.msh -print img2
 
 The rest of the commands exposed in the tutorial can be similarly extrapolated from these examples.
 
-</div>

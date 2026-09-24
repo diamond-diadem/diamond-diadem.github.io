@@ -4,8 +4,6 @@ weight: 3
 description: "Guide to essential Apptainer commands for interacting with DIAMOND scientific container images: shell, exec, and run command usage and examples."
 ---
 
-<div align="justify">
-
 {{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
 
 In preamble, you need to have Apptainer installed on your machine ; see [this link]({{% ref "/documentation/install/install-apptainer/" %}}) for more details.
@@ -160,4 +158,3 @@ If this tutorial helped you to discover the basic usage of Apptainer, you can al
 - [What about Guix packages?]({{% ref "/documentation/use/guix-package/" %}})
 - [How to ask for help?]({{% ref "/contact/" %}})
 
-</div>

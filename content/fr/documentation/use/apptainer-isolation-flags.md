@@ -5,8 +5,6 @@ weight: 6
 description: "Guide avancé sur les options d'isolation des conteneurs Apptainer : contrôle du partage entre hôte et conteneur pour les simulations sur DIAMOND."
 ---
 
-<div align="justify">
-
 Cette page est dédiée aux discussions autour de l'isolation des conteneurs Apptainer. Ce point est évoqué rapidement dans la plupart des tutoriels de la plateforme ; cette page couvre les tenants et les aboutissants de l'isolation plus en profondeur, avec l'objectif de permettre un contrôle plus fin du partage entre hôte et conteneur.
 
 ## Comportement par défaut d'Apptainer
@@ -152,4 +150,3 @@ apptainer run --containall           \
               <image-logiciel-visualisation> $HOME/<fichier-d-entrée>
 ```
 
-</div>

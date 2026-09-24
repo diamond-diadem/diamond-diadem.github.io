@@ -4,8 +4,6 @@ weight: 8
 description: "How to access and use DIAMOND Guix packages for scientific codes, enabling reproducible materials simulation software on HPC environments."
 ---
 
-<div align="justify">
-
 {{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
 
 Before these explanations, it is necessary to have Guix installed on your machine; see [this link]({{% ref "/documentation/install/install-guix/" %}}) for more details.
@@ -116,4 +114,3 @@ guix time-machine -C channels-stable.scm -- shell --pure quantum-espresso openmp
 
 This creates a reproducible environment with the correct package and dependence versions.
 
-</div>

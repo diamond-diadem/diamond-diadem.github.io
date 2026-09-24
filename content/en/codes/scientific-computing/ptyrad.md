@@ -25,8 +25,6 @@ docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-s
 
 {{< /tabs >}}
 
-<div align="justify">
-
 PtyRAD performs ptychographic reconstruction using an automatic differentiation (AD) framework powered by PyTorch, enabling flexible and efficient implementation of gradient descent optimization.
 
 PtyRAD integrates various features into the reconstruction, including:
@@ -36,8 +34,6 @@ PtyRAD integrates various features into the reconstruction, including:
 - Provides a set of utility functions to streamline the preprocessing of datasets to facilitate data treatment.
 
 PtyRAD also supports hyperparameter tuning and running on multi-GPU. Additional features include JIT compilation with `torch.compile`.
-
-</div>
 
 ### Tutorial
 

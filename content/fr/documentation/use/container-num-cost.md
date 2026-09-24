@@ -5,8 +5,6 @@ weight: 5
 description: "Analyse du coût numérique de l'utilisation des conteneurs Apptainer et des paquets Guix pour les simulations scientifiques sur DIAMOND."
 ---
 
-<div align="justify">
-
 Un utilisateur peut se demander si le passage à l'utilisation des conteneurs via Apptainer ou des paquets via Guix ne vient pas altérer les performances de calcul.
 
 Pour quantifier une éventuelle baisse de performances, il faut être capable de répliquer une simulation via des environnements logiciels différents afin de comparer leurs temps d'exécution. Les tests effectués vont couvrir trois environnements logiciels :
@@ -31,6 +29,5 @@ Aussi, pour tenir compte des potentielles fluctuations de performance dues à la
 
 <div class="text-center mt-4 mb-4">
    <img alt="bench lammps dahu" class="bench-lammps-dahu">
-</div>
 
 </div>

@@ -27,8 +27,6 @@ docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-s
 {{< /tab >}}
 {{< /tabs >}}
 
-<div align="justify">
-
 FreeFEM est un logiciel open-source complet qui facilite la résolution numérique des équations aux dérivées partielles (EDP) en utilisant la méthode des éléments finis (FEM). Conçu pour répondre aux besoins des scientifiques, des ingénieurs et des chercheurs, FreeFEM offre une plateforme robuste pour la modélisation et la résolution de problèmes complexes dans divers domaines, y compris la dynamique des fluides, la mécanique des structures, le transfert de chaleur et l'électromagnétisme.
 
 Le logiciel dispose d'un langage de script intuitif spécialement conçu pour définir, manipuler et résoudre des EDP. Les utilisateurs peuvent facilement configurer des géométries, définir des conditions aux limites et spécifier les propriétés des matériaux dans ce langage. FreeFEM prend en charge une large gamme d'éléments finis, y compris, mais sans s'y limiter, les éléments de Lagrange, les éléments de Raviart-Thomas et les éléments de Nédélec, lui permettant de gérer une variété de problèmes.
@@ -38,8 +36,6 @@ L'une des forces clés de FreeFEM réside dans ses capacités intégrées de gé
 La polyvalence de FreeFEM est également démontrée par sa compatibilité avec plusieurs systèmes d'exploitation, y compris Windows, macOS et Linux. Il prend en charge le calcul parallèle, permettant la résolution de problèmes à grande échelle en tirant parti des processeurs multi-cœurs modernes et des environnements de calcul distribué. Le logiciel fournit également des outils pour le post-traitement et la visualisation des résultats, facilitant l'interprétation et la présentation des données.
 
 Avec une communauté active et un développement continu, FreeFEM reste à la pointe des logiciels de FEM, incorporant les dernières avancées en méthodes numériques et en technologie informatique. Il est largement utilisé dans le milieu académique et industriel pour la recherche, l'enseignement et les applications pratiques, offrant un outil puissant mais accessible pour la résolution des EDP.
-
-</div>
 
 <h3 class="mb-1">Tutoriel</h3>
 

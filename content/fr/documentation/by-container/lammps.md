@@ -5,8 +5,6 @@ weight: 2
 description: "Tutoriel sur l'utilisation de l'image Apptainer LAMMPS de DIAMOND : récupération du conteneur, exécution et cas d'usage pour la dynamique moléculaire."
 ---
 
-<div align="justify">
-
 {{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
 
 En préalable de ces explications, il est nécessaire d'avoir installé Apptainer sur votre machine ; voir [ce lien](/documentation/install/install-apptainer/) pour plus de détails.
@@ -22,7 +20,6 @@ Pour rapidement s'approprier les principales commandes d'Apptainer, vous pouvez 
 <!-- <div class="youtube-video" data-video-id="MheJO_FndWw?si=ASHe6wYhiFqR1te9" language="fr">
     <div class="youtube-placeholder fr">
         <button class="popup-button">Consentement aux cookies</button>
-    </div>
 </div> -->
 
 {{< video-with-consent id="MheJO_FndWw?si=ASHe6wYhiFqR1te9" >}}

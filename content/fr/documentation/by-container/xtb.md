@@ -6,8 +6,6 @@ weight: 11
 description: "Tutoriel sur l'utilisation de l'image Apptainer xTB de DIAMOND : récupération du conteneur, exécution et cas d'usage pour la chimie quantique."
 ---
 
-<div align="justify">
-
 {{< callout context="note" title="Prérequis" >}}
 
 - Apptainer (voir soit [notre guide d'installation]({{% ref "/documentation/install/install-apptainer" %}}), soit [la documentation officiel](https://apptainer.org/docs/user/latest/quick_start.html#installation))
@@ -290,4 +288,3 @@ lorem-ipsum
 
 -->
 
-</div>

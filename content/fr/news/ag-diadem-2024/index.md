@@ -34,11 +34,7 @@ L'Assemblée Générale du <a href="https://pepr-diadem.fr" target="_blank" rel=
 
 <br/>
 
-<div align="justify">
-
 Lors de ces journées, le PEPR DIADEM a eu l’honneur de présenter les avancées du programme et les faits marquants de ses projets. A cette occasion sera également organisé le lancement des 17 nouveaux projets financés dans le cadre de l’Appel à Projets 2023.
-
-</div>
 
 <h4>Les coordinateurs des 3 work packages (WPs) ont présenté aux participants un état d'avancement du projet DIAMOND</h4>
 

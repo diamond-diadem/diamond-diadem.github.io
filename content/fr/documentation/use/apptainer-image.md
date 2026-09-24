@@ -4,8 +4,6 @@ weight: 3
 description: "Guide des commandes Apptainer essentielles pour interagir avec les images de conteneurs scientifiques de DIAMOND : shell, exec et run."
 ---
 
-<div align="justify">
-
 {{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
 
 En préalable de ces explications, il est nécessaire d'avoir installé Apptainer sur votre machine ; voir [ce lien](/documentation/install/install-apptainer/) pour plus de détails.
@@ -160,4 +158,3 @@ Si ce tutoriel vous a été utile pour découvrir les bases d'Apptainer, vous po
 - [Et pour les paquets Guix ?](/documentation/use/guix-package)
 - [Comment demander de l'aide ?](/contact/)
 
-</div>

@@ -5,8 +5,6 @@ weight: 3
 description: "Tutorial on using the DIAMOND Quantum ESPRESSO Apptainer container: pulling the image and running DFT electronic structure calculations."
 ---
 
-<div align="justify">
-
 {{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
 
 In preamble, you need to have Apptainer installed on your machine; see [this link]({{% ref "/documentation/install/install-apptainer/" %}}) for more details.
@@ -22,7 +20,6 @@ To have a quick look at Apptainer's main commands, you may refer to [this tutori
 <!-- <div class="youtube-video" data-video-id="8oKKGG0hy6A?si=1duVepl_lWvG24fC" language="en">
     <div class="youtube-placeholder en">
         <button class="popup-button">Consent to cookies</button>
-    </div>
 </div> -->
 
 {{< video-with-consent id="8oKKGG0hy6A?si=1duVepl_lWvG24fC" >}}

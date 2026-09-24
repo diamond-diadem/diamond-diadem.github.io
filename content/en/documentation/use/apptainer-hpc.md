@@ -5,8 +5,6 @@ weight: 4
 description: "Guide for using DIAMOND Apptainer containers on high-performance computing clusters, covering both interactive and batch execution modes."
 ---
 
-<div align="justify">
-
 An important part of the codes provided by the DIAMOND platform are compatible with and designed to run on High Performance Computing (HPC) platforms. There are multiple ways of using HPC clusters, and we will differentiate between two cases:
 - running single-process or shared-memory parallelized codes
 - running distributed-memory parallelized codes (**MPI**).
@@ -45,15 +43,12 @@ The embedded mode therefore consists of using the **`mpirun` command inside the 
 apptainer exec <image>.sif mpirun -np <nb_procs> <command>
 ```
 
-
-
 ### Hybrid Mode {#hybrid_mode}
 
 This mode consists of using the **`mpirun`** or a similar launcher command **outside the container**, on the `apptainer` command itself. This works natively with Apptainer which was designed for this purpose contrary to Docker, which would require setting up a lot of options that we will not detail here. In hybrid mode, the MPI launcher is provided by the host system, while the MPI application runs inside the Apptainer image, and the MPI libraries inside the container must remain compatible with the host MPI implementation to allow communication with the HPC interconnect. The difference between this hybrid mode and the embedded mode is represented on the diagram below:
 
 <div class="text-center mt-4 mb-4">
         <img alt="OpenMPI Hybride" class="hybrid-ompi">
-</div>
 
 With this hybrid approach, we recommend using the **same OpenMPI version** on the cluster and inside the container whenever possible. There is also inter-version compatibility for OpenMPI but using different versions of OpenMPI can result in [performance drops](https://github.com/ckhroulev/apptainer-with-ompi/tree/main). In PEPR DIADEM, container images are built without prior knowledge of target machines, so we use a portable OpenMPI configuration provided by Guix that is designed to [work across different hardware environments](https://hpc.guix.info/blog/2019/12/optimized-and-portable-open-mpi-packaging/)
 
@@ -63,12 +58,9 @@ To check which version of OpenMPI is included in a given image, as well as other
 apptainer exec <image>.sif ompi_info
 ```
 
-
-
 #### Hybrid Mode with the SLURM scheduler (recommended)
 
 Example of a minimal launch script **job.sh**:
-
 
 ```bash {frame="none"}
 #!/bin/bash
@@ -89,16 +81,12 @@ The computation can then be submitted with:
 sbatch job.sh
 ```
 
-
-
 #### Hybrid Mode without a scheduler
 
 ```bash
 # module load openmpi-x.x.x or equivalent might be necessary to access the right mpirun command
 mpirun -np <nb_procs> apptainer exec <image>.sif <command>
 ```
-
-
 
 #### Possible Hybrid Mode optimizations
 
@@ -121,9 +109,6 @@ mpirun -np <nb_procs> apptainer exec instance://instance_name /bin/bash -c "<com
 mpirun -npernode 1 apptainer instance stop instance_name
 ```
 
-
-
-
 ## Cluster specific documentation
 
 Official documentation on the use of containers:
@@ -131,8 +116,6 @@ Official documentation on the use of containers:
 - [Gricad](https://gricad-doc.univ-grenoble-alpes.fr/hpc/softenv/container/)
 
 - [TGCC](https://www-hpc.cea.fr/tgcc-public/en/html/toc/fulldoc/Virtualization.html?highlight=singularity)
-
-
 
 **TGCC-DIAMOND specific:**
 

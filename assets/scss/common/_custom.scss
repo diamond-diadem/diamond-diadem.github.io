@@ -124,7 +124,7 @@
     }
 
     .navbar {
-        border-bottom: 1px solid $white;
+        border-bottom: 0;
     }
 }
 
@@ -139,22 +139,7 @@
 .navbar {
     z-index: 1000;
     background-color: rgba(255, 255, 255, 0.95);
-    border-bottom: 1px solid $black;
-}
-
-@include media-breakpoint-up(lg) {
-    .diamond-docs-sidebar-container {
-        border-right: 1px dashed $black;
-    }
-
-    .docs-sidebar {
-        order: 0;
-    }
-    @include color-mode(dark) {
-        .diamond-docs-sidebar-container {
-            border-right: 1px dashed $white;
-        }
-    }
+    border-bottom: 0;
 }
 
 u {
@@ -486,10 +471,6 @@ u {
     padding-right: 10px;
 }
 
-.collapsible-sidebar {
-    padding-right: 10px;
-}
-
 .switch-language-mobile {
     margin-right: 0.5rem;
     margin-left: 0.5rem;
@@ -560,42 +541,6 @@ tr {
 // // END mprove toc behaviour (while scrolling) END // //
 
 // // // END modify _global.scss END // // //
-
-.btn-toggle {
-    display: inline-flex;
-    align-items: center;
-    position: relative;
-    padding: 0.25rem 0.5rem 0.25rem 1.25rem;
-    font-weight: $headings-font-weight;
-    font-size: $font-size-base;
-    text-transform: none;
-    color: $body-color;
-    background-color: transparent;
-    border: 0;
-    text-align: left;
-    text-indent: 0;
-}
-
-.btn-toggle::before {
-    position: absolute;
-    left: 0;
-}
-
-.btn-toggle.no-caret::before {
-    content: none;
-}
-
-.btn-toggle.no-caret {
-    padding-left: 1.25rem;
-}
-
-.btn-doc-sidebar {
-    margin-top: 20px;
-    overflow-y: hidden;
-    justify-self: left;
-    width: fit-content;
-    white-space: nowrap;
-}
 
 // // // Worflows >>> simple-adsorption-workflow images >>> // // //
 

@@ -34,11 +34,7 @@ seo:
 
 <br/>
 
-<div align="justify">
-
 During these days, PEPR DIADEM has had the honor of presenting the program's progress and key highlights of its projects. On this occasion, the launch of 17 new projects funded under the 2023 Call for Projects has also been organized.
-
-</div>
 
 <h4>The coordinators of the 3 work packages (WPs) presented the progress of the DIAMOND project to the participants</h4>
 

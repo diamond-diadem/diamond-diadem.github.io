@@ -27,8 +27,6 @@ docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-s
 {{< /tab >}}
 {{< /tabs >}}
 
-<div align="justify">
-
 Abinit est une suite logicielle complète destinée à l'étude computationnelle des propriétés physiques des matériaux en utilisant des méthodes avancées de mécanique quantique. Au cœur d'Abinit se trouve la théorie de la fonctionnelle de la densité (DFT), une approche largement utilisée pour étudier la structure électronique des atomes, des molécules et des phases condensées. En plus de la DFT, Abinit intègre également la théorie de la perturbation à plusieurs corps (MBPT) et la DFT dépendante du temps (TD-DFT), lui permettant d'aborder un large éventail de phénomènes physiques.
 
 Une des caractéristiques distinctives d'Abinit est sa capacité à traiter à la fois les propriétés de l'état fondamental et de l'état excité des matériaux. Le logiciel peut calculer les énergies totales, les structures de bandes électroniques, les densités d'états et les densités de charge. Il offre également des outils pour l'étude des fonctions de réponse, permettant le calcul des propriétés optiques, des dispersions phononiques et de diverses caractéristiques spectroscopiques. Abinit supporte une variété de fonctionnelles d'échange-corrélation, incluant l'approximation de la densité locale (LDA), l'approximation du gradient généralisé (GGA), les fonctionnelles hybrides et les fonctionnelles méta-GGA.
@@ -39,12 +37,9 @@ Le logiciel est conçu pour fonctionner efficacement sur des plateformes de calc
 
 En tant que projet open-source, Abinit bénéficie d'une communauté active de développeurs et d'utilisateurs. Les contributions de cette communauté ont étendu les capacités du logiciel et assuré son amélioration continue. La documentation complète d'Abinit, ses tutoriels et ses forums utilisateurs offrent un support ample pour les utilisateurs novices et expérimentés, faisant de lui un outil précieux pour les chercheurs dans les domaines de la science des matériaux, de la chimie, de la physique et de l'ingénierie.
 
-</div>
-
 <h3 class="mb-1">Tutoriel</h3>
 
 {{< link-card title="Apprenez à utiliser cette image de conteneur" href="/documentation/by-container/abinit" icon="tabler-icons/outline/package" class="mb-0" >}}
-
 
 <h3 class="mb-1 mt-3">Documentation Abinit</h3>
 

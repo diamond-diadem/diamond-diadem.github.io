@@ -5,8 +5,6 @@ weight: 6
 description: "Tutoriel sur l'image Apptainer OpenCalphad de DIAMOND : récupération du conteneur, exécution et cas d'usage pour le calcul de diagrammes de phases."
 ---
 
-<div align="justify">
-
 {{< callout context="note" title="Prérequis" >}}
 
 - Apptainer (voir soit [notre guide d'installation]({{% ref "/documentation/install/install-apptainer" %}}), soit [la documentation officiel](https://apptainer.org/docs/user/latest/quick_start.html#installation))
@@ -16,7 +14,6 @@ description: "Tutoriel sur l'image Apptainer OpenCalphad de DIAMOND : récupéra
 {{< /callout >}}
 
 Pour plus d'informations sur les conteneurs Apptainer et leur utilisation, nous mettons à votre disposition [une description d'Apptainer]({{% ref "/documentation/use/apptainer" %}}), un guide rapide sur [comment utiliser Apptainer]( {{% ref "/documentation/use/apptainer-image" %}}), sans oublier bien sûr la [documentation officielle d'Apptainer](https://apptainer.org/docs/user/latest/).
-
 
 ## Fichiers d'entrée
 
@@ -81,4 +78,3 @@ Dans la plupart des scripts d'exemple, le mot-clé `@&` est utilisé à plusieur
 
 Par ailleurs, la commande `set inter` à la fin d'un script OpenCalphad est responsable du déclenchement du shell interactif à la fin de l'exécution du script. La suppression de cette commande déclenche une erreur à la fin de l'exécution d'un script.
 
-</div>

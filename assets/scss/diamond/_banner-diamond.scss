@@ -145,15 +145,19 @@
     }
 }
 
+// Without a rule under the header, the banner needs room above it and a soft
+// top edge so that it does not look glued to the header.
 .container-h1-default-page {
     display: flex;
     align-items: center;
     height: 150px;
+    margin-top: clamp(1rem, 3vw, 2rem);
     justify-content: center;
     position: relative;
     isolation: isolate;
     overflow: hidden;
     --page-title-fade-side-end: 36px;
+    --page-title-fade-top-end: 28px;
     --page-title-fade-start: 100px;
     --page-title-fade-end: 150px;
     --page-title-offset-y: 0px;
@@ -172,7 +176,8 @@
     -webkit-mask-image:
         linear-gradient(
             to bottom,
-            rgba(0, 0, 0, 1) 0,
+            rgba(0, 0, 0, 0) 0,
+            rgba(0, 0, 0, 1) var(--page-title-fade-top-end),
             rgba(0, 0, 0, 1) var(--page-title-fade-start),
             rgba(0, 0, 0, 0) var(--page-title-fade-end)
         ),
@@ -187,7 +192,8 @@
     mask-image:
         linear-gradient(
             to bottom,
-            rgba(0, 0, 0, 1) 0,
+            rgba(0, 0, 0, 0) 0,
+            rgba(0, 0, 0, 1) var(--page-title-fade-top-end),
             rgba(0, 0, 0, 1) var(--page-title-fade-start),
             rgba(0, 0, 0, 0) var(--page-title-fade-end)
         ),

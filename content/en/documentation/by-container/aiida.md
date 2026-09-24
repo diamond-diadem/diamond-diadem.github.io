@@ -4,8 +4,6 @@ weight: 1
 description: "Tutorial on using AiiDA via the DIAMOND Apptainer container to automate materials calculation workflows with automated provenance tracking."
 ---
 
-<div align="justify">
-
 {{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
 
 Before following these instructions, you must have Apptainer installed on your machine; see [this link]({{% ref "/documentation/install/install-apptainer/" %}}) for more details.
@@ -218,4 +216,3 @@ Here is a list of all the known issues so far:
 - No backward compatibility of Apptainer images from version **1.3.X** to version **1.2.X**. Building an image with apptainer **v1.3.X** will prevent it from being downloaded from the `gitlab-gricad` registry with apptainer **v1.2.X**.
 - The postgresql service won't start is the 5432 port is already in use on that machine. In this case, it is impossible to create a profile for AiiDA.
 
-</div>

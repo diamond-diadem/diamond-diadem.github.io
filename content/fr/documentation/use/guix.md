@@ -9,8 +9,6 @@ aliases:
   - /about/guix/
 ---
 
-<div align="justify">
-
 ## À propos des paquets
 
 Type d'archive contenant un programme informatique (sous-forme de source ou d'exécutable) ainsi que des métadonnées. Ils sont incontournables pour installer aisément des applications sur une machine par le biais d'un gestionnaire de paquets.
@@ -38,4 +36,3 @@ Dans le cadre du projet DIAMOND, imposant des exigences fortes relatives à la r
 
 En résumé, l'utilisation de paquets via le gestionnaire GNU Guix permet de faciliter la distribution de codes et d'outils réplicables et adaptés pour le calcul haute performance.
 
-</div>

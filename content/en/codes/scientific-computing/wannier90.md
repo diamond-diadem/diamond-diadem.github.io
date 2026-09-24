@@ -27,11 +27,7 @@ docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-s
 {{< /tab >}}
 {{< /tabs >}}
 
-<div align="justify">
-
 **Wannier90** is a computational software tool designed for the efficient calculation and manipulation of maximally-localized Wannier functions (MLWFs) in condensed matter physics. It provides a versatile framework for interpolating band structures, calculating electronic properties, and studying materials' electronic behaviors with high precision. The software is often used as a post-processing tool in conjunction with first-principles electronic structure codes like Quantum ESPRESSO, VASP, or Abinit. Wannier90 supports complex systems, including metals, insulators, and topological materials, and is compatible with both small and large-scale calculations. Its modular and open-source architecture ensures adaptability and fosters active contributions from the research community.
-
-</div>
 
 <h3 class="mb-1">Tutorial</h3>
 

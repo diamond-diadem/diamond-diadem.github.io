@@ -27,8 +27,6 @@ docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-s
 {{< /tab >}}
 {{< /tabs >}}
 
-<div align="justify">
-
 OpenCalphad (OC) is a versatile software package designed for thermodynamic calculations in multicomponent systems. It is widely used in materials science and engineering to predict phase diagrams, thermodynamic properties, and equilibrium states of complex material systems. Developed with a modular architecture, OpenCalphad facilitates the integration of various thermodynamic models and databases.
 
 Key features of OpenCalphad include its ability to handle various types of thermodynamic data and models, such as Gibbs energy functions, phase equilibrium calculations, and thermodynamic assessments. The software supports multiple phases, including solid solutions, liquid phases, and gas mixtures. Users can perform calculations involving multi-component systems with elements spanning the entire periodic table.
@@ -38,8 +36,6 @@ The software provides a robust framework for researchers and engineers to develo
 OpenCalphad's user interface, although primarily command-line based, is designed for flexibility and efficiency. It supports scripting and batch processing, enabling automated workflows and large-scale calculations. The software is regularly updated, incorporating the latest advancements in thermodynamic theory and computational techniques.
 
 In summary, OpenCalphad is a powerful, open-source tool for thermodynamic modeling and simulation, providing essential capabilities for the analysis and prediction of material behavior in multi-component systems.
-
-</div>
 
 <h3 class="mb-1">Tutorial</h3>
 

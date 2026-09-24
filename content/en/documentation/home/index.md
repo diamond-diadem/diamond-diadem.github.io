@@ -3,6 +3,7 @@ title: Welcome to the DIAMOND user documentation
 linkTitle: Home
 toc: false
 weight: 1
+sidebar_hidden: true
 seo:
   description: "Start here for DIAMOND user documentation: Apptainer tutorials, Guix package guides, and help for using scientific containers on HPC clusters."
 ---

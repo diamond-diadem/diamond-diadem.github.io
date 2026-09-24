@@ -9,41 +9,34 @@
   @param {page}   page        The page to render.
   @param {string} currentDir  Directory of the page being rendered, for fuzzy active-state matching.
   @param {string} currentPath File path of the page being rendered, for exact active-state matching.
-  @param {bool}   [top]       True for a top section's direct children: larger spacing, no indent, and button-styled leaves.
+  @param {bool}   [top]       True for a top section's direct children, styled as the menu headings.
+  @param {bool}   [open]      True to unfold a branch even off the path to the current page.
 */ -}}
 {{- $page := .page -}}
 {{- $currentDir := .currentDir -}}
 {{- $currentPath := .currentPath -}}
-{{- $top := .top | default false -}}
+{{- $level := cond (.top | default false) "top" "nested" -}}
+{{- $label := or $page.LinkTitle $page.Title -}}
 {{- if $page.IsBranch -}}
   {{- $active := partial "sidebar/is-active" (dict "currentDir" $currentDir "currentPath" $currentPath "candidate" $page) -}}
-  <li class="{{ cond $top "mb-1" "my-1 ms-3" }}">
-    {{- if $page.Params.sidebar_link }}
-    <a class="btn btn-toggle {{ cond $top "no-caret rounded" "no-caret align-items-center rounded" }}{{ if $active }} active{{ end }}" href="{{ $page.Params.sidebar_link | relURL }}">
-      {{ or $page.LinkTitle $page.Title }}
-    </a>
-    {{- else }}
-    <details class="sidebar-group"{{ if $active }} open{{ end }}>
-      <summary class="btn btn-toggle {{ cond $top "rounded" "align-items-center rounded" }}">
-        {{ or $page.LinkTitle $page.Title }}
-      </summary>
-      <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-        {{ partial "sidebar/section-page-link.html" (dict "section" $page "label" (T "section_description") "currentPath" $currentPath "linkClass" "docs-link rounded") }}
-        {{ range $page.Pages.ByWeight }}
+  <li class="sidebar-nav__item">
+    <details class="sidebar-nav__group"{{ if or $active .open }} open{{ end }}>
+      <summary class="sidebar-nav__toggle sidebar-nav__toggle--{{ $level }}">{{ $label }}</summary>
+      <ul class="sidebar-nav__children">
+        {{ partial "sidebar/section-page-link.html" (dict "section" $page "label" (T "section_description") "currentPath" $currentPath) }}
+        {{- range partial "sidebar/visible-pages" $page }}
           {{ partial "sidebar/menu-item.html" (dict "page" . "currentDir" $currentDir "currentPath" $currentPath) }}
-        {{ end }}
+        {{- end }}
       </ul>
     </details>
-    {{- end }}
   </li>
 {{- else -}}
   {{- $active := partial "sidebar/is-active" (dict "currentDir" $currentDir "currentPath" $currentPath "candidate" $page "exact" true) -}}
-  {{- $icons := "" -}}
-  {{- if $top }}
-  <li class="mb-1"><a class="btn btn-toggle no-caret rounded{{ if $active }} active{{ end }}" href="{{ $page.Permalink }}">
-    {{ if $page.Params.tablerIcon }}{{ partial "inline-svg" (dict "src" $page.Params.tablerIcon "class" "svg-inline-sidebar") }}{{ end }}{{ if $page.Params.Icon }}<i class="sidebar-icon {{ $page.Params.Icon }}"></i>{{ end }}{{ or $page.LinkTitle $page.Title }}
-  </a></li>
-  {{- else }}
-  <li><a class="docs-link rounded{{ if $active }} active{{ end }}" href="{{ $page.Permalink }}">{{ if $page.Params.tablerIcon }}{{ partial "inline-svg" (dict "src" $page.Params.tablerIcon "class" "svg-inline-sidebar") }}{{ end }}{{ if $page.Params.Icon }}<i class="sidebar-icon {{ $page.Params.Icon }}"></i>{{ end }}{{ or $page.LinkTitle $page.Title }}</a></li>
-  {{- end }}
+  <li class="sidebar-nav__item">
+    <a class="sidebar-nav__link sidebar-nav__link--{{ $level }}" href="{{ $page.Permalink }}"{{ if $active }} aria-current="page"{{ end }}>
+      {{- with $page.Params.tablerIcon }}{{ partial "inline-svg" (dict "src" . "class" "svg-inline-sidebar") }}{{ end -}}
+      {{- with $page.Params.Icon }}<i class="sidebar-icon {{ . }}" aria-hidden="true"></i>{{ end -}}
+      {{ $label -}}
+    </a>
+  </li>
 {{- end -}}

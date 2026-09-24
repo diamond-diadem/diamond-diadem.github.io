@@ -26,15 +26,11 @@ docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-s
 {{< /tab >}}
 {{< /tabs >}}
 
-<div align="justify">
-
 PtyRAD effectue une reconstruction ptychographique à l'aide d'un cadre de différentiation automatique (AD) basé sur PyTorch, permettant une mise en œuvre flexible et efficace de l'optimisation par descente de gradient.
 
 PtyRAD intègre diverses fonctionnalités dans la reconstruction, notamment la détection d'objets à états mixtes, la correction de position et la correction de l'inclinaison des objets en fonction de leur position. Il permet également l'interopérabilité avec PtychoShelves (fold_slice) et py4DSTEM. Il fournit en outre un ensemble de fonctions utilitaires destinées à rationaliser le prétraitement des ensembles de données afin de faciliter leur traitement.
 
 PtyRAD prend également en charge le réglage des hyperparamètres et l'exécution sur plusieurs GPU. Parmi les fonctionnalités supplémentaires, on trouve notamment la compilation JIT avec `torch.compile`.
-
-</div>
 
 <h3 class="mb-1">Tutorial</h3>
 

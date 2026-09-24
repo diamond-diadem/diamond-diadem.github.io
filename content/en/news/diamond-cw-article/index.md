@@ -39,8 +39,6 @@ seo:
 
 <br/>
 
-<div align="justify">
-
 <big>
 
 The article has been published in a special issue of _Advanced Engineering Materials_ dedicated to the PEPR DIADEM. It presents the work conducted by the "Codes & Workflows" group of the DIAMOND project.
@@ -49,4 +47,3 @@ Read <a href="https://doi.org/10.1002/adem.202503185" target="_blank" rel="noope
 
 </big>
 
-</div>

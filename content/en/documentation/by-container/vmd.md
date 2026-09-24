@@ -5,8 +5,6 @@ weight: 17
 description: "Tutorial on using the DIAMOND VMD Apptainer container for molecular dynamics visualization, including container setup and usage examples."
 ---
 
-<div align="justify">
-
 {{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
 
 Before proceeding with these explanations, it is necessary to have installed Apptainer on your machine; see [this link]({{% ref "/documentation/install/install-apptainer/" %}}) for more details.
@@ -22,7 +20,6 @@ To quickly grasp the main commands of Apptainer, you can refer to [this tutorial
 <!-- <div class="youtube-video" data-video-id="NDv_vDjflgs?si=CZhqWkuEm40JUdND" language="en">
     <div class="youtube-placeholder en">
         <button class="popup-button">Consent to cookies</button>
-    </div>
 </div> -->
 
 {{< video-with-consent id="NDv_vDjflgs?si=CZhqWkuEm40JUdND" >}}

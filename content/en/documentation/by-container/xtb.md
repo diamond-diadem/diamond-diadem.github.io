@@ -6,8 +6,6 @@ weight: 11
 description: "Tutorial on using the DIAMOND xTB Apptainer container: pulling the image, running calculations, and usage examples for quantum chemistry."
 ---
 
-<div align="justify">
-
 {{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
 
 In preamble, you need to have Apptainer installed on your machine; see [this link]({{% ref "/documentation/install/install-apptainer/" %}}) for more details.
@@ -294,4 +292,3 @@ lorem-ipsum
 
 -->
 
-</div>

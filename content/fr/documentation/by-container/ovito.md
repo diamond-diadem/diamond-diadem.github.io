@@ -5,8 +5,6 @@ weight: 15
 description: "Tutoriel sur l'utilisation de l'image Apptainer OVITO de DIAMOND pour la visualisation et l'analyse de données de simulation atomistique."
 ---
 
-<div align="justify">
-
 {{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
 
 En préalable de ces explications, il est nécessaire d'avoir installé Apptainer sur votre machine ; voir [ce lien](/documentation/install/install-apptainer/) pour plus de détails.
@@ -22,7 +20,6 @@ Pour rapidement s'approprier les principales commandes d'Apptainer, vous pouvez 
 <!-- <div class="youtube-video" data-video-id="YE_r67OEEFg?si=t1ZbARrAwnFjFdYj" language="fr">
     <div class="youtube-placeholder fr">
         <button class="popup-button">Consentement aux cookies</button>
-    </div>
 </div> -->
 
 {{< video-with-consent id="YE_r67OEEFg?si=t1ZbARrAwnFjFdYj" >}}

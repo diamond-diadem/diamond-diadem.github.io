@@ -41,8 +41,6 @@ seo:
   <img class="logo-france2030-desktop diadem-ga-2025" alt="France 2030 Logo" style="max-width: 250px; height: auto;"/>
 </div>
 
-<div align="justify">
-
 L'Assemblée Générale 2025 du PEPR DIADEM, programme de France 2030 piloté par le CEA et le CNRS et dédié à la découverte accélérée de matériaux innovants assistée par Intelligence Artificielle, s'est tenue du 24 au 26 novembre 2025 à l'ENS Paris Saclay.
 
 Était au programme :
@@ -53,7 +51,5 @@ L'Assemblée Générale 2025 du PEPR DIADEM, programme de France 2030 piloté pa
   - des réunions de travail ont eu lieu autour des thématiques transversales (synthèse fluidique, couches minces, métallurgie, fabrication additive, caractérisation haut-débit, données et infrastructure numérique)
   - des présentations de faits marquants de projets ciblés et financés à l'AAP 2023 ont été réalisées
   - les projets financés à l'AAP 2024 ont également été présentés
-
-</div>
 
 <!-- <img class="officials-banner" alt="PEPR DIADEM Officials" style="width:100%; height:auto; margin-top: 20px; margin-bottom: 20px;"/> -->

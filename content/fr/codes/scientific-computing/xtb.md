@@ -26,11 +26,7 @@ docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-s
 {{< /tab >}}
 {{< /tabs >}}
 
-<div align="justify">
-
 **xTB** est un logiciel open source de calcul scientifique conçu pour effectuer des simulations atomistiques dans le domaine de la chimie quantique. Il peut notamment être utilisé pour l'optimisation de géométrie ou de la dynamique moléculaire. xTB est paramétré pour une grande partie du tableau périodique, jusqu'au Radon (Rn, Z=86).
-
-</div>
 
 <h3 class="mb-1">Tutoriel</h3>
 

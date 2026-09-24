@@ -1,17 +1,20 @@
-<!-- Auto collapsible section menu -->
-<ul class="list-unstyled collapsible-sidebar">
-  {{ $currentPage := . -}}
-  {{ $section := $currentPage.Section -}}
-  {{ $currentDir := "" -}}
-  {{ $currentPath := "" -}}
-  {{ with $currentPage.File -}}
-    {{ $currentDir = .Dir -}}
-    {{ $currentPath = .Path -}}
-  {{ end -}}
-  {{ range (where .Site.Sections "Section" "in" $section) }}
-    {{ partial "sidebar/section-page-link.html" (dict "section" . "label" (or .LinkTitle .Title) "currentPath" $currentPath "itemClass" "mb-1" "linkClass" "btn btn-toggle no-caret rounded") }}
-    {{ range .Pages.ByWeight }}
-      {{ partial "sidebar/menu-item.html" (dict "page" . "currentDir" $currentDir "currentPath" $currentPath "top" true) }}
-    {{ end }}
-  {{ end }}
+{{- /*
+  Section menu built from the section tree. The section landing page is
+  not listed (the header already links to it), and the first entry starts
+  unfolded so the menu opens on something to pick.
+
+  @param {page} . The page being rendered.
+*/ -}}
+{{- $currentDir := "" -}}
+{{- $currentPath := "" -}}
+{{- with .File -}}
+  {{- $currentDir = .Dir -}}
+  {{- $currentPath = .Path -}}
+{{- end -}}
+<ul class="sidebar-nav">
+  {{- range where site.Sections "Section" "in" .Section }}
+    {{- range $index, $page := partial "sidebar/visible-pages" . }}
+      {{ partial "sidebar/menu-item.html" (dict "page" $page "currentDir" $currentDir "currentPath" $currentPath "top" true "open" (eq $index 0)) }}
+    {{- end }}
+  {{- end }}
 </ul>

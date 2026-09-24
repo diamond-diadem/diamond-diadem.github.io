@@ -5,8 +5,6 @@ weight: 12
 description: "Tutoriel sur l'utilisation de l'image Apptainer AMITEX_FFTP de DIAMOND : récupération du conteneur et exécution de simulations mécaniques par FFT."
 ---
 
-<div align="justify">
-
 {{< callout context="note" title="Prérequis" >}}
 
 - Apptainer ou Docker (voir soit [notre guide d'installation]({{% ref "/documentation/install/install-apptainer" %}}), soit la documentation officielle correspondante)
@@ -25,7 +23,6 @@ Créez un dossier contenant l'image **amitex_fftp.sif** et l'archive des **fichi
 tar -xzf amitex-tutorial-inputs.tar.gz # Extrait le contenu de l'archive.
 ```
 
-
 ## Commande en une ligne
 
 Pour les personnes pressées, voici comment lancer un calcul Amitex_FFTP :
@@ -34,16 +31,12 @@ Pour les personnes pressées, voici comment lancer un calcul Amitex_FFTP :
 apptainer exec amitex_fftp.sif mpirun -np <N> amitex_fftp <args>
 ```
 
-
-
 ## Introduction
 
 Amitex_FFTP est un code de calcul massivement parallèle, construit autour du standard MPI permettant de distribuer la charge de calcul sur différents processus. Il existe deux façons de lancer le code conteneurisé en parallèle:
 
 - **MPI embarqué** dans le conteneur => fonctionnement garanti, mais limité à une seule machine (un seul noeud)
 - **MPI hybride** avec celui de la machine hôte => fonctionne sur plusieurs noeuds mais il peut exister des incompatibilités.
-
-
 
 ## Simulation en local (MPI embarqué)
 
@@ -52,8 +45,6 @@ apptainer exec amitex_fftp.sif mpirun amitex_fftp -nm concrete.vtk -m material.x
 ```
 
 On remarque que la commande commence par lancer **apptainer**, qui exécute ensuite  `mpirun amitex_fftp <args>`  dans le conteneur.
-
-
 
 ## Simulation sur cluster (MPI hybride)
 
@@ -79,7 +70,6 @@ Il est ensuite possible de lancer le calcul avec la commande :
 sbatch job.sh
 ```
 
-
 ### Lancement sans scheduler
 
 ```bash
@@ -87,8 +77,6 @@ mpirun -np <N> apptainer exec amitex_fftp.sif amitex_fftp -nm concrete.vtk -m ma
 ```
 
 ***La commande mpirun doit provenir d'OpenMPI 4 pour que cela fonctionne.**
-
-
 
 ## Visualiser les résultats:
 
@@ -108,10 +96,6 @@ apptainer run paraview.sif concrete.vtk
 # Puis dans la barre menu du haut, sélectionner MaterialId dans le menu déroulant à la place de Solid Color.
 # Puis dans la barre menu du haut, sélectionner Surface dans le menu déroulant à la place de Outline.
 ```
-
-
-
-
 
 ## (Avancé) Loi de comportement définie par l'utilisateur
 
@@ -227,8 +211,6 @@ On peut maintenant relancer le calcul avec la nouvelle loi de comportement, apr�
 apptainer exec amitex_fftp.sif mpirun amitex_fftp -nm concrete.vtk -m material.xml -c loading.xml -a algorithm.xml -s out
 ```
 
-
-
 ### Comportements MFRONT
 
 Il est possible de définir ses propres lois de comportement matériau également grace à **mfront**. Nous allons voir un exemple d'un comportement matériau défini avec mfront, puis utilisé avec AMITEX_FFTP. La première étape consiste à générer la bibliothèque dynamique contenant la fonction umat :
@@ -272,7 +254,6 @@ apptainer exec amitex_fftp.sif gnuplot < plot.gp
 {{< /tab >}}
 {{< tab "Docker" >}}
 
-
 Créez un dossier contenant l'archive des **fichiers d'entrées**. Placez-vous dans ce dossier, décompressez l'archive et modifiez les droits sur les fichiers comme ceci :
 ```bash
 tar -xzf amitex-tutorial-inputs.tar.gz # Extrait le contenu de l'archive.
@@ -300,7 +281,6 @@ mpirun -np <N> amitex_fftp <args>
 ```
 
 **`mpirun` refuse d'être lancé par un utilisateur root, veillez donc à bien présiser `--user=1000:1000` lors du lancement du docker, ou bien mettez `--allow-run-as-root` après chaque commande mpirun**
-
 
 ## Introduction
 
@@ -332,10 +312,6 @@ apptainer run paraview.sif concrete.vtk
 # Puis dans la barre menu du haut, sélectionner MaterialId dans le menu déroulant à la place de Solid Color.
 # Puis dans la barre menu du haut, sélectionner Surface dans le menu déroulant à la place de Outline.
 ```
-
-
-
-
 
 ## (Avancé) Loi de comportement définie par l'utilisateur
 
@@ -451,8 +427,6 @@ On peut maintenant relancer le calcul avec la nouvelle loi de comportement, apr�
 mpirun amitex_fftp -nm concrete.vtk -m material.xml -c loading.xml -a algorithm.xml -s out
 ```
 
-
-
 ### Comportements MFRONT
 
 Il est possible de définir ses propres lois de comportement matériau également grace à **mfront**. Nous allons voir un exemple d'un comportement matériau défini avec mfront, puis utilisé avec AMITEX_FFTP. La première étape consiste à générer la bibliothèque dynamique contenant la fonction umat :
@@ -498,4 +472,3 @@ gnuplot < plot.gp
 {{< /tab >}}
 {{< /tabs >}}
 
-</div>

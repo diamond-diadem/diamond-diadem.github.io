@@ -4,8 +4,6 @@ weight: 1
 description: "Tutoriel sur l'utilisation d'AiiDA via le conteneur Apptainer de DIAMOND pour automatiser des workflows de calcul de matériaux avec traçabilité."
 ---
 
-<div align="justify">
-
 {{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
 
 En préalable de ces explications, il est nécessaire d'avoir installé Apptainer sur votre machine ; voir [ce lien](/documentation/install/install-apptainer/) pour plus de détails.
@@ -218,4 +216,3 @@ Voici la liste de tous les problèmes connus à ce jour :
 - Aucune compatibilité ascendante des images Apptainer de la version **1.3.X** vers la version **1.2.X**. Construire une image avec Apptainer **v1.3.X** empêchera son téléchargement depuis le registre `gitlab-gricad` avec Apptainer **v1.2.X**.
 - Le service postgresql ne démarrera pas si le port 5432 est déjà utilisé sur cette machine. Dans ce cas, il est impossible de créer un profil pour AiiDA.
 
-</div>

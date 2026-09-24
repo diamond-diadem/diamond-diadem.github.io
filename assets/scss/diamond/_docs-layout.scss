@@ -29,34 +29,195 @@ $docs-content-max-width: 46rem;
         flex: none;
         width: auto;
     }
+
+    // The theme caps the list at the screen height with a permanent scroll bar.
+    // A sidebar that scrolls with the page needs neither: one scroll is enough.
+    .docs-sidebar-top .docs-links {
+        max-height: none;
+        overflow-y: visible;
+    }
+
+    // A sticky sidebar must scroll on its own to reach its last entries: show a
+    // slim bar only when the list overflows, and keep the page still at its end.
+    // Its height leaves room for the sticky offset (see common/_custom.scss).
+    .docs-sidebar:not(.docs-sidebar-top) .docs-links {
+        max-height: calc(100vh - 7rem);
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        scrollbar-width: thin;
+        scrollbar-color: rgba($body-color, 0.25) transparent;
+        scrollbar-gutter: stable;
+    }
 }
 
-// Sidebar tree: branches are native disclosures (see sidebar/menu-item.html)
+// Sidebar tree (see sidebar/menu-item.html): the section entries read as
+// headings, and their children hang from a thin guide line. Branches are
+// native disclosures, so they fold without JS.
 
-details.sidebar-group {
+$sidebar-nav-radius: 0.375rem;
+$sidebar-nav-indent: 0.625rem;
+$sidebar-nav-duration: 0.2s;
+
+.sidebar-nav,
+.sidebar-nav__children {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+    margin-block: 2rem;
+    font-family: $font-family-ui;
+    line-height: 1.3;
+}
+
+.sidebar-nav__children {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    margin: 0.125rem 0 0.5rem $sidebar-nav-indent;
+    padding-left: 0.375rem;
+    border-left: 1px solid rgba($body-color, 0.14);
+}
+
+// Rows: a whole-row target, tinted on hover
+
+.sidebar-nav__link,
+.sidebar-nav__group > .sidebar-nav__toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.375rem $sidebar-nav-indent;
+    border-radius: $sidebar-nav-radius;
+    color: $body-color;
+    text-decoration: none;
+    transition:
+        background-color $sidebar-nav-duration ease,
+        color $sidebar-nav-duration ease;
+}
+
+.sidebar-nav__link:hover,
+.sidebar-nav__group > .sidebar-nav__toggle:hover {
+    background-color: rgba($body-color, 0.06);
+    color: $body-color;
+    text-decoration: none;
+}
+
+.sidebar-nav__link:focus-visible,
+.sidebar-nav__group > .sidebar-nav__toggle:focus-visible {
+    outline: 2px solid $link-color;
+    outline-offset: -2px;
+}
+
+.sidebar-nav__link--top,
+.sidebar-nav__toggle--top {
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.sidebar-nav__link--nested,
+.sidebar-nav__toggle--nested {
+    font-size: 1.0625rem;
+    font-weight: 400;
+}
+
+.sidebar-nav__link--nested {
+    position: relative;
+    padding-block: 0.3125rem;
+    color: $body-secondary-color;
+}
+
+// Current page: accent color, and a bar laid over the guide line
+
+.sidebar-nav__link[aria-current="page"] {
+    background-color: rgba($link-color, 0.08);
+    color: $link-color;
+    font-weight: 600;
+}
+
+.sidebar-nav__link--nested[aria-current="page"]::before {
+    content: "";
+    position: absolute;
+    inset-block: 0.3125rem;
+    left: calc(-0.375rem - 1px);
+    width: 2px;
+    border-radius: 1px;
+    background-color: $link-color;
+}
+
+// Branch toggles: a small chevron at the row end, turning down when open
+
+details.sidebar-nav__group {
     @include plain-disclosure;
 }
 
-.sidebar-group > summary {
+.sidebar-nav__group > .sidebar-nav__toggle {
+    justify-content: space-between;
     cursor: pointer;
     list-style: none;
 }
 
-.sidebar-group > summary::-webkit-details-marker {
+.sidebar-nav__group > .sidebar-nav__toggle::-webkit-details-marker {
     display: none;
 }
 
-.sidebar-group[open] > summary::before {
-    transform: rotate(90deg);
+.sidebar-nav__group > .sidebar-nav__toggle::after {
+    content: "";
+    position: static;
+    flex: none;
+    width: 0.4em;
+    height: 0.4em;
+    margin-right: 0.15em;
+    border-right: 1.5px solid currentColor;
+    border-bottom: 1.5px solid currentColor;
+    opacity: 0.55;
+    transform: rotate(-45deg);
+    transition: transform $sidebar-nav-duration ease;
 }
 
-.sidebar-group > summary:focus-visible {
-    outline: 2px solid $link-color;
-    outline-offset: 2px;
+.sidebar-nav__group[open] > .sidebar-nav__toggle::after {
+    transform: translateY(-0.1em) rotate(45deg);
 }
 
 @include color-mode(dark) {
-    .sidebar-group > summary:focus-visible {
+    .docs-sidebar:not(.docs-sidebar-top) .docs-links {
+        scrollbar-color: rgba($body-color-dark, 0.25) transparent;
+    }
+
+    .sidebar-nav__children {
+        border-left-color: rgba($body-color-dark, 0.16);
+    }
+
+    .sidebar-nav__link,
+    .sidebar-nav__group > .sidebar-nav__toggle,
+    .sidebar-nav__link:hover,
+    .sidebar-nav__group > .sidebar-nav__toggle:hover {
+        color: $body-color-dark;
+    }
+
+    .sidebar-nav__link:hover,
+    .sidebar-nav__group > .sidebar-nav__toggle:hover {
+        background-color: rgba($white, 0.07);
+    }
+
+    .sidebar-nav__link--nested {
+        color: $body-secondary-color-dark;
+    }
+
+    .sidebar-nav__link[aria-current="page"] {
+        background-color: rgba($link-color-dark, 0.1);
+        color: $link-color-dark;
+    }
+
+    .sidebar-nav__link--nested[aria-current="page"]::before {
+        background-color: $link-color-dark;
+    }
+
+    .sidebar-nav__link:focus-visible,
+    .sidebar-nav__group > .sidebar-nav__toggle:focus-visible {
         outline-color: $link-color-dark;
     }
 }
@@ -65,11 +226,11 @@ details.sidebar-group {
 // the sidebar width then accounts for every entry, so it does not jump when
 // a branch opens, and the opening can be animated.
 @supports selector(::details-content) {
-    .sidebar-group {
+    .sidebar-nav__group {
         interpolate-size: allow-keywords;
     }
 
-    .sidebar-group::details-content {
+    .sidebar-nav__group::details-content {
         block-size: 0;
         overflow: clip;
         content-visibility: visible;
@@ -79,7 +240,7 @@ details.sidebar-group {
             visibility 0s linear 0.3s;
     }
 
-    .sidebar-group[open]::details-content {
+    .sidebar-nav__group[open]::details-content {
         block-size: auto;
         visibility: visible;
         transition-delay: 0s;
@@ -87,7 +248,10 @@ details.sidebar-group {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .sidebar-group::details-content {
+    .sidebar-nav__link,
+    .sidebar-nav__group > .sidebar-nav__toggle,
+    .sidebar-nav__group > .sidebar-nav__toggle::after,
+    .sidebar-nav__group::details-content {
         transition: none;
     }
 }

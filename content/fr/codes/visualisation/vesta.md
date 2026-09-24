@@ -35,11 +35,7 @@ docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-s
 {{< /tab >}}
 {{< /tabs >}}
 
-<div align="justify">
-
 VESTA est un programme de visualisation 3D conçu pour les scientifiques et ingénieurs travaillant dans les domaines de la cristallographie, de la science des matériaux, et de la chimie. Il permet l'affichage et l'analyse de structures cristallines et de données électroniques, facilitant ainsi la compréhension des propriétés matérielles.
-
-</div>
 
 ### Caractéristiques principales
 
@@ -77,11 +73,7 @@ VESTA est un programme de visualisation 3D conçu pour les scientifiques et ing�
 - Cristallographie : analyse de structures cristallines déterminées expérimentalement.
 - Enseignement : outil pédagogique pour illustrer les concepts de structure des matériaux et de chimie.
 
-<div align="justify">
-
 VESTA se distingue par sa capacité à combiner des fonctions de visualisation sophistiquées avec des outils d’analyse robustes, rendant accessible l’étude détaillée des structures atomiques et des propriétés électroniques à un large éventail de professionnels et d'étudiants dans les sciences des matériaux.
-
-</div>
 
 <h3 class="mb-1">Tutoriel</h3>
 

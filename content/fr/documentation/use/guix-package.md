@@ -4,8 +4,6 @@ weight: 8
 description: "Comment accéder et utiliser les paquets Guix de codes scientifiques de la plateforme DIAMOND pour des simulations de matériaux reproductibles."
 ---
 
-<div align="justify">
-
 {{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
 
 En préalable de ces explications, il est nécessaire d'avoir installé Guix sur votre machine ; voir [ce lien](/documentation/install/install-guix/) pour plus de détails.
@@ -77,7 +75,6 @@ Ensuite, par exemple, `quantum-espresso` et `OpenMPI` peuvent être installés a
 guix install quantum-espresso openmpi@4
 ```
 
-
 ## Utilisation des paquets Guix
 
 ### Utilisation de `guix shell`
@@ -111,4 +108,3 @@ guix time-machine -C channels-stable.scm -- shell --pure quantum-espresso openmp
 
 Cette commande crée un environnement reproductible avec les versions correctes des paquets et de leurs dépendances.
 
-</div>

@@ -5,8 +5,6 @@ weight: 12
 description: "Tutorial on using the DIAMOND AMITEX_FFTP Apptainer container: pulling the image and running FFT-based mechanical simulations for materials."
 ---
 
-<div align="justify">
-
 {{< callout context="note" title="Prerequisites" >}}
 
 - Apptainer or Docker (see either [our installation guide]({{% ref "/documentation/install/install-apptainer" %}}) or the corresponding official documentation)
@@ -55,7 +53,6 @@ Note that the command first launches **apptainer**, which then executes `mpirun 
 
 Example of a minimal launch script **job.sh**:
 
-
 ```bash {frame="none"}
 #!/bin/bash
 
@@ -67,7 +64,6 @@ Example of a minimal launch script **job.sh**:
 
 srun apptainer exec amitex_fftp.sif amitex_fftp -nm concrete.vtk -m material.xml -c loading.xml -a algorithm.xml -s out
 ```
-
 
 The computation can then be launched with the command:
 
@@ -82,7 +78,6 @@ mpirun -np <N> apptainer exec amitex_fftp.sif amitex_fftp -nm concrete.vtk -m ma
 ```
 
 ***The `mpirun` command must come from OpenMPI 4 for this to work.**
-
 
 ## Visualizing the results
 
@@ -347,7 +342,6 @@ make
 cd ..
 ```
 
-
 This creates `comportement_umat/libUmatAmitex.so`. Next, you need to modify **material.xml** to call this new behavior law by replacing, for example `<Material numM="2" Lib="" Law="elasiso"> [...] </Material>` with:
 
 ```xml
@@ -479,8 +473,6 @@ gnuplot < plot.gp
 
 **Some files may be created with permissions that prevent them from being modified or deleted from outside the container. It is possible to change permissions from inside the container using for example: `chmod -R a+rwx $(pwd)`.**
 
-
 {{< /tab >}}
 {{< /tabs >}}
 
-</div>

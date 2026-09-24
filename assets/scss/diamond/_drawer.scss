@@ -164,21 +164,20 @@ $drawer-header-height: 3.8125rem;
     }
 
     // Section menu: the sidebar tree, with rows sized for touch
-    .drawer .collapsible-sidebar {
+    .drawer .sidebar-nav {
         margin: 0;
-        font-family: $font-family-ui;
     }
 
-    .drawer .collapsible-sidebar .btn-toggle {
+    .drawer .sidebar-nav__link--top,
+    .drawer .sidebar-nav__toggle--top {
         min-height: 2.75rem;
-        font-size: 1.125rem;
+        font-size: 1.25rem;
     }
 
-    .drawer .collapsible-sidebar .docs-link {
-        display: flex;
-        align-items: center;
+    .drawer .sidebar-nav__link--nested,
+    .drawer .sidebar-nav__toggle--nested {
         min-height: 2.5rem;
-        font-size: 1rem;
+        font-size: 1.125rem;
     }
 
     .drawer-footer {

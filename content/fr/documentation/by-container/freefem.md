@@ -5,8 +5,6 @@ weight: 5
 description: "Tutoriel sur l'utilisation du conteneur Apptainer FreeFEM de DIAMOND : récupération de l'image, exécution des calculs et exemples d'utilisation."
 ---
 
-<div align="justify">
-
 {{< callout context="note" title="Prérequis" >}}
 
 - Apptainer (voir soit [notre guide d'installation]({{% ref "/documentation/install/install-apptainer" %}}), soit [la documentation officiel](https://apptainer.org/docs/user/latest/quick_start.html#installation))
@@ -16,7 +14,6 @@ description: "Tutoriel sur l'utilisation du conteneur Apptainer FreeFEM de DIAMO
 {{< /callout >}}
 
 Pour plus d'informations sur les conteneurs Apptainer et leur utilisation, nous mettons à votre disposition [une description d'Apptainer]({{% ref "/documentation/use/apptainer" %}}), un guide rapide sur [comment utiliser Apptainer]( {{% ref "/documentation/use/apptainer-image" %}}), sans oublier bien sûr la [documentation officielle d'Apptainer](https://apptainer.org/docs/user/latest/).
-
 
 ## Fichiers d'entrée
 
@@ -107,4 +104,3 @@ mpirun -np N apptainer exec freefem.sif FreeFem++-mpi MPIGMRES2D.edp -d 1 -k 1 -
 
 Plus d'informations sur l'utilisation des conteneurs Apptainer en parallèle, y compris sur les clusters et la différence entre les modes parallèle embarqué et hybride, sont disponibles sur [cette page](/documentation/use/apptainer-hpc).
 
-</div>

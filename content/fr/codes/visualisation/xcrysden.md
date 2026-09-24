@@ -27,11 +27,7 @@ docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-s
 {{< /tab >}}
 {{< /tabs >}}
 
-<div align="justify">
-
 **XCrySDen** est une application logicielle graphique conçue pour la visualisation de structures cristallines, de systèmes moléculaires et de propriétés électroniques dans le cadre de la science des matériaux computationnelle. Il est largement utilisé avec des logiciels de théorie de la fonctionnelle de la densité (DFT) tels que Quantum ESPRESSO, VASP et Wien2k. XCrySDen permet la visualisation 3D des réseaux cristallins, des mailles élémentaires et des géométries moléculaires, tout en offrant des outils pour analyser les propriétés de symétrie et les chemins des points k dans l’espace réciproque. Le logiciel est compatible avec plusieurs formats de fichiers, comme CIF, POSCAR et XSF, offrant ainsi une grande flexibilité dans le traitement de différents ensembles de données. Basé sur Tcl/Tk, XCrySDen est léger et indépendant des plateformes, fonctionnant sur les systèmes Linux et macOS. Son interface conviviale et ses graphiques interactifs en font un outil efficace pour les chercheurs en physique de l’état solide, chimie et science des matériaux.
-
-</div>
 
 <h3 class="mb-1">Tutoriel</h3>
 

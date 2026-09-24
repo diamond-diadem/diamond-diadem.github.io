@@ -21,7 +21,7 @@ This tutorial explains the various steps you need to take to report a bug, reque
   <div class="left-use-gitlab">
     <img alt="use gitlab" class="use-gitlab">
   </div>
-  <div class="right-use-gitlab" align="justify">
+  <div class="right-use-gitlab">
 
 If you encounter a problem when using the platform's tools, or if you have a specific request, you can contact the platform's engineers via this [link](https://gricad-gitlab.univ-grenoble-alpes.fr/diamond).
 
@@ -31,8 +31,6 @@ In practice, you can access the "Issues" and "Merge Requests" tabs from any repo
 
   </div>
 </div>
-
-<div align="justify">
 
 ## View existing issues
 
@@ -95,4 +93,3 @@ Finally, you can provide feedback on the DIAMOND project documentation. This fee
 
 Then we ask you to be as specific as possible, giving examples and specifying the section of the documentation your feedback relates to.
 
-</div>

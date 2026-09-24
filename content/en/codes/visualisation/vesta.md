@@ -35,11 +35,7 @@ docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-s
 {{< /tab >}}
 {{< /tabs >}}
 
-<div align="justify">
-
 VESTA (Visualization for Electronic and Structural Analysis) is a 3D visualization program designed for scientists and engineers working in the fields of crystallography, materials science, and chemistry. It enables the display and analysis of crystalline structures and electronic data, facilitating the understanding of material properties.
-
-</div>
 
 ### Key Features
 
@@ -77,11 +73,7 @@ VESTA (Visualization for Electronic and Structural Analysis) is a 3D visualizati
 - Crystallography: analysis of experimentally determined crystal structures.
 - Education: pedagogical tool for illustrating concepts in materials science and chemistry.
 
-<div align="justify">
-
 VESTA stands out for its ability to combine sophisticated visualization functions with robust analytical tools, making detailed study of atomic structures and electronic properties accessible to a wide range of professionals and students in the materials sciences.
-
-</div>
 
 <h3 class="mb-1">Tutorial</h3>
 

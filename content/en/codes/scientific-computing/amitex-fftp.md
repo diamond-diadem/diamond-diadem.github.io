@@ -27,8 +27,6 @@ docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-s
 {{< /tab >}}
 {{< /tabs >}}
 
-<div align="justify">
-
 **AMITEX_FFTP** is a **distributed** solver based on **FFTs** for **non-linear** mechanical simulations on **heterogeneous unit-cells** (described by regular 3D images). **AMITEX_FFTP** can be run either on individual PC, local clusters or on large **High Performance Computing** platforms to perform large scale simulations.
 
 The code combines **massively parallel implementation** with a **versatile user interface** :
@@ -55,8 +53,6 @@ The code combines **massively parallel implementation** with a **versatile user 
      ├── g++
      └── gfortran
 ```
-
-</div>
 
 <h3 class="mb-1">Tutorial</h3>
 
