@@ -1,5 +1,5 @@
 {{- /*
-  Lists child sections as link cards, ordered by weight. Renders nothing when there are none.
+  Lists child sections as link cards, in the order given. Renders nothing when there are none.
   Drafts are excluded by Hugo itself unless the site is built with --buildDrafts.
 
   Each child section provides its card through front matter:
@@ -13,7 +13,7 @@
 {{- with .sections }}
 <h2>{{ $.heading }}</h2>
 <div class="card-nav d-flex flex-column">
-  {{- range .ByWeight }}
+  {{- range . }}
     {{- partial "main/link-card.html" (dict
       "href" .RelPermalink
       "title" .Title

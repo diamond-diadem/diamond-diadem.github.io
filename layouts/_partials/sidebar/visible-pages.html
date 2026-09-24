@@ -1,9 +1,15 @@
 {{- /*
-  Returns the children of a section that the sidebar lists, by weight.
+  Returns the children of a section that the sidebar lists, by weight, or
+  alphabetically when the section sets `sidebar_sort: title` (e.g. a
+  catalogue of codes, where the reading order carries no meaning).
   Pages flagged `sidebar_hidden: true` (e.g. a section's landing page,
   already reached from the header) are left out.
 
   @param {page} . The section whose children to list.
   @returns {pages}
 */ -}}
-{{- return where .Pages.ByWeight "Params.sidebar_hidden" "ne" true -}}
+{{- $pages := .Pages.ByWeight -}}
+{{- if eq .Params.sidebar_sort "title" -}}
+  {{- $pages = .Pages.ByLinkTitle -}}
+{{- end -}}
+{{- return where $pages "Params.sidebar_hidden" "ne" true -}}
