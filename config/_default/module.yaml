@@ -88,8 +88,8 @@ mounts:
   - source: static
     target: static
 
-  - source: node_modules/@fontsource-variable/alegreya/files
-    target: static/fonts/alegreya
+  - source: node_modules/@fontsource-variable/source-serif-4/files
+    target: static/fonts/source-serif-4
 
-  - source: node_modules/@fontsource/alegreya-sans/files
-    target: static/fonts/alegreya-sans
+  - source: node_modules/@fontsource-variable/source-sans-3/files
+    target: static/fonts/source-sans-3

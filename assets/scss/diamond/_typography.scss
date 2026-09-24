@@ -1,12 +1,30 @@
-// Body text size and the navigation elements set in the headings typeface.
-// The theme sizes body text at $font-size-base, then $font-size-md from md.
+// Body text size, weight and leading, and the interface elements set in the
+// sans-serif. The theme sizes body text at $font-size-base, then $font-size-md from md.
 
 body {
     font-size: $font-size-base * $body-text-scale;
+    line-height: $body-line-height;
+    font-optical-sizing: auto;
 
     @include media-breakpoint-up(md) {
         font-size: $font-size-md * $body-text-scale;
     }
+}
+
+@include color-mode(dark) {
+    body {
+        font-weight: $font-weight-base-dark;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    letter-spacing: -0.01em;
+    text-wrap: balance;
 }
 
 .navbar,
@@ -18,5 +36,5 @@ body {
 .btn,
 .badge,
 .site-footer {
-    font-family: $headings-font-family;
+    font-family: $font-family-ui;
 }

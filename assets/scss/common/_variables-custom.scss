@@ -3,30 +3,30 @@
 $lead-font-weight: 400;
 $lead-font-size: 175%;
 
-// Palette tuned for comfortable reading. Light mode sits on a soft cool grey
-// instead of pure white to avoid glare, and text is a slate tone rather than
-// near black. Body text, headings, muted text and links all reach 7:1 (WCAG AAA)
-// on the page background. Raised surfaces (cards, inputs, menus) are only a
-// shade lighter than the page and rely on a soft border to stand out.
+// Light mode follows the vhbelvadi.com palette: black ink on warm paper,
+// Klein blue links, a warm grey for secondary surfaces and borders, and muted
+// text as black at 45% over the paper. Raised surfaces (cards, inputs, menus)
+// are white and rely on the warm border to stand out.
 // The dark background stays #2c2c2c because the dark variants of the site
-// images are drawn on that exact color; its text is softened to limit halation.
-$body-bg: #eceef1;
-$body-color: #27323c; // 11.2:1
-$headings-color: #1d2d35; // 12.2:1
-$body-secondary-color: #434e59; // 7.3:1
-$primary: #314b82; // 7.3:1, links derive from it
-$surface-raised: #f3f4f6;
-$body-secondary-bg: #e2e5e9;
+// images are drawn on that exact color. Its text is a warm grey, softer than
+// white to limit halation, and links turn sage green.
+$body-bg: #fffefc;
+$body-color: #000;
+$headings-color: #000;
+$body-secondary-color: #8c8c8a;
+$primary: #002fa7; // links derive from it
+$surface-raised: #fff;
+$body-secondary-bg: #ebeae5;
 $body-tertiary-bg: $surface-raised;
-$border-color: #d3d7dd;
+$border-color: #d7d4cf;
 
 $body-bg-dark: #2c2c2c;
-$body-color-dark: #d0d3d8; // 9.3:1
-$headings-color-dark: #e6e8eb; // 11.4:1
-$body-secondary-color-dark: #bcbfc5; // 7.6:1
-$link-color-dark: #b3c7ff; // 8.3:1
-$surface-raised-dark: #313234;
-$border-color-dark: #46484c;
+$body-color-dark: #d0ccc7; // 8.7:1
+$headings-color-dark: #e6e2de; // 10.8:1
+$body-secondary-color-dark: #c0bcb7; // 7.4:1
+$link-color-dark: #a3cbb5; // 7.8:1
+$surface-raised-dark: #333230;
+$border-color-dark: #4a4945;
 $body-tertiary-bg-dark: $surface-raised-dark;
 $navbar-dark-color: $body-color-dark;
 
@@ -55,10 +55,11 @@ $grid-breakpoints: (
 @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
 @include _assert-starts-at-zero($grid-breakpoints, "$grid-breakpoints");
 
-// Typography: Alegreya for reading text, Alegreya Sans for headings and navigation
-$font-family-body: "Alegreya", Georgia, "Times New Roman", serif;
+// Typography: Source Serif 4 for reading text, its companion Source Sans 3
+// for headings, navigation and interface elements
+$font-family-body: "Source Serif 4", Georgia, "Times New Roman", serif;
 $font-family-ui:
-    "Alegreya Sans",
+    "Source Sans 3",
     system-ui,
     -apple-system,
     "Segoe UI",
@@ -67,6 +68,11 @@ $font-family-ui:
 
 $font-family-base: $font-family-body;
 $headings-font-family: $font-family-ui;
+$headings-font-weight: 600;
 
-// Alegreya has a small x-height, so body text is enlarged to read at a usual size
-$body-text-scale: 1.2;
+// Text sits a touch above the regular weight so it keeps a dense, even color.
+// Light text on a dark background looks bolder, so dark mode drops back to 400.
+$font-weight-base: 450;
+$font-weight-base-dark: 400;
+$body-line-height: 1.45;
+$body-text-scale: 1.125;

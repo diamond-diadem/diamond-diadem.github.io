@@ -20,8 +20,8 @@
     "preview": "vite preview --outDir public"
   },
   "dependencies": {
-    "@fontsource-variable/alegreya": "^5.3.0",
-    "@fontsource/alegreya-sans": "^5.3.0",
+    "@fontsource-variable/source-sans-3": "^5.3.0",
+    "@fontsource-variable/source-serif-4": "^5.3.0",
     "@tabler/icons": "^3.44.0",
     "@thulite/doks-core": "^1.9.3",
     "@thulite/images": "^3.3.4",
