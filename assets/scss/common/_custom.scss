@@ -26,11 +26,6 @@
 @import "diamond/syntax-contrast";
 @import "diamond/site-footer";
 
-@include color-mode(dark) {
-    .dropdown-menu {
-        background-color: $body-bg-dark;
-    }
-}
 // Right-hand header controls, in reading order: search, color mode, language
 .navbar-actions {
     align-items: center;
@@ -84,7 +79,7 @@
 }
 
 .language-toggle-option.active {
-    background-color: $white;
+    background-color: $surface-raised;
     color: $link-color;
     box-shadow: 0 1px 3px rgba($black, 0.18);
 }
@@ -138,7 +133,7 @@
 
 .navbar {
     z-index: 1000;
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba($body-bg, 0.95);
     border-bottom: 0;
 }
 
@@ -594,12 +589,9 @@ tr {
 // // // <<< aiida-lammps diffusion images <<< // // //
 
 hr {
-    border: solid 1px black;
-}
-@include color-mode(dark) {
-    hr {
-        border: solid 1px white;
-    }
+    border: 0;
+    border-top: 1px solid var(--bs-border-color);
+    opacity: 1;
 }
 
 // // // >>> <select> in codes home page >>> // // //

@@ -66,7 +66,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: white;
+    background: $surface-raised;
     padding: 20px;
     width: 50%;
     max-height: 85%; /* Limite la hauteur à 80% de la hauteur de l'écran */
@@ -92,7 +92,7 @@
 
 @include color-mode(dark) {
     .popup-dialog {
-        background: $body-bg-dark;
+        background: $surface-raised-dark;
     }
 }
 
@@ -235,7 +235,7 @@
     z-index: 10000; // au-dessus de tout
 
     .popup-customization-dialog {
-        background-color: white;
+        background-color: $surface-raised;
         padding: 2rem;
         border-radius: 16px;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
@@ -308,7 +308,7 @@
 
 @include color-mode(dark) {
     .popup-customization-dialog {
-        background-color: $body-bg-dark;
+        background-color: $surface-raised-dark;
     }
 }
 

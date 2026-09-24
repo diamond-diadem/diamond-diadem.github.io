@@ -1,14 +1,31 @@
+// The theme flattens dark mode cards onto the page background; bring back
+// the raised surface and border that light mode uses
+@include color-mode(dark) {
+    .card {
+        background: var(--bs-card-bg);
+        border-color: var(--bs-card-border-color);
+    }
+}
+
+// Soft outline that firms up on hover, following the color mode
 .card-custom {
-    border: 0.75px solid black;
+    border: 1px solid var(--bs-border-color);
+    transition: border-color 0.15s ease-in-out;
 }
 
 .card-custom:hover {
-    border: 0.75px solid black !important;
+    border-color: rgba($body-color, 0.45) !important;
 }
 
 @include color-mode(dark) {
+    .card-custom:hover {
+        border-color: rgba($body-color-dark, 0.45) !important;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
     .card-custom {
-        border: 0.75px solid white !important;
+        transition: none;
     }
 }
 

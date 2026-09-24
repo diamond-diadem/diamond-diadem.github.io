@@ -1,12 +1,14 @@
-// Callouts: a soft tint of their accent, with the icon and title in a deep
-// shade of it. Text keeps the body color, well above 7:1 on the tint (the
-// theme's saturated backgrounds made the thin body typeface look washed out).
+// Callouts: a faint tint of their accent blended into the page background,
+// so they read as part of the page rather than bright panels. The icon and
+// title use a deep shade of the accent, and every text color keeps at least
+// 7:1 on the tint. Yellow needs a darker shade than the other hues to get there.
 
+// name: (hue, lightness of the icon and title shade)
 $callout-hues: (
-    note: 234,
-    tip: 281,
-    caution: 41,
-    danger: 339
+    note: (234, 30%),
+    tip: (281, 30%),
+    caution: (41, 22%),
+    danger: (339, 30%)
 );
 
 .callout {
@@ -18,15 +20,17 @@ $callout-hues: (
     text-underline-offset: 0.2em;
 }
 
-@each $name, $hue in $callout-hues {
+@each $name, $shades in $callout-hues {
+    $hue: nth($shades, 1);
+
     .callout.callout-#{$name} {
-        border-color: hsl($hue, 65%, 55%);
-        background-color: hsl($hue, 75%, 96%);
+        border-color: hsl($hue, 45%, 55%);
+        background-color: mix(hsl($hue, 55%, 50%), $body-bg, 8%);
 
         .callout-icon,
         .callout-title,
         .callout-body a {
-            color: hsl($hue, 55%, 30%);
+            color: hsl($hue, 55%, nth($shades, 2));
         }
 
         .callout-body,
@@ -38,7 +42,9 @@ $callout-hues: (
 }
 
 @include color-mode(dark) {
-    @each $name, $hue in $callout-hues {
+    @each $name, $shades in $callout-hues {
+        $hue: nth($shades, 1);
+
         .callout.callout-#{$name} {
             border-color: hsl($hue, 70%, 65%);
             background-color: mix(hsl($hue, 55%, 50%), $body-bg-dark, 16%);

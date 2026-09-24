@@ -3,23 +3,42 @@
 $lead-font-weight: 400;
 $lead-font-size: 175%;
 
-// Palette tuned for comfortable reading: links and buttons reach 7:1 (WCAG AAA),
-// muted text stays above 7:1 and dark mode headings are softened from pure white
-// to limit halation. The dark background stays #2c2c2c because the dark variants
-// of the site images are drawn on that exact color.
-$primary: #3b5794;
-$body-secondary-color: rgba($body-color, 0.8);
+// Palette tuned for comfortable reading. Light mode sits on a soft cool grey
+// instead of pure white to avoid glare, and text is a slate tone rather than
+// near black. Body text, headings, muted text and links all reach 7:1 (WCAG AAA)
+// on the page background. Raised surfaces (cards, inputs, menus) are only a
+// shade lighter than the page and rely on a soft border to stand out.
+// The dark background stays #2c2c2c because the dark variants of the site
+// images are drawn on that exact color; its text is softened to limit halation.
+$body-bg: #eceef1;
+$body-color: #27323c; // 11.2:1
+$headings-color: #1d2d35; // 12.2:1
+$body-secondary-color: #434e59; // 7.3:1
+$primary: #314b82; // 7.3:1, links derive from it
+$surface-raised: #f3f4f6;
+$body-secondary-bg: #e2e5e9;
+$body-tertiary-bg: $surface-raised;
+$border-color: #d3d7dd;
 
 $body-bg-dark: #2c2c2c;
-$body-color-dark: hsl(224, 6%, 85%);
-$body-secondary-color-dark: rgba($body-color-dark, 0.85);
-$headings-color-dark: #ebecef;
-$link-color-dark: #b3c7ff;
+$body-color-dark: #d0d3d8; // 9.3:1
+$headings-color-dark: #e6e8eb; // 11.4:1
+$body-secondary-color-dark: #bcbfc5; // 7.6:1
+$link-color-dark: #b3c7ff; // 8.3:1
+$surface-raised-dark: #313234;
+$border-color-dark: #46484c;
+$body-tertiary-bg-dark: $surface-raised-dark;
 $navbar-dark-color: $body-color-dark;
+
+// Raised components follow the color mode through the tertiary background
+$card-bg: var(--bs-tertiary-bg);
+$input-bg: var(--bs-tertiary-bg);
+$dropdown-bg: var(--bs-tertiary-bg);
+$card-border-color: var(--bs-border-color);
 
 // Veils laid over the photos behind news cards so text keeps at least
 // 6.5:1 even over the brightest or darkest pixel of the photo
-$news-veil-light: rgba(255, 255, 255, 0.9);
+$news-veil-light: rgba($body-bg, 0.9);
 $news-veil-dark: rgba($body-bg-dark, 0.88);
 
 $grid-breakpoints: (
