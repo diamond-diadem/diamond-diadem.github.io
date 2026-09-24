@@ -6,16 +6,7 @@
 */ -}}
 {{- $page := .page -}}
 	<div class="row flex-xl-nowrap">
-		{{ if (in site.Params.doks.sectionNav $page.Section) -}}
-		<div class="col-lg-5 col-xl-4 diamond-docs-sidebar-container d-none d-lg-block">
-			<div class="col-lg-5 col-xl-4 docs-sidebar{{ if ne site.Params.doks.navbarSticky true }} docs-sidebar-top{{ end }}{{ if site.Params.doks.headerBar }} docs-sidebar-offset{{ end }} d-none d-lg-block">
-				<nav {{ if eq site.Params.doks.menu.section.collapsibleSidebar false }}id="sidebar-default" {{ end }}class="docs-links" aria-label="Main navigation">
-					{{ partial "sidebar/docs-menu.html" $page }}
-					<a class="btn btn-primary rounded-pill ms-3 me-2 px-4 order-lg-3 d-none d-lg-block btn-doc-sidebar" href="{{ site.Params.docSidebarRef }}" role="button">{{ site.Params.docSidebarText }}</a>
-				</nav>
-			</div>
-		</div>
-		{{ end -}}
+		{{ partial "main/docs-sidebar.html" $page }}
 		{{ if and (eq site.Params.doks.containerBreakpoint "fluid") (in site.Params.mainSections $page.Type) }}
 			<div class="col container-fw d-lg-flex flex-lg-row justify-content-center mx-auto">
 		{{ end }}
@@ -25,9 +16,9 @@
 		</nav>
 		{{ end -}}
 		{{ if $page.Params.toc -}}
-		<main class="docs-content col-lg-11 col-xl-9 diamond-content">
+		<main class="docs-content diamond-content">
 		{{ else -}}
-		<main class="docs-content col-lg-11 col-xl-9 mx-xl-auto diamond-content">
+		<main class="docs-content diamond-content">
 		{{ end -}}
 			{{ if site.Params.doks.breadcrumbTrail -}}
 				{{/* https://discourse.gohugo.io/t/breadcrumb-navigation-for-highly-nested-content/27359/6 */}}

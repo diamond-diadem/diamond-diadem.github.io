@@ -1,0 +1,248 @@
+// Main menu inside its drawer on small screens (see _drawer.scss): a clean
+// list of large links, the current page marked by an accent bar.
+// Selectors start with .navbar .site-menu to outrank the theme's own
+// .offcanvas .nav-link rules, which still style the desktop navbar.
+
+$site-menu-stagger: 0.035s;
+$site-menu-max-items: 12;
+
+@include media-breakpoint-down(lg) {
+    .navbar .site-menu .offcanvas-body {
+        flex: 1 1 auto;
+        min-height: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    // Only the links scroll, so the footer stays pinned at the bottom
+    .site-menu-nav {
+        flex: 1 1 auto;
+        min-height: 0;
+        padding: 1.75rem $drawer-gutter 1.5rem;
+        overflow-x: hidden;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+    }
+
+    .site-menu-eyebrow {
+        margin: 0 0 0.5rem;
+        color: $body-secondary-color;
+        font-family: $font-family-ui;
+        font-size: 0.8125rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+    }
+
+    .navbar .site-menu .navbar-nav {
+        flex-grow: 0;
+        width: 100%;
+    }
+
+    // Links enter one after another
+
+    .navbar .site-menu .navbar-nav > .nav-item {
+        border-bottom: 1px solid rgba($body-color, 0.1);
+        opacity: 0;
+        transform: translateX(1rem);
+        transition:
+            opacity 0.3s ease-out,
+            transform $drawer-duration $drawer-ease;
+    }
+
+    .navbar .site-menu.show .navbar-nav > .nav-item,
+    .navbar .site-menu:target .navbar-nav > .nav-item {
+        opacity: 1;
+        transform: none;
+    }
+
+    @for $i from 1 through $site-menu-max-items {
+        .navbar .site-menu.show .navbar-nav > .nav-item:nth-child(#{$i}),
+        .navbar .site-menu:target .navbar-nav > .nav-item:nth-child(#{$i}) {
+            transition-delay: 0.08s + $site-menu-stagger * $i;
+        }
+    }
+
+    .navbar .site-menu .site-menu-link {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 0.95rem 0.25rem 0.95rem 0;
+        color: $body-color;
+        font-family: $font-family-ui;
+        font-size: 1.375rem;
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: -0.005em;
+        transition: color 0.2s ease-in-out;
+    }
+
+    // Trailing chevron, nudged forward on hover
+    .navbar .site-menu a.site-menu-link::after {
+        content: "";
+        flex-shrink: 0;
+        width: 0.5rem;
+        height: 0.5rem;
+        margin-right: 0.25rem;
+        border-top: 2px solid currentColor;
+        border-right: 2px solid currentColor;
+        opacity: 0.4;
+        transform: rotate(45deg);
+        transition:
+            transform 0.25s $drawer-ease,
+            opacity 0.2s ease-in-out;
+    }
+
+    .navbar .site-menu .site-menu-link:hover,
+    .navbar .site-menu .site-menu-link:focus-visible {
+        color: $link-color;
+    }
+
+    .navbar .site-menu .site-menu-link:hover::after {
+        opacity: 1;
+        transform: translateX(3px) rotate(45deg);
+    }
+
+    .navbar .site-menu .site-menu-link:focus-visible {
+        border-radius: 0.25rem;
+        outline: 2px solid $link-color;
+        outline-offset: 2px;
+    }
+
+    // Current page: accent color and a bar on the edge of the drawer
+    .navbar .site-menu .site-menu-link.active,
+    .navbar .site-menu .site-menu-link:has(> .active) {
+        color: $link-color;
+    }
+
+    .navbar .site-menu .site-menu-link.active::before,
+    .navbar .site-menu .site-menu-link:has(> .active)::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: -$drawer-gutter;
+        width: 3px;
+        height: 1.75rem;
+        border-radius: 0 3px 3px 0;
+        background-color: currentColor;
+        transform: translateY(-50%);
+    }
+
+    // Submenu (e.g. About): expands in place under its parent
+
+    .navbar .site-menu .dropdown-toggle::after {
+        content: none;
+    }
+
+    .navbar .site-menu .dropdown-toggle > span {
+        display: flex;
+        flex: 1 1 auto;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .navbar .site-menu .dropdown-toggle .icon-tabler-chevron-down {
+        width: 1.25rem;
+        height: 1.25rem;
+        opacity: 0.55;
+        transform: none;
+        transition: transform 0.25s $drawer-ease;
+    }
+
+    .navbar .site-menu .nav-disclosure[open] .icon-tabler-chevron-down {
+        transform: rotate(180deg);
+    }
+
+    .navbar .site-menu .nav-item.dropdown {
+        margin-right: 0;
+    }
+
+    .navbar .site-menu .dropdown-menu {
+        position: static;
+        margin: 0 0 1rem 0.125rem;
+        padding: 0 0 0 0.75rem;
+        border: 0 !important;
+        border-left: 1px solid rgba($body-color, 0.15) !important;
+        border-radius: 0 !important;
+        background-color: transparent;
+        box-shadow: none !important;
+    }
+
+    .navbar .site-menu .dropdown-item {
+        padding: 0.5rem 0.75rem;
+        border-radius: 0.5rem;
+        color: $body-secondary-color;
+        font-family: $font-family-ui;
+        font-size: 1.0625rem;
+        font-weight: 500;
+        white-space: normal;
+    }
+
+    .navbar .site-menu .dropdown-item:hover,
+    .navbar .site-menu .dropdown-item:focus-visible {
+        background-color: rgba($primary, 0.06);
+        color: $link-color;
+    }
+
+    .navbar .site-menu .dropdown-item.active {
+        background-color: rgba($primary, 0.08);
+        color: $link-color;
+        font-weight: 600;
+    }
+}
+
+@include color-mode(dark) {
+    @include media-breakpoint-down(lg) {
+        .site-menu-eyebrow {
+            color: $body-secondary-color-dark;
+        }
+
+        .navbar .site-menu .navbar-nav > .nav-item {
+            border-bottom-color: rgba($white, 0.1);
+        }
+
+        .navbar .site-menu .site-menu-link {
+            color: $body-color-dark;
+        }
+
+        .navbar .site-menu .site-menu-link:hover,
+        .navbar .site-menu .site-menu-link:focus-visible,
+        .navbar .site-menu .site-menu-link.active,
+        .navbar .site-menu .site-menu-link:has(> .active) {
+            color: $link-color-dark;
+        }
+
+        .navbar .site-menu .site-menu-link:focus-visible {
+            outline-color: $link-color-dark;
+        }
+
+        .navbar .site-menu .dropdown-menu {
+            border-left-color: rgba($white, 0.15) !important;
+        }
+
+        .navbar .site-menu .dropdown-item {
+            color: $body-secondary-color-dark;
+        }
+
+        .navbar .site-menu .dropdown-item:hover,
+        .navbar .site-menu .dropdown-item:focus-visible {
+            background-color: rgba($white, 0.06);
+            color: $link-color-dark;
+        }
+
+        .navbar .site-menu .dropdown-item.active {
+            background-color: rgba($link-color-dark, 0.1);
+            color: $link-color-dark;
+        }
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .navbar .site-menu .navbar-nav > .nav-item,
+    .navbar .site-menu .site-menu-link::after,
+    .navbar .site-menu .dropdown-toggle .icon-tabler-chevron-down {
+        transition: none !important;
+    }
+}

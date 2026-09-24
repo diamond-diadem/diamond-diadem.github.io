@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const autoprefixer = require('autoprefixer');
 const purgeCSSPlugin = require('@fullhuman/postcss-purgecss');
+const systemColorScheme = require('./postcss-system-color-scheme');
 
 function collectScssFiles(dir) {
     if (!fs.existsSync(dir)) {
@@ -45,6 +46,7 @@ function buildSafelistFromScss() {
 module.exports = {
     plugins: [
         autoprefixer(),
+        systemColorScheme(),
         purgeCSSPlugin({
             content: ['./hugo_stats.json'],
             extractors: [

@@ -1,0 +1,12 @@
+{{/*
+  Close sign in a drawer header. It is a link to "#" so that it also closes
+  a panel opened through :target when JS is unavailable; drawer.js
+  intercepts it otherwise.
+
+  Context: dict with
+    label - accessible name (string)
+    class - extra CSS classes (string)
+*/}}
+<a class="drawer-toggle drawer-close {{ .class }}" href="#" data-drawer-close aria-label="{{ .label }}">
+  <span class="burger-icon" aria-hidden="true"></span>
+</a>

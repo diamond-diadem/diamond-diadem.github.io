@@ -1,0 +1,21 @@
+{{/*
+  Button opening a drawer panel on small screens (wired up by drawer.js).
+  Without JS a link opens the panel through the :target pseudo-class
+  instead, and the panel offers its own close link.
+
+  Context: dict with
+    target - id of the drawer panel (string)
+    label  - accessible name (string)
+    icon   - "burger", which morphs into a close sign, or "dots" (string)
+    class  - extra CSS classes (string)
+*/}}
+{{- $icon := `<span class="burger-icon" aria-hidden="true"></span>` -}}
+{{- if eq .icon "dots" -}}
+  {{- $icon = `<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots-vertical" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path><path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path><path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path></svg>` -}}
+{{- end -}}
+<button class="drawer-toggle {{ .class }} requires-js" type="button" data-drawer-toggle aria-controls="{{ .target }}" aria-expanded="false" aria-label="{{ .label }}">
+  {{ $icon | safeHTML }}
+</button>
+<a class="drawer-toggle {{ .class }} no-js-only" href="#{{ .target }}" aria-label="{{ .label }}">
+  {{ $icon | safeHTML }}
+</a>

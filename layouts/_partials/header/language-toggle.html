@@ -1,0 +1,32 @@
+{{/*
+  Segmented language switch (e.g. FR | EN). The current language is
+  highlighted; every other language links to this page's translation or,
+  when the page is untranslated and showMissingLanguages is on, to that
+  language's home page.
+
+  Context: dict with
+    page  - the current page
+    class - extra CSS classes for the wrapper (string)
+*/}}
+{{- $page := .page -}}
+{{- $translationURLs := dict -}}
+{{- range $page.Translations -}}
+  {{- $translationURLs = merge $translationURLs (dict .Lang .RelPermalink) -}}
+{{- end -}}
+
+<nav class="language-toggle{{ with .class }} {{ . }}{{ end }}" aria-label="{{ i18n "switch_language" }}">
+  {{- range hugo.Sites -}}
+    {{- $lang := .Language.Lang -}}
+    {{- $label := .Language.Label -}}
+    {{- if eq $lang $page.Lang -}}
+      <span class="language-toggle-option active" aria-current="true" lang="{{ $lang }}">{{ $label }}</span>
+    {{- else if not (in $page.Params.skipTranslations $lang) -}}
+      {{- $translationURL := index $translationURLs $lang -}}
+      {{- if $translationURL -}}
+        <a class="language-toggle-option" rel="alternate" href="{{ $translationURL }}" hreflang="{{ $lang }}" lang="{{ $lang }}">{{ $label }}</a>
+      {{- else if site.Params.doks.showMissingLanguages -}}
+        <a class="language-toggle-option untranslated" rel="alternate" href="{{ .Home.RelPermalink }}" hreflang="{{ $lang }}" lang="{{ $lang }}">{{ $label }}</a>
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+</nav>

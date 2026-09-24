@@ -1,19 +1,16 @@
-.diamond.in-navbar {
+// Home button in the navbar: the favicon diamond, in the variant for the theme
+.brand-mark {
     display: inline-block;
-    height: 55px;
-    aspect-ratio: 300 / 241;
+    width: 2.18rem; // keeps the 300 / 241 ratio of the image
+    height: 1.75rem;
+    margin-right: 0.35rem;
     vertical-align: middle;
+    background: url(images/diamond/diamond-light-smaller.png) center / contain no-repeat;
 }
 
-@include media-breakpoint-down(lg) {
-    .diamond.in-navbar {
-        height: 50px;
-    }
-}
-
-@include media-breakpoint-down(sm) {
-    .diamond.in-navbar {
-        height: 45px;
+@include color-mode(dark) {
+    .brand-mark {
+        background-image: url(images/diamond/diamond-dark-smaller.png);
     }
 }
 

@@ -14,3 +14,32 @@
 @mixin veiled-background-image($veil, $image) {
     background-image: linear-gradient($veil, $veil), $image;
 }
+
+// Strips the theme's content accordion look (border, padding, stretched
+// summary, trailing chevron) from a <details> used for navigation.
+// Include it on a details.class selector so it outranks the theme's rules.
+@mixin plain-disclosure {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+
+    &[open] {
+        padding: 0;
+    }
+
+    > summary,
+    &[open] > summary {
+        width: auto;
+        margin: 0;
+        border-bottom: 0;
+    }
+
+    > summary:hover {
+        background: none;
+    }
+
+    > summary::after {
+        content: none;
+    }
+}

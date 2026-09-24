@@ -14,6 +14,8 @@
 
 
 {{ partial "footer/esbuild" (dict "src" "js/to-top.js" "load" "defer" "transpile" false) -}}
+{{ partial "footer/esbuild" (dict "src" "js/diamond/drawer.js" "load" "defer" "transpile" false) -}}
+{{ partial "footer/esbuild" (dict "src" "js/diamond/nav-disclosure.js" "load" "defer" "transpile" false) -}}
 
 {{ if site.Params.analytics.enable }}
 <script>

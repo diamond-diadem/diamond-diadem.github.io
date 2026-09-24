@@ -19,7 +19,7 @@
 
     <!-- Site title -->
     <a class="navbar-brand me-auto me-lg-3" href="{{ relLangURL "" }}">
-      <span class="diamond in-navbar" aria-hidden="true"></span> {{ .Site.Title }}
+      <span class="brand-mark" aria-hidden="true"></span> {{ .Site.Title }}
     </a>
 
 
@@ -43,227 +43,96 @@
     </button>
     {{ end -}}  */}}
 
-    <!-- Section navigation -->
+    <!-- Section navigation (small screens): a drawer sliding from the left -->
     {{ if (in site.Params.doks.sectionNav .Section) -}}
-    <button class="btn btn-link d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavSection" aria-controls="offcanvasNavSection" aria-label="Open section navigation menu">
-      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots-vertical" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-        <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
-        <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
-        <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
-      </svg>
-    </button>
-    <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="offcanvasNavSection" aria-labelledby="offcanvasNavSectionLabel">
+    {{ partial "header/drawer-toggle.html" (dict "target" "offcanvasNavSection" "label" (i18n "section_menu_open") "icon" "dots" "class" "d-lg-none") }}
+    <div class="drawer drawer-start d-lg-none" tabindex="-1" id="offcanvasNavSection">
       {{ if site.Params.doks.headerBar -}}
         <div class="header-bar"></div>
       {{ end -}}
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasNavSectionLabel">{{ .Section | humanize }}</h5>
-        <button type="button" class="btn btn-link nav-link p-0 close-sidebar-mobile" data-bs-dismiss="offcanvas" aria-label="Close">
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <path d="M18 6l-12 12"></path>
-            <path d="M6 6l12 12"></path>
-          </svg>
-        </button>
+      <div class="drawer-header">
+        <p class="drawer-title" id="offcanvasNavSectionLabel">{{ .Section | humanize }}</p>
+        {{ partial "header/drawer-close.html" (dict "label" (i18n "section_menu_close")) }}
       </div>
-      <div class="offcanvas-body">
-        <aside class="doks-sidebar mt-n3">
-          <nav id="doks-docs-nav" aria-label="Tertiary navigation">
+      <div class="drawer-body">
+        <aside class="doks-sidebar">
+          <nav id="doks-docs-nav" aria-labelledby="offcanvasNavSectionLabel">
             {{ partial "sidebar/docs-menu.html" . }}
           </nav>
         </aside>
       </div>
     </div>
+    <a class="drawer-backdrop d-lg-none" href="#" tabindex="-1" aria-hidden="true"></a>
     {{ end -}}
-
-    <!-- Main navigation button -->
-    <button class="btn btn-link nav-link mx-2 order-2 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavMain" aria-controls="offcanvasNavMain" aria-label="Open main navigation menu">
-      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-        <line x1="4" y1="8" x2="20" y2="8"></line>
-        <line x1="4" y1="16" x2="20" y2="16"></line>
-      </svg>
-    </button>
 
     {{ if eq site.Params.doks.multilingualMode true -}}
-      {{ $currentLanguageLabel := .Language.Label }}
-      {{ range .Translations }}
-        <a class="btn btn-link nav-link order-3 switch-language-mobile" type="button" rel="alternate" href="{{ .RelPermalink }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">{{ $currentLanguageLabel }}</a>
-      {{ end }}
+      {{ partial "header/language-toggle.html" (dict "page" . "class" "d-lg-none switch-language-mobile") }}
     {{ end -}}
 
+    <!-- Main navigation toggle (small screens): stays above the drawer and morphs into its close sign -->
+    {{ partial "header/drawer-toggle.html" (dict "target" "offcanvasNavMain" "label" (i18n "main_menu") "icon" "burger" "class" "drawer-toggle-floating d-lg-none") }}
 
-
-    <!-- Main navigation -->
-    <div class="offcanvas offcanvas-end h-auto" tabindex="-1" id="offcanvasNavMain" aria-labelledby="offcanvasNavMainLabel">
+    <!-- Main navigation: a full-height drawer sliding from the right on small screens, inline on large ones -->
+    <div class="offcanvas drawer drawer-end site-menu" tabindex="-1" id="offcanvasNavMain">
       {{ if site.Params.doks.headerBar -}}
         <div class="header-bar d-lg-none"></div>
       {{ end -}}
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasNavMainLabel">{{ site.Title }}</h5>
-        <!-- FlexSearch mobile -->
-        {{ partial "main/showFlexSearch" . }}
-        {{ $showFlexSearch := .Scratch.Get "showFlexSearch" -}}
-        {{ if $showFlexSearch -}}
-        <button type="button" id="searchToggleMobile" class="search-mobile btn btn-link nav-link nav-item" aria-label="Search website">
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <circle cx="10" cy="10" r="7"></circle>
-            <line x1="21" y1="21" x2="15" y2="15"></line>
-          </svg>
-        </button>
-        {{ end -}}
-        {{ if and (eq site.Params.doks.colorMode "auto") site.Params.doks.colorModeToggler -}}
-          <button id="buttonColorMode" class="switch-color-mode-mobile btn btn-link nav-link nav-item" type="button" aria-label="Toggle theme">
-            <svg data-bs-theme-value="light" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-brightness theme-icon-light"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M17 3.34a10 10 0 1 1 -15 8.66l.005 -.324a10 10 0 0 1 14.995 -8.336m-9 1.732a8 8 0 0 0 4.001 14.928l-.001 -16a8 8 0 0 0 -4 1.072" /></svg>
-            <svg data-bs-theme-value="dark" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-brightness theme-icon-dark"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M17 3.34a10 10 0 1 1 -15 8.66l.005 -.324a10 10 0 0 1 14.995 -8.336m-9 1.732a8 8 0 0 0 4.001 14.928l-.001 -16a8 8 0 0 0 -4 1.072" /></svg>
-          </button>
-        {{ end -}}
-        <button type="button" class="close-button-mobile btn btn-link nav-link p-0" data-bs-dismiss="offcanvas" aria-label="Close">
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <path d="M18 6l-12 12"></path>
-            <path d="M6 6l12 12"></path>
-         </svg>
-        </button>
+      <div class="drawer-header d-lg-none">
+        <a class="navbar-brand" href="{{ relLangURL "" }}">
+          <span class="brand-mark" aria-hidden="true"></span> {{ site.Title }}
+        </a>
+        {{ partial "header/drawer-close.html" (dict "label" (i18n "main_menu_close") "class" "no-js-only") }}
       </div>
-
-
-
-      <!-- <div class="offcanvas-header">
-        <h5 class="offcanvas-title fw-bold" id="offcanvasNavMainLabel">{{ .Site.Params.Title }}</h5>
-        <button class="btn btn-link nav-link ms-auto" type="button" data-bs-dismiss="offcanvas" aria-label="Close menu">
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <path d="M18 6l-12 12"></path>
-            <path d="M6 6l12 12"></path>
-          </svg>
-        </button>
-      </div> -->
-
       <div class="offcanvas-body d-flex flex-column flex-lg-row justify-content-between">
-        <ul class="navbar-nav flex-grow-1 align-self-center">
-          {{- $current := . -}}
-          {{- $section := $current.Section -}}
-          {{ $newsPages := where .Site.RegularPages "Section" "news" }}
-          {{ $displayNews := (ge (len ($newsPages)) 1) }}
-          {{ range .Site.Menus.main -}}
-            {{- $displayTeam := site.Params.diamond.enableTeamPage | default true -}}
-            {{- $isTeamEntry := or (eq .URL "team/") (eq .URL "en/team/") -}}
-            {{- if and (not $displayTeam) $isTeamEntry -}}
-              {{- continue -}}
-            {{- end -}}
-            {{- $active := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) -}}
-            {{- $active = or $active (eq .Name $current.Title) -}}
-            {{- $active = or $active (and (eq .Name ($section | humanize)) (eq $current.Section $section)) -}}
-            {{- $active = or $active (and (eq .Name "Blog") (eq $current.Section "blog" "authors")) -}}
-            {{ if $section }}
-              {{- $active = or $active (in .Identifier $section) -}}
-            {{ end }}
-            {{ if .HasChildren -}}
-              <li class="nav-item dropdown section-dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  <span class="{{ if $active }}active{{ end }}">
-                    {{ .Name -}}
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                      <path d="M6 9l6 6l6 -6"></path>
-                    </svg>
-                  </span>
-                </a>
-                <ul class="dropdown-menu shadow rounded border-0">
-                  {{ range .Children -}}
-                  {{- $active = eq .Name $current.LinkTitle -}}
-                    <li><a class="dropdown-item{{ if $active }} active{{ end }}" href="{{ .URL | absURL }}"{{ if $active }} aria-current="true"{{ end }}>{{ .Name }}</a></li>
-                  {{ end -}}
-                </ul>
-              </li>
-            {{ else -}}
-            {{ if $displayNews }}
-              <li class="nav-item">
-                <a class="nav-link{{ if $active }} active{{ end }}" href="{{ .URL | absURL }}"{{ if $active }} aria-current="true"{{ end }}>{{ .Name }}</a>
-              </li>
-            {{ else }}
-              {{ if  not (in .Identifier "news") }}
-              <li class="nav-item">
-                <a class="nav-link{{ if $active }} active{{ end }}" href="{{ .URL | absURL }}"{{ if $active }} aria-current="true"{{ end }}>{{ .Name }}</a>
-              </li>
-            {{ end }}
-            
-            {{ end }}
+        <nav class="site-menu-nav d-flex flex-column flex-lg-row flex-grow-1 align-self-lg-center" aria-label="{{ i18n "main_menu" }}">
+          <p class="site-menu-eyebrow d-lg-none" aria-hidden="true">{{ i18n "navigation" }}</p>
+          <ul class="navbar-nav flex-grow-1">
+            {{- $current := . -}}
+            {{- $section := $current.Section -}}
+            {{ $newsPages := where .Site.RegularPages "Section" "news" }}
+            {{ $displayNews := (ge (len ($newsPages)) 1) }}
+            {{ range .Site.Menus.main -}}
+              {{- $displayTeam := site.Params.diamond.enableTeamPage | default true -}}
+              {{- $isTeamEntry := or (eq .URL "team/") (eq .URL "en/team/") -}}
+              {{- if and (not $displayTeam) $isTeamEntry -}}
+                {{- continue -}}
+              {{- end -}}
+              {{- $active := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) -}}
+              {{- $active = or $active (eq .Name $current.Title) -}}
+              {{- $active = or $active (and (eq .Name ($section | humanize)) (eq $current.Section $section)) -}}
+              {{- $active = or $active (and (eq .Name "Blog") (eq $current.Section "blog" "authors")) -}}
+              {{ if $section }}
+                {{- $active = or $active (in .Identifier $section) -}}
+              {{ end }}
+              {{ if .HasChildren -}}
+                {{/* Native disclosure: works without JS; nav-disclosure.js closes it as a dropdown on large screens */}}
+                <li class="nav-item dropdown section-dropdown">
+                  <details class="nav-disclosure">
+                    <summary class="nav-link site-menu-link dropdown-toggle">
+                      <span class="{{ if $active }}active{{ end }}">
+                        {{ .Name -}}
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                          <path d="M6 9l6 6l6 -6"></path>
+                        </svg>
+                      </span>
+                    </summary>
+                    <ul class="dropdown-menu shadow rounded border-0">
+                      {{ range .Children -}}
+                        {{- $childActive := eq .Name $current.LinkTitle -}}
+                        <li><a class="dropdown-item{{ if $childActive }} active{{ end }}" href="{{ .URL | absURL }}"{{ if $childActive }} aria-current="page"{{ end }}>{{ .Name }}</a></li>
+                      {{ end -}}
+                    </ul>
+                  </details>
+                </li>
+              {{ else if or $displayNews (not (in .Identifier "news")) -}}
+                <li class="nav-item">
+                  <a class="nav-link site-menu-link{{ if $active }} active{{ end }}" href="{{ .URL | absURL }}"{{ if $active }} aria-current="page"{{ end }}>{{ .Name }}</a>
+                </li>
+              {{ end -}}
             {{ end -}}
-          {{ end -}}
-        </ul>
-
-        <!-- Logo "France 2030 : Matériaux émergents" -->
-        <a class="anchor-france2030-desktop" href="https://pepr-diadem.fr" target="_blank" rel="noopener noreferrer"><img class="logo-france2030-desktop"></a>
-
-        <!-- FlexSearch desktop -->
-        {{ partial "main/showFlexSearch" . }}
-        {{ $showFlexSearch := .Scratch.Get "showFlexSearch" -}}
-        {{ if $showFlexSearch -}}
-        <button type="button" id="searchToggleDesktop" class="btn btn-link nav-link p-2 d-none d-lg-block search-desktop" aria-label="Search website">
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <circle cx="10" cy="10" r="7"></circle>
-            <line x1="21" y1="21" x2="15" y2="15"></line>
-          </svg>
-        </button>
-        {{ end -}}
-
-        <!-- Language dropdown -->
-        {{ if eq site.Params.doks.multilingualMode true -}}
-
-        <div class="dropdown dropdown-languages mt-1 order-lg-2 align-self-center switch-language-desktop">
-          <button class="btn btn-dropdown dropdown-toggle" id="doks-languages" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
-            <span class="dropdown-caret">
-              <!-- <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                <path d="M4 5h7"></path>
-                <path d="M9 3v2c0 4.418 -2.239 8 -5 8"></path>
-                <path d="M5 9c0 2.144 2.952 3.908 6.7 4"></path>
-                <path d="M12 20l4 -9l4 9"></path>
-                <path d="M19.1 18h-6.2"></path>
-              </svg> -->
-              <span class="current-language-display" id="doks-language-current">{{ .Site.Language.Label }}</span>
-              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                <path d="M6 9l6 6l6 -6"></path>
-              </svg>
-            </span>
-          </button>
-          <ul class="dropdown-menu dropdown-menu-lg me-lg-2 shadow rounded" aria-labelledby="doks-languages">
-
-            <!-- <li><span class="dropdown-item current" aria-current="true">{{ .Site.Language.Label }}</span></li>
-
-            <li><hr class="dropdown-divider"></li> -->
-
-            {{ if site.Params.doks.showMissingLanguages -}}
-              {{ $translatedLangs := slice -}}
-              {{ range .Translations -}}
-                {{ $translatedLangs = $translatedLangs | append .Lang }}
-              {{- end }}
-              {{ range hugo.Sites -}}
-                {{ with .Language -}}
-                  {{ if and (ne $.Lang .Lang) (not (in $.Params.skipTranslations .Lang)) -}}
-                    {{ $isTranslated := in $translatedLangs .Lang -}}
-                    <li><a class="dropdown-item {{ if not $isTranslated }}untranslated{{ end }}" rel="alternate" href="{{ if $isTranslated }}{{ (index (where $.Translations "Lang" .Lang) 0).RelPermalink }}{{ else }}{{ .Lang | relURL }}{{ end }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">{{ .Label }}</a></li>
-                  {{- end }}
-                {{- end }}
-              {{- end }}
-            {{ else -}}
-              {{ range .Translations -}}
-                <li><a class="dropdown-item" rel="alternate" href="{{ .RelPermalink }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">{{ .Language.Label }}</a></li>
-              {{- end }}
-            {{- end }}
-              <!--
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="/docs/contributing/how-to-contribute/">Help Translate</a></li>
-              -->
           </ul>
-        </div>
-        {{ end -}}
+        </nav>
 
         <!-- Versioning dropdown  -->
         {{ if eq site.Params.doks.docsVersioning true -}}
@@ -289,13 +158,19 @@
         </div>
         {{ end -}}
 
-        <!-- Color mode toggler -->
-        {{ if and (eq site.Params.doks.colorMode "auto") site.Params.doks.colorModeToggler -}}
-        <button id="buttonColorMode" class="btn btn-link mx-auto nav-link p-0 ms-xl-2 me-xl-1 switch-color-mode-desktop" type="button" aria-label="Toggle theme">
-          <svg data-bs-theme-value="light" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-brightness theme-icon-light"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M17 3.34a10 10 0 1 1 -15 8.66l.005 -.324a10 10 0 0 1 14.995 -8.336m-9 1.732a8 8 0 0 0 4.001 14.928l-.001 -16a8 8 0 0 0 -4 1.072" /></svg>
-          <svg data-bs-theme-value="dark" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-brightness theme-icon-dark"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M17 3.34a10 10 0 1 1 -15 8.66l.005 -.324a10 10 0 0 1 14.995 -8.336m-9 1.732a8 8 0 0 0 4.001 14.928l-.001 -16a8 8 0 0 0 -4 1.072" /></svg>
-        </button>
-        {{ end -}}
+        <!-- Header actions desktop: search, color mode, language -->
+        <div class="navbar-actions d-none d-lg-flex">
+          {{ partial "main/showFlexSearch" . }}
+          {{ if .Scratch.Get "showFlexSearch" -}}
+            {{ partial "header/search-toggle.html" (dict "id" "searchToggleDesktop" "class" "btn btn-link nav-link requires-js") }}
+          {{ end -}}
+          {{ if and (eq site.Params.doks.colorMode "auto") site.Params.doks.colorModeToggler -}}
+            {{ partial "header/color-mode-toggle.html" "btn btn-link nav-link requires-js" }}
+          {{ end -}}
+          {{ if eq site.Params.doks.multilingualMode true -}}
+            {{ partial "header/language-toggle.html" (dict "page" . "class" "") }}
+          {{ end -}}
+        </div>
 
         <!-- Social menu -->
         {{ if .Site.Menus.social -}}
@@ -308,15 +183,27 @@
         </ul>
         {{ end -}}
 
-        {{/*  logo france 2030 for mobile  */}}
-        <a class="anchor-france2030-mobile" href="https://pepr-diadem.fr" target="_blank" rel="noopener noreferrer"><img class="logo-france2030-mobile"></a>
-
         <!-- Navbar button mobile -->
         {{ if site.Params.doks.navBarButton -}}
           <a class="btn btn-primary rounded-pill mt-2 btn-block d-lg-none" href="{{ site.Params.doks.navBarButtonUrl | absURL }}" role="button">{{ site.Params.doks.navBarButtonText }}</a>
         {{ end -}}
+
+        <!-- Drawer footer (small screens): search, color mode, language -->
+        <div class="drawer-footer d-lg-none">
+          {{ partial "main/showFlexSearch" . }}
+          {{ if .Scratch.Get "showFlexSearch" -}}
+            {{ partial "header/search-toggle.html" (dict "id" "searchToggleMobile" "class" "btn drawer-search requires-js" "label" (i18n "search_action")) }}
+          {{ end -}}
+          {{ if and (eq site.Params.doks.colorMode "auto") site.Params.doks.colorModeToggler -}}
+            {{ partial "header/color-mode-toggle.html" "btn drawer-icon-button requires-js" }}
+          {{ end -}}
+          {{ if eq site.Params.doks.multilingualMode true -}}
+            {{ partial "header/language-toggle.html" (dict "page" . "class" "") }}
+          {{ end -}}
+        </div>
       </div>
     </div>
+    <a class="drawer-backdrop d-lg-none" href="#" tabindex="-1" aria-hidden="true"></a>
 
     <!-- Navbar button desktop -->
     {{ if site.Params.doks.navBarButton -}}

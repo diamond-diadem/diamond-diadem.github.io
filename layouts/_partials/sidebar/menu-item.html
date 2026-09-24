@@ -1,8 +1,10 @@
 {{- /*
   Renders one sidebar entry for a page inside a section's menu, recursing
-  into the page's own children when it has any (`.IsBranch`). A node whose
-  own body has content gets a "Description" entry linking to itself,
-  listed first among its children (see section-page-link.html).
+  into the page's own children when it has any (`.IsBranch`). Branches are
+  native disclosures (<details>), open on the path to the current page, so
+  they expand and collapse without JS. A node whose own body has content
+  gets a "Description" entry linking to itself, listed first among its
+  children (see section-page-link.html).
 
   @param {page}   page        The page to render.
   @param {string} currentDir  Directory of the page being rendered, for fuzzy active-state matching.
@@ -21,17 +23,17 @@
       {{ or $page.LinkTitle $page.Title }}
     </a>
     {{- else }}
-    <button class="btn btn-toggle {{ cond $top "rounded" "align-items-center rounded" }} collapsed" data-bs-toggle="collapse" data-bs-target="#section-{{ md5 $page.Title }}" aria-expanded="{{ if $active }}true{{ else }}false{{ end }}">
-      {{ or $page.LinkTitle $page.Title }}
-    </button>
-    <div class="collapse{{ if $active }} show{{ end }}" id="section-{{ md5 $page.Title }}">
+    <details class="sidebar-group"{{ if $active }} open{{ end }}>
+      <summary class="btn btn-toggle {{ cond $top "rounded" "align-items-center rounded" }}">
+        {{ or $page.LinkTitle $page.Title }}
+      </summary>
       <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
         {{ partial "sidebar/section-page-link.html" (dict "section" $page "label" (T "section_description") "currentPath" $currentPath "linkClass" "docs-link rounded") }}
         {{ range $page.Pages.ByWeight }}
           {{ partial "sidebar/menu-item.html" (dict "page" . "currentDir" $currentDir "currentPath" $currentPath) }}
         {{ end }}
       </ul>
-    </div>
+    </details>
     {{- end }}
   </li>
 {{- else -}}

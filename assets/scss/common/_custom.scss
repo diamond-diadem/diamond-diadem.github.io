@@ -10,6 +10,11 @@
 @import "diamond/sections-icons";
 @import "diamond/banner-diamond";
 @import "diamond/section-dropdown-navbar";
+@import "diamond/drawer";
+@import "diamond/site-menu";
+@import "diamond/nav-disclosure";
+@import "diamond/docs-layout";
+@import "diamond/callouts";
 @import "diamond/custom-alerts";
 @import "diamond/svg-inline";
 @import "diamond/custom-cards";
@@ -25,48 +30,101 @@
         background-color: $body-bg-dark;
     }
 }
-.dropdown-languages {
-    width: 80px;
+// Right-hand header controls, in reading order: search, color mode, language
+.navbar-actions {
+    align-items: center;
+    gap: 1rem;
+    margin-left: 1.5rem;
 }
 
-.dropdown-languages .btn .dropdown-caret {
-    font-weight: 500;
-    min-height: 0;
-    position: relative;
-    top: -3px;
+.navbar-actions .btn {
+    padding: 0.375rem;
+    line-height: 1;
 }
 
-.dropdown-languages .btn .dropdown-caret:hover {
-    font-weight: 500;
+// color-mode.js sets data-bs-theme as soon as it runs, so a root without it
+// means JS is unavailable: controls that only work through JS are hidden,
+// and their JS-free fallbacks are shown only in that case.
+:root:not([data-bs-theme]) .requires-js {
+    display: none !important;
+}
+
+:root[data-bs-theme] .no-js-only {
+    display: none !important;
+}
+
+// Segmented control: a soft track with the current language raised on a thumb
+.language-toggle {
+    display: inline-flex;
+    gap: 2px;
+    padding: 3px;
+    border-radius: 50rem;
+    background-color: rgba($body-color, 0.07);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    line-height: 1;
+}
+
+.language-toggle-option {
+    min-width: 2.25rem;
+    padding: 0.4rem 0.6rem;
+    border-radius: 50rem;
+    color: $body-secondary-color;
+    text-align: center;
+    text-decoration: none;
+    transition:
+        color 0.15s ease-in-out,
+        background-color 0.15s ease-in-out;
+}
+
+.language-toggle-option:hover {
     color: $link-color;
 }
 
+.language-toggle-option.active {
+    background-color: $white;
+    color: $link-color;
+    box-shadow: 0 1px 3px rgba($black, 0.18);
+}
+
+.language-toggle-option:focus-visible {
+    outline: 2px solid $link-color;
+    outline-offset: 1px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .language-toggle-option {
+        transition: none;
+    }
+}
+
 @include color-mode(dark) {
-    .dropdown-languages .btn .dropdown-caret:hover {
+    .language-toggle {
+        background-color: rgba($white, 0.08);
+    }
+
+    .language-toggle-option {
+        color: $body-secondary-color-dark;
+    }
+
+    .language-toggle-option:hover {
         color: $link-color-dark;
+    }
+
+    .language-toggle-option.active {
+        background-color: rgba($white, 0.16);
+        color: $headings-color-dark;
+        box-shadow: none;
+    }
+
+    .language-toggle-option:focus-visible {
+        outline-color: $link-color-dark;
     }
 
     .navbar {
         border-bottom: 1px solid $white;
     }
-}
-
-.dropdown-languages .dropdown-menu {
-    min-width: 80px;
-    border: 0;
-    margin-top: -5px;
-}
-
-.dropdown-languages .dropdown-menu .dropdown-item {
-    font-weight: 500;
-    padding-top: 0;
-    padding-bottom: 0;
-    margin-top: 0;
-}
-
-.current-language-display {
-    display: inline-block;
-    width: 20px;
 }
 
 .nav-item.dropdown {
@@ -305,24 +363,37 @@ u {
     }
 }
 
-.logo-france2030-desktop,
-.logo-france2030-mobile {
+.logo-france2030-desktop {
     content: url("images/france-2030/france-2030-couleurs-smaller.png");
 }
 
 @include color-mode(dark) {
-    .logo-france2030-desktop,
-    .logo-france2030-mobile {
+    .logo-france2030-desktop {
         content: url("images/france-2030/france-2030-blanc-smaller.png");
     }
 }
 
-@include media-breakpoint-only(xl) {
-    .logo-france2030-desktop {
-        height: 75px;
-        margin-right: 10px;
+.footer-logo {
+    width: auto;
+    height: 70px;
+}
+
+// Without JS (no data-bs-theme set) the light variant is the one shown
+.theme-dark-only {
+    display: none;
+}
+
+@include color-mode(dark) {
+    .theme-light-only {
+        display: none;
     }
 
+    .theme-dark-only {
+        display: inline;
+    }
+}
+
+@include media-breakpoint-only(xl) {
     .nav-item {
         margin: 0;
     }
@@ -333,11 +404,6 @@ u {
 }
 
 @include media-breakpoint-only(lg) {
-    .logo-france2030-desktop {
-        height: 75px;
-        margin-right: 10px;
-    }
-
     .nav-item {
         margin: 0;
     }
@@ -347,42 +413,12 @@ u {
     }
 }
 
-@include media-breakpoint-up(xxl) {
-    .logo-france2030-desktop {
-        height: 90px;
-        margin-right: 30px;
-    }
-}
-
-.logo-france2030-mobile {
-    height: 90px;
-}
-
-@include media-breakpoint-down(lg) {
-    .logo-france2030-desktop {
-        display: none;
-    }
-}
-
-@include media-breakpoint-up(lg) {
-    .logo-france2030-mobile {
-        display: none;
-    }
-}
-
 .footer {
     margin-top: auto;
 }
 
 .diamond-docs-sidebar-container {
-    width: 360px;
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-.docs-sidebar {
-    width: 336px;
 }
 
 @include media-breakpoint-down(md) {
@@ -414,26 +450,16 @@ u {
         font-size: 85%; //$font-size-base;
     }
 
-    .diamond.in-navbar {
-        height: 40px;
-    }
-
-    .logo-france2030-desktop {
-        height: 55px;
-    }
-
     .icon-tabler-search,
-    .icon-tabler-brightness,
+    .icon-tabler-sun,
+    .icon-tabler-moon,
     .icon-tabler-chevron-down {
         width: 16px;
     }
 
-    .dropdown-languages {
-        width: 70px;
-    }
-
-    .current-language-display {
-        font-size: 85%;
+    .navbar-actions {
+        gap: 0.5rem;
+        margin-left: 0.75rem;
     }
 
     .dropdown-item {
@@ -487,56 +513,9 @@ u {
     padding-right: 10px;
 }
 
-@include media-breakpoint-down(sm) {
-    .navbar .offcanvas.offcanvas-start,
-    .navbar .offcanvas.offcanvas-end {
-        width: 95vw;
-    }
-}
-
-@include media-breakpoint-down(lg) {
-    .switch-language-desktop,
-    .switch-color-mode-desktop {
-        display: none;
-    }
-}
-
-@include media-breakpoint-up(lg) {
-    .switch-language-mobile,
-    .switch-color-mode-mobile {
-        display: none;
-    }
-}
-
-@include media-breakpoint-down(lg) {
-    .navbar .offcanvas .navbar-nav {
-        align-self: stretch;
-        width: 100%;
-        align-items: center;
-    }
-}
-
 .switch-language-mobile {
-    text-align: right;
-    width: 0.7rem;
-    margin-right: 1.35rem;
-    margin-left: 0.7rem;
-}
-
-.switch-color-mode-mobile {
-    margin-left: auto;
-    display: block;
-}
-
-.search-mobile {
-    margin-right: 3%;
-    margin-left: auto;
-    display: block;
-}
-
-.close-button-mobile {
-    margin-left: 3%;
-    display: block;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
 }
 
 th,
@@ -603,20 +582,6 @@ tr {
 
 // // END mprove toc behaviour (while scrolling) END // //
 
-// // Keep anchor-linked headings clear of the sticky navbar // //
-
-html {
-    scroll-padding-top: 7rem;
-}
-
-@include media-breakpoint-up(lg) {
-    html {
-        scroll-padding-top: 8rem;
-    }
-}
-
-// // END keep anchor-linked headings clear of the sticky navbar END // //
-
 // // // END modify _global.scss END // // //
 
 .btn-toggle {
@@ -652,6 +617,7 @@ html {
     overflow-y: hidden;
     justify-self: left;
     width: fit-content;
+    white-space: nowrap;
 }
 
 // // // Worflows >>> simple-adsorption-workflow images >>> // // //
@@ -721,11 +687,6 @@ hr {
 }
 
 // // // <<< <select> in codes home page <<< // // //
-
-.close-sidebar-mobile {
-    display: block;
-    margin-left: auto;
-}
 
 @include media-breakpoint-down(sm) {
     .section-logo,
@@ -797,11 +758,6 @@ label {
     }
 }
 
-@include media-breakpoint-only(lg) {
-    .codes-content {
-        width: 90%;
-    }
-}
 ////////////////////////////////
 
 .card-news-homepage {
@@ -882,7 +838,7 @@ body:not(.has-scroll-fade) .scroll-fade {
     font-family: inherit;
     font-weight: inherit;
     font-size: inherit;
-  }
+}
 
 .n2p2_benchmark_total_time_normal_installation_VS_apptainer_B {
     content: url(/images/workflows/n2p2/n2p2_benchmark_total_time_normal_installation_VS_apptainer_B-light.png);
@@ -930,18 +886,18 @@ body:not(.has-scroll-fade) .scroll-fade {
     }
 }
 
-html[data-bs-theme="dark"] #buttonColorMode .theme-icon-dark {
+html[data-bs-theme="dark"] .color-mode-toggle .theme-icon-dark {
     display: none;
 }
 
-html[data-bs-theme="dark"] #buttonColorMode .theme-icon-light {
+html[data-bs-theme="dark"] .color-mode-toggle .theme-icon-light {
     display: block;
 }
 
-html[data-bs-theme="light"] #buttonColorMode .theme-icon-dark {
+html[data-bs-theme="light"] .color-mode-toggle .theme-icon-dark {
     display: block;
 }
 
-html[data-bs-theme="light"] #buttonColorMode .theme-icon-light {
+html[data-bs-theme="light"] .color-mode-toggle .theme-icon-light {
     display: none;
 }

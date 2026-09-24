@@ -20,7 +20,7 @@ social:
 doks:
   colorMode: auto
   colorModeToggler: true
-  navbarSticky: true
+  navbarSticky: false
   containerBreakpoint: fluid
   navBarButton: false
   # navBarButtonUrl: /docs/prologue/introduction/
@@ -62,10 +62,6 @@ doks:
   docsRepo: https://github.com/diamond-diadem/diamond-diadem.github.io
   docsRepoBranch: main
   docsRepoSubPath: ""
-  menu:
-    section:
-      auto: true
-      collapsibleSidebar: true
 render_hooks:
   image:
     errorLevel: ignore

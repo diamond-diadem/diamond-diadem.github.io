@@ -1,0 +1,371 @@
+// Drawer: a full-height panel sliding over the whole page, header included,
+// on small screens. drawer.js toggles .show on it; without JS, :target does.
+// Used by the main menu (from the right) and the section menu (from the left).
+
+$drawer-duration: 0.45s;
+$drawer-ease: cubic-bezier(0.32, 0.72, 0, 1);
+$drawer-width: 24rem;
+$drawer-gutter: 1.5rem;
+$drawer-z-index: $zindex-offcanvas;
+// Same height as the site header row, so a toggle left above the drawer
+// lands exactly in the corner of the drawer header
+$drawer-header-height: 3.8125rem;
+
+// Toggles and close signs
+
+.drawer-toggle {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    padding: 0;
+    border: 0;
+    border-radius: 0.75rem;
+    background-color: transparent;
+    color: $body-color;
+    transition:
+        background-color 0.2s ease-in-out,
+        color 0.2s ease-in-out;
+}
+
+.drawer-toggle:hover {
+    background-color: rgba($body-color, 0.06);
+    color: $link-color;
+}
+
+.drawer-toggle:focus-visible {
+    outline: 2px solid $link-color;
+    outline-offset: 2px;
+}
+
+// The main menu button rises above its open drawer and becomes its close sign
+.drawer-toggle-floating[aria-expanded="true"] {
+    position: relative;
+    z-index: $drawer-z-index + 1;
+}
+
+// Two bars, the lower one shorter, crossing into an X
+.burger-icon {
+    position: relative;
+    display: block;
+    width: 1.375rem;
+    height: 1rem;
+}
+
+.burger-icon::before,
+.burger-icon::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    height: 2px;
+    border-radius: 2px;
+    background-color: currentColor;
+    transition:
+        transform $drawer-duration $drawer-ease,
+        width $drawer-duration $drawer-ease;
+}
+
+.burger-icon::before {
+    top: 3px;
+    width: 100%;
+}
+
+.burger-icon::after {
+    bottom: 3px;
+    width: 65%;
+}
+
+.drawer-toggle:hover .burger-icon::after {
+    width: 100%;
+}
+
+[aria-expanded="true"] > .burger-icon::before,
+.drawer-close .burger-icon::before {
+    transform: translateY(4px) rotate(45deg);
+}
+
+[aria-expanded="true"] > .burger-icon::after,
+.drawer-close .burger-icon::after {
+    width: 100%;
+    transform: translateY(-4px) rotate(-45deg);
+}
+
+@include media-breakpoint-down(lg) {
+    // Panel
+
+    .drawer {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        z-index: $drawer-z-index;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 100%;
+        background-color: $body-bg;
+        color: $body-color;
+        outline: 0;
+        visibility: hidden;
+        // visibility waits for the slide-out to end, so the panel stays visible while leaving
+        transition:
+            transform $drawer-duration $drawer-ease,
+            visibility 0s linear $drawer-duration;
+    }
+
+    .drawer-end {
+        right: 0;
+        transform: translateX(100%);
+    }
+
+    .drawer-start {
+        left: 0;
+        transform: translateX(-100%);
+    }
+
+    .drawer.show,
+    .drawer:target {
+        transform: none;
+        visibility: visible;
+        transition-delay: 0s;
+    }
+
+    .drawer .header-bar {
+        flex-shrink: 0;
+        margin-bottom: 0;
+    }
+
+    .drawer-header {
+        display: flex;
+        flex-shrink: 0;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        min-height: $drawer-header-height;
+        padding: 0.5rem 0.75rem 0.5rem $drawer-gutter;
+        border-bottom: 1px solid rgba($body-color, 0.1);
+    }
+
+    .drawer-title {
+        margin: 0;
+        font-family: $font-family-ui;
+        font-size: 1.25rem;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+
+    .drawer-body {
+        flex: 1 1 auto;
+        min-height: 0;
+        padding: 1.25rem $drawer-gutter 1.5rem;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+    }
+
+    // Section menu: the sidebar tree, with rows sized for touch
+    .drawer .collapsible-sidebar {
+        margin: 0;
+        font-family: $font-family-ui;
+    }
+
+    .drawer .collapsible-sidebar .btn-toggle {
+        min-height: 2.75rem;
+        font-size: 1.125rem;
+    }
+
+    .drawer .collapsible-sidebar .docs-link {
+        display: flex;
+        align-items: center;
+        min-height: 2.5rem;
+        font-size: 1rem;
+    }
+
+    .drawer-footer {
+        display: flex;
+        flex-shrink: 0;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 1rem $drawer-gutter calc(1rem + env(safe-area-inset-bottom, 0px));
+        border-top: 1px solid rgba($body-color, 0.1);
+    }
+
+    // Search looks like a field, inviting to type
+    .drawer-search.btn {
+        display: inline-flex;
+        flex: 1 1 auto;
+        align-items: center;
+        gap: 0.625rem;
+        min-width: 0;
+        height: 2.75rem;
+        padding: 0 1rem;
+        border: 1px solid rgba($body-color, 0.16);
+        border-radius: 50rem;
+        background-color: rgba($body-color, 0.03);
+        color: $body-secondary-color;
+        font-family: $font-family-ui;
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .drawer-search .icon {
+        width: 1.125rem;
+        height: 1.125rem;
+    }
+
+    .drawer-icon-button.btn {
+        display: inline-flex;
+        flex-shrink: 0;
+        align-items: center;
+        justify-content: center;
+        width: 2.75rem;
+        height: 2.75rem;
+        padding: 0;
+        border: 1px solid rgba($body-color, 0.16);
+        border-radius: 50%;
+        color: $body-color;
+    }
+
+    .drawer-icon-button .icon {
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+
+    .drawer-search.btn:hover,
+    .drawer-icon-button.btn:hover {
+        border-color: $link-color;
+        color: $link-color;
+    }
+
+    .drawer-search.btn:focus-visible,
+    .drawer-icon-button.btn:focus-visible {
+        outline: 2px solid $link-color;
+        outline-offset: 2px;
+        box-shadow: none;
+    }
+
+    // Backdrop dimming the page beside a drawer narrower than the screen
+
+    .drawer-backdrop {
+        position: fixed;
+        inset: 0;
+        z-index: $drawer-z-index - 1;
+        background-color: rgba($black, 0.4);
+        opacity: 0;
+        visibility: hidden;
+        backdrop-filter: blur(4px);
+        transition:
+            opacity $drawer-duration ease,
+            visibility 0s linear $drawer-duration;
+    }
+
+    .drawer.show + .drawer-backdrop,
+    .drawer:target + .drawer-backdrop {
+        opacity: 1;
+        visibility: visible;
+        transition-delay: 0s;
+    }
+
+    // Page behind an open drawer does not scroll (class set by drawer.js)
+    .drawer-open {
+        overflow: hidden;
+    }
+
+    // The header holding the drawers rises above any positioned page content
+    .drawer-open .navbar,
+    .navbar:has(.drawer:target) {
+        z-index: $drawer-z-index;
+    }
+}
+
+@include media-breakpoint-between(sm, lg) {
+    .drawer {
+        width: $drawer-width;
+    }
+
+    .drawer-end {
+        border-left: 1px solid rgba($body-color, 0.1);
+        box-shadow: -1rem 0 3rem rgba($black, 0.12);
+    }
+
+    .drawer-start {
+        border-right: 1px solid rgba($body-color, 0.1);
+        box-shadow: 1rem 0 3rem rgba($black, 0.12);
+    }
+}
+
+@include color-mode(dark) {
+    .drawer-toggle {
+        color: $body-color-dark;
+    }
+
+    .drawer-toggle:hover {
+        background-color: rgba($white, 0.08);
+        color: $link-color-dark;
+    }
+
+    .drawer-toggle:focus-visible {
+        outline-color: $link-color-dark;
+    }
+
+    @include media-breakpoint-down(lg) {
+        .drawer {
+            background-color: $body-bg-dark;
+            color: $body-color-dark;
+        }
+
+        .drawer-header {
+            border-bottom-color: rgba($white, 0.12);
+        }
+
+        .drawer-footer {
+            border-top-color: rgba($white, 0.12);
+        }
+
+        .drawer-search.btn {
+            border-color: rgba($white, 0.18);
+            background-color: rgba($white, 0.04);
+            color: $body-secondary-color-dark;
+        }
+
+        .drawer-icon-button.btn {
+            border-color: rgba($white, 0.18);
+            color: $body-color-dark;
+        }
+
+        .drawer-search.btn:hover,
+        .drawer-icon-button.btn:hover {
+            border-color: $link-color-dark;
+            color: $link-color-dark;
+        }
+
+        .drawer-search.btn:focus-visible,
+        .drawer-icon-button.btn:focus-visible {
+            outline-color: $link-color-dark;
+        }
+
+        .drawer-backdrop {
+            background-color: rgba($black, 0.55);
+        }
+    }
+
+    @include media-breakpoint-between(sm, lg) {
+        .drawer-end {
+            border-left-color: rgba($white, 0.12);
+        }
+
+        .drawer-start {
+            border-right-color: rgba($white, 0.12);
+        }
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .drawer-toggle,
+    .burger-icon::before,
+    .burger-icon::after,
+    .drawer,
+    .drawer-backdrop {
+        transition: none !important;
+    }
+}

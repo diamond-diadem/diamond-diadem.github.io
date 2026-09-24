@@ -1,0 +1,59 @@
+// Callouts: a soft tint of their accent, with the icon and title in a deep
+// shade of it. Text keeps the body color, well above 7:1 on the tint (the
+// theme's saturated backgrounds made the thin body typeface look washed out).
+
+$callout-hues: (
+    note: 234,
+    tip: 281,
+    caution: 41,
+    danger: 339
+);
+
+.callout {
+    border-left-width: 4px;
+    border-radius: 0 0.75rem 0.75rem 0;
+}
+
+.callout .callout-body a {
+    text-underline-offset: 0.2em;
+}
+
+@each $name, $hue in $callout-hues {
+    .callout.callout-#{$name} {
+        border-color: hsl($hue, 65%, 55%);
+        background-color: hsl($hue, 75%, 96%);
+
+        .callout-icon,
+        .callout-title,
+        .callout-body a {
+            color: hsl($hue, 55%, 30%);
+        }
+
+        .callout-body,
+        .callout-body a:hover,
+        .callout-body a:active {
+            color: $body-color;
+        }
+    }
+}
+
+@include color-mode(dark) {
+    @each $name, $hue in $callout-hues {
+        .callout.callout-#{$name} {
+            border-color: hsl($hue, 70%, 65%);
+            background-color: mix(hsl($hue, 55%, 50%), $body-bg-dark, 16%);
+
+            .callout-icon,
+            .callout-title,
+            .callout-body a {
+                color: hsl($hue, 90%, 84%);
+            }
+
+            .callout-body,
+            .callout-body a:hover,
+            .callout-body a:active {
+                color: $headings-color-dark;
+            }
+        }
+    }
+}

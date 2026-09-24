@@ -1,0 +1,46 @@
+// Header submenus as native disclosures (<details>): the summary stands in
+// for Bootstrap's dropdown toggle and [open] for its .show state, so they
+// open without JS. nav-disclosure.js adds the dropdown closing behaviors.
+
+details.nav-disclosure {
+    @include plain-disclosure;
+}
+
+.nav-disclosure > summary {
+    cursor: pointer;
+    list-style: none;
+}
+
+.nav-disclosure > summary::-webkit-details-marker {
+    display: none;
+}
+
+.nav-disclosure[open] > .dropdown-menu {
+    display: block;
+}
+
+.navbar .nav-disclosure .icon-tabler-chevron-down {
+    transition: transform 0.25s ease;
+}
+
+.navbar .nav-disclosure[open] .icon-tabler-chevron-down {
+    transform: rotate(180deg);
+}
+
+@include media-breakpoint-up(lg) {
+    .nav-disclosure {
+        position: relative;
+    }
+
+    .nav-disclosure > .dropdown-menu {
+        top: 100%;
+        left: 0;
+        margin-top: 0.25rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .navbar .nav-disclosure .icon-tabler-chevron-down {
+        transition: none;
+    }
+}

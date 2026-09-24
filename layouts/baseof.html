@@ -1,5 +1,7 @@
 <!doctype html>
-<html lang="{{ .Site.Language.Locale | default "en" }}" data-bs-theme="{{ site.Params.doks.colorMode | default "auto" }}">
+{{- /* In auto mode color-mode.js sets data-bs-theme, so its absence tells CSS that JS is unavailable */}}
+{{- $colorMode := site.Params.doks.colorMode | default "auto" }}
+<html lang="{{ .Site.Language.Locale | default "en" }}"{{ if ne $colorMode "auto" }} data-bs-theme="{{ $colorMode }}"{{ end }}>
   {{ partial "head/head" . }}
   {{ partial "head/body-class" . }}
   <body class="{{ delimit (.Scratch.Get "class") " " }} {{ if site.Params.diamond.enableScrollFade }}has-scroll-fade{{ end }}"{{ if eq site.Params.doks.scrollSpy true }} data-bs-spy="scroll" data-bs-target="#toc" data-bs-root-margin="0px 0px -60%" data-bs-smooth-scroll="true" tabindex="0"{{ end }}>

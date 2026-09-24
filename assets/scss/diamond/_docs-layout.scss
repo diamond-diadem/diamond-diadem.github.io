@@ -1,0 +1,93 @@
+// Documentation-like pages (codes, documentation, workflows): a section
+// sidebar sized to its entries, beside an article of readable width.
+
+$docs-sidebar-min-width: 14rem;
+$docs-sidebar-max-width: 21rem;
+// About 75 characters per line of body text
+$docs-content-max-width: 46rem;
+
+// Article: a comfortable line length whatever the screen width
+.docs-content {
+    flex: 1 1 auto;
+    width: 100%;
+    min-width: 0;
+    max-width: $docs-content-max-width;
+    margin-inline: auto;
+}
+
+@include media-breakpoint-up(lg) {
+    // Sidebar: as wide as its longest entry, within bounds following the screen
+    .diamond-docs-sidebar-container {
+        flex: 0 0 auto;
+        width: auto;
+        min-width: $docs-sidebar-min-width;
+        max-width: clamp(#{$docs-sidebar-min-width}, 28vw, #{$docs-sidebar-max-width});
+    }
+
+    // The theme gives the sidebar a fixed basis, which would set the width instead
+    .diamond-docs-sidebar-container .docs-sidebar {
+        flex: none;
+        width: auto;
+    }
+}
+
+// Sidebar tree: branches are native disclosures (see sidebar/menu-item.html)
+
+details.sidebar-group {
+    @include plain-disclosure;
+}
+
+.sidebar-group > summary {
+    cursor: pointer;
+    list-style: none;
+}
+
+.sidebar-group > summary::-webkit-details-marker {
+    display: none;
+}
+
+.sidebar-group[open] > summary::before {
+    transform: rotate(90deg);
+}
+
+.sidebar-group > summary:focus-visible {
+    outline: 2px solid $link-color;
+    outline-offset: 2px;
+}
+
+@include color-mode(dark) {
+    .sidebar-group > summary:focus-visible {
+        outline-color: $link-color-dark;
+    }
+}
+
+// Where supported, closed branches stay laid out (hidden, with no height):
+// the sidebar width then accounts for every entry, so it does not jump when
+// a branch opens, and the opening can be animated.
+@supports selector(::details-content) {
+    .sidebar-group {
+        interpolate-size: allow-keywords;
+    }
+
+    .sidebar-group::details-content {
+        block-size: 0;
+        overflow: clip;
+        content-visibility: visible;
+        visibility: hidden;
+        transition:
+            block-size 0.3s ease,
+            visibility 0s linear 0.3s;
+    }
+
+    .sidebar-group[open]::details-content {
+        block-size: auto;
+        visibility: visible;
+        transition-delay: 0s;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .sidebar-group::details-content {
+        transition: none;
+    }
+}
