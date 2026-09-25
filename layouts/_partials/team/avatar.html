@@ -1,0 +1,26 @@
+{{- /*
+  A person's photo, or their initials when there is none. The photo is
+  cropped square and resized to the avatar, in 1x and 2x densities.
+
+  @param {map}    person A team member from data/team.yaml.
+  @param {string} size   "small" or "large", as the team-avatar--* modifiers.
+  @param {string} [alt]  Text alternative; empty by default, as the name is shown beside it.
+*/ -}}
+{{- $person := .person -}}
+{{- $class := printf "team-avatar team-avatar--%s" .size -}}
+{{- /* Largest rendered width in CSS pixels of each size, see _team.scss */ -}}
+{{- $width := index (dict "small" 56 "large" 192) .size -}}
+{{- with partial "team/photo.html" $person -}}
+  {{- with resources.Get (strings.TrimPrefix "/" .) -}}
+    {{- $spec := "%dx%d webp q80" -}}
+    {{- $image := .Fill (printf $spec $width $width) -}}
+    {{- $image2x := .Fill (printf $spec (mul $width 2) (mul $width 2)) -}}
+    <img class="{{ $class }}" src="{{ $image.RelPermalink }}" srcset="{{ $image.RelPermalink }} 1x, {{ $image2x.RelPermalink }} 2x" width="{{ $width }}" height="{{ $width }}" alt="{{ $.alt | default "" }}" loading="lazy" decoding="async">
+  {{- else -}}
+    <img class="{{ $class }}" src="{{ . }}" width="{{ $width }}" height="{{ $width }}" alt="{{ $.alt | default "" }}" loading="lazy" decoding="async">
+  {{- end -}}
+{{- else -}}
+  <span class="{{ $class }} team-avatar--initials" aria-hidden="true">
+    {{- substr ($person.first_name | default "") 0 1 }}{{ substr ($person.last_name | default "") 0 1 -}}
+  </span>
+{{- end -}}

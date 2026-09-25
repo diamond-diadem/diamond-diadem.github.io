@@ -1,0 +1,28 @@
+{{- /*
+  Returns the distinct values offered by the team filters. Work packages
+  keep the project order, every other value is sorted alphabetically.
+
+  @param {slice} . The team members.
+  @returns {map} Lists under "roles", "types" and "affiliations".
+*/ -}}
+{{- $projectRoleOrder := slice
+  "Coordinator"
+  "WP1 - Codes and Workflows"
+  "WP2 - Materials Database Infrastructure"
+  "WP3 - Machine Learning Interatomic Potentials"
+-}}
+{{- $roles := slice -}}
+{{- $types := slice -}}
+{{- $affiliations := slice -}}
+{{- range . -}}
+  {{- with .role }}{{ $roles = $roles | append . }}{{ end -}}
+  {{- with .affiliation }}{{ $affiliations = $affiliations | append . }}{{ end -}}
+  {{- range partial "team/personnel-types.html" . }}{{ $types = $types | append . }}{{ end -}}
+{{- end -}}
+{{- $roles = uniq $roles -}}
+{{- $orderedRoles := intersect $projectRoleOrder $roles | append (sort (complement $projectRoleOrder $roles)) -}}
+{{- return dict
+  "roles" $orderedRoles
+  "types" (sort (uniq $types))
+  "affiliations" (sort (uniq $affiliations))
+-}}

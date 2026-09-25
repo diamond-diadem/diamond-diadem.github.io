@@ -1,0 +1,20 @@
+// Guarded email address (see layouts/_partials/main/guarded-email.html),
+// before and after email-guard.js turns it into a link.
+
+.email-guard__address {
+    overflow-wrap: anywhere;
+}
+
+// Separate boxes, so a long address wraps before its @ rather than mid-word.
+// A box stops the underline of its link, hence the inherit.
+.email-guard__part {
+    display: inline-block;
+    text-decoration: inherit;
+}
+
+// The markup holds each part reversed until the script puts it back in order;
+// meanwhile the bidi override shows it in reading order
+.email-guard .email-guard__part {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+}

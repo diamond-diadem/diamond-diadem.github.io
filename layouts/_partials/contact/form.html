@@ -1,0 +1,52 @@
+{{- /*
+  The helpdesk form, sent by contact-form.js and guarded by Cloudflare
+  Turnstile. Both need JavaScript: without it, a notice takes the place of the
+  form and points to the other ways of reaching the team.
+
+  @param {page} . The contact page.
+*/ -}}
+<section class="contact-card" aria-labelledby="contact-form-title">
+  <h2 class="contact-card__title" id="contact-form-title">{{ i18n "contact_form_title" }}</h2>
+
+  <p class="contact-card__notice no-js-only">{{ i18n "contact_form_needs_js" }}</p>
+
+  <div class="requires-js" id="contact-form-container">
+    <div class="alert alert-danger" id="contact-form-error" role="alert" hidden></div>
+
+    <form class="contact-form" id="contact-helpdesk-form">
+      <div class="contact-form__field contact-form__field--short">
+        <label class="form-label" for="contact-name">{{ i18n "contact_form_name" }}</label>
+        <input class="form-control" type="text" id="contact-name" name="name" autocomplete="name" required>
+      </div>
+      <div class="contact-form__field contact-form__field--short">
+        <label class="form-label" for="contact-email">{{ i18n "contact_form_email" }}</label>
+        <input class="form-control" type="email" id="contact-email" name="email" autocomplete="email" spellcheck="false" required>
+      </div>
+      <div class="contact-form__field">
+        <label class="form-label" for="contact-message">{{ i18n "contact_form_message" }}</label>
+        <textarea class="form-control" id="contact-message" name="message" rows="6" required
+          aria-describedby="contact-message-hint"></textarea>
+        <p class="form-text" id="contact-message-hint">{{ i18n "contact_form_message_hint" }}</p>
+      </div>
+      <div class="contact-form__consent form-check">
+        <input class="form-check-input" type="checkbox" id="gdpr-consent" name="gdpr_consent" required>
+        <label class="form-check-label" for="gdpr-consent">{{ i18n "contact_form_consent" }}</label>
+      </div>
+      <div class="contact-form__actions">
+        <div class="cf-turnstile" data-sitekey="0x4AAAAAADrVIyJ51RUnlL-u" data-language="{{ .Lang }}"></div>
+        <button class="btn btn-primary contact-form__submit" type="submit" id="contact-submit-btn"
+          data-sending="{{ i18n "contact_form_sending" }}">{{ i18n "contact_form_submit" }}</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="contact-success" id="contact-success-container" hidden>
+    <svg class="contact-success__icon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 13l4 4L19 7" />
+    </svg>
+    <h3 class="contact-success__title" id="contact-success-title" tabindex="-1">{{ i18n "contact_success_title" }}</h3>
+    <p class="contact-success__text">{{ i18n "contact_success_text" }}</p>
+    <a class="btn btn-outline-primary" href="{{ .RelPermalink }}">{{ i18n "contact_success_again" }}</a>
+  </div>
+</section>

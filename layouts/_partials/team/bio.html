@@ -1,0 +1,14 @@
+{{- /*
+  Returns a person's biography in the page language, falling back to English:
+  the long one, or the short one when they have no long one.
+
+  @param {map}    person A team member from data/team.yaml.
+  @param {string} lang   The page language.
+  @returns {string}
+*/ -}}
+{{- $person := .person -}}
+{{- $bio := or $person.bio_long $person.bio_short "" -}}
+{{- if eq .lang "fr" -}}
+  {{- $bio = or $person.bio_long_fr $person.bio_short_fr $bio -}}
+{{- end -}}
+{{- return $bio -}}

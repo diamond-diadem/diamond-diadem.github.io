@@ -30,3 +30,12 @@ $page-body-space-bottom-fluid: clamp(3rem, 2rem + 4vw, 5rem);
     padding-top: 0;
     padding-bottom: 0;
 }
+
+// Running text on generic pages keeps a comfortable line length
+.page-content {
+    max-width: 48rem;
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+}

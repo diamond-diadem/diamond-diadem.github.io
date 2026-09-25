@@ -1,13 +1,9 @@
 {{ define "main" }}
 <main class="diamond-content">
-  <div class="col-default-page">
-    <div class="container-fluid container-h1-default-page">
-      <h1 class="text-center">{{ .Title }}</h1>
-    </div>
-  </div>
   <div class="container-fw mx-auto">
     <div class="row justify-content-center">
       <article class="col-lg-11 col-xl-9">
+        {{ partial "main/page-header.html" . }}
         {{ .Content }}
       </article>
     </div>

@@ -31,11 +31,13 @@ $home-footer-space: clamp(4.5rem, 2.5rem + 6vw, 9rem);
 
 // The colors of the home page in one mode. The band tints match the header
 // (see _site-header.scss), so the hero continues it without a seam. Pages
-// built from home pieces, such as the FAQ and the news, share them.
+// built from home pieces, such as the FAQ, the news and the team, share them.
 @mixin home-skin($page, $text, $accent, $on-accent, $raised, $border, $tint, $shadow) {
     .home-page,
     .faq-page,
-    .news-list {
+    .news-list,
+    .team-page,
+    .team-person {
         --home-page: #{$page};
         --home-text: #{$text};
         --home-muted: #{mix($text, $page, 72%)};
@@ -720,16 +722,16 @@ h3.home-fair__title {
     }
 }
 
-// The codes form one table of cells sharing their borders: every cell
+// A table of cells sharing their borders, such as the codes: every cell
 // draws all four sides and overlaps its neighbours by the border width, so
 // inner lines stay single and an incomplete last row keeps a clean edge.
 // The padding makes room for the overlap of the last column and row.
-.home-grid--codes {
+.home-grid--table {
     gap: 0;
     padding: 0 1px 1px 0;
 }
 
-.home-card.home-code {
+.home-card.home-card--cell {
     margin: 0 -1px -1px 0;
     border-radius: 0;
     transition:

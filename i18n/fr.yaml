@@ -49,12 +49,20 @@ news_next_page: Page suivante
 news_read_more: Lire la suite
 
 ### Team page ###
+team_about: À propos
+team_affiliation: Affiliation
 team_all: Tous
 team_all_feminine: Toutes
-team_next: Suivant
-team_no_results: Aucun résultat.
+team_all_members: Toute l’équipe
+team_clear_filters: Effacer les filtres
+team_contact: Contact
+team_filters: Filtrer l’équipe
+team_no_results: Personne ne correspond à ces filtres.
+team_personnel_type: Rôle
 team_photo_of: Photo de
-team_previous: Précédent
+team_results:
+  one: "{count} personne"
+  other: "{count} personnes"
 team_role_coordinator: Coordination
 team_role_wp1: WP1 - Codes et Workflows
 team_role_wp2: WP2 - Infrastructure de Bases de Données Matériaux
@@ -62,8 +70,10 @@ team_role_wp3: WP3 - Potentiels Interatomiques Machine Learning
 team_personnel_type_project_coordinator: Coordinateur de projet
 team_personnel_type_scientific_lead: Responsable scientifique
 team_personnel_type_scientist: Scientifique
-team_send_email: Envoyer un email
+team_search: Rechercher
+team_search_placeholder: Nom, groupe de travail, affiliation…
 team_website: Site web
+team_work_package: Groupe de travail
 switch_language: Changer de langue
 main_menu: Menu principal
 main_menu_open: Ouvrir le menu principal
@@ -83,6 +93,26 @@ footer_supporters: Avec le soutien de
 opens_new_tab: (s’ouvre dans un nouvel onglet)
 
 ### Contact page ###
-contact_team_intro: Vous préférez vous adresser directement à quelqu’un ? Notre <a
-  href="{{ .URL }}">page Équipe</a> présente chaque membre du projet, son rôle et ses
-  coordonnées, pour que vous puissiez écrire directement à la bonne personne.
+contact_form_title: Envoyez-nous un message
+contact_form_needs_js: Le formulaire de contact nécessite JavaScript, désactivé
+  dans votre navigateur. Vous pouvez toujours écrire à chaque membre du projet
+  depuis la page Équipe.
+contact_form_name: Nom
+contact_form_email: Email
+contact_form_message: Message
+contact_form_message_hint: Dites-nous ce dont vous avez besoin, et quel code,
+  conteneur ou page est concerné.
+contact_form_consent: Je consens au traitement de mes données personnelles (nom
+  et email) pour traiter ma demande. Ce formulaire utilise Cloudflare Turnstile
+  pour la protection contre le spam, qui analyse les données techniques du
+  navigateur et peut utiliser des cookies pour vérifier que vous êtes humain.
+contact_form_submit: Envoyer le message
+contact_form_sending: Envoi en cours…
+contact_success_title: Message reçu
+contact_success_text: Merci pour votre message. Notre équipe vous répondra
+  prochainement.
+contact_success_again: Envoyer un autre message
+contact_mailboxes_title: Écrivez-nous
+contact_mailbox_general: Questions générales sur DIAMOND ou son site web
+contact_mailbox_technical: Questions techniques sur les images de conteneurs ou la
+  documentation

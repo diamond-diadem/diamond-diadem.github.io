@@ -1,0 +1,159 @@
+// Select menu: the drop-down select-menu.js builds over a native <select>.
+// It looks like the other form fields when closed, and opens a raised list
+// whose selected option carries a check mark. Colors come from the theme
+// tokens, so it fits any page in both color modes.
+
+$select-menu-radius: 0.625rem;
+$select-menu-chevron-size: 0.5rem;
+
+// Tint of the option under the pointer or the arrow keys: a light wash of
+// the accent, which keeps the body text at AA contrast in both modes
+:root {
+    --select-menu-active-bg: #{mix($primary, $surface-raised, 10%)};
+}
+
+@include color-mode(dark, true) {
+    --select-menu-active-bg: #{mix($link-color-dark, $surface-raised-dark, 18%)};
+}
+
+.select-menu {
+    position: relative;
+}
+
+// ---------------------------------------------------------------------------
+// Closed field
+
+.select-menu__button {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0.625rem 2.75rem 0.625rem 0.875rem;
+    overflow: hidden;
+    border: $input-border-width solid var(--bs-border-color);
+    border-radius: $select-menu-radius;
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
+    font-size: $input-font-size;
+    line-height: $input-line-height;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    user-select: none;
+    transition:
+        border-color 0.15s ease-out,
+        box-shadow 0.15s ease-out;
+
+    &:hover {
+        border-color: var(--bs-link-color);
+    }
+
+    &:focus {
+        outline: 0;
+        border-color: $input-focus-border-color;
+        box-shadow: $input-focus-box-shadow;
+    }
+
+    // Chevron, drawn from two borders so it follows the text color
+    &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 1.125rem;
+        width: $select-menu-chevron-size;
+        height: $select-menu-chevron-size;
+        border-right: 2px solid currentColor;
+        border-bottom: 2px solid currentColor;
+        opacity: 0.7;
+        transform: translateY(-75%) rotate(45deg);
+        transition: transform 0.2s ease-out;
+    }
+
+    &[aria-expanded="true"]::after {
+        transform: translateY(-25%) rotate(-135deg);
+    }
+}
+
+// ---------------------------------------------------------------------------
+// Open list: as wide as its longest option, within bounds, and never
+// narrower than the field
+
+.select-menu__listbox {
+    position: absolute;
+    z-index: $zindex-dropdown;
+    top: 100%;
+    top: calc(100% + 0.375rem);
+    left: 0;
+    width: max-content;
+    min-width: 100%;
+    max-width: 20rem;
+    max-height: 18rem;
+    margin: 0;
+    padding: 0.375rem;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    list-style: none;
+    border: 1px solid var(--bs-border-color);
+    border-radius: $select-menu-radius + 0.125rem;
+    background-color: var(--bs-tertiary-bg);
+    box-shadow: 0 1.25rem 2.5rem -1rem rgba($black, 0.35);
+    animation: select-menu-open 0.15s ease-out;
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+@keyframes select-menu-open {
+    from {
+        opacity: 0;
+        transform: translateY(-0.25rem);
+    }
+}
+
+.select-menu__option {
+    position: relative;
+    padding: 0.5rem 2.25rem 0.5rem 0.75rem;
+    border-radius: $select-menu-radius - 0.125rem;
+    line-height: 1.35;
+    cursor: pointer;
+
+    &.is-active {
+        background-color: var(--select-menu-active-bg);
+    }
+
+    &[aria-selected="true"] {
+        font-weight: 600;
+    }
+
+    // Check mark, drawn from two borders like the chevron
+    &[aria-selected="true"]::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 0.875rem;
+        width: 0.375rem;
+        height: 0.75rem;
+        border-right: 2px solid var(--bs-link-color);
+        border-bottom: 2px solid var(--bs-link-color);
+        transform: translateY(-60%) rotate(45deg);
+    }
+}
+
+// Windows high contrast drops backgrounds: an outline marks the active option
+@media (forced-colors: active) {
+    .select-menu__option.is-active {
+        outline: 2px solid Highlight;
+        outline-offset: -2px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .select-menu__button,
+    .select-menu__button::after {
+        transition: none;
+    }
+
+    .select-menu__listbox {
+        animation: none;
+    }
+}

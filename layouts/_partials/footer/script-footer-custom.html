@@ -16,6 +16,7 @@
 {{ partial "footer/esbuild" (dict "src" "js/to-top.js" "load" "defer" "transpile" false) -}}
 {{ partial "footer/esbuild" (dict "src" "js/diamond/drawer.js" "load" "defer" "transpile" false) -}}
 {{ partial "footer/esbuild" (dict "src" "js/diamond/nav-disclosure.js" "load" "defer" "transpile" false) -}}
+{{ partial "footer/esbuild" (dict "src" "js/diamond/email-guard.js" "load" "defer" "transpile" false) -}}
 
 {{ if site.Params.analytics.enable }}
 <script>
@@ -38,6 +39,7 @@
 {{ partial "footer/esbuild" (dict "src" "js/clipboard.js" "load" "async" "transpile" false) -}}
 
 {{ if and (eq .Type "team") (eq .Kind "section") }}
+  {{ partial "footer/esbuild" (dict "src" "js/diamond/select-menu.js" "transpile" false) -}}
   {{ partial "footer/esbuild" (dict "src" "js/diamond/team-list.js" "transpile" false) -}}
 {{ end }}
 

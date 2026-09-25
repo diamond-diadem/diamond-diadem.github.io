@@ -7,7 +7,6 @@
 @import "diamond/custom-icons";
 @import "diamond/codes-logos";
 @import "diamond/news-framework";
-@import "diamond/banner-diamond";
 @import "diamond/section-dropdown-navbar";
 @import "diamond/drawer";
 @import "diamond/site-menu";
@@ -20,7 +19,10 @@
 @import "diamond/cookies-consent";
 @import "diamond/responsive-use-gitlab";
 @import "diamond/search-results";
-@import "diamond/team-list";
+@import "diamond/email-guard";
+@import "diamond/select-menu";
+@import "diamond/team";
+@import "diamond/page-header";
 @import "diamond/contact-form";
 @import "diamond/syntax-contrast";
 @import "diamond/site-footer";
@@ -542,16 +544,12 @@ hr {
     }
 }
 
+// Inner pages share the column of the home page, so every page lines up
+// with the header and footer content whatever its template
 .col-default-page {
-    width: 95%;
+    max-width: $home-container-width;
     margin-left: auto;
     margin-right: auto;
-}
-
-@include media-breakpoint-down(sm) {
-    .col-default-page {
-        width: 98%;
-    }
 }
 
 .contact-mailto {

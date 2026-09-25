@@ -1,160 +1,82 @@
+// Team listing filters: reveals the search box and drop-downs rendered hidden
+// by the template, then shows only the members matching all of them, and
+// offers to clear them once one is set. Without this script the whole team
+// stays listed.
 (function () {
-  const q = document.getElementById('q');
-  const proj = document.getElementById('f-project');
-  const type = document.getElementById('f-type');
-  const aff = document.getElementById('f-affil');
-  const grid = document.getElementById('people-grid');
-  const pagination = document.getElementById('people-pagination');
-  const prev = document.getElementById('people-prev');
-  const next = document.getElementById('people-next');
-  const pageInfo = document.getElementById('people-page-info');
-  const empty = document.getElementById('no-results');
-  if (!q || !proj || !type || !aff || !grid || !pagination || !prev || !next || !pageInfo || !empty) {
+  const form = document.querySelector('[data-team-filters]');
+  const results = document.querySelector('[data-team-results]');
+  const resetButton = document.querySelector('[data-team-reset]');
+  const members = Array.from(document.querySelectorAll('[data-team-member]'));
+  if (!form || !results || !resetButton || !members.length) {
     return;
   }
 
-  const cards = Array.from(grid.querySelectorAll('[data-person]'));
-  const pageSize = 8;
-  let currentPage = 1;
-  let resizeTimer;
+  const controls = Array.from(form.querySelectorAll('[data-filter]'));
+  const pluralRules = window.Intl && Intl.PluralRules ? new Intl.PluralRules(document.documentElement.lang) : null;
+  const searchTexts = new Map(members.map((member) => [member, foldText(member.dataset.search)]));
 
-  function norm(value) {
-    return (value || '').toLowerCase();
+  // Case and accent insensitive, so "noel" finds "Noël"
+  function foldText(text) {
+    const lower = (text || '').toLowerCase();
+    return lower.normalize ? lower.normalize('NFD').replace(/[̀-ͯ]/g, '') : lower;
   }
 
-  function resetSelectPlaceholder(select) {
-    if (select && select.value === '__all__') {
-      select.value = '';
+  function matchesControl(member, control) {
+    const wanted = control.value.trim();
+    if (!wanted) {
+      return true;
+    }
+    switch (control.dataset.filter) {
+      case 'search':
+        return searchTexts.get(member).includes(foldText(wanted));
+      case 'types':
+        return member.dataset.types.split('|').includes(wanted);
+      default:
+        return member.dataset[control.dataset.filter] === wanted;
     }
   }
 
-  function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-
-  function syncCardHeights() {
-    if (!cards.length) {
-      return;
+  function describeCount(count) {
+    if (count === 0) {
+      return results.dataset.none;
     }
-
-    const originalDisplays = cards.map((card) => card.style.display);
-    let tallest = 0;
-
-    cards.forEach((card) => {
-      card.style.height = 'auto';
-      card.style.display = '';
-    });
-
-    cards.forEach((card) => {
-      tallest = Math.max(tallest, card.offsetHeight);
-    });
-
-    if (tallest > 0) {
-      cards.forEach((card, index) => {
-        card.style.height = tallest + 'px';
-        card.style.display = originalDisplays[index];
-      });
-    }
+    const category = pluralRules ? pluralRules.select(count) : (count === 1 ? 'one' : 'other');
+    const template = category === 'one' ? results.dataset.one : results.dataset.other;
+    return template.replace('{count}', count);
   }
 
-  function renderPage(matches) {
-    const pageCount = Math.max(1, Math.ceil(matches.length / pageSize));
-    currentPage = Math.min(currentPage, pageCount);
-    const start = (currentPage - 1) * pageSize;
-    const end = start + pageSize;
-
-    cards.forEach((el) => {
-      el.style.display = 'none';
-    });
-
-    matches.slice(start, end).forEach((el) => {
-      el.style.display = '';
-    });
-
-    pageInfo.textContent = currentPage + ' / ' + pageCount;
-    prev.disabled = currentPage === 1;
-    next.disabled = currentPage === pageCount;
-    pagination.classList.toggle('hidden', matches.length <= pageSize);
+  function isFiltering() {
+    return controls.some((control) => control.value.trim() !== '');
   }
 
-  function apply(resetPage) {
-    const tq = norm(q.value);
-    const tp = proj.value === '__all__' ? '' : norm(proj.value);
-    const tt = type.value === '__all__' ? '' : norm(type.value);
-    const ta = aff.value === '__all__' ? '' : norm(aff.value);
-    const matches = [];
+  function applyFilters() {
+    let shown = 0;
+    members.forEach((member) => {
+      const matches = controls.every((control) => matchesControl(member, control));
+      member.hidden = !matches;
+      shown += matches ? 1 : 0;
+    });
+    results.textContent = describeCount(shown);
+    resetButton.hidden = !isFiltering();
+  }
 
-    cards.forEach((el) => {
-      const data = {
-        name: norm(el.getAttribute('data-name')),
-        role: norm(el.getAttribute('data-role')),
-        aff: norm(el.getAttribute('data-affiliation')),
-        project: norm(el.getAttribute('data-project')),
-        ptype: norm(el.getAttribute('data-ptype')),
-        email: norm(el.getAttribute('data-email'))
-      };
-
-      const textHit = !tq || [data.name, data.role, data.aff, data.email].some((x) => x.includes(tq));
-      const projHit = !tp || data.role === tp;
-      let typeHit = true;
-      if (tt) {
-        const types = (data.ptype || '').split(',');
-        typeHit = types.includes(tt);
-      }
-      const affHit = !ta || data.aff === ta;
-
-      if (textHit && projHit && typeHit && affHit) {
-        matches.push(el);
+  // The reset event comes before the controls are cleared. The reset button
+  // hides itself, so its focus moves on to the first filter.
+  function onReset() {
+    const resetHadFocus = document.activeElement === resetButton;
+    window.setTimeout(() => {
+      applyFilters();
+      if (resetHadFocus) {
+        controls[0].focus();
       }
     });
-
-    if (resetPage) {
-      currentPage = 1;
-    }
-
-    if (matches.length === 0) {
-      cards.forEach((el) => {
-        el.style.display = 'none';
-      });
-      pageInfo.textContent = '';
-      prev.disabled = true;
-      next.disabled = true;
-      pagination.classList.add('hidden');
-    } else {
-      renderPage(matches);
-    }
-
-    syncCardHeights();
-    empty.classList.toggle('hidden', matches.length !== 0);
   }
 
-  prev.addEventListener('click', function () {
-    if (currentPage > 1) {
-      currentPage -= 1;
-      apply(false);
-      scrollToTop();
-    }
-  });
+  form.addEventListener('input', applyFilters);
+  form.addEventListener('change', applyFilters);
+  form.addEventListener('reset', onReset);
+  form.addEventListener('submit', (event) => event.preventDefault());
 
-  next.addEventListener('click', function () {
-    currentPage += 1;
-    apply(false);
-    scrollToTop();
-  });
-
-  [q, proj, type, aff].forEach((el) => el && el.addEventListener('input', function () { apply(true); }));
-  [proj, type, aff].forEach((el) => el && el.addEventListener('change', function () {
-    resetSelectPlaceholder(el);
-    apply(true);
-  }));
-
-  window.addEventListener('resize', function () {
-    window.clearTimeout(resizeTimer);
-    resizeTimer = window.setTimeout(function () {
-      syncCardHeights();
-      apply(false);
-    }, 100);
-  });
-
-  apply(true);
+  form.hidden = false;
+  applyFilters();
 })();

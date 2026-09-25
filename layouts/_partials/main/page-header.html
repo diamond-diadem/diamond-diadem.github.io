@@ -1,0 +1,12 @@
+{{- /*
+  Opens an inner page with its title and, when the page sets one, a lead
+  paragraph.
+
+  @param {page} . The page being opened; the lead comes from its "lead" front matter.
+*/ -}}
+<header class="page-header">
+  <h1 class="page-header__title">{{ .Title }}</h1>
+  {{- with .Params.lead }}
+  <p class="page-header__lead">{{ . | markdownify }}</p>
+  {{- end }}
+</header>

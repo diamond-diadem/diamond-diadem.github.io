@@ -1,0 +1,35 @@
+{{- /*
+  A person's contact and profile links, each with its icon.
+
+  @param {map} . A team member from data/team.yaml.
+*/ -}}
+{{- $email := .email -}}
+{{- $links := slice -}}
+{{- with .website }}{{ $links = $links | append (dict "url" . "label" (i18n "team_website") "icon" "world") }}{{ end -}}
+{{- with .orcid }}{{ $links = $links | append (dict "url" (printf "https://orcid.org/%s" .) "label" "ORCID" "icon" "id") }}{{ end -}}
+{{- with .github }}{{ $links = $links | append (dict "url" (printf "https://github.com/%s" .) "label" "GitHub" "icon" "brand-github") }}{{ end -}}
+{{- range .links -}}
+  {{- $url := lower .url -}}
+  {{- $icon := "link" -}}
+  {{- if in $url "linkedin.com" }}{{ $icon = "brand-linkedin" }}{{ end -}}
+  {{- if in $url "scholar.google" }}{{ $icon = "school" }}{{ end -}}
+  {{- $links = $links | append (dict "url" .url "label" (.label | default .url) "icon" $icon) -}}
+{{- end -}}
+{{- if or $email $links }}
+<ul class="team-profile__links" role="list" aria-label="{{ i18n "team_contact" }}">
+  {{- with $email }}
+  <li>
+    {{- $icon := partial "home/icon.html" (dict "name" "tabler-icons/outline/mail" "class" "team-profile__link-icon") }}
+    {{ partial "main/guarded-email.html" (dict "address" . "class" "team-profile__link" "before" $icon) }}
+  </li>
+  {{- end }}
+  {{- range $links }}
+  <li>
+    <a class="team-profile__link" href="{{ .url }}">
+      {{- partial "home/icon.html" (dict "name" (printf "tabler-icons/outline/%s" .icon) "class" "team-profile__link-icon") -}}
+      <span>{{ .label }}</span>
+    </a>
+  </li>
+  {{- end }}
+</ul>
+{{- end }}

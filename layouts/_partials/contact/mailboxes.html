@@ -1,0 +1,13 @@
+{{- /*
+  The project mailboxes, shown on the contact page when the helpdesk form is
+  disabled.
+*/ -}}
+<section class="contact-card" aria-labelledby="contact-mailboxes-title">
+  <h2 class="contact-card__title" id="contact-mailboxes-title">{{ i18n "contact_mailboxes_title" }}</h2>
+  <dl class="contact-mailboxes">
+    <dt>{{ i18n "contact_mailbox_general" }}</dt>
+    <dd>{{ partial "main/guarded-email.html" (dict "address" "david.martin-calle@univ-lyon1.fr" "class" "contact-mailto") }}</dd>
+    <dt>{{ i18n "contact_mailbox_technical" }}</dt>
+    <dd>{{ partial "main/guarded-email.html" (dict "address" "leo.orveillon@univ-grenoble-alpes.fr" "class" "contact-mailto") }}</dd>
+  </dl>
+</section>

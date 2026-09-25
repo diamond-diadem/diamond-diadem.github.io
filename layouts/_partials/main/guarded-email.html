@@ -1,0 +1,26 @@
+{{- /*
+  An email address hidden from harvesters: it never appears in the HTML in
+  its real order, as its local part and its domain are each stored reversed.
+
+  Without JavaScript, a CSS bidi override (see _email-guard.scss) shows each
+  part in reading order, and a long address wraps between them. With
+  JavaScript, email-guard.js puts the parts back in order and swaps in a
+  mailto: link carrying the same classes and content.
+
+  @param {string}        address  The email address, with or without "mailto:".
+  @param {string}        [text]   Text for the link built by the script; the address by default.
+  @param {string}        [class]  Classes for the element, kept on the link.
+  @param {template.HTML} [before] Content shown ahead of the address, e.g. an icon.
+*/ -}}
+{{- $address := strings.TrimPrefix "mailto:" .address -}}
+{{- $local := index (split $address "@") 0 -}}
+{{- $domain := strings.TrimPrefix $local $address -}}
+<span class="email-guard {{ .class }}" data-email-guard
+  {{- with .text }}{{ if ne . $address }} data-text="{{ . }}"{{ end }}{{ end }}>
+  {{- with .before }}{{ . }}{{ end -}}
+  <span class="email-guard__address" data-email-guard-address>
+    {{- /* No whitespace between the parts, which would show inside the address */ -}}
+    <span class="email-guard__part" data-email-guard-part>{{ partial "main/reverse-string.html" $local }}</span>
+    {{- with $domain }}<span class="email-guard__part" data-email-guard-part>{{ partial "main/reverse-string.html" . }}</span>{{ end -}}
+  </span></span>
+{{- /* Trims the final newline, which would show as a space after the address */ -}}

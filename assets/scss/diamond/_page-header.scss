@@ -1,0 +1,54 @@
+// Page header: the title opening an inner page, with an optional lead.
+// It sits on the page itself, left aligned with the content that follows,
+// and ends on a hairline whose first stretch carries the link color.
+
+$page-header-accent-width: 3rem;
+$page-header-accent-height: 0.1875rem;
+
+// Muted text for inner pages keeps AA contrast in both modes, unlike the
+// theme secondary color
+:root {
+    --page-muted: #{mix($body-color, $body-bg, 72%)};
+}
+
+@include color-mode(dark, true) {
+    --page-muted: #{mix($body-color-dark, $body-bg-dark, 80%)};
+}
+
+.page-header {
+    position: relative;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-bottom: clamp(2rem, 1.5rem + 2vw, 3rem);
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid var(--bs-border-color);
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        width: $page-header-accent-width;
+        height: $page-header-accent-height;
+        border-radius: $page-header-accent-height;
+        background-color: var(--bs-link-color);
+    }
+}
+
+// Qualified with its element to outweigh the theme heading margins
+h1.page-header__title {
+    margin: 0;
+    font-size: 2rem;
+    font-size: clamp(2rem, 1.6rem + 1.75vw, 2.875rem);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    overflow-wrap: break-word;
+}
+
+.page-header__lead {
+    max-width: 40rem;
+    margin: 0.75rem 0 0;
+    font-size: 1.125rem;
+    color: var(--page-muted);
+}

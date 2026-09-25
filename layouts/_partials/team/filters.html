@@ -1,0 +1,29 @@
+{{- /*
+  Search box and drop-downs narrowing the team listing, with a live count of
+  the people shown and a button clearing them. They only work through
+  team-list.js, which reveals them; select-menu.js restyles the drop-downs.
+
+  @param {map} . Filter values, as returned by filter-options.html.
+*/ -}}
+<form class="team-filters" role="search" aria-label="{{ i18n "team_filters" }}" data-team-filters hidden>
+  <div class="team-filters__field team-filters__field--search">
+    <label class="team-filters__label" for="team-search">{{ i18n "team_search" }}</label>
+    <div class="team-filters__search">
+      {{ partial "home/icon.html" (dict "name" "tabler-icons/outline/search" "class" "team-filters__search-icon") }}
+      <input class="form-control" id="team-search" type="search" autocomplete="off" placeholder="{{ i18n "team_search_placeholder" }}" data-filter="search">
+    </div>
+  </div>
+  {{ partial "team/filter-select.html" (dict "id" "team-role" "label" (i18n "team_work_package") "allLabel" (i18n "team_all") "filter" "role" "options" .roles "kind" "role") }}
+  {{ partial "team/filter-select.html" (dict "id" "team-type" "label" (i18n "team_personnel_type") "allLabel" (i18n "team_all") "filter" "types" "options" .types "kind" "personnel_type") }}
+  {{ partial "team/filter-select.html" (dict "id" "team-affiliation" "label" (i18n "team_affiliation") "allLabel" (i18n "team_all_feminine") "filter" "affiliation" "options" .affiliations) }}
+  <div class="team-filters__summary">
+    <p class="team-results" aria-live="polite" data-team-results
+       data-one="{{ i18n "team_results" 1 }}"
+       data-other="{{ i18n "team_results" 2 }}"
+       data-none="{{ i18n "team_no_results" }}"></p>
+    <button class="team-filters__reset" type="reset" data-team-reset hidden>
+      {{- partial "home/icon.html" (dict "name" "tabler-icons/outline/x" "class" "team-filters__reset-icon") -}}
+      <span>{{ i18n "team_clear_filters" }}</span>
+    </button>
+  </div>
+</form>

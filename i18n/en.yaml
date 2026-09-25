@@ -48,12 +48,20 @@ news_next_page: Next page
 news_read_more: Read more
 
 ### Team page ###
+team_about: About
+team_affiliation: Affiliation
 team_all: All
 team_all_feminine: All
-team_next: Next
-team_no_results: No results.
+team_all_members: All team members
+team_clear_filters: Clear filters
+team_contact: Contact
+team_filters: Filter the team
+team_no_results: No one matches these filters.
+team_personnel_type: Role
 team_photo_of: Photo of
-team_previous: Previous
+team_results:
+  one: "{count} person"
+  other: "{count} people"
 team_role_coordinator: Coordinator
 team_role_wp1: WP1 - Codes and Workflows
 team_role_wp2: WP2 - Materials Database Infrastructure
@@ -61,8 +69,10 @@ team_role_wp3: WP3 - Machine Learning Interatomic Potentials
 team_personnel_type_project_coordinator: Project Coordinator
 team_personnel_type_scientific_lead: Scientific Lead
 team_personnel_type_scientist: Scientist
-team_send_email: Send an email
+team_search: Search
+team_search_placeholder: Name, work package, affiliation…
 team_website: Website
+team_work_package: Work package
 switch_language: Change language
 main_menu: Main menu
 main_menu_open: Open the main menu
@@ -82,6 +92,26 @@ footer_supporters: With the support of
 opens_new_tab: (opens in a new tab)
 
 ### Contact page ###
-contact_team_intro: Prefer to reach someone directly? Our <a href="{{ .URL }}">team
-  page</a> lists every member of the project with their role and contact details,
-  so you can write straight to the right person.
+contact_form_title: Send us a message
+contact_form_needs_js: The contact form needs JavaScript, which is turned off in
+  your browser. You can still write to any member of the project from the team
+  page.
+contact_form_name: Name
+contact_form_email: Email
+contact_form_message: Message
+contact_form_message_hint: Tell us what you need, and which code, container or
+  page it concerns.
+contact_form_consent: I consent to the processing of my personal data (name and
+  email) to handle my inquiry. This form uses Cloudflare Turnstile for spam
+  protection, which analyzes technical browser data and may use cookies to verify
+  you are human.
+contact_form_submit: Send message
+contact_form_sending: Sending…
+contact_success_title: Message received
+contact_success_text: Thank you for writing to us. Our team will get back to you
+  shortly.
+contact_success_again: Send another message
+contact_mailboxes_title: Write to us
+contact_mailbox_general: General questions about DIAMOND or its website
+contact_mailbox_technical: Technical questions about the container images or the
+  documentation

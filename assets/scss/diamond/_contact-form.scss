@@ -1,16 +1,196 @@
-// Override global `white-space: nowrap` on labels inside the contact form
-#contact-form-container label {
-    white-space: normal;
+// Contact page: the introduction beside the helpdesk card.
+// Phones stack them; wide screens set the card beside a narrower text column
+// that stays in view while the form is filled.
+
+$contact-breakpoint-fields: 36em;
+$contact-breakpoint-columns: 62em;
+$contact-radius: 1rem;
+$contact-radius-small: 0.625rem;
+
+.contact-page {
+    max-width: 72rem;
 }
 
-.contact-intro,
-#contact-form-container,
-#contact-success-container {
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+.contact-layout {
+    display: grid;
+    gap: 2.5rem;
+    gap: clamp(2rem, 1rem + 3vw, 4rem);
 }
 
-.contact-intro {
-    margin-bottom: 2rem;
+@media (min-width: $contact-breakpoint-columns) {
+    .contact-layout {
+        grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+        align-items: start;
+    }
+
+    .contact-layout__intro {
+        position: sticky;
+        top: 6rem;
+    }
+}
+
+.contact-layout__intro {
+    max-width: 36rem;
+    color: var(--page-muted);
+
+    > :first-child {
+        font-size: 1.25rem;
+        line-height: 1.5;
+        color: var(--bs-body-color);
+    }
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+// ---------------------------------------------------------------------------
+// Card
+
+.contact-card {
+    padding: 1.25rem;
+    padding: clamp(1.25rem, 0.75rem + 2.5vw, 2.5rem);
+    border: 1px solid var(--bs-border-color);
+    border-radius: $contact-radius;
+    background-color: var(--bs-tertiary-bg);
+    box-shadow: 0 1.5rem 3rem -2rem rgba($black, 0.25);
+
+    // The theme keeps labels on one line, which would overflow the card
+    label {
+        white-space: normal;
+    }
+}
+
+h2.contact-card__title {
+    margin: 0 0 1.5rem;
+    font-size: 1.375rem;
+    font-weight: 700;
+}
+
+.contact-card__notice {
+    margin: 0;
+    padding: 1rem;
+    border-left: 0.25rem solid var(--bs-link-color);
+    border-radius: $contact-radius-small;
+    background-color: var(--bs-secondary-bg);
+}
+
+// ---------------------------------------------------------------------------
+// Form
+
+.contact-form {
+    display: grid;
+    gap: 1.25rem;
+}
+
+.contact-form__field {
+    .form-label {
+        font-weight: 600;
+    }
+
+    .form-control {
+        padding: 0.625rem 0.875rem;
+        border-radius: $contact-radius-small;
+    }
+
+    .form-text {
+        margin: 0.375rem 0 0;
+        color: var(--page-muted);
+    }
+}
+
+.contact-form__consent {
+    margin: 0;
+    padding: 1rem 1rem 1rem 2.75rem;
+    border-radius: $contact-radius-small;
+    background-color: var(--bs-secondary-bg);
+    font-size: 0.9375rem;
+    color: var(--page-muted);
+
+    .form-check-input {
+        margin-top: 0.2em;
+    }
+}
+
+.contact-form__actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.contact-form__submit {
+    flex-grow: 1;
+    padding: 0.75rem 1.75rem;
+    border-radius: $contact-radius-small;
+    font-weight: 600;
+}
+
+// Name and email share a row, the other fields span it
+@media (min-width: $contact-breakpoint-fields) {
+    .contact-form {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 1rem;
+
+        > :not(.contact-form__field--short) {
+            grid-column: 1 / -1;
+        }
+    }
+
+    .contact-form__submit {
+        flex-grow: 0;
+        margin-left: auto;
+    }
+}
+
+// ---------------------------------------------------------------------------
+// Confirmation
+
+.contact-success {
+    padding-block: 1rem;
+    text-align: center;
+}
+
+.contact-success__icon {
+    box-sizing: content-box;
+    width: 1.75rem;
+    height: 1.75rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 50%;
+    color: var(--bs-success-text-emphasis);
+    background-color: var(--bs-success-bg-subtle);
+}
+
+h3.contact-success__title {
+    margin: 0 0 0.5rem;
+    font-size: 1.5rem;
+}
+
+.contact-success__text {
+    margin-bottom: 1.5rem;
+    color: var(--page-muted);
+}
+
+// ---------------------------------------------------------------------------
+// Mailboxes, when the form is disabled
+
+.contact-mailboxes {
+    margin: 0;
+
+    dt {
+        font-weight: 400;
+        color: var(--page-muted);
+    }
+
+    dd {
+        margin: 0.25rem 0 1.25rem;
+        font-size: 1.125rem;
+        font-weight: 600;
+    }
+
+    dd:last-child {
+        margin-bottom: 0;
+    }
 }

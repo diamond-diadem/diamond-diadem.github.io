@@ -42,7 +42,7 @@ seo:
 
 **Appel à propositions** : La Journée Inter-PEPR, organisée conjointement par le PEPR DIADEM, le PEPR IA et le PEPR NumPex, vise à offrir un aperçu de certaines directions de recherche prometteuses à l'interface entre la Science des Matériaux, l'IA et le Calcul Haute Performance.
 
-La journée sera consacrée à plusieurs conférences données par des chercheurs et spécialistes renommés dans le domaine. Les jeunes chercheurs sont également invités à présenter leurs travaux sous forme de posters ou de courtes présentations et doivent soumettre un résumé à <a href="mailto:inter-pepr-days@services.cnrs.fr">inter-pepr-days@services.cnrs.fr</a> avant le 15 octobre.
+La journée sera consacrée à plusieurs conférences données par des chercheurs et spécialistes renommés dans le domaine. Les jeunes chercheurs sont également invités à présenter leurs travaux sous forme de posters ou de courtes présentations et doivent soumettre un résumé à [inter-pepr-days@services.cnrs.fr](mailto:inter-pepr-days@services.cnrs.fr) avant le 15 octobre.
 
 <div align="center">
 

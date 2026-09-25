@@ -5,6 +5,8 @@ summary: "Entraînement et validation de potentiels interatomiques par apprentis
 description: "Description du workflow AiiDA-n2p2 pour l'entraînement de potentiels interatomiques par apprentissage machine avec n2p2 et validation par LAMMPS."
 tablerIcon: tabler-icons/outline/brain
 draft: true
+cascade:
+  draft: true
 toc: false
 aliases:
   - /workflows/aiida-n2p2/description/

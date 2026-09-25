@@ -1,0 +1,12 @@
+{{- /*
+  Returns a person's personnel types as a list, whether the data gives one
+  value or several.
+
+  @param {map} . A team member from data/team.yaml.
+  @returns {slice}
+*/ -}}
+{{- $types := slice -}}
+{{- with .personnel_type -}}
+  {{- $types = cond (reflect.IsSlice .) . (slice .) -}}
+{{- end -}}
+{{- return $types -}}

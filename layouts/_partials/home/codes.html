@@ -25,10 +25,10 @@
       {{ end }}
     </div>
 
-    <ul class="home-grid home-grid--codes scroll-fade" role="list">
+    <ul class="home-grid home-grid--table home-grid--codes scroll-fade" role="list">
       {{- range .featured }}
         {{- with site.GetPage . }}
-      <li class="home-card home-code">
+      <li class="home-card home-card--cell home-code">
         <span class="home-code__logo" aria-hidden="true"><span class="home-code__icon {{ .Params.icon }}"></span></span>
         <div class="home-code__body">
           <h3 class="home-card__title"><a class="home-card__link" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h3>

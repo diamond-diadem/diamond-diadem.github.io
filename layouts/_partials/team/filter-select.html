@@ -1,21 +1,23 @@
-{{- $id := .id -}}
-{{- $label := .label -}}
-{{- $allLabel := .allLabel -}}
-{{- $options := .options | default (slice) -}}
-{{- $kind := .kind | default "" -}}
-<select id="{{ $id }}" class="border rounded px-3 py-2 w-full">
-  <option value="" selected disabled hidden>{{ $label }}</option>
-  <optgroup label="{{ $label }}">
-    <option value="__all__">{{ $allLabel }}</option>
-    {{ range $options }}
-      {{ $value := . }}
-      <option value="{{ $value }}">
-        {{- if $kind -}}
-          {{ partial "team/label.html" (dict "kind" $kind "value" $value) }}
-        {{- else -}}
-          {{ $value }}
-        {{- end -}}
-      </option>
-    {{ end }}
-  </optgroup>
-</select>
+{{- /*
+  One labelled drop-down of the team filters. Its first option clears it.
+  select-menu.js turns it into a styled drop-down; without it the native
+  select stays.
+
+  @param {string} id       Id of the select.
+  @param {string} label    Visible label.
+  @param {string} allLabel Text of the option that clears the filter.
+  @param {string} filter   Card data attribute the value is matched against.
+  @param {slice}  options  Values offered.
+  @param {string} [kind]   Label kind for translated values (see label.html).
+*/ -}}
+<div class="team-filters__field">
+  <label class="team-filters__label" for="{{ .id }}">{{ .label }}</label>
+  <div class="select-menu" data-select-menu>
+    <select class="form-select" id="{{ .id }}" data-filter="{{ .filter }}">
+      <option value="">{{ .allLabel }}</option>
+      {{- range $value := .options }}
+      <option value="{{ $value }}">{{ if $.kind }}{{ partial "team/label.html" (dict "kind" $.kind "value" $value) }}{{ else }}{{ $value }}{{ end }}</option>
+      {{- end }}
+    </select>
+  </div>
+</div>

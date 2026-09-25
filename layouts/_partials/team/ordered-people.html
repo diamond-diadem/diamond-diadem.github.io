@@ -1,0 +1,41 @@
+{{- /*
+  Returns the team sorted for the listing: people with a weight first, lower
+  weights first, then everyone else. Ties are sorted alphabetically by name.
+  As in Hugo, a weight of 0 counts as none.
+
+  @returns {slice}
+*/ -}}
+{{- $weighted := slice -}}
+{{- $unweighted := slice -}}
+{{- $weights := slice -}}
+{{- range sort hugo.Data.team.team "name" -}}
+  {{- $weight := int (.weight | default 0) -}}
+  {{- if gt $weight 0 -}}
+    {{- $weighted = $weighted | append . -}}
+    {{- $weights = $weights | append $weight -}}
+  {{- else -}}
+    {{- $unweighted = $unweighted | append . -}}
+  {{- end -}}
+{{- end -}}
+{{- /* where keeps the alphabetical order within each weight */ -}}
+{{- $ordered := slice -}}
+{{- range sort (uniq $weights) -}}
+  {{- $ordered = $ordered | append (where $weighted "weight" .) -}}
+{{- end -}}
+{{- $ordered = $ordered | append $unweighted -}}
+
+{{- /*
+  Former order, kept to be restored if needed: people with a photo first,
+  then, within each group, those with a biography, each subgroup by last name.
+
+{{- $groups := dict "photoBio" (slice) "photo" (slice) "bio" (slice) "rest" (slice) -}}
+{{- range sort hugo.Data.team.team "last_name" -}}
+  {{- $hasPhoto := partial "team/photo.html" . -}}
+  {{- $hasBio := or .bio_short .bio_long .bio_short_fr .bio_long_fr -}}
+  {{- $group := cond (and $hasPhoto $hasBio) "photoBio" (cond $hasPhoto "photo" (cond $hasBio "bio" "rest")) -}}
+  {{- $groups = merge $groups (dict $group ((index $groups $group) | append .)) -}}
+{{- end -}}
+{{- $ordered := $groups.photoBio | append $groups.photo | append $groups.bio | append $groups.rest -}}
+*/ -}}
+
+{{- return $ordered -}}

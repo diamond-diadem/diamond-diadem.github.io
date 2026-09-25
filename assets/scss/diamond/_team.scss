@@ -1,0 +1,473 @@
+// Team: the listing of members, narrowed by filters, and each member's page.
+// Phones get a single column of cards, tablets two and wider screens three.
+
+$team-breakpoint-fields: 36em;
+$team-breakpoint-columns: 48em;
+$team-breakpoint-filters: 62em;
+$team-breakpoint-grid-two: 50em;
+$team-breakpoint-grid-three: 72em;
+$team-radius: 1rem;
+$team-radius-small: 0.625rem;
+
+// ---------------------------------------------------------------------------
+// Filters: a raised panel over the listing, ending on the count of the people
+// shown. The home tokens (see _home.scss) color it like the grid below.
+
+.team-filters {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    margin-bottom: clamp(1.5rem, 1rem + 1.5vw, 2.5rem);
+    padding: 1rem;
+    padding: clamp(1rem, 0.5rem + 1.5vw, 1.5rem);
+    border: 1px solid var(--home-border);
+    border-radius: $team-radius;
+    background-color: var(--home-raised);
+    box-shadow: 0 1.5rem 3rem -2.5rem var(--home-shadow);
+
+    .form-control,
+    .form-select {
+        padding-top: 0.625rem;
+        padding-bottom: 0.625rem;
+        border-radius: $team-radius-small;
+    }
+}
+
+@media (min-width: $team-breakpoint-fields) {
+    .team-filters {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .team-filters__field--search {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (min-width: $team-breakpoint-filters) {
+    .team-filters {
+        grid-template-columns: minmax(0, 1.5fr) repeat(3, minmax(0, 1fr));
+    }
+
+    .team-filters__field--search {
+        grid-column: auto;
+    }
+}
+
+.team-filters__label {
+    display: block;
+    margin-bottom: 0.375rem;
+    font-family: $font-family-ui;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    white-space: normal;
+    color: var(--home-muted);
+}
+
+.team-filters__search {
+    position: relative;
+
+    .form-control {
+        padding-left: 2.75rem;
+    }
+}
+
+.team-filters__search-icon {
+    position: absolute;
+    top: 50%;
+    left: 0.875rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    color: var(--home-muted);
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+// The count on one side, the button clearing the filters on the other. Its
+// height holds the button, so the row stays still as the button comes and goes.
+.team-filters__summary {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem 1rem;
+    min-height: 3.25rem;
+    grid-column: 1 / -1;
+    padding-top: 1rem;
+    border-top: 1px solid var(--home-border);
+}
+
+.team-results {
+    margin: 0;
+    font-family: $font-family-ui;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--home-muted);
+}
+
+.team-filters__reset {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.375rem 0.875rem 0.375rem 0.625rem;
+    border: 0;
+    border-radius: 999px;
+    background-color: var(--home-accent-soft);
+    color: var(--home-accent);
+    font-family: $font-family-ui;
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition:
+        background-color 0.2s ease-out,
+        color 0.2s ease-out;
+
+    &:hover {
+        background-color: var(--home-accent);
+        color: var(--home-on-accent);
+    }
+
+    &:focus-visible {
+        outline: 2px solid var(--home-accent);
+        outline-offset: 2px;
+    }
+}
+
+.team-filters__reset-icon {
+    width: 1rem;
+    height: 1rem;
+}
+
+// ---------------------------------------------------------------------------
+// Listing: the members form one table of cells, like the codes of the home
+// page (see .home-grid--table)
+
+// Fixed column counts rather than auto-fill: a fourth column would squeeze
+// the names, roles and emails of the cards too much.
+.team-grid {
+    grid-template-columns: minmax(0, 1fr);
+
+    @media (min-width: $team-breakpoint-grid-two) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @media (min-width: $team-breakpoint-grid-three) {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+.team-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+
+    @media (min-width: $team-breakpoint-columns) {
+        padding: 1.25rem 1.5rem;
+    }
+}
+
+.team-card__body {
+    min-width: 0;
+}
+
+// Where subgrid is supported, each card spans five rows of the listing and
+// shares them with the cards beside it, so their names, roles, affiliations,
+// tags and emails line up. A missing field leaves its row empty. Items are
+// spaced by their margins, which an empty row does not keep.
+@supports (grid-template-rows: subgrid) {
+    .team-card {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        grid-template-rows: subgrid;
+        grid-row: span 5;
+        gap: 0 1rem;
+    }
+
+    .team-card > .team-avatar {
+        grid-row: 1 / -1;
+        align-self: start;
+    }
+
+    .team-card__body {
+        display: contents;
+
+        > * {
+            grid-column: 2;
+        }
+    }
+
+    .team-card .home-card__title {
+        grid-row: 1;
+    }
+
+    .team-card__role {
+        grid-row: 2;
+    }
+
+    .team-card__affiliation {
+        grid-row: 3;
+    }
+
+    .team-card__tags {
+        grid-row: 4;
+    }
+
+    .team-card__email {
+        grid-row: 5;
+        justify-self: start;
+    }
+}
+
+.team-card__role,
+.team-card__affiliation {
+    margin: 0.125rem 0 0;
+    font-family: $font-family-ui;
+    font-size: 0.875rem;
+    line-height: 1.4;
+    color: var(--home-muted);
+}
+
+.team-card__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.375rem;
+    margin: 0.625rem 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.team-tag {
+    padding: 0.125rem 0.5rem;
+    border-radius: 999px;
+    background-color: var(--home-accent-soft);
+    font-family: $font-family-ui;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--home-accent);
+}
+
+// Raised above the link stretched over the card, so it stays clickable
+.team-card__email {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    margin-top: 0.625rem;
+    font-size: 0.875rem;
+    overflow-wrap: anywhere;
+}
+
+// ---------------------------------------------------------------------------
+// Avatar: a round photo, or the initials on a tinted disc
+
+.team-avatar {
+    display: inline-flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: var(--bs-primary-bg-subtle);
+    color: var(--bs-primary-text-emphasis);
+    font-family: $font-family-ui;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.team-avatar--small {
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 1.125rem;
+}
+
+.team-avatar--large {
+    width: 9rem;
+    height: 9rem;
+    font-size: 2.5rem;
+}
+
+@media (min-width: $team-breakpoint-columns) {
+    .team-avatar--large {
+        width: 12rem;
+        height: 12rem;
+        font-size: 3.25rem;
+    }
+}
+
+// ---------------------------------------------------------------------------
+// Member page
+
+.team-person {
+    max-width: 72rem;
+}
+
+.team-person__back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    margin-top: 1.5rem;
+    font-size: 0.9375rem;
+    text-decoration: none;
+
+    &:hover,
+    &:focus-visible {
+        text-decoration: underline;
+    }
+}
+
+.team-person__back-icon {
+    width: 1.125em;
+    height: 1.125em;
+}
+
+// The back link already opens the page, so the title follows it closely
+.team-person__back + .page-header {
+    margin-top: 0.75rem;
+}
+
+// The profile: a raised card like the filters of the listing, the photo above
+// the details on phones and beside them on wider screens
+.team-profile {
+    display: grid;
+    gap: 1.5rem;
+    justify-items: start;
+    padding: 1.25rem;
+    padding: clamp(1.25rem, 0.75rem + 2vw, 2rem);
+    border: 1px solid var(--home-border);
+    border-radius: $team-radius;
+    background-color: var(--home-raised);
+    box-shadow: 0 1.5rem 3rem -2.5rem var(--home-shadow);
+}
+
+@media (min-width: $team-breakpoint-columns) {
+    .team-profile {
+        grid-template-columns: auto minmax(0, 1fr);
+        gap: 2.5rem;
+        align-items: center;
+    }
+}
+
+.team-profile__details {
+    display: grid;
+    gap: 1.5rem;
+    width: 100%;
+    min-width: 0;
+}
+
+// Each fact hangs from an accent rule, side by side where there is room
+.team-profile__facts {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 11rem), 1fr));
+    gap: 1rem 2rem;
+    margin: 0;
+
+    > div {
+        padding-left: 1rem;
+        border-left: 2px solid var(--home-border-strong);
+    }
+
+    dt {
+        margin-bottom: 0.25rem;
+        font-family: $font-family-ui;
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--home-muted);
+    }
+
+    dd {
+        margin: 0;
+        font-weight: 600;
+        line-height: 1.35;
+    }
+}
+
+// Contact links as pills, wrapping as needed: the email address keeps a line
+// of its own when it is too long to share one
+.team-profile__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 1.5rem 0 0;
+    border-top: 1px solid var(--home-border);
+    list-style: none;
+
+    > li {
+        max-width: 100%;
+    }
+}
+
+.team-profile__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    max-width: 100%;
+    padding: 0.4375rem 1rem 0.4375rem 0.75rem;
+    border: 1px solid var(--home-border);
+    border-radius: 999px;
+    background-color: var(--home-page);
+    color: var(--home-text);
+    font-family: $font-family-ui;
+    font-size: 0.9375rem;
+    line-height: 1.3;
+    text-decoration: none;
+    transition:
+        border-color 0.2s ease-out,
+        background-color 0.2s ease-out,
+        color 0.2s ease-out;
+
+    // Lets a long address wrap inside the pill instead of overflowing it
+    > * {
+        min-width: 0;
+    }
+}
+
+a.team-profile__link {
+    &:hover,
+    &:focus-visible {
+        border-color: var(--home-accent);
+        background-color: var(--home-accent-soft);
+        color: var(--home-accent);
+    }
+
+    &:focus-visible {
+        outline: 2px solid var(--home-accent);
+        outline-offset: 2px;
+    }
+}
+
+.team-profile__link-icon {
+    flex: none;
+    width: 1.125rem;
+    height: 1.125rem;
+    color: var(--home-accent);
+}
+
+.team-person__bio {
+    max-width: 44rem;
+    margin-top: 2.5rem;
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+.team-person__bio-title {
+    margin-bottom: 0.75rem;
+    font-family: $font-family-ui;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--home-muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .team-filters__reset,
+    .team-profile__link {
+        transition: none;
+    }
+}

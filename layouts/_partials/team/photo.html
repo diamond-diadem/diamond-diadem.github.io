@@ -1,0 +1,12 @@
+{{- /*
+  Returns a person's photo URL, or an empty string when the data holds none
+  or only the "NA.png" placeholder.
+
+  @param {map} . A team member from data/team.yaml.
+  @returns {string}
+*/ -}}
+{{- $photo := .photo | default "" -}}
+{{- if strings.HasSuffix $photo "/NA.png" -}}
+  {{- $photo = "" -}}
+{{- end -}}
+{{- return $photo -}}

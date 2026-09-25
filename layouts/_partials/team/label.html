@@ -1,3 +1,10 @@
+{{- /*
+  Returns the translated label of a work package or personnel type, or the
+  value itself when it has no translation.
+
+  @param {string} kind  "role" or "personnel_type".
+  @param {string} value The value from data/team.yaml.
+*/ -}}
 {{- $kind := .kind -}}
 {{- $value := .value | default "" -}}
 {{- $key := "" -}}

@@ -1,0 +1,39 @@
+{{- /*
+  One team member in the team listing: a cell of the team table, linking to
+  the member page. The data attributes feed the filters of team-list.js.
+
+  @param {map} . A team member from data/team.yaml.
+*/ -}}
+{{- $roleLabel := partial "team/label.html" (dict "kind" "role" "value" .role) -}}
+{{- $types := partial "team/personnel-types.html" . -}}
+{{- $typeLabels := slice -}}
+{{- range $types -}}
+  {{- $typeLabels = $typeLabels | append (partial "team/label.html" (dict "kind" "personnel_type" "value" .) | string) -}}
+{{- end -}}
+{{- /* The email is left out, as it must not appear in the HTML in plain text */ -}}
+{{- $searchTerms := printf "%s %s %s %s" .name $roleLabel (.affiliation | default "") (delimit $typeLabels " ") -}}
+<li class="home-card home-card--cell team-card"
+    data-team-member
+    data-role="{{ .role }}"
+    data-affiliation="{{ .affiliation }}"
+    data-types="{{ delimit $types "|" }}"
+    data-search="{{ $searchTerms }}">
+  {{ partial "team/avatar.html" (dict "person" . "size" "small") }}
+  <div class="team-card__body">
+    <h2 class="home-card__title">
+      {{- with site.GetPage (printf "/team/%s" .slug) }}
+        <a class="home-card__link" href="{{ .RelPermalink }}">{{ .Title }}</a>
+      {{- end -}}
+    </h2>
+    {{ with $roleLabel }}<p class="team-card__role">{{ . }}</p>{{ end }}
+    {{ with .affiliation }}<p class="team-card__affiliation">{{ . }}</p>{{ end }}
+    {{- with $typeLabels }}
+    <ul class="team-card__tags" role="list">
+      {{- range . }}
+      <li class="team-tag">{{ . }}</li>
+      {{- end }}
+    </ul>
+    {{- end }}
+    {{ with .email }}{{ partial "main/guarded-email.html" (dict "address" . "class" "team-card__email") }}{{ end }}
+  </div>
+</li>

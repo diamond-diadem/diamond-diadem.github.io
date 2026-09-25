@@ -1,30 +1,14 @@
 ---
 title: Data
+lead: A description of the DIAMOND materials data platform is on its way.
 seo:
   description: Materials data platform overview covering scientific databases, governance,
     ontology support, and DIAMOND contacts.
 ---
 
-<div align="center">
+For general questions or comments about data management or access to the
+database, write to the person in charge of the topic:
 
-<div style="display: flex; justify-content: center; align-items: center; height: 150px;"><h2  style="margin: 0;">Content to be added</h2></div>
-
-<hr style="width: 50%; margin: auto; margin-top: 0; margin-bottom: 30px;"/>
-
-<h3>
-    For general questions or comments about data management or access to the database, write to
-</h3>
-
-<h3>
-Coordination: <a class="contact-mailto" href="mailto:thierry.deutsch@cea.fr">thierry.deutsch@cea.fr</a>
-</h3>
-
-<h3>
-Development of the database platform: <a class="contact-mailto" href="mailto:imanol.setoain@cea.fr">imanol.setoain@cea.fr</a>
-</h3>
-
-<h3>
-Ontology: <a class="contact-mailto" href="mailto:cinthya.herreracontreras@cea.fr">cinthya.herreracontreras@cea.fr</a>
-</h3>
-
-</div>
+- **Coordination:** [thierry.deutsch@cea.fr](mailto:thierry.deutsch@cea.fr)
+- **Development of the database platform:** [imanol.setoain@cea.fr](mailto:imanol.setoain@cea.fr)
+- **Ontology:** [cinthya.herreracontreras@cea.fr](mailto:cinthya.herreracontreras@cea.fr)
