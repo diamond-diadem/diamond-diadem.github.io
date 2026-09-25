@@ -1,0 +1,43 @@
+{{- /*
+  Workflows: what automation brings, next to the featured workflows, whose
+  names, icons and summaries come from their own pages.
+
+  @param {page} . The home page; texts come from its "workflows" front matter.
+*/ -}}
+{{- with .Params.workflows -}}
+<section class="home-section home-section--tinted home-workflows" aria-labelledby="home-workflows-title">
+  <div class="home-container home-workflows__layout">
+    <div class="home-workflows__intro scroll-fade">
+      {{ partial "home/section-header.html" (dict "id" "home-workflows-title" "content" .) }}
+      {{ with .points }}
+      <ul class="home-checklist" role="list">
+        {{- range . }}
+        <li class="home-checklist__item">
+          {{ partial "home/icon.html" (dict "name" "tabler-icons/outline/check" "class" "home-checklist__icon") }}
+          {{ . }}
+        </li>
+        {{- end }}
+      </ul>
+      {{ end }}
+      {{ with .link }}{{ partial "home/more-link.html" . }}{{ end }}
+    </div>
+
+    <ul class="home-workflows__list scroll-fade" role="list">
+      {{- range .featured }}
+        {{- with site.GetPage . }}
+      <li class="home-card home-workflow">
+        {{ partial "home/icon.html" (dict "name" (.Params.tablerIcon | default "tabler-icons/outline/route") "class" "home-workflow__icon") }}
+        <div class="home-workflow__body">
+          <h3 class="home-card__title"><a class="home-card__link" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h3>
+          {{ with .Params.summary }}<p class="home-card__text">{{ . }}</p>{{ end }}
+        </div>
+        {{ partial "home/icon.html" (dict "name" "tabler-icons/outline/arrow-right" "class" "home-card__arrow") }}
+      </li>
+        {{- else }}
+          {{- warnf "home: featured workflow %q not found" . }}
+        {{- end }}
+      {{- end }}
+    </ul>
+  </div>
+</section>
+{{- end -}}

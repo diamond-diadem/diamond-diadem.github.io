@@ -7,7 +7,6 @@
 @import "diamond/custom-icons";
 @import "diamond/codes-logos";
 @import "diamond/news-framework";
-@import "diamond/sections-icons";
 @import "diamond/banner-diamond";
 @import "diamond/section-dropdown-navbar";
 @import "diamond/drawer";
@@ -28,6 +27,9 @@
 @import "diamond/page-body";
 @import "diamond/language-toggle";
 @import "diamond/site-header";
+@import "diamond/home";
+@import "diamond/faqs";
+@import "diamond/news-list";
 
 // Right-hand header controls, in reading order: search, color mode, language
 .navbar-actions {
@@ -597,31 +599,6 @@ label {
 
 ////////////////////////////////
 
-.card-news-homepage {
-    @include veiled-background-image($news-veil-light, var(--bg-image));
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    min-height: 300px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border: 1px solid black;
-    border-radius: 45px;
-    margin-bottom: 30px;
-    position: relative;
-    padding-inline: 10%;
-}
-
-@include color-mode(dark) {
-    .card-news-homepage {
-        @include veiled-background-image($news-veil-dark, var(--bg-image));
-        border-color: white;
-    }
-}
-
 .stretched-link::after {
     position: absolute;
     top: 0;
@@ -633,10 +610,6 @@ label {
     border-radius: inherit;
 }
 
-.br-inherit {
-    border-radius: inherit;
-}
-
 .single,
 .list {
     display: flex;
@@ -645,22 +618,22 @@ label {
     flex-direction: column;
 }
 
-.scroll-fade {
-    opacity: 0;
-    transform: translateY(20px);
-    transition:
-        opacity 0.6s ease-out,
-        transform 0.6s ease-out;
-}
+// Blocks fade in as they scroll into view. They only start hidden once JS
+// runs (see .requires-js above), so without it they simply stay visible, and
+// they stay put for visitors who ask for reduced motion.
+@media (prefers-reduced-motion: no-preference) {
+    :root[data-bs-theme] .has-scroll-fade .scroll-fade {
+        opacity: 0;
+        transform: translateY(20px);
+        transition:
+            opacity 0.6s ease-out,
+            transform 0.6s ease-out;
+    }
 
-.scroll-fade.in-view {
-    opacity: 1;
-    transform: none;
-}
-
-body:not(.has-scroll-fade) .scroll-fade {
-    opacity: 1;
-    transform: none;
+    :root[data-bs-theme] .has-scroll-fade .scroll-fade.in-view {
+        opacity: 1;
+        transform: none;
+    }
 }
 
 // // // class="tree" used for tree like content // // //

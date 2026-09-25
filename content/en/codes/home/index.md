@@ -28,7 +28,7 @@ In the summer of 2023, the materials community was surveyed via LimeSurvey to id
 
 <img alt="containerised codes" class="containerised-codes en mt-4" style="width:100%">
 
-<h3><u>USEFUL LINKS</u></h3>
+## Useful Links
 
 {{< link-card
 title="Install Apptainer"
@@ -42,7 +42,7 @@ description="Learn to use them"
 href="/en/documentation/use/apptainer-image/"
 icon="tabler-icons/outline/settings-question" >}}
 
-<h3><u>AVAILABLE CODES</u></h3>
+## Available code
 
 <table>
     <caption>
@@ -144,13 +144,13 @@ icon="tabler-icons/outline/settings-question" >}}
             <td></td>
         </tr>
         <tr>
-            <td><a href="/codes/scientific-computing/gpumd/"><i class="icon-gpumd"></i>GPUMD</a></td>
+            <td><a href="/en/codes/scientific-computing/gpumd/"><i class="icon-gpumd"></i>GPUMD</a></td>
             <td></td>
         </tr>
+        <tr>
             <td><a href="/en/codes/scientific-computing/ptyrad/"><i class="icon-ptyrad"></i>PtyRAD</a></td>
             <td></td>
         </tr>
-
     </tbody>
 </table>
 

@@ -1,0 +1,9 @@
+{{- /*
+  Short name of the category a code belongs to, such as "Visualisation".
+  Falls back to the title of the category section when no translation exists.
+
+  @param {page} . A code page.
+*/ -}}
+{{- with .Parent -}}
+  {{- i18n (printf "code_category_%s" .File.ContentBaseName) | default .Title -}}
+{{- end -}}

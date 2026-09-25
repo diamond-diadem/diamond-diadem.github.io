@@ -1,136 +1,15 @@
+{{/* The home sections set their own spacing, and the hero meets the header */}}
+{{ define "page-body-class" }}page-body page-body--flush{{ end }}
+
 {{ define "main" }}
-<main class="diamond-content">
-<div class="container-fluid container-home-page">
-<!-- <section class="section section-title-lead-landing-page container-fluid mt-n4 pb-3"> -->
-<section class="section-title-lead-landing-page container-fluid">
-  <div class="row text-center" style="width: 100vw;">
-    <div class="container-title-homepage">
-      <h1>{{ .Title }}</h1>
-    </div>
-    <div class="container-fluid container-lead-homepage">
-      <span class="lead">{{ .Params.lead | safeHTML }}</span>
-    </div>
-  </div>
-</section>
-<section class="section container-fluid mt-n4 pb-0 section-logo">
-  <div class="row text-center">
-    <div class="container-fluid text-center">
-          <span class="logo-diamond homepage" aria-hidden="true"></span>
-      {{ .Content }}
-    </div>
-  </div>
-</section>
-{{ if site.Params.doks.backgroundDots -}}
-<div class="d-flex justify-content-start">
-  <div class="bg-dots"></div>
-</div>
-{{ end -}}
-
-<section class="section section-md section-features{{ if eq .Lang "en" }} mt-0{{ else }} mb-0{{ end }}">
-  <div class="container">
-    <div class="row justify-content-center text-center">
-      <div class="col-lg-5 scroll-fade">
-        {{ if site.Params.diamond.sectionsIcons }}
-        <span class="section-icon homepage about" aria-hidden="true"></span>
-        {{ end }}
-        <h2 class="h4">{{ i18n "home_learn_more_title" }}</h2>
-        <p>{{ i18n "home_learn_more_body" | safeHTML }}</p>
-      </div>
-      <div class="col-lg-6 scroll-fade">
-        {{ if site.Params.diamond.sectionsIcons }}
-        <span class="section-icon homepage containers" aria-hidden="true"></span>
-        {{ end }}
-        <h2 class="h4">{{ i18n "home_codes_title" }}</h2>
-        <p>{{ i18n "home_codes_body" | safeHTML }}</p>
-      </div>
-      <div class="col-lg-5 scroll-fade">
-        {{ if site.Params.diamond.sectionsIcons }}
-        <span class="section-icon homepage wfs-dbs" aria-hidden="true"></span>
-        {{ end }}
-        <h2 class="h4">{{ i18n "home_workflows_title" }}</h2>
-        <p>{{ i18n "home_workflows_body" | safeHTML }}</p>
-      </div>
-      <div class="col-lg-6 scroll-fade">
-        {{ if site.Params.diamond.sectionsIcons }}
-        <span class="section-icon homepage documentation" aria-hidden="true"></span>
-        {{ end }}
-        <h2 class="h4">{{ i18n "home_documentation_title" }}</h2>
-        <p>{{ i18n "home_documentation_body" | safeHTML }}</p>
-      </div>
-      <div class="col-lg-6 scroll-fade">
-        {{ if site.Params.diamond.sectionsIcons }}
-        <span class="section-icon homepage faq" aria-hidden="true"></span>
-        {{ end }}
-        <h2 class="h4">{{ i18n "home_faq_title" }}</h2>
-        <p>{{ i18n "home_faq_body" | safeHTML }}</p>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- {{/* Beginning of the temporary FAQs section */}}
-<section class="section section-md section-faq mt-n5">
-  <a href="{{ "documentation/faq/" | relLangURL }}"><img alt="faq-icon" class="faq-icon scroll-fade"/><h2 class="scroll-fade text-center">{{ i18n "faq" }}</h2></a>
-</section>
-{{/* End of the temporary FAQs section */}} -->
-<!-- {{/* Beginning of the FAQs section */}}
-{{- $faqs := where .Site.RegularPages "Section" "faqs" }}
-{{- if (ge (len ($faqs)) 1) }}
-  <section class="section section-md section-news">
-    <div class="container">
-      <div class="row justify-content-center text-center">
-        <h2 class="scroll-fade">{{ i18n "faq" }}</h3>
-      </div>
-{{- end }}
-{{- range $faqs }}
-  <details>
-    <summary>
-      {{ .Title }}
-    </summary>
-    {{ .Content }}
-  </details>
-{{- end }}
-{{- if (ge (len ($faqs)) 1) }}
-    </div>
-  </section>
-{{- end }}
-{{/* End of FAQs section */}} -->
-
-{{/* Beginning of the news section */}}
-{{ if site.Params.diamond.enableNews -}}
-  <section class="section section-md section-news pb-0">
-    <div class="container">
-      <div class="row justify-content-center text-center">
-         {{ $homepageNewsPages := where (where .Site.RegularPages "Section" "news") "Params.homepage" true }}
-         {{ if (ge (len ($homepageNewsPages)) 1) }}
-          <h2 class="scroll-fade">{{ i18n "home_featured_news_title" }}</h2>
-        {{ end }}
-        {{ range $homepageNewsPages }}
-            <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 news-card-homepage scroll-fade" style="--bg-img: url({{ .Params.backgroundImage }});">
-              <h4 class="br-inherit"><a class="stretched-link text-body br-inherit" href="{{ .Permalink }}">{{ .Title | safeHTML }}</a></h4>
-              <p class="event-date-page">{{ .Params.EventDate }}</p>
-              <p>{{ .Summary }}</p>
-            </div>
-        {{ end }}
-      </div>
-    </div>
-  </section>
-{{ end -}}
-</div>
+<main class="diamond-content home-page">
+  {{ partial "home/hero.html" . }}
+  {{ partial "home/codes.html" . }}
+  {{ partial "home/workflows.html" . }}
+  {{ if site.Params.diamond.enableNews }}
+    {{ partial "home/news.html" . }}
+  {{ end }}
+  {{ partial "home/faq.html" . }}
+  {{ partial "home/contact.html" . }}
 </main>
-{{ end }}
-
-{{ define "sidebar-prefooter" }}
-{{ end }}
-
-{{ define "sidebar-footer" }}
-{{ if site.Params.doks.sectionFooter -}}
-<section class="section section-md container-fluid bg-light">
-  <div class="row justify-content-center text-center">
-    <div class="col-lg-7">
-      <h2 class="mt-2">Start building with Doks today</h2>
-      <a class="btn btn-primary rounded-pill px-4 my-2" href="/docs/{{ if site.Params.doks.docsVersioning }}{{ site.Params.doks.docsVersion }}/{{ end }}prologue/introduction/" role="button">{{ i18n "get-started" }}</a>
-    </div>
-  </div>
-</section>
-{{ end -}}
 {{ end }}

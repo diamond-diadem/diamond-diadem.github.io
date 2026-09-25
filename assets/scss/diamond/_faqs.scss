@@ -1,0 +1,221 @@
+// FAQ page: every question of the FAQ section, opened by the page hero band
+// and closed by the home call to contact. Colors and the band come from
+// _home.scss. Mobile first: one column, with the index of the
+// questions above them; wide screens keep the index beside them.
+
+$faq-index-width: 17rem;
+$faq-number-size: 2.5rem;
+$faq-number-gap: 1rem;
+
+.faq-page {
+    max-width: $home-container-width;
+    margin-inline: auto;
+}
+
+// ---------------------------------------------------------------------------
+// Layout
+
+// Tracks may shrink below their content, so long code lines scroll inside
+// their block instead of widening the page
+.faq-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2.5rem;
+    margin-bottom: $home-section-space;
+
+    @media (min-width: $home-breakpoint-lg) {
+        grid-template-columns: minmax(0, $faq-index-width) minmax(0, 1fr);
+        gap: 4rem;
+        align-items: start;
+    }
+}
+
+// ---------------------------------------------------------------------------
+// Index of the questions: a card on phones, a sticky column on wide screens
+
+.faq-index {
+    padding: 1.25rem 1.5rem;
+    background-color: var(--home-raised);
+    border: 1px solid var(--home-border);
+    border-radius: $home-radius;
+
+    @media (min-width: $home-breakpoint-lg) {
+        position: sticky;
+        top: 1.5rem;
+        max-height: calc(100vh - 3rem);
+        overflow-y: auto;
+        padding: 0;
+        background-color: transparent;
+        border: 0;
+        border-radius: 0;
+    }
+}
+
+h2.faq-index__title {
+    margin: 0 0 0.75rem;
+    font-family: $font-family-ui;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--home-muted);
+}
+
+.faq-index__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: faq-index;
+}
+
+.faq-index__list > li {
+    counter-increment: faq-index;
+}
+
+a.faq-index__link {
+    display: flex;
+    gap: 0.75rem;
+    padding: 0.5rem 0.75rem;
+    border-left: 2px solid var(--home-border);
+    font-family: $font-family-ui;
+    font-size: 0.9375rem;
+    line-height: 1.4;
+    color: var(--home-text);
+    text-decoration: none;
+    transition:
+        color 0.2s ease-out,
+        border-color 0.2s ease-out;
+
+    // Numbers matching the ones of the questions
+    &::before {
+        content: counter(faq-index, decimal-leading-zero);
+        flex-shrink: 0;
+        font-weight: 600;
+        font-variant-numeric: tabular-nums;
+        color: var(--home-muted);
+    }
+
+    &:hover,
+    &:focus-visible {
+        border-left-color: var(--home-accent);
+        color: var(--home-accent);
+        text-decoration: none;
+    }
+
+    &:focus-visible {
+        outline: 2px solid var(--home-accent);
+        outline-offset: 2px;
+        border-radius: 0.25rem;
+    }
+}
+
+// ---------------------------------------------------------------------------
+// Questions
+
+.faq-list {
+    border-top: 1px solid var(--home-border);
+}
+
+.faq-item {
+    padding-block: 2rem;
+    border-bottom: 1px solid var(--home-border);
+    scroll-margin-top: 1.5rem;
+}
+
+.faq-item__header {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: $faq-number-gap;
+    align-items: start;
+}
+
+.faq-item__number {
+    display: grid;
+    place-items: center;
+    width: $faq-number-size;
+    height: $faq-number-size;
+    border-radius: 50%;
+    background-color: var(--home-accent-soft);
+    color: var(--home-accent);
+    font-family: $font-family-ui;
+    font-size: 0.875rem;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    transition:
+        background-color 0.2s ease-out,
+        color 0.2s ease-out;
+}
+
+// The question reached through its link stands out by its number
+.faq-item:target .faq-item__number {
+    background-color: var(--home-accent);
+    color: var(--home-on-accent);
+}
+
+h2.faq-item__question {
+    margin: 0;
+    // Centers a single line on the number beside it
+    padding-top: 0.3rem;
+    font-size: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+}
+
+a.faq-item__link {
+    display: grid;
+    place-items: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    color: var(--home-muted);
+    transition:
+        color 0.2s ease-out,
+        background-color 0.2s ease-out;
+
+    &:hover,
+    &:focus-visible {
+        background-color: var(--home-accent-soft);
+        color: var(--home-accent);
+    }
+
+    &:focus-visible {
+        outline: 2px solid var(--home-accent);
+        outline-offset: 2px;
+    }
+}
+
+.faq-item__link-icon {
+    width: 1.125rem;
+    height: 1.125rem;
+}
+
+// Phones give the answer the full width, for code blocks; wider screens
+// align it with the question
+.faq-item__answer {
+    max-width: $content-measure;
+    margin-top: 1rem;
+
+    @media (min-width: $home-breakpoint-sm) {
+        padding-left: $faq-number-size + $faq-number-gap;
+    }
+
+    a {
+        color: var(--home-accent);
+    }
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+// ---------------------------------------------------------------------------
+// Motion
+
+@media (prefers-reduced-motion: reduce) {
+    a.faq-index__link,
+    .faq-item__number,
+    a.faq-item__link {
+        transition: none;
+    }
+}

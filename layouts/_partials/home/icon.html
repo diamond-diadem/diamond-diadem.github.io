@@ -1,0 +1,15 @@
+{{- /*
+  Renders a decorative inline SVG icon, hidden from assistive technologies.
+  Unlike the inline-svg partial it adds no id, so an icon can repeat on a page.
+
+  @param {string} name  Icon path under the icon set, e.g. "tabler-icons/outline/box".
+  @param {string} class CSS classes for the svg element.
+*/ -}}
+{{- $path := printf "svgs/%s/%s.svg" site.Params.inline_svg.iconSetDir .name -}}
+{{- with resources.Get $path -}}
+  {{- $svg := replaceRE `\sclass="[^"]*"` "" .Content 1 -}}
+  {{- $attributes := printf `<svg class="%s" aria-hidden="true" focusable="false"` $.class -}}
+  {{- replaceRE `^\s*<svg` $attributes $svg 1 | safeHTML -}}
+{{- else -}}
+  {{- warnf "home: icon %q not found" .name -}}
+{{- end -}}

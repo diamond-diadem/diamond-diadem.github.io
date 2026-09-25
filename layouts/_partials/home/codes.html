@@ -1,0 +1,47 @@
+{{- /*
+  Containerised codes: why they are reproducible (the FAIR principles), then
+  a grid of featured codes, whose names, icons and descriptions come from
+  their own pages.
+
+  @param {page} . The home page; texts come from its "codes" front matter.
+*/ -}}
+{{- with .Params.codes -}}
+<section class="home-section home-codes" aria-labelledby="home-codes-title">
+  <div class="home-container">
+    <div class="home-codes__intro scroll-fade">
+      {{ partial "home/section-header.html" (dict "id" "home-codes-title" "content" .) }}
+      {{ with .principles }}
+      <div class="home-fair">
+        <h3 class="home-fair__title">{{ $.Params.codes.principlesTitle }}</h3>
+        <ul class="home-fair__list" role="list">
+          {{- range . }}
+          <li class="home-fair__item">
+            <span class="home-fair__letter" aria-hidden="true">{{ .letter }}</span>
+            <span><strong class="home-fair__name">{{ .title }}</strong> {{ .text }}</span>
+          </li>
+          {{- end }}
+        </ul>
+      </div>
+      {{ end }}
+    </div>
+
+    <ul class="home-grid home-grid--codes scroll-fade" role="list">
+      {{- range .featured }}
+        {{- with site.GetPage . }}
+      <li class="home-card home-code">
+        <span class="home-code__logo" aria-hidden="true"><span class="home-code__icon {{ .Params.icon }}"></span></span>
+        <div class="home-code__body">
+          <h3 class="home-card__title"><a class="home-card__link" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h3>
+          <p class="home-code__category">{{ partial "home/code-category.html" . }}</p>
+        </div>
+      </li>
+        {{- else }}
+          {{- warnf "home: featured code %q not found" . }}
+        {{- end }}
+      {{- end }}
+    </ul>
+
+    {{ with .link }}{{ partial "home/more-link.html" . }}{{ end }}
+  </div>
+</section>
+{{- end -}}

@@ -148,10 +148,10 @@ icon="tabler-icons/outline/settings-question" >}}
             <td><a href="/codes/scientific-computing/gpumd/"><i class="icon-gpumd"></i>GPUMD</a></td>
             <td></td>
         </tr>
+        <tr>
             <td class="table-cell-left"><a href="/codes/scientific-computing/ptyrad/"><i class="icon-ptyrad"></i>PtyRAD</a></td>
             <td></td>
         </tr>
-
     </tbody>
 </table>
 

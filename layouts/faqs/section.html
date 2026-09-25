@@ -1,0 +1,43 @@
+{{- /*
+  The full FAQ: an introduction, an index of the questions, every question
+  with its answer, and a closing call to contact. Each question is a page of
+  the section, anchored by its file name so its link survives rewording.
+*/ -}}
+{{ define "main" }}
+<main class="diamond-content faq-page">
+  <header class="page-hero">
+    {{ with .Params.eyebrow }}<p class="home-eyebrow">{{ . }}</p>{{ end }}
+    <h1 class="page-hero__title">{{ .Title }}</h1>
+    <div class="page-hero__text">{{ .Content }}</div>
+  </header>
+
+  <div class="faq-layout">
+    <nav class="faq-index" aria-labelledby="faq-index-title">
+      <h2 class="faq-index__title" id="faq-index-title">{{ T "faq_questions" }}</h2>
+      <ol class="faq-index__list">
+        {{- range .Pages }}
+        <li><a class="faq-index__link" href="#{{ .File.ContentBaseName }}">{{ .Title }}</a></li>
+        {{- end }}
+      </ol>
+    </nav>
+
+    <div class="faq-list">
+      {{- range $index, $question := .Pages }}
+      {{- $id := .File.ContentBaseName }}
+      <article class="faq-item" id="{{ $id }}" aria-labelledby="{{ $id }}-title">
+        <header class="faq-item__header">
+          <span class="faq-item__number" aria-hidden="true">{{ printf "%02d" (add $index 1) }}</span>
+          <h2 class="faq-item__question" id="{{ $id }}-title">{{ .Title }}</h2>
+          <a class="faq-item__link" href="#{{ $id }}" aria-label="{{ T "faq_question_link" . }}">
+            {{- partial "home/icon.html" (dict "name" "tabler-icons/outline/link" "class" "faq-item__link-icon") -}}
+          </a>
+        </header>
+        <div class="faq-item__answer">{{ .Content }}</div>
+      </article>
+      {{- end }}
+    </div>
+  </div>
+
+  {{ partial "home/contact.html" . }}
+</main>
+{{ end }}

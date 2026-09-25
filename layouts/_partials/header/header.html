@@ -10,7 +10,7 @@
   <div class="header-bar"></div>
 {{ end -}}
 
-<header class="navbar navbar-expand-lg site-header">
+<header class="navbar navbar-expand-lg site-header{{ if .IsHome }} site-header--seamless{{ end }}">
   {{ with site.Params.doks.containerBreakpoint -}}
     <div class="container-{{ . }}">
   {{ else -}}

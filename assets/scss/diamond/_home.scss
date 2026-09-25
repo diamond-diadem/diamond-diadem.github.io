@@ -1,0 +1,1151 @@
+// Home page: a hero continuing the header band, then sections presenting the
+// codes, the workflows, the news and the FAQ, closed by a call to contact.
+// Mobile first: the base rules lay everything in one column, wider screens
+// add columns. Every color comes from the tokens below, drawn for each color
+// mode from the same palette as the header, so both modes share one design.
+
+$home-container-width: 75rem;
+$home-breakpoint-sm: 36em;
+$home-breakpoint-md: 48em;
+$home-breakpoint-lg: 62.5em;
+$home-breakpoint-xl: 76.25em;
+
+// From this width the page margins are wide enough for the hero chart to
+// grow into them, so the chart and the text can share one row
+$home-breakpoint-hero-split: 90em;
+
+// Height of the site header, which the hero band reaches up behind
+$home-header-height: 4.3125rem;
+
+$home-radius: 1rem;
+$home-radius-small: 0.625rem;
+$home-section-space: clamp(3.5rem, 2rem + 5vw, 6.5rem);
+
+// Air between the header and the hero, and between the last section and the
+// footer: both grow on wide screens, where the page has room to breathe
+$home-hero-space: clamp(1.5rem, 0.5rem + 5vw, 5.5rem);
+$home-footer-space: clamp(4.5rem, 2.5rem + 6vw, 9rem);
+
+// ---------------------------------------------------------------------------
+// Tokens
+
+// The colors of the home page in one mode. The band tints match the header
+// (see _site-header.scss), so the hero continues it without a seam. Pages
+// built from home pieces, such as the FAQ and the news, share them.
+@mixin home-skin($page, $text, $accent, $on-accent, $raised, $border, $tint, $shadow) {
+    .home-page,
+    .faq-page,
+    .news-list {
+        --home-page: #{$page};
+        --home-text: #{$text};
+        --home-muted: #{mix($text, $page, 72%)};
+        --home-accent: #{$accent};
+        --home-on-accent: #{$on-accent};
+        --home-accent-soft: #{mix($accent, $page, 10%)};
+        --home-raised: #{$raised};
+        --home-border: #{$border};
+        --home-border-strong: #{mix($accent, $border, 45%)};
+        --home-tinted: #{mix($border, $page, 22%)};
+        --home-band-top: #{mix($accent, $page, $tint)};
+        --home-band-edge: #{mix($accent, $page, $tint * 0.4)};
+        --home-band-soft: #{mix($accent, $page, $tint * 0.2)};
+        --home-lattice: #{site-header-lattice($accent, 0.1, 0.16)};
+        --home-shadow: #{$shadow};
+    }
+}
+
+@include home-skin($body-bg, $body-color, $primary, #fff, $surface-raised, $border-color, 12%, rgba($primary, 0.14));
+
+@include color-mode(dark) {
+    @include home-skin(
+        $body-bg-dark,
+        $body-color-dark,
+        $link-color-dark,
+        $body-bg-dark,
+        $surface-raised-dark,
+        $border-color-dark,
+        16%,
+        rgba($black, 0.45)
+    );
+}
+
+// ---------------------------------------------------------------------------
+// Shared pieces
+//
+// Link components are qualified with their element (a.home-*): that matches
+// the weight of the theme's dark mode link color, and coming later they win.
+
+.home-container {
+    max-width: $home-container-width;
+    margin-inline: auto;
+}
+
+.home-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    margin-bottom: 1rem;
+    font-family: $font-family-ui;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--home-accent);
+
+    // The small diamond of the header menu, as the brand mark of each section
+    &::before {
+        content: "";
+        flex-shrink: 0;
+        width: 0.4375rem;
+        height: 0.4375rem;
+        background-color: currentColor;
+        transform: rotate(45deg);
+    }
+}
+
+.home-section {
+    padding-block: $home-section-space;
+}
+
+// Full-bleed band: reaches the viewport edges through the page gutter
+.home-section--tinted {
+    margin-inline: calc(var(--bs-gutter-x) * -0.5);
+    padding-inline: calc(var(--bs-gutter-x) * 0.5);
+    background-color: var(--home-tinted);
+}
+
+.home-section-header {
+    max-width: 40rem;
+    margin-bottom: 2.5rem;
+}
+
+h2.home-section-header__title {
+    margin: 0 0 1rem;
+    font-size: clamp(1.75rem, 1.35rem + 1.5vw, 2.5rem);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+}
+
+.home-section-header__text {
+    margin: 0;
+    font-size: 1.0625em;
+    color: var(--home-muted);
+}
+
+// A section header sharing its row with the link to the full content
+.home-section-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    column-gap: 2rem;
+    margin-bottom: 2.5rem;
+
+    .home-section-header {
+        margin-bottom: 1rem;
+    }
+
+    .home-more-link {
+        margin: 0 0 1rem;
+    }
+}
+
+a.home-more-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 2.5rem;
+    font-family: $font-family-ui;
+    font-weight: 600;
+    color: var(--home-accent);
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+    }
+
+    &:hover .home-more-link__icon,
+    &:focus-visible .home-more-link__icon {
+        transform: translateX(0.25rem);
+    }
+}
+
+.home-more-link__icon {
+    width: 1.125rem;
+    height: 1.125rem;
+    transition: transform 0.2s ease-out;
+}
+
+// Buttons, as pills in the interface font
+.home-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+a.home-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.75rem;
+    padding: 0.625em 1.5em;
+    border: 1px solid var(--home-accent);
+    border-radius: 999px;
+    font-family: $font-family-ui;
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: center;
+    text-decoration: none;
+    transition:
+        background-color 0.2s ease-out,
+        color 0.2s ease-out,
+        box-shadow 0.2s ease-out;
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+    }
+
+    &:focus-visible {
+        outline: 2px solid var(--home-accent);
+        outline-offset: 3px;
+    }
+}
+
+a.home-button--primary {
+    background-color: var(--home-accent);
+    color: var(--home-on-accent);
+
+    &:hover,
+    &:focus-visible {
+        color: var(--home-on-accent);
+        box-shadow: 0 0.5rem 1.25rem -0.5rem var(--home-accent);
+    }
+}
+
+a.home-button--secondary {
+    background-color: transparent;
+    color: var(--home-accent);
+
+    &:hover,
+    &:focus-visible {
+        background-color: var(--home-accent-soft);
+        color: var(--home-accent);
+    }
+}
+
+// Cards: raised surfaces whose title link covers the whole card, so the
+// card is one target but reads as a heading to assistive technologies
+.home-card {
+    position: relative;
+    background-color: var(--home-raised);
+    border: 1px solid var(--home-border);
+    border-radius: $home-radius;
+    transition:
+        border-color 0.2s ease-out,
+        box-shadow 0.2s ease-out,
+        transform 0.2s ease-out;
+
+    &:hover {
+        border-color: var(--home-border-strong);
+        box-shadow: 0 1rem 2rem -1.25rem var(--home-shadow);
+        transform: translateY(-2px);
+    }
+}
+
+// Cards sit under a section heading on the home page and under the page
+// title elsewhere, so their title may be either level
+h2.home-card__title,
+h3.home-card__title {
+    margin: 0;
+    text-wrap: pretty;
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+a.home-card__link {
+    color: var(--home-text);
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        color: var(--home-accent);
+        text-decoration: none;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+    }
+
+    &:focus-visible {
+        outline: none;
+    }
+
+    &:focus-visible::after {
+        outline: 2px solid var(--home-accent);
+        outline-offset: 3px;
+    }
+}
+
+.home-card__text {
+    margin: 0.375rem 0 0;
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    color: var(--home-muted);
+}
+
+.home-card__arrow {
+    flex-shrink: 0;
+    width: 1.25rem;
+    height: 1.25rem;
+    color: var(--home-muted);
+    transition:
+        color 0.2s ease-out,
+        transform 0.2s ease-out;
+}
+
+.home-card:hover .home-card__arrow,
+.home-card:focus-within .home-card__arrow {
+    color: var(--home-accent);
+    transform: translateX(0.25rem);
+}
+
+.home-grid {
+    display: grid;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+// Band opening an inner page, tinted like the header and crossed by its lattice
+.page-hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    margin-bottom: clamp(2.5rem, 1.5rem + 3vw, 4rem);
+    padding: clamp(2rem, 1.25rem + 4vw, 4rem) clamp(1.25rem, 5vw, 4rem);
+    border-radius: 1.5rem;
+    background-color: var(--home-band-edge);
+    background-image: linear-gradient(135deg, var(--home-band-top), var(--home-band-soft));
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        pointer-events: none;
+    }
+}
+
+// The lattice fades toward the text, as on the header.
+// Browsers without masks skip it; the band remains.
+@supports (mask-image: none) {
+    .page-hero::before {
+        background-image: var(--home-lattice);
+        mask-image: linear-gradient(to left, #000, transparent 75%);
+    }
+}
+
+h1.page-hero__title {
+    max-width: 20ch;
+    margin: 0 0 1rem;
+    font-size: clamp(2rem, 1.5rem + 2.25vw, 3.25rem);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+.page-hero__text {
+    max-width: 40rem;
+    font-size: 1.125em;
+    color: var(--home-muted);
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+// ---------------------------------------------------------------------------
+// Hero
+
+// The band starts where the header starts: the header drops its own
+// background on the home page and the hero paints it for both, one gradient
+// and one lattice, fading into the page below the hero
+.navbar.site-header.site-header--seamless {
+    background: none;
+    box-shadow: none;
+
+    &::before {
+        content: none;
+    }
+}
+
+.home-hero {
+    position: relative;
+    margin-inline: calc(var(--bs-gutter-x) * -0.5);
+    padding: $home-hero-space calc(var(--bs-gutter-x) * 0.5) 0;
+
+    // Painted under the header, which comes before the hero and stays on top
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        top: -$home-header-height;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        pointer-events: none;
+    }
+
+    &::before {
+        background-color: var(--home-band-edge);
+        background-image: linear-gradient(
+            var(--home-band-top),
+            var(--home-band-edge) $home-header-height,
+            var(--home-band-soft) 60%,
+            var(--home-page)
+        );
+    }
+}
+
+// The lattice fades to the left as on the header and also toward the page.
+// Browsers unable to intersect two masks skip it; the band remains.
+@supports (mask-composite: intersect) {
+    .home-hero::after {
+        background-image: var(--home-lattice);
+        mask-image: linear-gradient(to right, transparent 40%, #000 95%), linear-gradient(#000 20%, transparent 75%);
+        mask-composite: intersect;
+    }
+}
+
+// The chart is dense with labels, so it never shrinks to make room for the
+// text: until the screen is wide enough for both, the text comes first and
+// the chart spans the page below it
+.home-hero {
+    overflow-x: clip;
+}
+
+.home-hero__layout {
+    display: grid;
+    gap: clamp(2.5rem, 5vw, 3.5rem);
+    align-items: center;
+
+    @media (min-width: $home-breakpoint-hero-split) {
+        grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+        gap: 4rem;
+    }
+}
+
+// Stacked on laptops, the text takes an editorial layout: the title on the
+// left, the pitch and its actions on the right. Narrower screens keep one
+// column, where the title would wrap into a tall, thin block.
+@media (min-width: $home-breakpoint-xl) and (max-width: $home-breakpoint-hero-split - 0.001em) {
+    .home-hero__intro {
+        display: grid;
+        grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+        column-gap: clamp(2rem, 5vw, 4rem);
+
+        > .home-eyebrow {
+            grid-column: 1 / -1;
+        }
+
+        > h1.home-hero__title {
+            grid-row: 2 / span 2;
+            margin-bottom: 0;
+        }
+
+        > .home-hero__text,
+        > .home-actions {
+            grid-column: 2;
+        }
+
+        > .home-hero__text {
+            margin-top: 0.375rem;
+        }
+    }
+}
+
+h1.home-hero__title {
+    margin: 0 0 1.25rem;
+    font-size: clamp(2.125rem, 1.4rem + 2.8vw, 3.5rem);
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: -0.025em;
+
+    em {
+        font-style: normal;
+        color: var(--home-accent);
+    }
+}
+
+.home-hero__text {
+    max-width: 40rem;
+    margin: 0 0 2rem;
+    font-size: clamp(1.0625rem, 1rem + 0.35vw, 1.25rem);
+    line-height: 1.55;
+    color: var(--home-muted);
+
+    a {
+        color: var(--home-accent);
+    }
+}
+
+// The chart has no frame: its transparent images lie on the band itself, and
+// a glow of the page color behind them quiets the lattice under the labels,
+// fading into the band before any edge shows
+.home-hero__figure {
+    position: relative;
+    isolation: isolate;
+    width: 100%;
+    max-width: 56rem;
+    margin: 0 auto;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: -12% -6%;
+        z-index: -1;
+        pointer-events: none;
+        background-image: radial-gradient(closest-side, var(--home-page) 60%, transparent);
+        opacity: 0.85;
+    }
+
+    // Beside the text, the chart grows into the right page margin, up to a
+    // limit and keeping the gutter before the edge of the screen
+    @media (min-width: $home-breakpoint-hero-split) {
+        width: auto;
+        max-width: none;
+        margin-right: 0;
+        margin-right: max(-20rem, min(0rem, calc((#{$home-container-width} - 100vw) / 2 + 1.5rem)));
+    }
+}
+
+.home-hero__image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.home-hero__image--dark {
+    display: none;
+}
+
+@include color-mode(dark) {
+    .home-hero__image--light {
+        display: none;
+    }
+
+    .home-hero__image--dark {
+        display: block;
+    }
+}
+
+.home-hero__caption {
+    margin-top: 1rem;
+    font-family: $font-family-ui;
+    font-size: 0.875rem;
+    text-align: center;
+    color: var(--home-muted);
+}
+
+// The four services, one strip of links under the hero
+.home-services {
+    display: grid;
+    margin-top: clamp(2.5rem, 5vw, 4rem);
+    padding: 0.5rem;
+    list-style: none;
+    background-color: var(--home-raised);
+    border: 1px solid var(--home-border);
+    border-radius: $home-radius;
+    box-shadow: 0 1.5rem 3rem -2.5rem var(--home-shadow);
+
+    @media (min-width: $home-breakpoint-sm) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @media (min-width: $home-breakpoint-xl) {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+.home-service {
+    position: relative;
+    display: flex;
+    gap: 0.875rem;
+    align-items: flex-start;
+    padding: 1rem;
+    border-radius: $home-radius-small;
+    transition: background-color 0.2s ease-out;
+
+    &:hover {
+        background-color: var(--home-accent-soft);
+    }
+}
+
+.home-service__icon {
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0.5rem;
+    border-radius: $home-radius-small;
+    background-color: var(--home-accent-soft);
+    color: var(--home-accent);
+}
+
+a.home-service__link {
+    font-family: $font-family-ui;
+    font-weight: 600;
+    color: var(--home-text);
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        color: var(--home-accent);
+        text-decoration: none;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+    }
+
+    &:focus-visible {
+        outline: none;
+    }
+
+    &:focus-visible::after {
+        outline: 2px solid var(--home-accent);
+        outline-offset: -2px;
+    }
+}
+
+.home-service__text {
+    margin: 0.125rem 0 0;
+    font-size: 0.9375rem;
+    line-height: 1.45;
+    color: var(--home-muted);
+}
+
+// ---------------------------------------------------------------------------
+// Codes
+
+.home-codes__intro {
+    display: grid;
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+
+    @media (min-width: $home-breakpoint-lg) {
+        grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+        gap: 4rem;
+        align-items: start;
+    }
+
+    .home-section-header {
+        margin-bottom: 0;
+    }
+}
+
+.home-fair {
+    padding: 1.5rem;
+    background-color: var(--home-raised);
+    border: 1px solid var(--home-border);
+    border-radius: $home-radius;
+}
+
+h3.home-fair__title {
+    margin: 0 0 1.25rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.home-fair__list {
+    display: grid;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.home-fair__item {
+    display: flex;
+    gap: 0.875rem;
+    align-items: flex-start;
+    font-size: 0.9375rem;
+    line-height: 1.45;
+    color: var(--home-muted);
+}
+
+.home-fair__letter {
+    display: grid;
+    flex-shrink: 0;
+    place-items: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0.5rem;
+    background-color: var(--home-accent);
+    color: var(--home-on-accent);
+    font-family: $font-family-ui;
+    font-weight: 700;
+}
+
+.home-fair__name {
+    display: block;
+    font-family: $font-family-ui;
+    font-weight: 600;
+    color: var(--home-text);
+}
+
+.home-grid--codes {
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr));
+}
+
+.home-code {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: 0.75rem 1rem;
+
+    @media (min-width: $home-breakpoint-md) {
+        padding: 1.25rem 1.5rem;
+    }
+}
+
+// The codes form one table of cells sharing their borders: every cell
+// draws all four sides and overlaps its neighbours by the border width, so
+// inner lines stay single and an incomplete last row keeps a clean edge.
+// The padding makes room for the overlap of the last column and row.
+.home-grid--codes {
+    gap: 0;
+    padding: 0 1px 1px 0;
+}
+
+.home-card.home-code {
+    margin: 0 -1px -1px 0;
+    border-radius: 0;
+    transition:
+        background-color 0.3s ease-out,
+        border-color 0.3s ease-out;
+
+    // A cell brightens in place: lifting it would break the shared lines
+    &:hover {
+        z-index: 1;
+        background-color: var(--home-accent-soft);
+        box-shadow: none;
+        transform: none;
+    }
+
+    &:focus-within {
+        z-index: 1;
+    }
+}
+
+// The logo stands on the cell itself, in a fixed slot so the names line up
+// whatever the shape of each logo
+.home-code__logo {
+    display: grid;
+    flex-shrink: 0;
+    place-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.home-code__icon {
+    width: 2.25rem;
+    height: 2.25rem;
+    margin: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+}
+
+.home-code__body {
+    min-width: 0;
+}
+
+.home-code__category {
+    margin: 0.125rem 0 0;
+    font-family: $font-family-ui;
+    font-size: 0.875rem;
+    color: var(--home-muted);
+}
+
+// ---------------------------------------------------------------------------
+// Workflows
+
+.home-workflows__layout {
+    display: grid;
+    gap: 2.5rem;
+
+    @media (min-width: $home-breakpoint-lg) {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+        gap: 4rem;
+        align-items: center;
+    }
+
+    .home-section-header {
+        margin-bottom: 1.5rem;
+    }
+
+    .home-more-link {
+        margin-top: 2rem;
+    }
+}
+
+.home-checklist {
+    display: grid;
+    gap: 0.75rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.home-checklist__item {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+}
+
+.home-checklist__icon {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 0.25rem;
+    border-radius: 50%;
+    background-color: var(--home-accent);
+    color: var(--home-on-accent);
+    stroke-width: 3;
+}
+
+.home-workflows__list {
+    display: grid;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.home-workflow {
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
+    padding: 1.25rem 1.5rem;
+}
+
+.home-workflow__icon {
+    flex-shrink: 0;
+    width: 3rem;
+    height: 3rem;
+    padding: 0.75rem;
+    border-radius: $home-radius-small;
+    background-color: var(--home-accent-soft);
+    color: var(--home-accent);
+}
+
+.home-workflow__body {
+    flex-grow: 1;
+    min-width: 0;
+}
+
+// ---------------------------------------------------------------------------
+// News
+
+.home-grid--news {
+    gap: 1.25rem;
+
+    @media (min-width: $home-breakpoint-md) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @media (min-width: $home-breakpoint-xl) {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+.home-news-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.home-news-card__picture {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2 / 1;
+    object-fit: cover;
+    border-bottom: 1px solid var(--home-border);
+
+    @media (min-width: $home-breakpoint-md) {
+        aspect-ratio: 16 / 9;
+    }
+}
+
+.home-news-card__body {
+    padding: 1.25rem 1.25rem 1.5rem;
+}
+
+.home-news-card__date {
+    display: flex;
+    gap: 0.375rem;
+    align-items: center;
+    margin: 0 0 0.625rem;
+    font-family: $font-family-ui;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--home-accent);
+}
+
+.home-news-card__date-icon {
+    flex-shrink: 0;
+    width: 1rem;
+    height: 1rem;
+}
+
+// Summaries vary in length: three lines keep the cards even
+.home-news-card .home-card__text {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+}
+
+// The card leading a list: across the grid, with the picture beside the
+// text on wide screens, a larger title and the whole summary
+.home-news-card--featured {
+    grid-column: 1 / -1;
+
+    @media (min-width: $home-breakpoint-lg) {
+        display: grid;
+        grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+    }
+
+    .home-news-card__picture {
+        @media (min-width: $home-breakpoint-lg) {
+            height: 100%;
+            aspect-ratio: auto;
+            min-height: 20rem;
+            border-bottom: 0;
+            border-right: 1px solid var(--home-border);
+        }
+    }
+
+    .home-news-card__body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: clamp(1.5rem, 1rem + 2vw, 2.75rem);
+    }
+
+    .home-card__title {
+        font-size: clamp(1.375rem, 1.1rem + 1vw, 1.875rem);
+        line-height: 1.2;
+        letter-spacing: -0.015em;
+    }
+
+    .home-card__text {
+        display: block;
+        overflow: visible;
+        -webkit-line-clamp: none;
+        line-clamp: none;
+        margin-top: 0.75rem;
+        font-size: 1rem;
+    }
+}
+
+.home-news-card__more {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin: 1.5rem 0 0;
+    font-family: $font-family-ui;
+    font-weight: 600;
+    color: var(--home-accent);
+
+    .home-card__arrow {
+        color: inherit;
+    }
+}
+
+// ---------------------------------------------------------------------------
+// FAQ
+
+.home-faq {
+    padding-top: 0;
+}
+
+.home-faq__layout {
+    display: grid;
+    gap: 2rem;
+
+    @media (min-width: $home-breakpoint-lg) {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr);
+        gap: 4rem;
+        align-items: start;
+    }
+
+    .home-section-header {
+        margin-bottom: 0;
+    }
+
+    .home-more-link {
+        margin-top: 1.5rem;
+    }
+}
+
+.home-faq__list {
+    border-top: 1px solid var(--home-border);
+}
+
+// The theme styles every <details> as a boxed accordion: start from bare
+details.home-faq__item {
+    @include plain-disclosure;
+    border-bottom: 1px solid var(--home-border);
+}
+
+.home-faq__question {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 0.25rem;
+    color: var(--home-text);
+    font-family: $font-family-ui;
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.35;
+    cursor: pointer;
+    list-style: none;
+    transition: color 0.2s ease-out;
+
+    &::-webkit-details-marker {
+        display: none;
+    }
+
+    &:hover {
+        color: var(--home-accent);
+    }
+
+    &:focus-visible {
+        outline: 2px solid var(--home-accent);
+        outline-offset: 2px;
+        border-radius: 0.25rem;
+    }
+}
+
+.home-faq__marker {
+    flex-shrink: 0;
+    width: 2rem;
+    height: 2rem;
+    padding: 0.375rem;
+    border-radius: 50%;
+    background-color: var(--home-accent-soft);
+    color: var(--home-accent);
+    transition: transform 0.25s ease-out;
+}
+
+// The plus turns into a cross while the answer is open
+.home-faq__item[open] .home-faq__marker {
+    transform: rotate(45deg);
+}
+
+.home-faq__answer {
+    max-width: 44rem;
+    padding: 0 3rem 1.5rem 0.25rem;
+    color: var(--home-muted);
+
+    a {
+        color: var(--home-accent);
+    }
+
+    code {
+        font-size: 0.875em;
+    }
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+// ---------------------------------------------------------------------------
+// Contact
+
+.home-contact {
+    padding-top: 0;
+    padding-bottom: $home-footer-space;
+}
+
+// Tinted like the header band and crossed by the same lattice, the panel
+// closes the page as the hero opened it
+.home-contact__panel {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding: clamp(2.5rem, 1.5rem + 5vw, 5rem) clamp(1.5rem, 5vw, 4rem);
+    border-radius: 1.5rem;
+    background-color: var(--home-band-edge);
+    background-image: linear-gradient(135deg, var(--home-band-top), var(--home-band-soft));
+    text-align: center;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        pointer-events: none;
+    }
+
+    .home-actions {
+        justify-content: center;
+    }
+}
+
+@supports (mask-image: none) {
+    .home-contact__panel::before {
+        background-image: var(--home-lattice);
+        mask-image: radial-gradient(ellipse at center, transparent 30%, #000 100%);
+    }
+}
+
+h2.home-contact__title {
+    max-width: 36rem;
+    margin: 0 auto 1rem;
+    font-size: clamp(1.75rem, 1.35rem + 1.5vw, 2.5rem);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+}
+
+.home-contact__text {
+    max-width: 36rem;
+    margin: 0 auto 2rem;
+    font-size: 1.0625em;
+    color: var(--home-muted);
+}
+
+// ---------------------------------------------------------------------------
+// Motion: cards, links and markers hold still for visitors who ask so
+
+@media (prefers-reduced-motion: reduce) {
+    .home-card,
+    .home-card__arrow,
+    .home-more-link__icon,
+    .home-faq__marker {
+        transition: none;
+    }
+
+    .home-card:hover {
+        transform: none;
+    }
+}

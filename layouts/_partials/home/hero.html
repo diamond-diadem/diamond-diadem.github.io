@@ -1,0 +1,40 @@
+{{- /*
+  Home page opening: what DIAMOND does, next to the chart of the codes it
+  containerises, followed by links to its four services. The section draws
+  the header band down behind itself, so the header and the hero read as one.
+
+  @param {page} . The home page; texts come from its "hero" front matter.
+*/ -}}
+{{- $lang := .Lang -}}
+{{- with .Params.hero -}}
+<section class="home-hero" aria-labelledby="home-hero-title">
+  <div class="home-container home-hero__layout">
+    <div class="home-hero__intro">
+      {{ with .eyebrow }}<p class="home-eyebrow">{{ . }}</p>{{ end }}
+      <h1 class="home-hero__title" id="home-hero-title">{{ .title | markdownify }}</h1>
+      {{ with .text }}<p class="home-hero__text">{{ . | markdownify }}</p>{{ end }}
+      {{ partial "home/actions.html" .actions }}
+    </div>
+    {{ with .image }}
+    <figure class="home-hero__figure">
+      {{ partial "home/hero-image.html" (dict "mode" "light" "lang" $lang "alt" .alt) }}
+      {{ partial "home/hero-image.html" (dict "mode" "dark" "lang" $lang "alt" .alt) }}
+      {{ with .caption }}<figcaption class="home-hero__caption">{{ . }}</figcaption>{{ end }}
+    </figure>
+    {{ end }}
+  </div>
+  {{ with .services }}
+  <ul class="home-container home-services" role="list">
+    {{- range . }}
+    <li class="home-service">
+      {{ partial "home/icon.html" (dict "name" .icon "class" "home-service__icon") }}
+      <div>
+        <a class="home-service__link" href="{{ partial "home/page-url.html" .page }}">{{ .title }}</a>
+        <p class="home-service__text">{{ .text }}</p>
+      </div>
+    </li>
+    {{- end }}
+  </ul>
+  {{ end }}
+</section>
+{{- end -}}

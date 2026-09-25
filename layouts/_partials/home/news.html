@@ -1,0 +1,26 @@
+{{- /*
+  Latest news, in the order of the news section, as cards with their picture.
+
+  @param {page} . The home page; texts come from its "news" front matter.
+*/ -}}
+{{- with .Params.news -}}
+  {{- $count := .count | default 4 -}}
+  {{- with site.GetPage "/news" -}}
+    {{- $latest := first $count .RegularPages -}}
+    {{- if $latest -}}
+<section class="home-section home-news" aria-labelledby="home-news-title">
+  <div class="home-container">
+    <div class="home-section-row scroll-fade">
+      {{ partial "home/section-header.html" (dict "id" "home-news-title" "content" $.Params.news) }}
+      {{ with $.Params.news.link }}{{ partial "home/more-link.html" . }}{{ end }}
+    </div>
+    <ul class="home-grid home-grid--news scroll-fade" role="list">
+      {{- range $latest }}
+      {{ partial "home/news-card.html" (dict "page" . "sizes" "(min-width: 76.25em) 18rem, (min-width: 48em) 50vw, 100vw") }}
+      {{- end }}
+    </ul>
+  </div>
+</section>
+    {{- end -}}
+  {{- end -}}
+{{- end -}}

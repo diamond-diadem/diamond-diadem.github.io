@@ -1,28 +1,3 @@
-// // news cards on home page // //
-
-.news-card-homepage {
-    @include veiled-background-image($news-veil-light, var(--bg-img));
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    position: relative;
-    border: solid black 1px;
-    border-radius: 45px;
-    padding-bottom: 20px;
-    margin-top: 15px;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-@include color-mode(dark) {
-    .news-card-homepage {
-        @include veiled-background-image($news-veil-dark, var(--bg-img));
-        border: solid white 1px;
-    }
-}
-
-// // END news cards END // //
-
 // // news pages // //
 
 .news-page {
@@ -39,6 +14,17 @@
     }
 }
 
+// Header and text share the reading width of documentation pages
+.news-article__header,
+.news-article__body {
+    max-width: $content-measure;
+    margin-inline: auto;
+}
+
+.news-article__header {
+    margin-bottom: 1.5rem;
+}
+
 // // END news page END // //
 
 @include swap-image(".img-denoiser-wide",
@@ -52,6 +38,7 @@
 }
 
 .event-date-page {
+    font-size: 1.25rem;
     font-style: italic;
     font-weight: 500;
 }

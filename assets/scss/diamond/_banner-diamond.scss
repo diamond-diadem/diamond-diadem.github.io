@@ -1,150 +1,3 @@
-.section-title-lead-landing-page {
-    height: fit-content;
-    display: flex;
-    align-items: center;
-    position: relative;
-    isolation: isolate;
-    overflow: hidden;
-    --banner-fade-top-start: 0px;
-    --banner-fade-top-end: 56px;
-    --banner-fade-side-start: 0px;
-    --banner-fade-side-end: 48px;
-    --banner-fade-start: 70%;
-    --banner-fade-end: 100%;
-}
-
-.section-title-lead-landing-page::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    background-image: url(images/banner-diamond/banner-diamond-light.png);
-    background-size: cover; //130% auto;
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: center;
-    -webkit-mask-image:
-        linear-gradient(
-            to bottom,
-            rgba(0, 0, 0, 0) 0,
-            rgba(0, 0, 0, 1) var(--banner-fade-top-end),
-            rgba(0, 0, 0, 1) var(--banner-fade-start),
-            rgba(0, 0, 0, 0) var(--banner-fade-end)
-        ),
-        linear-gradient(
-            to right,
-            rgba(0, 0, 0, 0) 0,
-            rgba(0, 0, 0, 1) var(--banner-fade-side-end),
-            rgba(0, 0, 0, 1) calc(100% - var(--banner-fade-side-end)),
-            rgba(0, 0, 0, 0) 100%
-        );
-    -webkit-mask-composite: source-in;
-    mask-image:
-        linear-gradient(
-            to bottom,
-            rgba(0, 0, 0, 0) 0,
-            rgba(0, 0, 0, 1) var(--banner-fade-top-end),
-            rgba(0, 0, 0, 1) var(--banner-fade-start),
-            rgba(0, 0, 0, 0) var(--banner-fade-end)
-        ),
-        linear-gradient(
-            to right,
-            rgba(0, 0, 0, 0) 0,
-            rgba(0, 0, 0, 1) var(--banner-fade-side-end),
-            rgba(0, 0, 0, 1) calc(100% - var(--banner-fade-side-end)),
-            rgba(0, 0, 0, 0) 100%
-        );
-    mask-composite: intersect;
-}
-
-.section-title-lead-landing-page > .row {
-    position: relative;
-    z-index: 1;
-}
-
-.container-title-homepage h1 {
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-.container-title-homepage,
-.container-lead-homepage {
-    display: flex;
-    justify-content: center;
-    height: 50%;
-}
-
-.container-title-homepage {
-    align-items: last baseline;
-    margin-top: 5%;
-}
-.container-lead-homepage {
-    align-items: first baseline;
-    margin-bottom: 5%;
-}
-
-.container-title-homepage h1 {
-    position: relative;
-    top: -0.35em;
-}
-
-// A soft glow in the page color separates the banner text from the busy picture
-// behind it. It follows the color mode through --bs-body-bg.
-.container-title-homepage h1,
-.container-lead-homepage .lead,
-.container-h1-default-page h1 {
-    text-shadow:
-        0 0 0.25em var(--bs-body-bg),
-        0 0 0.6em var(--bs-body-bg),
-        0 0 1.2em var(--bs-body-bg);
-}
-
-.container-lead-homepage .lead {
-    position: relative;
-    top: 0.35em;
-}
-
-@include color-mode(dark) {
-    .section-title-lead-landing-page::before {
-        background-image: url(images/banner-diamond/banner-diamond-dark.png);
-    }
-}
-
-@include media-breakpoint-up(xl) {
-    .section-title-lead-landing-page {
-        width: 85%;
-    }
-}
-@include media-breakpoint-down(xl) {
-    .section-title-lead-landing-page {
-        width: 100%;
-    }
-}
-
-@include media-breakpoint-down(lg) {
-    .section-title-lead-landing-page {
-        padding-top: 1em;
-        padding-bottom: 1em;
-    }
-}
-
-@include media-breakpoint-down(sm) {
-    .section-title-lead-landing-page {
-        max-width: 120%;
-        width: 120%;
-        position: relative;
-        left: -10%;
-    }
-    .container-title-homepage h1 {
-        position: relative;
-        top: -0.1em;
-    }
-    .container-lead-homepage .lead {
-        position: relative;
-        top: 0.1em;
-    }
-}
-
 // Without a rule under the header, the banner needs room above it and a soft
 // top edge so that it does not look glued to the header.
 .container-h1-default-page {
@@ -230,4 +83,13 @@
     margin-top: 0;
     margin-bottom: 0;
     transform: translateY(var(--page-title-offset-y));
+}
+
+// A soft glow in the page color separates the banner text from the busy picture
+// behind it. It follows the color mode through --bs-body-bg.
+.container-h1-default-page h1 {
+    text-shadow:
+        0 0 0.25em var(--bs-body-bg),
+        0 0 0.6em var(--bs-body-bg),
+        0 0 1.2em var(--bs-body-bg);
 }

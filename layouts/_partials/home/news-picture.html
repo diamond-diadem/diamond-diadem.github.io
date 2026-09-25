@@ -1,0 +1,19 @@
+{{- /*
+  Picture heading a news card, cropped to a common shape and offered in two
+  widths. It only illustrates the card, whose title says what it is about,
+  so its text alternative is empty.
+
+  @param {page}   page  A news page, whose backgroundImage names the picture.
+  @param {string} sizes Width of the picture in the layout, for the browser to pick a file.
+  @param {bool}   eager Whether the picture shows on arrival, so it loads first instead of lazily.
+*/ -}}
+{{- with .page.Params.backgroundImage -}}
+  {{- with resources.Get . -}}
+    {{- $picture := .Fill "640x360 Center webp q80" -}}
+    {{- $srcset := slice (printf "%s 640w" $picture.RelPermalink) -}}
+    {{- if ge .Width 1280 -}}
+      {{- $srcset = $srcset | append (printf "%s 1280w" (.Fill "1280x720 Center webp q75").RelPermalink) -}}
+    {{- end -}}
+<img class="home-news-card__picture" src="{{ $picture.RelPermalink }}" srcset="{{ delimit $srcset ", " }}" sizes="{{ $.sizes | default "100vw" }}" width="{{ $picture.Width }}" height="{{ $picture.Height }}" alt="" {{ if $.eager }}fetchpriority="high"{{ else }}loading="lazy" decoding="async"{{ end }}>
+  {{- end -}}
+{{- end -}}

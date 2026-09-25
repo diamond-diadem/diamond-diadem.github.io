@@ -34,21 +34,18 @@ available_workflows: Available workflows
 section_description: Description
 
 ### Home page ###
-home_codes_body: <a href="/en/codes/home/">Scientific computing and data visualisation</a>.
-home_codes_title: Get our container images for popular codes
-home_documentation_body: <a href="/en/documentation/install/install-apptainer/">Install
-  Apptainer</a>, and <a href="/en/documentation/use/apptainer-image/">learn to
-  use our container images</a>.
-home_documentation_title: Browse the documentation
-home_faq_body: <a href="/en/documentation/faq/">Check out our FAQ</a>.
-home_faq_title: Frequently asked questions
-home_featured_news_title: Featured News
-home_learn_more_body: About <a href="/en/about/diamond/">DIAMOND</a>, <a href="/en/about/diadem/">the
-  PEPR DIADEM</a>, <a href="/en/documentation/use/containers/">containers</a> and <a href="/en/documentation/use/apptainer/">Apptainer</a>.
-home_learn_more_title: Learn more
-home_workflows_body: <a href="/en/workflows/">Available workflows</a>.<br/><a
-  href="/en/data/">Contact the database team</a>.
-home_workflows_title: Workflows & databases
+code_category_scientific-computing: Scientific computing
+code_category_visualisation: Visualisation
+
+### FAQ page ###
+faq_questions: Questions
+faq_question_link: "Link to this question: {{ .Title }}"
+
+### News page ###
+news_pages: News pages
+news_previous_page: Previous page
+news_next_page: Next page
+news_read_more: Read more
 
 ### Team page ###
 team_all: All

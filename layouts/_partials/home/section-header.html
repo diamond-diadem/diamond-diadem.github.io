@@ -1,0 +1,13 @@
+{{- /*
+  Opening of a home page section: eyebrow, heading and optional introduction.
+
+  @param {string} id      Id of the heading, which labels its section.
+  @param {map}    content Section front matter, with eyebrow, title and text (Markdown).
+*/ -}}
+{{- with .content -}}
+<header class="home-section-header">
+  {{ with .eyebrow }}<p class="home-eyebrow">{{ . }}</p>{{ end }}
+  <h2 class="home-section-header__title" id="{{ $.id }}">{{ .title }}</h2>
+  {{ with .text }}<p class="home-section-header__text">{{ . | markdownify }}</p>{{ end }}
+</header>
+{{- end -}}

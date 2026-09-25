@@ -1,0 +1,16 @@
+{{- /*
+  Closing call to action inviting visitors to get in touch.
+
+  @param {page} . The home page; texts come from its "contact" front matter.
+*/ -}}
+{{- with .Params.contact -}}
+<section class="home-section home-contact" aria-labelledby="home-contact-title">
+  <div class="home-container">
+    <div class="home-contact__panel scroll-fade">
+      <h2 class="home-contact__title" id="home-contact-title">{{ .title }}</h2>
+      {{ with .text }}<p class="home-contact__text">{{ . | markdownify }}</p>{{ end }}
+      {{ partial "home/actions.html" .actions }}
+    </div>
+  </div>
+</section>
+{{- end -}}

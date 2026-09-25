@@ -1,0 +1,93 @@
+// News page: the page hero band, then the news as cards (see _home.scss),
+// the first one leading. Mobile first: one column, two from medium screens,
+// three from large ones.
+
+.news-list {
+    max-width: $home-container-width + $grid-gutter-width;
+    margin-inline: auto;
+    padding-inline: $grid-gutter-width * 0.5;
+}
+
+.news-list__grid {
+    display: grid;
+    gap: 1.25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @media (min-width: $home-breakpoint-md) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.5rem;
+    }
+
+    @media (min-width: $home-breakpoint-lg) {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+// ---------------------------------------------------------------------------
+// Pagination: page numbers as pills, the current one filled
+
+.news-pagination {
+    margin-top: clamp(2.5rem, 1.5rem + 3vw, 4rem);
+}
+
+.news-pagination__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a.news-pagination__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.75rem;
+    min-height: 2.75rem;
+    padding: 0 0.75rem;
+    border: 1px solid var(--home-border);
+    border-radius: 999px;
+    background-color: var(--home-raised);
+    color: var(--home-text);
+    font-family: $font-family-ui;
+    font-weight: 600;
+    text-decoration: none;
+    transition:
+        border-color 0.2s ease-out,
+        color 0.2s ease-out;
+
+    &:hover,
+    &:focus {
+        border-color: var(--home-border-strong);
+        color: var(--home-accent);
+        text-decoration: none;
+    }
+
+    &:focus-visible {
+        outline: 2px solid var(--home-accent);
+        outline-offset: 2px;
+    }
+}
+
+a.news-pagination__link--current,
+a.news-pagination__link--current:hover,
+a.news-pagination__link--current:focus {
+    border-color: var(--home-accent);
+    background-color: var(--home-accent);
+    color: var(--home-on-accent);
+}
+
+.news-pagination__icon {
+    width: 1.125rem;
+    height: 1.125rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    a.news-pagination__link {
+        transition: none;
+    }
+}

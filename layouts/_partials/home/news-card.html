@@ -1,0 +1,33 @@
+{{- /*
+  Card presenting a news page: its picture, event date, title and summary.
+  The title link covers the whole card.
+
+  @param {page}   page    The news page.
+  @param {string} heading Element of the title: "h2" under a page title, "h3" (default) under a section heading.
+  @param {string} sizes   Width of the picture in the layout (see home/news-picture.html).
+  @param {bool}   featured Whether the card leads the list, wider and with its full summary.
+*/ -}}
+{{- $heading := cond (eq .heading "h2") "h2" "h3" -}}
+{{- with .page -}}
+<li class="home-card home-news-card{{ if $.featured }} home-news-card--featured{{ end }}">
+  {{ partial "home/news-picture.html" (dict "page" . "sizes" $.sizes "eager" $.featured) }}
+  <div class="home-news-card__body">
+    {{ with .Params.eventDate }}
+    <p class="home-news-card__date">
+      {{ partial "home/icon.html" (dict "name" "tabler-icons/outline/calendar-event" "class" "home-news-card__date-icon") }}
+      {{ . }}
+    </p>
+    {{ end }}
+    {{ printf "<%s class=%q>" $heading "home-card__title" | safeHTML -}}
+      <a class="home-card__link" href="{{ .RelPermalink }}">{{ .Title }}</a>
+    {{- printf "</%s>" $heading | safeHTML }}
+    {{ with .Params.summary }}<p class="home-card__text">{{ replaceRE `\s*<br\s*/?>\s*` " · " . | plainify }}</p>{{ end }}
+    {{ if $.featured }}
+    <p class="home-news-card__more" aria-hidden="true">
+      {{- T "news_read_more" -}}
+      {{ partial "home/icon.html" (dict "name" "tabler-icons/outline/arrow-right" "class" "home-card__arrow") }}
+    </p>
+    {{ end }}
+  </div>
+</li>
+{{- end -}}

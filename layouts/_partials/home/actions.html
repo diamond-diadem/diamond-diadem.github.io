@@ -1,0 +1,14 @@
+{{- /*
+  Row of call-to-action buttons: the first one is primary, the others secondary.
+
+  @param {slice} . Actions from front matter, each with label and page (content path).
+*/ -}}
+{{- with . -}}
+<div class="home-actions">
+  {{- range $index, $action := . }}
+    {{- with partial "home/page-url.html" $action.page }}
+  <a class="home-button {{ if eq $index 0 }}home-button--primary{{ else }}home-button--secondary{{ end }}" href="{{ . }}">{{ $action.label }}</a>
+    {{- end }}
+  {{- end }}
+</div>
+{{- end -}}

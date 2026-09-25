@@ -1,0 +1,37 @@
+{{- /*
+  Links between the pages of a paginated list: previous, every page number
+  and next. Rendered only when the list spans several pages.
+
+  @param {paginator} . The paginator of the list.
+*/ -}}
+{{- if gt .TotalPages 1 -}}
+<nav class="news-pagination" aria-label="{{ T "news_pages" }}">
+  <ul class="news-pagination__list" role="list">
+    {{- with .Prev }}
+    <li>
+      <a class="news-pagination__link" href="{{ .URL }}" rel="prev">
+        {{- partial "home/icon.html" (dict "name" "tabler-icons/outline/arrow-left" "class" "news-pagination__icon") -}}
+        <span class="visually-hidden">{{ T "news_previous_page" }}</span>
+      </a>
+    </li>
+    {{- end }}
+    {{- range .Pagers }}
+    <li>
+      {{- if eq .PageNumber $.PageNumber }}
+      <a class="news-pagination__link news-pagination__link--current" href="{{ .URL }}" aria-current="page">{{ .PageNumber }}</a>
+      {{- else }}
+      <a class="news-pagination__link" href="{{ .URL }}">{{ .PageNumber }}</a>
+      {{- end }}
+    </li>
+    {{- end }}
+    {{- with .Next }}
+    <li>
+      <a class="news-pagination__link" href="{{ .URL }}" rel="next">
+        <span class="visually-hidden">{{ T "news_next_page" }}</span>
+        {{- partial "home/icon.html" (dict "name" "tabler-icons/outline/arrow-right" "class" "news-pagination__icon") -}}
+      </a>
+    </li>
+    {{- end }}
+  </ul>
+</nav>
+{{- end -}}

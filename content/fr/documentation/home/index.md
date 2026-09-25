@@ -21,7 +21,7 @@ Voici les liens pour accéder rapidement à la section de documentation des outi
 - [Installation de Guix](/documentation/install/install-guix/)
 - [Utiliser une image Apptainer](/documentation/use/apptainer-image/)
 - [Utiliser un paquet Guix](/documentation/use/guix-package/)
-- [Foire aux questions (FAQ)](/documentation/faq/)
+- [Foire aux questions (FAQ)]({{% ref "/faqs" %}})
 - [Tutoriel AG DIAMOND 2026](/documentation/by-session/diamond-ga-2026/) : l'IA appliquée à la science des matériaux
 
 #### Voici les liens pour accéder rapidement aux tutoriels spécifiques par image :

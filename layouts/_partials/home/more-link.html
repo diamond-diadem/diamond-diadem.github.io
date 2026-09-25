@@ -1,0 +1,11 @@
+{{- /*
+  Link leading from a home page section to the full content it previews.
+
+  @param {map} . Link front matter, with label and page (content path).
+*/ -}}
+{{- with partial "home/page-url.html" .page -}}
+<a class="home-more-link" href="{{ . }}">
+  {{- $.label -}}
+  {{ partial "home/icon.html" (dict "name" "tabler-icons/outline/arrow-right" "class" "home-more-link__icon") }}
+</a>
+{{- end -}}

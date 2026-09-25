@@ -35,22 +35,18 @@ available_workflows: Workflows disponibles
 section_description: Description
 
 ### Home page ###
-home_codes_body: <a href="/codes/home/">Calcul scientifique et visualisation de
-  données</a>.
-home_codes_title: Récupérez nos images de conteneurs de codes populaires
-home_documentation_body: <a href="/documentation/install/install-apptainer/">Installez
-  Apptainer</a>, et <a href="/documentation/use/apptainer-image/">apprenez à utiliser
-  nos images de conteneurs</a>.
-home_documentation_title: Consultez la documentation
-home_faq_body: <a href="/documentation/faq/">Consultez notre FAQ</a>.
-home_faq_title: Foire aux questions
-home_featured_news_title: Actualités en vedette
-home_learn_more_body: Sur <a href="/about/diamond/">DIAMOND</a>, le <a href="/about/diadem/">PEPR
-  DIADEM</a>, les <a href="/documentation/use/containers/">conteneurs</a> et <a href="/documentation/use/apptainer/">Apptainer</a>.
-home_learn_more_title: Apprenez-en plus
-home_workflows_body: <a href="/workflows/">Workflows disponibles</a>.<br/><a href="/data/">Contactez
-  l'équipe bases de données</a>.
-home_workflows_title: Workflows & bases de données
+code_category_scientific-computing: Calcul scientifique
+code_category_visualisation: Visualisation
+
+### FAQ page ###
+faq_questions: Questions
+faq_question_link: "Lien vers cette question : {{ .Title }}"
+
+### News page ###
+news_pages: Pages des actualités
+news_previous_page: Page précédente
+news_next_page: Page suivante
+news_read_more: Lire la suite
 
 ### Team page ###
 team_all: Tous

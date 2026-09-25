@@ -1,0 +1,30 @@
+{{- /*
+  Frequently asked questions, as disclosure widgets that work without scripts.
+  The questions are the first ones of the FAQ section, in weight order.
+
+  @param {page} . The home page; the section texts come from its "faq" front matter.
+*/ -}}
+{{- $content := .Params.faq -}}
+{{- $questions := slice -}}
+{{- with site.GetPage "/faqs" }}{{ $questions = first 5 .Pages.ByWeight }}{{ end -}}
+{{- if and $content $questions -}}
+<section class="home-section home-faq" aria-labelledby="home-faq-title">
+  <div class="home-container home-faq__layout">
+    <div class="home-faq__intro scroll-fade">
+      {{ partial "home/section-header.html" (dict "id" "home-faq-title" "content" $content) }}
+      {{ with $content.link }}{{ partial "home/more-link.html" . }}{{ end }}
+    </div>
+    <div class="home-faq__list scroll-fade">
+      {{- range $questions }}
+      <details class="home-faq__item">
+        <summary class="home-faq__question">
+          <span>{{ .Title }}</span>
+          {{ partial "home/icon.html" (dict "name" "tabler-icons/outline/plus" "class" "home-faq__marker") }}
+        </summary>
+        <div class="home-faq__answer">{{ .Content }}</div>
+      </details>
+      {{- end }}
+    </div>
+  </div>
+</section>
+{{- end -}}
