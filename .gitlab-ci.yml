@@ -1,3 +1,8 @@
+# Builds and deploys the DIAMOND website to GitLab Pages (staging environment).
+# Kept in sync with .github/workflows/deploy.yml, which deploys production to
+# GitHub Pages. Differences are intentional: this pipeline targets the staging
+# environment and is gated behind a "[stage]" commit message prefix.
+
 image: node:24
 
 stages:
@@ -8,21 +13,36 @@ variables:
   HUGO_ENVIRONMENT: staging
   HUGO_ENV: staging
   NODE_ENV: production
+  # Match the timezone used by the production build so dates render identically
+  TZ: America/Los_Angeles
+  # Keep the npm cache inside the project directory so GitLab can cache it
+  npm_config_cache: "$CI_PROJECT_DIR/.npm"
 
 pages:
   stage: deploy
+  environment:
+    name: staging
+    url: $CI_PAGES_URL
+  # Allow only one deployment at a time, without cancelling the one in progress
+  resource_group: pages
+  cache:
+    key:
+      files:
+        - package-lock.json
+    paths:
+      - .npm/
   before_script:
     - apt-get update -y && apt-get install -y wget ca-certificates
     - wget -q -O hugo.deb "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb"
     - dpkg -i hugo.deb
     - npm ci
   script:
-    - npm run build
+    - npm run build -- --baseURL "${CI_PAGES_URL}/"
   artifacts:
     paths:
       - public
-  only:
-    refs:
-      - staging
-    variables:
-      - $CI_COMMIT_MESSAGE =~ /^\[stage\]/
+  rules:
+    # Manual run from the GitLab UI, equivalent to GitHub's workflow_dispatch
+    - if: $CI_PIPELINE_SOURCE == "web"
+    # Pushes to the staging branch, gated by a "[stage]" commit message prefix
+    - if: $CI_COMMIT_BRANCH == "staging" && $CI_COMMIT_MESSAGE =~ /^\[stage\]/
