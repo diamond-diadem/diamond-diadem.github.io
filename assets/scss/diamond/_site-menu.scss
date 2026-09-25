@@ -8,6 +8,8 @@ $site-menu-max-items: 12;
 
 @include media-breakpoint-down(lg) {
     .navbar .site-menu .offcanvas-body {
+        display: flex;
+        flex-direction: column;
         flex: 1 1 auto;
         min-height: 0;
         padding: 0;

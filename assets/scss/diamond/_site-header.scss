@@ -1,0 +1,135 @@
+// Site header: a band washed in a pale tint of the mode accent, deepest at the
+// top and settling toward the page, with no rule beneath it: a soft shadow
+// lets it rest on the page instead. A faint atomic lattice shows through its
+// right side. Both color modes are drawn by the same mixin from their own
+// tokens. Browsers without CSS masks skip the lattice; the band remains.
+
+// A color as it must appear inside a data URI. Written from its channels
+// because mixed colors do not print as hex.
+@function site-header-svg-color($color) {
+    @return "rgb(#{round(red($color))},#{round(green($color))},#{round(blue($color))})";
+}
+
+// A honeycomb of atoms and bonds, as a crystal plane seen face on
+@function site-header-lattice($color, $bond-opacity, $atom-opacity) {
+    $ink: site-header-svg-color($color);
+    @return url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='27.71' viewBox='0 0 48 27.71'%3E%3Cpath fill='none' stroke='#{$ink}' stroke-opacity='#{$bond-opacity}' d='M0 13.86L8 0H24L32 13.86L24 27.71H8ZM32 13.86H48'/%3E%3Cg fill='#{$ink}' fill-opacity='#{$atom-opacity}'%3E%3Ccircle cx='0' cy='13.86' r='1.6'/%3E%3Ccircle cx='8' cy='0' r='1.6'/%3E%3Ccircle cx='24' cy='0' r='1.6'/%3E%3Ccircle cx='32' cy='13.86' r='1.6'/%3E%3Ccircle cx='24' cy='27.71' r='1.6'/%3E%3Ccircle cx='8' cy='27.71' r='1.6'/%3E%3Ccircle cx='48' cy='13.86' r='1.6'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+// The colors of the header in one mode. Every part derives from the page
+// background and the accent, so both modes share one construction. A dark
+// page needs a stronger tint and shadow for the band to stand out as much.
+// Selectors start with .navbar.site-header to outrank the theme navbar
+// background, which it sets again in dark mode, and its .offcanvas .nav-link
+// colors.
+@mixin site-header-skin($page, $accent, $tint, $shadow) {
+    $top: mix($accent, $page, $tint);
+    $bottom: mix($accent, $page, $tint * 0.4);
+
+    .navbar.site-header {
+        background-color: $bottom;
+        background-image: linear-gradient($top, $bottom);
+        box-shadow: 0 0.75rem 1.5rem -1rem $shadow;
+    }
+
+    @supports (mask-image: none) or (-webkit-mask-image: none) {
+        .site-header::before {
+            background-image: site-header-lattice($accent, 0.1, 0.16);
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        .navbar.site-header .site-menu .site-menu-link[aria-current="page"],
+        .navbar.site-header .site-menu .site-menu-link > .active {
+            color: $accent;
+        }
+    }
+}
+
+.navbar.site-header {
+    border-bottom: 0;
+}
+
+@supports (mask-image: none) or (-webkit-mask-image: none) {
+    .site-header::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        -webkit-mask-image: linear-gradient(to right, transparent 45%, #000 95%);
+        mask-image: linear-gradient(to right, transparent 45%, #000 95%);
+        pointer-events: none;
+    }
+}
+
+// Current page on large screens, where the menu sits inline on the band: the
+// accent color and a small diamond under the label. Keyed on aria-current,
+// which scripts leave alone, unlike .active.
+@include media-breakpoint-up(lg) {
+    .navbar.site-header .site-menu .site-menu-link[aria-current="page"],
+    .navbar.site-header .site-menu .site-menu-link > .active {
+        position: relative;
+    }
+
+    .navbar.site-header .site-menu .site-menu-link[aria-current="page"]::before,
+    .navbar.site-header .site-menu .site-menu-link > .active::before {
+        content: "";
+        position: absolute;
+        bottom: -0.1rem;
+        left: 50%;
+        width: 0.3125rem;
+        height: 0.3125rem;
+        background-color: currentColor;
+        transform: translateX(-50%) rotate(45deg);
+    }
+
+    // The dropdown label wraps its chevron, so its marker centers on it all
+    .navbar.site-header .site-menu .site-menu-link > .active::before {
+        bottom: -0.6rem;
+    }
+}
+
+// Menu placement on large screens: the links sit in the middle of the band,
+// between the brand on the left and the actions on the right. Browsers
+// without display: contents center them in the space the two leave free.
+@include media-breakpoint-up(lg) {
+    .navbar.site-header .site-menu > .offcanvas-body {
+        justify-content: space-between;
+    }
+
+    .navbar.site-header .site-menu-nav {
+        flex-grow: 1;
+    }
+
+    .navbar.site-header .site-menu .navbar-nav {
+        justify-content: center;
+    }
+
+    // Unwrapping the drawer puts brand, links and actions in one row; equal
+    // side columns then keep the links on the center line of the header
+    @supports (display: contents) {
+        .navbar.site-header .site-menu,
+        .navbar.site-header .site-menu > .offcanvas-body {
+            display: contents;
+        }
+
+        .navbar.site-header .navbar-brand,
+        .navbar.site-header .navbar-actions {
+            flex: 1 1 0;
+        }
+
+        .navbar.site-header .navbar-actions {
+            justify-content: flex-end;
+        }
+
+        .navbar.site-header .site-menu-nav {
+            flex-grow: 0;
+        }
+    }
+}
+
+@include site-header-skin($body-bg, $primary, 12%, rgba($black, 0.16));
+
+@include color-mode(dark) {
+    @include site-header-skin($body-bg-dark, $link-color-dark, 16%, rgba($black, 0.75));
+}

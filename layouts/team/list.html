@@ -71,7 +71,7 @@
 {{ $affiliationOptions = sort $affiliationOptions }}
 {{ $featuredPeople := $featuredPeopleWithBio | append $featuredPeopleWithoutBio }}
 {{ $fallbackPeople := $fallbackPeopleWithBio | append $fallbackPeopleWithoutBio }}
-<section class="container mx-auto px-4 py-8 mb-5">
+<main class="container mx-auto px-4">
   <h1 class="text-3xl font-semibold mb-6">{{ .Page.Param "title" }}</h1>
   {{ partial "team/list-filters.html" (dict
     "searchPlaceholder" (.Page.Param "searchboxtext")
@@ -91,6 +91,6 @@
 
   {{ partial "team/list-pagination.html" . }}
   <p id="no-results" class="hidden mt-4 text-gray-600">{{ i18n "team_no_results" }}</p>
-</section>
+</main>
 {{ end }}
 {{ end }}

@@ -25,6 +25,9 @@
 @import "diamond/contact-form";
 @import "diamond/syntax-contrast";
 @import "diamond/site-footer";
+@import "diamond/page-body";
+@import "diamond/language-toggle";
+@import "diamond/site-header";
 
 // Right-hand header controls, in reading order: search, color mode, language
 .navbar-actions {
@@ -49,92 +52,12 @@
     display: none !important;
 }
 
-// Segmented control: a soft track with the current language raised on a thumb
-.language-toggle {
-    display: inline-flex;
-    gap: 2px;
-    padding: 3px;
-    border-radius: 50rem;
-    background-color: rgba($body-color, 0.07);
-    font-size: 0.8125rem;
-    font-weight: 600;
-    letter-spacing: 0.04em;
-    line-height: 1;
-}
-
-.language-toggle-option {
-    min-width: 2.25rem;
-    padding: 0.4rem 0.6rem;
-    border-radius: 50rem;
-    color: $body-secondary-color;
-    text-align: center;
-    text-decoration: none;
-    transition:
-        color 0.15s ease-in-out,
-        background-color 0.15s ease-in-out;
-}
-
-.language-toggle-option:hover {
-    color: $link-color;
-}
-
-.language-toggle-option.active {
-    background-color: $surface-raised;
-    color: $link-color;
-    box-shadow: 0 1px 3px rgba($black, 0.18);
-}
-
-.language-toggle-option:focus-visible {
-    outline: 2px solid $link-color;
-    outline-offset: 1px;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .language-toggle-option {
-        transition: none;
-    }
-}
-
-@include color-mode(dark) {
-    .language-toggle {
-        background-color: rgba($white, 0.08);
-    }
-
-    .language-toggle-option {
-        color: $body-secondary-color-dark;
-    }
-
-    .language-toggle-option:hover {
-        color: $link-color-dark;
-    }
-
-    .language-toggle-option.active {
-        background-color: rgba($white, 0.16);
-        color: $headings-color-dark;
-        box-shadow: none;
-    }
-
-    .language-toggle-option:focus-visible {
-        outline-color: $link-color-dark;
-    }
-
-    .navbar {
-        border-bottom: 0;
-    }
-}
-
 .nav-item.dropdown {
     margin-right: -11px;
 }
 
 .nav-link {
     font-weight: 500;
-}
-
-.navbar {
-    z-index: 1000;
-    background-color: rgba($body-bg, 0.95);
-    border-bottom: 0;
 }
 
 u {
@@ -738,10 +661,6 @@ label {
 body:not(.has-scroll-fade) .scroll-fade {
     opacity: 1;
     transform: none;
-}
-
-.diamond-content {
-    padding-bottom: 40px;
 }
 
 // // // class="tree" used for tree like content // // //

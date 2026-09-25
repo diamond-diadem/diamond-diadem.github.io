@@ -38,6 +38,7 @@
 			{{ else -}}
 				{{ .Content }}
 			{{ end -}}
+			{{ if or site.Params.doks.lastMod site.Params.doks.editPage -}}
 			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
 				{{ if site.Params.doks.lastMod -}}
 					{{ partial "main/last-modified.html" . }}
@@ -46,6 +47,7 @@
 					{{ partial "main/edit-page.html" . }}
 				{{ end -}}
 			</div>
+			{{ end -}}
 			<!-- {{ partial "main/docs-navigation.html" . }} -->
 			<!--
 			{{ if not .Site.Params.options.collapsibleSidebar -}}

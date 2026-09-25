@@ -1,0 +1,69 @@
+// Segmented control: a soft track with the current language raised on a thumb
+.language-toggle {
+    display: inline-flex;
+    gap: 2px;
+    padding: 3px;
+    border-radius: 50rem;
+    background-color: rgba($body-color, 0.07);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    line-height: 1;
+}
+
+.language-toggle-option {
+    min-width: 2.25rem;
+    padding: 0.4rem 0.6rem;
+    border-radius: 50rem;
+    color: $body-secondary-color;
+    text-align: center;
+    text-decoration: none;
+    transition:
+        color 0.15s ease-in-out,
+        background-color 0.15s ease-in-out;
+}
+
+.language-toggle-option:hover {
+    color: $link-color;
+}
+
+.language-toggle-option.active {
+    background-color: $surface-raised;
+    color: $link-color;
+    box-shadow: 0 1px 3px rgba($black, 0.18);
+}
+
+.language-toggle-option:focus-visible {
+    outline: 2px solid $link-color;
+    outline-offset: 1px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .language-toggle-option {
+        transition: none;
+    }
+}
+
+@include color-mode(dark) {
+    .language-toggle {
+        background-color: rgba($white, 0.08);
+    }
+
+    .language-toggle-option {
+        color: $body-secondary-color-dark;
+    }
+
+    .language-toggle-option:hover {
+        color: $link-color-dark;
+    }
+
+    .language-toggle-option.active {
+        background-color: rgba($white, 0.16);
+        color: $headings-color-dark;
+        box-shadow: none;
+    }
+
+    .language-toggle-option:focus-visible {
+        outline-color: $link-color-dark;
+    }
+}

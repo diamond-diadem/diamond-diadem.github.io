@@ -1,0 +1,32 @@
+// Page body: the region between the site header and the site footer.
+// It owns the breathing room around the content, so every template gets the
+// same rhythm whatever its first heading or last block happens to be.
+// The space grows with the viewport: snug on phones, generous on desktops.
+// Browsers without clamp() keep the phone values.
+
+// Page titles already bring 2rem of top margin, this tops it up
+$page-body-space-top: 0.5rem;
+$page-body-space-top-fluid: clamp(0.5rem, 4vw - 0.5rem, 2rem);
+
+// The footer is a distinct tinted band, so it gets more air than the header
+$page-body-space-bottom: 3rem;
+$page-body-space-bottom-fluid: clamp(3rem, 2rem + 4vw, 5rem);
+
+.page-body {
+    padding-top: $page-body-space-top;
+    padding-top: $page-body-space-top-fluid;
+    padding-bottom: $page-body-space-bottom;
+    padding-bottom: $page-body-space-bottom-fluid;
+}
+
+// The theme pads the bottom of documentation pages too: the page body already
+// provides that space, and stacking both leaves a hole above the footer
+.docs-content {
+    padding-bottom: 0;
+}
+
+// Full-bleed tools (such as the ontology viewer) fill the space edge to edge
+.page-body--flush {
+    padding-top: 0;
+    padding-bottom: 0;
+}

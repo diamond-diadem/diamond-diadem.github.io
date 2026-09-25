@@ -97,12 +97,12 @@
 
 {{/* Beginning of the news section */}}
 {{ if site.Params.diamond.enableNews -}}
-  <section class="section section-md section-news">
+  <section class="section section-md section-news pb-0">
     <div class="container">
       <div class="row justify-content-center text-center">
          {{ $homepageNewsPages := where (where .Site.RegularPages "Section" "news") "Params.homepage" true }}
          {{ if (ge (len ($homepageNewsPages)) 1) }}
-          <h2 class="scroll-fade">{{ i18n "home_featured_news_title" }}</h3>
+          <h2 class="scroll-fade">{{ i18n "home_featured_news_title" }}</h2>
         {{ end }}
         {{ range $homepageNewsPages }}
             <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 news-card-homepage scroll-fade" style="--bg-img: url({{ .Params.backgroundImage }});">
@@ -113,7 +113,7 @@
         {{ end }}
       </div>
     </div>
-  </div>
+  </section>
 {{ end -}}
 </div>
 </main>

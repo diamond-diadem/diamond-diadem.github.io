@@ -10,7 +10,7 @@
   <div class="header-bar"></div>
 {{ end -}}
 
-<header class="navbar navbar-expand-lg">
+<header class="navbar navbar-expand-lg site-header">
   {{ with site.Params.doks.containerBreakpoint -}}
     <div class="container-{{ . }}">
   {{ else -}}
@@ -83,8 +83,8 @@
         </a>
         {{ partial "header/drawer-close.html" (dict "label" (i18n "main_menu_close") "class" "no-js-only") }}
       </div>
-      <div class="offcanvas-body d-flex flex-column flex-lg-row justify-content-between">
-        <nav class="site-menu-nav d-flex flex-column flex-lg-row flex-grow-1 align-self-lg-center" aria-label="{{ i18n "main_menu" }}">
+      <div class="offcanvas-body">
+        <nav class="site-menu-nav d-flex flex-column flex-lg-row align-self-lg-center" aria-label="{{ i18n "main_menu" }}">
           <p class="site-menu-eyebrow d-lg-none" aria-hidden="true">{{ i18n "navigation" }}</p>
           <ul class="navbar-nav flex-grow-1">
             {{- $current := . -}}
