@@ -1,12 +1,12 @@
 main:
   - name: Codes
-    url: en/codes/home/
+    url: en/codes/
     weight: 10
   - name: Workflows
     url: en/workflows/
     weight: 20
   - name: Documentation
-    url: en/documentation/home/
+    url: en/documentation/
     weight: 30
   - name: Data
     url: en/data/

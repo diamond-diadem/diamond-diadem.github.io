@@ -1,0 +1,15 @@
+{{- /*
+Resolves to the permalink of a page resource. Needed instead of a plain
+relative path for a bundle resource shared by more than one language
+translation, since Hugo publishes it once at its own language's canonical
+URL rather than duplicating it under every translation's URL prefix.
+
+@param {string} 0 The resource's file name (or a Resources.GetMatch pattern), relative to the page bundle.
+
+@example <a href="{{< resource "notes.pdf" >}}">Notes</a>
+*/ -}}
+{{- with .Page.Resources.GetMatch (.Get 0) -}}
+  {{- .RelPermalink -}}
+{{- else -}}
+  {{- errorf "The %q shortcode found no resource matching %q. See %s" .Name (.Get 0) .Position -}}
+{{- end -}}

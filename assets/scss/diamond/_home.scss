@@ -10,10 +10,6 @@ $home-breakpoint-md: 48em;
 $home-breakpoint-lg: 62.5em;
 $home-breakpoint-xl: 76.25em;
 
-// From this width the page margins are wide enough for the hero chart to
-// grow into them, so the chart and the text can share one row
-$home-breakpoint-hero-split: 90em;
-
 // Height of the site header, which the hero band reaches up behind
 $home-header-height: 4.3125rem;
 
@@ -428,50 +424,14 @@ h1.page-hero__title {
     }
 }
 
-// The chart is dense with labels, so it never shrinks to make room for the
-// text: until the screen is wide enough for both, the text comes first and
-// the chart spans the page below it
-.home-hero {
-    overflow-x: clip;
-}
-
 .home-hero__layout {
     display: grid;
     gap: clamp(2.5rem, 5vw, 3.5rem);
     align-items: center;
 
-    @media (min-width: $home-breakpoint-hero-split) {
+    @media (min-width: $home-breakpoint-lg) {
         grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
         gap: 4rem;
-    }
-}
-
-// Stacked on laptops, the text takes an editorial layout: the title on the
-// left, the pitch and its actions on the right. Narrower screens keep one
-// column, where the title would wrap into a tall, thin block.
-@media (min-width: $home-breakpoint-xl) and (max-width: $home-breakpoint-hero-split - 0.001em) {
-    .home-hero__intro {
-        display: grid;
-        grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-        column-gap: clamp(2rem, 5vw, 4rem);
-
-        > .home-eyebrow {
-            grid-column: 1 / -1;
-        }
-
-        > h1.home-hero__title {
-            grid-row: 2 / span 2;
-            margin-bottom: 0;
-        }
-
-        > .home-hero__text,
-        > .home-actions {
-            grid-column: 2;
-        }
-
-        > .home-hero__text {
-            margin-top: 0.375rem;
-        }
     }
 }
 
@@ -500,33 +460,15 @@ h1.home-hero__title {
     }
 }
 
-// The chart has no frame: its transparent images lie on the band itself, and
-// a glow of the page color behind them quiets the lattice under the labels,
-// fading into the band before any edge shows
+// The logo sits beside the text once the layout has a second column to give
+// it; below that, a lower row would only repeat the diamond mark already in
+// the header, so it disappears rather than falling into its own row.
 .home-hero__figure {
-    position: relative;
-    isolation: isolate;
-    width: 100%;
-    max-width: 56rem;
-    margin: 0 auto;
+    display: none;
 
-    &::before {
-        content: "";
-        position: absolute;
-        inset: -12% -6%;
-        z-index: -1;
-        pointer-events: none;
-        background-image: radial-gradient(closest-side, var(--home-page) 60%, transparent);
-        opacity: 0.85;
-    }
-
-    // Beside the text, the chart grows into the right page margin, up to a
-    // limit and keeping the gutter before the edge of the screen
-    @media (min-width: $home-breakpoint-hero-split) {
-        width: auto;
-        max-width: none;
-        margin-right: 0;
-        margin-right: max(-20rem, min(0rem, calc((#{$home-container-width} - 100vw) / 2 + 1.5rem)));
+    @media (min-width: $home-breakpoint-lg) {
+        display: block;
+        width: 100%;
     }
 }
 

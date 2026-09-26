@@ -1,28 +1,24 @@
 {{- /*
-  One color mode version of the containerised codes chart. Both versions are
-  rendered and CSS shows the one matching the color mode, so the chart follows
-  the theme toggle. The dark version loads lazily: while hidden it is never
-  downloaded.
+  The DIAMOND logo, in the variant matching the color mode. Both versions
+  are rendered and CSS shows the one matching the color mode, so the logo
+  follows the theme toggle. The dark version loads lazily: while hidden it
+  is never downloaded.
 
   @param {string} mode "light" or "dark".
-  @param {string} lang Language code; the chart labels are translated.
-  @param {string} alt  Text alternative of the chart.
+  @param {string} alt  Text alternative of the logo.
 */ -}}
 {{- $sources := dict
-  "light" "images/containerised-codes/containerised-codes-light-%s-cropped-nobg.png"
-  "dark" "images/containerised-codes/containerised-codes-dark-%s-cropped.png"
+  "light" "images/diamond/logo-diamond-light-smaller.png"
+  "dark" "images/diamond/logo-diamond-dark-smaller.png"
 -}}
-{{- $path := printf (index $sources .mode) .lang -}}
+{{- $path := index $sources .mode -}}
 {{- with resources.Get $path -}}
-  {{- $small := .Resize "640x webp q85" -}}
-  {{- $large := .Resize "1200x webp q85" -}}
+  {{- $image := .Process "webp" -}}
   <img class="home-hero__image home-hero__image--{{ $.mode }}"
-    src="{{ $large.RelPermalink }}"
-    srcset="{{ $small.RelPermalink }} 640w, {{ $large.RelPermalink }} 1200w"
-    sizes="(min-width: 90em) 52.5rem, (min-width: 59em) 56rem, 100vw"
-    width="{{ $large.Width }}" height="{{ $large.Height }}"
+    src="{{ $image.RelPermalink }}"
+    width="{{ $image.Width }}" height="{{ $image.Height }}"
     alt="{{ $.alt }}"
     {{- if eq $.mode "dark" }} loading="lazy"{{ end }} decoding="async">
 {{- else -}}
-  {{- warnf "home: chart image %q not found" $path -}}
+  {{- warnf "home: logo image %q not found" $path -}}
 {{- end -}}

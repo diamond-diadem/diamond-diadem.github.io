@@ -9,17 +9,8 @@
 
 mounts:
   # content
-  - source: content/fr
+  - source: content
     target: content
-    sites:
-      matrix:
-        languages: [fr]
-
-  - source: content/en
-    target: content
-    sites:
-      matrix:
-        languages: [en]
 
   # data
   - source: node_modules/@thulite/doks-core/data

@@ -1,11 +1,10 @@
 {{- /*
-  Home page opening: what DIAMOND does, next to the chart of the codes it
-  containerises, followed by links to its four services. The section draws
-  the header band down behind itself, so the header and the hero read as one.
+  Home page opening: what DIAMOND does, next to the DIAMOND logo, followed
+  by links to its four services. The section draws the header band down
+  behind itself, so the header and the hero read as one.
 
   @param {page} . The home page; texts come from its "hero" front matter.
 */ -}}
-{{- $lang := .Lang -}}
 {{- with .Params.hero -}}
 <section class="home-hero" aria-labelledby="home-hero-title">
   <div class="home-container home-hero__layout">
@@ -17,8 +16,8 @@
     </div>
     {{ with .image }}
     <figure class="home-hero__figure">
-      {{ partial "home/hero-image.html" (dict "mode" "light" "lang" $lang "alt" .alt) }}
-      {{ partial "home/hero-image.html" (dict "mode" "dark" "lang" $lang "alt" .alt) }}
+      {{ partial "home/hero-image.html" (dict "mode" "light" "alt" .alt) }}
+      {{ partial "home/hero-image.html" (dict "mode" "dark" "alt" .alt) }}
       {{ with .caption }}<figcaption class="home-hero__caption">{{ . }}</figcaption>{{ end }}
     </figure>
     {{ end }}

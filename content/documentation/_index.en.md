@@ -1,0 +1,100 @@
+---
+title: Welcome to the DIAMOND user documentation
+linkTitle: Home
+toc: false
+aliases:
+  - /documentation/home/
+seo:
+  description: "Start here for DIAMOND user documentation: Apptainer tutorials, Guix package guides, and help for using scientific containers on HPC clusters."
+---
+
+{{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
+**If you have any problems using the tools on the platform or if you have any queries**, please get in touch with us via this [contact form]({{% ref "/contact/" %}}).
+{{< /callout >}}
+
+The main purpose of this documentation is to help you get to grips with the various platform tools offered by [DIAMOND]({{% ref "/about/diamond/" %}}).
+
+Here are the links for quick access to the documentation section for the tools you are interested in:
+
+- [Installing Apptainer]({{% ref "/documentation/install/install-apptainer/" %}})
+- [Installing Guix]({{% ref "/documentation/install/install-guix/" %}})
+- [Using an Apptainer image]({{% ref "/documentation/use/apptainer-image/" %}})
+- [Using a Guix package]({{% ref "/documentation/use/guix-package/" %}})
+- [Frequently asked questions (FAQ)]({{% ref "/faqs" %}})
+- [DIAMOND GA 2026 tutorial]({{% ref "/documentation/by-session/diamond-ga-2026/" %}}): AI applied to materials science
+
+#### Here are the links for quick access to image-specific tutorials:
+
+<table>
+    <caption>
+        And more to be added!
+    </caption>
+    <thead>
+        <tr>
+            <th class="table-cell-left" scope="col">Scientific computing</th>
+            <th scope="col">Visualisation</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="table-cell-left"><a href="/en/documentation/by-container/aiida/"><i class="icon-aiida"></i>AiiDA</a></td>
+            <td><a href="/en/documentation/by-container/ovito/"><i class="icon-ovito"></i>Ovito</a></td>
+        </tr>
+        <tr>
+            <td class="table-cell-left"><a href="/en/documentation/by-container/lammps/"><i class="icon-lammps"></i>LAMMPS</a></td>
+            <td><a href="/en/documentation/by-container/paraview/"><i class="icon-paraview"></i>ParaView</a></td>
+        </tr>
+        <tr>
+            <td class="table-cell-left"><a href="/en/documentation/by-container/quantum-espresso/"><i class="icon-quantum-espresso"></i>Quantum ESPRESSO</a></td>
+            <td><a href="/en/documentation/by-container/vmd/"><i class="icon-vmd"></i>VMD</a></td>
+        </tr>
+        <tr>
+            <td class="table-cell-left"><a href="/en/documentation/by-container/abinit/"><i class="icon-abinit"></i>Abinit</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="table-cell-left"><a href="/en/documentation/by-container/freefem/"><i class="icon-freefem"></i>FreeFEM</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="table-cell-left"><a href="/en/documentation/by-container/opencalphad/"><i class="icon-opencalphad"></i>OpenCalphad</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="table-cell-left"><a href="/en/documentation/by-container/neper/"><i class="icon-neper"></i>Neper</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="table-cell-left"><a href="/en/documentation/by-container/plumed/"><i class="icon-plumed"></i>PLUMED</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="table-cell-left"><a href="/en/documentation/by-container/gmsh/"><i class="icon-gmsh"></i>Gmsh</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="table-cell-left"><a href="/en/documentation/by-container/zeo++/"><i class="icon-zeoplusplus"></i>Zeo++</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="table-cell-left"><a href="/en/documentation/by-container/raspa2/"><i class="icon-raspa2"></i>RASPA2</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="table-cell-left"><a href="/en/documentation/by-container/xtb/"><i class="icon-xtb"></i>xTB</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="table-cell-left"><a href="/en/documentation/by-container/amitex/"><i class="icon-amitex-fftp"></i>AMITEX_FFTP</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="table-cell-left"><a href="/en/documentation/by-container/ndm/"><i class="icon-ndm"></i>NDM</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="table-cell-left"><a href="/en/documentation/by-container/gpumd/"><i class="icon-gpumd"></i>GPUMD</a></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>

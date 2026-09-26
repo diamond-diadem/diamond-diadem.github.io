@@ -1,12 +1,12 @@
 main:
   - name: Codes
-    url: en/codes/home/
+    url: en/codes/
     weight: 10
   - name: Workflows
     url: en/workflows/
     weight: 20
   - name: Documentation
-    url: en/documentation/home/
+    url: en/documentation/
     weight: 30
   - name: Data
     url: en/data/
@@ -41,7 +41,7 @@ footer:
     identifier: footer-products-en
     weight: 20
   - name: Codes
-    pageRef: /codes/home
+    pageRef: /codes
     weight: 21
     parent: footer-products-en
   - name: Workflows
@@ -49,7 +49,7 @@ footer:
     weight: 22
     parent: footer-products-en
   - name: Documentation
-    pageRef: /documentation/home
+    pageRef: /documentation
     weight: 23
     parent: footer-products-en
   - name: Data

@@ -1,0 +1,1129 @@
+---
+title: Containerised codes
+linkTitle: Home
+toc: false
+aliases:
+  - /codes/home/
+  - /codes/start-here/home/
+cascade:
+  toc: false
+seo:
+  description: Hub for DIAMOND’s containerised scientific codes, Apptainer images, HPC
+    workflow library, and materials simulation software catalog.
+---
+
+{{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
+
+In this section, you will be able to download Apptainer images for codes available on this website. For scientific computing as well as data visualisation
+
+{{< /callout >}}
+
+{{< callout context="tip" title="" icon="tabler-icons/outline/question-mark" >}}
+
+But to begin with, if you haven't gone through this step yet and if you're not familiar with using Apptainer, follow the links below to learn how to install Apptainer and interact with images.
+
+{{< /callout >}}
+
+In the summer of 2023, the materials community was surveyed via LimeSurvey to identify working habits. Among other things, this highlighted a number of codes used for both computation and visualisation (see below). Currently, above $68\%$ of the codes cited by the community are containerised and/or packaged, covering all physical scales.
+
+<img alt="containerised codes" class="containerised-codes en mt-4" style="width:100%">
+
+## Useful Links
+
+{{< link-card
+title="Install Apptainer"
+description="Take advantage of our tutorial"
+href="/en/documentation/install/install-apptainer/"
+icon="custom/apptainer" >}}
+
+{{< link-card
+title="Containers images"
+description="Learn to use them"
+href="/en/documentation/use/apptainer-image/"
+icon="tabler-icons/outline/settings-question" >}}
+
+## Available code
+
+<table>
+    <caption>
+        And more to be added!
+    </caption>
+    <thead>
+        <tr>
+            <th scope="col">Scientific Computing</th>
+            <th scope="col">Visualisation</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><a href="/en/codes/scientific-computing/lammps/"><i class="icon-lammps"></i>LAMMPS</a></td>
+            <td><a href="/en/codes/visualisation/ovito/"><i class="icon-ovito"></i>Ovito</a></td>
+        </tr>
+        <tr>
+            <td><a href="/en/codes/scientific-computing/quantum-espresso/"><i class="icon-quantum-espresso"></i>Quantum ESPRESSO</a></td>
+            <td><a href="/en/codes/visualisation/paraview/"><i class="icon-paraview"></i>ParaView</a></td>
+        </tr>
+        <tr>
+            <td><a href="/en/codes/scientific-computing/abinit/"><i class="icon-abinit"></i>Abinit</a></td>
+            <td><a href="/en/codes/visualisation/vesta/"><i class="icon-vesta"></i>VESTA</a></td>
+        </tr>
+        <tr>
+            <td><a href="/en/codes/scientific-computing/z-set/"><i class="icon-z-set"></i>Z-set</a></td>
+            <td><a href="/en/codes/visualisation/vmd/"><i class="icon-vmd"></i>VMD</a></td>
+        </tr>
+        <tr>
+            <td><a href="/en/codes/scientific-computing/freefem/"><i class="icon-freefem"></i>FreeFEM</a></td>
+            <td><a href="/en/codes/visualisation/xcrysden/"><i class="icon-xcrysden"></i>XCrySDen</a></td>
+        </tr>
+        <tr>
+            <td><a href="/en/codes/scientific-computing/opencalphad/"><i class="icon-opencalphad"></i>OpenCalphad</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><a href="/en/codes/scientific-computing/neper/"><i class="icon-neper"></i>Neper</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><a href="/en/codes/scientific-computing/plumed/"><i class="icon-plumed"></i>PLUMED</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><a href="/en/codes/scientific-computing/gmsh/"><i class="icon-gmsh"></i>Gmsh</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><a href="/en/codes/scientific-computing/zeo++/"><i class="icon-zeoplusplus"></i>Zeo++</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><a href="/en/codes/scientific-computing/raspa2/"><i class="icon-raspa2"></i>RASPA2</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><a href="/en/codes/scientific-computing/opendis/"><i class="icon-opendis"></i>OpenDiS</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><a href="/en/codes/scientific-computing/wannier90/"><i class="icon-wannier90"></i>Wannier90</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><a href="/en/codes/scientific-computing/nwchem/"><i class="icon-nwchem"></i>NWChem</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><a href="/en/codes/scientific-computing/fenics/"><i class="icon-fenics"></i>FEniCS</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><a href="/en/codes/scientific-computing/cp2k/"><i class="icon-cp2k"></i>CP2K</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><a href="/en/codes/scientific-computing/n2p2/"><i class="icon-n2p2"></i>n2p2</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><a href="/en/codes/scientific-computing/dftbplus/"><i class="icon-dftbplus"></i>DFTB+</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><a href="/en/codes/scientific-computing/xtb/"><i class="icon-xtb"></i>xTB</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><a href="/en/codes/scientific-computing/gateway/"><i class="icon-gateway"></i>GaTewAY</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><a href="/en/codes/scientific-computing/amitex-fftp/"><i class="icon-amitex-fftp"></i>AMITEX_FFTP</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><a href="/en/codes/scientific-computing/ndm/"><i class="icon-ndm"></i>NDM</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><a href="/en/codes/scientific-computing/gpumd/"><i class="icon-gpumd"></i>GPUMD</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><a href="/en/codes/scientific-computing/ptyrad/"><i class="icon-ptyrad"></i>PtyRAD</a></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 align="center" class="mb-5">{{< inline-svg src="tabler-icons/outline/table-shortcut" class="svg-inline-shortcut">}}Shortcut: choose your code and retrieve it with Apptainer or Docker</h3>
+
+<div class="container-pulls-large">
+
+<div class="row">
+    <div class="col-6 col-diamond container-select container-select-1" align="left">
+        <label for="options1A" style="font-size: larger;"><b>Scientific Computing</b></label>
+        <select class="form-select select-options" align="left" id="options1A">
+            <option value="option0" disabled="disabled" selected="selected" hidden="hidden">--- Select a code ---</option>
+            <optgroup label="Scientific Computing">
+                <option value="option1A">LAMMPS</option>
+                <option value="option2A">Quantum ESPRESSO</option>
+                <option value="option3A">Abinit</option>
+                <option value="option4A">Z-set</option>
+                <option value="option5A">FreeFEM</option>
+                <option value="option6A">OpenCalphad</option>
+                <option value="option7A">Neper</option>
+                <option value="option8A">PLUMED</option>
+                <option value="option9A">Gmsh</option>
+                <option value="option10A">Zeo++</option>
+                <option value="option11A">RASPA2</option>
+                <option value="option12A">OpenDiS</option>
+                <option value="option13A">Wannier90</option>
+                <option value="option14A">NWChem</option>
+                <option value="option15A">FEniCS</option>
+                <option value="option16A">CP2K</option>
+                <option value="option17A">n2p2</option>
+                <option value="option18A">DFTB+</option>
+                <option value="option19A">xTB</option>
+                <option value="option20A">GaTewAY</option>
+                <option value="option21A">AMITEX_FFTP</option>
+                <option value="option22A">NDM</option>
+                <option value="option23A">GPUMD</option>
+                <option value="option24A">PtyRAD</option>
+            </optgroup>
+        </select>
+    </div>
+    <div class="col-6 col-diamond container-select container-select-2 container-rtl" align="right">
+        <label for="options2A" style="font-size: larger;"><b>Visualisation</b></label>
+        <select class="form-select select-options" align="right" id="options2A">
+            <option value="option0" disabled="disabled" selected="selected" hidden="hidden">--- Select a code ---</option>
+            <optgroup label="Visualisation">
+                <option value="optionaA">Ovito</option>
+                <option value="optionbA">ParaView</option>
+                <option value="optioncA">VESTA</option>
+                <option value="optiondA">VMD</option>
+                <option value="optioneA">XCrySDen</option>
+            </optgroup>
+        </select>
+    </div>
+</div>
+
+<div id="content-option1A" class="hidden">
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull lammps.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/lammps.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/lammps
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+</div>
+<div id="content-option2A" class="hidden">
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull quantum-espresso.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/quantum-espresso.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/quantum-espresso
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+</div>
+<div id="content-option3A" class="hidden">
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull abinit.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/abinit.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/abinit
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+</div>
+<div id="content-option4A" class="hidden">
+
+```bash
+apptainer pull z-set.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/z-set.sif:latest
+```
+
+</div>
+<div id="content-option5A" class="hidden">
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull freefem.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/freefem.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/freefem
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+</div>
+<div id="content-option6A" class="hidden">
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull opencalphad.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/opencalphad.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/opencalphad
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+</div>
+<div id="content-option7A" class="hidden">
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull neper.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/neper.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/neper
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+</div>
+<div id="content-option8A" class="hidden">
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull plumed.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/plumed.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/plumed
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+</div>
+<div id="content-option9A" class="hidden">
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull gmsh.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/gmsh.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/gmsh
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+</div>
+<div id="content-option10A" class="hidden">
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull zeoplusplus.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/zeoplusplus.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/zeoplusplus
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+</div>
+<div id="content-option11A" class="hidden">
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull raspa2.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/raspa2.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/raspa2
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+</div>
+<div id="content-option12A" class="hidden">
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull opendis.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/opendis.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/opendis
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+</div>
+<div id="content-option13A" class="hidden">
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull wannier90.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/wannier90.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/wannier90
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+</div>
+<div id="content-option14A" class="hidden">
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull nwchem.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/nwchem.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/nwchem
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+</div>
+<div id="content-option15A" class="hidden">
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull fenics.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/fenics.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/fenics
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+</div>
+<div id="content-option16A" class="hidden">
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull cp2k.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/cp2k.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/cp2k
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+</div>
+<div id="content-option17A" class="hidden">
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull n2p2.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/n2p2.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/n2p2
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+</div>
+<div id="content-option18A" class="hidden">
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull dftbplus.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/dftbplus.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/dftbplus
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+</div>
+
+<div id="content-option19A" class="hidden">
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull xtb.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/xtb.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/xtb
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+</div>
+<div id="content-option20A" class="hidden">
+
+```bash
+apptainer pull gateway.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/gateway.sif:latest
+```
+
+</div>
+
+<!--  -->
+
+<div id="content-option21A" class="hidden">
+
+```bash
+apptainer pull amitex_fftp.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/amitex_fftp.sif:latest
+```
+
+</div>
+
+<div id="content-option22A" class="hidden">
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull ndm.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/ndm.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/ndm
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+</div>
+
+<div id="content-option23A" class="hidden">
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull gpumd.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/gpumd.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+Unavailable
+{{< /tab >}}
+{{< /tabs >}}
+
+</div>
+
+<div id="content-option24A" class="hidden">
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull ptyrad.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/ptyrad-cuda.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/ptyrad-cuda
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+</div>
+
+<div id="content-optionaA" class="hidden">
+
+```bash
+apptainer pull ovito.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/ovito.sif:latest
+```
+
+</div>
+<div id="content-optionbA" class="hidden">
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull paraview.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/paraview.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/paraview
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+</div>
+<div id="content-optioncA" class="hidden">
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull vesta.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/vesta.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/vesta
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+</div>
+<div id="content-optiondA" class="hidden">
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull vmd.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/vmd.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/vmd
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+</div>
+<div id="content-optioneA" class="hidden">
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull xcrysden.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/xcrysden.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/xcrysden
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+</div>
+
+</div>
+
+<div class="container-pulls-small">
+
+<div class="col-6 col-diamond container-select container-select-1" align="left">
+    <label for="options1B" style="font-size: larger;"><b>Scientific Computing</b></label>
+    <select class="form-select select-options" align="left" id="options1B">
+        <option value="option0" disabled="disabled" selected="selected" hidden="hidden">--- Select a code ---</option>
+        <optgroup label="Scientific Computing">
+            <option value="option1B">LAMMPS</option>
+            <option value="option2B">Quantum ESPRESSO</option>
+            <option value="option3B">Abinit</option>
+            <option value="option4B">Z-set</option>
+            <option value="option5B">FreeFEM</option>
+            <option value="option6B">OpenCalphad</option>
+            <option value="option7B">Neper</option>
+            <option value="option8B">PLUMED</option>
+            <option value="option9B">Gmsh</option>
+            <option value="option10B">Zeo++</option>
+            <option value="option11B">RASPA2</option>
+            <option value="option12B">OpenDiS</option>
+            <option value="option13B">Wannier90</option>
+            <option value="option14B">NWChem</option>
+            <option value="option15B">FEniCS</option>
+            <option value="option16B">CP2K</option>
+            <option value="option17B">n2p2</option>
+            <option value="option18B">DFTB+</option>
+            <option value="option19B">xTB</option>
+            <option value="option20B">GaTewAY</option>
+            <option value="option21B">AMITEX_FFTP</option>
+            <option value="option22B">NDM</option>
+            <option value="option23B">GPUMD</option>
+            <option value="option24B">PtyRAD</option>
+        </optgroup>
+    </select>
+</div>
+
+<br>
+
+<div id="content-option1B" style="margin-top: -1rem;" class="hidden">
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull lammps.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/lammps.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/lammps
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+</div>
+<div id="content-option2B" style="margin-top: -1rem;" class="hidden">
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull quantum-espresso.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/quantum-espresso.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/quantum-espresso
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+</div>
+<div id="content-option3B" style="margin-top: -1rem;" class="hidden">
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull abinit.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/abinit.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/abinit
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+</div>
+<div id="content-option4B" style="margin-top: -1rem;" class="hidden">
+
+```bash
+apptainer pull z-set.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/z-set.sif:latest
+```
+
+</div>
+<div id="content-option5B" style="margin-top: -1rem;" class="hidden">
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull freefem.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/freefem.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/freefem
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+</div>
+<div id="content-option6B" style="margin-top: -1rem;" class="hidden">
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull opencalphad.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/opencalphad.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/opencalphad
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+</div>
+<div id="content-option7B" style="margin-top: -1rem;" class="hidden">
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull neper.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/neper.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/neper
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+</div>
+<div id="content-option8B" style="margin-top: -1rem;" class="hidden">
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull plumed.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/plumed.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/plumed
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+</div>
+<div id="content-option9B" style="margin-top: -1rem;" class="hidden">
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull gmsh.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/gmsh.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/gmsh
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+</div>
+<div id="content-option10B" style="margin-top: -1rem;" class="hidden">
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull zeoplusplus.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/zeoplusplus.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/zeoplusplus
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+</div>
+<div id="content-option11B" style="margin-top: -1rem;" class="hidden">
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull raspa2.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/raspa2.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/raspa2
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+</div>
+<div id="content-option12B" style="margin-top: -1rem;" class="hidden">
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull opendis.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/opendis.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/opendis
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+</div>
+<div id="content-option13B" style="margin-top: -1rem;" class="hidden">
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull wannier90.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/wannier90.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/wannier90
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+</div>
+<div id="content-option14B" style="margin-top: -1rem;" class="hidden">
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull nwchem.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/nwchem.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/nwchem
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+</div>
+<div id="content-option15B" style="margin-top: -1rem;" class="hidden">
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull fenics.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/fenics.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/fenics
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+</div>
+<div id="content-option16B" style="margin-top: -1rem;" class="hidden">
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull cp2k.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/cp2k.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/cp2k
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+</div>
+<div id="content-option17B" style="margin-top: -1rem;" class="hidden">
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull n2p2.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/n2p2.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/n2p2
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+</div>
+<div id="content-option18B" style="margin-top: -1rem;" class="hidden">
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull dftbplus.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/dftbplus.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/dftbplus
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+</div>
+<div id="content-option19B" style="margin-top: -1rem;" class="hidden">
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull xtb.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/xtb.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/xtb
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+</div>
+<div id="content-option20B" style="margin-top: -1rem;" class="hidden">
+
+```bash
+apptainer pull gateway.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/gateway.sif:latest
+```
+
+</div>
+
+<div id="content-option21B" style="margin-top: -1rem;" class="hidden">
+
+```bash
+apptainer pull amitex_fftp.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/amitex_fftp.sif:latest
+```
+
+</div>
+
+<div id="content-option22B" style="margin-top: -1rem;" class="hidden">
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull ndm.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/ndm.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/ndm
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+</div>
+
+<div id="content-option23B" style="margin-top: -1rem;" class="hidden">
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull gpumd.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/gpumd.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+Unavailable
+{{< /tab >}}
+{{< /tabs >}}
+
+</div>
+
+<div id="content-option24B" style="margin-top: -1rem;" class="hidden">
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull ptyrad.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/ptyrad-cuda.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/ptyrad-cuda
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+</div>
+
+<div class="col-6 col-diamond container-select container-select-2 container-rtl" align="right">
+    <label for="options2B" style="font-size: larger;"><b>Visualisation</b></label>
+    <select class="form-select select-options" align="right" id="options2B">
+        <option value="option0" disabled="disabled" selected="selected" hidden="hidden">--- Select a code ---</option>
+        <optgroup label="Visualisation">
+            <option value="optionaB">Ovito</option>
+            <option value="optionbB">ParaView</option>
+            <option value="optioncB">VESTA</option>
+            <option value="optiondB">VMD</option>
+            <option value="optioneB">XCrySDen</option>
+        </optgroup>
+    </select>
+</div>
+
+<div id="content-optionaB" class="hidden">
+
+```bash
+apptainer pull ovito.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/ovito.sif:latest
+```
+
+</div>
+<div id="content-optionbB" class="hidden">
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull paraview.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/paraview.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/paraview
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+</div>
+<div id="content-optioncB" class="hidden">
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull vesta.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/vesta.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/vesta
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+</div>
+<div id="content-optiondB" class="hidden">
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull vmd.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/vmd.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/vmd
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+</div>
+<div id="content-optioneB" class="hidden">
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull xcrysden.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/xcrysden.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/xcrysden
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+</div>
+
+</div>

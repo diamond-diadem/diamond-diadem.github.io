@@ -6,9 +6,16 @@
   @param {page}   page  A news page, whose backgroundImage names the picture.
   @param {string} sizes Width of the picture in the layout, for the browser to pick a file.
   @param {bool}   eager Whether the picture shows on arrival, so it loads first instead of lazily.
+
+  backgroundImage is looked up as a page resource first (an image living in
+  the news article's own bundle), falling back to a site-wide asset for
+  pictures shared by more than one article.
 */ -}}
+{{- $page := .page -}}
 {{- with .page.Params.backgroundImage -}}
-  {{- with resources.Get . -}}
+  {{- $image := $page.Resources.GetMatch . -}}
+  {{- if not $image }}{{ $image = resources.Get . }}{{ end -}}
+  {{- with $image -}}
     {{- $picture := .Fill "640x360 Center webp q80" -}}
     {{- $srcset := slice (printf "%s 640w" $picture.RelPermalink) -}}
     {{- if ge .Width 1280 -}}
