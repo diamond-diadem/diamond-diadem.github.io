@@ -31,8 +31,10 @@ This training session was organized ahead of the DIAMOND 2026 general meeting in
 
 The training program was developed by Ahmed AMRANI and co-supervised by Ahmed AMRANI, Jean-Philippe POLI and Léo ORVEILLON.
 
-The full content, along with instructions on how to run it, is available in the tutorial's repository: link below. The [guide](/en/notebooks/ai-training/guide/) walks through it step by step.
+The full content, along with instructions on how to run it, is available in the tutorial's repository, and the guide walks through it step by step: links below.
 
 </div>
+
+{{< link-card title="Guide: AI Training" description="Follow the tutorial step by step" href="/en/notebooks/ai-training/guide/" icon="tabler-icons/outline/book" >}}
 
 {{< link-card title="GitLab: AI Training" description="Access the notebooks and instructions" href="https://gricad-gitlab.univ-grenoble-alpes.fr/diamond/jupyter/training-diamond-ag-2026" target="_blank" icon="tabler-icons/outline/brand-gitlab" class="mb-0" >}}
