@@ -2,8 +2,8 @@
 
 @include swap-image(
     ".img-notebooks-home",
-    "/images/notebooks/home/notebooks-home-light.svg",
-    "/images/notebooks/home/notebooks-home-dark.svg"
+    "images/notebooks/home/notebooks-home-light.svg",
+    "images/notebooks/home/notebooks-home-dark.svg"
 );
 
 // // // Notebooks figures // // //
@@ -24,8 +24,8 @@ $ai-training-figures: (
 @each $figure in $ai-training-figures {
     @include swap-image(
         ".img-ai-training-#{$figure}",
-        "/images/notebooks/ai-training/#{$figure}-light.png",
-        "/images/notebooks/ai-training/#{$figure}-dark.png"
+        "images/notebooks/ai-training/#{$figure}-light.png",
+        "images/notebooks/ai-training/#{$figure}-dark.png"
     );
 }
 
@@ -33,6 +33,6 @@ $ai-training-figures: (
 
 @include swap-image(
     ".img-raman-denoising-autoencoder-architecture",
-    "/images/notebooks/raman-denoising/autoencoder-architecture-light.png",
-    "/images/notebooks/raman-denoising/autoencoder-architecture-dark.png"
+    "images/notebooks/raman-denoising/autoencoder-architecture-light.png",
+    "images/notebooks/raman-denoising/autoencoder-architecture-dark.png"
 );
