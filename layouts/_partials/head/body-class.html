@@ -18,4 +18,5 @@
 {{- else if eq .Kind "404" -}}
   {{- $name = "error404" -}}
 {{- end -}}
-{{- .Scratch.Set "class" (slice $template $name) -}}
+{{- /* Optional page-specific hook, set with `bodyClass` in front matter */ -}}
+{{- .Scratch.Set "class" (slice $template $name (.Params.bodyClass | default "")) -}}

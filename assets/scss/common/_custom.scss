@@ -19,6 +19,7 @@
 @import "diamond/team-list";
 @import "diamond/contact-form";
 @import "diamond/notebooks-figures";
+@import "diamond/notebooks-guide";
 
 @include color-mode(dark) {
     .dropdown-menu {

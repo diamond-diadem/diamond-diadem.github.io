@@ -1,0 +1,37 @@
+// // // AI training guide vertical rhythm // // //
+// Scoped with `bodyClass: ai-training-guide` in the guide front matter.
+// Media blocks (link card, figures, videos, callouts) share a 1.5rem gap,
+// and sections get more room above them than subsections.
+
+.ai-training-guide .docs-content {
+    h2 {
+        margin-top: 3rem;
+    }
+
+    h3 {
+        margin-top: 2.25rem;
+    }
+
+    > .card-nav {
+        margin-bottom: 1.5rem;
+    }
+
+    img[class^="img-ai-training-"] {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin: 1.5rem auto;
+    }
+
+    // A figure inside a list item turns the list into a loose one:
+    // keep its items as compact as the other step lists
+    ol:has(> li > img) > li {
+        > p {
+            margin-bottom: 0;
+        }
+
+        > img[class^="img-ai-training-"] {
+            margin: 1rem auto;
+        }
+    }
+}

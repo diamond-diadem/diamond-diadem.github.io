@@ -3,6 +3,7 @@ title: "Découvrir les notebooks IA pour la science des matériaux"
 linkTitle: Guide
 weight: 2
 toc: true
+bodyClass: ai-training-guide
 description: "Notebooks pédagogiques pour découvrir, étape par étape, comment appliquer des méthodes d'IA aux données matériaux."
 ---
 

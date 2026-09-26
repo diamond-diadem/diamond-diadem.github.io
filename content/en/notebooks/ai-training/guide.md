@@ -3,6 +3,7 @@ title: "Getting started with the AI notebooks for materials science"
 linkTitle: Guide
 weight: 2
 toc: true
+bodyClass: ai-training-guide
 description: "Educational notebooks to discover, step by step, how to apply AI methods to materials data."
 ---
 
