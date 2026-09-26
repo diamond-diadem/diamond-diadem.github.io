@@ -1,4 +1,4 @@
-// // // AI training guide figures // // //
+// // // Notebooks figures // // //
 // Dark variants are generated with scripts/darken-figures.py
 
 $ai-training-figures: (
@@ -20,3 +20,11 @@ $ai-training-figures: (
         "/images/notebooks/ai-training/#{$figure}-dark.png"
     );
 }
+
+// // // Raman denoising figures // // //
+
+@include swap-image(
+    ".img-raman-denoising-autoencoder-architecture",
+    "/images/notebooks/raman-denoising/autoencoder-architecture-light.png",
+    "/images/notebooks/raman-denoising/autoencoder-architecture-dark.png"
+);

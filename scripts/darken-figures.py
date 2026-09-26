@@ -44,6 +44,7 @@ CONFIG = {
     "cdse-spectrum-prediction": dict(cleartype=[(0, 0, 1133, 195)]),
     "correlation-heatmap": dict(c0=0.02, c1=0.05),
     "bayesian-optimization-uncertainty": dict(c0=0.02, c1=0.05, invert=[(89, 440, 274, 487)]),
+    "autoencoder-architecture": dict(invert=[(671, 0, 798, 45), (673, 51, 852, 99), (993, 0, 1410, 105), (785, 666, 1418, 720)]),
 }
 
 
