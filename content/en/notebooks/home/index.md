@@ -8,6 +8,8 @@ seo:
   description: "DIAMOND notebooks and AI pipelines for materials science: a step-by-step training path and a Noise2Noise denoising pipeline for Raman spectroscopy."
 ---
 
+<img alt="A notebook whose output cell compares predictions with actual values, next to an autoencoder and a Raman spectrum before and after denoising" src="/images/notebooks/home/notebooks-home-light.svg" class="img-notebooks-home mt-4" style="width:100%" />
+
 <div align="justify" class="mt-4">
 
 Artificial intelligence is part of DIAMOND's expertise for the PEPR DIADEM community. This section gathers the resources that put it into practice on materials data: educational notebooks you can run and adapt to your own datasets, and a pipeline developed within the project and applied to experimental characterization.

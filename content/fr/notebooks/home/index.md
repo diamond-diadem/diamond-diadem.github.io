@@ -8,6 +8,8 @@ seo:
   description: "Notebooks et pipelines IA de DIAMOND : un parcours de formation pas à pas et un pipeline de débruitage Noise2Noise pour la spectroscopie Raman."
 ---
 
+<img alt="Un notebook dont la cellule de sortie compare prédictions et valeurs réelles, à côté d'un autoencodeur et d'un spectre Raman avant et après débruitage" src="/images/notebooks/home/notebooks-home-light.svg" class="img-notebooks-home mt-4" style="width:100%" />
+
 <div align="justify" class="mt-4">
 
 L'intelligence artificielle fait partie de l'expertise de DIAMOND au service de la communauté du PEPR DIADEM. Cette section rassemble les ressources qui la mettent en pratique sur des données matériaux : des notebooks pédagogiques que vous pouvez exécuter et adapter à vos propres jeux de données, et un pipeline développé dans le cadre du projet et appliqués à la caractérisation expérimentale.
