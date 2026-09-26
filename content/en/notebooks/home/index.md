@@ -8,7 +8,7 @@ seo:
   description: "DIAMOND notebooks and AI pipelines for materials science: a step-by-step training path and a Noise2Noise denoising pipeline for Raman spectroscopy."
 ---
 
-<img alt="A notebook whose output cell compares predictions with actual values, next to an autoencoder and a Raman spectrum before and after denoising" src="/images/notebooks/home/notebooks-home-light.svg" class="img-notebooks-home mt-4" style="width:100%" />
+<img alt="A notebook whose output cell compares predictions with actual values, a decision tree whose path leads to a prediction, and an autoencoder" src="/images/notebooks/home/notebooks-home-light.svg" class="img-notebooks-home mt-4" style="width:100%" />
 
 <div align="justify" class="mt-4">
 
