@@ -30,3 +30,5 @@ They serve two different purposes. The training notebooks are there to be follow
 
   Noise2Noise denoising pipeline for high-throughput Raman spectroscopy
   - [Description](/en/notebooks/raman-denoising/)
+
+<p class="text-body-secondary fs-4 mt-4">And more to be added!</p>

@@ -30,3 +30,5 @@ Leurs vocations diffèrent. Les notebooks de formation sont faits pour être sui
 
   Pipeline de débruitage Noise2Noise pour la spectroscopie Raman haut débit
   - [Description](/notebooks/raman-denoising/)
+
+<p class="text-body-secondary fs-4 mt-4">Et plus à venir !</p>
