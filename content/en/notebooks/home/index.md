@@ -22,10 +22,7 @@ They serve two different purposes. The training notebooks are there to be follow
 
   A step-by-step path applying AI methods to materials data, from data quality to Bayesian optimisation
   - [Overview](/en/notebooks/ai-training/overview/)
-  - [Data quality](/en/notebooks/ai-training/data-quality/)
-  - [Exploring and understanding](/en/notebooks/ai-training/exploration/)
-  - [Predicting a property](/en/notebooks/ai-training/prediction/)
-  - [Applications: CdSe nanocrystals](/en/notebooks/ai-training/cdse-nanocrystals/)
+  - [Guide](/en/notebooks/ai-training/guide/)
 
 - ### Raman denoising pipeline
 

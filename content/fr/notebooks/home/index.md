@@ -22,10 +22,7 @@ Leurs vocations diffèrent. Les notebooks de formation sont faits pour être sui
 
   Un parcours pas à pas pour appliquer des méthodes d'IA aux données matériaux, de la qualité des données à l'optimisation bayésienne
   - [Vue d'ensemble](/notebooks/ai-training/overview/)
-  - [Qualité des données](/notebooks/ai-training/data-quality/)
-  - [Explorer et comprendre](/notebooks/ai-training/exploration/)
-  - [Prédire une propriété](/notebooks/ai-training/prediction/)
-  - [Applications : nanocristaux de CdSe](/notebooks/ai-training/cdse-nanocrystals/)
+  - [Guide](/notebooks/ai-training/guide/)
 
 - ### Pipeline de débruitage Raman
 
