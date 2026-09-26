@@ -1,0 +1,10 @@
+// Self-hosted videos embedded with the `video-file` shortcode.
+// No fixed aspect-ratio here, unlike `.tuto-video`: these are screen
+// recordings whose proportions vary from one capture to another.
+.static-video {
+    display: block;
+    width: 100%;
+    max-width: 720px;
+    height: auto;
+    margin: 1.5rem auto;
+}

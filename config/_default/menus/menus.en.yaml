@@ -30,6 +30,17 @@ main:
   - name: Codes
     url: en/codes/home/
     weight: 20
+    identifier: codes-en
+  - name: Containers
+    url: en/codes/home/
+    weight: 21
+    parent: codes-en
+    identifier: codes-containers-en
+  - name: AI notebooks
+    url: en/notebooks/home/
+    weight: 22
+    parent: codes-en
+    identifier: notebooks-en
   - name: Workflows
     url: en/workflows/home/
     weight: 30

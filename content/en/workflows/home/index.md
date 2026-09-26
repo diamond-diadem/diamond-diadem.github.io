@@ -36,7 +36,4 @@ In summary, well-designed workflows not only save time but also reduce the risk 
   - [Description](/en/workflows/aiida-diffusion-wf/description)
   - [Installation](/en/workflows/aiida-diffusion-wf/installation)
 
-- ### raman-denoising-pipeline
-
-  Noise2Noise denoising pipeline for high-throughput Raman spectroscopy
-  - [Description](/en/workflows/raman-denoising/description)
+The Noise2Noise denoising pipeline for high-throughput Raman spectroscopy has moved to the [AI notebooks](/en/notebooks/home/) section, alongside the other AI resources.

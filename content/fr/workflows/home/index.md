@@ -36,7 +36,4 @@ Pour résumer, des workflows bien conçus permettent non seulement de gagner du 
   - [Description](/workflows/aiida-diffusion-wf/description)
   - [Installation](/workflows/aiida-diffusion-wf/installation)
 
-- ### pipeline-debruitage-raman
-
-  Pipeline de débruitage Noise2Noise pour la spectroscopie Raman haut débit
-  - [Description](/workflows/raman-denoising/description)
+Le pipeline de débruitage Noise2Noise pour la spectroscopie Raman haut débit a rejoint la section [Notebooks IA](/notebooks/home/), aux côtés des autres ressources IA.

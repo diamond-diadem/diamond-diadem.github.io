@@ -160,6 +160,10 @@
             {{- $active = or $active (and (eq .Name "Blog") (eq $current.Section "blog" "authors")) -}}
             {{ if $section }}
               {{- $active = or $active (in .Identifier $section) -}}
+              {{/* A dropdown may gather children from several sections: highlight it for any of them */}}
+              {{- range .Children -}}
+                {{- $active = or $active (in (string .Identifier) $section) -}}
+              {{- end -}}
             {{ end }}
             {{ if .HasChildren -}}
               <li class="nav-item dropdown section-dropdown">
