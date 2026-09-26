@@ -31,7 +31,7 @@ This training session was organized ahead of the DIAMOND 2026 general meeting in
 
 The training program was developed by Ahmed AMRANI and co-supervised by Ahmed AMRANI, Jean-Philippe POLI and Léo ORVEILLON.
 
-The full content, along with instructions on how to do it, is available in the tutorial's repository: link below. The [guide](/en/notebooks/ai-training/guide/) walks through it step by step.
+The full content, along with instructions on how to run it, is available in the tutorial's repository: link below. The [guide](/en/notebooks/ai-training/guide/) walks through it step by step.
 
 </div>
 
