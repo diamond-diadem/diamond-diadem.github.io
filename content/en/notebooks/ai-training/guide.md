@@ -6,6 +6,8 @@ toc: true
 description: "Educational notebooks to discover, step by step, how to apply AI methods to materials data."
 ---
 
+{{< link-card title="GitLab: AI Training" description="Access the notebooks and instructions" href="https://gricad-gitlab.univ-grenoble-alpes.fr/diamond/jupyter/training-diamond-ag-2026" target="_blank" icon="tabler-icons/outline/brand-gitlab" >}}
+
 <div align="justify">
 
 Educational notebooks to discover, step by step, how to apply AI methods to materials data.

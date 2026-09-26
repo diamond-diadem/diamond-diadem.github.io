@@ -6,6 +6,8 @@ toc: true
 description: "Notebooks pédagogiques pour découvrir, étape par étape, comment appliquer des méthodes d'IA aux données matériaux."
 ---
 
+{{< link-card title="GitLab : Formation IA" description="Accéder aux notebooks et aux instructions" href="https://gricad-gitlab.univ-grenoble-alpes.fr/diamond/jupyter/training-diamond-ag-2026" target="_blank" icon="tabler-icons/outline/brand-gitlab" >}}
+
 <div align="justify">
 
 Des notebooks pédagogiques pour découvrir, étape par étape, comment appliquer des méthodes d'IA aux données matériaux.
