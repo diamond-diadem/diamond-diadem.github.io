@@ -37,8 +37,7 @@ home_documentation_body: <a href="/en/documentation/install/install-apptainer/">
   use our container images</a>.
 home_documentation_title: Browse the documentation
 home_notebooks_body: <a href="/en/notebooks/home/">Apply AI methods to materials
-  data</a>, and explore our <a href="/en/notebooks/raman-denoising/">Raman denoising
-  pipeline</a>.
+  data</a>.
 home_notebooks_title: Run our AI notebooks
 home_featured_news_title: Featured News
 home_learn_more_body: About <a href="/en/about/diamond/">DIAMOND</a>, <a href="/en/about/diadem/">the

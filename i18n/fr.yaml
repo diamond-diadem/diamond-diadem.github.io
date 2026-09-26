@@ -39,8 +39,7 @@ home_documentation_body: <a href="/documentation/install/install-apptainer/">Ins
   nos images de conteneurs</a>.
 home_documentation_title: Consultez la documentation
 home_notebooks_body: <a href="/notebooks/home/">Appliquez des méthodes d'IA aux données
-  matériaux</a>, et découvrez notre <a href="/notebooks/raman-denoising/">pipeline
-  de débruitage Raman</a>.
+  matériaux</a>.
 home_notebooks_title: Lancez nos notebooks IA
 home_featured_news_title: Actualités en vedette
 home_learn_more_body: Sur <a href="/about/diamond/">DIAMOND</a>, le <a href="/about/diadem/">PEPR
