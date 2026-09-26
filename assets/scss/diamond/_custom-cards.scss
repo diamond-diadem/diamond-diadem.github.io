@@ -31,15 +31,16 @@
     }
 }
 
-// Link card shortcode: highlighted call-to-action card
+// Link card shortcode: highlighted call-to-action card (monochrome)
 .card.link-card {
-    --link-card-accent: #{$primary};
-    --link-card-tint: #{rgba($primary, 0.08)};
+    // Black in light mode, white in dark mode
+    --link-card-accent: var(--bs-emphasis-color);
+    --link-card-rgb: var(--bs-emphasis-color-rgb);
 
-    border: 1px solid rgba($primary, 0.35);
+    border: 1.5px solid rgba(var(--link-card-rgb), 0.25);
     border-left: 4px solid var(--link-card-accent);
     border-radius: 0.5rem;
-    background-color: var(--link-card-tint);
+    background-color: rgba(var(--link-card-rgb), 0.03);
     transition:
         border-color 0.2s ease,
         background-color 0.2s ease,
@@ -57,7 +58,7 @@
         margin-right: 0.85em;
         border-radius: 0.5rem;
         color: var(--link-card-accent);
-        background-color: rgba($primary, 0.14);
+        background-color: rgba(var(--link-card-rgb), 0.07);
         transition:
             color 0.2s ease,
             background-color 0.2s ease;
@@ -81,12 +82,12 @@
 .card-nav .card.link-card:not(.link-card-disabled):hover,
 .card-nav .card.link-card:not(.link-card-disabled):has(a:focus-visible) {
     border-color: var(--link-card-accent);
-    background-color: rgba($primary, 0.14);
-    box-shadow: 0 0.35rem 1rem rgba($primary, 0.18);
+    background-color: rgba(var(--link-card-rgb), 0.06);
+    box-shadow: 0 0.35rem 1rem rgba(0, 0, 0, 0.12);
     transform: translateY(-2px);
 
     .card-icon {
-        color: $white;
+        color: var(--bs-body-bg);
         background-color: var(--link-card-accent);
     }
 
@@ -116,31 +117,18 @@
 @include color-mode(dark) {
     // Doks resets the border shorthand on `.card-nav .card` in dark mode
     .card-nav .card.link-card {
-        --link-card-accent: #{$link-color-dark};
-        --link-card-tint: #{rgba($link-color-dark, 0.08)};
-
-        border: 1px solid rgba($link-color-dark, 0.3);
+        border: 1.5px solid rgba(var(--link-card-rgb), 0.25);
         border-left: 4px solid var(--link-card-accent);
-
-        .card-icon {
-            background-color: rgba($link-color-dark, 0.14);
-        }
     }
 
     .card-nav .card.link-card:not(.link-card-disabled):hover,
     .card-nav .card.link-card:not(.link-card-disabled):has(a:focus-visible) {
         border-color: var(--link-card-accent);
-        background-color: rgba($link-color-dark, 0.1);
+        background-color: rgba(var(--link-card-rgb), 0.06);
         box-shadow: 0 0.35rem 1rem rgba(0, 0, 0, 0.4);
-
-        .card-icon {
-            color: $black;
-        }
     }
 
     .card-nav .card.link-card.link-card-disabled {
-        --link-card-accent: var(--bs-secondary-color);
-
         border-color: var(--bs-border-color);
         border-left-color: var(--bs-secondary-color);
         background-color: transparent;
