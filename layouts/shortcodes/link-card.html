@@ -19,7 +19,7 @@
 {{- end }}
 
 {{- define "partials/inline/link-card.html" }}
-  <div class="card text-end w-100{{ with .class}} {{ . }}{{ end }}">
+  <div class="card link-card text-end w-100{{ if .disabled }} link-card-disabled{{ end }}{{ with .class}} {{ . }}{{ end }}">
     <div class="card-body d-flex align-items-center">
       {{ with .icon }}{{ partial "inline-svg" (dict "src" . "class" "card-icon") }}{{ end }}
       <div class="d-flex flex-column me-auto text-start">
@@ -27,7 +27,7 @@
         {{ with .description | safeHTML }}<p class="card-text mt-1">{{ . }}</p>{{ end }}
       </div>
       {{ if (default true ( not .disabled ) ) }}
-      <div class="d-flex flex-column justify-content-center">
+      <div class="link-card-arrow d-flex flex-column justify-content-center">
         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
           <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
           <path d="M5 12l14 0"></path>
