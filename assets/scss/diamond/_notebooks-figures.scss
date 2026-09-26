@@ -1,0 +1,22 @@
+// // // AI training guide figures // // //
+// Dark variants are generated with scripts/darken-figures.py
+
+$ai-training-figures: (
+    "workflow-overview",
+    "outliers-boxplots",
+    "clustering-pca",
+    "correlation-heatmap",
+    "regression-models-comparison",
+    "xgboost-feature-importance",
+    "cdse-spectrum-prediction",
+    "causal-discovery-graph",
+    "bayesian-optimization-uncertainty"
+);
+
+@each $figure in $ai-training-figures {
+    @include swap-image(
+        ".img-ai-training-#{$figure}",
+        "/images/notebooks/ai-training/#{$figure}-light.png",
+        "/images/notebooks/ai-training/#{$figure}-dark.png"
+    );
+}

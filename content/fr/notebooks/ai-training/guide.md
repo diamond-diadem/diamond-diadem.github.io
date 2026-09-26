@@ -18,7 +18,7 @@ L'enchaînement global est illustré ci-dessous. Les premières étapes portent 
 
 </div>
 
-<img alt="Enchaînement global des notebooks IA pour les matériaux, du jeu de données au profilage et au prétraitement, puis vers l'analyse, la prédiction, la découverte causale et l'optimisation bayésienne" src="/images/notebooks/ai-training/workflow-overview.png" />
+<img alt="Enchaînement global des notebooks IA pour les matériaux, du jeu de données au profilage et au prétraitement, puis vers l'analyse, la prédiction, la découverte causale et l'optimisation bayésienne" src="/images/notebooks/ai-training/workflow-overview-light.png" class="img-ai-training-workflow-overview" />
 
 ## Un parcours possible
 
@@ -59,7 +59,7 @@ Ce notebook aide à repérer les problèmes de qualité des données avant toute
 
 </div>
 
-<img alt="Boîtes à moustaches des variables initiales, montrant les quantiles et les points signalés comme aberrants pour chaque variable" src="/images/notebooks/ai-training/outliers-boxplots.png" />
+<img alt="Boîtes à moustaches des variables initiales, montrant les quantiles et les points signalés comme aberrants pour chaque variable" src="/images/notebooks/ai-training/outliers-boxplots-light.png" class="img-ai-training-outliers-boxplots" />
 
 Étapes :
 
@@ -94,14 +94,14 @@ Une introduction à quelques méthodes non supervisées : corrélations, réduct
 
 </div>
 
-<img alt="Clusters obtenus avec K-Means, projetés sur les deux premières composantes principales" src="/images/notebooks/ai-training/clustering-pca.png" />
+<img alt="Clusters obtenus avec K-Means, projetés sur les deux premières composantes principales" src="/images/notebooks/ai-training/clustering-pca-light.png" class="img-ai-training-clustering-pca" />
 
 Étapes :
 
 1. Profiler le jeu de données.
 2. Calculer les corrélations et les lire sur la carte de chaleur.
 
-   <img alt="Carte de chaleur des corrélations de Pearson entre les variables du jeu de données" src="/images/notebooks/ai-training/correlation-heatmap.png" />
+   <img alt="Carte de chaleur des corrélations de Pearson entre les variables du jeu de données" src="/images/notebooks/ai-training/correlation-heatmap-light.png" class="img-ai-training-correlation-heatmap" />
 
 3. Réduire la dimension avec une analyse en composantes principales (ACP) : suivre la variance expliquée cumulée et choisir le nombre de composantes selon un seuil, par exemple 90 ou 95 %.
 4. Essayer une méthode de clustering (K-Means, agglomératif ou DBSCAN) et ajuster ses hyperparamètres.
@@ -135,7 +135,7 @@ Un guide pour prédire une variable continue avec plusieurs algorithmes et compa
 
 </div>
 
-<img alt="Comparaison des modèles de régression : nuage de points prédictions contre valeurs réelles et distribution des erreurs absolues pour XGBoost, arbre de décision, SVR, Ridge et Lasso" src="/images/notebooks/ai-training/regression-models-comparison.png" />
+<img alt="Comparaison des modèles de régression : nuage de points prédictions contre valeurs réelles et distribution des erreurs absolues pour XGBoost, arbre de décision, SVR, Ridge et Lasso" src="/images/notebooks/ai-training/regression-models-comparison-light.png" class="img-ai-training-regression-models-comparison" />
 
 Étapes :
 
@@ -165,7 +165,7 @@ Un examen plus détaillé de XGBoost, qui construit des arbres en séquence, cha
 
 </div>
 
-<img alt="Importance des variables par permutation dans XGBoost, classées de la plus à la moins importante avec leur écart-type" src="/images/notebooks/ai-training/xgboost-feature-importance.png" />
+<img alt="Importance des variables par permutation dans XGBoost, classées de la plus à la moins importante avec leur écart-type" src="/images/notebooks/ai-training/xgboost-feature-importance-light.png" class="img-ai-training-xgboost-feature-importance" />
 
 Étapes :
 
@@ -242,7 +242,7 @@ Charge des modèles pré-entraînés et propose une interface pour explorer leur
 
 **Exemple.** Fixer une combinaison de paramètres, prédire avec la forêt aléatoire puis avec le processus gaussien, et comparer les deux spectres.
 
-<img alt="Prédiction et simulation : curseurs des paramètres de synthèse et spectre de photoluminescence du CdSe prédit, avec son pic, sa largeur, sa hauteur, la classe de taille estimée et l'uniformité" src="/images/notebooks/ai-training/cdse-spectrum-prediction.png" />
+<img alt="Prédiction et simulation : curseurs des paramètres de synthèse et spectre de photoluminescence du CdSe prédit, avec son pic, sa largeur, sa hauteur, la classe de taille estimée et l'uniformité" src="/images/notebooks/ai-training/cdse-spectrum-prediction-light.png" class="img-ai-training-cdse-spectrum-prediction" />
 
 [Voir dans le dépôt](https://gricad-gitlab.univ-grenoble-alpes.fr/diamond/jupyter/training-diamond-ag-2026)
 
@@ -258,7 +258,7 @@ Une démonstration de découverte causale avec l'algorithme PC (Peter–Clark), 
 
 {{< video-file src="/videos/Tuto_IA_Causal_Discovery_In_MS.mp4" >}}
 
-<img alt="Graphe causal découvert dans les données CdSe : les six paramètres de synthèse et les arêtes qui les relient au pic, à la largeur et à la hauteur de l'émission" src="/images/notebooks/ai-training/causal-discovery-graph.png" />
+<img alt="Graphe causal découvert dans les données CdSe : les six paramètres de synthèse et les arêtes qui les relient au pic, à la largeur et à la hauteur de l'émission" src="/images/notebooks/ai-training/causal-discovery-graph-light.png" class="img-ai-training-causal-discovery-graph" />
 
 Étapes :
 
@@ -291,7 +291,7 @@ Illustre le principe de l'optimisation bayésienne : un processus gaussien propo
 
 {{< video-file src="/videos/Tuto_IA_Bayesian_Optimization_in_MS_V2.mp4" >}}
 
-<img alt="Prédiction d'un processus gaussien sur deux paramètres de synthèse, avec la moyenne prédite en carte de couleurs, l'incertitude en courbes de niveau pointillées, les points d'entraînement et le point courant des curseurs" src="/images/notebooks/ai-training/bayesian-optimization-uncertainty.png" />
+<img alt="Prédiction d'un processus gaussien sur deux paramètres de synthèse, avec la moyenne prédite en carte de couleurs, l'incertitude en courbes de niveau pointillées, les points d'entraînement et le point courant des curseurs" src="/images/notebooks/ai-training/bayesian-optimization-uncertainty-light.png" class="img-ai-training-bayesian-optimization-uncertainty" />
 
 Étapes :
 
