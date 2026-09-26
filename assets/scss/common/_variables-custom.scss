@@ -14,9 +14,12 @@ $grid-breakpoints: (
     xs: 0,
     sm: 576px,
     md: 768px,
-    lg: 1000px,
+    // lg and xl are raised so the navbar switches layout before it saturates
+    // (FR labels, France 2030 logo shrinking at ~1065px and ~1295px),
+    // with a margin for wider scrollbars and font rendering differences
+    lg: 1090px,
     // default 992px
-    xl: 1220px,
+    xl: 1320px,
     // default 1200px
     xxl: 1400px
 );
