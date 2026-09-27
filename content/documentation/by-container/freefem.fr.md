@@ -2,6 +2,8 @@
 title: Comment utiliser l'image Apptainer FreeFEM ?
 linkTitle: Tutoriel FreeFEM
 weight: 5
+category: scientific-computing
+icon: icon-freefem
 description: "Tutoriel sur l'utilisation du conteneur Apptainer FreeFEM de DIAMOND : récupération de l'image, exécution des calculs et exemples d'utilisation."
 ---
 

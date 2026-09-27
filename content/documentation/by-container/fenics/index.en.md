@@ -2,6 +2,8 @@
 title: How to use FEniCS Apptainer image
 linkTitle: FEniCS tutorial
 weight: 1
+category: scientific-computing
+icon: icon-fenics
 description: "Tutorial on using the DIAMOND FEniCS Apptainer container: pulling the image and usage example for FE computations."
 ---
 

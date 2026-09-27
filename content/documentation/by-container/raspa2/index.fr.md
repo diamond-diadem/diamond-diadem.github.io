@@ -2,6 +2,8 @@
 title: Comment utiliser l'image Apptainer RASPA2 ?
 linkTitle: Tutoriel RASPA2
 weight: 10
+category: scientific-computing
+icon: icon-raspa2
 description: "Tutoriel sur l'image Apptainer RASPA2 de DIAMOND : récupération du conteneur et exemple de calcul de dynamique moléculaire avec Monte Carlo."
 ---
 

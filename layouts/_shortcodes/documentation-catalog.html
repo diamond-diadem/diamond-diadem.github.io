@@ -1,0 +1,36 @@
+{{- /*
+  Catalog of by-container tutorials, as a grid of cards matching the codes
+  catalog (see codes-catalog.html and .home-grid--codes in _home.scss).
+
+  Unlike the codes catalog, by-container is a flat section rather than one
+  subsection per category, so tutorials are grouped by their `category` front
+  matter value (scientific-computing or visualisation, the same categories
+  used under codes/) instead of by child section. Each group is titled via
+  the code_category_* i18n keys shared with the codes catalog. Adding a new
+  tutorial under documentation/by-container therefore appears here
+  automatically, as long as it sets `category` (and `icon`, to show a logo).
+*/ -}}
+{{- $categories := slice "scientific-computing" "visualisation" -}}
+{{- range .Page.Sections }}
+  {{- if eq .File.ContentBaseName "by-container" }}
+    {{- $pages := .Pages }}
+<div class="codes-catalog">
+    {{- range $categories }}
+      {{- $group := where $pages "Params.category" . }}
+      {{- if $group }}
+  <div class="codes-catalog__group">
+    <h3 class="codes-catalog__title">{{ i18n (printf "code_category_%s" .) }}</h3>
+    <ul class="home-grid home-grid--table home-grid--codes" role="list">
+        {{- range $group.ByTitle }}
+      <li class="home-card home-card--cell home-code">
+        <span class="home-code__logo" aria-hidden="true"><span class="home-code__icon {{ .Params.icon }}"></span></span>
+        <h4 class="home-card__title"><a class="home-card__link" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h4>
+      </li>
+        {{- end }}
+    </ul>
+  </div>
+      {{- end }}
+    {{- end }}
+</div>
+  {{- end }}
+{{- end -}}

@@ -2,6 +2,8 @@
 title: "Comment utiliser l'image Apptainer de VMD ?"
 linkTitle: Tutoriel VMD
 weight: 17
+category: visualisation
+icon: icon-vmd
 description: "Tutoriel sur l'utilisation de l'image Apptainer VMD de DIAMOND : récupération du conteneur, exécution et visualisation de dynamique moléculaire."
 ---
 

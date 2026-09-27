@@ -2,6 +2,8 @@
 title: How to use OpenDiS Apptainer image
 linkTitle: OpenDiS tutorial
 weight: 1
+category: scientific-computing
+icon: icon-opendis
 description: "Tutorial on the DIAMOND OpenDiS Apptainer container: pulling the image, running calculations and examples for dislocation dynamics."
 ---
 

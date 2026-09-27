@@ -2,6 +2,8 @@
 title: "How to use the AMITEX_FFTP Apptainer image ?"
 linkTitle: AMITEX_FFTP tutorial
 weight: 12
+category: scientific-computing
+icon: icon-amitex-fftp
 description: "Tutorial on using the DIAMOND AMITEX_FFTP Apptainer container: pulling the image and running FFT-based mechanical simulations for materials."
 ---
 

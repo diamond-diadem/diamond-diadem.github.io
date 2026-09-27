@@ -2,6 +2,8 @@
 title: "Comment utiliser l'image Apptainer NDM ?"
 linkTitle: Tutoriel NDM
 weight: 13
+category: scientific-computing
+icon: icon-ndm
 description: "Tutoriel sur l'utilisation de l'image Apptainer NDM de DIAMOND : récupération du conteneur, exécution et cas d'usage pour la dynamique moléculaire."
 ---
 

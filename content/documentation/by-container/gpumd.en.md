@@ -2,6 +2,8 @@
 title: How to use the GPUMD Apptainer image
 linkTitle: GPUMD tutorial
 weight: 14
+category: scientific-computing
+icon: icon-gpumd
 description: "Tutorial on using the DIAMOND GPUMD Apptainer container: pulling the image, running simulations, and usage examples for GPU molecular dynamics"
 ---
 

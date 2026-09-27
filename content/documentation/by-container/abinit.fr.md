@@ -2,6 +2,8 @@
 title: Comment utiliser l'image Apptainer Abinit ?
 linkTitle: Tutoriel Abinit
 weight: 4
+category: scientific-computing
+icon: icon-abinit
 description: "Tutoriel sur l'utilisation de l'image Apptainer Abinit de DIAMOND : récupération du conteneur, exécution et cas d'usage pour les calculs DFT."
 ---
 

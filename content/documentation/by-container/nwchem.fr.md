@@ -2,6 +2,8 @@
 title: Comment utiliser l'image Apptainer NWChem
 linkTitle: Tutoriel NWChem
 weight: 1
+category: scientific-computing
+icon: icon-nwchem
 description: "Tutoriel sur l'utilisation de l'image Apptainer NWChem de DIAMOND : récupération du conteneur et cas d'usage pour des calculs d'opimisation de géométrie."
 ---
 

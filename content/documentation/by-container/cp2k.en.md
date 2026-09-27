@@ -2,6 +2,8 @@
 title: How to use CP2K Apptainer image
 linkTitle: CP2K tutorial
 weight: 1
+category: scientific-computing
+icon: icon-cp2k
 description: "Tutorial on using the DIAMOND CP2K Apptainer container: pulling the image and usage example for DFT computations."
 ---
 
