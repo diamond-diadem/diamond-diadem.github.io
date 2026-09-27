@@ -1,0 +1,28 @@
+{{- /*
+  Catalog of containerised codes, as a grid of cards matching the home page's
+  codes section (see home/codes.html and .home-grid--codes in _home.scss).
+
+  Both the codes and the categories they are grouped under come straight from
+  the content tree: each child section of the page this shortcode is called
+  from (such as codes/scientific-computing) becomes a group, titled after
+  that section, listing its pages ordered by weight. Adding a new codes/<new
+  category> section therefore adds a new group here on its own, listing its
+  codes in alphabetical order by title.
+*/ -}}
+<div class="codes-catalog">
+  {{- range .Page.Sections.ByWeight }}
+    {{- if .Pages }}
+  <div class="codes-catalog__group">
+    <h3 class="codes-catalog__title">{{ .Title }}</h3>
+    <ul class="home-grid home-grid--table home-grid--codes scroll-fade" role="list">
+      {{- range .Pages.ByTitle }}
+      <li class="home-card home-card--cell home-code">
+        <span class="home-code__logo" aria-hidden="true"><span class="home-code__icon {{ .Params.icon }}"></span></span>
+        <h4 class="home-card__title"><a class="home-card__link" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h4>
+      </li>
+      {{- end }}
+    </ul>
+  </div>
+    {{- end }}
+  {{- end }}
+</div>

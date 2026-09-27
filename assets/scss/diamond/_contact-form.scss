@@ -54,11 +54,6 @@ $contact-radius-small: 0.625rem;
     border-radius: $contact-radius;
     background-color: var(--bs-tertiary-bg);
     box-shadow: 0 1.5rem 3rem -2rem rgba($black, 0.25);
-
-    // The theme keeps labels on one line, which would overflow the card
-    label {
-        white-space: normal;
-    }
 }
 
 h2.contact-card__title {

@@ -13,9 +13,6 @@ import '@thulite/core/assets/js/core.js';
 // Import tabs.js
 import 'js/tabs.js';
 
-// Import synchronised-selects.js (custom script)
-import 'js/diamond/synchronised-selects.js';
-
 // Import custom.js
 import 'js/custom.js';
 

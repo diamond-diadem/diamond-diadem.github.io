@@ -200,15 +200,13 @@ When an asset in `static/` looks unused, move it to the matching path under `sta
 
 ## Codes section
 
-### Generate a new code page
+### Add a new code page
 
-Use the interactive generator to scaffold code pages that follow the standard layout used under `content/<lang>/codes/*`.
+Each code is a page bundle pair (`.en.md` + `.fr.md`) under `content/codes/<category>/`, where `<category>` is `scientific-computing` or `visualisation`. The Codes section landing page lists every code automatically via the `codes-catalog` shortcode, grouped by category and ordered by weight — there is nothing else to wire up.
 
-1. Run `npm run new:code`.
-2. Answer the prompts: category (`scientific-computing` or `visualisation`) via `s`/`v`, official website and documentation URLs, apptainer filename on the container registry, and a description of the code in both English and French. Multiline answers end with a single `.` line.
-3. The tool refreshes the Codes section landing page table/selects automatically.
-
-Undo the most recent run with `npm run new:code -- --undo`.
+1. Create `content/codes/<category>/<slug>.en.md` and `content/codes/<category>/<slug>.fr.md`, using an existing page in the same category (e.g. `content/codes/scientific-computing/lammps.en.md`) as a template for the front matter and structure.
+2. Set `title`, `linkTitle`, `icon` (matching an `icon-<slug>` class defined in `assets/scss/diamond/_custom-icons.scss`, and a `logo-<slug>` class in `assets/scss/diamond/_codes-logos.scss` for the page's own top logo), and `weight` (usually the highest existing weight in the category, plus one).
+3. Fill in the retrieval commands (Apptainer/Docker), description, tutorial link, documentation links, and examples.
 
 Custom logos/icons are to be added manually; in practice this task is generally handled by the website administrator after your Markdown changes are done.
 
