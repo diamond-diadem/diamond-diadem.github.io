@@ -25,6 +25,7 @@
 			{{ end }}
 			{{ if default true .Params.title_visible -}}
 			<h1>{{ .Title }}</h1>
+			{{ partial "main/page-meta.html" . }}
 			{{ end -}}
 			<p class="lead">{{ .Params.lead | safeHTML }}</p>
 			<!-- {{ if ne .Params.toc false -}}
@@ -38,14 +39,9 @@
 			{{ else -}}
 				{{ .Content }}
 			{{ end -}}
-			{{ if or site.Params.doks.lastMod site.Params.doks.editPage -}}
+			{{ if site.Params.doks.editPage -}}
 			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
-				{{ if site.Params.doks.lastMod -}}
-					{{ partial "main/last-modified.html" . }}
-				{{ end -}}
-				{{ if site.Params.doks.editPage -}}
-					{{ partial "main/edit-page.html" . }}
-				{{ end -}}
+				{{ partial "main/edit-page.html" . }}
 			</div>
 			{{ end -}}
 			<!-- {{ partial "main/docs-navigation.html" . }} -->

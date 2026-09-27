@@ -25,6 +25,7 @@
 			{{ end }}
 			{{ if default true .Params.title_visible -}}
 			<h1>{{ .Title }}</h1>
+			{{ partial "main/page-meta.html" . }}
 			{{ else -}}
 			<br>
 			{{ end -}}

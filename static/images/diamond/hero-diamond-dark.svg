@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  DIAMOND hero mark - dark mode.
+  Same geometry and text placement as hero-diamond-light.svg, recolored
+  for a dark background (near-white fading to slate on the gem/hexagon,
+  near-white labels). Keep both files in sync when the mark changes.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 418" width="500" height="418">
+  <title>DIAMOND: accelerated design linking databases and AI, codes and workflows</title>
+  <defs>
+    <linearGradient id="diamondGradient" gradientUnits="userSpaceOnUse" x1="250" y1="0" x2="250" y2="418">
+      <stop offset="0%" stop-color="#eef5fa" />
+      <stop offset="55%" stop-color="#9fb8c9" />
+      <stop offset="100%" stop-color="#64798c" />
+    </linearGradient>
+  </defs>
+
+  <g fill="none" stroke="url(#diamondGradient)" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Hexagon frame: solid edges top and bottom, dashed edges at the sides -->
+    <g stroke-width="5">
+      <path d="M249,53 L110,127" />
+      <path d="M249,53 L388,127" />
+      <path d="M110,297 L249,372" />
+      <path d="M388,297 L249,372" />
+    </g>
+    <g stroke-width="4" stroke-dasharray="1 11">
+      <path d="M110,127 L110,297" />
+      <path d="M388,127 L388,297" />
+    </g>
+
+    <!-- Gem: crown, girdle and pavilion of a faceted diamond -->
+    <g stroke-width="6">
+      <path d="M169,128 L329,128" />
+      <path d="M169,128 L129,181" />
+      <path d="M329,128 L370,181" />
+      <path d="M129,181 L370,181" />
+      <path d="M129,181 L249,335" />
+      <path d="M370,181 L249,335" />
+    </g>
+    <g stroke-width="3">
+      <path d="M169,128 L192,182" />
+      <path d="M329,128 L307,182" />
+      <path d="M169,128 L307,182" />
+      <path d="M329,128 L192,182" />
+    </g>
+    <g stroke-width="4">
+      <path d="M192,182 L249,335" />
+      <path d="M307,182 L249,335" />
+      <path d="M250,163 L249,335" />
+      <path d="M230,224 L239,239" />
+      <path d="M269,224 L260,239" />
+    </g>
+  </g>
+
+  <g fill="url(#diamondGradient)">
+    <circle cx="249" cy="53" r="9" />
+    <circle cx="110" cy="127" r="9" />
+    <circle cx="388" cy="127" r="9" />
+    <circle cx="110" cy="297" r="9" />
+    <circle cx="388" cy="297" r="9" />
+    <circle cx="249" cy="372" r="10" />
+    <circle cx="250" cy="163" r="7" />
+    <circle cx="129" cy="181" r="11" />
+    <circle cx="192" cy="182" r="10" />
+    <circle cx="307" cy="182" r="10" />
+    <circle cx="370" cy="181" r="11" />
+    <circle cx="249" cy="246" r="9" />
+  </g>
+
+  <text
+     xml:space="preserve"
+     style="font-weight:800;font-size:29.3333px;line-height:1.15;font-family:Cantarell;-inkscape-font-specification:'Cantarell, Ultra-Bold';fill:#9fb8c9;fill-opacity:1"
+     x="236.98259"
+     y="155.15714"
+     transform="rotate(48.62903)"><tspan
+       x="236.98259"
+       y="155.15714">Databases</tspan><tspan
+       x="236.98259"
+       y="188.89043">      &amp; AI</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-weight:800;font-size:29.3333px;line-height:1.15;font-family:Cantarell;-inkscape-font-specification:'Cantarell, Ultra-Bold';fill:#9fb8c9;fill-opacity:1"
+     x="-3.1426663"
+     y="524.87482"
+     transform="rotate(-43.112353)"><tspan
+       x="-3.1426663"
+       y="524.87482">    Codes &amp;</tspan><tspan
+       x="-3.1426663"
+       y="558.60809">Workflows</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-weight:800;font-size:29.3333px;line-height:1.15;font-family:Cantarell;-inkscape-font-specification:'Cantarell, Ultra-Bold';fill:#eef5fa;fill-opacity:1"
+     x="123.38142"
+     y="34.546814"><tspan
+       x="123.38142"
+       y="34.546814">Accelerated Design</tspan></text>
+</svg>

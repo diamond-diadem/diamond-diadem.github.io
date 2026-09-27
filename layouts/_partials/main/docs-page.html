@@ -31,6 +31,7 @@
 			{{ end }}
 			{{ if default true $page.Params.title_visible -}}
 			<h1>{{ $page.Title }}</h1>
+			{{ partial "main/page-meta.html" $page }}
 			{{ end -}}
 			<p class="lead">{{ $page.Params.lead | safeHTML }}</p>
 
@@ -40,14 +41,9 @@
 				{{ $page.Content }}
 			{{ end -}}
 			{{ .afterContent }}
-			{{ if or site.Params.doks.lastMod site.Params.doks.editPage -}}
+			{{ if site.Params.doks.editPage -}}
 			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
-				{{ if site.Params.doks.lastMod -}}
-					{{ partial "main/last-modified.html" $page }}
-				{{ end -}}
-				{{ if site.Params.doks.editPage -}}
-					{{ partial "main/edit-page.html" $page }}
-				{{ end -}}
+				{{ partial "main/edit-page.html" $page }}
 			</div>
 			{{ end -}}
 		</main>

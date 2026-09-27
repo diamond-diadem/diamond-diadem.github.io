@@ -13,6 +13,10 @@ rssLimit: 10
 summarylength: 150
 defaultContentLanguage: fr
 defaultContentLanguageInSubdir: false
+frontmatter:
+  lastmod:
+    - lastmod
+    - :fileModTime
 copyRight: DIAMOND - PEPR DIADEM
 build:
   buildStats:

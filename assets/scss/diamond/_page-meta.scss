@@ -1,0 +1,94 @@
+// Page meta: a discreet line below a page title giving its last update
+// date and, when translated versions exist, links to them. Sized and
+// colored down from body text so it reads as metadata, not content.
+
+.page-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 0.75rem;
+    row-gap: 0.5rem;
+    margin: 0 0 2rem;
+    font-size: 0.8125rem;
+    color: var(--page-muted);
+}
+
+.page-meta__updated,
+.page-meta__translations {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+}
+
+.page-meta__icon {
+    width: 0.9rem;
+    height: 0.9rem;
+    flex-shrink: 0;
+    opacity: 0.75;
+}
+
+// The title's own bottom margin would otherwise collapse with page-meta's
+// top margin, so it is zeroed here and spacing is set on page-meta alone:
+// a tight pairing with the title, well clear of the paragraph that follows
+h1:has(+ .page-meta) {
+    margin-bottom: 0;
+}
+
+// Tinted banner backgrounds (page-hero) need the banner's own muted
+// color to keep contrast, the same way .page-hero__text already does
+.page-hero .page-meta {
+    color: var(--home-muted);
+}
+
+.page-meta__updated + .page-meta__translations::before {
+    content: "\2022";
+    margin-right: 0.75rem;
+}
+
+.page-meta__langs {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+}
+
+.page-meta__lang {
+    padding: 0.15rem 0.55rem;
+    border-radius: 50rem;
+    background-color: rgba($body-color, 0.07);
+    color: inherit;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    transition:
+        color 0.15s ease-in-out,
+        background-color 0.15s ease-in-out;
+}
+
+.page-meta__lang:hover,
+.page-meta__lang:focus-visible {
+    background-color: rgba($body-color, 0.14);
+    color: var(--bs-link-color);
+    text-decoration: none;
+}
+
+.page-meta__lang:focus-visible {
+    outline: 2px solid var(--bs-link-color);
+    outline-offset: 1px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .page-meta__lang {
+        transition: none;
+    }
+}
+
+@include color-mode(dark) {
+    .page-meta__lang {
+        background-color: rgba($white, 0.08);
+    }
+
+    .page-meta__lang:hover,
+    .page-meta__lang:focus-visible {
+        background-color: rgba($white, 0.16);
+    }
+}

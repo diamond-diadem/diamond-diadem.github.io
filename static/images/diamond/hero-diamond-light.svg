@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+  DIAMOND hero mark - light mode.
+  Editable in Inkscape: the gem/hexagon strokes use the "diamondGradient"
+  linear gradient (dark teal to bright cyan, top to bottom); the three
+  labels are solid ink so they stay legible regardless of where they land
+  on the gradient. Companion file: hero-diamond-dark.svg (same geometry,
+  colors for a dark background).
+-->
+
+<svg
+   viewBox="0 0 500 418"
+   width="500"
+   height="418"
+   version="1.1"
+   id="svg40"
+   sodipodi:docname="hero-diamond-light.svg"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview40"
+     pagecolor="#ffffff"
+     bordercolor="#111111"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.2157422"
+     inkscape:cx="178.90307"
+     inkscape:cy="294.47033"
+     inkscape:window-width="1920"
+     inkscape:window-height="1011"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg40" />
+  <title
+     id="title1">DIAMOND: accelerated design linking databases and AI, codes and workflows</title>
+  <defs
+     id="defs3">
+    <linearGradient
+       id="diamondGradient"
+       gradientUnits="userSpaceOnUse"
+       x1="250"
+       y1="0"
+       x2="250"
+       y2="418">
+      <stop
+         offset="0%"
+         stop-color="#155a72"
+         id="stop1" />
+      <stop
+         offset="55%"
+         stop-color="#0f7ba3"
+         id="stop2" />
+      <stop
+         offset="100%"
+         stop-color="#0092d4"
+         id="stop3" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#diamondGradient"
+       id="linearGradient59"
+       gradientUnits="userSpaceOnUse"
+       x1="250"
+       y1="0"
+       x2="250"
+       y2="418" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#diamondGradient"
+       id="linearGradient60"
+       gradientUnits="userSpaceOnUse"
+       x1="250"
+       y1="0"
+       x2="250"
+       y2="418" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#diamondGradient"
+       id="linearGradient61"
+       gradientUnits="userSpaceOnUse"
+       x1="250"
+       y1="0"
+       x2="250"
+       y2="418" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#diamondGradient"
+       id="linearGradient62"
+       gradientUnits="userSpaceOnUse"
+       x1="250"
+       y1="0"
+       x2="250"
+       y2="418" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#diamondGradient"
+       id="linearGradient64"
+       gradientUnits="userSpaceOnUse"
+       x1="250"
+       y1="0"
+       x2="250"
+       y2="418" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#diamondGradient"
+       id="linearGradient65"
+       gradientUnits="userSpaceOnUse"
+       x1="250"
+       y1="0"
+       x2="250"
+       y2="418" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#diamondGradient"
+       id="linearGradient67"
+       gradientUnits="userSpaceOnUse"
+       x1="250"
+       y1="0"
+       x2="250"
+       y2="418" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#diamondGradient"
+       id="linearGradient68"
+       gradientUnits="userSpaceOnUse"
+       x1="250"
+       y1="0"
+       x2="250"
+       y2="418" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#diamondGradient"
+       id="linearGradient69"
+       gradientUnits="userSpaceOnUse"
+       x1="250"
+       y1="0"
+       x2="250"
+       y2="418" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#diamondGradient"
+       id="linearGradient70"
+       gradientUnits="userSpaceOnUse"
+       x1="250"
+       y1="0"
+       x2="250"
+       y2="418" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#diamondGradient"
+       id="linearGradient71"
+       gradientUnits="userSpaceOnUse"
+       x1="250"
+       y1="0"
+       x2="250"
+       y2="418" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#diamondGradient"
+       id="linearGradient72"
+       gradientUnits="userSpaceOnUse"
+       x1="250"
+       y1="0"
+       x2="250"
+       y2="418" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#diamondGradient"
+       id="linearGradient74"
+       gradientUnits="userSpaceOnUse"
+       x1="250"
+       y1="0"
+       x2="250"
+       y2="418" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#diamondGradient"
+       id="linearGradient75"
+       gradientUnits="userSpaceOnUse"
+       x1="250"
+       y1="0"
+       x2="250"
+       y2="418" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#diamondGradient"
+       id="linearGradient76"
+       gradientUnits="userSpaceOnUse"
+       x1="250"
+       y1="0"
+       x2="250"
+       y2="418" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#diamondGradient"
+       id="linearGradient77"
+       gradientUnits="userSpaceOnUse"
+       x1="250"
+       y1="0"
+       x2="250"
+       y2="418" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#diamondGradient"
+       id="linearGradient79"
+       gradientUnits="userSpaceOnUse"
+       x1="250"
+       y1="0"
+       x2="250"
+       y2="418" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#diamondGradient"
+       id="linearGradient80"
+       gradientUnits="userSpaceOnUse"
+       x1="250"
+       y1="0"
+       x2="250"
+       y2="418" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#diamondGradient"
+       id="linearGradient81"
+       gradientUnits="userSpaceOnUse"
+       x1="250"
+       y1="0"
+       x2="250"
+       y2="418" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#diamondGradient"
+       id="linearGradient82"
+       gradientUnits="userSpaceOnUse"
+       x1="250"
+       y1="0"
+       x2="250"
+       y2="418" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#diamondGradient"
+       id="linearGradient83"
+       gradientUnits="userSpaceOnUse"
+       x1="250"
+       y1="0"
+       x2="250"
+       y2="418" />
+  </defs>
+  <path
+     d="M 249,53 110,127"
+     id="path3"
+     style="fill:none;stroke:url(#linearGradient59);stroke-width:5;stroke-linecap:round;stroke-linejoin:round" />
+  <path
+     d="m 249,53 139,74"
+     id="path4"
+     style="fill:none;stroke:url(#linearGradient60);stroke-width:5;stroke-linecap:round;stroke-linejoin:round" />
+  <path
+     d="m 110,297 139,75"
+     id="path5"
+     style="fill:none;stroke:url(#linearGradient61);stroke-width:5;stroke-linecap:round;stroke-linejoin:round" />
+  <path
+     d="M 388,297 249,372"
+     id="path6"
+     style="fill:none;stroke:url(#linearGradient62);stroke-width:5;stroke-linecap:round;stroke-linejoin:round" />
+  <path
+     d="M 110,127 V 297"
+     id="path7"
+     style="fill:none;stroke:url(#linearGradient64);stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1, 11" />
+  <path
+     d="M 388,127 V 297"
+     id="path8"
+     style="fill:none;stroke:url(#linearGradient65);stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1, 11" />
+  <path
+     d="M 169,128 H 329"
+     id="path9"
+     style="fill:none;stroke:url(#linearGradient67);stroke-width:6;stroke-linecap:round;stroke-linejoin:round" />
+  <path
+     d="m 169,128 -40,53"
+     id="path10"
+     style="fill:none;stroke:url(#linearGradient68);stroke-width:6;stroke-linecap:round;stroke-linejoin:round" />
+  <path
+     d="m 329,128 41,53"
+     id="path11"
+     style="fill:none;stroke:url(#linearGradient69);stroke-width:6;stroke-linecap:round;stroke-linejoin:round" />
+  <path
+     d="M 129,181 H 370"
+     id="path12"
+     style="fill:none;stroke:url(#linearGradient70);stroke-width:6;stroke-linecap:round;stroke-linejoin:round" />
+  <path
+     d="M 129,181 249,335"
+     id="path13"
+     style="fill:none;stroke:url(#linearGradient71);stroke-width:6;stroke-linecap:round;stroke-linejoin:round" />
+  <path
+     d="M 370,181 249,335"
+     id="path14"
+     style="fill:none;stroke:url(#linearGradient72);stroke-width:6;stroke-linecap:round;stroke-linejoin:round" />
+  <path
+     d="m 169,128 23,54"
+     id="path15"
+     style="fill:none;stroke:url(#linearGradient74);stroke-width:3;stroke-linecap:round;stroke-linejoin:round" />
+  <path
+     d="m 329,128 -22,54"
+     id="path16"
+     style="fill:none;stroke:url(#linearGradient75);stroke-width:3;stroke-linecap:round;stroke-linejoin:round" />
+  <path
+     d="m 169,128 138,54"
+     id="path17"
+     style="fill:none;stroke:url(#linearGradient76);stroke-width:3;stroke-linecap:round;stroke-linejoin:round" />
+  <path
+     d="M 329,128 192,182"
+     id="path18"
+     style="fill:none;stroke:url(#linearGradient77);stroke-width:3;stroke-linecap:round;stroke-linejoin:round" />
+  <path
+     d="m 192,182 57,153"
+     id="path19"
+     style="fill:none;stroke:url(#linearGradient79);stroke-width:4;stroke-linecap:round;stroke-linejoin:round" />
+  <path
+     d="M 307,182 249,335"
+     id="path20"
+     style="fill:none;stroke:url(#linearGradient80);stroke-width:4;stroke-linecap:round;stroke-linejoin:round" />
+  <path
+     d="m 250,163 -1,172"
+     id="path21"
+     style="fill:none;stroke:url(#linearGradient81);stroke-width:4;stroke-linecap:round;stroke-linejoin:round" />
+  <path
+     d="m 230,224 9,15"
+     id="path22"
+     style="fill:none;stroke:url(#linearGradient82);stroke-width:4;stroke-linecap:round;stroke-linejoin:round" />
+  <path
+     d="m 269,224 -9,15"
+     id="path23"
+     style="fill:none;stroke:url(#linearGradient83);stroke-width:4;stroke-linecap:round;stroke-linejoin:round" />
+  <g
+     fill="url(#diamondGradient)"
+     id="g35">
+    <circle
+       cx="249"
+       cy="53"
+       r="9"
+       id="circle24" />
+    <circle
+       cx="110"
+       cy="127"
+       r="9"
+       id="circle25" />
+    <circle
+       cx="388"
+       cy="127"
+       r="9"
+       id="circle26" />
+    <circle
+       cx="110"
+       cy="297"
+       r="9"
+       id="circle27" />
+    <circle
+       cx="388"
+       cy="297"
+       r="9"
+       id="circle28" />
+    <circle
+       cx="249"
+       cy="372"
+       r="10"
+       id="circle29" />
+    <circle
+       cx="250"
+       cy="163"
+       r="7"
+       id="circle30" />
+    <circle
+       cx="129"
+       cy="181"
+       r="11"
+       id="circle31" />
+    <circle
+       cx="192"
+       cy="182"
+       r="10"
+       id="circle32" />
+    <circle
+       cx="307"
+       cy="182"
+       r="10"
+       id="circle33" />
+    <circle
+       cx="370"
+       cy="181"
+       r="11"
+       id="circle34" />
+    <circle
+       cx="249"
+       cy="246"
+       r="9"
+       id="circle35" />
+  </g>
+  <text
+     xml:space="preserve"
+     style="font-weight:800;font-size:29.3333px;line-height:1.15;font-family:Cantarell;-inkscape-font-specification:'Cantarell, Ultra-Bold';fill:#0f7ba3;fill-opacity:1"
+     x="236.98259"
+     y="155.15714"
+     id="text43"
+     transform="rotate(48.62903)"><tspan
+       sodipodi:role="line"
+       id="tspan43"
+       x="236.98259"
+       y="155.15714">Databases</tspan><tspan
+       sodipodi:role="line"
+       x="236.98259"
+       y="188.89043"
+       id="tspan44">      &amp; AI</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-weight:800;font-size:29.3333px;line-height:1.15;font-family:Cantarell;-inkscape-font-specification:'Cantarell, Ultra-Bold';fill:#0f7ba3;fill-opacity:1"
+     x="-3.1426663"
+     y="524.87482"
+     id="text45"
+     transform="rotate(-43.112353)"><tspan
+       sodipodi:role="line"
+       id="tspan45"
+       x="-3.1426663"
+       y="524.87482">    Codes &amp;</tspan><tspan
+       sodipodi:role="line"
+       x="-3.1426663"
+       y="558.60809"
+       id="tspan46">Workflows</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-weight:800;font-size:29.3333px;line-height:1.15;font-family:Cantarell;-inkscape-font-specification:'Cantarell, Ultra-Bold';fill:#155a72;fill-opacity:1"
+     x="123.38142"
+     y="34.546814"
+     id="text47"><tspan
+       sodipodi:role="line"
+       id="tspan47"
+       x="123.38142"
+       y="34.546814">Accelerated Design</tspan></text>
+</svg>

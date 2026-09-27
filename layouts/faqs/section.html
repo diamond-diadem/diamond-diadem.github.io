@@ -8,6 +8,7 @@
   <header class="page-hero">
     {{ with .Params.eyebrow }}<p class="home-eyebrow">{{ . }}</p>{{ end }}
     <h1 class="page-hero__title">{{ .Title }}</h1>
+    {{ partial "main/page-meta.html" . }}
     <div class="page-hero__text">{{ .Content }}</div>
   </header>
 

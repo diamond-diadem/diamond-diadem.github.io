@@ -1,0 +1,32 @@
+{{- /*
+  Small, discreet line below a page's title: when its file was last
+  modified, and, when translated versions exist, links to them. Silent
+  on the date for pages with no real Lastmod, such as content-adapter-
+  generated ones, which report the zero date instead.
+
+  @param {page} . The page to describe.
+*/ -}}
+{{- $translations := .Translations -}}
+{{- $hasLastmod := gt .Lastmod.Year 1 -}}
+{{- $languageNames := dict "en" "English" "fr" "Français" -}}
+{{- if or $hasLastmod $translations }}
+<p class="page-meta">
+  {{- if $hasLastmod }}
+  <span class="page-meta__updated">
+    <svg class="page-meta__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+    {{- i18n "last_updated" }} {{ partial "main/date.html" (dict "Date" .Lastmod) -}}
+  </span>
+  {{- end }}
+  {{- with $translations }}
+  <span class="page-meta__translations">
+    <svg class="page-meta__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><line x1="3" y1="12" x2="21" y2="12"></line><path d="M12 3a12.5 12.5 0 0 1 0 18a12.5 12.5 0 0 1 0-18"></path></svg>
+    {{- i18n "read_in" }}
+    <span class="page-meta__langs">
+      {{- range $translation := . }}
+      <a class="page-meta__lang" href="{{ $translation.RelPermalink }}" hreflang="{{ $translation.Lang }}" lang="{{ $translation.Lang }}">{{ index $languageNames $translation.Lang | default $translation.Language.Label }}</a>
+      {{- end }}
+    </span>
+  </span>
+  {{- end }}
+</p>
+{{- end }}
