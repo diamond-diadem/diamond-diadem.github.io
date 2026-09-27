@@ -9,10 +9,29 @@ sidebar_sort: title
 description: "Introduction aux gestionnaires de workflows pour la science des matériaux : automatisation, traçabilité des données et gestion des exécutions sur DIAMOND."
 ---
 
-En science des matériaux, les calculs manipulent fréquemment une quantité significative de données, qui doit être stockée de manière ordonnée et organisée pour en assurer l'accessibilité et la praticité d'utilisation. En parallèle, le coût numérique de ces mêmes calculs entraîne des temps d'exécution relativement longs pour atteindre des critères (de convergence, d'équilibre, ...) qui garantissent la fiabilité des résultats. Comme il n'est pas toujours possible d'exécuter un calcul très long en une seule fois, il est parfois nécessaire de les redémarrer à partir d'un état sauvegardé.
+Votre calcul a planté vendredi à 20 h. Vous l'avez découvert lundi à 9 h. Soixante heures de calcul, perdues.
 
-Ces deux processus - la manipulation des données d'entrée sortie et la gestion des exécutions individuelles des différents codes - sont souvent fastidieux. Usuellement, ces manipulations requièrent une intervention humaine, avec une gestion manuelle des états d'exécution et des données. En assurer la traçabilité complète, indispensable à l'heure de la science reproductible, est à la fois exigeant et chronophage. De plus, la part exploratoire de toute activité de recherche s'accompagne par essence d'itérations successives, avec chacune un risque d'erreur et la répétition peu stimulante de tâches similaires.
+Imaginez maintenant le même scénario avec un workflow : le plantage est détecté, le calcul redémarre là où il s'était arrêté, les résultats sont rangés, et soit il est terminé, soit l'étape suivante tourne déjà quand vous arrivez au bureau.
 
-Afin de répondre à ces problématiques, l'automatisation constitue une solution intéressante : automatiser et régulariser le processus de génération et d'analyse des données le rend à la fois plus facile à gérer et plus reproductible. Cette automatisation des _flux de travail_ (**workflows**) peut prendre plusieurs formes : la plus simple repose sur l'utilisation d'outils de programmation système (scripts _Python_ ou _bash_) pour gérer le transfert de données, l'exécution successive de programmes, l'édition de fichiers d'entrée ou l'analyse des fichiers de sortie. Plus récemment, nous avons assisté à l'émergence d'outils spécifiquement dédiés à cette tâche. Ces **workflow managers** offrent des fonctionnalités avancées, comme la gestion automatique du redémarrage de calculs, l'orchestration d'unités d'exécutions sur des machines distantes, la construction de graphes de provenance assurant une traçabilité exhaustive de toutes les données ou encore un haut niveau d'abstraction permettant d'automatiser l'écriture de fichiers d'entrée complexes et facilitant le basculement d'un code à un autre.
+C'est toute la différence entre surveiller vos simulations et les laisser travailler pour vous.
 
-Pour résumer, des workflows bien conçus permettent non seulement de gagner du temps, mais aussi de réduire le risque d'erreur humaine, augmentant ainsi la fiabilité des données produites. Voici quelques développements réalisés sur la plateforme dans cette direction.
+## Mais qu'est-ce qu'un workflow ?
+
+Un **workflow** est la liste des étapes que suit votre calcul, écrite de façon à ce qu'un ordinateur puisse les exécuter à votre place : lancer un programme, attendre qu'il se termine, ranger les résultats, le redémarrer s'il s'est arrêté trop tôt, puis transmettre le résultat à l'étape suivante. De nombreux workflow managers sont activement développés, et celui proposé par notre projet est [AiiDA](https://aiida.net/).
+
+Fini les copies de fichiers à la main. Fini les carnets remplis de « c'était quel calcul, déjà ? ». Fini les relances de tâches une par une.
+
+{{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
+Les outils qui exécutent les workflows, appelés **workflow managers**, vont encore plus loin : ils répartissent le travail sur plusieurs machines distantes et conservent un historique complet de la manière dont chaque résultat a été obtenu - exactement ce qu'il vous faut quand un relecteur vous demande de le prouver.
+{{< /callout >}}
+
+## Ce que vous y gagnez
+
+- **Du temps retrouvé** : transferts de fichiers, redémarrages et autres corvées répétitives se font tout seuls. Vous vous concentrez sur la science.
+- **Moins d'erreurs** : les erreurs se cachent dans les tâches manuelles répétitives. Automatisez ces tâches, et les erreurs disparaissent avec elles.
+- **Des résultats traçables** : chaque entrée, sortie et étape intermédiaire est enregistrée, pour que chacun puisse retracer l'origine d'un résultat, même des années plus tard.
+- **Dix calculs ou mille, le même effort** : passez à l'échelle sans ajouter la moindre étape manuelle.
+
+## Commencez en quelques minutes
+
+Les workflows ci-dessous sont déjà en place et prêts à être utilisés sur la plateforme. Choisissez celui qui correspond le mieux à vos recherches. Celui dont vous avez besoin n'y est pas ? [Dites-le-nous]({{% ref "contact" %}}) et nous étudierons son ajout.
