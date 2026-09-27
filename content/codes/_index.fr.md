@@ -12,23 +12,34 @@ seo:
     Apptainer, workflows HPC et logiciels de simulation de matériaux.
 ---
 
-Un conteneur peut être vu comme une clé USB sur laquelle un programme est déjà installé : il suffit de la brancher à n'importe quel ordinateur pour accéder directement à ce programme.
+Vous avez passé deux jours à essayer d'installer un code. Le compilateur réclame une bibliothèque introuvable, le cluster vous interdit de l'installer, et votre échéance, elle, ne recule pas.
 
-C'est particulièrement utile lorsqu'un programme est compliqué à installer, lorsque vous ne pouvez pas l'installer directement mais avez accès à des conteneurs, ou tout simplement parce que l'exécuter dans un conteneur garantit d'obtenir les mêmes résultats à chaque fois (reproductibilité).
+Imaginez maintenant ce même code opérationnel en quelques minutes : un téléchargement, une commande, et ça marche.
+
+C'est exactement ce que vous apporte un **conteneur**.
+
+## Mais qu'est-ce qu'un conteneur ?
+
+Voyez un conteneur comme une clé USB sur laquelle un programme est déjà installé : branchez-la sur n'importe quel ordinateur, et le programme fonctionne, tout simplement. Pas de compilation, pas de dépendances à traquer, pas de droits administrateur.
+
+- **Des codes difficiles à installer, prêts à l'emploi** : quelqu'un a déjà fait la partie pénible à votre place.
+- **Fonctionne là où vous ne pouvez rien installer** : beaucoup de clusters HPC interdisent l'installation de logiciels, mais autorisent l'exécution de conteneurs.
+- **Les mêmes résultats, à chaque fois** : le code s'exécute dans exactement le même environnement sur votre portable, votre cluster et la machine de votre collègue. La reproductibilité est intégrée d'office.
 
 {{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
-Nous mettons ici ces conteneurs à votre disposition afin que vous puissiez les télécharger et les utiliser immédiatement, à condition d'avoir accès à Apptainer (conçu pour le HPC) et/ou à Docker (plus répandu) sur votre ordinateur.
+Tous les conteneurs ci-dessous sont prêts à être téléchargés et utilisés immédiatement. Il vous suffit d'avoir Apptainer (conçu pour le HPC) ou Docker (plus répandu) sur votre ordinateur.
 {{< /callout >}}
 
-Leur utilisation demande un temps d'apprentissage, c'est pourquoi nous proposons également des tutoriels sur l'[installation d'Apptainer]({{% ref "documentation/install/install-apptainer" %}}) et l'[utilisation des images de conteneurs]({{% ref "documentation/use/apptainer-image" %}}), ainsi que des exemples concrets pour chaque conteneur. Et si vous rencontrez une difficulté, nous sommes toujours [là pour vous aider]({{% ref "contact" %}}).
+## Vous n'avez jamais utilisé de conteneur ?
 
-## Critères de sélection de nos codes conteneurisés
+Il y a un petit temps d'apprentissage, et nous avons tout prévu : des tutoriels pas à pas sur l'[installation d'Apptainer]({{% ref "documentation/install/install-apptainer" %}}) et l'[utilisation des images de conteneurs]({{% ref "documentation/use/apptainer-image" %}}), ainsi qu'un exemple concret pour chaque conteneur. Toujours bloqué ? Nous sommes toujours [là pour vous aider]({{% ref "contact" %}}).
 
-Pendant l'été 2023, la communauté des matériaux a été sondée via LimeSurvey pour identifier des habitudes de travail. Cela a notamment permis de mettre en lumière un certains nombres de codes utilisés, aussi bien pour le calcul que pour la visualisation (cf ci-dessous). À l'heure actuelle, plus de $68\%$ des codes cités par la communauté ont été conteneurisés et/ou packagés, couvrant l'ensemble des échelles physiques. Si vous souhaitez que nous ajoutions un autre code, n'hésitez pas à [nous contacter]({{% ref "contact" %}}).
+## Choisis par la communauté
 
-<img alt="containerised codes" class="containerised-codes fr mt-4" style="width:100%">
+Pendant l'été 2023, nous avons demandé à la communauté des matériaux quels codes elle utilise réellement, aussi bien pour le calcul que pour la visualisation (cf. ci-dessous). Aujourd'hui, plus de $68\%$ d'entre eux sont conteneurisés et/ou packagés, couvrant l'ensemble des échelles physiques. Celui dont vous avez besoin n'y est pas ? [Dites-le-nous]({{% ref "contact" %}}) et nous étudierons son ajout.
+
+<img alt="Nuage de mots des codes cités par la communauté, classés par échelle physique de l'électronique au macroscopique, les plus cités (LAMMPS, VASP, Quantum ESPRESSO, ParaView, OVITO, VESTA) en plus grands caractères. 68,2 % de ces codes sont conteneurisés et/ou packagés." class="containerised-codes fr mt-4" style="width:100%">
 
 ## Codes disponibles
 
 {{< codes-catalog >}}
-

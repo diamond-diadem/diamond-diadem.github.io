@@ -17,7 +17,7 @@ C'est toute la différence entre surveiller vos simulations et les laisser trava
 
 ## Mais qu'est-ce qu'un workflow ?
 
-Un **workflow** est la liste des étapes que suit votre calcul, écrite de façon à ce qu'un ordinateur puisse les exécuter à votre place : lancer un programme, attendre qu'il se termine, ranger les résultats, le redémarrer s'il s'est arrêté trop tôt, puis transmettre le résultat à l'étape suivante. De nombreux workflow managers sont activement développés, et celui proposé par notre projet est [AiiDA](https://aiida.net/).
+Un **workflow** est la liste des étapes que suit votre calcul, écrite de façon à ce qu'un ordinateur puisse les exécuter à votre place : lancer un programme, attendre qu'il se termine, ranger les résultats, le redémarrer s'il s'est arrêté trop tôt, puis transmettre le résultat à l'étape suivante. De nombreux workflow managers sont activement développés, et celui proposé par notre projet est [AiiDA]({{% ref "documentation/by-container/aiida" %}}).
 
 Fini les copies de fichiers à la main. Fini les carnets remplis de « c'était quel calcul, déjà ? ». Fini les relances de tâches une par une.
 

@@ -17,7 +17,7 @@ That is the difference between babysitting your simulations and letting them wor
 
 ## So what is a workflow?
 
-A **workflow** is the list of steps your calculation goes through, written down so a computer can carry them out for you: launch a program, wait for it to finish, save the results, restart it if it stopped early, and pass the output on to the next step. There are many workflow managers under active development, and the one proposed by our project is [AiiDA](https://aiida.net/).
+A **workflow** is the list of steps your calculation goes through, written down so a computer can carry them out for you: launch a program, wait for it to finish, save the results, restart it if it stopped early, and pass the output on to the next step. There are many workflow managers under active development, and the one proposed by our project is [AiiDA]({{% ref "documentation/by-container/aiida" %}}).
 
 No more copying files by hand. No more notebooks full of "which run was this again?". No more restarting jobs one by one.
 

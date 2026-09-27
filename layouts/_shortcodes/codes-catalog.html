@@ -14,7 +14,7 @@
     {{- if .Pages }}
   <div class="codes-catalog__group">
     <h3 class="codes-catalog__title">{{ .Title }}</h3>
-    <ul class="home-grid home-grid--table home-grid--codes scroll-fade" role="list">
+    <ul class="home-grid home-grid--table home-grid--codes" role="list">
       {{- range .Pages.ByTitle }}
       <li class="home-card home-card--cell home-code">
         <span class="home-code__logo" aria-hidden="true"><span class="home-code__icon {{ .Params.icon }}"></span></span>
