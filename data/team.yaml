@@ -557,4 +557,48 @@ team:
     - label: Google Scholar
       url: https://scholar.google.com/citations?hl=fr&user=RKiZlncAAAAJ
 
+
+- name: Imade EL BAHRAOUI
+  first_name: Imade
+  last_name: EL BAHRAOUI
+  email: imade.el-bahraoui@univ-grenoble-alpes.fr
+  affiliation: GRICAD Grenoble
+  role: WP1 - Codes and Workflows
+  project: DIAMOND
+  personnel_type: Scientist 
+  photo: /images/team/ieb.png
+  bio_short: I am a research engineer working on the containerization of scientific codes and their deployment in HPC environments.
+  bio_short_fr: Je suis ingénieur de recherche et je travaille sur la conteneurisation de travaux scientifiques et leur déploiement dans des environnements HPC
+  bio_long: |-
+    I am a research engineer working on the containerization of scientific codes and their deployment in HPC environments.
+      - Interests: HPC, Reproducibility, Performance optimization
+  bio_long_fr: |-
+    Je suis ingénieur de recherche et je travaille sur la conteneurisation de travaux scientifiques et leur déploiement dans des environnements HPC
+      - Intérêts : Calcul Haute Performance, Reproductibilité, Optimisation des performances
+  links:
+    - label: LinkedIn
+      url: www.linkedin.com/in/imade-el-bahraoui-488634202
+  github : imadeelb
+
+
+- name: Paul Bouton
+  first_name: Paul
+  last_name: Bouton
+  email: paul.bouton@univ-grenoble-alpes.fr
+  affiliation: GRICAD Grenoble
+  role: WP1 - Codes and Workflows
+  project: DIAMOND
+  personnel_type: Scientist
+  photo: /images/team/pb.png
+  bio_short: I am a research engineer working on the containerization of scientific codes and their deployment in HPC environments.
+  bio_short_fr: Je suis ingénieur de recherche et je travaille sur la conteneurisation de travaux scientifiques et leur déploiement dans des environnements HPC
+  bio_long: |-
+    I am a research engineer working on the containerization of scientific codes and their deployment in HPC environments.
+      - Interests: HPC, Reproducibility, Performance optimization, sustainability
+  bio_long_fr: |-
+    Je suis ingénieur de recherche et je travaille sur la conteneurisation de travaux scientifiques et leur déploiement dans des environnements HPC
+      - Intérêts : Calcul Haute Performance, Reproductibilité, Optimisation des performances, sobriété numérique
+  links:
+    - label: LinkedIn
+      url: https://www.linkedin.com/in/paul-bouton-587a6b12a/
       
