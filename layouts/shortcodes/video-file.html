@@ -9,6 +9,11 @@
   /*  `preload="metadata"` keeps page loads cheap: browsers fetch the headers
   /*  only, and download the stream when the visitor presses play.
   /*
+  /*  GitLab Pages ignores Range requests, so the browser cannot seek to a
+  /*  trailing `moov` atom: it would download the whole file before playing.
+  /*  Always remux videos with the index at the start (no re-encoding):
+  /*    ffmpeg -i in.mp4 -map 0 -c copy -movflags +faststart out.mp4
+  /*
   /*  Usage: {{< video-file src="/videos/example.mp4" >}}
   */ -}}
 
