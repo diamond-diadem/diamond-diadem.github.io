@@ -21,7 +21,7 @@ Voici les liens pour accéder rapidement à la section de documentation des outi
 - [Utiliser une image Apptainer](/documentation/use/apptainer-image/)
 - [Utiliser un paquet Guix](/documentation/use/guix-package/)
 - [Foire aux questions (FAQ)](/documentation/faq/)
-- [Notebooks IA](/notebooks/ai-training/overview/) : l'IA appliquée à la science des matériaux, de la qualité des données à l'optimisation bayésienne
+- [Notebooks ML](/notebooks/ml-training/overview/) : le ML appliqué à la science des matériaux, de la qualité des données à l'optimisation bayésienne
 
 #### Voici les liens pour accéder rapidement aux tutoriels spécifiques par image :
 

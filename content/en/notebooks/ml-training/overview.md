@@ -4,12 +4,12 @@ linkTitle: Overview
 weight: 1
 aliases:
   - /documentation/by-session/diamond-ga-2026/
-description: "Tutorial to discover some use of AI for material science, using a complete pipeline from raw data to model inference."
+description: "Tutorial to discover some use of ML for material science, using a complete pipeline from raw data to model inference."
 ---
 
 <div align="justify">
 
-This tutorial offers a series of educational notebooks designed to introduce the application of artificial intelligence to materials science.
+This tutorial offers a series of educational notebooks designed to introduce the application of machine learning to materials science.
 
 Through practical examples, the notebooks progressively introduce different approaches, ranging from data analysis and exploration to prediction, the discovery of causal relationships, and Bayesian optimization.
 
@@ -35,6 +35,6 @@ The full content, along with instructions on how to run it, is available in the 
 
 </div>
 
-{{< link-card title="Guide: AI Training" description="Follow the tutorial step by step" href="/en/notebooks/ai-training/guide/" icon="tabler-icons/outline/book" >}}
+{{< link-card title="Guide: ML Training" description="Follow the tutorial step by step" href="/en/notebooks/ml-training/guide/" icon="tabler-icons/outline/book" >}}
 
-{{< link-card title="GitLab: AI Training" description="Access the notebooks and instructions" href="https://gricad-gitlab.univ-grenoble-alpes.fr/diamond/jupyter/training-diamond-ag-2026" target="_blank" icon="tabler-icons/outline/brand-gitlab" class="mb-0" >}}
+{{< link-card title="GitLab: ML Training" description="Access the notebooks and instructions" href="https://gricad-gitlab.univ-grenoble-alpes.fr/diamond/jupyter/training-diamond-ag-2026" target="_blank" icon="tabler-icons/outline/brand-gitlab" class="mb-0" >}}

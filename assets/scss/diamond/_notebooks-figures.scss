@@ -9,7 +9,7 @@
 // // // Notebooks figures // // //
 // Dark variants are generated with scripts/darken-figures.py
 
-$ai-training-figures: (
+$ml-training-figures: (
     "workflow-overview",
     "outliers-boxplots",
     "clustering-pca",
@@ -21,11 +21,11 @@ $ai-training-figures: (
     "bayesian-optimization-uncertainty"
 );
 
-@each $figure in $ai-training-figures {
+@each $figure in $ml-training-figures {
     @include swap-image(
-        ".img-ai-training-#{$figure}",
-        "images/notebooks/ai-training/#{$figure}-light.png",
-        "images/notebooks/ai-training/#{$figure}-dark.png"
+        ".img-ml-training-#{$figure}",
+        "images/notebooks/ml-training/#{$figure}-light.png",
+        "images/notebooks/ml-training/#{$figure}-dark.png"
     );
 }
 

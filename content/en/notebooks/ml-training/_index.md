@@ -1,5 +1,5 @@
 ---
-title: Notebooks de formation IA
+title: ML training notebooks
 weight: 2
 exclude_search: true
 build:

@@ -12,7 +12,7 @@ Every pixel is recoloured in place (geometry is untouched):
 
 Usage (requires numpy, scipy and pillow):
 
-    python3 scripts/darken-figures.py static/images/notebooks/ai-training/*-light.png
+    python3 scripts/darken-figures.py static/images/notebooks/ml-training/*-light.png
 
 Each `<name>-light.png` gets a `<name>-dark.png` next to it. Pages swap them
 with the `swap-image` SCSS mixin.

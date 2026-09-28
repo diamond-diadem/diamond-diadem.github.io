@@ -20,7 +20,7 @@ Here are the links for quick access to the documentation section for the tools y
 - [Using an Apptainer image](/en/documentation/use/apptainer-image/)
 - [Using a Guix package](/en/documentation/use/guix-package/)
 - [Frequently asked questions (FAQ)](/en/documentation/faq/)
-- [AI notebooks](/en/notebooks/ai-training/overview/): AI applied to materials science, from data quality to Bayesian optimisation
+- [ML notebooks](/en/notebooks/ml-training/overview/): ML applied to materials science, from data quality to Bayesian optimisation
 
 #### Here are the links for quick access to image-specific tutorials:
 

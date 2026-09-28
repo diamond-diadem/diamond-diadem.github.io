@@ -4,12 +4,12 @@ linkTitle: Vue d'ensemble
 weight: 1
 aliases:
   - /documentation/by-session/diamond-ga-2026/
-description: "Tutoriel pour explorer l'utilisation de l'IA pour la science des matériaux, en partant des données brutes jusqu'à l'inférence du modèle."
+description: "Tutoriel pour explorer l'utilisation du ML pour la science des matériaux, en partant des données brutes jusqu'à l'inférence du modèle."
 ---
 
 <div align="justify">
 
-Ce tutoriel propose une série de notebooks pédagogiques pour découvrir l'application de l'intelligence artificielle à la science des matériaux.
+Ce tutoriel propose une série de notebooks pédagogiques pour découvrir l'application du machine learning à la science des matériaux.
 
 À travers des exemples pratiques, les notebooks présentent progressivement différentes approches, depuis l'analyse et l'exploration des données jusqu'à la prédiction, la découverte de relations causales et l'optimisation bayésienne.
 
@@ -35,6 +35,6 @@ L'intégralité de son contenu ainsi que les explications pour l'effectuer sont 
 
 </div>
 
-{{< link-card title="Guide : Formation IA" description="Suivre le tutoriel pas à pas" href="/notebooks/ai-training/guide/" icon="tabler-icons/outline/book" >}}
+{{< link-card title="Guide : Formation ML" description="Suivre le tutoriel pas à pas" href="/notebooks/ml-training/guide/" icon="tabler-icons/outline/book" >}}
 
-{{< link-card title="GitLab : Formation IA" description="Accéder aux notebooks et aux instructions" href="https://gricad-gitlab.univ-grenoble-alpes.fr/diamond/jupyter/training-diamond-ag-2026" target="_blank" icon="tabler-icons/outline/brand-gitlab" class="mb-0" >}}
+{{< link-card title="GitLab : Formation ML" description="Accéder aux notebooks et aux instructions" href="https://gricad-gitlab.univ-grenoble-alpes.fr/diamond/jupyter/training-diamond-ag-2026" target="_blank" icon="tabler-icons/outline/brand-gitlab" class="mb-0" >}}

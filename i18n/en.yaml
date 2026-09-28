@@ -36,9 +36,9 @@ home_documentation_body: <a href="/en/documentation/install/install-apptainer/">
   Apptainer</a>, and <a href="/en/documentation/use/apptainer-image/">learn to
   use our container images</a>.
 home_documentation_title: Browse the documentation
-home_notebooks_body: <a href="/en/notebooks/home/">Apply AI methods to materials
+home_notebooks_body: <a href="/en/notebooks/home/">Apply ML methods to materials
   data</a>.
-home_notebooks_title: Run our AI notebooks
+home_notebooks_title: Run our ML notebooks
 home_featured_news_title: Featured News
 home_learn_more_body: About <a href="/en/about/diamond/">DIAMOND</a>, <a href="/en/about/diadem/">the
   PEPR DIADEM</a>, <a href="/en/about/containers/">containers</a> and <a href="/en/about/apptainer/">Apptainer</a>.

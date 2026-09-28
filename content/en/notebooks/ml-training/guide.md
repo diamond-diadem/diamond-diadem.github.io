@@ -1,17 +1,17 @@
 ---
-title: "Getting started with the AI notebooks for materials science"
+title: "Getting started with the ML notebooks for materials science"
 linkTitle: Guide
 weight: 2
 toc: true
-bodyClass: ai-training-guide
-description: "Educational notebooks to discover, step by step, how to apply AI methods to materials data."
+bodyClass: ml-training-guide
+description: "Educational notebooks to discover, step by step, how to apply ML methods to materials data."
 ---
 
-{{< link-card title="GitLab: AI Training" description="Access the notebooks and instructions" href="https://gricad-gitlab.univ-grenoble-alpes.fr/diamond/jupyter/training-diamond-ag-2026" target="_blank" icon="tabler-icons/outline/brand-gitlab" >}}
+{{< link-card title="GitLab: ML Training" description="Access the notebooks and instructions" href="https://gricad-gitlab.univ-grenoble-alpes.fr/diamond/jupyter/training-diamond-ag-2026" target="_blank" icon="tabler-icons/outline/brand-gitlab" >}}
 
 <div align="justify">
 
-Educational notebooks to discover, step by step, how to apply AI methods to materials data.
+Educational notebooks to discover, step by step, how to apply ML methods to materials data.
 
 These notebooks are training material (version 1.0). They illustrate a practical workflow, from understanding experimental data to building predictive models and exploring more advanced approaches. They are designed as a starting point that can be adapted to your own materials data. Results depend on the quality and size of the dataset, and the choices presented are guidelines rather than universal rules.
 
@@ -21,7 +21,7 @@ The overall workflow is illustrated below. The first steps focus on data quality
 
 </div>
 
-<img alt="Overall workflow of the materials AI notebooks, from the dataset to profiling, preprocessing, and then analysis, prediction, causal discovery and Bayesian optimisation" src="/images/notebooks/ai-training/workflow-overview-light.png" class="img-ai-training-workflow-overview" />
+<img alt="Overall workflow of the materials ML notebooks, from the dataset to profiling, preprocessing, and then analysis, prediction, causal discovery and Bayesian optimisation" src="/images/notebooks/ml-training/workflow-overview-light.png" class="img-ml-training-workflow-overview" />
 
 ## A possible learning path
 
@@ -62,7 +62,7 @@ This notebook helps you spot data quality problems before analysis or modelling.
 
 </div>
 
-<img alt="Box plots of the initial variables, showing the quantile ranges and the points flagged as outliers for each variable" src="/images/notebooks/ai-training/outliers-boxplots-light.png" class="img-ai-training-outliers-boxplots" />
+<img alt="Box plots of the initial variables, showing the quantile ranges and the points flagged as outliers for each variable" src="/images/notebooks/ml-training/outliers-boxplots-light.png" class="img-ml-training-outliers-boxplots" />
 
 Steps:
 
@@ -97,14 +97,14 @@ An introduction to a few unsupervised methods: correlations, dimensionality redu
 
 </div>
 
-<img alt="Clusters obtained with K-Means, projected on the first two principal components" src="/images/notebooks/ai-training/clustering-pca-light.png" class="img-ai-training-clustering-pca" />
+<img alt="Clusters obtained with K-Means, projected on the first two principal components" src="/images/notebooks/ml-training/clustering-pca-light.png" class="img-ml-training-clustering-pca" />
 
 Steps:
 
 1. Profile the dataset.
 2. Compute the correlations and read them on the heatmap.
 
-   <img alt="Pearson correlation heatmap between the features of the dataset" src="/images/notebooks/ai-training/correlation-heatmap-light.png" class="img-ai-training-correlation-heatmap" />
+   <img alt="Pearson correlation heatmap between the features of the dataset" src="/images/notebooks/ml-training/correlation-heatmap-light.png" class="img-ml-training-correlation-heatmap" />
 
 3. Reduce the dimension with a principal component analysis (PCA): follow the cumulative explained variance and choose the number of components according to a threshold, for example 90 or 95%.
 4. Try a clustering method (K-Means, agglomerative or DBSCAN) and adjust its hyperparameters.
@@ -138,7 +138,7 @@ A guide to predicting a continuous variable with several algorithms and comparin
 
 </div>
 
-<img alt="Comparison of regression models: predicted versus actual scatter plot and distribution of the absolute errors for XGBoost, decision tree, SVR, Ridge and Lasso" src="/images/notebooks/ai-training/regression-models-comparison-light.png" class="img-ai-training-regression-models-comparison" />
+<img alt="Comparison of regression models: predicted versus actual scatter plot and distribution of the absolute errors for XGBoost, decision tree, SVR, Ridge and Lasso" src="/images/notebooks/ml-training/regression-models-comparison-light.png" class="img-ml-training-regression-models-comparison" />
 
 Steps:
 
@@ -168,7 +168,7 @@ A closer look at XGBoost, which builds trees in sequence, each one correcting th
 
 </div>
 
-<img alt="XGBoost permutation feature importance, ranked from the most to the least important feature with its standard deviation" src="/images/notebooks/ai-training/xgboost-feature-importance-light.png" class="img-ai-training-xgboost-feature-importance" />
+<img alt="XGBoost permutation feature importance, ranked from the most to the least important feature with its standard deviation" src="/images/notebooks/ml-training/xgboost-feature-importance-light.png" class="img-ml-training-xgboost-feature-importance" />
 
 Steps:
 
@@ -245,7 +245,7 @@ Steps:
 
 **Example.** Fix a combination of parameters, predict with the random forest and then with the Gaussian process, and compare the two spectra.
 
-<img alt="Prediction and simulation: synthesis parameter sliders and the resulting predicted CdSe photoluminescence spectrum, with its peak, width, height, estimated size class and uniformity" src="/images/notebooks/ai-training/cdse-spectrum-prediction-light.png" class="img-ai-training-cdse-spectrum-prediction" />
+<img alt="Prediction and simulation: synthesis parameter sliders and the resulting predicted CdSe photoluminescence spectrum, with its peak, width, height, estimated size class and uniformity" src="/images/notebooks/ml-training/cdse-spectrum-prediction-light.png" class="img-ml-training-cdse-spectrum-prediction" />
 
 [View in the repository](https://gricad-gitlab.univ-grenoble-alpes.fr/diamond/jupyter/training-diamond-ag-2026)
 
@@ -261,7 +261,7 @@ A demonstration of causal discovery with the PC (Peter–Clark) algorithm, from 
 
 {{< video-file src="/videos/Tuto_IA_Causal_Discovery_In_MS.mp4" >}}
 
-<img alt="Causal graph discovered in the CdSe data: the six synthesis parameters and the edges linking them to the peak, width and height of the emission" src="/images/notebooks/ai-training/causal-discovery-graph-light.png" class="img-ai-training-causal-discovery-graph" />
+<img alt="Causal graph discovered in the CdSe data: the six synthesis parameters and the edges linking them to the peak, width and height of the emission" src="/images/notebooks/ml-training/causal-discovery-graph-light.png" class="img-ml-training-causal-discovery-graph" />
 
 Steps:
 
@@ -294,7 +294,7 @@ Illustrates the principle of Bayesian optimisation: a Gaussian process proposes 
 
 {{< video-file src="/videos/Tuto_IA_Bayesian_Optimization_in_MS_V2.mp4" >}}
 
-<img alt="Gaussian process prediction over two synthesis parameters, with the predicted mean as a colour map, the uncertainty as dashed contour lines, the training points and the current slider point" src="/images/notebooks/ai-training/bayesian-optimization-uncertainty-light.png" class="img-ai-training-bayesian-optimization-uncertainty" />
+<img alt="Gaussian process prediction over two synthesis parameters, with the predicted mean as a colour map, the uncertainty as dashed contour lines, the training points and the current slider point" src="/images/notebooks/ml-training/bayesian-optimization-uncertainty-light.png" class="img-ml-training-bayesian-optimization-uncertainty" />
 
 Steps:
 
