@@ -36,6 +36,16 @@ main:
     url: codes/home/
     weight: 20
     identifier: codes-fr
+  - name: Conteneurs
+    url: codes/home/
+    weight: 21
+    parent: codes-fr
+    identifier: codes-containers-fr
+  - name: Documentation
+    url: documentation/home/
+    weight: 22
+    parent: codes-fr
+    identifier: documentation-fr
   - name: Notebooks ML
     url: notebooks/home/
     weight: 25
@@ -46,9 +56,6 @@ main:
   - name: Données
     url: data/
     weight: 40
-  - name: Documentation
-    url: documentation/home/
-    weight: 45
   - name: Contact
     url: contact/
     weight: 60
