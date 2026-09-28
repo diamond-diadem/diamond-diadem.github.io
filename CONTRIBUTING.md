@@ -14,7 +14,6 @@ To run the site locally in development mode, you need to install the following d
 
 - `Node.js` LTS version (run `node -v` to check if it's already available).
 - **Hugo Extended** `v0.166.0` (run `hugo version` to check its availability).
-- **Dart Sass** (run `sass --version` to check if it's already available).
 
 ### Install `Node.js`
 
@@ -32,18 +31,6 @@ For example, on Linux, the easiest way to get Hugo up and running is through the
 1. Download the [latest version](https://github.com/gohugoio/hugo/releases/latest) (look for package `hugo_extended_[version]_linux-amd64.tar.gz` **in the assets section**, and adjust for the architecture too).
 2. Extract the archive, and move the `hugo` executable to a directory on the `PATH` environment variable (or to any directory and then include it in the `PATH`). Normally `~/.local/bin` is a good place.
 3. Verify the installation with `hugo version`.
-
-### Install Dart Sass
-
-Hugo compiles the site's stylesheets with [Dart Sass](https://sass-lang.com/dart-sass/), which is a separate tool from Hugo itself and is not bundled with Hugo Extended: without it, the server fails to start with a `TOCSS-DART` error.
-
-Install it globally through npm:
-
-```bash
-npm install -g sass
-```
-
-Alternatively, follow the [platform-specific install instructions](https://sass-lang.com/install/) (a package manager or a prebuilt binary added to `PATH`). Verify the installation with `sass --version`.
 
 ### Clone and set up the website locally
 
