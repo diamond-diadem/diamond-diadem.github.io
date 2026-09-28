@@ -1,0 +1,41 @@
+---
+title: FEniCS
+linkTitle: FEniCS
+icon: icon-fenics
+toc: false
+weight: 15
+description: "FEniCS est une bibliothèque open-source d'éléments finis pour résoudre des équations aux dérivées partielles, disponible en conteneur sur DIAMOND."
+website: "https://fenicsproject.org/"
+---
+
+## Récupérez l'image de conteneur
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull fenics.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/fenics.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/fenics
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+**FEniCS** est une plateforme logicielle open source conçue pour la résolution numérique des équations aux dérivées partielles (EDP) à l'aide de méthodes des éléments finis. Elle offre un environnement complet pour la définition, la discrétisation et la résolution de problèmes complexes en mathématiques appliquées, physique et ingénierie. FEniCS repose sur une approche automatisée qui permet aux utilisateurs de spécifier des équations mathématiques de haut niveau tout en bénéficiant de calculs performants et optimisés. Le logiciel est composé de plusieurs modules intégrés, notamment **DOLFIN**, une bibliothèque pour la gestion des calculs et des maillages, et **UFL**, un langage pour définir les formulations faibles. Il est écrit principalement en C++ avec des interfaces Python conviviales et supporte des systèmes de calcul parallèles.
+
+## Tutoriel
+
+{{< link-card title="Apprenez à utiliser cette image de conteneur" href="/documentation/by-container/fenics" icon="tabler-icons/outline/package" class="mb-0" >}}
+
+## Documentation FEniCS
+
+{{< card-grid >}}
+{{< link-card title="Site officiel" href="https://fenicsproject.org/" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
+{{< link-card title="Documentation officielle" href="https://fenicsproject.org/documentation/" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
+{{< /card-grid >}}
+
+## Exemples
+
+{{< link-card title="Téléchargez des fichiers d'entrée" href="/downloads/fenics-tutorial-inputs.tar.gz" icon="tabler-icons/outline/file-export" >}}

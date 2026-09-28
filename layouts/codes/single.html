@@ -23,13 +23,10 @@
 					</ol>
 				</nav>
 			{{ end }}
-			{{ if default true .Params.title_visible -}}
-			<h1>{{ .Title }}</h1>
-			{{ partial "main/page-meta.html" . }}
-			{{ else -}}
-			<br>
+			{{ partial "main/code-header.html" . }}
+			{{ with .Params.lead -}}
+			<p class="lead">{{ . | safeHTML }}</p>
 			{{ end -}}
-			<p class="lead">{{ .Params.lead | safeHTML }}</p>
 			<!-- {{ if ne .Params.toc false -}}
 			<nav class="toc-mobile d-xl-none" aria-label="Quaternary navigation">
 				{{ partial "sidebar/docs-toc-mobile.html" . }}

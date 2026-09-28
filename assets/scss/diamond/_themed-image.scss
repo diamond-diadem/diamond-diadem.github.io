@@ -1,0 +1,19 @@
+// Content images with a dark-mode counterpart (see
+// layouts/_markup/render-image.html): both variants are in the markup and
+// only the one matching the color mode is displayed. The light variant is
+// the default, for browsers without color mode support. The hidden variant
+// is lazy-loaded, so browsers never download it.
+
+.themed-image--dark {
+    display: none;
+}
+
+@include color-mode(dark) {
+    .themed-image--light {
+        display: none;
+    }
+
+    .themed-image--dark {
+        display: inline;
+    }
+}

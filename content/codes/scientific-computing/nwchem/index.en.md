@@ -1,0 +1,41 @@
+---
+title: NWChem
+linkTitle: NWChem
+icon: icon-nwchem
+toc: false
+weight: 14
+description: "NWChem is a high-performance computational quantum chemistry suite for molecular and electronic property calculations, available as a container on DIAMOND."
+website: "https://www.nwchem-sw.org/"
+---
+
+## Retrieve the container image
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull nwchem.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/nwchem.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/nwchem
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+**NWChem** is a computational chemistry software designed to perform calculations on chemical systems ranging from small molecules to solid-state materials and macromolecules. This open-source program provides a comprehensive suite of computational methods, including quantum mechanics (ab initio, DFT), molecular dynamics, and multi-scale simulations. NWChem is optimized for parallel and scalable computing architectures, enabling efficient handling of complex problems. It is primarily used for modeling structures, analyzing chemical interactions, and predicting electronic, spectroscopic, and thermodynamic properties.
+
+## Tutorial
+
+{{< link-card title="Learn to use this container image" href="/en/documentation/by-container/nwchem" icon="tabler-icons/outline/package" class="mb-0" >}}
+
+## NWChem documentation
+
+{{< card-grid >}}
+{{< link-card title="Official website" href="https://nwchemgit.github.io/" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
+{{< link-card title="Official documentation" href="https://github.com/nwchemgit/nwchem/wiki" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
+{{< /card-grid >}}
+
+## Examples
+
+{{< link-card title="Download input files" href="/downloads/nwchem-tutorial-inputs.tar.gz" icon="tabler-icons/outline/file-export" >}}

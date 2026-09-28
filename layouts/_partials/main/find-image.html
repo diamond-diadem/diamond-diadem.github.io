@@ -1,0 +1,24 @@
+{{- /*
+Returns the image resource a Markdown image path points to, looking in the
+page bundle first, then in the current section (unless the page is a leaf
+bundle, which has no access to it), then among the global assets, where
+static/images is mounted as assets/images. Returns nothing when no file
+matches.
+
+@param {page} page The page containing the image.
+@param {string} path The image path, relative to the page bundle or to the
+  assets directory.
+
+@returns {resource.Resource}
+*/ -}}
+
+{{- $path := strings.TrimPrefix "./" .path }}
+{{- $image := .page.Resources.Get $path }}
+{{- if and (not $image) (ne .page.BundleType "leaf") }}
+  {{- $image = .page.CurrentSection.Resources.Get $path }}
+{{- end }}
+{{- if not $image }}
+  {{- $image = resources.Get $path }}
+{{- end }}
+
+{{- return $image -}}

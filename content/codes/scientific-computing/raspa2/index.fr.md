@@ -1,0 +1,41 @@
+---
+title: RASPA2
+linkTitle: RASPA2
+icon: icon-raspa2
+toc: false
+weight: 11
+description: "RASPA2 est un logiciel de simulation moléculaire pour les matériaux nanoporeux par Monte Carlo et dynamique moléculaire, disponible sur DIAMOND."
+website: "https://github.com/iRASPA/RASPA2"
+---
+
+### Récupérez l'image de conteneur
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull raspa2.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/raspa2.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/raspa2
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+**RASPA2** est un logiciel avancé conçu pour la simulation de l'adsorption et de la diffusion dans des matériaux poreux. Il est largement utilisé en chimie computationnelle et en science des matériaux pour des tâches telles que la modélisation de l'adsorption des gaz, les calculs de diffusion et l'évaluation des interactions moléculaires au sein de structures comme les cadres organométalliques (MOFs), les zéolithes et d'autres systèmes poreux. RASPA2 utilise des méthodes de Monte Carlo et de dynamique moléculaire pour explorer les propriétés thermodynamiques et de transport sous diverses conditions. Le logiciel prend en charge une variété de champs de force et permet une personnalisation des paramètres, ce qui le rend très polyvalent pour la recherche académique et industrielle. RASPA2 est open-source et écrit en C, avec une interface intuitive pour la configuration des simulations et le traitement des résultats.
+
+<h3 class="mb-1">Tutoriel</h3>
+
+{{< link-card title="Apprenez à utiliser cette image de conteneur" href="/documentation/by-container/raspa2" icon="tabler-icons/outline/package" class="mb-0" >}}
+
+<h3 class="mb-1 mt-3">Documentation RASPA2</h3>
+
+{{< card-grid >}}
+{{< link-card title="Site officiel" href="https://iraspa.org/raspa/" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
+{{< link-card title="Documentation officielle" href="https://iraspa.org/download/raspa-manual-23-may-2021/" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
+{{< /card-grid >}}
+
+<h3 class="mb-1 mt-3">Exemples</h3>
+
+{{< link-card title="Téléchargez des fichiers d'entrée" href="/downloads/raspa2-tutorial-inputs.tar.gz" icon="tabler-icons/outline/file-export" >}}

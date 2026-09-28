@@ -1,0 +1,53 @@
+{{- /*
+Renders a Markdown image, adapting it to the color mode by file name alone.
+
+When a file named like the image plus a "-dark" suffix sits next to it
+(diagram.png and diagram-dark.png), both are rendered and the stylesheet
+shows the one matching the color mode, so writers reference only
+![...](diagram.png). The light file may also carry a "-light" suffix
+(diagram-light.png); either name then refers to the pair.
+
+Images are looked up in the page bundle, the current section, then the
+assets directory (see main/find-image.html). A remote or unresolved
+destination is passed through untouched; params.render_hooks.image.errorLevel
+("ignore", "warning" or "error") sets how an unresolved local one is
+reported.
+
+@context {string} Destination The image destination.
+@context {page} Page The page containing the image.
+@context {string} PlainText The image description as plain text.
+@context {string} Title The image title.
+*/ -}}
+
+{{- $url := urls.Parse .Destination }}
+{{- $extension := path.Ext $url.Path }}
+{{- $stem := strings.TrimSuffix $extension $url.Path | strings.TrimSuffix "-light" }}
+
+{{- $light := "" }}
+{{- $dark := "" }}
+{{- if not $url.IsAbs }}
+  {{- $light = or
+    (partial "main/find-image.html" (dict "page" .Page "path" $url.Path))
+    (partial "main/find-image.html" (dict "page" .Page "path" (print $stem "-light" $extension)))
+  }}
+  {{- $dark = partial "main/find-image.html" (dict "page" .Page "path" (print $stem "-dark" $extension)) }}
+{{- end }}
+
+{{- $image := dict "alt" .PlainText "title" .Title }}
+{{- if and $light $dark }}
+  {{- partial "main/content-image.html" (merge $image (dict "resource" $light "class" "themed-image themed-image--light")) }}
+  {{- partial "main/content-image.html" (merge $image (dict "resource" $dark "class" "themed-image themed-image--dark")) }}
+{{- else if $light }}
+  {{- partial "main/content-image.html" (merge $image (dict "resource" $light)) }}
+{{- else }}
+  {{- if not $url.IsAbs }}
+    {{- $message := printf "Unable to find the image %q. See %s" .Destination .Position }}
+    {{- $errorLevel := site.Params.render_hooks.image.errorLevel | default "ignore" }}
+    {{- if eq $errorLevel "error" }}
+      {{- errorf $message }}
+    {{- else if eq $errorLevel "warning" }}
+      {{- warnf $message }}
+    {{- end }}
+  {{- end -}}
+  <img src="{{ .Destination }}" alt="{{ .PlainText }}"{{ with .Title }} title="{{ . }}"{{ end }} loading="lazy" decoding="async">
+{{- end -}}

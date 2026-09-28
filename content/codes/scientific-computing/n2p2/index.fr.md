@@ -1,0 +1,40 @@
+---
+title: n2p2
+linkTitle: n2p2
+icon: icon-n2p2
+weight: 17
+description: "N2P2 est un logiciel de génération de potentiels interatomiques par réseau de neurones (MLIP), disponible en conteneur Apptainer sur la plateforme DIAMOND."
+website: "https://github.com/CompPhysVienna/n2p2"
+---
+
+## Récupérez l'image de conteneur
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull n2p2.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/n2p2.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/n2p2
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+**n2p2** est un logiciel conçu pour générer et utiliser des potentiels d'énergie basés sur des réseaux de neurones pour la modélisation atomistique et moléculaire. Il permet d'entraîner des modèles sur des données issues de calculs ab initio, comme ceux provenant de la théorie de la fonctionnelle de la densité (DFT), afin de prédire avec précision les propriétés énergétiques et structurales des systèmes atomiques. Le package supporte des formats de données standards, intègre des techniques d'optimisation avancées, et est compatible avec des simulations moléculaires haute performance via des interfaces avec des outils comme LAMMPS. n2p2 est particulièrement adapté à la recherche en chimie computationnelle, science des matériaux et physique des solides.
+
+## Tutoriel
+
+{{< link-card title="Apprenez à utiliser cette image de conteneur" href="/documentation/by-container/n2p2" icon="tabler-icons/outline/package" class="mb-0" >}}
+
+## Documentation n2p2
+
+{{< card-grid >}}
+{{< link-card title="Site officiel" href="https://github.com/CompPhysVienna/n2p2" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
+{{< link-card title="Documentation officielle" href="https://compphysvienna.github.io/n2p2/" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
+{{< /card-grid >}}
+
+## Exemples
+
+{{< link-card title="Téléchargez des fichiers d'entrée" href="/downloads/n2p2-tutorial-inputs.tar.gz" icon="tabler-icons/outline/file-export" >}}

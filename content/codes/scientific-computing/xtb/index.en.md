@@ -1,0 +1,40 @@
+---
+title: xTB
+linkTitle: xTB
+icon: icon-xtb
+weight: 19
+description: "xTB is a semi-empirical quantum chemistry code based on the extended tight-binding GFN-xTB method, available as an Apptainer container on DIAMOND."
+website: "https://github.com/grimme-lab/xtb"
+---
+
+### Retrieve the container image
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull xtb.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/xtb.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/xtb
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+**xTB** is an open-source scientific computing software designed to perform atomistic simulations in the field of quantum chemistry. It can be used, in particular, for geometry optimization or molecular dynamics. xTB is parameterized for a large part of the periodic table, up to Radon (Rn, Z=86).
+
+<h3 class="mb-1">Tutorial</h3>
+
+{{< link-card title="Learn to use this container image" href="/en/documentation/by-container/xtb" icon="tabler-icons/outline/package" class="mb-0" >}}
+
+<h3 class="mb-1 mt-3">xTB documentation</h3>
+
+{{< card-grid >}}
+{{< link-card title="Official website" href="https://github.com/grimme-lab/xtb" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
+{{< link-card title="Official documentation" href="https://xtb-docs.readthedocs.io/" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
+{{< /card-grid >}}
+
+<h3 class="mb-1 mt-3">Examples</h3>
+
+{{< link-card title="Content to be added" description="<i>Download input files</i>" href="#bottom" icon="tabler-icons/outline/file-export" disabled="true" class="mb-0" >}}

@@ -1,0 +1,120 @@
+// Code page header: the code's logo (or, without one, its title set as a
+// wordmark) as the page h1, with a round arrow button at its top-right
+// corner linking to the code's official website, then the page meta line.
+// Every logo gets the same height box whatever its aspect ratio, so wide
+// wordmarks and square emblems read at a comparable weight with no
+// per-code tuning.
+
+.code-header {
+    --code-header-link-size: 2rem;
+    --code-header-link-gap: 0.5rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: 1.5rem 0 2.5rem;
+    text-align: center;
+
+    @include media-breakpoint-up(md) {
+        --code-header-link-size: 2.25rem;
+    }
+
+    .page-meta {
+        justify-content: center;
+        margin: 0;
+    }
+}
+
+// The arrow button sits in padding reserved on both sides, so the logo
+// stays centered on the page and the button never overflows narrow screens
+.code-header__identity {
+    position: relative;
+    max-width: 100%;
+}
+
+.code-header__identity--linked {
+    padding-inline: calc(var(--code-header-link-size) + var(--code-header-link-gap));
+}
+
+.code-header__title {
+    margin: 0;
+    line-height: 1.1;
+}
+
+.code-header__title--wordmark {
+    font-size: clamp(2.5rem, 10vw, 4.5rem);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    overflow-wrap: anywhere;
+}
+
+.code-header__logo {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: clamp(4.5rem, 20vw, 7rem);
+    margin-inline: auto;
+    object-fit: contain;
+}
+
+.code-header__logo--dark {
+    display: none;
+}
+
+@include color-mode(dark) {
+    .code-header__logo--light {
+        display: none;
+    }
+
+    .code-header__logo--dark {
+        display: block;
+    }
+}
+
+.code-header__website {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--code-header-link-size);
+    height: var(--code-header-link-size);
+    border: 1px solid var(--bs-border-color);
+    border-radius: 50%;
+    background-color: var(--bs-body-bg);
+    color: var(--page-muted);
+    transition:
+        color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out;
+
+    &:hover,
+    &:focus-visible {
+        border-color: currentColor;
+        color: var(--bs-link-color);
+    }
+
+    &:focus-visible {
+        outline: 2px solid var(--bs-link-color);
+        outline-offset: 2px;
+    }
+}
+
+.code-header__website-icon {
+    width: 50%;
+    height: 50%;
+    transition: transform 0.15s ease-in-out;
+
+    .code-header__website:hover &,
+    .code-header__website:focus-visible & {
+        transform: translate(1px, -1px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .code-header__website,
+    .code-header__website-icon {
+        transition: none;
+    }
+}

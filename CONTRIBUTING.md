@@ -1,87 +1,36 @@
-# Contributing to the DIAMOND website
-
-> **Branch protection**  
+> **Branch protection**
 > The `main` branch is protected: direct pushes are blocked and will be rejected. Always create a feature branch for your changes, then open a pull request so the website administrator can review and merge it. This keeps production stable and ensures every update is traceable.
->
-> **Dependency files**  
-> The files `package.json` and `package-lock.json` contain the locked dependencies for the Node.js environment. They should not be edited or modified.
 
-It is possible to edit the site directly on [the Github.com repository](https://github.com/diamond-diadem/diamond-diadem.github.io). However, this is discouraged. The best practice is to make modifications on a local branch, then push them to the GitHub repository and create a pull request. Then the website administrator can review and merge it. This approach also allows you to preview the modifications locally before pushing them to the repository, thanks to a local Hugo server;
+> **Dependency files**
+> Files `package.json` and `package-lock.json` contain the locked dependencies for the Node.js environment. They should not be edited or modified. Note that it's possible that by running `npm install` these two files get automatically updated, in that case **DISCARD those modifications before committing**.
+
+It is possible to edit the site directly on [the Github.com repository](https://github.com/diamond-diadem/diamond-diadem.github.io). However, this is discouraged. The best practice is to make modifications on a local branch, start a local server (explained below), check everything went as expected with the modifications, then push them to the GitHub repository, and create a pull request.
+
+This way, the website administrator can review and merge them, and you can preview the modifications locally before pushing them to the repository, thanks to a local Hugo server.
 
 ## Local development
 
 To run the site locally in development mode, you need to install the following dependencies:
 
-- **Node.js** - `v24.18.0` — run `node -v` to check.
-- **Hugo extended** - `v0.156.0` — run `hugo version` to check.
+- `Node.js` LTS version (run `node -v` to check if it's already available).
+- **Hugo Extended** `v0.166.0` (run `hugo version` to check its availability).
 
-### Installing Prerequisites for Linux
+### Install `Node.js`
 
-Install _Node Version Manager_ (`nvm`)
+1. Install _Node Version Manager_ (`nvm`) following [their repository install instructions](https://github.com/nvm-sh/nvm#installing-and-updating).
+2. Restart the terminal, and [verify the installation was successful](https://github.com/nvm-sh/nvm#verify-installation).
+3. Install the LTS version of `Node.js` with `nvm install --lts`.
+4. Finally, verify the installation with `node -v` and `npm -v`.
 
-```bash
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
-```
+### Install Hugo Extended
 
-Restart the terminal, then verify the installation
+The installation process for Hugo is [clearly documented](https://gohugo.io/installation/) for all platforms. However, it's important to install the **extended** version of Hugo, otherwise build time errors might appear.
 
-```bash
-nvm -v
-```
+For example, on Linux, the easiest way to get Hugo up and running is through the [prebuilt binaries](https://gohugo.io/installation/linux/#prebuilt-binaries). 
 
-List available Node.js versions
-
-```bash
-nvm ls-remote
-```
-
-Install the `24.18.0` LTS version
-
-```bash
-nvm install v24.18.0
-```
-
-Finally, verify the installation
-
-```bash
-node -v
-npm -v
-```
-
-- #### Hugo extended
-
-Download and install Hugo Extended version 0.156.0 for Linux amd64. If you are using a different operating system or architecture, adjust the download link accordingly.
-
-```bash
-wget https://github.com/gohugoio/hugo/releases/download/v0.156.0/hugo_extended_0.156.0_linux-amd64.tar.gz
-tar -xzf hugo_extended_0.156.0_linux-amd64.tar.gz
-```
-
-If you have superuser rights on your machine, run
-
-```bash
-sudo mv hugo /usr/local/bin/hugo
-sudo chmod +x /usr/local/bin/hugo
-```
-
-If not, run
-
-```bash
-mv hugo ~/.local/bin/hugo
-chmod +x ~/.local/bin/hugo
-```
-
-Make sure `~/.local/bin` is in your `PATH`. You can add this to your `~/.bashrc` or `~/.zshrc`:
-
-```bash
-export PATH="$HOME/.local/bin:$PATH"
-```
-
-Finally, verify the installation
-
-```bash
-hugo version
-```
+1. Download the [latest version](https://github.com/gohugoio/hugo/releases/latest) (look for package `hugo_extended_[version]_linux-amd64.tar.gz` **in the assets section**, and adjust for the architecture too).
+2. Extract the archive, and move the `hugo` executable to a directory on the `PATH` environment variable (or to any directory and then include it in the `PATH`). Normally `~/.local/bin` is a good place.
+3. Verify the installation with `hugo version`.
 
 ### Clone and set up the website locally
 
@@ -98,7 +47,7 @@ cd diamond-website
 npm install
 ```
 
-### Access the Development Server
+#### Access the Development Server
 
 Run the command:
 
@@ -111,7 +60,22 @@ This command starts a local development server that builds the website from your
 > Note: After some edits, you may need to stop the server (Ctrl+C) and restart it to see the changes reflected.
 > In case of issues, try clearing the Hugo cache with `hugo --gc`.
 
-## Markdown
+## Content organization and Markdown tips
+
+The website is generated by Hugo from the `.md` files contained inside the `content` folder of this repository. Directly under `content` are located the main sections of the website, with their sub-sections and pages down the hierarchy.
+
+Normally, the contributor's work is to create a new code. For that, the `codes` [archetype](https://gohugo.io/content-management/archetypes/) can be used like follows
+
+```bash
+hugo new content codes/scientific-computing/lammps/index.en.md
+```
+
+Then, by editing the `index.en.md` file the Lammps code will appear in it's dedicated page.
+
+Note that:
+1. This is the English version of the content, for the French version just copy-paste `index.en.md` into `index.fr.md` and adjust the content accordingly.
+2. The initial state of the page is as [draft](https://gohugo.io/methods/page/draft/), so it won't be visible until this front-matter property is either removed or explicitly turned to `false`.
+3. The `codes/scientific-computing/lammps/index.en.md` structure creates a [Leaf Bundle](https://gohugo.io/content-management/page-bundles/#leaf-bundles), which means that it can hold any other related content of this page like images, documents, etc.
 
 ### Syntax References
 
@@ -120,12 +84,20 @@ This command starts a local development server that builds the website from your
 
 Additional custom features are described below.
 
-### Links
+### External links
 
-To include links in Markdown, use the following syntax:
+To include external links in Markdown, use the following syntax:
 
 ```markdown
 [Link text](URL)
+```
+
+### Internal Links
+
+For internal links within the website, include only the part of the URL after the website's main address, **without the language code**, and using Hugo's `ref` method. For example, to link to `https://diamond-diadem.github.io/en/codes/visualisation/paraview/`, use:
+
+```markdown
+[ParaView]({{% ref "/codes/visualisation/paraview/" %}})
 ```
 
 ### Opening Links in a New Tab
@@ -138,61 +110,38 @@ To open a link in a new tab, use the following HTML syntax:
 
 The `target="_blank"` attribute ensures the link opens in a new tab. Always pair it with `rel="noopener noreferrer"` for external links. The `link-card` shortcode adds this `rel` value automatically when used with `target="_blank"`.
 
-### Internal Links
+### Images
 
-For internal links within the website, include only the part of the URL after the website's main address.
+Place the image you want to add (e.g., `image.png`) either in the page bundle, next to the page's `index.*.md` files, or in the `static/images/` folder. The former is recommended for images used by a single page, the latter for images shared across pages.
 
-Example: To link to `https://diamond-diadem.github.io/en/codes/visualisation/paraview/`, use:
-
-```markdown
-[ParaView](/en/codes/visualisation/paraview/)
-```
-
-## Images
-
-Place the image you want to add (e.g., `image.png`) in the `static/images/` folder in the site's source directory.
-
-The basic Markdown syntax to embed an image is:
+Embed it with the Markdown syntax, which is the same for both locations except for the path:
 
 ```markdown
-![Alternative text for the image](/images/image.png)
+![Alternative text for the image](image.png)          <!-- in the page bundle -->
+![Alternative text for the image](/images/image.png)  <!-- in static/images/ -->
 ```
 
-In HTML, use:
-
-```html
-<img alt="Alternative text for the image" src="/images/image.png" />
-```
+The alternative text is required: describe what the image shows, so that screen reader users get the same information. Markdown images are converted to WebP, get their intrinsic `width` and `height` (so the page does not jump while they load), and are lazy-loaded. Prefer them over a raw HTML `<img>`, which gets none of this and does not adapt to the color mode.
 
 ### Adapting Images for Light/Dark Themes
 
-If an image needs to adapt to light and dark themes, create two files: `image-light.png` and `image-dark.png` in `static/images`.
+If an image is unreadable in one of the themes, add a dark-mode version next to it with the same name plus a `-dark` suffix, and the same extension:
 
-Then use:
-
-```html
-<span class="custom-image" aria-hidden="true"></span>
+```text
+content/documentation/use/my-page/
+├── index.en.md
+├── index.fr.md
+├── diagram.png        # shown in light mode
+└── diagram-dark.png   # shown in dark mode
 ```
 
-Add this code in `assets/scss/_custom.scss`:
+Nothing else changes: keep referencing the image once, by its light name, and the matching version is shown automatically when the reader switches themes:
 
-```scss
-.custom-image {
-  display: block;
-  background-image: url(/images/image-light.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
-
-@include color-mode(dark) {
-  .custom-image {
-    background-image: url(/images/image-dark.png);
-  }
-}
+```markdown
+![Alternative text for the diagram](diagram.png)
 ```
 
-This keeps decorative, theme-dependent artwork out of the document semantics while still adapting to the user's chosen theme. If the image conveys content rather than decoration, use a real `<img src="..." alt="...">` or `<picture>`.
+The light version may also be named with a `-light` suffix (`diagram-light.png`); `![...](diagram.png)` still finds the pair. This works the same for images in `static/images/`. Only the version being displayed is downloaded.
 
 ### Quarantining Likely-Unused Static Files
 
@@ -202,13 +151,48 @@ When an asset in `static/` looks unused, move it to the matching path under `sta
 
 ### Add a new code page
 
-Each code is a page bundle pair (`.en.md` + `.fr.md`) under `content/codes/<category>/`, where `<category>` is `scientific-computing` or `visualisation`. The Codes section landing page lists every code automatically via the `codes-catalog` shortcode, grouped by category and ordered by weight — there is nothing else to wire up.
+Each code is a folder (a Hugo _page bundle_) under `content/codes/<category>/`, where `<category>` is `scientific-computing` or `visualisation`. The folder holds the English and French pages together with the code's logo:
 
-1. Create `content/codes/<category>/<slug>.en.md` and `content/codes/<category>/<slug>.fr.md`, using an existing page in the same category (e.g. `content/codes/scientific-computing/lammps.en.md`) as a template for the front matter and structure.
-2. Set `title`, `linkTitle`, `icon` (matching an `icon-<slug>` class defined in `assets/scss/diamond/_custom-icons.scss`, and a `logo-<slug>` class in `assets/scss/diamond/_codes-logos.scss` for the page's own top logo), and `weight` (usually the highest existing weight in the category, plus one).
-3. Fill in the retrieval commands (Apptainer/Docker), description, tutorial link, documentation links, and examples.
+```text
+content/codes/scientific-computing/abinit/
+├── index.en.md
+├── index.fr.md
+├── logo.svg        # the code's logo
+└── logo-dark.svg   # optional: replaces the logo in dark mode
+```
 
-Custom logos/icons are to be added manually; in practice this task is generally handled by the website administrator after your Markdown changes are done.
+The Codes section landing page lists every code automatically via the `codes-catalog` shortcode, grouped by category and ordered by weight — there is nothing else to wire up.
+
+1. Create the English page from the codes template (_archetype_), which fills in the front matter and the usual page structure for you:
+
+   ```bash
+   hugo new content codes/<category>/<slug>/index.en.md
+   ```
+
+   Then copy `index.en.md` to `index.fr.md` in the same folder and translate it.
+
+2. In the front matter, fill in:
+   - `title` and `linkTitle`: the code's name.
+   - `description`: one sentence used by search engines and link previews.
+   - `website`: the code's official website.
+   - `weight`: the code's position in the menu (usually the highest existing weight in the category, plus one).
+   - `icon`: the small icon shown in menus and the codes catalog, an `icon-<slug>` class defined in `assets/scss/diamond/_custom-icons.scss`.
+
+3. Add the logo: copy it into the folder as `logo.svg` (or `logo.png`, `logo.jpg`, `logo.webp`). SVG is preferred, since it stays sharp at any size. If the logo is unreadable on a dark background, add a dark-mode version as `logo-dark.<ext>`. No other setup is needed: the logo is sized automatically to match every other code page.
+
+4. Fill in the retrieval commands (Apptainer/Docker), description, tutorial link, documentation links, and examples.
+
+#### The page header
+
+Every code page gets the same header, built by `layouts/_partials/main/code-header.html`:
+
+- The logo is the page's main heading, and the code's `title` is its text alternative for screen readers. **Without a logo file, the `title` is shown in its place** as large text, so a page always has a heading.
+- When `website` is set, a round arrow button at the top-right corner of the logo links to it, in a new tab.
+- The last-update date and the link to the other language follow below.
+
+Do not add a logo or a title heading at the top of the Markdown content itself: the header already provides both.
+
+The `icon` class is still added by hand in `_custom-icons.scss`; in practice this is generally handled by the website administrator after your Markdown changes are done.
 
 ### Math Support
 
@@ -239,13 +223,14 @@ Replace `{video-id}` with the YouTube video ID. To obtain this ID, go to the You
 - Integrates cookie consent management (if configured in `config/`).
 - Automatically adapts subtitles to match the page language.
 
-<!-- ## Adding FAQs to the Home page
+## Adding FAQs to the Home page
 
-FAQs live inside `content/<lang-code>/faqs/`, and they are simple `.md` files with the following form:
+FAQs live inside `content/faqs/`, and they are simple `.md` files with the following form:
 
 ```md
 ---
 title: "Frequent question?"
+weight: 100
 ---
 
 Answer to this question.
@@ -253,4 +238,6 @@ Answer to this question.
 Can even take multiple lines, and probably use links, math equations, etc.
 ```
 
-To add FAQs, create a new file with this structure inside the mentioned folder, and it should be it. Remember to terminate the live server (if any), and re-start it for the modification to take effect. -->
+To add FAQs, create a new file with this structure inside the mentioned folder, and it should be it. For example, `content/faqs/why-guix.[en|fr].md`, where choosing `en` or `fr` will determine which language it's being targeted.
+
+Some times restarting the server is required to get the modifications up and running.

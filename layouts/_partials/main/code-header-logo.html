@@ -1,0 +1,24 @@
+{{- /*
+Renders one code logo image for the code page header.
+
+Raster images are re-encoded to WebP with their intrinsic dimensions. SVGs
+are served as is, since Hugo's image processing does not apply to them.
+The header logo sits above the fold, so it is never lazy-loaded.
+
+@param {resource.Resource} resource The logo's page resource.
+@param {string} alt The image's text alternative.
+@param {string} [variant] "light" or "dark" when the logo has a dark-mode
+  counterpart, so only the one matching the color mode is shown.
+*/ -}}
+
+{{- $class := "code-header__logo" }}
+{{- with .variant }}
+  {{- $class = printf "%s code-header__logo--%s" $class . }}
+{{- end }}
+
+{{- if eq .resource.MediaType.SubType "svg" }}
+  <img class="{{ $class }}" src="{{ .resource.RelPermalink }}" alt="{{ .alt }}" decoding="async">
+{{- else }}
+  {{- $image := .resource.Process "webp" }}
+  <img class="{{ $class }}" src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" alt="{{ .alt }}" decoding="async">
+{{- end -}}

@@ -1,0 +1,39 @@
+{{- /*
+Renders a code page's header: its logo as the page's h1 (or, when it has
+none, its title set as a wordmark) with an arrow button at its top-right
+corner linking to the code's official website, then the page meta line.
+
+The logo is found by file name in the page bundle rather than configured:
+logo.<ext> is the logo, and an optional logo-dark.<ext> replaces it in
+dark mode. The website link comes from the "website" front matter.
+
+@param {page} . The code page.
+*/ -}}
+
+{{- $light := .Resources.GetMatch "logo.*" }}
+{{- $dark := .Resources.GetMatch "logo-dark.*" }}
+{{- if and $dark (not $light) }}
+  {{- errorf "%q has a logo-dark file but no logo file for light mode." .File.Path }}
+{{- end }}
+
+<header class="code-header">
+  <div class="code-header__identity{{ with .Params.website }} code-header__identity--linked{{ end }}">
+    <h1 class="code-header__title{{ if not $light }} code-header__title--wordmark{{ end }}">
+      {{- with $light }}
+        {{- partial "main/code-header-logo.html" (dict "resource" . "alt" $.Title "variant" (cond (not $dark) "" "light")) }}
+        {{- with $dark }}
+          {{- partial "main/code-header-logo.html" (dict "resource" . "alt" $.Title "variant" "dark") }}
+        {{- end }}
+      {{- else }}
+        {{- .Title }}
+      {{- end -}}
+    </h1>
+    {{- with .Params.website }}
+    <a class="code-header__website" href="{{ . }}" target="_blank" rel="noopener noreferrer" title="{{ i18n "official_website" }}">
+      <svg class="code-header__website-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg>
+      <span class="visually-hidden">{{ i18n "official_website" }} ({{ i18n "opens_in_new_tab" }})</span>
+    </a>
+    {{- end }}
+  </div>
+  {{- partial "main/page-meta.html" . }}
+</header>

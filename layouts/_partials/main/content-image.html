@@ -1,0 +1,37 @@
+{{- /*
+Renders an image resource placed in page content.
+
+Raster images are re-encoded to WebP with their intrinsic dimensions, so the
+browser reserves their space before they load. GIFs keep their format to
+stay animated, and SVGs are served as is, since Hugo's image processing does
+not apply to them.
+
+@param {resource.Resource} resource The image resource.
+@param {string} alt The image's text alternative.
+@param {string} [title] The image's advisory title.
+@param {string} [class] The img element class attribute.
+*/ -}}
+
+{{- $image := .resource }}
+{{- $subtype := $image.MediaType.SubType }}
+{{- if not (in (slice "gif" "svg") $subtype) }}
+  {{- $image = $image.Process "webp" }}
+{{- end -}}
+
+<img
+  src="{{ $image.RelPermalink }}"
+  {{- if ne $subtype "svg" }}
+  width="{{ $image.Width }}"
+  height="{{ $image.Height }}"
+  {{- end }}
+  alt="{{ .alt }}"
+  {{- with .title }}
+  title="{{ . }}"
+  {{- end }}
+  {{- with .class }}
+  class="{{ . }}"
+  {{- end }}
+  loading="lazy"
+  decoding="async"
+>
+{{- /**/ -}}

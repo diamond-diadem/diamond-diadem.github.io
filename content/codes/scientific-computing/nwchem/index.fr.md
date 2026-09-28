@@ -1,0 +1,41 @@
+---
+title: NWChem
+linkTitle: NWChem
+icon: icon-nwchem
+toc: false
+weight: 14
+description: "NWChem est une suite de chimie quantique haute performance pour le calcul des propriétés moléculaires et électroniques, disponible en conteneur sur DIAMOND."
+website: "https://www.nwchem-sw.org/"
+---
+
+## Récupérez l'image de conteneur
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull nwchem.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/nwchem.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/nwchem
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+**NWChem** est un logiciel de chimie computationnelle conçu pour exécuter des calculs sur des systèmes chimiques allant des petites molécules aux matériaux à l'état solide et aux macromolécules. Ce programme open source offre une gamme complète de méthodes de calculs, notamment la mécanique quantique (ab initio, DFT), la dynamique moléculaire et les simulations multi-échelles. NWChem est optimisé pour s'exécuter sur des architectures informatiques parallèles et scalables, permettant de traiter des problèmes complexes avec une efficacité accrue. Il est principalement utilisé pour la modélisation de structures, l'analyse des interactions chimiques et la prédiction des propriétés électroniques, spectroscopiques et thermodynamiques.
+
+## Tutoriel
+
+{{< link-card title="Apprenez à utiliser cette image de conteneur" href="/documentation/by-container/nwchem" icon="tabler-icons/outline/package" class="mb-0" >}}
+
+## Documentation NWChem
+
+{{< card-grid >}}
+{{< link-card title="Site officiel" href="https://nwchemgit.github.io/" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
+{{< link-card title="Documentation officielle" href="https://github.com/nwchemgit/nwchem/wiki" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
+{{< /card-grid >}}
+
+## Exemples
+
+{{< link-card title="Téléchargez des fichiers d'entrée" href="/downloads/nwchem-tutorial-inputs.tar.gz" icon="tabler-icons/outline/file-export" >}}

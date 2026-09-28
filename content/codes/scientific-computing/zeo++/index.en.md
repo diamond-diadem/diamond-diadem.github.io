@@ -1,0 +1,41 @@
+---
+title: Zeo++
+linkTitle: Zeo++
+icon: icon-zeoplusplus
+toc: false
+weight: 10
+description: "Zeo++ is a software for analyzing pore structure in nanoporous materials for gas storage and adsorption applications, available on DIAMOND."
+website: "https://www.zeoplusplus.org/"
+---
+
+### Retrieve the container image
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull zeoplusplus.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/zeoplusplus.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/zeoplusplus
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+Zeo++ is a computational tool designed for the analysis and characterization of porous materials. It is particularly useful in the field of materials science, where it provides insights into the structural properties of materials such as zeolites, metal-organic frameworks (MOFs), and other nanoporous structures. Zeo++ computes various geometrical properties, including accessible surface areas, pore size distributions, and free volume within the material. The software uses algorithms based on Voronoi decomposition to identify void spaces and their connectivity. Its output helps researchers optimize materials for applications like gas storage, separation, and catalysis. Zeo++ supports input and output in common file formats used in molecular simulations, such as CIF and XYZ, ensuring compatibility with other modeling tools.
+
+<h3 class="mb-1">Tutorial</h3>
+
+{{< link-card title="Learn to use this container image" href="/en/documentation/by-container/zeo++" icon="tabler-icons/outline/package" class="mb-0" >}}
+
+<h3 class="mb-1 mt-3">Zeo++ documentation</h3>
+
+{{< card-grid >}}
+{{< link-card title="Official website" href="https://www.zeoplusplus.org/" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
+{{< link-card title="Official documentation" href="https://www.zeoplusplus.org/docs.html" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
+{{< /card-grid >}}
+
+<h3 class="mb-1 mt-3">Examples</h3>
+
+{{< link-card title="Download input files" href="/downloads/zeo++-tutorial-inputs.tar.gz" icon="tabler-icons/outline/file-export" >}}
