@@ -15,7 +15,7 @@ categories: []
 tags: []
 contributors: []
 pinned: true
-homepage: true
+homepage: false
 seo:
   title: "" # custom title (optional)
   description: "Article publié dans Advanced Engineering Materials sur les solutions de conteneurs reproductibles pour les codes et workflows en science des matériaux." # custom description (recommended)
