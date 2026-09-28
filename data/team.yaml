@@ -133,16 +133,6 @@ team:
   slug: jean-philippe-poli
   photo: /images/team/NA.png
 
-- name: Benjamin Arrondeau
-  first_name: Benjamin
-  last_name: Arrondeau
-  email: benjamin.arrondeau@univ-grenoble-alpes.fr
-  affiliation: GRICAD Grenoble
-  role: WP1 - Codes and Workflows
-  project: DIAMOND
-  personnel_type: Scientist
-  slug: benjamin-arrondeau
-  photo: /images/team/NA.png
 
   
 - name: Pierre-Antoine Bouttier
@@ -208,35 +198,6 @@ team:
   slug: jonathan-daubin
   photo: /images/team/NA.png
 
-
-- name: Nils Kasch
-  first_name: Nils
-  last_name: Kasch
-  email: nils.kasch@cea.fr
-  affiliation: CEA Saclay
-  role: WP1 - Codes and Workflows
-  project: DIAMOND
-  personnel_type: Scientist
-  slug: nils-kasch
-  bio_short: I am an engineer working on parallel material simulation codes and their deployment on HPC.
-  bio_short_fr: Je suis ingénieur et je travaille sur des codes parallèles de simulation des matériaux ainsi que sur leur déploiement sur des infrastructures HPC.
-  bio_long: I am an engineer working on parallel material simulation codes and their deployment on HPC.
-  bio_long_fr: Je suis ingénieur et je travaille sur des codes parallèles de simulation des matériaux ainsi que sur leur déploiement sur des infrastructures HPC.
-  photo: /images/team/NA.png
-  links:
-    - label: LinkedIn
-      url: www.linkedin.com/in/nils-kasch
-
-- name: David Martin-Calle
-  first_name: David
-  last_name: Martin-Calle
-  email: david.martin-calle@univ-lyon1.fr
-  affiliation: ILM Lyon
-  role: WP1 - Codes and Workflows
-  project: DIAMOND
-  personnel_type: Scientist
-  slug: david-martin-calle
-  photo: /images/team/NA.png
 
 - name: Lorenzo Paulatto
   first_name: Lorenzo
@@ -432,25 +393,7 @@ team:
       url: www.linkedin.com/in/aksam432
   orcid: 0000-0002-9880-4482
   github: aksam432
-  
-- name: Léo Orveillon
-  first_name: Léo
-  last_name: Orveillon
-  email: leo.orveillon@univ-grenoble-alpes.fr
-  affiliation: GRICAD Grenoble
-  role: WP1 - Codes and Workflows
-  project: DIAMOND
-  personnel_type: Scientist
-  slug: leo-orveillon
-  photo: /images/team/lo.png
-  bio_short: I am an engineer working on efficient ways to package and deploy scientific codes on HPC infrastructures.
-  bio_short_fr: Je suis ingénieur et je travaille sur des méthodes efficaces pour empaqueter et déployer des codes scientifiques sur des infrastructures HPC.
-  bio_long: I am an engineer working on efficient ways to package and deploy scientific codes on HPC infrastructures.
-  bio_long_fr: Je suis ingénieur et je travaille sur des méthodes efficaces pour empaqueter et déployer des codes scientifiques sur des infrastructures HPC.
-  links:                                # Optional custom links list
-    - label: LinkedIn
-      url: https://www.linkedin.com/in/leo-orveillon/
-  github: periodLeo
+
   
 - name: Karim Aït Ammar
   first_name: Karim
