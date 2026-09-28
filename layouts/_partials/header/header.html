@@ -148,12 +148,8 @@
           {{- $section := $current.Section -}}
           {{ $newsPages := where .Site.RegularPages "Section" "news" }}
           {{ $displayNews := (ge (len ($newsPages)) 1) }}
+          {{- $displayTeam := site.Params.diamond.enableTeamPage | default true -}}
           {{ range .Site.Menus.main -}}
-            {{- $displayTeam := site.Params.diamond.enableTeamPage | default true -}}
-            {{- $isTeamEntry := or (eq .URL "team/") (eq .URL "en/team/") -}}
-            {{- if and (not $displayTeam) $isTeamEntry -}}
-              {{- continue -}}
-            {{- end -}}
             {{- $active := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) -}}
             {{- $active = or $active (eq .Name $current.Title) -}}
             {{- $active = or $active (and (eq .Name ($section | humanize)) (eq $current.Section $section)) -}}
@@ -178,6 +174,10 @@
                 </a>
                 <ul class="dropdown-menu shadow rounded border-0">
                   {{ range .Children -}}
+                  {{- $isTeamEntry := or (eq .URL "team/") (eq .URL "en/team/") -}}
+                  {{- if and (not $displayTeam) $isTeamEntry -}}
+                    {{- continue -}}
+                  {{- end -}}
                   {{- $active = eq .Name $current.LinkTitle -}}
                     <li><a class="dropdown-item{{ if $active }} active{{ end }}" href="{{ .URL | absURL }}"{{ if $active }} aria-current="true"{{ end }}>{{ .Name }}</a></li>
                   {{ end -}}

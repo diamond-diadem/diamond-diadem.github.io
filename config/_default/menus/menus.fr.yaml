@@ -27,6 +27,11 @@ main:
     url: about/onto-viewer/
     weight: 16
     parent: about-fr
+  - name: Équipe
+    url: team/
+    weight: 17
+    parent: about-fr
+    identifier: team-fr
   - name: Codes
     url: codes/home/
     weight: 20
@@ -50,9 +55,6 @@ main:
   - name: Documentation
     url: documentation/home/
     weight: 45
-  - name: Équipe
-    url: team/
-    weight: 50
   - name: Contact
     url: contact/
     weight: 60
