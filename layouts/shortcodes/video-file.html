@@ -16,9 +16,11 @@
 {{- if not $src -}}
   {{- errorf "video-file shortcode: the 'src' parameter is required (called from %s)" .Position -}}
 {{- end -}}
-{{- $url := $src | relURL -}}
+{{- /* relURL leaves root-relative paths untouched, which would drop the
+  /*  baseURL subpath (e.g. /website/staging/): strip the leading slash first. */ -}}
+{{- $url := strings.TrimPrefix "/" $src | relURL -}}
 
-<video controls preload="metadata" playsinline class="static-video"{{ with .Get "poster" }} poster="{{ . | relURL }}"{{ end }}>
+<video controls preload="metadata" playsinline class="static-video"{{ with .Get "poster" }} poster="{{ strings.TrimPrefix "/" . | relURL }}"{{ end }}>
   <source src="{{ $url }}" type="video/mp4">
   <span>{{ i18n "video_unsupported" (dict "RelPermalink" $url) | safeHTML }}</span>
 </video>
