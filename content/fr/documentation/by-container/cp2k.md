@@ -7,7 +7,7 @@ description: "Tutoriel sur l'utilisation de l'image Apptainer CP2K de DIAMOND : 
 
 {{< callout context="note" title="Prérequis" >}}
 
-- Apptainer (voir soit [notre guide d'installation]({{% ref "/documentation/install/install-apptainer" %}}), soit [la documentation officiel](https://apptainer.org/docs/user/latest/quick_start.html#installation))
+- Apptainer (voir soit [notre guide d'installation]({{% ref "/documentation/install/install-apptainer" %}}), soit [la documentation officielle](https://apptainer.org/docs/user/latest/quick_start.html#installation))
 - L'image [`cp2k.sif`]({{% ref "/codes/scientific-computing/cp2k/" %}})
 - Les [fichiers d'entrée](/downloads/cp2k-tutorial-inputs.tar.gz)
 
