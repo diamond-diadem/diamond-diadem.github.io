@@ -1,30 +1,32 @@
+# Contributing to the DIAMOND website
+
 > **Branch protection**
 > The `main` branch is protected: direct pushes are blocked and will be rejected. Always create a feature branch for your changes, then open a pull request so the website administrator can review and merge it. This keeps production stable and ensures every update is traceable.
 
 > **Dependency files**
-> Files `package.json` and `package-lock.json` contain the locked dependencies for the Node.js environment. They should not be edited or modified. Note that it's possible that by running `npm install` these two files get automatically updated, in that case **DISCARD those modifications before committing**.
+> Files `package.json` and `package-lock.json` contain the locked dependencies for the Node.js environment. They should not be edited or modified. Note that it's possible that by running `npm install` in your local development environment these two files get automatically updated. In that case **DISCARD those modifications before committing**.
 
-It is possible to edit the site directly on [the Github.com repository](https://github.com/diamond-diadem/diamond-diadem.github.io). However, this is discouraged. The best practice is to make modifications on a local branch, start a local server (explained below), check everything went as expected with the modifications, then push them to the GitHub repository, and create a pull request.
+It's strongly recommended to (i) make modifications on a local branch derived from `dev`, (ii) start a local server to visually check contributions and make sure the website keeps building (explained below), and then (iii) push the contribution to the GitHub repository creating a pull request onto `dev`.
 
-This way, the website administrator can review and merge them, and you can preview the modifications locally before pushing them to the repository, thanks to a local Hugo server.
+This way, the website administrator can review and merge contributions, while contributors can preview the modifications locally before pushing them to the repository.
 
 ## Local development
 
-To run the site locally in development mode, you need to install the following dependencies:
+To run the site locally in development mode, the following dependencies must be met:
 
-- `Node.js` LTS version (run `node -v` to check if it's already available).
-- **Hugo Extended** `v0.166.0` (run `hugo version` to check its availability).
+- `Node.js` LTS version. Check it with`node -v`.
+- Hugo **extended** latest version (`v0.166.0` at the time of writing). Check it with `hugo version`.
 
 ### Install `Node.js`
 
 1. Install _Node Version Manager_ (`nvm`) following [their repository install instructions](https://github.com/nvm-sh/nvm#installing-and-updating).
 2. Restart the terminal, and [verify the installation was successful](https://github.com/nvm-sh/nvm#verify-installation).
-3. Install the LTS version of `Node.js` with `nvm install --lts`.
+3. Install the LTS `Node.js` version with `nvm install --lts`.
 4. Finally, verify the installation with `node -v` and `npm -v`.
 
 ### Install Hugo Extended
 
-The installation process for Hugo is [clearly documented](https://gohugo.io/installation/) for all platforms. However, it's important to install the **extended** version of Hugo, otherwise build time errors might appear.
+The installation process for Hugo is [clearly documented](https://gohugo.io/installation/) for all platforms. However, it's important to install the **extended** version of it, otherwise build time errors might appear.
 
 For example, on Linux, the easiest way to get Hugo up and running is through the [prebuilt binaries](https://gohugo.io/installation/linux/#prebuilt-binaries). 
 
@@ -34,7 +36,7 @@ For example, on Linux, the easiest way to get Hugo up and running is through the
 
 ### Clone and set up the website locally
 
-#### Clone the Github Repository
+Clone this GitHub repository
 
 ```bash
 git clone https://github.com/diamond-diadem/diamond-diadem.github.io.git diamond-website
@@ -47,46 +49,46 @@ cd diamond-website
 npm install
 ```
 
-#### Access the Development Server
-
-Run the command:
+And finally access the development server:
 
 ```bash
 npm run dev
 ```
 
-This command starts a local development server that builds the website from your current source files and branch. The site will automatically refresh with each edit. By default, you can view it at `http://localhost:1313`. Run this command whenever you want to work on or preview the website locally.
+This command starts a local development server that builds the website from your current source files and branch. The site will automatically refresh with each edit. By default, you can visit it at `http://localhost:1313`, or any address reported at the end of the standard output.
 
-> Note: After some edits, you may need to stop the server (Ctrl+C) and restart it to see the changes reflected.
+> After some edits, you may need to stop the server (Ctrl+C) and restart it to see the changes reflected.
 > In case of issues, try clearing the Hugo cache with `hugo --gc`.
 
 ## Content organization and Markdown tips
 
-The website is generated by Hugo from the `.md` files contained inside the `content` folder of this repository. Directly under `content` are located the main sections of the website, with their sub-sections and pages down the hierarchy.
+The website is generated by Hugo from the `.md` files contained inside the `content` folder on this repository. Directly under `content` are located the main sections of the website, with their sub-sections and pages down the hierarchy.
 
-Normally, the contributor's work is to create a new code. For that, the `codes` [archetype](https://gohugo.io/content-management/archetypes/) can be used like follows
+Let's assume the contributor's work is to create a new code. To that end, the `codes` [archetype](https://gohugo.io/content-management/archetypes/) can be used as follows (note that not all sections might have archetypes)
 
 ```bash
 hugo new content codes/scientific-computing/lammps/index.en.md
 ```
 
-Then, by editing the `index.en.md` file the Lammps code will appear in it's dedicated page.
+Here, Hugo will use the `archetypes/codes.md` archetype to generate an `index.en.md` file, where users can add the LAMMPS code information they want to include on the website.
 
 Note that:
 1. This is the English version of the content, for the French version just copy-paste `index.en.md` into `index.fr.md` and adjust the content accordingly.
 2. The initial state of the page is as [draft](https://gohugo.io/methods/page/draft/), so it won't be visible until this front-matter property is either removed or explicitly turned to `false`.
-3. The `codes/scientific-computing/lammps/index.en.md` structure creates a [Leaf Bundle](https://gohugo.io/content-management/page-bundles/#leaf-bundles), which means that it can hold any other related content of this page like images, documents, etc.
+3. The `codes/scientific-computing/lammps/index.en.md` structure creates a [Leaf Bundle](https://gohugo.io/content-management/page-bundles/#leaf-bundles), which means that it can hold any other related content of this page like images, documents, etc., alongside the `index.[en|fr].md` files, inside the `lammps` directory. See below how to include images, for example.
 
 ### Syntax References
+
+The full reference of tools, tips, and tweaks for this website come from the theme is uses.
 
 - Doks [Basic](https://getdoks.org/docs/reference/markdown-basic-syntax/) guide.
 - Doks [Advanced](https://getdoks.org/docs/reference/markdown-extended-syntax/) guide.
 
-Additional custom features are described below.
+Additional and/or most used features are described in the coming sections.
 
 ### External links
 
-To include external links in Markdown, use the following syntax:
+The syntax to include external links in Markdown is
 
 ```markdown
 [Link text](URL)
@@ -102,7 +104,7 @@ For internal links within the website, include only the part of the URL after th
 
 ### Opening Links in a New Tab
 
-To open a link in a new tab, use the following HTML syntax:
+To open a link in a new tab, use the following HTML syntax, although **this should be avoided** because it breaks the global behavior of the website's links. Use it only when exceptionally needed:
 
 ```html
 <a href="https://example.com" target="_blank" rel="noopener noreferrer">Example</a>
@@ -112,7 +114,7 @@ The `target="_blank"` attribute ensures the link opens in a new tab. Always pair
 
 ### Images
 
-Place the image you want to add (e.g., `image.png`) either in the page bundle, next to the page's `index.*.md` files, or in the `static/images/` folder. The former is recommended for images used by a single page, the latter for images shared across pages.
+Place the image you want to add (e.g., `image.png`) either in the page bundle, next to the page's `index.*.md` files, or in the `static/images/` folder. The former is recommended for small images used by a single page, the latter for images shared across pages or large images/files.
 
 Embed it with the Markdown syntax, which is the same for both locations except for the path:
 
