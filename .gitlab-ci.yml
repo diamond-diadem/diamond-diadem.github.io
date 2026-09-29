@@ -9,7 +9,7 @@ stages:
   - deploy
 
 variables:
-  HUGO_VERSION: "0.156.0"
+  HUGO_VERSION: "0.166.0"
   HUGO_ENVIRONMENT: staging
   HUGO_ENV: staging
   NODE_ENV: production
