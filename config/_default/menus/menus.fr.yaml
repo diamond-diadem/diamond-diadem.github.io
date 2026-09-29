@@ -1,7 +1,6 @@
 main:
-  - name: Notebooks ML
-    url: notebooks/
-    identifier: notebooks-fr
+  - name: Codes
+    url: codes/
     weight: 10
   - name: Workflows
     url: workflows/
@@ -9,8 +8,8 @@ main:
   - name: Documentation
     url: documentation/
     weight: 30
-  - name: Données
-    url: data/
+  - name: ML Notebooks
+    url: notebooks/
     weight: 40
   - name: Contact
     url: contact/

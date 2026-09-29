@@ -1,6 +1,5 @@
 ---
 title: "Notebooks de formation ML"
-linkTitle: Vue d'ensemble
 weight: 1
 summary: "Un parcours pas à pas pour appliquer des méthodes de ML aux données matériaux, de la qualité des données à l'optimisation bayésienne"
 description: "Tutoriel pour explorer l'utilisation du ML pour la science des matériaux, en partant des données brutes jusqu'à l'inférence du modèle."

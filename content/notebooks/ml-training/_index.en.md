@@ -1,6 +1,5 @@
 ---
 title: "ML training notebooks"
-linkTitle: Overview
 weight: 1
 summary: "A step-by-step path applying ML methods to materials data, from data quality to Bayesian optimisation"
 description: "Tutorial to discover some use of ML for material science, using a complete pipeline from raw data to model inference."
