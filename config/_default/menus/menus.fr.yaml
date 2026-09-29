@@ -1,6 +1,7 @@
 main:
-  - name: Codes
-    url: codes/
+  - name: Notebooks ML
+    url: notebooks/
+    identifier: notebooks-fr
     weight: 10
   - name: Workflows
     url: workflows/
@@ -55,6 +56,10 @@ footer:
   - name: Données
     pageRef: /data
     weight: 24
+    parent: footer-products-fr
+  - name: Notebooks ML
+    pageRef: /notebooks
+    weight: 25
     parent: footer-products-fr
   - name: Contact
     identifier: footer-contact-fr

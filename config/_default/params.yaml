@@ -5,6 +5,7 @@ images:
 mainSections:
   - about
   - codes
+  - notebooks
   - documentation
   - workflows
   - news
@@ -40,6 +41,7 @@ doks:
   bootstrapJavascript: false
   sectionNav:
     - codes
+    - notebooks
     - documentation
     - workflows
   toTopButton: true

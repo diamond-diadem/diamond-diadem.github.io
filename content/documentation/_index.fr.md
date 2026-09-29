@@ -17,7 +17,7 @@ Voici les liens pour accéder rapidement à la section de documentation des outi
 - [Utiliser une image Apptainer](/documentation/use/apptainer-image/)
 - [Utiliser un paquet Guix](/documentation/use/guix-package/)
 - [Foire aux questions (FAQ)]({{% ref "/faqs" %}})
-- [Tutoriel AG DIAMOND 2026](/documentation/by-session/diamond-ga-2026/) : l'IA appliquée à la science des matériaux
+- [Notebooks ML]({{% ref "/notebooks/ml-training" %}}) : le ML appliqué à la science des matériaux, de la qualité des données à l'optimisation bayésienne
 
 ## Tutoriels spécifiques par image
 

@@ -1,0 +1,4 @@
+{{ define "main" }}
+	{{ $resourceCards := partial "main/section-cards.html" (dict "sections" .Sections.ByWeight "heading" (T "available_resources")) }}
+	{{ partial "main/docs-page.html" (dict "page" . "afterContent" $resourceCards) }}
+{{ end }}

@@ -16,7 +16,7 @@ Here are the links for quick access to the documentation section for the tools y
 - [Using an Apptainer image]({{% ref "/documentation/use/apptainer-image/" %}})
 - [Using a Guix package]({{% ref "/documentation/use/guix-package/" %}})
 - [Frequently asked questions (FAQ)]({{% ref "/faqs" %}})
-- [DIAMOND GA 2026 tutorial]({{% ref "/documentation/by-session/diamond-ga-2026/" %}}): AI applied to materials science
+- [ML notebooks]({{% ref "/notebooks/ml-training" %}}): ML applied to materials science, from data quality to Bayesian optimisation
 
 ## Image-specific tutorials
 

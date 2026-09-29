@@ -99,7 +99,6 @@ workflows:
   featured:
     - /workflows/saw
     - /workflows/aiida-diffusion-wf
-    - /workflows/raman-denoising
   link:
     label: Explorer les workflows
     page: /workflows
