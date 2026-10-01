@@ -7,7 +7,7 @@ description: "Tutoriel sur l'utilisation de l'image Apptainer OpenDis de DIAMOND
 
 {{< callout title="Prérequis" >}}
 
-- Apptainer (voir soit [notre guide d'installation]({{% ref "/documentation/install/install-apptainer" %}}), soit [la documentation officiel](https://apptainer.org/docs/user/latest/quick_start.html#installation))
+- Apptainer (voir soit [notre guide d'installation]({{% ref "/documentation/install/install-apptainer" %}}), soit [la documentation officielle](https://apptainer.org/docs/user/latest/quick_start.html#installation))
 - L'image [`opendis.sif`]({{% ref "/codes/scientific-computing/opendis/" %}})
 - Les [fichiers d'entrée](/downloads/opendis-tutorial-inputs.tar.gz)
 

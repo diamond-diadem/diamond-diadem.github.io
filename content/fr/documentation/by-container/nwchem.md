@@ -7,7 +7,7 @@ description: "Tutoriel sur l'utilisation de l'image Apptainer NWChem de DIAMOND 
 
 {{< callout context="note" title="Prérequis" icon="tabler-icons/outline/info-circle" >}}
 
-- Apptainer (voir soit [notre guide d'installation]({{% ref "/documentation/install/install-apptainer" %}}), soit [la documentation officiel](https://apptainer.org/docs/user/latest/quick_start.html#installation))
+- Apptainer (voir soit [notre guide d'installation]({{% ref "/documentation/install/install-apptainer" %}}), soit [la documentation officielle](https://apptainer.org/docs/user/latest/quick_start.html#installation))
 - L'image [`nwchem.sif`]({{% ref "/codes/scientific-computing/nwchem/" %}})
 - Les [fichiers d'entrée](/downloads/nwchem-tutorial-inputs.tar.gz)
 

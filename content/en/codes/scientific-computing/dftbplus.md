@@ -34,7 +34,7 @@ docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-s
 
 <h3 class="mb-1">Tutorial</h3>
 
-{{< link-card title="Content to be added" description="<i>Learn to use this container image</i>" href="#bottom" icon="tabler-icons/outline/package" disabled="true" class="mb-0" >}}
+{{< link-card title="Learn to use this container image" href="/en/documentation/by-container/dftbplus" icon="tabler-icons/outline/package" class="mb-0" >}}
 
 <h3 class="mb-1 mt-3">DFTB+ documentation</h3>
 
@@ -43,6 +43,6 @@ docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-s
 {{< link-card title="Official documentation" href="https://www.dftbplus.org/documentation.html" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
 {{< /card-grid >}}
 
-<h3 class="mb-1 mt-3">Examples</h3>
+## Examples
 
-{{< link-card title="Content to be added" description="<i>Download input files</i>" href="#bottom" icon="tabler-icons/outline/file-export" disabled="true" class="mb-0" >}}
+{{< link-card title="Download input files" href="/downloads/dftbplus-tutorial-inputs.tar.gz" icon="tabler-icons/outline/file-export" >}}
