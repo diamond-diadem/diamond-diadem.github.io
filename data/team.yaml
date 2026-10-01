@@ -486,6 +486,7 @@ team:
 - name: May CHOUEIB
   first_name: May
   last_name: CHOUEIB
+  slug: may-choueib
   email: may.choueib@univ-lyon1.fr
   affiliation: ILM Lyon
   role: WP1 - Codes and Workflows
@@ -502,6 +503,7 @@ team:
 - name: Imade EL BAHRAOUI
   first_name: Imade
   last_name: EL BAHRAOUI
+  slug: imade-el-bahraoui
   email: imade.el-bahraoui@univ-grenoble-alpes.fr
   affiliation: GRICAD Grenoble
   role: WP1 - Codes and Workflows
@@ -525,6 +527,7 @@ team:
 - name: Paul Bouton
   first_name: Paul
   last_name: Bouton
+  slug: paul-bouton
   email: paul.bouton@univ-grenoble-alpes.fr
   affiliation: GRICAD Grenoble
   role: WP1 - Codes and Workflows
