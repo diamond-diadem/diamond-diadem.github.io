@@ -9,7 +9,7 @@ team:
   role: WP1 - Codes and Workflows
   project: DIAMOND
   personnel_type: Scientist
-  slug: joao-paulo-almeida-de-mendonca
+  slug: joao-paulo-almeida
   photo: /images/team/jpam.png
   bio_short: I work with bioinspired and machine learning algorithms, applying them to materials science (and some other complex systems, just for fun).
   bio_short_fr: Je travaille avec des algorithmes bio-inspirés et d\'apprentissage automatique, que j\'applique à la science des matériaux.
@@ -46,7 +46,7 @@ team:
   personnel_type: 
     - Project Coordinator
     - Scientific Lead
-  slug: noel-jakse
+  slug: no-l-jakse
   photo: /images/team/nj.png
 
 - name: François Willaime
@@ -58,7 +58,7 @@ team:
   project: DIAMOND
   personnel_type:
     - Project Coordinator
-  slug: francois-willaime
+  slug: fran-ois-willaime
   photo: /images/team/NA.png
 
 - name: Marco Saitta
@@ -90,11 +90,9 @@ team:
   last_name: Deutsch
   email: thierry.deutsch@cea.fr
   affiliation: MEM, Grenoble
-  role: WP2 - Materials Database Infrastructure
+  role: WP2 - Materials databases infrastructure
   project: DIAMOND
-  personnel_type: 
-    - Scientist
-    - Scientific Lead
+  personnel_type: Scientist
   slug: thierry-deutsch
   photo: /images/team/NA.png
   bio_short: I am a specialist in Materials simulation using HPC.
@@ -135,16 +133,6 @@ team:
   slug: jean-philippe-poli
   photo: /images/team/NA.png
 
-- name: Benjamin Arrondeau
-  first_name: Benjamin
-  last_name: Arrondeau
-  email: benjamin.arrondeau@univ-grenoble-alpes.fr
-  affiliation: GRICAD Grenoble
-  role: WP1 - Codes and Workflows
-  project: DIAMOND
-  personnel_type: Scientist
-  slug: benjamin-arrondeau
-  photo: /images/team/NA.png
 
   
 - name: Pierre-Antoine Bouttier
@@ -156,9 +144,9 @@ team:
   project: DIAMOND
   personnel_type: Scientist
   slug: pierre-antoine-bouttier
-  bio_short: I am a research engineer specialized in software engineering and applied mathematics.
+  bio_short: I am a reseach engineer specialized in software engineering and applied mathematics.
   bio_short_fr: Je suis ingénieur de recherche, spécialisé en génie logiciel et en mathématiques appliquées.
-  bio_long: I am a research engineer specialized in software engineering and applied mathematics. I am currently the deputy director of [GRICAD](https://gricad.univ-grenoble-alpes.fr/)
+  bio_long: I am a reseach engineer specialized in software engineering and applied mathematics. I am currently the deputy director of [GRICAD](https://gricad.univ-grenoble-alpes.fr/)
   bio_long_fr: Je suis ingénieur de recherche, spécialisé en génie logiciel et en mathématiques appliquées. Je suis actuellement directeur adjoint de [GRICAD](https://gricad.univ-grenoble-alpes.fr/).
   photo: /images/team/NA.png
   links:
@@ -211,39 +199,10 @@ team:
   photo: /images/team/NA.png
 
 
-- name: Nils Kasch
-  first_name: Nils
-  last_name: Kasch
-  email: nils.kasch@cea.fr
-  affiliation: CEA Saclay
-  role: WP1 - Codes and Workflows
-  project: DIAMOND
-  personnel_type: Scientist
-  slug: nils-kasch
-  bio_short: I am an engineer working on parallel material simulation codes and their deployment on HPC.
-  bio_short_fr: Je suis ingénieur et je travaille sur des codes parallèles de simulation des matériaux ainsi que sur leur déploiement sur des infrastructures HPC.
-  bio_long: I am an engineer working on parallel material simulation codes and their deployment on HPC.
-  bio_long_fr: Je suis ingénieur et je travaille sur des codes parallèles de simulation des matériaux ainsi que sur leur déploiement sur des infrastructures HPC.
-  photo: /images/team/NA.png
-  links:
-    - label: LinkedIn
-      url: https://linkedin.com/in/nils-kasch
-
-- name: David Martin-Calle
-  first_name: David
-  last_name: Martin-Calle
-  email: david.martin-calle@univ-lyon1.fr
-  affiliation: ILM Lyon
-  role: WP1 - Codes and Workflows
-  project: DIAMOND
-  personnel_type: Scientist
-  slug: david-martin-calle
-  photo: /images/team/NA.png
-
 - name: Lorenzo Paulatto
   first_name: Lorenzo
   last_name: Paulatto
-  email: lorenzo.paulatto@sorbonne-universite.fr
+  email: Lorenzo.paulatto@sorbonne-universite.fr
   affiliation: Sorbonne Université
   role: WP1 - Codes and Workflows
   project: DIAMOND
@@ -261,9 +220,9 @@ team:
   personnel_type: Scientist
   slug: irina-piazza
   photo: /images/team/irina.png
-  bio_short: I am a research engineer building automated workflows for machine learning interatomic potential in HCP.
+  bio_short: I am a reseach engineer buiding automated workflows for machine learning interatomic potential in HCP.
   bio_short_fr: Je suis ingénieure de recherche et je développe des workflows automatisés pour les potentiels interatomiques d\'apprentissage automatique sur des infrastructures HPC.
-  bio_long: I am a research engineer building automated workflows for machine learning interatomic potential in HCP and I am integrating existing MLIP workflow inside the DIAMOND platform.
+  bio_long: I am a reseach engineer buiding automated workflows for machine learning interatomic potential in HCP and I am integrating exsting MLIP workflow inside the DIAMOND platform.
   bio_long_fr: Je suis ingénieure de recherche et je développe des workflows automatisés pour les potentiels interatomiques d\'apprentissage automatique sur des infrastructures HPC. J'intègre également des workflows MLIP existants dans la plateforme DIAMOND.
   links:
     - label: Google Scholar
@@ -395,7 +354,7 @@ team:
 - name: Anruo Zhong
   first_name: Anruo
   last_name: Zhong
-  email: anruo.zhong@cea.fr
+  email: Anruo.ZHONG@cea.fr
   role: WP3 - Machine Learning Interatomic Potentials
   project: DIAMOND
   personnel_type: Scientist
@@ -431,28 +390,10 @@ team:
     - label: Google Scholar
       url: https://scholar.google.com/citations?user=iE9GGREAAAAJ&hl=sv
     - label: LinkedIn
-      url: https://linkedin.com/in/aksam432
+      url: www.linkedin.com/in/aksam432
   orcid: 0000-0002-9880-4482
   github: aksam432
-  
-- name: Léo Orveillon
-  first_name: Léo
-  last_name: Orveillon
-  email: leo.orveillon@univ-grenoble-alpes.fr
-  affiliation: GRICAD Grenoble
-  role: WP1 - Codes and Workflows
-  project: DIAMOND
-  personnel_type: Scientist
-  slug: leo-orveillon
-  photo: /images/team/lo.png
-  bio_short: I am an engineer working on efficient ways to package and deploy scientific codes on HPC infrastructures.
-  bio_short_fr: Je suis ingénieur et je travaille sur des méthodes efficaces pour empaqueter et déployer des codes scientifiques sur des infrastructures HPC.
-  bio_long: I am an engineer working on efficient ways to package and deploy scientific codes on HPC infrastructures.
-  bio_long_fr: Je suis ingénieur et je travaille sur des méthodes efficaces pour empaqueter et déployer des codes scientifiques sur des infrastructures HPC.
-  links:                                # Optional custom links list
-    - label: LinkedIn
-      url: https://www.linkedin.com/in/leo-orveillon/
-  github: periodLeo
+
   
 - name: Karim Aït Ammar
   first_name: Karim
@@ -486,7 +427,7 @@ team:
   personnel_type: Scientist
   slug: yaidel
   photo: /images/team/NA.png
-  bio_short: I\'m a research engineer working on software professionalization, cleaning, and improvement, as well as codes containerization.
+  bio_short: I\'m a research engineer working on software profesionalization, cleaning, and improvement, as well as codes containerization.
   bio_short_fr: Je suis ingénieur de recherche et je travaille sur la professionnalisation, le nettoyage et l\'amélioration des logiciels, ainsi que sur la conteneurisation des codes.
   github: yaideltg
 
@@ -497,20 +438,18 @@ team:
   affiliation: CEA Saclay
   role: WP1 - Codes and Workflows
   project: DIAMOND
-  personnel_type: Scientist
-  slug: gabriele-cassetta
+  personnel_type: Research Engineer
+  slug: meisdabosch
   photo: /images/team/NA.png
   bio_short: I work at the intersection of machine learning and experimental physics, focusing on LIBS data and machine learning for materials science.
   bio_short_fr: Je travaille à l'intersection de l'apprentissage automatique et de la physique expérimentale, en me concentrant sur les données LIBS et la modélisation scientifique pour la science des matériaux.
   bio_long: |-
     I am a research engineer working on machine learning methods for scientific applications, with a focus on LIBS (Laser-Induced Breakdown Spectroscopy) data within the DIAMOND project.
-
     - Interests: machine learning for science, LIBS spectroscopy, scientific computing.
     - Background: computer engineering with specialization in AI and data analytics.
     - Tools: Python, PyTorch, scientific computing.
   bio_long_fr: |-
     Je suis ingénieur de recherche et je travaille sur des méthodes d'apprentissage automatique appliquées aux sciences, avec un focus sur les données LIBS (Laser-Induced Breakdown Spectroscopy) dans le cadre du projet DIAMOND.
-
     - Intérêts : apprentissage automatique pour les sciences, spectroscopie LIBS, calcul scientifique.
     - Formation : ingénierie informatique avec spécialisation en IA et analyse de données.
     - Outils : Python, PyTorch, calcul scientifique.
@@ -519,3 +458,91 @@ team:
       url: https://www.linkedin.com/in/gabriele-cassetta/
   orcid: 0009-0006-2277-0622
   github: merhametsize
+
+- name: Yiran Lu
+  first_name: Yiran
+  last_name: Lu
+  email: yiran.lu@grenoble-inp.fr
+  affiliation: GRICAD Grenoble
+  role: WP1 - Codes and Workflows
+  project: DIAMOND
+  personnel_type: Research Engineer
+  slug: yiran-lu
+  photo: /images/team/yl.jpg
+  bio_short: I work with scientific codes and workflows for materials science on HPC infrastructures.
+  bio_short_fr: Je travaille avec des codes scientifiques et des flux de travail pour la science des matériaux sur des infrastructures HPC.
+  bio_long: |-
+     I am research engineer at GRICAD. I work on delivering scientific codes and workflows for materials science on HPC infrastructures. I am also interested in the development of software tools for scientific computing and data analysis.
+  bio_long_fr: |-
+     Je suis ingénieur de recherche à GRICAD. Je travaille sur la livraison de codes scientifiques et de flux de travail pour la science des matériaux sur des infrastructures HPC. Je m'intéresse également au développement d'outils logiciels pour le calcul scientifique et l'analyse de données.
+  links:
+    - label: LinkedIn
+      url: https://www.linkedin.com/in/yiran-lu-66424012a
+  website: https://yiranlus.github.io/
+  github: yiranlus
+
+
+
+- name: May CHOUEIB
+  first_name: May
+  last_name: CHOUEIB
+  slug: may-choueib
+  email: may.choueib@univ-lyon1.fr
+  affiliation: ILM Lyon
+  role: WP1 - Codes and Workflows
+  project: DIAMOND
+  personnel_type: Scientist
+  photo: /images/team/mc.png
+  bio_short: My work focuses on developing AI tools to extract, analyze, and leverage multimodal data. I am currently working on extracting and structuring data from the scientific literature in materials science.
+  bio_short_fr: Mes travaux portent sur le développement d'outils IA pour extraire, analyser et valoriser des données multimodales. Je travaille actuellement sur l'extraction et la structuration de données issues de la littérature scientifique en science des matériaux
+  links:
+    - label: Google Scholar
+      url: https://scholar.google.com/citations?hl=fr&user=RKiZlncAAAAJ
+
+
+- name: Imade EL BAHRAOUI
+  first_name: Imade
+  last_name: EL BAHRAOUI
+  slug: imade-el-bahraoui
+  email: imade.el-bahraoui@univ-grenoble-alpes.fr
+  affiliation: GRICAD Grenoble
+  role: WP1 - Codes and Workflows
+  project: DIAMOND
+  personnel_type: Scientist 
+  photo: /images/team/ieb.jpg
+  bio_short: I am a research engineer working on the containerization of scientific codes and their deployment in HPC environments.
+  bio_short_fr: Je suis ingénieur de recherche et je travaille sur la conteneurisation de travaux scientifiques et leur déploiement dans des environnements HPC
+  bio_long: |-
+    I am a research engineer working on the containerization of scientific codes and their deployment in HPC environments.
+      - Interests: HPC, Reproducibility, Performance optimization
+  bio_long_fr: |-
+    Je suis ingénieur de recherche et je travaille sur la conteneurisation de travaux scientifiques et leur déploiement dans des environnements HPC
+      - Intérêts : Calcul Haute Performance, Reproductibilité, Optimisation des performances
+  links:
+    - label: LinkedIn
+      url: www.linkedin.com/in/imade-el-bahraoui-488634202
+  github : imadeelb
+
+
+- name: Paul Bouton
+  first_name: Paul
+  last_name: Bouton
+  slug: paul-bouton
+  email: paul.bouton@univ-grenoble-alpes.fr
+  affiliation: GRICAD Grenoble
+  role: WP1 - Codes and Workflows
+  project: DIAMOND
+  personnel_type: Scientist
+  photo: /images/team/pb.jpeg
+  bio_short: I am a research engineer working on the containerization of scientific codes and their deployment in HPC environments.
+  bio_short_fr: Je suis ingénieur de recherche et je travaille sur la conteneurisation de travaux scientifiques et leur déploiement dans des environnements HPC
+  bio_long: |-
+    I am a research engineer working on the containerization of scientific codes and their deployment in HPC environments.
+      - Interests: HPC, Reproducibility, Performance optimization, sustainability
+  bio_long_fr: |-
+    Je suis ingénieur de recherche et je travaille sur la conteneurisation de travaux scientifiques et leur déploiement dans des environnements HPC
+      - Intérêts : Calcul Haute Performance, Reproductibilité, Optimisation des performances, sobriété numérique
+  links:
+    - label: LinkedIn
+      url: https://www.linkedin.com/in/paul-bouton-587a6b12a/
+      
