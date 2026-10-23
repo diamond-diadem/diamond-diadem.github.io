@@ -5,17 +5,27 @@ linkTitle: Wannier90
 icon: icon-wannier90
 toc: false
 weight: 13
+description: "Wannier90 computes maximally localized Wannier functions to analyze the electronic properties of materials, available as a container on DIAMOND."
 ---
 
-<a href="https://wannier.org/" target="_blank" class="codes-pages-top-logo">
-  <img alt="Wannier90" class="logo-wannier90"/>
+<a href="https://wannier.org/" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo">
+  <span class="logo-wannier90" aria-hidden="true"></span>
 </a>
 
-### Retrieve the Apptainer image
+### Retrieve the container image
 
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
 ```bash
-apptainer pull wannier90.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/wannier90-from-guix.sif:latest
+apptainer pull wannier90.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/wannier90.sif:latest
 ```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/wannier90
+```
+{{< /tab >}}
+{{< /tabs >}}
 
 <div align="justify">
 
@@ -23,12 +33,17 @@ apptainer pull wannier90.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamo
 
 </div>
 
-### Learn how to use this specific container image _(to be added)_
+<h3 class="mb-1">Tutorial</h3>
 
-### Wannier90 documentation
+{{< link-card title="Learn to use this container image" href="/en/documentation/by-container/wannier90" icon="tabler-icons/outline/package" class="mb-0" >}}
 
-- #### <a href="https://wannier.org/" target="_blank">Official website</a>
+<h3 class="mb-1 mt-3">Wannier90 documentation</h3>
 
-- #### <a href="https://github.com/wannier-developers/wannier90/tree/develop/docs" target="_blank">Official documentation</a>
+{{< card-grid >}}
+{{< link-card title="Official website" href="https://wannier.org/" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
+{{< link-card title="Official documentation" href="https://wannier.org/support/" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
+{{< /card-grid >}}
 
-- #### Examples: input files _(to be added)_
+<h3 class="mb-1 mt-3">Examples</h3>
+
+{{< link-card title="Download input files" href="/downloads/wannier90-tutorial-inputs.tar.gz" icon="tabler-icons/outline/file-export" >}}

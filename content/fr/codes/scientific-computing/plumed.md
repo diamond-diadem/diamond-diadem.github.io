@@ -5,12 +5,13 @@ linkTitle: PLUMED
 icon: icon-plumed
 toc: false
 weight: 8
+description: "PLUMED est un plugin open-source pour les méthodes d'échantillonnage amélioré en dynamique moléculaire, disponible en conteneur Apptainer sur DIAMOND."
 ---
 
 <div class="codes-pages-top-logo">
 
-<a href="https://www.plumed.org/" target="_blank" class="codes-pages-top-logo mb-0">
-    <img alt="PLUMED" class="logo-plumed">
+<a href="https://www.plumed.org/" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo mb-0">
+    <span class="logo-plumed" aria-hidden="true"></span>
 </a>
 
 <h3 style="font-weight: 500;" align="center">The community-developed PLUgin for MolEcular Dynamics</h3>
@@ -19,11 +20,20 @@ weight: 8
 
 <hr>
 
-### Récupérez l'image Apptainer
+### Récupérez l'image de conteneur
 
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
 ```bash
 apptainer pull plumed.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/plumed.sif:latest
 ```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/plumed
+```
+{{< /tab >}}
+{{< /tabs >}}
 
 <div align="justify">
 
@@ -39,7 +49,7 @@ En outre, Plumed prend en charge une interface de script qui permet aux utilisat
 
 <h3 class="mb-1">Tutoriel</h3>
 
-{{< link-card title="Contenu à venir" description="<i>Apprenez à utiliser cette image de conteneur</i>" href="#bottom" icon="tabler-icons/outline/package" disabled="true">}}
+{{< link-card title="Apprenez à utiliser cette image de conteneur" href="/documentation/by-container/plumed" icon="tabler-icons/outline/package" class="mb-0" >}}
 
 <h3 class="mb-1 mt-3">Documentation PLUMED</h3>
 
@@ -50,4 +60,4 @@ En outre, Plumed prend en charge une interface de script qui permet aux utilisat
 
 <h3 class="mb-1 mt-3">Exemples</h3>
 
-{{< link-card title="Contenu à venir" description="<i>Téléchargez des fichiers d'entrée</i>" href="#bottom" icon="tabler-icons/outline/file-export" disabled="true" class="mb-0" >}}
+{{< link-card title="Téléchargez des fichiers d'entrée" href="/downloads/plumed-tutorial-inputs.tar.gz" icon="tabler-icons/outline/file-export" >}}

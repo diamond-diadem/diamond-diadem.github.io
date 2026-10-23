@@ -26,13 +26,16 @@ import Index from 'flexsearch';
       id: 'id',
       index: [
         {
-          field: 'title'
+          field: 'title',
+          weight: 6
         },
         {
-          field: 'tags'
+          field: 'tags',
+          weight: 3
         },
         {
-          field: {{ if site.Params.doks.indexSummary }}'summary'{{ else }}'content'{{ end }}
+          field: {{ if site.Params.doks.indexSummary }}'summary'{{ else }}'content'{{ end }},
+          weight: 1
         },
         {
           field:  'date',
@@ -44,6 +47,103 @@ import Index from 'flexsearch';
     }
   });
 
+  const queryInput = document.querySelector('.search-text');
+  const searchModal = document.getElementById('searchModal');
+  const recentSelectionLimit = 5;
+  const recentSelectionStorageKey = 'flexsearch-recent-selections{{ if site.Language.Lang }}-{{ site.Language.Lang }}{{ end }}';
+
+  function getRecentSelections() {
+    try {
+      const stored = window.localStorage.getItem(recentSelectionStorageKey);
+      const parsed = stored ? JSON.parse(stored) : [];
+      return Array.isArray(parsed)
+        ? parsed.filter(function (item) {
+          return item
+            && typeof item.title === 'string'
+            && item.title.trim() !== ''
+            && typeof item.permalink === 'string'
+            && item.permalink.trim() !== '';
+        }).slice(0, recentSelectionLimit)
+        : [];
+    } catch (error) {
+      return [];
+    }
+  }
+
+  function saveRecentSelection(item) {
+    if (!item || !item.title || !item.permalink) {
+      return;
+    }
+
+    const recentItem = {
+      title: item.title,
+      permalink: item.permalink
+    };
+
+    const nextRecentSelections = [recentItem].concat(
+      getRecentSelections().filter(function (entry) {
+        return entry.permalink !== recentItem.permalink;
+      })
+    ).slice(0, recentSelectionLimit);
+
+    try {
+      window.localStorage.setItem(recentSelectionStorageKey, JSON.stringify(nextRecentSelections));
+    } catch (error) {
+      // Ignore storage failures so search still works in restricted browsers.
+    }
+  }
+
+  function hideStatusMessages() {
+    document.querySelector('.search-no-recent').classList.add('d-none');
+    document.querySelector('.search-no-results').classList.add('d-none');
+  }
+
+  function renderRecentSearches() {
+    const recentSelections = getRecentSelections();
+
+    try {
+      window.localStorage.setItem(recentSelectionStorageKey, JSON.stringify(recentSelections));
+    } catch (error) {
+      // Ignore storage failures so search still works in restricted browsers.
+    }
+
+    const results = document.querySelector('.search-results');
+    results.textContent = '';
+
+    if (recentSelections.length === 0) {
+      document.querySelector('.search-no-results').classList.add('d-none');
+      document.querySelector('.search-no-recent').classList.remove('d-none');
+      return;
+    }
+
+    hideStatusMessages();
+
+    const fragment = document.createDocumentFragment();
+    const section = document.createElement('section');
+    section.className = 'recent-searches mt-3';
+
+    const heading = document.createElement('p');
+    heading.className = 'recent-searches-label text-uppercase fw-semibold mb-3';
+    heading.textContent = '{{ i18n "search_recent_label" }}';
+    section.appendChild(heading);
+
+    const wrapper = document.createElement('div');
+    wrapper.className = 'recent-searches-list';
+
+    recentSelections.forEach(function (item) {
+      const link = document.createElement('a');
+      link.className = 'recent-search-link';
+      link.href = item.permalink;
+      link.innerHTML = '<span class="recent-search-link__title"></span>';
+      link.querySelector('.recent-search-link__title').textContent = item.title;
+      wrapper.appendChild(link);
+    });
+
+    section.appendChild(wrapper);
+    fragment.appendChild(section);
+    results.appendChild(fragment);
+  }
+
   function showResults(items) {
     const template = document.querySelector('template').content;
     const fragment = document.createDocumentFragment();
@@ -51,60 +151,65 @@ import Index from 'flexsearch';
     const results = document.querySelector('.search-results');
     results.textContent = '';
 
-    const itemsLength = Object.keys(items).length;
+    const itemsLength = items.length;
 
     // Show/hide "No recent searches" and "No search results" messages
-    if ((itemsLength === 0) && (query.value === '')) {
-      // Hide "No search results" message
-      document.querySelector('.search-no-results').classList.add('d-none');
-      // Show "No recent searches" message
-      document.querySelector('.search-no-recent').classList.remove('d-none');
-    } else if ((itemsLength === 0) && (query.value !== '')) {
-      // Hide "No recent searches" message
+    if ((itemsLength === 0) && (queryInput.value !== '')) {
       document.querySelector('.search-no-recent').classList.add('d-none');
       // Show "No search results" message
       const queryNoResults = document.querySelector('.query-no-results');
-      queryNoResults.innerText = query.value;
+      queryNoResults.innerText = queryInput.value;
       document.querySelector('.search-no-results').classList.remove('d-none');
     } else {
-      // Hide both "No recent searches" and "No search results" messages
-      document.querySelector('.search-no-recent').classList.add('d-none');
-      document.querySelector('.search-no-results').classList.add('d-none');
+      hideStatusMessages();
     }
 
-    for (const id in items) {
-      const item = items[id];
+    items.forEach(function (item) {
       const result = template.cloneNode(true);
       const a = result.querySelector('a');
       const time = result.querySelector('time');
       const content = result.querySelector('.content');
       a.innerHTML = item.title;
       a.href = item.permalink;
+      a.addEventListener('click', function () {
+        saveRecentSelection(item);
+      });
       time.innerText = item.date;
       content.innerHTML = item.summary;
       fragment.appendChild(result);
-    }
+    });
 
     results.appendChild(fragment);
   }
 
   function doSearch() {
-    const query = document.querySelector('.search-text').value.trim();
+    const query = queryInput.value.trim();
+
+    if (query === '') {
+      renderRecentSearches();
+      return;
+    }
     const limit = {{ .searchLimit }};
     const results = index.search({
       query: query,
       enrich: true,
       limit: limit,
     });
-    const items = {};
+    const scored = new Map();
 
     results.forEach(function (result) {
       result.result.forEach(function (r) {
-        items[r.id] = r.doc;
+        const prev = scored.get(r.id);
+        const score = (prev ? prev.score : 0) + (r.score || 0);
+        scored.set(r.id, { doc: r.doc, score: score });
       });
     });
 
-    showResults(items);
+    const ordered = Array.from(scored.values())
+      .sort(function (a, b) { return b.score - a.score; })
+      .map(function (entry) { return entry.doc; });
+
+    showResults(ordered);
   }
 
   function enableUI() {
@@ -116,9 +221,22 @@ import Index from 'flexsearch';
     searchform.addEventListener('input', function () {
       doSearch();
     });
+    if (searchModal) {
+      searchModal.addEventListener('shown.bs.modal', function () {
+        if (queryInput.value.trim() === '') {
+          renderRecentSearches();
+        }
+        queryInput.focus();
+      });
+      searchModal.addEventListener('hidden.bs.modal', function () {
+        queryInput.value = '';
+        renderRecentSearches();
+      });
+    }
     document.querySelector('.search-loading').classList.add('d-none');
     document.querySelector('.search-input').classList.remove('d-none');
-    document.querySelector('.search-text').focus();
+    queryInput.focus();
+    renderRecentSearches();
   }
 
   function buildIndex() {

@@ -5,17 +5,27 @@ linkTitle: Gmsh
 icon: icon-gmsh
 toc: false
 weight: 9
+description: "Gmsh is an open-source 3D mesh generator with a built-in CAD engine for finite element simulations, available as a container on DIAMOND."
 ---
 
-<a href="https://gmsh.info/" target="_blank" class="codes-pages-top-logo">
-    <img alt="Gmsh" class="logo-gmsh">
+<a href="https://gmsh.info/" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo">
+    <span class="logo-gmsh" aria-hidden="true"></span>
 </a>
 
-### Retrieve the Apptainer image
+### Retrieve the container image
 
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
 ```bash
 apptainer pull gmsh.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/gmsh.sif:latest
 ```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/gmsh
+```
+{{< /tab >}}
+{{< /tabs >}}
 
 <div align="justify">
 
@@ -27,12 +37,17 @@ Moreover, Gmsh includes a powerful scripting language that allows users to autom
 
 </div>
 
-### Learn how to use this specific container _(to be added)_
+<h3 class="mb-1">Tutorial</h3>
 
-### Gmsh documentation
+{{< link-card title="Learn to use this container image" href="/en/documentation/by-container/gmsh" icon="tabler-icons/outline/package" class="mb-0" >}}
 
-- #### <a href="https://gmsh.info/" target="_blank">Official website</a>
+<h3 class="mb-1 mt-3">Gmsh documentation</h3>
 
-- #### <a href="https://gmsh.info/#Documentation" target="_blank">Official documentation</a>
+{{< card-grid >}}
+{{< link-card title="Official website" href="https://gmsh.info/" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
+{{< link-card title="Official documentation" href="https://gmsh.info/#Documentation" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
+{{< /card-grid >}}
 
-- #### Examples: input files _(to be added)_
+<h3 class="mb-1 mt-3">Examples</h3>
+
+{{< link-card title="Download input files" href="/downloads/gmsh-tutorial-inputs.tar.gz" icon="tabler-icons/outline/file-export" >}}

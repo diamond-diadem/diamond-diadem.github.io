@@ -5,12 +5,13 @@ linkTitle: VESTA
 icon: icon-vesta
 toc: false
 weight: 3
+description: "VESTA est un logiciel de visualisation 3D de structures cristallines et densités électroniques pour la science des matériaux, disponible sur DIAMOND."
 ---
 
 <div class="codes-pages-top-logo">
 
-<a href="https://jp-minerals.org/vesta/" target="blank" class="codes-pages-top-logo mb-0">
-   <img alt="VESTA" class="logo-vesta"/>
+<a href="https://jp-minerals.org/vesta/" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo mb-0">
+   <span class="logo-vesta" aria-hidden="true"></span>
 </a>
 
 <h4 align="center">"<b>V</b>isualization for <b>E</b>lectronic and <b>ST</b>ructural <b>A</b>nalysis"</h4>
@@ -19,11 +20,20 @@ weight: 3
 
 <hr>
 
-### Récupérez l'image Apptainer
+### Récupérez l'image de conteneur
 
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
 ```bash
 apptainer pull vesta.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/vesta.sif:latest
 ```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/vesta
+```
+{{< /tab >}}
+{{< /tabs >}}
 
 <div align="justify">
 

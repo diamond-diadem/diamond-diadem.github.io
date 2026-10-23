@@ -5,17 +5,27 @@ linkTitle: XCrySDen
 icon: icon-xcrysden
 toc: false
 weight: 5
+description: "XCrySDen is a crystal and molecular structure visualization software for electronic structure calculations, available as a container on DIAMOND."
 ---
 
-<a href="http://www.xcrysden.org/" target="blank" class="codes-pages-top-logo">
-    <img alt="XCrySDen" class="logo-xcrysden"/>
+<a href="http://www.xcrysden.org/" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo">
+    <span class="logo-xcrysden" aria-hidden="true"></span>
 </a>
 
-### Retrieve the Apptainer image
+### Retrieve the container image
 
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
 ```bash
 apptainer pull xcrysden.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/xcrysden.sif:latest
 ```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/xcrysden
+```
+{{< /tab >}}
+{{< /tabs >}}
 
 <div align="justify">
 
@@ -23,12 +33,17 @@ apptainer pull xcrysden.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamon
 
 </div>
 
-### Learn how to use this specific container  _( to be added )_
+<h3 class="mb-1">Tutorial</h3>
 
-### XCrySDen documentation
+{{< link-card title="Content to be added" description="<i>Learn to use this container image</i>" href="#bottom" icon="tabler-icons/outline/package" disabled="true" class="mb-0" >}}
 
-- #### <a href="http://www.xcrysden.org/" target="_blank">Official website</a>
+<h3 class="mb-1 mt-3">XCrySDen documentation</h3>
 
-- #### <a href="http://www.xcrysden.org/Documentation.html" target="_blank">Official documentation</a>
+{{< card-grid >}}
+{{< link-card title="Official website" href="http://www.xcrysden.org/" target="_blank" icon="tabler-icons/outline/world-www"  class="mb-0" >}}
+{{< link-card title="Official documentation" href="http://www.xcrysden.org/Documentation.html" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
+{{< /card-grid >}}
 
-- #### Examples: input files _( to be added )_
+<h3 class="mb-1 mt-3">Examples</h3>
+
+{{< link-card title="Content to be added" description="<i>Download input files</i>" href="#bottom" icon="tabler-icons/outline/file-export" disabled="true" class="mb-0" >}}

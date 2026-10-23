@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Notebooks home illustration (dark theme variant).
+     A notebook whose output cell plots predictions against actual values and a
+     decision tree with the path leading to one prediction (the AI training
+     notebooks), next to an autoencoder (the Raman denoising pipeline).
+     Generated together with its other theme variant; keep both in sync. -->
+<svg
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="1200"
+   height="340"
+   viewBox="0 0 1200 340">
+  <g style="fill:none;stroke-linecap:round;stroke-linejoin:round">
+    <!-- Notebook window -->
+    <rect x="40" y="30" width="360" height="280" rx="18" style="fill:#303840;stroke:#6fb1e3;stroke-width:5" />
+    <path d="M 40,72 H 400" style="stroke:#6fb1e3;stroke-width:4" />
+    <g style="fill:#6fb1e3">
+      <circle cx="68" cy="51" r="7" />
+      <circle cx="92" cy="51" r="7" />
+      <circle cx="116" cy="51" r="7" />
+    </g>
+    <!-- Code cell -->
+    <rect x="62" y="88" width="316" height="50" rx="10" style="fill:#34414d;stroke:#6fb1e3;stroke-width:3" />
+    <g style="fill:#6fb1e3">
+      <rect x="76" y="98" width="8" height="30" rx="4" />
+      <rect x="100" y="101" width="170" height="9" rx="4.5" />
+      <rect x="100" y="117" width="110" height="9" rx="4.5" />
+      <rect x="220" y="117" width="60" height="9" rx="4.5" style="fill:#4ba3ff" />
+    </g>
+    <!-- Output cell: predictions against actual values -->
+    <rect x="62" y="150" width="316" height="140" rx="10" style="stroke:#6fb1e3;stroke-width:3" />
+    <rect x="76" y="166" width="8" height="104" rx="4" style="fill:#6fb1e3" />
+    <path d="M 112,168 V 270 H 362" style="stroke:#69737d;stroke-width:3" />
+    <path d="M 120,262 352,178" style="stroke:#4ba3ff;stroke-width:4" />
+    <g style="fill:#6fb1e3">
+      <circle cx="149.1" cy="262.5" r="5" />
+      <circle cx="150.8" cy="257.4" r="5" />
+      <circle cx="154.8" cy="249.9" r="5" />
+      <circle cx="164.3" cy="251.0" r="5" />
+      <circle cx="180.1" cy="236.8" r="5" />
+      <circle cx="211.7" cy="232.1" r="5" />
+      <circle cx="219.8" cy="227.4" r="5" />
+      <circle cx="220.3" cy="217.0" r="5" />
+      <circle cx="229.7" cy="220.0" r="5" />
+      <circle cx="237.4" cy="224.0" r="5" />
+      <circle cx="250.8" cy="216.6" r="5" />
+      <circle cx="251.8" cy="211.4" r="5" />
+      <circle cx="282.1" cy="190.1" r="5" />
+      <circle cx="295.7" cy="199.5" r="5" />
+    </g>
+    <!-- Decision tree: split nodes, leaves and the decision path to one prediction -->
+    <path d="M 669,104 579,148 M 579,192 534,236 M 579,192 624,236 M 759,192 804,236" style="stroke:#69737d;stroke-width:3" />
+    <path d="M 669,104 759,148 M 759,192 714,236" style="stroke:#4ba3ff;stroke-width:5" />
+    <rect x="613" y="60" width="112" height="44" rx="10" style="fill:#34414d;stroke:#4ba3ff;stroke-width:3" />
+    <rect x="631" y="77.5" width="44" height="9" rx="4.5" style="fill:#6fb1e3" />
+    <rect x="683" y="77.5" width="24" height="9" rx="4.5" style="fill:#4ba3ff" />
+    <rect x="523" y="148" width="112" height="44" rx="10" style="fill:#34414d;stroke:#6fb1e3;stroke-width:3" />
+    <rect x="541" y="165.5" width="44" height="9" rx="4.5" style="fill:#6fb1e3" />
+    <rect x="593" y="165.5" width="24" height="9" rx="4.5" style="fill:#4ba3ff" />
+    <rect x="703" y="148" width="112" height="44" rx="10" style="fill:#34414d;stroke:#4ba3ff;stroke-width:3" />
+    <rect x="721" y="165.5" width="44" height="9" rx="4.5" style="fill:#6fb1e3" />
+    <rect x="773" y="165.5" width="24" height="9" rx="4.5" style="fill:#4ba3ff" />
+    <rect x="502" y="236" width="64" height="44" rx="10" style="fill:#303840;stroke:#6fb1e3;stroke-width:3" />
+    <rect x="592" y="236" width="64" height="44" rx="10" style="fill:#303840;stroke:#6fb1e3;stroke-width:3" />
+    <rect x="682" y="236" width="64" height="44" rx="10" style="fill:#4ba3ff;stroke:#4ba3ff;stroke-width:3" />
+    <rect x="772" y="236" width="64" height="44" rx="10" style="fill:#303840;stroke:#6fb1e3;stroke-width:3" />
+    <!-- Autoencoder: encoder and decoder funnels -->
+    <path d="M 949,82 1049,138 V 202 L 949,258 Z" style="fill:#34414d" />
+    <path d="M 1149,82 1049,138 V 202 L 1149,258 Z" style="fill:#34414d" />
+    <path d="M 949,94.0 1001,132.0 M 949,94.0 1001,170.0 M 949,94.0 1001,208.0 M 949,132.0 1001,132.0 M 949,132.0 1001,170.0 M 949,132.0 1001,208.0 M 949,170.0 1001,132.0 M 949,170.0 1001,170.0 M 949,170.0 1001,208.0 M 949,208.0 1001,132.0 M 949,208.0 1001,170.0 M 949,208.0 1001,208.0 M 949,246.0 1001,132.0 M 949,246.0 1001,170.0 M 949,246.0 1001,208.0 M 1001,132.0 1049,151.0 M 1001,132.0 1049,189.0 M 1001,170.0 1049,151.0 M 1001,170.0 1049,189.0 M 1001,208.0 1049,151.0 M 1001,208.0 1049,189.0 M 1049,151.0 1097,132.0 M 1049,151.0 1097,170.0 M 1049,151.0 1097,208.0 M 1049,189.0 1097,132.0 M 1049,189.0 1097,170.0 M 1049,189.0 1097,208.0 M 1097,132.0 1149,94.0 M 1097,132.0 1149,132.0 M 1097,132.0 1149,170.0 M 1097,132.0 1149,208.0 M 1097,132.0 1149,246.0 M 1097,170.0 1149,94.0 M 1097,170.0 1149,132.0 M 1097,170.0 1149,170.0 M 1097,170.0 1149,208.0 M 1097,170.0 1149,246.0 M 1097,208.0 1149,94.0 M 1097,208.0 1149,132.0 M 1097,208.0 1149,170.0 M 1097,208.0 1149,208.0 M 1097,208.0 1149,246.0" style="stroke:#69737d;stroke-width:2" />
+    <g style="fill:#6fb1e3">
+      <circle cx="949" cy="94.0" r="11" />
+      <circle cx="949" cy="132.0" r="11" />
+      <circle cx="949" cy="170.0" r="11" />
+      <circle cx="949" cy="208.0" r="11" />
+      <circle cx="949" cy="246.0" r="11" />
+      <circle cx="1001" cy="132.0" r="11" />
+      <circle cx="1001" cy="170.0" r="11" />
+      <circle cx="1001" cy="208.0" r="11" />
+      <circle cx="1049" cy="151.0" r="11" />
+      <circle cx="1049" cy="189.0" r="11" />
+      <circle cx="1097" cy="132.0" r="11" />
+      <circle cx="1097" cy="170.0" r="11" />
+      <circle cx="1097" cy="208.0" r="11" />
+      <circle cx="1149" cy="94.0" r="11" />
+      <circle cx="1149" cy="132.0" r="11" />
+      <circle cx="1149" cy="170.0" r="11" />
+      <circle cx="1149" cy="208.0" r="11" />
+      <circle cx="1149" cy="246.0" r="11" />
+    </g>
+    <g style="fill:#4ba3ff">
+      <circle cx="1049" cy="151" r="11" />
+      <circle cx="1049" cy="189" r="11" />
+    </g>
+  </g>
+</svg>

@@ -1,180 +1,236 @@
 // // // custom icons // // //
 
 .custom-icon {
-  background-size: 20px 20px;
-  height: 20px;
-  width: 20px;
-  display: inline-block;
-  margin-right: 5px;
-  margin-left: 0px;
-  position: relative;
-  top: 3px; left: 0px;
+    background-size: 20px 20px;
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    &::before {
+        display: flex;
+    }
+
+    margin-right: 5px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    position: static;
+    vertical-align: sub;
 }
 
 .icon-lammps {
-  background-image: url(/images/codes/lammps/lammps-icon.svg);
-  @extend .custom-icon;
+    background-image: url(images/codes/lammps/lammps-icon.svg);
+    @extend .custom-icon;
 }
 
 .icon-ovito {
-  background-image: url(/images/codes/ovito/ovito-icon.png);
-  @extend .custom-icon;
+    background-image: url(images/codes/ovito/ovito-icon.png);
+    @extend .custom-icon;
 }
 
 .icon-quantum-espresso {
-  background-image: url(/images/codes/quantum-espresso/quantum-espresso-icon-light.png);
-  @extend .custom-icon;
+    background-image: url(images/codes/quantum-espresso/quantum-espresso-icon-light.png);
+    @extend .custom-icon;
 }
 @include color-mode(dark) {
-  .icon-quantum-espresso {
-  background-image: url(/images/codes/quantum-espresso/quantum-espresso-icon-dark.png);
-  }
+    .icon-quantum-espresso {
+        background-image: url(images/codes/quantum-espresso/quantum-espresso-icon-dark.png);
+    }
 }
 
 .icon-aiida {
-  background-image: url(/images/aiida-logo.png);
-  @extend .custom-icon;
+    background-image: url(images/aiida-logo.png);
+    @extend .custom-icon;
 }
 
 .icon-paraview {
-  background-image: url(/images/paraview-icon.png);
-  @extend .custom-icon;
+    background-image: url(images/codes/paraview/paraview-icon.png);
+    @extend .custom-icon;
 }
 
 .icon-vesta {
-  background-image: url(/images/codes/vesta/vesta-icon.png);
-  @extend .custom-icon;
+    background-image: url(images/codes/vesta/vesta-icon.png);
+    @extend .custom-icon;
 }
 
 .icon-vmd {
-  background-image: url(/images/vmd-icon-light.png);
-  @extend .custom-icon;
+    background-image: url(images/codes/vmd/vmd-icon-light.png);
+    @extend .custom-icon;
 }
 
 @include color-mode(dark) {
-  .icon-vmd {
-      background-image: url(/images/vmd-icon-dark.png);
-  }
+    .icon-vmd {
+        background-image: url(images/codes/vmd/vmd-icon-dark.png);
+    }
 }
 
 .icon-abinit {
-  background-image: url(/images/codes/abinit/abinit-icon-light.png);
-  @extend .custom-icon;
+    background-image: url(images/codes/abinit/abinit-icon-light.png);
+    @extend .custom-icon;
 }
 
 @include color-mode(dark) {
-  .icon-abinit {
-      background-image: url(/images/codes/abinit/abinit-icon-dark.png);
-  }
+    .icon-abinit {
+        background-image: url(images/codes/abinit/abinit-icon-dark.png);
+    }
 }
 
 .icon-z-set {
-  background-image: url(/images/z-set-icon-20x20.png);
-  @extend .custom-icon;
+    background-image: url(images/codes/z-set/z-set-icon-20x20.png);
+    @extend .custom-icon;
 }
 
 .icon-freefem {
-  background-image: url(/images/freefem-icon-light.svg);
-  @extend .custom-icon;
+    background-image: url(images/codes/freefem/freefem-icon-light.svg);
+    @extend .custom-icon;
 }
 @include color-mode(dark) {
-  .icon-freefem {
-      background-image: url(/images/freefem-icon-dark.svg);
-  }
+    .icon-freefem {
+        background-image: url(images/codes/freefem/freefem-icon-dark.svg);
+    }
 }
 
 .icon-opencalphad {
-  background-image: url(/images/codes/opencalphad/opencalphad-icon-light.png);
-  @extend .custom-icon;
+    background-image: url(images/codes/opencalphad/opencalphad-icon-light.png);
+    @extend .custom-icon;
 }
 @include color-mode(dark) {
-  .icon-opencalphad {
-      background-image: url(/images/codes/opencalphad/opencalphad-icon-dark.png);
-  }
+    .icon-opencalphad {
+        background-image: url(images/codes/opencalphad/opencalphad-icon-dark.png);
+    }
 }
 
 .icon-neper {
-  background-image: url(/images/neper-icon.png);
-  @extend .custom-icon;
+    background-image: url(images/codes/neper/neper-icon.png);
+    @extend .custom-icon;
 }
 
 .icon-plumed {
-  background-image: url(/images/codes/plumed/plumed-icon-light.png);
-  @extend .custom-icon;
+    background-image: url(images/codes/plumed/plumed-icon-light.png);
+    @extend .custom-icon;
 }
 @include color-mode(dark) {
-  .icon-plumed {
-      background-image: url(/images/codes/plumed/plumed-icon-dark.png);
-  }
+    .icon-plumed {
+        background-image: url(images/codes/plumed/plumed-icon-dark.png);
+    }
 }
 
 .icon-gmsh {
-  background-image: url(/images/gmsh-icon-light.png);
-  @extend .custom-icon;
+    background-image: url(images/codes/gmsh/gmsh-icon-light.png);
+    @extend .custom-icon;
 }
 @include color-mode(dark) {
-  .icon-gmsh {
-      background-image: url(/images/gmsh-icon-dark.png);
-  }
+    .icon-gmsh {
+        background-image: url(images/codes/gmsh/gmsh-icon-dark.png);
+    }
 }
 
 .icon-zeoplusplus {
-  background-image: url(/images/zeo++/icon-zeoplusplus.png);
-  @extend .custom-icon;
+    background-image: url(images/codes/zeo++/icon-zeoplusplus.png);
+    @extend .custom-icon;
 }
 
 .icon-raspa2 {
-  background-image: url(/images/codes/raspa2/raspa2-icon.png);
-  @extend .custom-icon;
+    background-image: url(images/codes/raspa2/raspa2-icon.png);
+    @extend .custom-icon;
 }
 
 .icon-opendis {
-  background-image: url(/images/codes/opendis/opendis-icon.png);
-  @extend .custom-icon;
+    background-image: url(images/codes/opendis/opendis-icon.png);
+    @extend .custom-icon;
 }
 .icon-xcrysden {
-  background-image: url(/images/xcrysden/xcrysden-icon-light.png);
-  @extend .custom-icon;
+    background-image: url(images/codes/xcrysden/xcrysden-icon-light.png);
+    @extend .custom-icon;
 }
 @include color-mode(dark) {
-  .icon-xcrysden {
-    background-image: url(/images/xcrysden/xcrysden-icon-dark.png);
-  }
+    .icon-xcrysden {
+        background-image: url(images/codes/xcrysden/xcrysden-icon-dark.png);
+    }
 }
 
 .icon-wannier90 {
-  background-image: url(/images/codes/wannier90/wannier90-icon-light.png);
-  @extend .custom-icon;
+    background-image: url(images/codes/wannier90/wannier90-icon-light.png);
+    @extend .custom-icon;
 }
 
 .icon-nwchem {
-  background-image: url(/images/codes/nwchem/nwchem-icon.png);
-  @extend .custom-icon;
+    background-image: url(images/codes/nwchem/nwchem-icon.png);
+    @extend .custom-icon;
 }
 
 .icon-fenics {
-  background-image: url(/images/codes/fenics/fenics-icon.png);
-  @extend .custom-icon;
+    background-image: url(images/codes/fenics/fenics-icon.png);
+    @extend .custom-icon;
 }
 
 .icon-cp2k {
-  background-image: url(/images/codes/cp2k/cp2k-icon.png);
-  @extend .custom-icon;
+    background-image: url(images/codes/cp2k/cp2k-icon.png);
+    @extend .custom-icon;
 }
 
 .icon-n2p2 {
-  background-image: url(/images/codes/n2p2/n2p2-icon-light.png);
-  @extend .custom-icon;
+    background-image: url(images/codes/n2p2/n2p2-icon-light.png);
+    @extend .custom-icon;
 }
 @include color-mode(dark) {
-  .icon-n2p2 {
-    background-image: url(/images/codes/n2p2/n2p2-icon-dark.png);
-  }
+    .icon-n2p2 {
+        background-image: url(images/codes/n2p2/n2p2-icon-dark.png);
+    }
+}
+
+.icon-gateway {
+    @extend .custom-icon;
+    margin-left: unset;
+    position: static;
+    background: none;
+    font-family: "Jost", "Jost*", var(--bs-body-font-family), sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: black;
+    font-style: normal;
+    vertical-align: baseline;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    &::before {
+        content: "G";
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+@include color-mode(dark) {
+    .icon-gateway {
+        color: white;
+    }
 }
 
 .icon-dftbplus {
-  background-image: url(/images/codes/dftbplus/dftbplus-icon.png);
-  @extend .custom-icon;
+    background-image: url(images/codes/dftbplus/dftbplus-icon.png);
+    @extend .custom-icon;
 }
 
+.icon-xtb {
+    background-image: url(images/codes/xtb/xtb-logo.svg);
+    @extend .custom-icon;
+}
+
+.icon-amitex-fftp {
+    background-image: url(images/codes/amitex/amitex-icon.png);
+    @extend .custom-icon;
+}
+
+.icon-ndm {
+    background-image: url(images/codes/ndm/ndm-icon-light.png);
+    @extend .custom-icon;
+}
+
+.icon-gpumd {
+    background-image: url(images/codes/gpumd/gpumd-logo.png);
+    @extend .custom-icon;
+}
+
+@include color-mode(dark) {
+    .icon-ndm {
+        background-image: url(images/codes/ndm/ndm-icon-dark.png);
+    }
+}
 // // // END custom icons END // // //

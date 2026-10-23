@@ -5,17 +5,27 @@ linkTitle: FreeFEM
 icon: icon-freefem
 toc: false
 weight: 5
+description: "FreeFEM est un logiciel d'éléments finis pour résoudre des systèmes d'équations aux dérivées partielles, disponible en conteneur sur DIAMOND."
 ---
 
-<a href="https://freefem.org/" target="_blank" class="codes-pages-top-logo">
-    <img alt="FreeFEM" class="logo-freefem">
+<a href="https://freefem.org/" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo">
+    <span class="logo-freefem" aria-hidden="true"></span>
 </a>
 
-### Récupérez l'image Apptainer
+### Récupérez l'image de conteneur
 
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
 ```bash
-apptainer pull freefemplusplus.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/freefemplusplus.sif:latest
+apptainer pull freefem.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/freefem.sif:latest
 ```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/freefem
+```
+{{< /tab >}}
+{{< /tabs >}}
 
 <div align="justify">
 
@@ -33,7 +43,7 @@ Avec une communauté active et un développement continu, FreeFEM reste à la po
 
 <h3 class="mb-1">Tutoriel</h3>
 
-{{< link-card title="Contenu à venir" description="<i>Apprenez à utiliser cette image de conteneur</i>" href="#bottom" icon="tabler-icons/outline/package" disabled="true" class="mb-0" >}}
+{{< link-card title="Apprenez à utiliser cette image de conteneur" href="/documentation/by-container/freefem" icon="tabler-icons/outline/package" class="mb-0" >}}
 
 <h3 class="mb-1 mt-3">Documentation FreeFEM</h3>
 
@@ -44,4 +54,4 @@ Avec une communauté active et un développement continu, FreeFEM reste à la po
 
 <h3 class="mb-1 mt-3">Exemples</h3>
 
-{{< link-card title="Contenu à venir" description="<i>Téléchargez des fichiers d'entrée</i>" href="#bottom" icon="tabler-icons/outline/file-export" disabled="true" class="mb-0" >}}
+{{< link-card title="Téléchargez des fichiers d'entrée" href="/downloads/freefem-tutorial-inputs.tar.gz" icon="tabler-icons/outline/file-export" >}}

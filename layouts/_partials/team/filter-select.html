@@ -1,0 +1,21 @@
+{{- $id := .id -}}
+{{- $label := .label -}}
+{{- $allLabel := .allLabel -}}
+{{- $options := .options | default (slice) -}}
+{{- $kind := .kind | default "" -}}
+<select id="{{ $id }}" class="border rounded px-3 py-2 w-full">
+  <option value="" selected disabled hidden>{{ $label }}</option>
+  <optgroup label="{{ $label }}">
+    <option value="__all__">{{ $allLabel }}</option>
+    {{ range $options }}
+      {{ $value := . }}
+      <option value="{{ $value }}">
+        {{- if $kind -}}
+          {{ partial "team/label.html" (dict "kind" $kind "value" $value) }}
+        {{- else -}}
+          {{ $value }}
+        {{- end -}}
+      </option>
+    {{ end }}
+  </optgroup>
+</select>

@@ -2,9 +2,10 @@
 title: Étude comparative des performances
 linkTitle: Benchmark
 toc: false
+description: "Étude des performances du workflow AiiDA-n2p2 : parallélisation MPI et OpenMP, taille du jeu de données et comparaison native/Apptainer."
 ---
 
-### Condition optimale pour exécuter le workflow 
+### Condition optimale pour exécuter le workflow
 
 Plusieurs investigations ont été menées afin de déterminer si n2p2 effectue une simple parallélisation via MPI ou s’il prend également en charge OpenMP (configuration multi-threads). Il semble que la configuration optimale pour n2p2 soit `NODES=2` et `THREADS=1`. Cela signifie que n2p2 ne semble pas tirer efficacement parti d’une parallélisation multi-threads, mais uniquement d’une parallélisation multi-nœuds.
 
@@ -14,29 +15,28 @@ Une autre investigation de performance concerne la variation de la taille du jeu
 
 Le throughput en fonction du nombre de structures est représenté dans la Figure 1 et est défini comme le rapport entre le temps total d’entraînement et le nombre de structures :
 
-$$ throughput=\frac{total\_time(s)}{number\_structures} $$
+$$ throughput=\frac{total_time(s)}{number_structures} $$
 
  <p align="center">
   <img alt="n2p2" class="n2p2_throughput_vs_structures">
 </p>
-<p align="center"><i>Figure 1: Efficacité R en fonction du nombre de structures traitées. Axe des x en échelle log2  </i></p> 
+<p align="center"><i>Figure 1: Efficacité R en fonction du nombre de structures traitées. Axe des x en échelle log2  </i></p>
 
 Le fait que n2p2 ne soit pas implémenté avec du multi-threading suggère de mener une investigation plus détaillée en fixant nos calculs de test avec `NODES=1`, `CORES=32` et `THREADS=1`. Afin d’évaluer la tendance de l’efficacité en fonction du nombre de processus, le nombre d’époques a été fixé à 100 et le calcul d’entraînement a été exécuté avec la commande suivante :
+
 ```shell
 mpirun -n num_proccess --bind-to core
 ```
+
 où `num_process` est le nombre de processus demandés, et `num_process ∈ [1, 2, 4, 8, 16, 32, 64]`. Dans le cas spécifique de `num_process = 64`, le nombre de nœuds est fixé à 2. L’option `--bind-to core` est importante pour garantir une parallélisation correcte des processus sans surcharger un seul socket. Plus d’informations sont disponibles dans la documentation officielle mpirun [documentation officielle mpirun](https://www.open-mpi.org/doc/v4.0/man1/mpirun.1.php).
 
-
-The plot in Figure 2 shows the efficiency (R) as a function of the number of processes. It can be observed that the maximum efficiency is achieved with `mpirun -n 1`, and that the efficiency decreases as the number of processes increases. Moreover, a comparison between the native installation and the Apptainer installation within a Guix environment shows that the performance loss associated with the Apptainer version is minimal.
+La Figure 2 montre l’efficacité (R) en fonction du nombre de processus. On peut observer que l’efficacité maximale est obtenue pour `mpirun -n 1`, puis diminue à mesure que le nombre de processus augmente. De plus, une comparaison entre l’installation native et l’installation Apptainer au sein d’un environnement Guix est présentée, montrant que la perte de performance liée à la version Apptainer est minime.
 
  <p align="center">
   <img alt="n2p2" class="n2p2_benchmark_total_time_normal_installation_VS_apptainer_B">
 </p>
 <p align="center"><i>Figure 2: Efficacité R en fonction du nombre de processus demandés. Axe des x en échelle log2. </i></p>
 
-From the present investigation, we can conclude that, for n2p2 calculations, the optimal configuration is `NODES=1, CORES=8, THREADS=1`, with 32 MPI processes. In fact, as shown in Figure 2, the linear scaling trend is lost beyond 8 processes; consequently, the total execution time increases exponentially. Further analysis with 64 processes will be performed to complete the investigation.
+À partir de cette étude, nous pouvons conclure que, pour les calculs n2p2, la configuration optimale est `NODES=1, CORES=8, THREADS=1`, avec 32 processus MPI. En effet, comme le montre la Figure 2, la tendance de mise à l’échelle linéaire est perdue au-delà de 8 processus ; par conséquent, le temps d’exécution total augmente de manière exponentielle. Une analyse complémentaire avec 64 processus sera réalisée pour compléter cette étude.
 
-Regarding the comparison between the native installation and the Apptainer version, we observe that the Apptainer execution is slower. In particular, it requires approximately 20–25% more total execution time. Nevertheless, it makes the calculations much easier to reproduce, which represents a reasonable compromise. In the specific case of `NODES=1, CORES=8, THREADS=1`, 100 epochs require 7 hours and 22 minutes with Apptainer, compared to 6 hours and 8 minutes with the native installation.
-
-
+Concernant la comparaison entre l’installation native et la version Apptainer, nous observons que l’exécution avec Apptainer est plus lente. En particulier, elle nécessite environ 20 à 25 % de temps d’exécution total en plus. Néanmoins, elle permet de reproduire les calculs beaucoup plus facilement, ce qui représente un compromis raisonnable. Dans le cas spécifique de `NODES=1, CORES=8, THREADS=1`, 100 époques nécessitent 7 heures et 22 minutes avec Apptainer, contre 6 heures et 8 minutes avec l’installation native.

@@ -2,7 +2,6 @@
 
 document.addEventListener('DOMContentLoaded', function () {
     // Elements
-    const videoContainers = document.querySelectorAll('.youtube-video');
     const popupOverlay = document.querySelector('.popup-overlay');
     const popupCustomization = document.querySelector('.popup-customization-overlay');
     const cookieBanner = document.querySelector('.cookie-banner');
@@ -26,38 +25,45 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Functions
     function loadYouTubeVideo(container, videoId, siteLanguage) {
-        container.innerHTML = `
-            <iframe
-                class="tuto-video"
-                src="https://www.youtube-nocookie.com/embed/${videoId}?hl=${siteLanguage}&cc_lang_pref=${siteLanguage}&cc_load_policy=1"
+        if (container.querySelector('iframe')) return;
 
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-            </iframe>
-        `;
+        container.innerHTML = `
+      <iframe
+        class="tuto-video"
+        src="https://www.youtube-nocookie.com/embed/${videoId}?hl=${siteLanguage}&cc_lang_pref=${siteLanguage}&cc_load_policy=1"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+      </iframe>
+    `;
     }
 
     function loadGoogleAnalytics() {
         if (window.gtagLoaded) return;
         if (!window.analyticsSettings?.enabled || !window.analyticsSettings?.gaId) return;
-    
+
         window.gtagLoaded = true;
-    
+
         const script = document.createElement('script');
         script.src = `https://www.googletagmanager.com/gtag/js?id=${window.analyticsSettings.gaId}`;
         script.async = true;
         document.head.appendChild(script);
-    
+
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
+        function gtag() {
+            dataLayer.push(arguments);
+        }
         window.gtag = gtag;
         gtag('js', new Date());
-        gtag('config', window.analyticsSettings.gaId);
+        gtag('config', window.analyticsSettings.gaId, {
+            // GitHub Pages runs on a public suffix; pin the cookie domain to the current host.
+            cookie_domain: window.location.hostname
+        });
     }
-    
 
     function adjustFontSize(placeholder) {
+        if (!placeholder) return;
+
         const button = placeholder.querySelector('.popup-button');
         if (button) {
             const containerWidth = placeholder.offsetWidth;
@@ -67,22 +73,32 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    function getVideoContainers() {
+        return document.querySelectorAll('.youtube-video');
+    }
+
+    function resizePlaceholders() {
+        getVideoContainers().forEach((container) => {
+            adjustFontSize(container.querySelector('.youtube-placeholder'));
+        });
+    }
+
     function initializePlaceholders() {
-        videoContainers.forEach(container => {
+        getVideoContainers().forEach((container) => {
             const videoId = container.getAttribute('data-video-id');
             const language = container.getAttribute('language') || 'en';
             const placeholder = container.querySelector('.youtube-placeholder');
             const popupButton = placeholder?.querySelector('.popup-button');
 
             adjustFontSize(placeholder);
-            window.addEventListener('resize', () => adjustFontSize(placeholder));
 
             if (localStorage.getItem('youtubeConsent') === 'true') {
                 loadYouTubeVideo(container, videoId, language);
-            } else if (popupButton) {
+            } else if (popupButton && popupButton.dataset.consentBound !== 'true') {
                 popupButton.addEventListener('click', () => {
                     if (popupOverlay) popupOverlay.style.display = 'block';
                 });
+                popupButton.dataset.consentBound = 'true';
             }
         });
     }
@@ -92,6 +108,8 @@ document.addEventListener('DOMContentLoaded', function () {
             cookieBanner.style.display = 'flex';
         }
     }
+
+    window.addEventListener('resize', resizePlaceholders);
 
     // Actions sur la bannière
     acceptAllButton?.addEventListener('click', () => {
@@ -115,7 +133,6 @@ document.addEventListener('DOMContentLoaded', function () {
     closeBannerButton?.addEventListener('click', () => {
         cookieBanner.style.display = 'none';
     });
-    
 
     cancelPreferencesButton?.addEventListener('click', () => {
         popupCustomization.style.display = 'none';

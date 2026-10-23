@@ -1,14 +1,65 @@
-
-
 .section-title-lead-landing-page {
-    background-image: url(/images/banner-diamond/banner-diamond-light.png);
-    background-size: cover;//130% auto;
     height: fit-content;
+    display: flex;
+    align-items: center;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    --banner-fade-top-start: 0px;
+    --banner-fade-top-end: 56px;
+    --banner-fade-side-start: 0px;
+    --banner-fade-side-end: 48px;
+    --banner-fade-start: 70%;
+    --banner-fade-end: 100%;
+}
+
+.section-title-lead-landing-page::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image: url(images/banner-diamond/banner-diamond-light.png);
+    background-size: cover; //130% auto;
     background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: center;
-    display: flex;
-    align-items: center;
+    -webkit-mask-image:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0) 0,
+            rgba(0, 0, 0, 1) var(--banner-fade-top-end),
+            rgba(0, 0, 0, 1) var(--banner-fade-start),
+            rgba(0, 0, 0, 0) var(--banner-fade-end)
+        ),
+        linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0) 0,
+            rgba(0, 0, 0, 1) var(--banner-fade-side-end),
+            rgba(0, 0, 0, 1) calc(100% - var(--banner-fade-side-end)),
+            rgba(0, 0, 0, 0) 100%
+        );
+    -webkit-mask-composite: source-in;
+    mask-image:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0) 0,
+            rgba(0, 0, 0, 1) var(--banner-fade-top-end),
+            rgba(0, 0, 0, 1) var(--banner-fade-start),
+            rgba(0, 0, 0, 0) var(--banner-fade-end)
+        ),
+        linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0) 0,
+            rgba(0, 0, 0, 1) var(--banner-fade-side-end),
+            rgba(0, 0, 0, 1) calc(100% - var(--banner-fade-side-end)),
+            rgba(0, 0, 0, 0) 100%
+        );
+    mask-composite: intersect;
+}
+
+.section-title-lead-landing-page > .row {
+    position: relative;
+    z-index: 1;
 }
 
 .container-title-homepage h1 {
@@ -19,7 +70,6 @@
 .container-title-homepage,
 .container-lead-homepage {
     display: flex;
-    // align-items: center;
     justify-content: center;
     height: 50%;
 }
@@ -43,21 +93,9 @@
     top: 0.35em;
 }
 
-// @include media-breakpoint-up(sm) {
-// .container-title-homepage {
-//     padding-bottom: -25px;
-// }
-// .container-lead-homepage {
-//     padding-top: -25px;
-// }
-
-// }
-
-
-
 @include color-mode(dark) {
-    .section-title-lead-landing-page {
-        background-image: url(/images/banner-diamond/banner-diamond-dark.png);
+    .section-title-lead-landing-page::before {
+        background-image: url(images/banner-diamond/banner-diamond-dark.png);
     }
 }
 
@@ -72,25 +110,14 @@
     }
 }
 
-// @include media-breakpoint-down(md) {
-//     // .section-title-lead-landing-page {
-//     //     background-size: fill;
-//     // }
-
-//     // .container-title-homepage {
-//     //     align-items: last baseline;
-//     // }
-
-//     // .container-title-homepage {
-//     //     padding-bottom: 5%;
-//     // }
-//     // .container-lead-homepage {
-//     //     padding-top: 5%;
-//     // }
-// }
+@include media-breakpoint-down(lg) {
+    .section-title-lead-landing-page {
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+}
 
 @include media-breakpoint-down(sm) {
-
     .section-title-lead-landing-page {
         max-width: 120%;
         width: 120%;
@@ -98,37 +125,74 @@
         left: -10%;
     }
     .container-title-homepage h1 {
-        font-size: $h2-font-size;
         position: relative;
-        top: -0.10em
+        top: -0.1em;
     }
     .container-lead-homepage .lead {
-        font-size: $h4-font-size;
         position: relative;
-        top: 0.10em
+        top: 0.1em;
     }
-
-
-
 }
 
-
 .container-h1-default-page {
-    background-image: url(/images/banner-diamond/banner-diamond-light.png);
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    background-position-y: center;
-    background-position-x: center;
     display: flex;
     align-items: center;
     height: 150px;
     justify-content: center;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    --page-title-fade-side-end: 36px;
+    --page-title-fade-start: 100px;
+    --page-title-fade-end: 150px;
+    --page-title-offset-y: 0px;
 }
 
+.container-h1-default-page::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image: url(images/banner-diamond/banner-diamond-light.png);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: center;
+    -webkit-mask-image:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 1) 0,
+            rgba(0, 0, 0, 1) var(--page-title-fade-start),
+            rgba(0, 0, 0, 0) var(--page-title-fade-end)
+        ),
+        linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0) 0,
+            rgba(0, 0, 0, 1) var(--page-title-fade-side-end),
+            rgba(0, 0, 0, 1) calc(100% - var(--page-title-fade-side-end)),
+            rgba(0, 0, 0, 0) 100%
+        );
+    -webkit-mask-composite: source-in;
+    mask-image:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 1) 0,
+            rgba(0, 0, 0, 1) var(--page-title-fade-start),
+            rgba(0, 0, 0, 0) var(--page-title-fade-end)
+        ),
+        linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0) 0,
+            rgba(0, 0, 0, 1) var(--page-title-fade-side-end),
+            rgba(0, 0, 0, 1) calc(100% - var(--page-title-fade-side-end)),
+            rgba(0, 0, 0, 0) 100%
+        );
+    mask-composite: intersect;
+}
 
 @include color-mode(dark) {
-    .container-h1-default-page {
-        background-image: url(/images/banner-diamond/banner-diamond-dark.png);
+    .container-h1-default-page::before {
+        background-image: url(images/banner-diamond/banner-diamond-dark.png);
     }
 }
 
@@ -144,10 +208,9 @@
     }
 }
 
-
 .container-h1-default-page h1 {
+    z-index: 1;
     margin-top: 0;
     margin-bottom: 0;
+    transform: translateY(var(--page-title-offset-y));
 }
-
-

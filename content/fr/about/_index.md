@@ -1,4 +1,4 @@
 ---
 title: À propos
-exclude_search: true
+headless: true
 ---

@@ -1,31 +1,27 @@
 fr:
   languageName: FR
-  contentDir: content/fr
   weight: 10
   params:
     languageISO: FR
     languageTag: fr-FR
-    footer:
-      Ce travail a bénéficié d’une aide de l’Etat gérée par l’Agence Nationale
+    footer: Ce travail a bénéficié d’une aide de l’Etat gérée par l’Agence Nationale
       de la Recherche au titre de France 2030 portant la référence
       ANR-22-PEXD-0015
-    alertText: "<a class=\"alert-link stretched-link fw-normal\"
-      href=\"https://ecolediadem.sciencesconf.org/?lang=fr\">1ère édition de l’École internationale DIADEM : Préinscriptions ouvertes !</a>"
-    docSidebarRef: /documentation/use/ask-help
+    alertText: '<a class="alert-link stretched-link fw-normal"
+      href="news/diamond-ga-2026/">Assemblée générale DIAMOND 2026 : 11-12 juin à Lyon !</a>'
+    docSidebarRef: /contact/
     docSidebarText: Contacter le support
 en:
   languageName: EN
-  contentDir: content/en
   weight: 20
   params:
     languageISO: EN
     languageTag: en-US
-    footer:
-      This work was supported by a grant from the French government managed by
+    footer: This work was supported by a grant from the French government managed by
       the National Research Agency under the France 2030 program with reference
       ANR-22-PEXD-0015.
-    alertText: "<a class=\"alert-link stretched-link fw-normal\"
-      href=\"https://ecolediadem.sciencesconf.org/?lang=en\">1st edition of the International DIADEM Summer School: Open for preregistrations!</a>"
+    alertText: '<a class="alert-link stretched-link fw-normal"
+      href="en/news/diamond-ga-2026">DIAMOND General Assembly 2026: June 11-12 in Lyon !</a>'
     description: Digital platform for PEPR DIADEM
-    docSidebarRef: /en/documentation/use/ask-help
+    docSidebarRef: /en/contact/
     docSidebarText: Contact the support

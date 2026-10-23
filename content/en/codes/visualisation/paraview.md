@@ -5,17 +5,27 @@ linkTitle: ParaView
 icon: icon-paraview
 toc: false
 weight: 2
+description: "ParaView is an open-source high-performance scientific visualization software for simulation data, available as an Apptainer container on DIAMOND."
 ---
 
-<a href="https://www.paraview.org/" target="_blank" class="codes-pages-top-logo">
-    <img alt="ParaView" class="logo-paraview"/>
+<a href="https://www.paraview.org/" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo">
+    <span class="logo-paraview" aria-hidden="true"></span>
 </a>
 
-### Retrieve the Apptainer image
+### Retrieve the container image
 
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
 ```bash
 apptainer pull paraview.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/paraview.sif:latest
 ```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/paraview
+```
+{{< /tab >}}
+{{< /tabs >}}
 
 <div align="justify">
 
@@ -25,14 +35,17 @@ This software is built on a modular architecture, allowing users to customize th
 
 </div>
 
-### Tutorial
+<h3 class="mb-1">Tutorial</h3>
 
-#### <a href="/en/documentation/by-container/paraview">Learn how to use this specific container image</a>
+{{< link-card title="Learn to use this container image" href="/en/documentation/by-container/paraview" icon="tabler-icons/outline/package" class="mb-0" >}}
 
-### ParaView documentation
+<h3 class="mb-1 mt-3">ParaView documentation</h3>
 
-- #### <a href="https://www.paraview.org/" target="_blank">Official website</a>
+{{< card-grid >}}
+{{< link-card title="Official website" href="https://www.paraview.org/" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
+{{< link-card title="Official documentation" href="https://www.paraview.org/resources/" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
+{{< /card-grid >}}
 
-- #### <a href="https://www.paraview.org/resources/" target="_blank">Official documentation</a>
+<h3 class="mb-1 mt-3">Examples</h3>
 
-- #### <a href="/downloads/paraview-tutorial-inputs.tar.gz">Examples: input files</a>
+{{< link-card title="Download input files" href="/downloads/paraview-tutorial-inputs.tar.gz" icon="tabler-icons/outline/file-export" class="mb-0" >}}

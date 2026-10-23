@@ -1,49 +1,77 @@
 // // // >>> sections large icons >>> // // //
-
 .section-features {
-  margin-top: 50px;
+    margin-top: 50px;
 }
 
 .homepage.section-icon {
-  display: flex;
-  height: 100px;
-  margin: auto;
-  margin-bottom: -15px;
-  margin-top: 20px;
+    display: flex;
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    margin-bottom: -15px;
+    margin-top: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }
 
-.section-icon.about {
-  content: url(images/sections-icons/light/about.svg);
+.homepage.section-icon.about {
+    background-image: url(images/sections-icons/light/about.svg);
 }
 
-.section-icon.containers {
-  content: url(images/sections-icons/light/containers.svg);
+.homepage.section-icon.containers {
+    background-image: url(images/sections-icons/light/containers.svg);
 }
 
-.section-icon.documentation {
-  content: url(images/sections-icons/light/documentation.svg);
+.homepage.section-icon.documentation {
+    background-image: url(images/sections-icons/light/documentation.svg);
 }
 
-.section-icon.wfs-dbs {
-  content: url(images/sections-icons/light/wfs-dbs.svg);
+.homepage.section-icon.wfs-dbs {
+    background-image: url(images/sections-icons/light/wfs-dbs.svg);
+    width: 186px;
+}
+
+.homepage.section-icon.notebooks {
+    background-image: url(images/sections-icons/light/notebooks.svg);
 }
 
 @include color-mode(dark) {
-  .section-icon.about {
-      content: url(images/sections-icons/dark/about.svg);
-  }
+    .homepage.section-icon.about {
+        background-image: url(images/sections-icons/dark/about.svg);
+    }
 
-  .section-icon.containers {
-      content: url(images/sections-icons/dark/containers.svg);
-  }
+    .homepage.section-icon.containers {
+        background-image: url(images/sections-icons/dark/containers.svg);
+    }
 
-  .section-icon.documentation {
-      content: url(images/sections-icons/dark/documentation.svg);
-  }
+    .homepage.section-icon.documentation {
+        background-image: url(images/sections-icons/dark/documentation.svg);
+    }
 
-  .section-icon.wfs-dbs {
-      content: url(images/sections-icons/dark/wfs-dbs.svg);
-  }
+    .homepage.section-icon.wfs-dbs {
+        background-image: url(images/sections-icons/dark/wfs-dbs.svg);
+        width: 186px;
+    }
+
+    .homepage.section-icon.notebooks {
+        background-image: url(images/sections-icons/dark/notebooks.svg);
+    }
 }
 
 // // // <<< sections large icons <<< // // //
+
+@include media-breakpoint-down(sm) {
+    .homepage.section-icon {
+        height: 80px;
+        width: 80px;
+    }
+
+    .homepage.section-icon.wfs-dbs {
+        width: 149px;
+    }
+
+    .section-features {
+        margin-top: 10px;
+    }
+}

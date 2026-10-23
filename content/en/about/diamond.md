@@ -1,6 +1,9 @@
 ---
 title: About DIAMOND
 linkTitle: DIAMOND
+seo:
+  description: Digital materials platform accelerating discovery through AI-driven design,
+    high-throughput workflows, and French research collaboration.
 ---
 
 <h2 class="text-center about-lead"><b>D</b>ata management and <b>I</b>nfrastructures for <b>A</b>rtificial intelligence, <b>M</b>odelling, <b>O</b>ptimization and <b>N</b>umerical <b>D</b>esign</h2>
@@ -8,12 +11,12 @@ linkTitle: DIAMOND
 <div class="row about-diamond">
 
   <div class="left about-diamond">
-    <img alt="DIAMOND" class="logo-diamond about-diamond"/>
+    <span class="logo-diamond about-diamond" aria-hidden="true"></span>
   </div>
 
   <div class="right about-diamond">
 
-The main objective of this targeted project is to establish a digital infrastructure to accelerate the development of materials. It is based on one hand on a platform dedicated to simulation codes at various scales and workflows for the automation of calculation series, including high-throughput calculations, and the processing of results through artificial intelligence (AI). On the other hand, it relies on a database infrastructure derived from both experiments and simulations.
+The main objective of this targeted project is to establish a digital infrastructure to accelerate the development of materials. It is based on one hand on a platform dedicated to simulation codes at various scales and workflows for the automation of calculation series, including high-throughput calculations, and the processing of results through artificial intelligence (AI). On the other hand, it is based on a database infrastructure derived from both experiments and simulations.
 
   </div>
 

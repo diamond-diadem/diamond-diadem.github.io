@@ -5,13 +5,14 @@ linkTitle: Ovito
 icon: icon-ovito
 toc: false
 weight: 1
+description: "OVITO is a visualization and analysis software for atomistic simulation data, available as an Apptainer container on the DIAMOND platform."
 ---
 
-<a href="https://www.ovito.org/" target="_blank" class="codes-pages-top-logo">
-    <img alt="Ovito" class="logo-ovito"/>
+<a href="https://www.ovito.org/" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo">
+    <span class="logo-ovito" aria-hidden="true"></span>
 </a>
 
-### Retrieve the Apptainer image
+### Retrieve the container image
 
 ```bash
 apptainer pull ovito.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/ovito.sif:latest
@@ -25,14 +26,17 @@ Ovito is developed, distributed, and supported by OVITO GmbH, a German startup. 
 
 </div>
 
-### Tutorial
+<h3 class="mb-1">Tutorial</h3>
 
-#### <a href="/en/documentation/by-container/ovito">Learn how to use this specific container image</a>
+{{< link-card title="Learn to use this container image" href="/en/documentation/by-container/ovito" icon="tabler-icons/outline/package" class="mb-0" >}}
 
-### Ovito documentation
+<h3 class="mb-1 mt-3">Ovito documentation</h3>
 
-- #### <a href="https://www.ovito.org/" target="_blank">Official website</a>
+{{< card-grid >}}
+{{< link-card title="Official website" href="https://www.ovito.org/" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
+{{< link-card title="Official documentation" href="https://www.ovito.org/docs/current" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
+{{< /card-grid >}}
 
-- #### <a href="https://www.ovito.org/docs/current" target="_blank">Official documentation</a>
+<h3 class="mb-1 mt-3">Examples</h3>
 
-- #### <a href="/downloads/ovito-tutorial-inputs.tar.gz">Examples: input files</a>
+{{< link-card title="Download input files" href="/downloads/ovito-tutorial-inputs.tar.gz" icon="tabler-icons/outline/file-export" class="mb-0" >}}

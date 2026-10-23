@@ -5,17 +5,27 @@ linkTitle: VMD
 icon: icon-vmd
 toc: false
 weight: 4
+description: "VMD est un logiciel de visualisation et d'analyse de dynamique moléculaire pour les systèmes biologiques et matériaux, disponible en conteneur sur DIAMOND."
 ---
 
-<a href="https://www.ks.uiuc.edu/Research/vmd/" target="blank" class="codes-pages-top-logo">
-    <img alt="VMD" class="logo-vmd"/>
+<a href="https://www.ks.uiuc.edu/Research/vmd/" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo">
+    <span class="logo-vmd" aria-hidden="true"></span>
 </a>
 
-### Récupérez l'image Apptainer
+### Récupérez l'image de conteneur
 
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
 ```bash
 apptainer pull vmd.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/vmd.sif:latest
 ```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/vmd
+```
+{{< /tab >}}
+{{< /tabs >}}
 
 <div align="justify">
 

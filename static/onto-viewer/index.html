@@ -1,0 +1,2747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OWL Ontology Visualizer</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- N3.js for Turtle parsing -->
+    <script src="https://unpkg.com/n3@1.17.2/browser/n3.min.js"></script>
+    <!-- Dagre layout engine (must load before cytoscape-dagre) -->
+    <script src="https://unpkg.com/dagre@0.8.5/dist/dagre.min.js"></script>
+    <!-- Cytoscape.js -->
+    <script src="https://unpkg.com/cytoscape@3.28.1/dist/cytoscape.min.js"></script>
+    <!-- Cytoscape dagre layout extension -->
+    <script src="https://unpkg.com/cytoscape-dagre@2.5.0/cytoscape-dagre.js"></script>
+
+    
+</head>
+<body>
+
+<!-- ── Header ───────────────────────────────────────────────────── -->
+<header>
+    <div class="logo">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <polygon points="9,1 16,5 16,13 9,17 2,13 2,5" stroke="#7c3aed" stroke-width="1.5" fill="none"/>
+            <polygon points="9,5 13,7 13,11 9,13 5,11 5,7" fill="#7c3aed" opacity="0.3"/>
+        </svg>
+        OWL Visualizer
+    </div>
+
+    <div class="url-row">
+        <span class="url-label">TTL&nbsp;URL&nbsp;:</span>
+        <input
+            type="text"
+            id="ttlUrl"
+            class="url-input"
+	    value="https://cnherrera.github.io/DIAMOND_ontology/diamond_project_ontology.ttl"
+            spellcheck="false"
+            autocomplete="off"
+        />
+        <label class="btn btn-secondary" title="Upload a local file">
+            📂 File
+            <input type="file" id="fileInput" accept=".ttl,.turtle,.rdf,.owl,.n3" style="display:none">
+        </label>
+        <button id="btnLoad" class="btn btn-primary">Upload →</button>
+    </div>
+</header>
+
+<!-- ── Toolbar (hidden until ontology is loaded) ────────────────── -->
+<div id="toolbar">
+    <div class="tb-group">
+        <span class="tb-label">Layout</span>
+        <select id="layoutSelect">
+            <option value="cose">Force-directed</option>            
+            <option value="dagre-tb">Hierarchical (top → bottom)</option>
+            <option value="dagre-lr">Hierarchical (left → right)</option>
+            <option value="breadthfirst">Breadth-first</option>
+            <option value="circle">Circle</option>
+            <option value="grid">Grid</option>
+        </select>
+    </div>
+
+    <div class="tb-group">
+        <span class="tb-label">View</span>
+        <button id="btnInstances"     class="toggle-btn on-rose">ABox (Instances)</button>
+        <button id="btnTBox"      class="toggle-btn">TBox (Classes)</button>
+<!---        <button id="btnTBox"      class="toggle-btn on-rose">TBox (Classes)</button> -->
+        <button id="btnSubclass" class="toggle-btn on">subClassOf</button>
+        <button id="btnProps"    class="toggle-btn on-gold">Object Properties</button>
+        <button id="btnDatatypeProps" class="toggle-btn on-gold">Datatype Props</button>
+    </div>
+
+    <div class="tb-group">
+        <div class="search-wrap">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="searchInput" class="search-input" placeholder="Filter classes…">
+        </div>
+    </div>
+
+    <div class="tb-group">
+        <button id="btnImportedConcepts" class="toggle-btn" title="Load &amp; show concepts from external ontologies used by instances">🔗 Imported Concepts</button>
+    </div>
+
+    <div class="tb-group">
+        <button id="btnFit"    class="icon-btn" title="Fit to screen">⊞ Fit</button>
+        <button id="btnCenter" class="icon-btn" title="Reset view">↺ Reset</button>
+    </div>
+
+    <div class="stats-area" id="statsArea"></div>
+</div>
+
+<!-- ── Main ─────────────────────────────────────────────────────── -->
+<div class="main">
+
+    <!-- cy-wrap keeps #cy and its overlays stacked together -->
+    <div id="cy-wrap" style="position:relative;flex:1;min-width:0;overflow:hidden;">
+
+        <!-- Cytoscape canvas — must be empty so Cytoscape owns it fully -->
+        <div id="cy" style="width:100%;height:100%;"></div>
+
+        <!-- Welcome message — absolute overlay, safe from Cytoscape -->
+        <div id="welcome" style="position:absolute;inset:0;z-index:10;display:flex;flex-direction:column;align-items:center;justify-content:center;pointer-events:none;">
+            <div class="welcome-icon">&#x2B21;</div>
+            <div class="welcome-text">
+                Type the URL of a TTL (Turtle/OWL) file<br>
+                and click <strong>Upload</strong> to visualise the ontology.
+            </div>
+        </div>
+
+        <!-- Loading overlay — absolute, safe from Cytoscape -->
+        <div id="loadingOverlay" style="position:absolute;inset:0;z-index:20;">
+            <div class="spinner"></div>
+            <div class="loading-msg" id="loadingMsg">Uploading...</div>
+        </div>
+
+    </div>
+
+    <!-- Info panel -->
+    <div class="info-panel">
+        <div class="info-header">Node Details</div>
+        <div class="info-body" id="infoBody">
+            <div class="info-empty">Click on a node<br>to view its details.</div>
+        </div>
+    </div>
+
+</div>
+
+<!-- ── Status bar ───────────────────────────────────────────────── -->
+<div class="statusbar">
+    <span id="statusText">Waiting for a URL…</span>
+    <div class="legend" id="legend">
+        <div class="leg-item">
+            <div class="leg-line-solid"></div>
+            <span>subClassOf</span>
+        </div>
+        <div class="leg-item">
+            <div class="leg-line-dashed"></div>
+            <span>Object Property</span>
+        </div>
+        <div class="leg-item">
+            <div class="leg-line-dotted"></div>
+            <span>Datatype Property</span>
+        </div>
+        <div class="leg-item">
+            <div style="width: 28px; height: 2px; background: #7c3aed; opacity: 0.7; border-top: 2px dashed #7c3aed; display: inline-block; margin-right: 6px;"></div>
+            <span>rdf:type (TBox ref)</span>
+        </div>
+        <div class="leg-item">
+            <div style="width: 18px; height: 12px; background: #ec4899; opacity: 0.35; border: 1px solid #be185d; border-radius: 2px; display: inline-block; margin-right: 6px;"></div>
+            <span>Instance</span>
+        </div>
+        <div class="leg-item">
+            <div style="width: 12px; height: 12px; background: #a7f3d0; opacity: 0.3; border: 1px solid #059669; transform: rotate(45deg); display: inline-block; margin-right: 6px;"></div>
+            <span>Datatype</span>
+        </div>
+        <div class="leg-item">
+            <div style="width: 22px; height: 12px; background: #818cf8; opacity: 0.3; border: 2px dashed #818cf8; border-radius: 2px; display: inline-block; margin-right: 6px;"></div>
+            <span>Imported Concept</span>
+        </div>
+    </div>
+</div>
+
+<!-- ── Toast ────────────────────────────────────────────────────── -->
+<div id="toast"></div>
+
+<!-- ── Imported Concepts Modal ──────────────────────────────────── -->
+<div id="importedModal" style="display:none;position:fixed;inset:0;z-index:200;background:rgba(0,0,0,0.55);align-items:center;justify-content:center;">
+  <div style="background:#fff;border-radius:12px;padding:28px 32px;min-width:480px;max-width:640px;box-shadow:0 8px 40px rgba(0,0,0,0.22);position:relative;">
+    <button id="importedModalClose" style="position:absolute;top:12px;right:16px;background:none;border:none;font-size:1.4rem;cursor:pointer;color:#888;">✕</button>
+    <div style="font-size:1.1rem;font-weight:700;color:#3b0764;margin-bottom:6px;">🔗 Imported Concepts</div>
+    <div style="font-size:0.82rem;color:#64748b;margin-bottom:14px;">
+      Add the URL of an external ontology (e.g. <code>exato-wf</code>, <code>exato-wf-cwl</code>). Only concepts &amp; properties
+      actually used in the loaded instances will appear, together with their ancestor classes.
+    </div>
+
+    <!-- Detected namespaces hint -->
+    <div id="importedNsHint" style="margin-bottom:12px;"></div>
+
+    <!-- URL inputs list -->
+    <div id="importedUrlList" style="display:flex;flex-direction:column;gap:8px;margin-bottom:14px;"></div>
+
+    <button id="importedAddUrl" style="background:none;border:1px dashed #a78bfa;color:#7c3aed;border-radius:6px;padding:4px 12px;cursor:pointer;font-size:0.82rem;margin-bottom:16px;">+ Add ontology URL</button>
+
+    <div style="display:flex;gap:10px;justify-content:flex-end;align-items:center;">
+      <span id="importedStatus" style="font-size:0.78rem;color:#64748b;flex:1;"></span>
+      <button id="importedClear" style="background:#fee2e2;color:#b91c1c;border:none;border-radius:6px;padding:6px 16px;cursor:pointer;font-size:0.85rem;">Clear</button>
+      <button id="importedLoad"  style="background:#7c3aed;color:#fff;border:none;border-radius:6px;padding:6px 18px;cursor:pointer;font-size:0.88rem;font-weight:600;">Load &amp; Show</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════════ -->
+<!--                        JAVASCRIPT                            -->
+<!-- ══════════════════════════════════════════════════════════════ -->
+<script>
+'use strict';
+
+const DEBUG = true;
+// ─────────────────────────────────────────────────────────────────
+// RDF constants
+// ─────────────────────────────────────────────────────────────────
+const OWL  = 'http://www.w3.org/2002/07/owl#';
+const RDF  = 'http://www.w3.org/1999/02/22-rdf-syntax-ns#';
+const RDFS = 'http://www.w3.org/2000/01/rdf-schema#';
+const SKOS = 'http://www.w3.org/2004/02/skos/core#';
+const FOAF = 'http://xmlns.com/foaf/0.1/';
+
+// ─────────────────────────────────────────────────────────────────
+// Colour palette (one per top-level branch)
+// ─────────────────────────────────────────────────────────────────
+const PALETTE = [
+    '#818cf8', // indigo
+    '#34d399', // emerald
+    '#f87171', // red-400
+    '#60a5fa', // blue-400
+    '#fbbf24', // amber-400
+    '#a78bfa', // violet-400
+    '#2dd4bf', // teal-400
+    '#fb923c', // orange-400
+    '#f472b6', // pink-400
+    '#4ade80', // green-400
+    '#e879f9', // fuchsia-400
+    '#67e8f9', // cyan-300
+];
+
+// ─────────────────────────────────────────────────────────────────
+// Tiny utilities
+// ─────────────────────────────────────────────────────────────────
+function localName(uri) {
+    const h = uri.lastIndexOf('#');
+    const s = uri.lastIndexOf('/');
+    const i = Math.max(h, s);
+    return i >= 0 ? uri.substring(i + 1) : uri;
+}
+
+function esc(str) {
+    return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+}
+
+function setLoading(on, msg = 'Uploading...') {
+    const el = document.getElementById('loadingOverlay');
+    document.getElementById('loadingMsg').textContent = msg;
+    el.classList.toggle('visible', on);
+}
+
+function setStatus(text) {
+    document.getElementById('statusText').textContent = text;
+}
+
+let toastTimer = null;
+function showToast(msg, ms = 5000) {
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('visible');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => t.classList.remove('visible'), ms);
+}
+
+function linkify(text) {
+    const urlRegex = /(https?:\/\/[^\s]+|www\.[^\s]+)/g;
+
+    return text.replace(urlRegex, (url) => {
+        let href = url;
+        if (!href.startsWith('http')) {
+            href = 'https://' + href;
+        }
+        return `<a href="${href}" target="_blank" rel="noopener noreferrer">${url}</a>`;
+    });
+}
+
+// ─────────────────────────────────────────────────────────────────
+// Parse an RDF list starting at `listNode`
+// ─────────────────────────────────────────────────────────────────
+function extractRDFList(store, listNode) {
+    const members = [];
+    let cur = listNode;
+    const nilURI = RDF + 'nil';
+    const visited = new Set();
+
+    while (cur && cur.termType !== 'DefaultGraph' && !visited.has(cur.value)) {
+        if (cur.value === nilURI) break;
+        visited.add(cur.value);
+
+        const firstQuads = store.getQuads(cur, RDF + 'first', null, null);
+        if (firstQuads.length === 0) break;
+        members.push(firstQuads[0].object);
+
+        const restQuads = store.getQuads(cur, RDF + 'rest', null, null);
+        if (restQuads.length === 0) break;
+        cur = restQuads[0].object;
+    }
+    return members;
+}
+
+// Resolve possible owl:unionOf blank node → list of named URIs
+function resolveClassNode(store, node) {
+    if (node.termType === 'NamedNode') return [node.value];
+    if (node.termType !== 'BlankNode') return [];
+
+    const unionOf = store.getQuads(node, OWL + 'unionOf', null, null);
+    if (unionOf.length > 0) {
+        return extractRDFList(store, unionOf[0].object)
+            .filter(t => t.termType === 'NamedNode')
+            .map(t => t.value);
+    }
+    const intersectionOf = store.getQuads(node, OWL + 'intersectionOf', null, null);
+    if (intersectionOf.length > 0) {
+        return extractRDFList(store, intersectionOf[0].object)
+            .filter(t => t.termType === 'NamedNode')
+            .map(t => t.value);
+    }
+    return [];
+}
+
+// ─────────────────────────────────────────────────────────────────
+// Parse TTL asynchronously using N3.js callback API
+// ─────────────────────────────────────────────────────────────────
+function parseTTL(text) {
+    return new Promise((resolve, reject) => {
+        const parser = new N3.Parser({ format: 'text/turtle' });
+        const quads = [];
+        parser.parse(text, (err, quad) => {
+            if (err)  return reject(new Error('Parsing TTL : ' + err.message));
+            if (quad) quads.push(quad);
+            else      resolve(quads);   // null quad = done
+        });
+    });
+}
+
+function isSystemUri(uri) {
+    const systemNamespaces = [
+        'http://www.w3.org/1999/02/22-rdf-syntax-ns#',
+        'http://www.w3.org/2000/01/rdf-schema#',
+        'http://www.w3.org/2002/07/owl#',
+        'http://www.w3.org/2001/XMLSchema#',
+        'http://xmlns.com/foaf/0.1#'
+    ];
+    return systemNamespaces.some(ns => uri.startsWith(ns));
+}
+// ─────────────────────────────────────────────────────────────────
+// Extract ontology data from an N3.Store
+// ─────────────────────────────────────────────────────────────────
+function extractOntology(store) {
+    // ── 1. Collect classes ────────────────────────────────────
+    const classes = new Map(); // uri → { uri, label, comment }
+
+    function registerClass(uri) {
+        if (!uri || uri.startsWith('_:')) return;
+        if (!classes.has(uri)) {
+            classes.set(uri, { uri, label: localName(uri), comment: '' });
+        }
+    }
+
+    for (const ct of [OWL + 'Class', RDFS + 'Class']) {
+        for (const q of store.getQuads(null, RDF + 'type', ct, null)) {
+            if (q.subject.termType !== 'NamedNode') continue;
+            registerClass(q.subject.value);
+        }
+    }
+
+    // Also pick up classes referenced only via rdfs:subClassOf
+    for (const q of store.getQuads(null, RDFS + 'subClassOf', null, null)) {
+        if (q.subject.termType === 'NamedNode') registerClass(q.subject.value);
+        if (q.object.termType  === 'NamedNode') registerClass(q.object.value);
+    }
+
+    // ── 2. Labels ─────────────────────────────────────────────
+    // Priority: skos:prefLabel@en > rdfs:label@en > skos:prefLabel (any) > rdfs:label (any)
+    const labelPriority = new Map(); // uri → priority (lower = better)
+
+    function trySetLabel(uri, val, lang, priority) {
+        const cls = classes.get(uri);
+        if (!cls) return;
+        const cur = labelPriority.get(uri) ?? 99;
+        if (priority < cur) {
+            cls.label = val;
+            labelPriority.set(uri, priority);
+        }
+    }
+
+    for (const q of store.getQuads(null, SKOS + 'prefLabel', null, null)) {
+        const uri = q.subject.value;
+        const lang = q.object.language || '';
+        if (lang === 'en') trySetLabel(uri, q.object.value, lang, 0);
+        else               trySetLabel(uri, q.object.value, lang, 2);
+    }
+    for (const q of store.getQuads(null, RDFS + 'label', null, null)) {
+        const uri = q.subject.value;
+        const lang = q.object.language || '';
+        if (lang === 'en') trySetLabel(uri, q.object.value, lang, 1);
+        else               trySetLabel(uri, q.object.value, lang, 3);
+    }
+
+    // ── 3. Comments ───────────────────────────────────────────
+    for (const cp of [RDFS + 'comment', SKOS + 'definition', SKOS + 'scopeNote']) {
+        for (const q of store.getQuads(null, cp, null, null)) {
+            const cls = classes.get(q.subject.value);
+            if (!cls || cls.comment) continue;
+            if (q.object.language === 'en' || !q.object.language) {
+                cls.comment = q.object.value;
+            }
+        }
+    }
+    // Fallback: FR comments if no EN found
+    for (const cp of [RDFS + 'comment', SKOS + 'definition']) {
+        for (const q of store.getQuads(null, cp, null, null)) {
+            const cls = classes.get(q.subject.value);
+            if (!cls || cls.comment) continue;
+            cls.comment = q.object.value;
+        }
+    }
+
+    // ── 4. subClassOf edges (named classes only) ──────────────
+    const subClassEdges = [];
+
+    for (const q of store.getQuads(null, RDFS + 'subClassOf', null, null)) {
+        if (q.subject.termType !== 'NamedNode') continue;
+        if (q.object.termType  !== 'NamedNode') continue;
+        const from = q.subject.value;
+        const to   = q.object.value;
+        if (classes.has(from) && classes.has(to) && from !== to) {
+            subClassEdges.push({ from, to });
+        }
+    }
+
+    // ── 5. Object properties ──────────────────────────────────
+    const properties = new Map(); // uri → { uri, label, domains:[], ranges:[] }
+
+
+   // CORRECCIÓN: Buscamos tanto ObjectProperty como sus subtipos comunes (Transitive, Symmetric, etc.)
+    const objectPropertyTypes = [
+        OWL + 'ObjectProperty',
+        OWL + 'TransitiveProperty',
+        OWL + 'SymmetricProperty',
+        OWL + 'AsymmetricProperty',
+        OWL + 'FunctionalProperty',
+        OWL + 'InverseFunctionalProperty',
+        OWL + 'ReflexiveProperty',
+        OWL + 'IrreflexiveProperty'
+    ];
+
+    for (const propType of objectPropertyTypes) {
+        for (const q of store.getQuads(null, RDF + 'type', propType, null)) {
+            if (q.subject.termType !== 'NamedNode') continue;
+            const uri = q.subject.value;
+            if (!properties.has(uri)) {
+                properties.set(uri, { uri, label: localName(uri), domains: [], ranges: [] });
+            }
+        }
+    }
+    //for (const q of store.getQuads(null, RDF + 'type', OWL + 'ObjectProperty', null)) {
+    //    if (q.subject.termType !== 'NamedNode') continue;
+    //    const uri = q.subject.value;
+    //    if (!properties.has(uri)) {
+    //        properties.set(uri, { uri, label: localName(uri), domains: [], ranges: [] });
+    //    }
+    //}
+
+    // Property labels
+    for (const lp of [SKOS + 'prefLabel', RDFS + 'label']) {
+        for (const q of store.getQuads(null, lp, null, null)) {
+            const prop = properties.get(q.subject.value);
+            if (!prop) continue;
+            if (q.object.language === 'en') prop.label = q.object.value;
+        }
+    }
+
+    // PASS extra — register any URI that has rdfs:domain + rdfs:range pointing to known classes
+    // but was NOT declared with rdf:type owl:ObjectProperty (e.g. only rdfs:subPropertyOf).
+    // This fixes properties like hasInputParameter / hasOutputParameter.
+    {
+        const domainCandidates = new Set(
+            store.getQuads(null, RDFS + 'domain', null, null)
+                .map(q => q.subject.value)
+                .filter(v => !properties.has(v))
+        );
+        for (const uri of domainCandidates) {
+            // Only auto-register if range also points to a named node (likely a class)
+            const rangeQuads = store.getQuads(uri, RDFS + 'range', null, null);
+            const hasClassRange = rangeQuads.some(q => q.object.termType === 'NamedNode');
+            // Skip datatype properties (already handled) and OWL meta-predicates
+            const isDT = store.getQuads(uri, RDF + 'type', OWL + 'DatatypeProperty', null).length > 0;
+            if (!isDT && hasClassRange) {
+                properties.set(uri, { uri, label: localName(uri), domains: [], ranges: [] });
+                // Pick up label if available
+                for (const lp of [SKOS + 'prefLabel', RDFS + 'label']) {
+                    for (const q of store.getQuads(uri, lp, null, null)) {
+                        if (q.object.language === 'en' || !q.object.language) {
+                            properties.get(uri).label = q.object.value;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Domains & ranges (including owl:unionOf blank nodes)
+    for (const q of store.getQuads(null, RDFS + 'domain', null, null)) {
+        const prop = properties.get(q.subject.value);
+        if (!prop) continue;
+        for (const uri of resolveClassNode(store, q.object)) {
+            if (classes.has(uri) && !prop.domains.includes(uri)) prop.domains.push(uri);
+        }
+    }
+    for (const q of store.getQuads(null, RDFS + 'range', null, null)) {
+        const prop = properties.get(q.subject.value);
+        if (!prop) continue;
+        for (const uri of resolveClassNode(store, q.object)) {
+            if (classes.has(uri) && !prop.ranges.includes(uri)) prop.ranges.push(uri);
+        }
+    }
+
+    // ── 6. Datatype properties ────────────────────────────────────
+    const datatypeProperties = new Map(); // uri → { uri, label, domains:[], datatypes:[] }
+
+    for (const q of store.getQuads(null, RDF + 'type', OWL + 'DatatypeProperty', null)) {
+        if (q.subject.termType !== 'NamedNode') continue;
+        const uri = q.subject.value;
+        if (!datatypeProperties.has(uri)) {
+            datatypeProperties.set(uri, { uri, label: localName(uri), domains: [], datatypes: [] });
+        }
+    }
+
+    // Datatype property labels
+    for (const lp of [SKOS + 'prefLabel', RDFS + 'label']) {
+        for (const q of store.getQuads(null, lp, null, null)) {
+            const prop = datatypeProperties.get(q.subject.value);
+            if (!prop) continue;
+            if (q.object.language === 'en') prop.label = q.object.value;
+        }
+    }
+
+    // Domains for datatype properties
+    for (const q of store.getQuads(null, RDFS + 'domain', null, null)) {
+        const prop = datatypeProperties.get(q.subject.value);
+        if (!prop) continue;
+        for (const uri of resolveClassNode(store, q.object)) {
+            if (classes.has(uri) && !prop.domains.includes(uri)) prop.domains.push(uri);
+        }
+    }
+
+    // Ranges for datatype properties (typically XML Schema types)
+    for (const q of store.getQuads(null, RDFS + 'range', null, null)) {
+        const prop = datatypeProperties.get(q.subject.value);
+        if (!prop) continue;
+        if (q.object.termType === 'NamedNode') {
+            if (!prop.datatypes.includes(q.object.value)) prop.datatypes.push(q.object.value);
+        }
+    }
+
+    // ── 7. Instances (individuos/instancias) ──────────────────────
+    const instances = new Map(); // uri → { uri, label, type, comment }
+
+    for (const q of store.getQuads(null, RDF + 'type', null, null)) {
+        //if (q.subject.termType !== 'NamedNode') continue;
+        //if (q.object.termType !== 'NamedNode') continue;
+
+        if (q.subject.termType === 'BlankNode') continue; // Ignoramos el bnode como sujeto principal aquí
+              
+        const instUri = q.subject.value;
+        const typeUri = q.object.value;
+
+        if (isSystemUri(instUri)) continue;
+
+        // Skip all OWL meta-types — they are never real domain classes
+        const OWL_SKIP = new Set([
+            OWL + 'Ontology', OWL + 'AnnotationProperty', OWL + 'Class',
+            OWL + 'DatatypeProperty', OWL + 'ObjectProperty',
+            OWL + 'TransitiveProperty', OWL + 'SymmetricProperty',
+            OWL + 'AsymmetricProperty', OWL + 'FunctionalProperty',
+            OWL + 'InverseFunctionalProperty', OWL + 'ReflexiveProperty',
+            OWL + 'IrreflexiveProperty',
+            OWL + 'NamedIndividual',   // ← key: never a domain class
+        ]);
+        if (OWL_SKIP.has(typeUri)) continue;
+
+        // Solo consideramos instancias de clases que hemos identificado
+        // it doesnt work when i upload only Abox.
+        // Just try getting all. Maybe I should "import" the entire ontology.
+        //if (classes.has(typeUri) && !instUri.startsWith('_:')) {
+        if (!instUri.startsWith('_:')) {
+            if (!instances.has(instUri)) {
+                instances.set(instUri, { uri: instUri, label: localName(instUri), type: typeUri, comment: '', allTypes: [typeUri] });
+            } else {
+                const existing = instances.get(instUri);
+                if (classes.has(typeUri) && !classes.has(existing.type)) {
+                    existing.type = typeUri;
+                }
+                if (!existing.allTypes) existing.allTypes = [existing.type];
+                if (!existing.allTypes.includes(typeUri)) existing.allTypes.push(typeUri);
+            }
+        }
+        // Para añadir atributos.
+        const inst = instances.get(q.subject.value);
+        if (inst && !inst.attributes) inst.attributes = []; // Inicializamos un array de atributos
+
+    }
+
+    // Instance labels
+    // --- 7.1 Instance labels con prioridad mejorada ---
+    const instLabelPriority = new Map(); // uri → priority
+
+    function trySetInstLabel(uri, val, priority) {
+        const inst = instances.get(uri);
+        if (!inst) return;
+    
+        const curPriority = instLabelPriority.get(uri) ?? 99;
+        if (priority < curPriority) {
+            inst.label = val;
+            instLabelPriority.set(uri, priority);
+        }
+    }
+
+    // Procesar etiquetas en orden de relevancia:
+    // Prioridad 0: skos:prefLabel @en
+    // Prioridad 1: foaf:name (especialmente útil para Personas)
+    // Prioridad 2: rdfs:label @en
+    // Prioridad 3: Cualquier etiqueta sin idioma o en otros idiomas
+
+    // Capturar FOAF:NAME (Prioridad alta para individuos)
+    for (const q of store.getQuads(null, FOAF + 'name', null, null)) {
+        const lang = q.object.language || '';
+        // Si es inglés o no tiene idioma definido (literal simple), prioridad 1
+        const priority = (lang === 'en' || lang === '') ? 1 : 3;
+        trySetInstLabel(q.subject.value, q.object.value, priority);
+    }
+
+    // Capturar SKOS:PREFLABEL
+    for (const q of store.getQuads(null, SKOS + 'prefLabel', null, null)) {
+        const lang = q.object.language || '';
+        const priority = (lang === 'en') ? 0 : 3;
+        trySetInstLabel(q.subject.value, q.object.value, priority);
+    }
+
+    // Capturar RDFS:LABEL
+    for (const q of store.getQuads(null, RDFS + 'label', null, null)) {
+        const lang = q.object.language || '';
+        const priority = (lang === 'en') ? 2 : 4;
+        trySetInstLabel(q.subject.value, q.object.value, priority);
+    }
+
+    // Instance comments
+    for (const cp of [RDFS + 'comment', SKOS + 'definition']) {
+        for (const q of store.getQuads(null, cp, null, null)) {
+            const inst = instances.get(q.subject.value);
+            if (!inst || inst.comment) continue;
+            if (q.object.language === 'en' || !q.object.language) {
+                inst.comment = q.object.value;
+            }
+        }
+    }
+
+    // 
+    // Capturar todos los Literales para el panel de detalles
+    for (const q of store.getQuads(null, null, null, null)) {
+        if (q.object.termType === 'Literal' || q.predicate.value.includes('hasURL')) {
+            const inst = instances.get(q.subject.value);
+            if (inst) {
+                const pred = q.predicate.value;
+                const predLocal = localName(pred);
+                const predFull  = q.predicate.value; // Guardamos la URI completa por seguridad
+
+
+                // Capturar específicamente el estado de membresía
+                if (predLocal === 'isCurrentMember') {
+                    // Convertimos el literal "true"/"false" a booleano real
+                    inst.isCurrentMember = (q.object.value === 'true');
+                }
+
+                // --- FILTRO AQUÍ ---
+                // No añadimos a 'attributes' lo que ya mostramos en secciones especiales
+                if (pred === RDFS + 'comment' || 
+//                    pred === SKOS + 'definition' || 
+//                    pred === RDFS + 'label' || 
+//                    pred === SKOS + 'prefLabel' || 
+                    pred === FOAF + 'name') {
+                    continue; 
+                }
+
+                inst.attributes.push({
+                    prop: predLocal,
+                    value: q.object.value
+                });
+            }
+        }
+        //  Capturar valores dentro de BNodes (como MemoryCapacity hasValue "24")
+        if (q.subject.termType === 'BlankNode' && q.object.termType === 'Literal') {
+            // Buscamos quién apunta a este BNode
+            const parents = store.getQuads(null, null, q.subject, null);
+            for (const p of parents) {
+                const parentInst = instances.get(p.subject.value);
+                if (parentInst) {
+                    parentInst.attributes.push({
+                        prop: localName(p.predicate.value) + " → " + localName(q.predicate.value),
+                        value: q.object.value
+                    });
+                }
+            }
+        }
+    }
+
+
+    // ── 8. Nodes literal ──────────────────────//
+    const literalNodes = [];
+    const datatypeEdges = [];
+
+    for (const [pUri, prop] of datatypeProperties) {
+        const quads = store.getQuads(null, pUri, null, null);
+
+	    for (const q of quads) {
+            const s = q.subject;
+            const o = q.object;
+
+            if (s.termType !== 'NamedNode') continue;
+            if (o.termType !== 'Literal') continue;
+
+            const sUri = s.value;
+            if (!instances.has(sUri)) continue;
+
+            const literalId = sUri + '_' + pUri + '_' + o.value;
+
+            literalNodes.push({
+		        id: literalId,
+		        label: o.value,
+		        type: 'literal'
+            });
+
+            datatypeEdges.push({
+		        from: sUri,
+		        to: literalId,
+		        label: prop.label
+            });
+	    }
+    }
+
+    // Instances edges
+    // Strategy: scan ALL triples where subject is a known instance and object is also a known instance.
+    // This works even when the ontology TBox (properties map) was not loaded (e.g. CORS blocked imports).
+    const instancesEdges = [];
+    const seenEdgeKey = new Set();
+
+    function pushInstanceEdge(from, to, label, uri) {
+        const key = from + '|' + uri + '|' + to;
+        if (seenEdgeKey.has(key)) return;
+        seenEdgeKey.add(key);
+        instancesEdges.push({ from, to, label, uri });
+    }
+
+    // PASS 1 — Use known TBox ObjectProperties (original behaviour, keeps labels)
+    for (const [pUri, prop] of properties) {
+        const quads = store.getQuads(null, pUri, null, null);
+        for (const q of quads) {
+            if (q.subject.termType !== 'NamedNode' || !instances.has(q.subject.value)) continue;
+            // CASO A: direct instance→instance link
+            if (q.object.termType === 'NamedNode' && instances.has(q.object.value)) {
+                pushInstanceEdge(q.subject.value, q.object.value, prop.label, pUri);
+            }
+            // CASO B: link via BNode
+            else if (q.object.termType === 'BlankNode') {
+                const subQuads = store.getQuads(q.object, null, null, null);
+                for (const sq of subQuads) {
+                    if (sq.object.termType === 'NamedNode' && instances.has(sq.object.value)) {
+                        pushInstanceEdge(
+                            q.subject.value, sq.object.value,
+                            prop.label + ' (' + localName(sq.predicate.value) + ')', pUri
+                        );
+                    }
+                }
+            }
+        }
+    }
+
+    // PASS 2 — Scan ALL triples whose subject AND object are known instances,
+    //          regardless of whether the predicate is in the loaded TBox.
+    //          This catches relations from ontologies that failed to load (CORS etc.).
+    {
+        // Skip purely annotation / meta predicates that we never want as graph edges
+        const SKIP_PREDICATES = new Set([
+            RDF  + 'type',
+            RDFS + 'label', RDFS + 'comment', RDFS + 'seeAlso', RDFS + 'isDefinedBy',
+            OWL  + 'sameAs', OWL  + 'differentFrom',
+            'http://www.w3.org/2004/02/skos/core#prefLabel',
+            'http://www.w3.org/2004/02/skos/core#definition',
+            'http://www.w3.org/2004/02/skos/core#altLabel',
+        ]);
+
+        for (const q of store.getQuads(null, null, null, null)) {
+            if (q.subject.termType !== 'NamedNode') continue;
+            if (q.object.termType  !== 'NamedNode') continue;
+            if (!instances.has(q.subject.value))    continue;
+            if (!instances.has(q.object.value))     continue;
+            if (SKIP_PREDICATES.has(q.predicate.value)) continue;
+
+            const pUri  = q.predicate.value;
+            const label = properties.has(pUri)
+                ? properties.get(pUri).label
+                : localName(pUri);          // fallback: local name of the predicate
+
+            pushInstanceEdge(q.subject.value, q.object.value, label, pUri);
+        }
+    }
+
+    return { classes, subClassEdges, properties, datatypeProperties, instances, instancesEdges };
+    //, literalNodes, };
+}
+
+// ─────────────────────────────────────────────────────────────────
+// Assign branch colours via BFS from roots
+// ─────────────────────────────────────────────────────────────────
+function assignColors(classes, subClassEdges) {
+    const children  = new Map();  // parent → [child]
+    const hasParent = new Set();
+
+    for (const { from, to } of subClassEdges) {
+        if (!children.has(to)) children.set(to, []);
+        children.get(to).push(from);
+        hasParent.add(from);
+    }
+
+    const roots = [...classes.keys()].filter(u => !hasParent.has(u));
+    const colorMap = new Map();
+    let ci = 0;
+
+    function propagate(uri, color) {
+        colorMap.set(uri, color);
+        for (const child of (children.get(uri) || [])) {
+            propagate(child, color);
+        }
+    }
+
+    for (const root of roots) {
+        propagate(root, PALETTE[ci++ % PALETTE.length]);
+    }
+
+    for (const uri of classes.keys()) {
+        if (!colorMap.has(uri)) colorMap.set(uri, '#94a3b8');
+    }
+
+    return colorMap;
+}
+
+// ─────────────────────────────────────────────────────────────────
+// Build Cytoscape element array
+// ─────────────────────────────────────────────────────────────────
+function buildElements(ontology) {
+    const { classes, subClassEdges, properties, datatypeProperties, instances, instancesEdges } = ontology;
+    const colorMap = assignColors(classes, subClassEdges);
+    const elements = [];
+
+    // Nodes - Classes
+    for (const [uri, cls] of classes) {
+        elements.push({
+            data: {
+                id:        uri,
+                label:     cls.label,
+                comment:   cls.comment,
+                uri:       uri,
+                nodeColor: colorMap.get(uri) || '#94a3b8',
+                type:      'class'
+            }
+        });
+    }
+
+    // Nodes - Instances
+    for (const [uri, inst] of instances) {
+        const classNode = classes.get(inst.type); // Obtencion del objeto de la clase
+        elements.push({
+            data: {
+                id:      uri,
+                label:   inst.label,
+                comment: inst.comment,
+                attributes: inst.attributes,
+                uri:     uri,
+                type:    'instance',
+                classType: inst.type,
+                // PASAMOS EL VALOR AQUÍ (por defecto true si no existe)
+                isCurrentMember: inst.isCurrentMember !== false,
+                classColor: classNode ? classNode.color : '#ec4899' // <--- Guardamos el color aquí
+            }
+        });
+    }
+
+
+    // subClassOf edges
+    let eIdx = 0;
+    const seenSub = new Set();
+    for (const { from, to } of subClassEdges) {//
+        const key = from + '|' + to;
+        if (seenSub.has(key)) continue;
+        seenSub.add(key);
+        elements.push({
+            data: {
+                id:       'sub_' + eIdx++,
+                source:   from,
+                target:   to,
+                label:    '',
+                edgeType: 'subClassOf'
+            }
+        });
+    }
+
+    // Object property edges
+    let pIdx = 0;
+    const seenProp = new Set();
+    for (const [uri, prop] of properties) {
+        const doms = prop.domains.filter(d => classes.has(d));
+        const rngs = prop.ranges.filter(r => classes.has(r));
+        if (!doms.length || !rngs.length) continue;
+        for (const d of doms) {
+            for (const r of rngs) {
+                const key = d + '→' + r + '→' + prop.label;
+                if (seenProp.has(key)) continue;
+                seenProp.add(key);
+                elements.push({
+                    data: {
+                        id:       'prop_' + pIdx++,
+                        source:   d,
+                        target:   r,
+                        label:    prop.label,
+                        edgeType: 'objectProperty',
+                        propUri:  uri
+                    }
+                });
+            }
+        }
+    }
+
+    // Datatype property edges
+    let dtIdx = 0;
+    const seenDT = new Set();
+    for (const [uri, dtProp] of datatypeProperties) {
+        const doms = dtProp.domains.filter(d => classes.has(d));
+        if (!doms.length || !dtProp.datatypes.length) continue;
+        for (const d of doms) {
+            for (const dt of dtProp.datatypes) {
+                const key = d + '→' + dt + '→' + dtProp.label;
+                if (seenDT.has(key)) continue;
+                seenDT.add(key);
+                // Crear un pseudo-nodo para el tipo de dato si no existe
+                const dtNodeId = 'datatype_' + localName(dt);
+                if (!elements.some(e => e.data && e.data.id === dtNodeId)) {
+                    elements.push({
+                        data: {
+                            id:   dtNodeId,
+                            label: localName(dt),
+                            type:  'datatype',
+                            uri:   dt
+                        }
+                    });
+                }
+                elements.push({
+                    data: {
+                        id:       'dtprop_' + dtIdx++,
+                        source:   d,
+                        target:   dtNodeId,
+                        label:    dtProp.label,
+                        edgeType: 'datatypeProperty',
+                        propUri:  uri
+                    }
+                });
+            }
+        }
+    }
+
+    // Instance type edges (rdf:type)
+    // Build a set of all node IDs already in elements so we can validate edge targets
+    const nodeIds = new Set(elements.filter(e => !e.data.source).map(e => e.data.id));
+
+    // OWL meta-types that are not domain classes — skip them as instanceOf targets
+    const OWL_META = new Set([
+        OWL + 'NamedIndividual',
+        OWL + 'Class',
+        OWL + 'ObjectProperty',
+        OWL + 'DatatypeProperty',
+        OWL + 'AnnotationProperty',
+        OWL + 'TransitiveProperty',
+        OWL + 'SymmetricProperty',
+        OWL + 'AsymmetricProperty',
+        OWL + 'FunctionalProperty',
+        OWL + 'InverseFunctionalProperty',
+        OWL + 'ReflexiveProperty',
+        OWL + 'IrreflexiveProperty',
+        OWL + 'Ontology',
+    ]);
+
+    let instIdx = 0;
+    const seenInst = new Set();
+    for (const [uri, inst] of instances) {
+        // Skip OWL meta-types (owl:NamedIndividual, etc.) — not real domain classes
+        if (OWL_META.has(inst.type)) continue;
+        // Skip if the target class node doesn't exist in the graph (e.g. from unloaded imports)
+        if (!nodeIds.has(inst.type)) {
+            console.warn('⚠ instanceOf edge skipped — target node not in graph:', inst.type, '← for instance:', uri);
+            continue;
+        }
+        const key = uri + '|' + inst.type;
+        if (seenInst.has(key)) continue;
+        seenInst.add(key);
+        elements.push({
+            data: {
+                id:       'inst_' + instIdx++,
+                source:   uri,
+                target:   inst.type,
+                label:    'type',
+                edgeType: 'instanceOf'
+            }
+        });
+    }
+    
+    // Instance → Instance edges (object properties)
+    let ieIdx = 0;
+    const seenIE = new Set();
+
+    if (instancesEdges) {
+	for (const e of instancesEdges) {
+            const key = e.from + '|' + e.uri + '|' + e.to;
+            if (seenIE.has(key)) continue;
+            seenIE.add(key);
+            elements.push({
+     		    data: {
+                     id:       'instrel_' + ieIdx++,
+                     source:   e.from,
+                     target:   e.to,
+                     label:    e.label,
+                     edgeType: 'instanceRelation',
+                     propUri:  e.uri
+     		    }
+            });
+     	}
+    }
+
+    return { elements, colorMap };
+}
+
+// ─────────────────────────────────────────────────────────────────
+// Cytoscape instance
+// ─────────────────────────────────────────────────────────────────
+let cy         = null;
+let parsedData = null;
+
+let showTBox          = false; //true;
+let showInstances     = true;
+let showSubclass      = true;
+let showPropEdges     = true;
+let showDatatypeProps = true;
+
+function initCytoscape(elements) {
+    if (cy) { cy.destroy(); cy = null; }
+
+    cy = cytoscape({
+        container: document.getElementById('cy'),
+        elements:  elements,
+
+        style: [
+            // ─ Class node ──────────────────────────────────────
+            {
+                selector: 'node[type="class"]',
+                style: {
+                    'background-color':    'data(nodeColor)',
+                    'border-color':        'data(nodeColor)',
+                    'background-opacity':  0.22,
+                    'border-width':        2,
+                    'border-opacity':      0.95,
+                    'label':               'data(label)',
+                    'color':               '#1f3550',
+                    'text-valign':         'center',
+                    'text-halign':         'center',
+                    'font-size':           '11px',
+                    'font-family':         '"Segoe UI", system-ui, sans-serif',
+                    'font-weight':         600,
+                    'width':               'label',
+                    'height':              'label',
+                    'padding':             '10px',
+                    'shape':               'round-rectangle',
+                    'text-wrap':           'wrap',
+                    'text-max-width':      '130px',
+                    'min-zoomed-font-size': 5,
+                    'transition-property': 'background-opacity, border-width, border-opacity',
+                    'transition-duration': '120ms'
+                }
+            },
+            // ─ Highlighted node ─────────────────────────────────
+            {
+                selector: 'node.hl',
+                style: {
+                    'background-opacity': 0.85,
+                    'border-width':       3.5,
+                    'border-opacity':     1,
+                    'font-weight':        700,
+                    'z-index':            20,
+                    'text-opacity':       1 
+//                    'color':              '#1f3550'  //
+                }
+            },
+            // ─ Dimmed node ──────────────────────────────────────
+            {
+                selector: 'node.dim',
+                style: {
+                    'background-opacity': 0.02, //0.03
+                    'border-opacity':     0.02,  //0.1
+                    'color':              'transparent', //#2d3748',
+                    'text-opacity':       0,
+                    'z-index':            0
+                }
+            },
+            // ─ Selected (built-in) ──────────────────────────────
+            {
+                selector: 'node:selected',
+                style: {
+                    'border-color':  '#ffffff',
+                    'border-width':  3,
+                    'border-opacity': 1
+                }
+            },
+            // ─ subClassOf edge ───────────────────────────────────
+            {
+                selector: 'edge[edgeType="subClassOf"]',
+                style: {
+                    'line-color':           '#3f4a5e',
+                    'target-arrow-color':   '#4e5f75',
+                    'target-arrow-shape':   'triangle',
+                    'arrow-scale':          0.85,
+                    'curve-style':          'bezier',
+                    'width':                1.5,
+                    'opacity':              0.65,
+                    'min-zoomed-font-size': 8,
+                    'transition-property':  'opacity, width',
+                    'transition-duration':  '120ms'
+                }
+            },
+            // ─ Object property edge ──────────────────────────────
+            {
+                selector: 'edge[edgeType="objectProperty"]',
+                style: {
+                    'line-color':             '#78350f',
+                    'target-arrow-color':     '#d97706',
+                    'target-arrow-shape':     'vee',
+                    'arrow-scale':            0.9,
+                    'curve-style':            'bezier',
+                    'width':                  1.5,
+                    'line-style':             'dashed',
+                    'line-dash-pattern':      [7, 4],
+                    'label':                  'data(label)',
+                    'font-size':              '10px',
+        		    'text-background-color': '#ffffff',  // white background
+		            'text-background-opacity': 0.9,
+		            'text-border-color': '#d1d5db',      // subtle border
+		            'text-border-width': 1,
+                    'color':                  '#78350f',
+                    'text-rotation':          'autorotate',
+                    'text-margin-y':          -7,
+        		    'text-background-shape': 'round-rectangle',
+		            'text-background-padding': '3px',
+                    'opacity':                0.75,
+                    'min-zoomed-font-size':   5,
+                    'transition-property':    'opacity, width',
+                    'transition-duration':    '120ms'
+                }
+            },
+            // ─ Instance node ────────────────────────────────────────
+            {
+                selector: 'node[type="instance"]',
+                style: {
+                    'background-color':    '#ec4899',
+                    'background-opacity':  0.35,
+                    'border-color':        '#be185d',
+                    'border-width':        1.5,
+                    'border-opacity':      0.85,
+                    'label':               'data(label)',
+                    'color':               '#6b0551',
+                    'text-valign':         'center',
+                    'text-halign':         'center',
+                    'font-size':           '10px',
+                    'font-family':         '"Segoe UI", system-ui, sans-serif',
+                    'font-weight':         500,
+                    'font-style':          'italic',
+                    'width':               'label',
+                    'height':              'label',
+                    'padding':             '6px',
+                    'shape':               'ellipse',
+                    'text-wrap':           'wrap',
+                    'text-max-width':      '100px',
+                    'min-zoomed-font-size': 4,
+                    'transition-property': 'background-opacity, border-width',
+                    'transition-duration': '120ms'
+                }
+            },
+            // Estilo para miembros no actuales (isCurrentMember = false)
+            {
+                selector: 'node[type="instance"][!isCurrentMember]', // Selector para cuando es false
+                style: {
+                    'background-color': '#94a3b8', // Un gris azulado apagado
+                    'border-color':     '#475569',
+                    'color':            '#475569', // Texto también en gris
+                    'background-opacity': 0.2,     // Más transparente
+                    'border-style':     'dashed'   // Línea discontinua para dar efecto de "inactivo"
+                }
+            },
+            // ─ Datatype node ────────────────────────────────────────
+            {
+                selector: 'node[type="datatype"]',
+                style: {
+                    'background-color':    '#a7f3d0',
+                    'background-opacity':  0.3,
+                    'border-color':        '#059669',
+                    'border-width':        1,
+                    'border-opacity':      0.7,
+                    'label':               'data(label)',
+                    'color':               '#065f46',
+                    'text-valign':         'center',
+                    'text-halign':         'center',
+                    'font-size':           '9px',
+                    'font-family':         '"Segoe UI", system-ui, sans-serif',
+                    'font-weight':         400,
+                    'width':               'label',
+                    'height':              'label',
+                    'padding':             '4px',
+                    'shape':               'diamond',
+                    'text-wrap':           'wrap',
+                    'text-max-width':      '80px',
+                    'min-zoomed-font-size': 3,
+                    'transition-property': 'background-opacity, border-width',
+                    'transition-duration': '120ms'
+                }
+            },
+            // ─ Datatype property edge ────────────────────────────────
+            {
+                selector: 'edge[edgeType="datatypeProperty"]',
+                style: {
+                    'line-color':             '#059669',
+                    'target-arrow-color':     '#10b981',
+                    'target-arrow-shape':     'vee',
+                    'arrow-scale':            0.85,
+                    'curve-style':            'bezier',
+                    'width':                  1.2,
+                    'line-style':             'dotted',
+                    'line-dash-pattern':      [3, 3],
+                    'label':                  'data(label)',
+                    'font-size':              '10px',
+                    'color':                  '#059669',
+        		    'text-background-color':  '#ffffff',
+		            'text-background-opacity': 0.9,
+        		    'text-border-color':      '#d1d5db',
+		            'text-border-width':       1,
+                    'text-rotation':          'autorotate',
+                    'text-margin-y':          -6,
+                    //'text-background-color':  '#080a10',
+                    //'text-background-opacity': 0.85,
+                    'text-background-padding': '2px',
+                    'opacity':                0.65,
+                    'min-zoomed-font-size':   4,
+                    'transition-property':    'opacity, width',
+                    'transition-duration':    '120ms'
+                }
+            },
+            // ─ Instance-of edge ──────────────────────────────────────
+            {
+                selector: 'edge[edgeType="instanceOf"]',
+                style: {
+                    'line-color':             '#7c3aed',
+                    'target-arrow-color':     '#7c3aed',
+                    'target-arrow-shape':     'triangle',
+                    'arrow-scale':            0.75,
+                    'curve-style':            'bezier',
+                    'width':                  1.2,
+                    'line-style':             'dashed',
+                    'line-dash-pattern':      [5, 4],
+                    'label':                  'data(label)',
+                    'font-size':              '9px',
+                    'color':                  '#7c3aed',
+                    'text-rotation':          'autorotate',
+                    'text-margin-y':          -6,
+                    'text-background-color':  '#ffffff',
+                    'text-background-opacity': 0.85,
+                    'text-background-shape':  'round-rectangle',
+                    'text-background-padding': '2px',
+                    'opacity':                0.6,
+                    'min-zoomed-font-size':   4,
+                    'transition-property':    'opacity, width',
+                    'transition-duration':    '120ms'
+                }
+            },
+    	    // ─ Edge - relationship between instances ──────────────────────────────────
+	        {
+	     	    selector: 'edge[edgeType="instanceRelation"]',
+	    	    style: {
+	    	        'line-color':           '#22c55e',
+	    	        'target-arrow-color':   '#16a34a',
+	    	        'target-arrow-shape':   'triangle',
+	    	        'curve-style':          'bezier',
+	    	        'width':                2,
+	    	        'label':                'data(label)',
+	    	    'font-size':            '10px',
+	    	    'color':                '#14532d',
+	    	    'text-rotation':        'autorotate',
+	    	    'text-background-color': '#ffffff',
+	    	    'text-background-opacity': 0.9,
+	    	    'text-background-shape': 'round-rectangle',
+	    	    'text-background-padding': '3px',
+	    	    'opacity':              0.9
+	    	    }
+	        },
+            // ─ Imported concept node ─────────────────────────────────
+            {
+                selector: 'node[type="importedConcept"]',
+                style: {
+                    'background-color':    'data(nodeColor)',
+                    'background-opacity':  0.22,
+                    'border-color':        'data(nodeColor)',
+                    'border-width':        2,
+                    'border-opacity':      0.9,
+                    'label':               'data(label)',
+                    'color':               '#1f3550',
+                    'text-valign':         'center',
+                    'text-halign':         'center',
+                    'font-size':           '11px',
+                    'font-family':         '"Segoe UI", system-ui, sans-serif',
+                    'font-weight':         600,
+                    'width':               'label',
+                    'height':              'label',
+                    'padding':             '10px',
+                    'shape':               'round-rectangle',
+                    'text-wrap':           'wrap',
+                    'text-max-width':      '130px',
+                    'min-zoomed-font-size': 4,
+                    'border-style':        'dashed'
+                }
+            },
+            // ─ Imported concept ancestry edge ────────────────────────
+            {
+                selector: 'edge[edgeType="importedSubClassOf"]',
+                style: {
+                    'line-color':           '#3f4a5e',
+                    'target-arrow-color':   '#4e5f75',
+                    'target-arrow-shape':   'triangle',
+                    'arrow-scale':          0.85,
+                    'curve-style':          'bezier',
+                    'width':                1.5,
+                    'line-style':           'dashed',
+                    'line-dash-pattern':    [6, 4],
+                    'opacity':              0.55
+                }
+            },
+            // ─ Imported instanceOf edge (instance → imported concept) ─
+            {
+                selector: 'edge[edgeType="importedInstanceOf"]',
+                style: {
+                    'line-color':             '#7c3aed',
+                    'target-arrow-color':     '#7c3aed',
+                    'target-arrow-shape':     'triangle',
+                    'arrow-scale':            0.75,
+                    'curve-style':            'bezier',
+                    'width':                  1.2,
+                    'line-style':             'dashed',
+                    'line-dash-pattern':      [5, 4],
+                    'label':                  'data(label)',
+                    'font-size':              '9px',
+                    'color':                  '#7c3aed',
+                    'text-rotation':          'autorotate',
+                    'text-margin-y':          -6,
+                    'text-background-color':  '#ffffff',
+                    'text-background-opacity': 0.85,
+                    'text-background-shape':  'round-rectangle',
+                    'text-background-padding': '2px',
+                    'opacity':                0.6
+                }
+            },
+            // ─ Edge dimmed ───────────────────────────────────────
+            {
+                selector: 'edge.dim',
+                style: { 
+                    'opacity': 0,               // Esto debería ocultar todo, pero...
+                    'line-opacity': 0,          // ...forzamos la línea
+                    'target-arrow-opacity': 0,  // ...y la flecha del destino
+                    'source-arrow-opacity': 0,  // ...y la flecha del origen (por si acaso)
+                    'label': '', 
+                    'z-index': 0,
+                    'events': 'no' 
+                }
+            },
+            // ─ Edge highlighted ──────────────────────────────────
+            {
+                selector: 'edge.hl',
+                style: { 
+                    'opacity': 1, 
+                    'line-opacity': 1,
+                    'target-arrow-opacity': 1, 
+                    'width': 2.5, 
+                    'z-index': 10 
+                }
+            },
+            // ─ Forzar Dimmed (Nodos y Edges) ─────────────────────
+            {
+                // Usamos node[type].dim para que tenga más peso que node[type="class"]
+                selector: 'node[type].dim', 
+                style: {
+                    'background-opacity': 0,      // Fondo totalmente invisible
+                    'border-opacity':     0,      // Borde totalmente invisible
+                    'border-width':       0,      // Forzamos ancho 0 por si acaso
+                    'text-opacity':       0,      // Texto invisible
+                    'label':              '',     // Quitamos el texto para evitar artefactos
+                    'z-index':            0,
+                    'events':             'no'    // Opcional: hace que no puedas clickear lo "invisible"
+                }
+            }//,
+            // {
+            //     selector: 'node[active = false]', // o node[!active] según cómo pases la data
+            //     style: {
+            //         'background-color': '#d1d1d1', // Gris claro
+            //         'color': '#888',               // Texto gris
+            //         'opacity': 0.6,                // Un poco transparente
+            //         'border-style': 'dashed'       // Borde punteado para indicar "pasado"
+            //     }
+            // } 
+        ],
+
+	wheelSensitivity: 0.1, 
+        layout: { name: 'preset' }  // layout applied separately after init
+    });
+
+    // ── Node tap ────────────────────────────────────────────────
+    cy.on('tap', 'node', function(evt) {
+        const node = evt.target;
+        highlightNode(node);
+        renderInfoPanel(node);
+    });
+
+    // ── Background tap → reset ───────────────────────────────────
+    cy.on('tap', function(evt) {
+        if (evt.target === cy) {
+            cy.elements().removeClass('hl dim');
+            resetInfoPanel();
+        }
+    });
+}
+
+// ─────────────────────────────────────────────────────────────────
+// Highlight clicked node + neighbours
+// ─────────────────────────────────────────────────────────────────
+function highlightNode(node) {
+    if (!cy) return;
+    cy.batch(() => {
+        cy.elements().addClass('dim').removeClass('hl');
+        node.addClass('hl').removeClass('dim');
+        const edges = node.connectedEdges(':visible');
+        edges.addClass('hl').removeClass('dim');
+        edges.connectedNodes().addClass('hl').removeClass('dim');
+    });
+}
+
+// ─────────────────────────────────────────────────────────────────
+// Info panel
+// ─────────────────────────────────────────────────────────────────
+function formatAttributeValue(val) {
+    // Verificamos si es una URL simple
+    if (typeof val === 'string' && (val.startsWith('http://') || val.startsWith('https://'))) {
+        return `<a href="${val}" target="_blank" style="color:#2563eb; text-decoration:underline;">${val}</a>`;
+    }
+    // Si no es URL, lo devolvemos tal cual (escapado por seguridad)
+    return esc(val);
+}
+
+// FALTA hasURL!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+function renderInfoPanel(node) {
+    if (!parsedData) return;
+    const uri = node.id();
+    const nodeType = node.data('type');
+    
+    let html = '';
+
+    // Handle Classes
+    if (nodeType === 'class') {
+        const cls = parsedData.classes.get(uri);
+        if (!cls) return;
+
+        const col   = node.data('nodeColor');
+        const edges = node.connectedEdges(':visible');
+
+        const superNodes = edges
+            .filter(e => e.data('edgeType') === 'subClassOf' && e.source().id() === uri)
+            .map(e => e.target());
+
+        const subNodes = edges
+            .filter(e => e.data('edgeType') === 'subClassOf' && e.target().id() === uri)
+            .map(e => e.source());
+
+        const outProps = edges
+            .filter(e => e.data('edgeType') === 'objectProperty' && e.source().id() === uri);
+
+        const inProps = edges
+            .filter(e => e.data('edgeType') === 'objectProperty' && e.target().id() === uri);
+
+        const outDTProps = edges
+            .filter(e => e.data('edgeType') === 'datatypeProperty' && e.source().id() === uri);
+
+        const instances = edges
+            .filter(e => e.data('edgeType') === 'instanceOf' && e.target().id() === uri)
+            .map(e => e.source());
+
+        html = `
+            <div class="node-name" style="color:${col}">${esc(cls.label)}</div>
+            <div class="node-uri">${linkify(esc(uri))}</div>
+        `;
+
+        if (cls.comment) {
+            const short = cls.comment.length > 320
+                ? cls.comment.substring(0, 320) + '…'
+                : cls.comment;
+            html += `<div class="node-comment">${esc(short)}</div>`;
+        }
+
+        if (superNodes.length > 0) {
+            html += `<div class="section-title">▲ Superclasses (${superNodes.length})</div>`;
+            superNodes.forEach(n => {
+                const c = n.data('nodeColor');
+                html += `<span class="pill"
+                    style="background:${c}1a;color:${c};border-color:${c}40"
+                    data-nid="${esc(n.id())}">${esc(n.data('label'))}</span>`;
+            });
+        }
+
+        if (subNodes.length > 0) {
+            html += `<div class="section-title">▼ Subclasses (${subNodes.length})</div>`;
+            subNodes.forEach(n => {
+                const c = n.data('nodeColor');
+                html += `<span class="pill"
+                    style="background:${c}1a;color:${c};border-color:${c}40"
+                    data-nid="${esc(n.id())}">${esc(n.data('label'))}</span>`;
+            });
+        }
+
+        if (outProps.length > 0) {
+            html += `<div class="section-title">→ Outgoing Object Properties (${outProps.length})</div>`;
+            outProps.forEach(e => {
+                const tgt = e.target();
+                html += `<div class="prop-row">
+                    <span class="prop-name">${esc(e.data('label'))}</span>
+                    <span class="prop-arr">→</span>
+                    <span class="prop-target" data-nid="${esc(tgt.id())}">${esc(tgt.data('label'))}</span>
+                </div>`;
+            });
+        }
+
+        if (inProps.length > 0) {
+            html += `<div class="section-title">← Incoming Object Properties (${inProps.length})</div>`;
+            inProps.forEach(e => {
+                const src = e.source();
+                html += `<div class="prop-row">
+                    <span class="prop-target" data-nid="${esc(src.id())}">${esc(src.data('label'))}</span>
+                    <span class="prop-arr">→</span>
+                    <span class="prop-name">${esc(e.data('label'))}</span>
+                </div>`;
+            });
+        }
+
+        if (outDTProps.length > 0) {
+            html += `<div class="section-title">⟿ Data Properties (${outDTProps.length})</div>`;
+            outDTProps.forEach(e => {
+                const tgt = e.target();
+                html += `<div class="prop-row">
+                    <span class="prop-name">${esc(e.data('label'))}</span>
+                    <span class="prop-arr">→</span>
+                    <span class="prop-target">${esc(tgt.data('label'))}</span>
+                </div>`;
+            });
+        }
+
+        if (instances.length > 0) {
+            html += `<div class="section-title">▪ Instances (${instances.length})</div>`;
+            instances.forEach(n => {
+                html += `<span class="pill"
+                    style="background:#ec489933;color:#be185d;border-color:#ec489955"
+                    data-nid="${esc(n.id())}">${esc(n.data('label'))}</span>`;
+            });
+        }
+    }
+    // Handle Imported Concepts
+    else if (nodeType === 'importedConcept') {
+        const col   = node.data('nodeColor') || '#d97706';
+        const label = node.data('label') || localName(uri);
+        const comment = node.data('comment') || '';
+
+        // All connected edges (imported subClassOf + importedInstanceOf)
+        const allEdges = node.connectedEdges();
+
+        const superNodes = allEdges
+            .filter(e => e.data('edgeType') === 'importedSubClassOf' && e.source().id() === uri)
+            .map(e => e.target());
+
+        const subNodes = allEdges
+            .filter(e => e.data('edgeType') === 'importedSubClassOf' && e.target().id() === uri)
+            .map(e => e.source());
+
+        const instNodes = allEdges
+            .filter(e => e.data('edgeType') === 'importedInstanceOf' && e.target().id() === uri)
+            .map(e => e.source());
+
+        html = `
+            <div class="node-name" style="color:${col}">${esc(label)}</div>
+            <div class="node-uri">${linkify(esc(uri))}</div>
+        `;
+
+        if (comment) {
+            const short = comment.length > 320 ? comment.substring(0, 320) + '…' : comment;
+            html += `<div class="node-comment">${esc(short)}</div>`;
+        }
+
+        if (superNodes.length > 0) {
+            html += `<div class="section-title">▲ Superclasses (${superNodes.length})</div>`;
+            superNodes.forEach(n => {
+                const c = n.data('nodeColor') || '#d97706';
+                html += `<span class="pill"
+                    style="background:${c}1a;color:${c};border-color:${c}40"
+                    data-nid="${esc(n.id())}">${esc(n.data('label'))}</span>`;
+            });
+        }
+
+        if (subNodes.length > 0) {
+            html += `<div class="section-title">▼ Subclasses (${subNodes.length})</div>`;
+            subNodes.forEach(n => {
+                const c = n.data('nodeColor') || '#d97706';
+                html += `<span class="pill"
+                    style="background:${c}1a;color:${c};border-color:${c}40"
+                    data-nid="${esc(n.id())}">${esc(n.data('label'))}</span>`;
+            });
+        }
+
+        if (instNodes.length > 0) {
+            html += `<div class="section-title">▪ Instances (${instNodes.length})</div>`;
+            instNodes.forEach(n => {
+                html += `<span class="pill"
+                    style="background:#ec489933;color:#be185d;border-color:#ec489955"
+                    data-nid="${esc(n.id())}">${esc(n.data('label'))}</span>`;
+            });
+        }
+    }
+    // Handle Instances
+    else if (nodeType === 'instance') {
+        const inst = parsedData.instances.get(uri);
+        if (!inst) return;
+
+        const classNode = cy.getElementById(inst.type);
+        const col = classNode.length ? classNode.data('nodeColor') : '#94a3b8';
+
+        // --- NUEVO: Buscar si existe la propiedad hasURL ---
+        const urlAttr = inst.attributes ? inst.attributes.find(a => a.prop === 'hasURL') : null;
+        const otherAttributes = inst.attributes ? inst.attributes.filter(a => a.prop !== 'hasURL') : [];
+
+
+        html = `
+            <div class="node-name" style="color:#be185d; font-size: 1.2rem; font-weight: bold;">⟐ ${esc(inst.label)}</div>
+            <div class="node-uri" style="font-size: 0.6rem; color: #666;">${linkify(esc(uri))}</div>
+        `;
+        // 1. Mostrar URL destacada (si existe)
+        if (urlAttr) {
+            html += `
+                <div class="node-url-box" style="margin-top: 10px; padding: 8px; background: #f0f4ff; border-radius: 6px; border-left: 4px solid #2563eb;">
+                    <div style="font-size: 0.7rem; text-transform: uppercase; color: #2563eb; font-weight: bold; margin-bottom: 2px;">DIAMOND image container</div>
+                    <a href="${urlAttr.value}" target="_blank" style="color:#1d4ed8; text-decoration:none; font-weight:500; word-break: break-all; font-size: 0.9rem;">
+                        ${esc(urlAttr.value)} ↗
+                    </a>
+                </div>
+                <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 15px 0;">
+            `;
+        }
+
+        // 1. Mostrar Comentario
+        if (inst.comment) {
+            const short = inst.comment.length > 320
+                ? inst.comment.substring(0, 320) + '…'
+                : inst.comment;
+            html += `<div class="node-comment">${esc(short)}</div>`;
+        }
+
+        // 2. Mostrar Atributos / Literales (NUEVO)
+        // Esto mostrará: nodeCount: 12, partitionName: "Adastra...", etc.
+        if (otherAttributes.length > 0) {
+            html += `<div class="section-title">◈ Data Properties (Attributs)</div>`;
+            otherAttributes.forEach(attr => {
+                html += `
+                <div class="prop-row">
+                    <span class="prop-name" style="color:#666">${esc(attr.prop)}</span>
+                    <span class="prop-arr">:</span>
+                    <span style="font-weight:500; color:#333">${formatAttributeValue(attr.value)}</span>
+                </div>`;
+            });
+
+        }
+
+        // 3. Mostrar el Tipo (Clase)
+        html += `<div class="section-title">▲ Type</div>`;
+        html += `<span class="pill"
+            style="background:${col}1a;color:${col};border-color:${col}40"
+            data-nid="${esc(inst.type)}">${esc(classNode.length ? classNode.data('label') : 'Unknown')}</span>`;
+
+        // 4. Mostrar Relaciones con otras Instancias (NUEVO)
+        const edges = node.connectedEdges(':visible');
+        const outRels = edges.filter(e => e.data('edgeType') === 'instanceRelation' && e.source().id() === uri);
+        const inRels  = edges.filter(e => e.data('edgeType') === 'instanceRelation' && e.target().id() === uri);
+
+        if (outRels.length > 0) {
+            html += `<div class="section-title">→ Outgoing Relations (${outRels.length})</div>`;
+            outRels.forEach(e => {
+                const tgt = e.target();
+                html += `<div class="prop-row">
+                    <span class="prop-name">${esc(e.data('label'))}</span>
+                    <span class="prop-arr">→</span>
+                    <span class="prop-target" data-nid="${esc(tgt.id())}">${esc(tgt.data('label'))}</span>
+                </div>`;
+            });
+        }
+
+        if (inRels.length > 0) {
+            html += `<div class="section-title">← Incoming Relations (${inRels.length})</div>`;
+            inRels.forEach(e => {
+                const src = e.source();
+                html += `<div class="prop-row">
+                    <span class="prop-target" data-nid="${esc(src.id())}">${esc(src.data('label'))}</span>
+                    <span class="prop-arr">→</span>
+                    <span class="prop-name">${esc(e.data('label'))}</span>
+                </div>`;
+            });
+        }
+    }
+
+    const body = document.getElementById('infoBody');
+    body.innerHTML = html;
+
+    // Attach click handlers via delegation
+    body.querySelectorAll('[data-nid]').forEach(el => {
+        el.addEventListener('click', () => focusNode(el.dataset.nid));
+    });
+}
+
+function resetInfoPanel() {
+    document.getElementById('infoBody').innerHTML =
+        '<div class="info-empty">Click on a node<br>to view its details.</div>';
+}
+
+function focusNode(id) {
+    if (!cy) return;
+    const node = cy.getElementById(id);
+    if (!node.length) return;
+    cy.animate({ center: { eles: node }, zoom: Math.max(cy.zoom(), 1.8) }, { duration: 300 });
+    highlightNode(node);
+    renderInfoPanel(node);
+}
+
+// ─────────────────────────────────────────────────────────────────
+// Layout application
+// ─────────────────────────────────────────────────────────────────
+const LAYOUTS = {
+    'dagre-tb': {
+        name: 'dagre',
+        rankDir: 'TB',
+        spacingFactor: 1.25,
+        nodeSep: 30,
+        rankSep: 55,
+        animate: true, animationDuration: 450
+    },
+    'dagre-lr': {
+        name: 'dagre',
+        rankDir: 'LR',
+        spacingFactor: 1.2,
+        nodeSep: 25,
+        rankSep: 80,
+        animate: true, animationDuration: 450
+    },
+    breadthfirst: {
+        name: 'breadthfirst',
+        directed: true,
+        spacingFactor: 1.6,
+        animate: true, animationDuration: 450
+    },
+    cose: {
+    name: 'cose',
+    idealEdgeLength: 100,
+    nodeOverlap: 20,
+    
+    nodeRepulsion: function(node) { return 800000; }, 
+    
+    componentSpacing: 100, 
+    
+    gravity: 0.2,
+    numIter: 1000,
+    padding: 30,
+    animationDuration: 700,
+    randomize: true,
+    fit: true
+},
+circle: {
+    name: 'circle',
+    animate: true, 
+    animationDuration: 400
+},
+grid: {
+    name: 'grid',
+    animate: true, 
+    animationDuration: 400
+}
+};
+
+function applyLayout(name) {
+    if (!cy) return;
+    const cfg = LAYOUTS[name] || LAYOUTS['cose'];
+    cy.layout(cfg).run();
+}
+
+// ─────────────────────────────────────────────────────────────────
+// ─────────────────────────────────────────────────────────────────
+// Visibility + colouring — three clean modes:
+//   TBox only  → classes + schema edges, no instances
+//   ABox only  → instances (coloured by class) + relation edges, no class nodes
+//   Both       → everything; instances in uniform pink
+// ─────────────────────────────────────────────────────────────────
+
+function applyEdgeVisibility() {
+    if (!cy) return;
+
+    // ── Class nodes ──────────────────────────────────────────────
+    cy.nodes('[type="class"]').style('display',
+        showTBox ? 'element' : 'none');
+
+    // ── Imported concept nodes ───────────────────────────────────
+    cy.nodes('[type="importedConcept"]').style('display',
+        showTBox ? 'element' : 'none');
+
+    // ── TBox-only edges ──────────────────────────────────────────
+    cy.edges('[edgeType="subClassOf"]').style('display',
+        (showTBox && showSubclass)      ? 'element' : 'none');
+    cy.edges('[edgeType="objectProperty"]').style('display',
+        (showTBox && showPropEdges)     ? 'element' : 'none');
+    cy.edges('[edgeType="datatypeProperty"]').style('display',
+        (showTBox && showDatatypeProps) ? 'element' : 'none');
+    cy.edges('[edgeType="importedSubClassOf"]').style('display',
+        (showTBox && showSubclass)      ? 'element' : 'none');
+
+    // ── Instance nodes & relation edges ──────────────────────────
+    cy.nodes('[type="instance"]').style('display',
+        showInstances ? 'element' : 'none');
+    cy.edges('[edgeType="instanceRelation"]').style('display',
+        showInstances ? 'element' : 'none');
+
+    // ── rdf:type edges — only when both views on ─────────────────
+    cy.edges('[edgeType="instanceOf"]').style('display',
+        (showInstances && showTBox) ? 'element' : 'none');
+    cy.edges('[edgeType="importedInstanceOf"]').style('display',
+        (showInstances && showTBox) ? 'element' : 'none');
+
+    // ── Datatype nodes ───────────────────────────────────────────
+    cy.nodes('[type="datatype"]').forEach(node => {
+        const hasVisible = node.connectedEdges().some(e =>
+            e.style('display') === 'element' &&
+            e.data('edgeType') === 'datatypeProperty'
+        );
+        node.style('display', hasVisible ? 'element' : 'none');
+    });
+
+    // ── Recolour everything ──────────────────────────────────────
+    applyInstanceColoring();
+}
+
+function applyInstanceColoring() {
+    if (!cy) return;
+
+    const PINK        = '#ec4899';
+    const PINK_BORDER = '#be185d';
+
+    // ── Class nodes: always their branch colour in TBox style ────
+    cy.nodes('[type="class"]').forEach(n => {
+        const col = n.data('nodeColor') || '#94a3b8';
+        n.style({
+            'background-color':   col,
+            'background-opacity': 0.22,
+            'border-color':       col,
+            'border-opacity':     0.95,
+            'border-width':       2,
+            'border-style':       'solid',
+            'shape':              'round-rectangle',
+            'color':              '#1f3550',
+            'font-style':         'normal',
+            'font-weight':        600,
+            'font-size':          '11px'
+        });
+    });
+
+    // ── Instance nodes ───────────────────────────────────────────
+    cy.nodes('[type="instance"]').forEach(n => {
+        if (!showTBox && showInstances) {
+            // ABox-only: colour by class
+            const classNode = cy.getElementById(n.data('classType') || '');
+            const col = (classNode.length > 0)
+                ? (classNode.data('nodeColor') || PINK)
+                : PINK;
+            n.style({
+                'background-color':   col,
+                'background-opacity': 0.22,
+                'border-color':       col,
+                'border-opacity':     0.95,
+                'border-width':       2,
+                'border-style':       'solid',
+                'shape':              'round-rectangle',
+                'color':              '#1f3550',
+                'font-style':         'normal',
+                'font-weight':        600,
+                'font-size':          '11px'
+            });
+        } else {
+            // Both on (or TBox-only, instances hidden anyway): uniform pink ellipse
+            n.style({
+                'background-color':   PINK,
+                'background-opacity': 0.35,
+                'border-color':       PINK_BORDER,
+                'border-width':       1.5,
+                'border-style':       'solid',
+                'shape':              'ellipse',
+                'color':              '#6b0551',
+                'font-style':         'italic',
+                'font-weight':        'normal',
+                'font-size':          '11px'
+            });
+        }
+    });
+
+    // ── instanceRelation edges ───────────────────────────────────
+    cy.edges('[edgeType="instanceRelation"]').forEach(edge => {
+        if (!showTBox && showInstances) {
+            // ABox-only: colour by source class
+            const classNode = cy.getElementById(
+                edge.source().data('classType') || '');
+            const col = (classNode.length > 0)
+                ? (classNode.data('nodeColor') || '#22c55e')
+                : '#22c55e';
+            edge.style({
+                'line-color':         col,
+                'target-arrow-color': col,
+                'opacity':            0.8,
+                'width':              1.5,
+                'line-style':         'solid'
+            });
+        } else {
+            edge.style({
+                'line-color':         '#22c55e',
+                'target-arrow-color': '#16a34a',
+                'opacity':            0.9,
+                'width':              2,
+                'line-style':         'solid'
+            });
+        }
+    });
+}
+
+
+function debug(...args) {
+    if (DEBUG) console.log('[DEBUG]', ...args);
+}
+
+// ─────────────────────────────────────────────────────────────────
+// Main processing pipeline
+// ─────────────────────────────────────────────────────────────────
+async function loadTTLWithImports(url, store, visited = new Set(), depth = 0) {
+    const indent = '  '.repeat(depth);
+
+    if (visited.has(url)) {
+        debug(indent + '↩ already loaded:', url);
+        return;
+    }
+
+    visited.add(url);
+    debug(indent + '⬇ loading:', url);
+
+    let text = "";
+    try {
+        const res = await fetch(url);
+        if (!res.ok) {
+            console.warn(`${indent}⚠️ Failed to load resource (Status ${res.status}): ${url}`);
+            // Si es la ontología raíz (depth == 0) sí debemos lanzar error, si es un import remoto, lo ignoramos
+            if (depth === 0) throw new Error(`Failed to load root ontology: ${url}`);
+            return; 
+        }
+        text = await res.text();
+    } catch (fetchError) {
+        console.error(`${indent}❌ NetworkError/CORS preventing access to: ${url}`, fetchError);
+        if (depth === 0) {
+            throw new Error(`Critical NetworkError when attempting to fetch root resource: ${url}`);
+        }
+        // Si es un sub-import, no dejamos que muera la app: simplemente salimos de esta rama
+        return; 
+    }
+
+    debug(indent + '   size:', text.length, 'chars');
+
+    let quads = [];
+    try {
+        quads = await parseTTL(text);
+        debug(indent + '   quads parsed:', quads.length);
+    } catch (parseError) {
+        console.error(`${indent}❌ Syntax/Parsing error in file: ${url}`, parseError);
+        if (depth === 0) throw parseError;
+        return;
+    }
+
+//
+//    const res = await fetch(url);
+//    if (!res.ok) throw new Error(`Failed to load ${url}`);
+//
+//    const text = await res.text();
+//    debug(indent + '   size:', text.length, 'chars');
+//
+//    const quads = await parseTTL(text);
+//    debug(indent + '   quads parsed:', quads.length);
+//
+    store.addQuads(quads);
+    debug(indent + '   store size now:', store.size);
+
+    // Detect imports
+    const imports = [];
+
+    for (const q of quads) {
+        if (
+            q.predicate.value === OWL + 'imports' &&
+            q.object.termType === 'NamedNode'
+        ) {
+            imports.push(q.object.value);
+        }
+    }
+
+    debug(indent + '   imports found:', imports.length, imports);
+
+    // Recurse
+    for (const imp of imports) {
+        await loadTTLWithImports(imp, store, visited, depth + 1);
+    }
+}
+
+async function processText(ttlText, sourceName) {
+    setLoading(true, 'Parsing du fichier TTL…');
+    document.getElementById('welcome').style.display = 'none';
+
+    let quads;
+    try {
+        quads = await parseTTL(ttlText);
+    } catch(e) {
+        setLoading(false);
+        setStatus('Erreur de parsing');
+        showToast('⚠ ' + e.message);
+        document.getElementById('welcome').style.display = 'flex';
+        return;
+    }
+
+    setLoading(true, 'Extracting ontology…');
+    await new Promise(r => setTimeout(r, 20));  // let UI breathe
+
+    const store = new N3.Store(quads);
+    const ontology = extractOntology(store);
+    parsedData = ontology;
+
+    setLoading(true, 'Building graph…');
+    await new Promise(r => setTimeout(r, 20));
+
+    const { elements } = buildElements(ontology);
+// Respect current toggle state
+    const filtered = elements.filter(el => {
+        if (!el.data.edgeType) {
+            // Nodes: filter instances and datatypes
+            if (el.data.type === 'instance' && !showInstances) return false;
+            if (el.data.type === 'datatype') return true; // Will be hidden via edge visibility
+            return true;
+        }
+        if (el.data.edgeType === 'subClassOf'        && !showSubclass)      return false;
+        if (el.data.edgeType === 'objectProperty'    && !showPropEdges)     return false;
+        if (el.data.edgeType === 'datatypeProperty'  && !showDatatypeProps) return false;
+        if (el.data.edgeType === 'instanceOf'        && !showInstances)     return false;
+        return true;
+    });
+
+    initCytoscape(filtered);
+
+    const layoutName = document.getElementById('layoutSelect').value;
+    applyLayout(layoutName);
+    applyEdgeVisibility();
+
+    // Count stats
+    const nClass  = ontology.classes.size;
+    const nSub    = ontology.subClassEdges.length;
+    const nProps  = [...ontology.properties.values()]
+        .filter(p => p.domains.length && p.ranges.length).length;
+    const nPEdges = elements.filter(e => e.data.edgeType === 'objectProperty').length;
+    const nDatatype = ontology.datatypeProperties.size;
+    const nDTEdges = elements.filter(e => e.data.edgeType === 'datatypeProperty').length;
+    const nInst   = ontology.instances.size;
+    const nInstEdges = elements.filter(e => e.data.edgeType === 'instanceOf').length;
+
+    document.getElementById('statsArea').innerHTML = `
+        <div class="chip"><em>${nClass}</em> classes</div>
+        <div class="chip"><em>${nSub}</em> subClassOf</div>
+        <div class="chip"><em>${nPEdges}</em> object props</div>
+        <div class="chip"><em>${nDatatype}</em> datatype props</div>
+        <div class="chip"><em>${nInst}</em> instances</div>
+    `;
+
+    document.getElementById('toolbar').style.display = 'flex';
+    document.getElementById('legend').style.display  = 'flex';
+    setStatus(`${nClass} classes · ${nInst} instances · ${nPEdges} object props · ${nDTEdges} datatype props — ${sourceName}`);
+    setLoading(false);
+}
+
+async function processStore(store, sourceName) {
+    setLoading(true, 'Extracting ontology…');
+    document.getElementById('welcome').style.display = 'none';
+    await new Promise(r => setTimeout(r, 20));
+
+    const ontology = extractOntology(store);
+    parsedData = ontology;
+
+    setLoading(true, 'Building graph…');
+    await new Promise(r => setTimeout(r, 20));
+
+    const { elements } = buildElements(ontology);
+
+    initCytoscape(elements);
+
+    const layoutName = document.getElementById('layoutSelect').value;
+    applyLayout(layoutName);
+    applyEdgeVisibility();
+
+    document.getElementById('toolbar').style.display = 'flex';
+    document.getElementById('legend').style.display  = 'flex';
+
+    setStatus('Loaded with imports → ' + sourceName);
+    setLoading(false);
+}
+// ─────────────────────────────────────────────────────────────────
+// Load from URL
+// ─────────────────────────────────────────────────────────────────
+async function loadFromURL(url) {
+    setLoading(true, 'Uploading…');
+    setStatus('Uploading on going…');
+
+    let text;
+    try {
+        const store = new N3.Store();
+
+        await loadTTLWithImports(url, store);
+
+        await processStore(store, url);
+
+    } catch (e) {
+        setLoading(false);
+        setStatus('Network error');
+        showToast('⚠ ' + e.message);
+        document.getElementById('welcome').style.display = 'flex';
+        return;
+    }
+
+}
+
+
+function loadFromFile(file) {
+    const reader = new FileReader();
+
+    reader.onload = async (e) => {
+        try {
+            const store = new N3.Store();
+
+            const text = e.target.result;
+            const quads = await parseTTL(text);
+
+            // Add main file
+            store.addQuads(quads);
+
+            // Detect owl:imports
+            const imports = [];
+
+            for (const q of quads) {
+                if (
+                    q.predicate.value === OWL + 'imports' &&
+                    q.object.termType === 'NamedNode'
+                ) {
+                    imports.push(q.object.value);
+                }
+            }
+
+            // Load imported ontologies (via URL) — failures are non-fatal when loading local files
+            const failedImports = [];
+            for (const imp of imports) {
+                try {
+                    setLoading(true, 'Loading import…');
+                    await loadTTLWithImports(imp, store, new Set(), 1); // depth=1 → CORS failures are non-fatal
+                } catch (impErr) {
+                    console.warn('⚠ Could not load import (skipped):', imp, impErr.message);
+                    failedImports.push(imp);
+                }
+            }
+            if (failedImports.length > 0) {
+                showToast(`⚠ ${failedImports.length} import(s) could not be fetched (CORS/network) — visualising without them.`, 7000);
+            }
+
+            // Process everything
+            await processStore(store, file.name);
+
+        } catch (err) {
+            console.error('🔴 Full error:', err);
+            console.error('🔴 Stack:', err.stack);
+            setLoading(false);
+            showToast('⚠ File processing error: ' + err.message);
+        }
+    };
+
+    reader.onerror = () => showToast('⚠ File reading error');
+
+    reader.readAsText(file, 'utf-8');
+}
+
+// ─────────────────────────────────────────────────────────────────
+// Event listeners
+// ─────────────────────────────────────────────────────────────────
+document.getElementById('btnLoad').addEventListener('click', () => {
+    const url = document.getElementById('ttlUrl').value.trim();
+    if (!url) { showToast('Please enter a URL.'); return; }
+    loadFromURL(url);
+});
+
+document.getElementById('ttlUrl').addEventListener('keydown', e => {
+    if (e.key === 'Enter') document.getElementById('btnLoad').click();
+});
+
+// ── AUTOMATIC INITIAL LOAD ────────────────────────────────────
+// Trigger the upload immediately when the DOM content has loaded
+document.addEventListener("DOMContentLoaded", () => {
+    const btnLoad = document.getElementById("btnLoad");
+    const ttlUrlInput = document.getElementById("ttlUrl");
+
+    // Check if there is an initial default URL present
+    if (ttlUrlInput && ttlUrlInput.value.trim() !== "") {
+        // A 150ms delay guarantees that Cytoscape containers and styles 
+        // are initialized before the network requests begin.
+        setTimeout(() => {
+            if (btnLoad) {
+                console.log("Auto-loading ontology from:", ttlUrlInput.value);
+                btnLoad.click();
+            }
+        }, 150);
+    }
+});
+document.getElementById('fileInput').addEventListener('change', e => {
+    const f = e.target.files[0];
+    if (f) {
+        // 1. Buscamos el campo de texto donde se muestra la URL
+        const urlField = document.getElementById('ttlUrl'); 
+        
+        // 2. Le asignamos el nombre del archivo con un prefijo para que quede claro
+        if (urlField) {
+            urlField.value = "file:///local/" + f.name;
+        }
+
+        // 3. Cargamos la ontología
+        loadFromFile(f);
+    }
+    
+    // 4. Limpiamos el selector de archivos para permitir cargar el mismo de nuevo si se desea
+    e.target.value = '';
+});
+
+
+document.getElementById('layoutSelect').addEventListener('change', e => {
+    applyLayout(e.target.value);
+});
+
+document.getElementById('btnSubclass').addEventListener('click', function() {
+    showSubclass = !showSubclass;
+    this.classList.toggle('on', showSubclass);
+    if (cy) cy.edges('[edgeType="subClassOf"]')
+        .style('display', showSubclass ? 'element' : 'none');
+});
+
+document.getElementById('btnProps').addEventListener('click', function() {
+    showPropEdges = !showPropEdges;
+    this.classList.toggle('on-gold', showPropEdges);
+    if (cy) cy.edges('[edgeType="objectProperty"]')
+        .style('display', showPropEdges ? 'element' : 'none');
+});
+
+document.getElementById('btnDatatypeProps').addEventListener('click', function() {
+    showDatatypeProps = !showDatatypeProps;
+    this.classList.toggle('on-gold', showDatatypeProps);
+    if (cy) {
+        cy.edges('[edgeType="datatypeProperty"]')
+            .style('display', showDatatypeProps ? 'element' : 'none');
+        // También mostrar/ocultar los nodos de datatype que están conectados
+        cy.nodes('[type="datatype"]').forEach(node => {
+            const hasVisibleEdge = node.connectedEdges().some(e => 
+                e.style('display') === 'element' && e.data('edgeType') === 'datatypeProperty'
+            );
+            if (!hasVisibleEdge && !showDatatypeProps) {
+                node.style('display', 'none');
+            } else if (hasVisibleEdge && showDatatypeProps) {
+                node.style('display', 'element');
+            }
+        });
+    }
+});
+
+// chekc this
+document.getElementById('btnTBox').addEventListener('click', function() {
+    showTBox = !showTBox;
+    this.classList.toggle('on-rose', showTBox); // form on to on-rose
+    applyEdgeVisibility();
+});
+
+document.getElementById('btnInstances').addEventListener('click', function() {
+    showInstances = !showInstances;
+    this.classList.toggle('on-rose', showInstances);
+    if (cy) {
+        cy.nodes('[type="instance"]')
+            .style('display', showInstances ? 'element' : 'none');
+        cy.edges('[edgeType="instanceOf"]')
+            .style('display', showInstances ? 'element' : 'none');
+    }
+});
+
+
+document.getElementById('searchInput').addEventListener('input', function() {
+    if (!cy) return;
+    const q = this.value.trim().toLowerCase();
+
+    if (!q) {
+        // Importante: removemos ambas clases para volver al estado original
+        cy.elements().removeClass('hl dim'); 
+        return;
+    }
+
+    cy.batch(() => {
+        // 1. Empezamos de cero: todos dimmed
+        cy.elements().addClass('dim').removeClass('hl');
+        
+        // 2. Filtramos los que coinciden
+        const matches = cy.nodes().filter(n => {
+            const label = (n.data('label') || "").toLowerCase();
+            const id = n.id().toLowerCase();
+            return label.includes(q) || id.includes(q);
+        });
+
+        if (matches.length > 0) {
+            // 3. A los que coinciden y su vecindario les quitamos 'dim' y ponemos 'hl'
+            const neighborhood = matches.neighborhood().add(matches);
+            neighborhood.removeClass('dim').addClass('hl');
+            
+            // 4. Aseguramos que las líneas conectadas también se vean
+            matches.connectedEdges(':visible').removeClass('dim').addClass('hl');
+        }
+    });
+});
+
+
+document.getElementById('btnFit').addEventListener('click', () => {
+    if (cy) cy.animate({ fit: { padding: 40 } }, { duration: 300 });
+});
+
+// ─────────────────────────────────────────────────────────────────
+// IMPORTED CONCEPTS FEATURE
+// ─────────────────────────────────────────────────────────────────
+
+// Track added imported concept nodes/edges so we can clear them
+let importedConceptsActive = false;
+
+// ── Detect external namespaces used in the loaded instances ──────
+function detectExternalNamespaces() {
+    if (!parsedData) return [];
+    const mainNs = new Set();
+    const extNs  = new Set();
+
+    // Collect all namespaces that appear in instance URIs (these are "local")
+    for (const uri of parsedData.instances.keys()) {
+        const ns = getNamespace(uri);
+        if (ns) mainNs.add(ns);
+    }
+
+    // Now look at rdf:type targets and property predicates used by instances
+    // to find external namespaces
+    for (const [uri, inst] of parsedData.instances) {
+        // types
+        const typeNs = getNamespace(inst.type);
+        if (typeNs && !mainNs.has(typeNs) && !isSystemNs(typeNs)) extNs.add(typeNs);
+    }
+
+    return [...extNs];
+}
+
+function getNamespace(uri) {
+    if (!uri) return null;
+    const h = uri.lastIndexOf('#');
+    const s = uri.lastIndexOf('/');
+    const i = Math.max(h, s);
+    if (i <= 0) return null;
+    return uri.substring(0, i + 1);
+}
+
+function isSystemNs(ns) {
+    return [
+        'http://www.w3.org/1999/02/22-rdf-syntax-ns#',
+        'http://www.w3.org/2000/01/rdf-schema#',
+        'http://www.w3.org/2002/07/owl#',
+        'http://www.w3.org/2001/XMLSchema#',
+        'http://xmlns.com/foaf/0.1/',
+        'http://www.w3.org/2004/02/skos/core#',
+    ].some(s => ns.startsWith(s));
+}
+
+// ── Modal management ─────────────────────────────────────────────
+function openImportedModal() {
+    const modal = document.getElementById('importedModal');
+    modal.style.display = 'flex';
+
+    // Populate namespace hints as clickable suggestion chips
+    const extNs = detectExternalNamespaces();
+    const hintEl = document.getElementById('importedNsHint');
+
+    if (extNs.length > 0) {
+        const chips = extNs.map(ns => {
+            const safeNs = esc(ns);
+            return `<button onclick="addUrlRow('${safeNs}')"
+                style="display:inline-block;margin:3px 4px 3px 0;padding:3px 10px;
+                       background:#ede9fe;color:#5b21b6;border:1px solid #a78bfa;
+                       border-radius:20px;font-size:0.75rem;cursor:pointer;font-family:monospace;
+                       white-space:nowrap;max-width:100%;overflow:hidden;text-overflow:ellipsis;"
+                title="Click to add as URL">${safeNs}</button>`;
+        }).join('');
+
+        hintEl.innerHTML = `<div style="font-size:0.78rem;color:#5b21b6;background:#f5f3ff;border-radius:6px;padding:8px 10px;">
+            <b style="display:block;margin-bottom:5px;">Detected external namespaces — click to add:</b>
+            ${chips}
+        </div>`;
+    } else {
+        hintEl.innerHTML = `<div style="font-size:0.78rem;color:#64748b;">No external namespaces automatically detected.</div>`;
+    }
+
+    // Add a default empty URL row if none exist
+    const list = document.getElementById('importedUrlList');
+    if (!list.children.length) addUrlRow();
+}
+
+function addUrlRow(value = '') {
+    const list = document.getElementById('importedUrlList');
+    const row = document.createElement('div');
+    row.style.cssText = 'display:flex;gap:6px;align-items:center;';
+    row.innerHTML = `
+        <input type="text" placeholder="https://example.org/my-ontology.ttl"
+            style="flex:1;padding:6px 10px;border:1px solid #d1d5db;border-radius:6px;font-size:0.83rem;"
+            value="${esc(value)}">
+        <button style="background:none;border:none;color:#ef4444;cursor:pointer;font-size:1rem;padding:0 4px;">✕</button>
+    `;
+    row.querySelector('button').addEventListener('click', () => row.remove());
+    list.appendChild(row);
+}
+
+document.getElementById('importedAddUrl').addEventListener('click', () => addUrlRow());
+
+document.getElementById('importedModalClose').addEventListener('click', () => {
+    document.getElementById('importedModal').style.display = 'none';
+});
+
+document.getElementById('importedClear').addEventListener('click', () => {
+    clearImportedConcepts();
+    document.getElementById('importedModal').style.display = 'none';
+    document.getElementById('btnImportedConcepts').classList.remove('on-gold');
+    importedConceptsActive = false;
+});
+
+document.getElementById('importedLoad').addEventListener('click', async () => {
+    const inputs = document.querySelectorAll('#importedUrlList input');
+    const urls = [...inputs].map(i => i.value.trim()).filter(Boolean);
+    if (!urls.length) { showToast('Please enter at least one URL.'); return; }
+
+    document.getElementById('importedStatus').textContent = 'Loading…';
+    await loadAndShowImportedConcepts(urls);
+    document.getElementById('importedModal').style.display = 'none';
+    document.getElementById('btnImportedConcepts').classList.add('on-gold');
+    importedConceptsActive = true;
+});
+
+document.getElementById('btnImportedConcepts').addEventListener('click', () => {
+    if (!parsedData) { showToast('Load an ontology first.'); return; }
+    openImportedModal();
+});
+
+// ── Core: load external TTLs and inject relevant nodes into cy ───
+async function loadAndShowImportedConcepts(urls) {
+    if (!cy || !parsedData) return;
+
+    // 1. Collect URIs used by instances as types or predicates
+    const usedUris = collectUsedExternalUris();
+    if (usedUris.size === 0) {
+        showToast('No external concept URIs found in the loaded instances.');
+        document.getElementById('importedStatus').textContent = '';
+        return;
+    }
+
+    // 2. Load each ontology URL into a combined store
+    const extStore = new N3.Store();
+    let loaded = 0;
+    for (const url of urls) {
+        try {
+            setLoading(true, `Loading ${url.split('/').pop()}…`);
+            const res = await fetch(url);
+            if (!res.ok) throw new Error(`HTTP ${res.status}`);
+            const text = await res.text();
+            const quads = await parseTTL(text);
+            extStore.addQuads(quads);
+            loaded++;
+        } catch (e) {
+            showToast(`⚠ Could not load: ${url} — ${e.message}`);
+        }
+    }
+    setLoading(false);
+
+    if (loaded === 0) {
+        document.getElementById('importedStatus').textContent = 'No ontologies could be loaded.';
+        return;
+    }
+
+    // 3. For each used URI, collect it + all ancestors from extStore
+    const toAdd   = new Map();  // uri → { uri, label, comment }
+    const subEdges = [];        // { from, to } subClassOf in imported ontology
+
+    function registerImported(uri) {
+        if (toAdd.has(uri)) return;
+        // Get label
+        let label = localName(uri);
+        for (const lp of [SKOS + 'prefLabel', RDFS + 'label']) {
+            const lq = extStore.getQuads(N3.DataFactory.namedNode(uri), lp, null, null);
+            if (lq.length) { label = lq[0].object.value; break; }
+        }
+        // Get comment
+        let comment = '';
+        for (const cp of [RDFS + 'comment', SKOS + 'definition']) {
+            const cq = extStore.getQuads(N3.DataFactory.namedNode(uri), cp, null, null);
+            if (cq.length) { comment = cq[0].object.value; break; }
+        }
+        toAdd.set(uri, { uri, label, comment });
+
+        // Recurse into superclasses
+        const superQ = extStore.getQuads(N3.DataFactory.namedNode(uri), RDFS + 'subClassOf', null, null);
+        for (const q of superQ) {
+            if (q.object.termType !== 'NamedNode') continue;
+            const parentUri = q.object.value;
+            if (isSystemNs(getNamespace(parentUri) || '')) continue;
+            subEdges.push({ from: uri, to: parentUri });
+            registerImported(parentUri);
+        }
+    }
+
+    for (const uri of usedUris) {
+        // Verify it actually exists in the external store (is an owl:Class or used in subClassOf)
+        const isClass =
+            extStore.getQuads(N3.DataFactory.namedNode(uri), RDF + 'type', OWL + 'Class', null).length > 0 ||
+            extStore.getQuads(N3.DataFactory.namedNode(uri), RDF + 'type', RDFS + 'Class', null).length > 0 ||
+            extStore.getQuads(N3.DataFactory.namedNode(uri), RDFS + 'subClassOf', null, null).length > 0 ||
+            extStore.getQuads(null, RDFS + 'subClassOf', N3.DataFactory.namedNode(uri), null).length > 0;
+
+        if (isClass) registerImported(uri);
+    }
+
+    // Also collect external object/datatype properties used as predicates
+    const usedProps = collectUsedExternalProperties();
+    const propNodesToAdd = new Map(); // uri → { uri, label, domain, range }
+
+    for (const pUri of usedProps) {
+        const pNode = N3.DataFactory.namedNode(pUri);
+        const isObjProp =
+            extStore.getQuads(pNode, RDF + 'type', OWL + 'ObjectProperty', null).length > 0;
+        const isDTProp =
+            extStore.getQuads(pNode, RDF + 'type', OWL + 'DatatypeProperty', null).length > 0;
+        if (!isObjProp && !isDTProp) continue;
+
+        let label = localName(pUri);
+        for (const lp of [SKOS + 'prefLabel', RDFS + 'label']) {
+            const lq = extStore.getQuads(pNode, lp, null, null);
+            if (lq.length) { label = lq[0].object.value; break; }
+        }
+        propNodesToAdd.set(pUri, { uri: pUri, label, isObjProp });
+    }
+
+    // 4. Remove old imported concept nodes/edges
+    clearImportedConcepts();
+
+    // 4b. Compute branch colors for imported concepts (same palette as TBox)
+    const icColorMap = assignColors(
+        new Map([...toAdd.entries()].map(([uri, d]) => [uri, { uri: d.uri, label: d.label, comment: d.comment }])),
+        subEdges
+    );
+
+    // 5. Inject new nodes and edges into cy
+    const newElements = [];
+    let icIdx = 0;
+
+    for (const [uri, data] of toAdd) {
+        // Skip if already in graph (e.g. from TBox)
+        if (cy.getElementById(uri).length) continue;
+        const col = icColorMap.get(uri) || '#d97706';
+        newElements.push({
+            group: 'nodes',
+            data: {
+                id:        uri,
+                label:     data.label,
+                comment:   data.comment,
+                uri:       uri,
+                type:      'importedConcept',
+                nodeColor: col
+            }
+        });
+    }
+
+    // subClassOf edges among imported concepts
+    const seenIC = new Set();
+    for (const { from, to } of subEdges) {
+        const key = from + '|' + to;
+        if (seenIC.has(key)) continue;
+        seenIC.add(key);
+        // Both nodes must exist (either newly added or already in graph)
+        newElements.push({
+            group: 'edges',
+            data: {
+                id:       'icsub_' + icIdx++,
+                source:   from,
+                target:   to,
+                edgeType: 'importedSubClassOf'
+            }
+        });
+    }
+
+    cy.add(newElements);
+
+    // ── 6. Add instanceOf edges from instances → imported concept nodes ──
+    const localNs = new Set();
+    for (const uri of parsedData.instances.keys()) {
+        const ns = getNamespace(uri);
+        if (ns) localNs.add(ns);
+    }
+
+    let ioIdx = 0;
+    const seenIO = new Set();
+    for (const [instUri, inst] of parsedData.instances) {
+        const types = inst.allTypes || [inst.type];
+        for (const typeUri of types) {
+            if (!typeUri) continue;
+            const ns = getNamespace(typeUri);
+            if (!ns || localNs.has(ns) || isSystemNs(ns)) continue;
+            // Only add if the target node now exists in cy
+            if (!cy.getElementById(typeUri).length) continue;
+            const key = instUri + '|' + typeUri;
+            if (seenIO.has(key)) continue;
+            seenIO.add(key);
+            cy.add({
+                group: 'edges',
+                data: {
+                    id:       'ictype_' + ioIdx++,
+                    source:   instUri,
+                    target:   typeUri,
+                    label:    'type',
+                    edgeType: 'importedInstanceOf'
+                }
+            });
+        }
+    }
+
+    // Re-run layout so new nodes are placed
+    applyLayout(document.getElementById('layoutSelect').value);
+
+    const nAdded = toAdd.size;
+    const nEdges = seenIC.size;
+    const nIO = seenIO.size;
+    document.getElementById('importedStatus').textContent = `Added ${nAdded} concept(s), ${nEdges} subClassOf, ${nIO} type edge(s).`;
+    showToast(`✓ ${nAdded} imported concept(s), ${nIO} type links added.`);
+}
+
+function collectUsedExternalUris() {
+    const used = new Set();
+    if (!parsedData) return used;
+
+    // Collect instance namespaces as "local"
+    const localNs = new Set();
+    for (const uri of parsedData.instances.keys()) {
+        const ns = getNamespace(uri);
+        if (ns) localNs.add(ns);
+    }
+
+    // ALL types used by instances (not just the primary one)
+    for (const [uri, inst] of parsedData.instances) {
+        const types = inst.allTypes || [inst.type];
+        for (const typeUri of types) {
+            if (!typeUri) continue;
+            const ns = getNamespace(typeUri);
+            if (!ns || localNs.has(ns) || isSystemNs(ns)) continue;
+            used.add(typeUri);
+        }
+    }
+
+    return used;
+}
+
+function collectUsedExternalProperties() {
+    const used = new Set();
+    if (!parsedData) return used;
+
+    const localNs = new Set();
+    for (const uri of parsedData.instances.keys()) {
+        const ns = getNamespace(uri);
+        if (ns) localNs.add(ns);
+    }
+
+    // Predicates used in instance→instance edges
+    for (const edge of parsedData.instancesEdges || []) {
+        if (!edge.uri) continue;
+        const ns = getNamespace(edge.uri);
+        if (!ns || localNs.has(ns) || isSystemNs(ns)) continue;
+        used.add(edge.uri);
+    }
+
+    return used;
+}
+
+function clearImportedConcepts() {
+    if (!cy) return;
+    cy.elements('[type="importedConcept"]').remove();
+    cy.edges('[edgeType="importedSubClassOf"]').remove();
+    cy.edges('[edgeType="importedInstanceOf"]').remove();
+}
+
+document.getElementById('btnCenter').addEventListener('click', () => {
+    if (cy) {
+        cy.elements().removeClass('hl dim');
+        resetInfoPanel();
+        cy.animate({ fit: { padding: 40 } }, { duration: 300 });
+    }
+});
+</script>
+</body>
+</html>

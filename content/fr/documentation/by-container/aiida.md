@@ -1,13 +1,14 @@
 ---
 title: Tutoriel AiiDA
-weight: 6
+weight: 1
+description: "Tutoriel sur l'utilisation d'AiiDA via le conteneur Apptainer de DIAMOND pour automatiser des workflows de calcul de matériaux avec traçabilité."
 ---
 
 <div align="justify">
 
 {{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
 
-En préalable de ces explications, il est nécessaire d'avoir installé Apptainer sur votre machine ; voir [ce lien](/documentation/install/install_apptainer/) pour plus de détails.
+En préalable de ces explications, il est nécessaire d'avoir installé Apptainer sur votre machine ; voir [ce lien](/documentation/install/install-apptainer/) pour plus de détails.
 
 Ce tutoriel explicite la démarche à suivre pour interagir avec l'image Apptainer d'AiiDA.
 
@@ -30,10 +31,11 @@ $ ls /chemin/vers/le/dossier/de/votre/choix
 ```
 
 Voici la longue explication :
-* Le dossier `database` est nécessaire pour sauvegarder les données liées à AiiDA.
-* Le dossier `.ssh` est nécessaire pour sauvegarder les données liées aux connexions ssh.
-* Le dossier `postgres_run` est nécessaire pour l'exécution du service PostgreSQL.
-* Les dossiers `rabbitmq/var/lib/rabbitmq` et `rabbitmq/var/log` sont nécessaires pour l'exécution du service RabbitMQ.
+
+- Le dossier `database` est nécessaire pour sauvegarder les données liées à AiiDA.
+- Le dossier `.ssh` est nécessaire pour sauvegarder les données liées aux connexions ssh.
+- Le dossier `postgres_run` est nécessaire pour l'exécution du service PostgreSQL.
+- Les dossiers `rabbitmq/var/lib/rabbitmq` et `rabbitmq/var/log` sont nécessaires pour l'exécution du service RabbitMQ.
 
 Une fois cette architecture de dossier créée et Apptainer installé, vous êtes prêt à utiliser une image Apptainer d'AiiDA.
 
@@ -64,7 +66,7 @@ apptainer instance start \
         {apptainer_image_name}.sif {instance_name}
 ```
 
-avec, `$my_path` qui est une variable d'environnement qui réfère à `/chemin/vers/le/dossier/de/votre/choix` et les flags `-B` qui permettent de monter des dossiers spécifiques du système hôte dans l'image Apptainer. Une fois l'instance demarrée, vous pouvez soit entrer dans le conteneur ou y exécuter des commandes :
+avec, `$my_path` qui est une variable d'environnement qui réfère à `/chemin/vers/le/dossier/de/votre/choix` et les flags `-B` qui permettent de monter des dossiers spécifiques du système hôte dans l'image Apptainer. Une fois l'instance démarrée, vous pouvez soit entrer dans le conteneur ou y exécuter des commandes :
 
 ```bash
 # pour accéder au conteneur
@@ -90,7 +92,7 @@ Si vous n'êtes pas familier avec l'invite de commande et les commandes AiiDA, n
 python3 /GUI/main.py
 ```
 
-Une fois l'interface graphique ouverte, nous vous recommandons de cliquer sur le boutton "Mode pas à pas" et de suivre les étapes. Les mêmes étapes que celles décrites dans la section suivante sont effectuées, mais de manière plus douce pour un utilisateur novice.
+Une fois l'interface graphique ouverte, nous vous recommandons de cliquer sur le bouton "Mode pas à pas" et de suivre les étapes. Les mêmes étapes que celles décrites dans la section suivante sont effectuées, mais de manière plus douce pour un utilisateur novice.
 
 ## Étape 3 bis : Configurer votre environnement AiiDA (via l'invite de commande)
 
@@ -98,7 +100,7 @@ Si c'est la **première fois** que vous utilisez cette image Apptainer d'AiiDA, 
 
 ### Configurer un profil utilisateur
 
-Un utilisateur par défaut est disponible dans le conteneur : `aiida_user`. Nénamoins, vous pouvez créer votre propre profil utilisateur en utilisant les commandes suivantes :
+Un utilisateur par défaut est disponible dans le conteneur : `aiida_user`. Néanmoins, vous pouvez créer votre propre profil utilisateur en utilisant les commandes suivantes :
 
 ```bash
 verdi quicksetup --profile {your_profile} --email {your@mail} --first-name {your_firstname} --last-name {your_lastname} --institution {your_institution}
@@ -129,6 +131,7 @@ Cela permet de configurer entièrement votre environnement AiiDA en personnalisa
 Cette partie est prévue pour les personnes qui possèdent un compte PERSEUS et sont affectés à un projet valide. Si ce n'est pas le cas et que vous avez besoin d'utiliser les clusters de Gricad, veuillez consulter ce [lien](https://gricad-doc.univ-grenoble-alpes.fr/services/).
 
 La première chose à faire est de générer une clé RSA. Pour ce faire, exécutez la commande :
+
 ```bash
 ssh-keygen
 ```
@@ -200,7 +203,7 @@ Des codes et des workflows requièrent des données pour fonctionner correctemen
 verdi data vasp-potcar uploadfamily --path=/tmp/{archive} --name=PBE.54 --description="PBE potentials version 54"
 ```
 
-Pour vérifier que l'installation se soit déroulée correctement, vous pouvez exécuter la commande `verdi data vasp-potcar listfamilies`. La sortie de cette commande **ne doit pas être vide**.
+Pour vérifier que l'installation s'est déroulée correctement, vous pouvez exécuter la commande `verdi data vasp-potcar listfamilies`. La sortie de cette commande **ne doit pas être vide**.
 
 > Une fois que vous avez installé les données, nous vous recommandons d'arrêter l'instance et d'en démarrer une nouvelle sans monter le dossier `/tmp` au conteneur.
 
@@ -210,9 +213,9 @@ Vous devez spécifier un projet PERSEUS si vous voulez lancer des workflows sur 
 
 ## Problèmes connus
 
-Here is a list of all the known issues so far:
+Voici la liste de tous les problèmes connus à ce jour :
 
-- No backward compatibility of Apptainer images from version **1.3.X** to version **1.2.X**. Building an image with apptainer **v1.3.X** will prevent it from being downloaded from the `gitlab-gricad` registry with apptainer **v1.2.X**.
-- The postgresql service won't start is the 5432 port is already in use on that machine. In this case, it is impossible to create a profile for AiiDA.
+- Aucune compatibilité ascendante des images Apptainer de la version **1.3.X** vers la version **1.2.X**. Construire une image avec Apptainer **v1.3.X** empêchera son téléchargement depuis le registre `gitlab-gricad` avec Apptainer **v1.2.X**.
+- Le service postgresql ne démarrera pas si le port 5432 est déjà utilisé sur cette machine. Dans ce cas, il est impossible de créer un profil pour AiiDA.
 
 </div>

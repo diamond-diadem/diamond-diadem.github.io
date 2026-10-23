@@ -1,0 +1,38 @@
+// // // Notebooks home illustration // // //
+
+@include swap-image(
+    ".img-notebooks-home",
+    "images/notebooks/home/notebooks-home-light.svg",
+    "images/notebooks/home/notebooks-home-dark.svg"
+);
+
+// // // Notebooks figures // // //
+// Dark variants are generated with scripts/darken-figures.py
+
+$ml-training-figures: (
+    "workflow-overview",
+    "outliers-boxplots",
+    "clustering-pca",
+    "correlation-heatmap",
+    "regression-models-comparison",
+    "xgboost-feature-importance",
+    "cdse-spectrum-prediction",
+    "causal-discovery-graph",
+    "bayesian-optimization-uncertainty"
+);
+
+@each $figure in $ml-training-figures {
+    @include swap-image(
+        ".img-ml-training-#{$figure}",
+        "images/notebooks/ml-training/#{$figure}-light.png",
+        "images/notebooks/ml-training/#{$figure}-dark.png"
+    );
+}
+
+// // // Raman denoising figures // // //
+
+@include swap-image(
+    ".img-raman-denoising-autoencoder-architecture",
+    "images/notebooks/raman-denoising/autoencoder-architecture-light.png",
+    "images/notebooks/raman-denoising/autoencoder-architecture-dark.png"
+);

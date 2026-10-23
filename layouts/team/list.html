@@ -1,0 +1,96 @@
+{{ define "main" }}
+{{ if site.Params.diamond.enableTeamPage | default true }}
+{{ $people := sort .Site.Data.team.team "last_name" }}
+{{ $featuredPeopleWithBio := slice }}
+{{ $featuredPeopleWithoutBio := slice }}
+{{ $fallbackPeopleWithBio := slice }}
+{{ $fallbackPeopleWithoutBio := slice }}
+{{ range $people }}
+  {{ $hasBio := or .bio_short .bio_long .bio_short_fr .bio_long_fr }}
+  {{ if and .photo (not (strings.HasSuffix .photo "/NA.png")) }}
+    {{ if $hasBio }}
+      {{ $featuredPeopleWithBio = $featuredPeopleWithBio | append . }}
+    {{ else }}
+      {{ $featuredPeopleWithoutBio = $featuredPeopleWithoutBio | append . }}
+    {{ end }}
+  {{ else }}
+    {{ if $hasBio }}
+      {{ $fallbackPeopleWithBio = $fallbackPeopleWithBio | append . }}
+    {{ else }}
+      {{ $fallbackPeopleWithoutBio = $fallbackPeopleWithoutBio | append . }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ $preferredRoles := slice
+  "Coordinator"
+  "WP1 - Codes and Workflows"
+  "WP2 - Materials Database Infrastructure"
+  "WP3 - Machine Learning Interatomic Potentials"
+}}
+{{ $allRoles := slice }}
+{{ $typeOptions := slice }}
+{{ $affiliationOptions := slice }}
+{{ range $people }}
+  {{ with .role }}
+    {{ if not (in $allRoles .) }}
+      {{ $allRoles = $allRoles | append . }}
+    {{ end }}
+  {{ end }}
+  {{ with .affiliation }}
+    {{ if not (in $affiliationOptions .) }}
+      {{ $affiliationOptions = $affiliationOptions | append . }}
+    {{ end }}
+  {{ end }}
+  {{ with .personnel_type }}
+    {{ if reflect.IsSlice . }}
+      {{ range . }}
+        {{ if not (in $typeOptions .) }}
+          {{ $typeOptions = $typeOptions | append . }}
+        {{ end }}
+      {{ end }}
+    {{ else }}
+      {{ if not (in $typeOptions .) }}
+        {{ $typeOptions = $typeOptions | append . }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{{ $roleOptions := slice }}
+{{ range $preferredRoles }}
+  {{ if in $allRoles . }}
+    {{ $roleOptions = $roleOptions | append . }}
+  {{ end }}
+{{ end }}
+{{ range sort $allRoles }}
+  {{ if not (in $preferredRoles .) }}
+    {{ $roleOptions = $roleOptions | append . }}
+  {{ end }}
+{{ end }}
+{{ $typeOptions = sort $typeOptions }}
+{{ $affiliationOptions = sort $affiliationOptions }}
+{{ $featuredPeople := $featuredPeopleWithBio | append $featuredPeopleWithoutBio }}
+{{ $fallbackPeople := $fallbackPeopleWithBio | append $fallbackPeopleWithoutBio }}
+<section class="container mx-auto px-4 py-8 mb-5">
+  <h1 class="text-3xl font-semibold mb-6">{{ .Page.Param "title" }}</h1>
+  {{ partial "team/list-filters.html" (dict
+    "searchPlaceholder" (.Page.Param "searchboxtext")
+    "projectLabel" (.Page.Param "filter1")
+    "typeLabel" (.Page.Param "filter2")
+    "affiliationLabel" (.Page.Param "filter3")
+    "roleOptions" $roleOptions
+    "typeOptions" $typeOptions
+    "affiliationOptions" $affiliationOptions
+  ) }}
+
+  {{ partial "team/list-grid.html" (dict
+    "featuredPeople" $featuredPeople
+    "fallbackPeople" $fallbackPeople
+    "lang" .Lang
+  ) }}
+
+  {{ partial "team/list-pagination.html" . }}
+  <p id="no-results" class="hidden mt-4 text-gray-600">{{ i18n "team_no_results" }}</p>
+</section>
+{{ end }}
+{{ end }}

@@ -5,12 +5,13 @@ linkTitle: VESTA
 icon: icon-vesta
 toc: false
 weight: 3
+description: "VESTA is a 3D visualization software for crystal structures and electronic densities in materials science, available as a container on DIAMOND."
 ---
 
 <div class="codes-pages-top-logo">
 
-<a href="https://jp-minerals.org/vesta/" target="blank" class="codes-pages-top-logo mb-0">
-   <img alt="VESTA" class="logo-vesta"/>
+<a href="https://jp-minerals.org/vesta/" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo mb-0">
+   <span class="logo-vesta" aria-hidden="true"></span>
 </a>
 
 <h4 align="center">"<b>V</b>isualization for <b>E</b>lectronic and <b>ST</b>ructural <b>A</b>nalysis"</h4>
@@ -19,11 +20,20 @@ weight: 3
 
 <hr>
 
-### Retrieve the Apptainer image
+### Retrieve the container image
 
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
 ```bash
 apptainer pull vesta.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/vesta.sif:latest
 ```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/vesta
+```
+{{< /tab >}}
+{{< /tabs >}}
 
 <div align="justify">
 
@@ -73,12 +83,17 @@ VESTA stands out for its ability to combine sophisticated visualization function
 
 </div>
 
-### Learn how to use this specific container  _( to be added )_
+<h3 class="mb-1">Tutorial</h3>
 
-### VESTA documentation
+{{< link-card title="Content to be added" description="<i>Learn to use this container image</i>" href="#bottom" icon="tabler-icons/outline/package" disabled="true" class="mb-0" >}}
 
-- #### <a href="https://jp-minerals.org/vesta/" target="_blank">Official website</a>
+<h3 class="mb-1 mt-3">VESTA documentation</h3>
 
-- #### <a href="https://jp-minerals.org/vesta/en/doc.html" target="_blank">Official documentation</a>
+{{< card-grid >}}
+{{< link-card title="Official website" href="https://jp-minerals.org/vesta/" target="_blank" icon="tabler-icons/outline/world-www"  class="mb-0" >}}
+{{< link-card title="Official documentation" href="https://jp-minerals.org/vesta/en/doc.html" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
+{{< /card-grid >}}
 
-- #### Examples: input files _( to be added )_
+<h3 class="mb-1 mt-3">Examples</h3>
+
+{{< link-card title="Content to be added" description="<i>Download input files</i>" href="#bottom" icon="tabler-icons/outline/file-export" disabled="true" class="mb-0" >}}

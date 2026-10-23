@@ -5,16 +5,34 @@ linkTitle: LAMMPS
 icon: icon-lammps
 toc: false
 weight: 1
+description: "LAMMPS is a massively parallel molecular dynamics simulator for large-scale atomistic simulations, available as an Apptainer container on DIAMOND."
 ---
 
-<a href="https://www.lammps.org/" target="_blank" class="codes-pages-top-logo">
-    <img class="logo-lammps" alt="LAMMPS">
+<a href="https://www.lammps.org/" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo">
+    <span class="logo-lammps" aria-hidden="true"></span>
 </a>
 
-### Retrieve the Apptainer image
+### Retrieve the container image
 
+**Generic CPU Image**
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
 ```bash
 apptainer pull lammps.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/lammps.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/lammps
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+**Image for Kraken-GPU computer (Gricad)**
+
+```bash
+apptainer pull lammps-gpu.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/lammps-gpu.sif:latest
 ```
 
 <div align="justify">

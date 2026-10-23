@@ -4,17 +4,27 @@ title_visible: false
 linkTitle: DFTB+
 icon: icon-dftbplus
 weight: 18
+description: "DFTB+ est un logiciel de chimie quantique semi-empirique basé sur la méthode DFTB pour les simulations atomistiques rapides, disponible sur DIAMOND."
 ---
 
-<a href="https://www.dftbplus.org/" target="_blank" class="codes-pages-top-logo">
-  <img alt="DFTB+" class="logo-dftbplus"/>
+<a href="https://www.dftbplus.org/" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo">
+  <span class="logo-dftbplus" aria-hidden="true"></span>
 </a>
 
-### Récupérez l'image Apptainer
+### Récupérez l'image de conteneur
 
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
 ```bash
 apptainer pull dftbplus.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/dftbplus.sif:latest
 ```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/dftbplus
+```
+{{< /tab >}}
+{{< /tabs >}}
 
 <div align="justify">
 
@@ -24,7 +34,7 @@ apptainer pull dftbplus.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamon
 
 <h3 class="mb-1">Tutoriel</h3>
 
-{{< link-card title="Contenu à venir" description="<i>Apprenez à utiliser cette image de conteneur</i>" href="#bottom" icon="tabler-icons/outline/package" disabled="true">}}
+{{< link-card title="Apprenez à utiliser cette image de conteneur" href="/documentation/by-container/dftbplus" icon="tabler-icons/outline/package" class="mb-0" >}}
 
 <h3 class="mb-1 mt-3">Documentation DFTB+</h3>
 
@@ -35,4 +45,4 @@ apptainer pull dftbplus.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamon
 
 <h3 class="mb-1 mt-3">Exemples</h3>
 
-{{< link-card title="Contenu à venir" description="<i>Téléchargez des fichiers d'entrée</i>" href="#bottom" icon="tabler-icons/outline/file-export" disabled="true" class="mb-0" >}}
+{{< link-card title="Téléchargez des fichiers d'entrée" href="/downloads/dftbplus-tutorial-inputs.tar.gz" icon="tabler-icons/outline/file-export" >}}

@@ -10,10 +10,10 @@ languageCode: fr-FR
 pagination:
   pagerSize: 3
 rssLimit: 10
-summarylength: 50
+summarylength: 150
 defaultContentLanguage: fr
 defaultContentLanguageInSubdir: false
-copyRight: Copyright (c) 2020-2024 Hyas
+copyRight: DIAMOND - PEPR DIADEM
 build:
   buildStats:
     enable: true
@@ -44,7 +44,7 @@ sitemap:
   filename: sitemap.xml
   priority: 0.5
 caches:
-  getjson:
+  getresource:
     dir: :cacheDir/:project
     maxAge: -1
 taxonomies:

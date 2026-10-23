@@ -1,0 +1,5 @@
+analytics:
+  enable: false
+  ga_id: ""
+diamond:
+  sectionsIcons: false

@@ -5,17 +5,27 @@ linkTitle: OpenCalphad
 icon: icon-opencalphad
 toc: false
 weight: 6
+description: "OpenCalphad est un logiciel de calcul thermodynamique basé sur la méthode CALPHAD pour les diagrammes de phase et équilibres de matériaux, sur DIAMOND."
 ---
 
-<a href="https://www.opencalphad.com/" target="_blank" class="codes-pages-top-logo">
-    <img alt="OpenCalphad" class="logo-opencalphad">
+<a href="https://www.opencalphad.com/" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo">
+    <span class="logo-opencalphad" aria-hidden="true"></span>
 </a>
 
-### Récupérez l'image Apptainer
+### Récupérez l'image de conteneur
 
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
 ```bash
 apptainer pull opencalphad.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/opencalphad.sif:latest
 ```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/opencalphad
+```
+{{< /tab >}}
+{{< /tabs >}}
 
 <div align="justify">
 
@@ -33,15 +43,15 @@ En résumé, OpenCalphad est un outil puissant et open-source pour la modélisat
 
 <h3 class="mb-1">Tutoriel</h3>
 
-{{< link-card title="Contenu à venir" description="<i>Apprenez à utiliser cette image de conteneur</i>" href="#bottom" icon="tabler-icons/outline/package" disabled="true">}}
+{{< link-card title="Apprenez à utiliser cette image de conteneur" href="/documentation/by-container/opencalphad" icon="tabler-icons/outline/package" class="mb-0" >}}
 
 <h3 class="mb-1 mt-3">Documentation OpenCalphad</h3>
 
 {{< card-grid >}}
 {{< link-card title="Site officiel" href="https://www.opencalphad.com/" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
-{{< link-card title="Documentation officielle" href="https://www.opencalphad.com/OC6-macros.pdf" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
+{{< link-card title="Documentation officielle" href="https://github.com/sundmanbo/opencalphad/tree/v.6.0/documentation" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
 {{< /card-grid >}}
 
 <h3 class="mb-1 mt-3">Exemples</h3>
 
-{{< link-card title="Contenu à venir" description="<i>Téléchargez des fichiers d'entrée</i>" href="#bottom" icon="tabler-icons/outline/file-export" disabled="true" class="mb-0" >}}
+{{< link-card title="Téléchargez des fichiers d'entrée" href="/downloads/opencalphad-tutorial-inputs.tar.gz" icon="tabler-icons/outline/file-export" >}}

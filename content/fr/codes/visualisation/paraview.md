@@ -5,17 +5,27 @@ linkTitle: ParaView
 icon: icon-paraview
 toc: false
 weight: 2
+description: "ParaView est un logiciel open-source de visualisation scientifique haute performance pour les données de simulation, disponible en conteneur sur DIAMOND."
 ---
 
-<a href="https://www.paraview.org/" target="_blank" class="codes-pages-top-logo">
-    <img alt="ParaView" class="logo-paraview"/>
+<a href="https://www.paraview.org/" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo">
+    <span class="logo-paraview" aria-hidden="true"></span>
 </a>
 
-### Récupérez l'image Apptainer
+### Récupérez l'image de conteneur
 
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
 ```bash
 apptainer pull paraview.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/paraview.sif:latest
 ```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/paraview
+```
+{{< /tab >}}
+{{< /tabs >}}
 
 <div align="justify">
 

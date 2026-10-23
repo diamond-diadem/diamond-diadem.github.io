@@ -1,6 +1,9 @@
 ---
 title: À propos d'Apptainer
 linkTitle: Apptainer
+seo:
+  description: Apptainer (Singularity) apporte des conteneurs HPC portables pour garantir
+    la reproductibilité scientifique et la portabilité des applications.
 ---
 
 <h2 class="about-lead text-center">Apptainer (anciennement Singularity) est une solution de création et de gestion de conteneurs orientée vers le calcul haute performance. En proposant des conteneurs empaquetant à la fois un outil logiciel et toutes les dépendances externes nécessaires à son application, il garantit leur portabilité et leur reproductibilité.</h2>
@@ -8,7 +11,7 @@ linkTitle: Apptainer
 <div class="row about apptainer">
 
   <div class="left-about-apptainer">
-    <img alt="Apptainer" class="logo-apptainer about"/>
+    <span class="logo-apptainer about" aria-hidden="true"></span>
   </div>
 
   <div class="right-about-apptainer">

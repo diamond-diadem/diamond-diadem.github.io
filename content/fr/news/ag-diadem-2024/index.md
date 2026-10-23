@@ -3,18 +3,18 @@ title: "Assemblée Générale 2024 du PEPR DIADEM"
 description: ""
 summary: "A eu lieu sur le campus de la Doua à Lyon. Récupérez les présentations et les posters des différents work packages du projet DIAMOND"
 eventDate: "13-15 Novembre 2024"
-backgroundImage: "/images/diadem-background.jpg"
+backgroundImage: "images/diadem-background.jpg"
 backgroundOpacity: 0.25
 # publishDate: 2024-11-18
 # lastmod: 2024-02-06T09:24:27+01:00
 # expiryDate: 2024-03-06T09:24:27+01:00
 draft: false
-weight: 40
+weight: 60
 categories: []
 tags: []
-# contributors: []
+contributors: []
 pinned: false
-homepage: true
+homepage: false
 seo:
   title: "" # custom title (optional)
   description: "" # custom description (recommended)
@@ -24,7 +24,7 @@ seo:
 
 <h3 align="center">
 
-L'Assemblée Générale du <a href="https://pepr-diadem.fr" target="_blank">PEPR DIADEM</a> a eu lieu du 13 au 15 novembre 2024 sur le campus de la Doua à Lyon.
+L'Assemblée Générale du <a href="https://pepr-diadem.fr" target="_blank" rel="noopener noreferrer">PEPR DIADEM</a> a eu lieu du 13 au 15 novembre 2024 sur le campus de la Doua à Lyon.
 
 </h3>
 

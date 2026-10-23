@@ -1,0 +1,48 @@
+{{/* Put your custom <script></script> tags here */}}
+
+{{/* EXAMPLE - only load script for production
+{{ if eq (hugo.Environment) "production" -}}
+  {{ partial "footer/esbuild" (dict "src" "js/instantpage.js" "load" "async" "transpile" false) -}}
+{{ end -}}
+*/}}
+
+{{/* EXAMPLE - only load script for a page type e.g. contact or gallery
+{{ if eq .Type "gallery" -}}
+  {{ partial "footer/esbuild" (dict "src" "js/gallery.js" "load" "async" "transpile" false) -}}
+{{ end -}}
+*/}}
+
+
+{{ partial "footer/esbuild" (dict "src" "js/to-top.js" "load" "defer" "transpile" false) -}}
+
+{{ if site.Params.analytics.enable }}
+<script>
+  window.analyticsSettings = {
+    enabled: true,
+    gaId: "{{ site.Params.analytics.ga_id }}"
+  };
+</script>
+{{ else }}
+<script>
+  window.analyticsSettings = {
+    enabled: false,
+    gaId: ""
+  };
+</script>
+{{ end }}
+
+{{ partial "footer/esbuild" (dict "src" "js/diamond/cookies-consent.js" "transpile" false) -}}
+{{/* Track clipboard copy events in Google Analytics */}}
+{{ partial "footer/esbuild" (dict "src" "js/clipboard.js" "load" "async" "transpile" false) -}}
+
+{{ if and (eq .Type "team") (eq .Kind "section") }}
+  {{ partial "footer/esbuild" (dict "src" "js/diamond/team-list.js" "transpile" false) -}}
+{{ end }}
+
+{{ if and (eq .Type "contact") (site.Params.diamond.enableContactForm) }}
+  {{ partial "footer/esbuild" (dict "src" "js/diamond/contact-form.js" "transpile" false) -}}
+{{ end }}
+
+{{ if site.Params.diamond.enableScrollFade }}
+  {{ partial "footer/esbuild" (dict "src" "js/diamond/scroll-fade.js" "load" "async" "transpile" false) -}}
+{{ end }}

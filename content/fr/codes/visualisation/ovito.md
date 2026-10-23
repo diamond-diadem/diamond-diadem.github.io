@@ -5,13 +5,14 @@ linkTitle: Ovito
 icon: icon-ovito
 toc: false
 weight: 1
+description: "OVITO est un logiciel de visualisation et d'analyse de données de simulation atomistique, disponible en conteneur Apptainer sur la plateforme DIAMOND."
 ---
 
-<a href="https://www.ovito.org/" target="_blank" class="codes-pages-top-logo">
-    <img alt="Ovito" class="logo-ovito"/>
+<a href="https://www.ovito.org/" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo">
+    <span class="logo-ovito" aria-hidden="true"></span>
 </a>
 
-### Récupérez l'image Apptainer
+### Récupérez l'image de conteneur
 
 ```bash
 apptainer pull ovito.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/ovito.sif:latest

@@ -23,18 +23,39 @@ main:
     url: about/guix/
     weight: 15
     parent: about-fr
+  - name: Ontologie
+    url: about/onto-viewer/
+    weight: 16
+    parent: about-fr
+  - name: Équipe
+    url: team/
+    weight: 17
+    parent: about-fr
+    identifier: team-fr
   - name: Codes
-    url: codes/start-here/home/
+    url: codes/home/
     weight: 20
+    identifier: codes-fr
+  - name: Conteneurs
+    url: codes/home/
+    weight: 21
+    parent: codes-fr
+    identifier: codes-containers-fr
+  - name: Documentation
+    url: documentation/home/
+    weight: 22
+    parent: codes-fr
+    identifier: documentation-fr
+  - name: Notebooks ML
+    url: notebooks/home/
+    weight: 25
+    identifier: notebooks-fr
   - name: Workflows
-    url: workflows/start-here/home/
+    url: workflows/home/
     weight: 30
   - name: Données
     url: data/
     weight: 40
-  - name: Documentation
-    url: documentation/start-here/home/
-    weight: 50
   - name: Contact
     url: contact/
     weight: 60
@@ -42,9 +63,6 @@ main:
     url: news/
     weight: 70
     identifier: news-fr
-
-
-
 # codes:
 #     - name: Codes
 #       weight: 10
@@ -61,8 +79,6 @@ main:
 #       identifier: visualisation-fr
 #       parent: codes-fr
 #       url: fr/codes/visualisation/
-
-
 
 # docs:
 #   - name: À propos

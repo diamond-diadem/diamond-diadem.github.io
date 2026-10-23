@@ -5,17 +5,27 @@ linkTitle: Neper
 icon: icon-neper
 toc: false
 weight: 7
+description: "Neper is a polycrystal generation and meshing software for materials mechanics simulations, available as an Apptainer container on DIAMOND."
 ---
 
-<a href="https://neper.info/" target="_blank" class="codes-pages-top-logo">
-  <img alt="Neper" class="home-neper"></img>
+<a href="https://neper.info/" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo">
+  <span class="logo-neper" aria-hidden="true"></span>
 </a>
 
-### Retrieve the Apptainer image
+### Retrieve the container image
 
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
 ```bash
 apptainer pull neper.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/neper.sif:latest
 ```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/neper
+```
+{{< /tab >}}
+{{< /tabs >}}
 
 <div align = "justify">
 
@@ -23,12 +33,13 @@ Neper is an advanced software designed for the modeling and simulation of polycr
 
 </div>
 
-### Learn how to use this specific container _(to be added)_
+<h3 class="mb-1">Tutorial</h3>
 
-### Neper documentation
+{{< link-card title="Learn to use this container image" href="/en/documentation/by-container/neper" icon="tabler-icons/outline/package" class="mb-0" >}}
 
-- #### <a href="https://neper.info/" target="_blank">Official website</a>
+<h3 class="mb-1 mt-3">Neper documentation</h3>
 
-- #### <a href="https://neper.info/doc/index.html" target="_blank">Official documentation</a>
-
-- #### Examples: input files _(to be added)_
+{{< card-grid >}}
+{{< link-card title="Official website" href="https://neper.info/" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
+{{< link-card title="Official documentation" href="https://neper.info/doc/index.html" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
+{{< /card-grid >}}

@@ -5,17 +5,27 @@ linkTitle: Gmsh
 icon: icon-gmsh
 toc: false
 weight: 9
+description: "Gmsh est un générateur de maillage 3D open-source avec moteur CAO intégré pour les simulations par éléments finis, disponible en conteneur sur DIAMOND."
 ---
 
-<a href="https://gmsh.info/" target="_blank" class="codes-pages-top-logo">
-    <img alt="Gmsh" class="logo-gmsh">
+<a href="https://gmsh.info/" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo">
+    <span class="logo-gmsh" aria-hidden="true"></span>
 </a>
 
-### Récupérez l'image Apptainer
+### Récupérez l'image de conteneur
 
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
 ```bash
 apptainer pull gmsh.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/gmsh.sif:latest
 ```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/gmsh
+```
+{{< /tab >}}
+{{< /tabs >}}
 
 <div align="justify">
 
@@ -29,7 +39,7 @@ En outre, Gmsh comprend un puissant langage de script qui permet aux utilisateur
 
 <h3 class="mb-1">Tutoriel</h3>
 
-{{< link-card title="Contenu à venir" description="<i>Apprenez à utiliser cette image de conteneur</i>" href="#bottom" icon="tabler-icons/outline/package" disabled="true" class="mb-0" >}}
+{{< link-card title="Apprenez à utiliser cette image de conteneur" href="/documentation/by-container/gmsh" icon="tabler-icons/outline/package" class="mb-0" >}}
 
 <h3 class="mb-1 mt-3">Documentation Gmsh</h3>
 
@@ -40,4 +50,4 @@ En outre, Gmsh comprend un puissant langage de script qui permet aux utilisateur
 
 <h3 class="mb-1 mt-3">Exemples</h3>
 
-{{< link-card title="Contenu à venir" description="<i>Téléchargez des fichiers d'entrée</i>" href="#bottom" icon="tabler-icons/outline/file-export" disabled="true" class="mb-0" >}}
+{{< link-card title="Téléchargez des fichiers d'entrée" href="/downloads/gmsh-tutorial-inputs.tar.gz" icon="tabler-icons/outline/file-export" >}}

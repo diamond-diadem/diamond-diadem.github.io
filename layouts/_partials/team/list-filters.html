@@ -1,0 +1,33 @@
+{{- $searchPlaceholder := .searchPlaceholder -}}
+{{- $projectLabel := .projectLabel -}}
+{{- $typeLabel := .typeLabel -}}
+{{- $affiliationLabel := .affiliationLabel -}}
+{{- $roleOptions := .roleOptions | default (slice) -}}
+{{- $typeOptions := .typeOptions | default (slice) -}}
+{{- $affiliationOptions := .affiliationOptions | default (slice) -}}
+<div id="filters" class="grid mb-6">
+  <input id="q" type="search" placeholder="{{ $searchPlaceholder }}" class="border rounded px-3 py-2 w-full" />
+
+  {{ partial "team/filter-select.html" (dict
+    "id" "f-project"
+    "label" $projectLabel
+    "allLabel" (i18n "team_all")
+    "options" $roleOptions
+    "kind" "role"
+  ) }}
+
+  {{ partial "team/filter-select.html" (dict
+    "id" "f-type"
+    "label" $typeLabel
+    "allLabel" (i18n "team_all")
+    "options" $typeOptions
+    "kind" "personnel_type"
+  ) }}
+
+  {{ partial "team/filter-select.html" (dict
+    "id" "f-affil"
+    "label" $affiliationLabel
+    "allLabel" (i18n "team_all_feminine")
+    "options" $affiliationOptions
+  ) }}
+</div>

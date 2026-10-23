@@ -4,8 +4,8 @@
 // import core.js
 import '@thulite/core/assets/js/core.js';
 
-// Import clipboard.js
-import 'js/clipboard.js';
+// // Import clipboard.js
+// import 'js/clipboard.js';
 
 // // Import to-top.js
 // import 'js/to-top.js';
@@ -13,11 +13,17 @@ import 'js/clipboard.js';
 // Import tabs.js
 import 'js/tabs.js';
 
-// Import custom.js
-import 'js/custom.js';
-
 // Import synchronised-selects.js (custom script)
 import 'js/diamond/synchronised-selects.js';
+
+// Import homepage-banner-fade.js
+import 'js/diamond/homepage-banner-fade.js';
+
+// Import page-title-banner-fade.js
+import 'js/diamond/page-title-banner-fade.js';
+
+// Import custom.js
+import 'js/custom.js';
 
 /*
 import * as params from '@params';

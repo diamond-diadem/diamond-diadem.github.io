@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Section icon: AI notebooks. Two stacked notebook cells — a code cell and
+     the output cell it rendered, holding a small neural network. Each cell
+     carries the left prompt bar of a Jupyter cell. Inscribed in a circle like
+     the other section icons.
+     Single colour, matching the other section icons. -->
+<svg
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="968"
+   height="968"
+   viewBox="28 28 968 968">
+  <g style="fill:none;stroke:#2979ad;stroke-opacity:1">
+    <!-- Outer ring -->
+    <circle cx="512" cy="512" r="456" style="stroke-width:56" />
+    <!-- Code cell -->
+    <rect x="270" y="280" width="484" height="112" rx="28" style="stroke-width:34" />
+    <g style="fill:#2979ad;stroke:none">
+      <rect x="310" y="306" width="20" height="60" rx="10" />
+      <rect x="360" y="312" width="270" height="18" rx="9" />
+      <rect x="360" y="346" width="180" height="18" rx="9" />
+    </g>
+    <!-- Output cell -->
+    <rect x="270" y="422" width="484" height="312" rx="28" style="stroke-width:34" />
+    <g style="fill:#2979ad;stroke:none">
+      <rect x="310" y="518" width="20" height="120" rx="10" />
+    </g>
+    <!-- The network the cell rendered -->
+    <g style="stroke-width:14">
+      <path d="M 400,498 540,538 M 400,498 540,618" />
+      <path d="M 400,578 540,538 M 400,578 540,618" />
+      <path d="M 400,658 540,538 M 400,658 540,618" />
+      <path d="M 540,538 678,578 M 540,618 678,578" />
+    </g>
+    <g style="fill:#2979ad;stroke:none">
+      <circle cx="400" cy="498" r="30" />
+      <circle cx="400" cy="578" r="30" />
+      <circle cx="400" cy="658" r="30" />
+      <circle cx="540" cy="538" r="30" />
+      <circle cx="540" cy="618" r="30" />
+      <circle cx="678" cy="578" r="30" />
+    </g>
+  </g>
+</svg>

@@ -1,13 +1,14 @@
 ---
 title: AiiDA tutorial
-weight: 6
+weight: 1
+description: "Tutorial on using AiiDA via the DIAMOND Apptainer container to automate materials calculation workflows with automated provenance tracking."
 ---
 
 <div align="justify">
 
 {{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
 
-Before following these instructions, you must have Apptainer installed on your machine; see [this link](/documentation/install/install_apptainer/) for more details.
+Before following these instructions, you must have Apptainer installed on your machine; see [this link](/en/documentation/install/install-apptainer/) for more details.
 
 This tutorial explains how to interact with AiiDA's Apptainer image.
 
@@ -30,10 +31,11 @@ $ ls /path/to/folder/of/your/choice
 ```
 
 Here's the long explanation:
-* The `database` folder is needed to store data related to AiiDA.
-* The `.ssh` folder is needed to store data related to ssh connections.
-* The `postgres_run` folder is needed to run the PostgreSQL service.
-* The `rabbitmq/var/lib/rabbitmq` and `rabbitmq/var/log` folders are needed to run the RabbitMQ service.
+
+- The `database` folder is needed to store data related to AiiDA.
+- The `.ssh` folder is needed to store data related to ssh connections.
+- The `postgres_run` folder is needed to run the PostgreSQL service.
+- The `rabbitmq/var/lib/rabbitmq` and `rabbitmq/var/log` folders are needed to run the RabbitMQ service.
 
 Once this folder architecture has been created and Apptainer installed, you are ready to use an Apptainer image of AiiDA.
 
@@ -94,7 +96,7 @@ Once the GUI is open, we recommend you click on the “Step-by-step mode” butt
 
 ## Step 3 bis: Configure your AiiDA environment (via command prompt)
 
-If this is the **first time** you're using this AiiDA Apptainer image, you'll need to set up your AiiDA profile and follow this entire step! Otherwise you can go straight to the [next step](#run-workflow) to use the image and start workflows.
+If this is the **first time** you're using this AiiDA Apptainer image, you'll need to set up your AiiDA profile and follow this entire step! Otherwise you can go straight to the [next step](#step-4-start-a-workflow) to use the image and start workflows.
 
 ### Set-up a user profile
 
@@ -129,6 +131,7 @@ This allows you to fully configure your AiiDA environment by customising the def
 This part is intended for people who have a PERSEUS account and are assigned to a valid project. If this is not the case and you need to use Gricad clusters, please consult this [link](https://gricad-doc.univ-grenoble-alpes.fr/services/).
 
 The first thing you need to do is generate an RSA key. To do this, run the command:
+
 ```bash
 ssh-keygen
 ```
@@ -145,7 +148,7 @@ ssh-copy-id dahu.ciment
 
 > Note that you'll have to enter your PERSEUS account password at each step.
 
-To check that everything is working correctly, you can try to connect to the `dahu` cluster (with the command `ssh dahu.cement`).
+To check that everything is working correctly, you can try to connect to the `dahu` cluster (with the command `ssh dahu.ciment`).
 
 ### Installing a computer
 
@@ -172,7 +175,7 @@ To check that the installation has been done correctly, you can run the `verdi c
 
 ## Step 4: Start a workflow
 
-Once the AiiDA environment is set up correctly, you're ready to use the image and configure workflows. As mentioned above, you can use the `shell` or `exec` commands to interact with the container. We recommend that you use the `shell` command to access the container. You should also copy your workflow to the `/tmp' folder.
+Once the AiiDA environment is set up correctly, you're ready to use the image and configure workflows. As mentioned above, you can use the `shell` or `exec` commands to interact with the container. We recommend that you use the `shell` command to access the container. You should also copy your workflow to the `/tmp` folder.
 
 To start a workflow, simply run the command :
 

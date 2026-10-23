@@ -5,13 +5,14 @@ linkTitle: Z-set
 icon: icon-z-set
 toc: false
 weight: 4
+description: "Z-set est une suite logicielle d'éléments finis dédiée à la mécanique des matériaux et l'identification de lois de comportement, disponible sur DIAMOND."
 ---
 
-<a href="http://www.zset-software.com/" target="_blank" class="codes-pages-top-logo">
-    <img alt="Z-set" class="logo-z-set">
+<a href="http://www.zset-software.com/" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo">
+    <span class="logo-z-set" aria-hidden="true"></span>
 </a>
 
-### Récupérez l'image Apptainer
+### Récupérez l'image de conteneur
 
 ```bash
 apptainer pull z-set.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/z-set.sif:latest

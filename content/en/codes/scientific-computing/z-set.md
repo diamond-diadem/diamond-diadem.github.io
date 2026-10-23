@@ -5,13 +5,14 @@ linkTitle: Z-set
 icon: icon-z-set
 toc: false
 weight: 4
+description: "Z-set is a finite element suite dedicated to materials mechanics and constitutive law identification, available as an Apptainer container on DIAMOND."
 ---
 
-<a href="http://www.zset-software.com/" target="_blank" class="codes-pages-top-logo">
-    <img alt="Z-set" class="logo-z-set">
+<a href="http://www.zset-software.com/" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo">
+    <span class="logo-z-set" aria-hidden="true"></span>
 </a>
 
-### Retrieve the Apptainer image
+### Retrieve the container image
 
 ```bash
 apptainer pull z-set.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/z-set.sif:latest
@@ -36,12 +37,17 @@ Z-Set is widely used in academic research and industrial applications for its ro
 
 </div>
 
-### Learn how to use this specific container _(to be added)_
+<h3 class="mb-1">Tutorial</h3>
 
-### Z-set documentation
+{{< link-card title="Content to be added" description="<i>Learn to use this container image</i>" href="#bottom" icon="tabler-icons/outline/package" disabled="true" class="mb-0" >}}
 
-- #### <a href="http://www.zset-software.com/" target="_blank">Official website</a>
+<h3 class="mb-1 mt-3">Z-set documentation</h3>
 
-- #### <a href="http://www.zset-software.com/support/manuals/" target="_blank">Official documentation</a>
+{{< card-grid >}}
+{{< link-card title="Official website" href="http://www.zset-software.com/" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
+{{< link-card title="Official documentation" href="http://www.zset-software.com/support/manuals/" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
+{{< /card-grid >}}
 
-- #### Examples: input files _(to be added)_
+<h3 class="mb-1 mt-3">Examples</h3>
+
+{{< link-card title="Content to be added" description="<i>Download input files</i>" href="#bottom" icon="tabler-icons/outline/file-export" disabled="true" class="mb-0" >}}

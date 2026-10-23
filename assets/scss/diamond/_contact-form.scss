@@ -1,0 +1,11 @@
+// Override global `white-space: nowrap` on labels inside the contact form
+#contact-form-container label {
+    white-space: normal;
+}
+
+#contact-form-container,
+#contact-success-container {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}

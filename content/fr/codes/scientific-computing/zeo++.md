@@ -5,17 +5,27 @@ linkTitle: Zeo++
 icon: icon-zeoplusplus
 toc: false
 weight: 10
+description: "Zeo++ est un logiciel d'analyse de la structure des pores dans les matériaux nanoporeux pour les applications de stockage de gaz, disponible sur DIAMOND."
 ---
 
-<a href="https://www.zeoplusplus.org/" target="_blank" class="codes-pages-top-logo">
-    <img alt="Zeo++" class="logo-zeoplusplus">
+<a href="https://www.zeoplusplus.org/" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo">
+    <span class="logo-zeoplusplus" aria-hidden="true"></span>
 </a>
 
-### Récupérez l'image Apptainer
+### Récupérez l'image de conteneur
 
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
 ```bash
 apptainer pull zeoplusplus.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/zeoplusplus.sif:latest
 ```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/zeoplusplus
+```
+{{< /tab >}}
+{{< /tabs >}}
 
 <div align="justify">
 
@@ -25,7 +35,7 @@ Zeo++ est un outil informatique conçu pour l’analyse et la caractérisation d
 
 <h3 class="mb-1">Tutoriel</h3>
 
-{{< link-card title="Contenu à venir" description="<i>Apprenez à utiliser cette image de conteneur</i>" href="#bottom" icon="tabler-icons/outline/package" disabled="true">}}
+{{< link-card title="Apprenez à utiliser cette image de conteneur" href="/documentation/by-container/zeo++" icon="tabler-icons/outline/package" class="mb-0" >}}
 
 <h3 class="mb-1 mt-3">Documentation Zeo++</h3>
 
@@ -36,4 +46,4 @@ Zeo++ est un outil informatique conçu pour l’analyse et la caractérisation d
 
 <h3 class="mb-1 mt-3">Exemples</h3>
 
-{{< link-card title="Contenu à venir" description="<i>Téléchargez des fichiers d'entrée</i>" href="#bottom" icon="tabler-icons/outline/file-export" disabled="true" class="mb-0" >}}
+{{< link-card title="Téléchargez des fichiers d'entrée" href="/downloads/zeo++-tutorial-inputs.tar.gz" icon="tabler-icons/outline/file-export" >}}

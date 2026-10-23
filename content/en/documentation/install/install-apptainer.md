@@ -1,17 +1,18 @@
 ---
 title: How to install Apptainer ?
 weight: 1
+description: "Installation guide for the Apptainer containerization software on Linux to access scientific code images available on the DIAMOND platform."
 ---
 
 <div align="justify">
 
 {{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
 
-This tutorial summarizes how to install the container management software [Apptainer](https://apptainer.org/). It is largely based on [official installation instructions](https://apptainer.org/docs/admin/1.2/installation.html#install-from-pre-built-packages), and one should read these more exhaustive ressources for more details.
+This tutorial summarizes how to install the container management software [Apptainer](https://apptainer.org/). It is largely based on [official installation instructions](https://apptainer.org/docs/admin/1.2/installation.html#install-from-pre-built-packages), and one should read these more exhaustive resources for more details.
 
 Apptainer works on any modern Linux distribution ; however, it is not compatible with Windows and MacOS host kernels and does not run natively on those. It is recommended to use virtualization solutions or a Docker container in such cases, which will not be covered in this topic : see more information [here](https://apptainer.org/docs/admin/1.2/installation.html#installation-on-windows-or-mac).
 
-Finally, this tutorial focuses on currently supported versions: if you are using a Linux distribution version that is no longer supported (for example, CentOS 7 or Ubuntu 18.04) and you encounter a difficult-to-resolve error, do not hesitate to [contact us](/en/documentation/use/ask-help)!
+Finally, this tutorial focuses on currently supported versions: if you are using a Linux distribution version that is no longer supported (for example, CentOS 7 or Ubuntu 18.04) and you encounter a difficult-to-resolve error, do not hesitate to [contact us](/en/contact/)!
 
 {{< /callout >}}
 
@@ -26,6 +27,7 @@ Finally, this tutorial focuses on currently supported versions: if you are using
 {{< video-with-consent id="ZACVgNrc-ek?si=HfbWtXnYIOD4RYNn" >}}
 
 ### One liner command
+
 You can run the following commands to directly install Ubuntu packages :
 
 ```bash
@@ -37,7 +39,8 @@ sudo apt install -y apptainer
 ```
 
 ### Step-by-step detail
-To install pre-built Ubuntu packages for `amd64` and `arm64` architectures, one needs to access Apptainer's *personal package archive* (PPA).
+
+To install pre-built Ubuntu packages for `amd64` and `arm64` architectures, one needs to access Apptainer's _personal package archive_ (PPA).
 
 First, run this to ensure access to the `add-apt-repository` command :
 
@@ -61,6 +64,7 @@ sudo apt install -y apptainer
 {{< video-with-consent id="6J1iYrv9gzU?si=ITbew-euDfzvng9a" >}}
 
 ### One liner command
+
 You can run the following commands to directly install Debian packages :
 
 ```bash
@@ -72,6 +76,7 @@ sudo apt install -y ./apptainer_1.2.5_amd64.deb
 ```
 
 ### Step-by-step detail
+
 To install pre-built Debian packages only for `amd64` architectures, one needs to access Apptainer's GitHub repository using `wget` :
 
 ```bash
@@ -79,7 +84,7 @@ sudo apt update
 sudo apt install -y wget
 ```
 
-Once  `wget` is available, the `.deb` package can be downloaded and installed locally :
+Once `wget` is available, the `.deb` package can be downloaded and installed locally :
 
 ```bash
 cd /tmp
@@ -98,6 +103,7 @@ sudo apt install -y ./apptainer_1.2.5_amd64.deb
 {{< video-with-consent id="BQXcLOYe5Hw?si=mP4gb6T4VzCqUSwB" >}}
 
 ### RPM packages from GitHub
+
 With each new version release, a RPM (RedHat Package Manager) package is available on GitHub :
 
 ```bash
@@ -105,6 +111,7 @@ sudo yum install -y https://github.com/apptainer/apptainer/releases/download/v1.
 ```
 
 ### RPM packages from EPEL or Fedora
+
 RPM packages are also available through EPEL (Extra Packages for Enterprise Linux).
 Using RedHat, one first has to gain access to EPEL repositories :
 
@@ -124,7 +131,7 @@ sudo yum install -y apptainer
 
 {{< video-with-consent id="tAsmuzLtVZI?si=jy4qoLdFcQk0z-9J" >}}
 
-For non-privileged users, a scripts is made available to install pre-built binaries together with several utilitaries mandatory to run Apptainer. The script works for Red Hat Enterprise Linux-derived systems, and also for Fedora, SUSE/OpenSUSE, Debian, and Ubuntu. It is however required to have access to `curl` `rpm2cpio` and `cpio` through the `$PATH` environment variable).
+For non-privileged users, a script is made available to install pre-built binaries together with several utilities mandatory to run Apptainer. The script works for Red Hat Enterprise Linux-derived systems, and also for Fedora, SUSE/OpenSUSE, Debian, and Ubuntu. It is however required to have access to `curl` `rpm2cpio` and `cpio` through the `$PATH` environment variable).
 
 One can run the script using :
 
@@ -137,7 +144,7 @@ Please note the global `apptainer` command will not be available with this insta
 
 ## Install on Windows/MacOS
 
-For Windows user, a dedicated documentation page can be found [here](/en/documentation/install-apptainer/apptainer-windows).
+For Windows user, a dedicated documentation page can be found [here](/en/documentation/install/apptainer-windows/).
 
 For Mac users, it is recommended to use Lima via Homebrew on the [Apptainer documentation](https://apptainer.org/docs/admin/main/installation.html#mac).
 

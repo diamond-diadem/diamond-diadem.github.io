@@ -3,18 +3,18 @@ title: "2024 General Assembly of the PEPR DIADEM"
 description: ""
 summary: "Took place on the Doua campus in Lyon. Retrieve the presentations and posters from the various work packages of the DIAMOND project."
 eventDate: "November 13 to 15, 2024"
-backgroundImage: "/images/diadem-background.jpg"
+backgroundImage: "images/diadem-background.jpg"
 backgroundOpacity: 0.25
 # publishDate: 2024-11-18
 # lastmod: 2024-02-06T09:24:27+01:00
 # expiryDate: 2024-03-06T09:24:27+01:00
 draft: false
-weight: 40
+weight: 60
 categories: []
 tags: []
-# contributors: []
+contributors: []
 pinned: false
-homepage: true
+homepage: false
 seo:
   title: "" # custom title (optional)
   description: "" # custom description (recommended)
@@ -24,7 +24,7 @@ seo:
 
 <h3 align="center">
 
-2024 <a href="https://pepr-diadem.fr" target="_blank">PEPR DIADEM</a> General Assembly took place from November 13 to 15, 2024, at the Doua campus in Lyon.
+2024 <a href="https://pepr-diadem.fr" target="_blank" rel="noopener noreferrer">PEPR DIADEM</a> General Assembly took place from November 13 to 15, 2024, at the Doua campus in Lyon.
 
 </h3>
 

@@ -1,19 +1,22 @@
 ---
 title: About DIADEM
 linkTitle: DIADEM
+seo:
+  description: Overview of PEPR DIADEM, the France 2030 materials program connecting AI,
+    research infrastructure, and national collaborations.
 ---
 
 <h2 class="text-center about-lead"><b>DI</b>scovery <b>A</b>cceleration for the <b>D</b>eployment of <b>E</b>merging <b>M</b>aterials</h2>
 
 <div class="row about diadem">
   <div class="left-about-diadem">
-    <img alt="PEPR DIADEM" class="logo-diadem about"/>
+    <span class="logo-diadem about" aria-hidden="true"></span>
   </div>
   <div class="right-about-diadem">
 
 <!-- <div align="justify" class="text-x-large" style="font-weight: 500;"> -->
 
-The <a href="https://pepr-diadem.fr" target="_blank">DIADEM</a> Priority Research Program and Equipment (PEPR) is one of the winners of the 1st wave of the exploratory PEPR call for projects. Funded by France 2030, it aims to accelerate the design and arrival on the market of more efficient and more sustainable materials, in particular thanks to artificial intelligence. Its budget of €85M should allow it to set up in France a network of four high-level platforms distributed across the territory and coordinated. Three calls for projects, to which the entire large French scientific community concerned by materials and artificial intelligence can respond, and a call for events dedicated to the initial and continuing training of French scientists complete the system.
+The <a href="https://pepr-diadem.fr" target="_blank" rel="noopener noreferrer">DIADEM</a> Priority Research Program and Equipment (PEPR) is one of the winners of the 1st wave of the exploratory PEPR call for projects. Funded by France 2030, it aims to accelerate the design and arrival on the market of more efficient and more sustainable materials, in particular thanks to artificial intelligence. Its budget of €85M should allow it to set up in France a network of four high-level platforms distributed across the territory and coordinated. Three calls for projects, to which the entire large French scientific community concerned by materials and artificial intelligence can respond, and a call for events dedicated to the initial and continuing training of French scientists complete the system.
 
   </div>
 </div>

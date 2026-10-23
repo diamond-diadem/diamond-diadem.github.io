@@ -4,4 +4,9 @@ themes/
 node_modules/
 .vscode/
 
+hugo_build.lock
+
+*.patch
+.last-generated-code-pages.json
+
 hugo_stats.json

@@ -1,0 +1,36 @@
+{{ define "main" }}
+  <main class="diamond-content">
+    <div class="col-default-page">
+      <div class="container-fluid container-h1-default-page">
+        <h1 class="text-center">{{ .Title }}</h1>
+      </div>
+      {{ if site.Params.diamond.enableContactForm }}
+        {{ .Content }}
+      {{ else }}
+        {{ if eq .Lang "fr" }}
+        <div class="row text-center justify-content-center">
+          <div class="col-xl-12">
+            <h3>Pour des questions ou remarques générales sur DIAMOND, sur son site web, ou autre, écrivez à David :</h3>
+            <h3><a class="contact-mailto" href="mailto:david.martin-calle@univ-lyon1.fr">david.martin-calle@univ-lyon1.fr</a></h3>
+          </div>
+          <div class="col-xl-12">
+            <h3>Pour des questions ou remarques techniques sur les images de conteneurs que nous proposons, ou sur la documentation, écrivez à Léo :</h3>
+            <h3><a class="contact-mailto" href="mailto:leo.orveillon@univ-grenoble-alpes.fr">leo.orveillon@univ-grenoble-alpes.fr</a></h3>
+          </div>
+        </div>
+        {{ else }}
+        <div class="row text-center justify-content-center">
+          <div class="col-xl-12">
+            <h3>For general questions or comments about DIAMOND, its website, or anything else, write to David:</h3>
+            <h3><a class="contact-mailto" href="mailto:david.martin-calle@univ-lyon1.fr">david.martin-calle@univ-lyon1.fr</a></h3>
+          </div>
+          <div class="col-xl-12">
+            <h3>For technical questions or comments about the container images we offer, or about the documentation, write to Léo:</h3>
+            <h3><a class="contact-mailto" href="mailto:leo.orveillon@univ-grenoble-alpes.fr">leo.orveillon@univ-grenoble-alpes.fr</a></h3>
+          </div>
+        </div>
+        {{ end }}
+      {{ end }}
+    </div>
+  </main>
+{{ end }}

@@ -1,6 +1,8 @@
 ---
 title: À propos de DIAMOND
 linkTitle: DIAMOND
+seo:
+  description: "DIAMOND accélère la découverte de nouveaux matériaux via des codes de simulation, des workflows automatisés et des bases de données."
 ---
 
 <h2 class="text-center about-lead">bases de <b>D</b>onnées, outils d’<b>I</b>ntelligence <b>A</b>rtificielle, de <b>M</b>odélisation et d’<b>O</b>ptimisatio<b>N</b> pour le <b>D</b>esign numérique de matériaux</h2>
@@ -8,7 +10,7 @@ linkTitle: DIAMOND
 <div class="row about-diamond">
 
   <div class="left about-diamond">
-    <img alt="DIAMOND" class="logo-diamond about-diamond"/>
+    <span class="logo-diamond about-diamond" aria-hidden="true"></span>
   </div>
 
   <div class="right about-diamond">

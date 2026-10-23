@@ -5,17 +5,27 @@ linkTitle: Abinit
 icon: icon-abinit
 toc: false
 weight: 3
+description: "Abinit is a DFT and TDDFT code for computing electronic structure properties of materials, available as an Apptainer container on DIAMOND."
 ---
 
-<a href="https://www.abinit.org/" target="_blank" class="codes-pages-top-logo">
-    <img alt="Abinit" class="logo-abinit">
+<a href="https://www.abinit.org/" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo">
+    <span class="logo-abinit" aria-hidden="true"></span>
 </a>
 
-### Retrieve the Apptainer image
+### Retrieve the container image
 
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
 ```bash
 apptainer pull abinit.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/abinit.sif:latest
 ```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/abinit
+```
+{{< /tab >}}
+{{< /tabs >}}
 
 <div align="justify">
 
@@ -31,12 +41,17 @@ As an open-source project, Abinit benefits from an active community of developer
 
 </div>
 
-### Learn how to use this specific container _(to be added)_
+<h3 class="mb-1">Tutorial</h3>
 
-### Abinit documentation
+{{< link-card title="Learn to use this container image" href="/en/documentation/by-container/abinit" icon="tabler-icons/outline/package" class="mb-0" >}}
 
-- #### <a href="https://www.abinit.org/" target="_blank">Official website</a>
+<h3 class="mb-1 mt-3">Abinit documentation</h3>
 
-- #### <a href="https://docs.abinit.org/" target="_blank">Official documentation</a>
+{{< card-grid >}}
+{{< link-card title="Official website" href="https://www.abinit.org/" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
+{{< link-card title="Official documentation" href="https://docs.abinit.org/" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
+{{< /card-grid >}}
 
-- #### Examples: input files _(to be added)_
+<h3 class="mb-1 mt-3">Examples</h3>
+
+{{< link-card title="Download input files" href="/downloads/abinit-tutorial-inputs.tar.gz" icon="tabler-icons/outline/file-export" >}}

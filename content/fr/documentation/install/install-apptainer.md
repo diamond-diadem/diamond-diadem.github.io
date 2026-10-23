@@ -1,6 +1,7 @@
 ---
 title: "Comment installer Apptainer ?"
 weight: 1
+description: "Guide d'installation du logiciel de conteneurisation Apptainer sur Linux pour accéder aux images de codes scientifiques de la plateforme DIAMOND."
 ---
 
 <div align="justify">
@@ -11,7 +12,7 @@ Ce tutoriel présente succinctement le processus d'installation du logiciel de c
 
 Le logiciel fonctionne sur toute distribution Linux moderne ; il ne tourne pas de façon native sur Windows et MacOS, n'étant pas compatible avec les noyaux de ces systèmes d'exploitation. Pour ces plateformes, une solution de machine virtuelle ou un conteneur Docker est préconisée : plus d'informations [ici](https://apptainer.org/docs/admin/1.2/installation.html#installation-on-windows-or-mac).
 
-Enfin, ce tutoriel se concentre sur les versions en cours d'exploitation : si vous utilisez une version de distribution Linux qui n'est plus supportée (par exemple CentOS 7 ou Ubuntu 18.04) et que vous rencontrez une erreur difficile à résoudre, n'hésitez pas à [nous contacter](/documentation/use/ask-help) !
+Enfin, ce tutoriel se concentre sur les versions en cours d'exploitation : si vous utilisez une version de distribution Linux qui n'est plus supportée (par exemple CentOS 7 ou Ubuntu 18.04) et que vous rencontrez une erreur difficile à résoudre, n'hésitez pas à [nous contacter](/contact/) !
 
 {{< /callout >}}
 
@@ -39,7 +40,7 @@ sudo apt install -y apptainer
 
 ### Détail des étapes
 
-Pour installer directement les paquets Ubuntu pré-construits destinés aux architectures `amd64` et `arm64`, il faut pouvoir accéder aux *archives de paquets personnels* (Personal Package Archive - PPA) d'Apptainer.
+Pour installer directement les paquets Ubuntu pré-construits destinés aux architectures `amd64` et `arm64`, il faut pouvoir accéder aux _archives de paquets personnels_ (Personal Package Archive - PPA) d'Apptainer.
 
 Dans un premier temps, il faut donc s'assurer d'avoir accès à la commande `add-apt-repository` :
 
@@ -102,6 +103,7 @@ sudo apt install -y ./apptainer_1.2.5_amd64.deb
 {{< video-with-consent id="BQXcLOYe5Hw?si=mP4gb6T4VzCqUSwB" >}}
 
 ### Paquets RPMs depuis GitHub
+
 À l'arrivée de chaque nouvelle version, un paquet RPM (RedHat Package Manager) est disponible sur GitHub :
 
 ```bash
@@ -109,6 +111,7 @@ sudo yum install -y https://github.com/apptainer/apptainer/releases/download/v1.
 ```
 
 ### Paquets RPMs depuis EPEL ou Fedora
+
 Les paquets sont également disponibles via EPEL (Extra Packages for Enterprise Linux).
 Sous RedHat, il est préalablement nécessaire de pouvoir accéder aux dépôts EPEL :
 

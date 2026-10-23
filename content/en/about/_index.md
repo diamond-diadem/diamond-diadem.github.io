@@ -1,4 +1,4 @@
 ---
 title: About
-exclude_search: true
+headless: true
 ---

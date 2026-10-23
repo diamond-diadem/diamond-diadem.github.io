@@ -5,17 +5,27 @@ linkTitle: XCrySDen
 icon: icon-xcrysden
 toc: false
 weight: 5
+description: "XCrySDen est un logiciel de visualisation de structures cristallines et moléculaires pour les calculs de structure électronique, disponible sur DIAMOND."
 ---
 
-<a href="http://www.xcrysden.org/" target="blank" class="codes-pages-top-logo">
-    <img alt="XCrySDen" class="logo-xcrysden"/>
+<a href="http://www.xcrysden.org/" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo">
+    <span class="logo-xcrysden" aria-hidden="true"></span>
 </a>
 
-### Récupérez l'image Apptainer
+### Récupérez l'image de conteneur
 
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
 ```bash
 apptainer pull xcrysden.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/xcrysden.sif:latest
 ```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/xcrysden
+```
+{{< /tab >}}
+{{< /tabs >}}
 
 <div align="justify">
 

@@ -4,17 +4,27 @@ title_visible: false
 linkTitle: DFTB+
 icon: icon-dftbplus
 weight: 18
+description: "DFTB+ is a semi-empirical quantum chemistry code based on the Density Functional Tight-Binding method, available as a container on DIAMOND."
 ---
 
-<a href="https://www.dftbplus.org/" target="_blank" class="codes-pages-top-logo">
-  <img alt="DFTB+" class="logo-dftbplus"/>
+<a href="https://www.dftbplus.org/" target="_blank" rel="noopener noreferrer" class="codes-pages-top-logo">
+  <span class="logo-dftbplus" aria-hidden="true"></span>
 </a>
 
-### Retrieve the Apptainer image
+### Retrieve the container image
 
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
 ```bash
 apptainer pull dftbplus.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/dftbplus.sif:latest
 ```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/dftbplus
+```
+{{< /tab >}}
+{{< /tabs >}}
 
 <div align="justify">
 
@@ -22,12 +32,17 @@ apptainer pull dftbplus.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamon
 
 </div>
 
-### Learn how to use this specific container image _(to be added)_
+<h3 class="mb-1">Tutorial</h3>
 
-### DFTB+ documentation
+{{< link-card title="Learn to use this container image" href="/en/documentation/by-container/dftbplus" icon="tabler-icons/outline/package" class="mb-0" >}}
 
-- #### <a href="https://www.dftbplus.org/" target="_blank">Official website</a>
+<h3 class="mb-1 mt-3">DFTB+ documentation</h3>
 
-- #### <a href="https://www.dftbplus.org/documentation.html" target="_blank">Official documentation</a>
+{{< card-grid >}}
+{{< link-card title="Official website" href="https://www.dftbplus.org/" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
+{{< link-card title="Official documentation" href="https://www.dftbplus.org/documentation.html" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
+{{< /card-grid >}}
 
-- #### Examples: input files _(to be added)_
+## Examples
+
+{{< link-card title="Download input files" href="/downloads/dftbplus-tutorial-inputs.tar.gz" icon="tabler-icons/outline/file-export" >}}
