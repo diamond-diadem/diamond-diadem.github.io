@@ -5,7 +5,49 @@ toc: false
 description: "Guide d'installation du workflow AiiDA-n2p2 pour l'entraînement de potentiels interatomiques MLIPs sur la plateforme DIAMOND avec AiiDA et Apptainer."
 ---
 
+## aiida-n2p2
+
+Plugin AiiDA pour le paquet de potentiels de réseaux de neurones [n2p2](https://github.com/CompPhysVienna/n2p2).
+
+**Version actuelle :** 0.4.0
+
+## Fonctionnalités
+
+- **CalcJobs :** `nnp-scaling`, `nnp-train`, `nnp-predict`
+- **WorkChains :** mise à l’échelle, entraînement (redémarrage manuel et automatique), validation LAMMPS, pipeline complet (`MakeNNPWorkchain`)
+- **Types de données :** `N2p2Dataset`, `N2p2Parameters` (`input.data` / `input.nn` structurés)
+- **Redémarrage de l’entraînement (v0.4.0) :** relance automatique lorsque le walltime interrompt l’entraînement avant le nombre d’`epochs` visé ; courbes d’apprentissage fusionnées entre les segments
+- **HPC / OAR :** les parsers récupèrent les sorties du dossier distant lorsque la récupération est prématurée (Dahu)
+
+## Prérequis
+
+`pip install -e .` installe le plugin et ses dépendances Python (`aiida-core`, `aiida-lammps`, `numpy`) dans l’environnement déjà actif. Il ne crée ni cet environnement, ni un profil AiiDA, ni les exécutables externes.
+
+Avant les commandes d’installation :
+
+- Python 3.10 ou plus récent. Avec `pip`, activez d’abord un environnement virtuel (conda ou venv). `poetry install` crée son propre virtualenv.
+- PostgreSQL et RabbitMQ en cours d’exécution.
+- Un profil AiiDA, créé avec `verdi quicksetup` ou `verdi setup`, de sorte que `verdi` fonctionne déjà.
+- Les exécutables n2p2 `nnp-scaling`, `nnp-train` et `nnp-predict`, installés sur l’ordinateur où les calculs sont exécutés.
+- LAMMPS, lorsque l’étape de validation optionnelle est utilisée.
+
 ## Installation
+
+```
+git clone <repo-url> aiida-n2p2
+cd aiida-n2p2
+pip install -e .          # ou : poetry install
+verdi daemon restart
+```
+
+Si des points d’entrée manquent après l’installation, supprimez les métadonnées obsolètes du dépôt :
+
+```
+rm -rf aiida_n2p2.egg-info
+pip install -e .
+```
+
+Enregistrez les codes AiiDA (des exemples pour localhost se trouvent dans `oar-scheduler-main/*_localhost.yml`, dépôt voisin).
 
 ```shell
 pip install aiida-n2p2
@@ -29,44 +71,59 @@ Vous pouvez accéder à deux exemples, à la fois en local et sur un supercalcul
 ### Arborescence du plugin n2p2 aiida
 
 ```
-├── aiida_n2p2
-│   ├── calculations
-│   │   ├── predict.py
-│   │   ├── scaling.py
-│   │   └── train.py
-│   ├── cli.py
-│   ├── data
-│   │   └── __init__.py
-│   ├── helpers.py
-│   ├── __init__.py
-│   ├── parsers
-│   │   ├── predict.py
-│   │   ├── scaling.py
-│   │   └── train.py
-│   └── workflows
-│       └── make_potential.py
-├── CHANGELOG.md
-├── examples
-│   ├── 1.Al
-│   │   ├── 222_IN.data
-│   │   ├── AiidA-n2p2_demo.ipynb
-│   │   ├── in.lmp
-│   │   ├── input.data
-│   │   └── input.nn
-│   ├── 1.Boron
-│   │   ├── 222_IN.data
-│   │   ├── aiida-n2p2_demo.py
-│   │   ├── input.data
-│   │   ├── input.nn
-│   └── 2.HPC
-│       ├── 222_IN.data
-│       ├── in.lmp
-│       ├── input.data
-│       ├── input.nn
-│       └── wkchain_Al.py
-├── LICENSE
+aiida-n2p2/
 ├── pyproject.toml
-└── README.md
+├── poetry.lock
+├── README.md
+├── CHANGELOG.md
+├── LICENSE
+├── docs/
+│   └── n2p2_workflow_section.tex
+├── aiida_n2p2/
+│   ├── __init__.py
+│   ├── calculations/
+│   │   ├── scaling.py          # nnpScaling
+│   │   ├── train.py            # nnpTraining
+│   │   └── predict.py          # nnpPredict
+│   ├── parsers/
+│   │   ├── scaling.py          # nnpScaleParser
+│   │   ├── train.py            # nnpTrainParser
+│   │   └── predict.py          # nnpPredictParser
+│   ├── data/
+│   │   ├── dataset.py          # N2p2Dataset
+│   │   └── parameters.py       # N2p2Parameters
+│   ├── workflows/
+│   │   ├── common.py           # CalcJobMetadataWorkChainMixin
+│   │   ├── prepare_inputs.py   # N2p2PrepareInputsWorkChain
+│   │   ├── scale.py            # N2p2ScaleWorkChain
+│   │   ├── train.py            # N2p2TrainWorkChain
+│   │   ├── validate_lammps.py  # N2p2LammpsValidationWorkChain
+│   │   └── make_potential.py   # MakeNNPWorkchain
+│   └── utils/
+│       ├── input_nn.py
+│       ├── learning_curve.py
+│       ├── plot_learning_curve.py
+│       ├── remote_outputs.py
+│       └── training_state.py
+├── tests/
+│   ├── conftest.py
+│   ├── fixtures/al/
+│   ├── test_inputs.py
+│   ├── test_input_nn.py
+│   ├── test_parsers.py
+│   ├── test_train_parser_logic.py
+│   ├── test_learning_curve_utils.py
+│   ├── test_training_state.py
+│   ├── test_restart.py
+│   ├── test_workflow.py
+│   └── test_reference_manifest.py
+└── examples/
+    ├── README.md
+    ├── basic.ipynb
+    ├── 1.Al/
+    ├── 1.Boron/
+    ├── 2.HPC/          # wkchain_Al.py
+    └── 3.Restart/      # redémarrage automatique et manuel
 
 ```
 
@@ -252,13 +309,9 @@ verdi data n2p2 export <PK>
 
 ## Développement
 
-```shell
-git clone https://github.com/aksam432/aiida-n2p2 .
-cd aiida-n2p2
-pip install --upgrade pip
-pip install -e .[pre-commit,testing]  # install extra dependencies
-pre-commit install  # install pre-commit hooks
-pytest -v  # discover and run all tests
-```
+Pour contribuer :
 
-<!-- Consultez le [developer guide](http://aiida-n2p2.readthedocs.io/en/latest/developer_guide/index.html) pour plus d’informations. -->
+1. Faites un fork de [aiida-n2p2](https://gricad-gitlab.univ-grenoble-alpes.fr/diamond/aiida/workflows/aiida-n2p2) sur GitLab.
+2. Clonez votre fork, créez une branche et ajoutez vos modifications.
+3. Enregistrez les modifications dans un commit et poussez la branche vers votre fork.
+4. Ouvrez une pull request sur le dépôt d’origine afin que les modifications puissent être relues. Sur GitLab, cette demande s’appelle une merge request.
