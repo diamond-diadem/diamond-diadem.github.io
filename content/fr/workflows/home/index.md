@@ -32,8 +32,13 @@ Pour résumer, des workflows bien conçus permettent non seulement de gagner du 
   - [Description](/workflows/aiida-n2p2/description)
   - [Installation](/workflows/aiida-n2p2/installation)
   <!-- - [Benchmark](/workflows/aiida-n2p2/benchmark_fr) -->
+  
 - ### MOFLearning-AIIDA-LAMMPS-workflow
   - [Description](/workflows/aiida-diffusion-wf/description)
   - [Installation](/workflows/aiida-diffusion-wf/installation)
+
+- ### DIAMOND-AIIDA-VASP
+  - [Description](/workflows/aiida-vasp/description)
+  - [Installation](/workflows/aiida-vasp/installation)
 
 Le pipeline de débruitage Noise2Noise pour la spectroscopie Raman haut débit a rejoint la section [Notebooks IA](/notebooks/home/), aux côtés des autres ressources IA.
