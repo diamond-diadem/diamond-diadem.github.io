@@ -119,7 +119,7 @@ Isovalue = 0.95;
 Render +/- isovalue = yes
 ```
 
-<img alt="XCrySDen visualization for the GaAs molecule" src="/images/tutorials/wannier90-tutorial/gaas1.png" />
+![XCrySDen visualization for the GaAs molecule](images/tutorials/wannier90-tutorial/gaas1.png)
 
 ### Tutorial 2: Wannier-interpolated Fermi surface of lead
 
@@ -160,5 +160,5 @@ apptainer exec ../xcrysden.sif xcrysden --bxsf lead.bxsf
 
 The following screenshots show the Wannier-interpolated Fermi surface of lead for band 1 and band 3 respectively, as displayed by XCrySDen.
 
-<img alt="Wannier-interpolated Fermi surface of lead for band 1" src="/images/tutorials/wannier90-tutorial/band2_lead.png" />
-<img alt=" Wannier-interpolated Fermi surface of lead for band 3" src="/images/tutorials/wannier90-tutorial/band3_lead.png" />
+![Wannier-interpolated Fermi surface of lead for band 1](images/tutorials/wannier90-tutorial/band2_lead.png)
+![Wannier-interpolated Fermi surface of lead for band 3](images/tutorials/wannier90-tutorial/band3_lead.png)

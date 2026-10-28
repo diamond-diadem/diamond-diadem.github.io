@@ -32,11 +32,11 @@ PtyRAD intègre diverses fonctionnalités dans la reconstruction, notamment la d
 
 PtyRAD prend également en charge le réglage des hyperparamètres et l'exécution sur plusieurs GPU. Parmi les fonctionnalités supplémentaires, on trouve notamment la compilation JIT avec `torch.compile`.
 
-<h3 class="mb-1">Tutorial</h3>
+## Tutorial
 
 {{< link-card title="Apprenez à utiliser cette image de conteneur" href="/documentation/by-container/ptyrad" icon="tabler-icons/outline/package" class="mb-0" >}}
 
-<h3 class="mb-1 mt-3">Documentation PtyRAD</h3>
+## Documentation PtyRAD
 
 {{< card-grid >}}
 {{< link-card title="Site officiel" href="https://github.com/chiahao3/ptyrad" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}

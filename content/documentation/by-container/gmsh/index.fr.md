@@ -65,7 +65,7 @@ Le maillage stocké dans ce fichier peut être visualisé *via* l'interface grap
 apptainer exec gmsh.sif gmsh t1.msh
 ```
 
-<img alt="Surface rectangulaire maillée en 2D" src="{{< resource "simple_mesh.png" >}}" />
+![Surface rectangulaire maillée en 2D](simple_mesh.png)
 
 ### Utilisation de l'interface graphique de Gmsh pour la génération et la visualisation de maillages
 
@@ -77,7 +77,7 @@ apptainer exec gmsh.sif gmsh
 
 Le fichier `t1.geo` peut ensuite être importé avec le bouton *File->Open* (ou *Ctrl/Command+O*). La géométrie importée s'affiche alors.
 
-<img alt="Géométrie importée dans le GUI de Gmsh" src="{{< resource "imported_geo.png" >}}" />
+![Géométrie importée dans le GUI de Gmsh](imported_geo.png)
 
 Le script d'entrée peut aussi être chargé en même temps que l'interface graphique avec la commande suivante :
 
@@ -93,13 +93,13 @@ Le module *Mesh* de l'interface graphique présente une suite d'outils exhaustiv
 
 En partant du maillage simple généré précédemment, l'outil *Refine by splitting* raffine le maillage en sous-découpant chaque élément fini en éléments plus petits. 
 
-<img alt="Maillage raffiné" src="{{< resource "fine_mesh.png" >}}" />
+![Maillage raffiné](fine_mesh.png)
 
 Le maillage peut alors être sauvegardé de la même façon que précédemment.
 
 Le second outil est un outil de partitionnement. Il se base sur la bibliothèque externe METIS pour partitionner le maillage en différents sous-domaines prêt à être utilisés avec une méthode de décomposition de domaines. La figure ci-dessous montre le maillage généré précédemment découpé en 5 sous-domaines.
 
-<img alt="Maillage raffiné partitionné en 5 sous-domaines" src="{{< resource "mesh_split.png" >}}" />
+![Maillage raffiné partitionné en 5 sous-domaines](mesh_split.png)
 
 ### Pour aller plus loin
 

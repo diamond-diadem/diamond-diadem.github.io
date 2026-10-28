@@ -50,17 +50,17 @@ The code combines **massively parallel implementation** with a **versatile user 
      └── gfortran
 ```
 
-<h3 class="mb-1">Tutorial</h3>
+## Tutorial
 
 {{< link-card title="Learn to use this container image" href="/en/documentation/by-container/amitex" icon="tabler-icons/outline/package" class="mb-0" >}}
 
-<h3 class="mb-1 mt-3">AMITEX_FFTP documentation</h3>
+## AMITEX_FFTP documentation
 
 {{< card-grid >}}
 {{< link-card title="Official website" href="https://amitexfftp.github.io/AMITEX/index.html" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
 {{< link-card title="Official documentation" href="https://amitexfftp.github.io/AMITEX/user_guide/map-site-user.html" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
 {{< /card-grid >}}
 
-<h3 class="mb-1 mt-3">Examples</h3>
+## Examples
 
 {{< link-card title="Download input files" href="/downloads/amitex-tutorial-inputs.tar.gz" icon="tabler-icons/outline/file-export" >}}

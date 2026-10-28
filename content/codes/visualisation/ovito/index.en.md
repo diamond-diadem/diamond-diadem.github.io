@@ -18,17 +18,17 @@ Ovito is a software for visualization and analysis of scientific data, primarily
 
 Ovito is developed, distributed, and supported by OVITO GmbH, a German startup. This software has been a valuable scientific tool in over 10,000 scientific studies to date (~6 new publications per day).
 
-<h3 class="mb-1">Tutorial</h3>
+## Tutorial
 
 {{< link-card title="Learn to use this container image" href="/en/documentation/by-container/ovito" icon="tabler-icons/outline/package" class="mb-0" >}}
 
-<h3 class="mb-1 mt-3">Ovito documentation</h3>
+## Ovito documentation
 
 {{< card-grid >}}
 {{< link-card title="Official website" href="https://www.ovito.org/" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
 {{< link-card title="Official documentation" href="https://www.ovito.org/docs/current" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
 {{< /card-grid >}}
 
-<h3 class="mb-1 mt-3">Examples</h3>
+## Examples
 
 {{< link-card title="Download input files" href="/downloads/ovito-tutorial-inputs.tar.gz" icon="tabler-icons/outline/file-export" class="mb-0" >}}

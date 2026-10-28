@@ -121,7 +121,7 @@ Isovalue = 0.95;
 Render +/- isovalue = yes
 ```
 
-<img alt="Visualisation XCrySDen pour la molécule de GaAs" src="/images/tutorials/wannier90-tutorial/gaas1.png" />
+![Visualisation XCrySDen pour la molécule de GaAs](images/tutorials/wannier90-tutorial/gaas1.png)
 
 ### Tutoriel 2 : Surface de Fermi du plomb interpolée selon la méthode de Wannier
 
@@ -162,7 +162,7 @@ apptainer exec ../xcrysden.sif xcrysden --bxsf lead.bxsf
 
 Les captures d'écran suivantes montrent la surface de Fermi du plomb, interpolée selon la méthode de Wannier, pour la bande 1 et la bande 3 respectivement, telles qu'affichées par XCrySDen.
 
-<img alt="Surface de Fermi du plomb, interpolée selon la méthode de Wannier, pour la bande 1" src="/images/tutorials/wannier90-tutorial/band2_lead.png" />
-<img alt="Surface de Fermi du plomb, interpolée selon la méthode de Wannier, pour la bande 3" src="/images/tutorials/wannier90-tutorial/band3_lead.png" />
+![Surface de Fermi du plomb, interpolée selon la méthode de Wannier, pour la bande 1](images/tutorials/wannier90-tutorial/band2_lead.png)
+![Surface de Fermi du plomb, interpolée selon la méthode de Wannier, pour la bande 3](images/tutorials/wannier90-tutorial/band3_lead.png)
 
 </div>

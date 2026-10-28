@@ -10,8 +10,7 @@ website: "https://jp-minerals.org/vesta/"
 
 <h4 align="center">"<b>V</b>isualization for <b>E</b>lectronic and <b>ST</b>ructural <b>A</b>nalysis"</h4>
 
-<hr>
-
+---
 ### Récupérez l'image de conteneur
 
 {{< tabs "apptainer_docker" >}}
@@ -67,17 +66,17 @@ VESTA est un programme de visualisation 3D conçu pour les scientifiques et ing�
 
 VESTA se distingue par sa capacité à combiner des fonctions de visualisation sophistiquées avec des outils d’analyse robustes, rendant accessible l’étude détaillée des structures atomiques et des propriétés électroniques à un large éventail de professionnels et d'étudiants dans les sciences des matériaux.
 
-<h3 class="mb-1">Tutoriel</h3>
+## Tutoriel
 
 {{< link-card title="Contenu à venir" description="<i>Apprenez à utiliser cette image de conteneur</i>" href="#bottom" icon="tabler-icons/outline/package" disabled="true" class="mb-0" >}}
 
-<h3 class="mb-1 mt-3">Documentation VESTA</h3>
+## Documentation VESTA
 
 {{< card-grid >}}
 {{< link-card title="Site officiel" href="https://jp-minerals.org/vesta/" target="_blank" icon="tabler-icons/outline/world-www"  class="mb-0" >}}
 {{< link-card title="Documentation officielle" href="https://jp-minerals.org/vesta/en/doc.html" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
 {{< /card-grid >}}
 
-<h3 class="mb-1 mt-3">Exemples</h3>
+## Exemples
 
 {{< link-card title="Contenu à venir" description="<i>Téléchargez des fichiers d'entrée</i>" href="#bottom" icon="tabler-icons/outline/file-export" disabled="true" class="mb-0" >}}

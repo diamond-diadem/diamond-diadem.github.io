@@ -10,8 +10,7 @@ website: "https://www.plumed.org/"
 
 <h3 style="font-weight: 500;" align="center">The community-developed PLUgin for MolEcular Dynamics</h3>
 
-<hr>
-
+---
 ### Retrieve the container image
 
 {{< tabs "apptainer_docker" >}}
@@ -35,17 +34,17 @@ PLUMED is also equipped with a comprehensive set of analysis tools that allow fo
 
 Additionally, PLUMED supports a scripting interface that enables users to set up and control complex simulation protocols, automating the workflow and reducing the potential for human error. The community-driven development of PLUMED ensures continuous updates and improvements, supported by extensive documentation and a robust user community that facilitates troubleshooting and knowledge sharing.
 
-<h3 class="mb-1">Tutorial</h3>
+## Tutorial
 
 {{< link-card title="Learn to use this container image" href="/en/documentation/by-container/plumed" icon="tabler-icons/outline/package" class="mb-0" >}}
 
-<h3 class="mb-1 mt-3">PLUMED documentation</h3>
+## PLUMED documentation
 
 {{< card-grid >}}
 {{< link-card title="Official website" href="https://www.plumed.org/" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
 {{< link-card title="Official documentation" href="https://www.plumed.org/doc" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
 {{< /card-grid >}}
 
-<h3 class="mb-1 mt-3">Examples</h3>
+## Examples
 
 {{< link-card title="Download input files" href="/downloads/plumed-tutorial-inputs.tar.gz" icon="tabler-icons/outline/file-export" >}}

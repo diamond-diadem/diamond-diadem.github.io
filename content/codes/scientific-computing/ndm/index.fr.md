@@ -39,17 +39,17 @@ Exécutable **NDM** : `/bin/rundm90_ndm_mpi`
 
 L'image **NDM** est compilée avec la librairie **MKL** distribuée par Intel et le compilateur **GNU**.
 
-<h3 class="mb-1">Tutoriel</h3>
+## Tutoriel
 
 {{< link-card title="Apprenez à utiliser cette image de conteneur" href="/documentation/by-container/ndm" icon="tabler-icons/outline/package" class="mb-0" >}}
 
-<h3 class="mb-1 mt-3">Documentation NDM</h3>
+## Documentation NDM
 
 {{< card-grid >}}
 {{< link-card title="Site officiel" href="https://github.com/jpcroc/NDM" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
 {{< link-card title="Documentation officielle" href="https://github.com/jpcroc/NDM/blob/ndm2025/README.md" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
 {{< /card-grid >}}
 
-<h3 class="mb-1 mt-3">Exemples</h3>
+## Exemples
 
 {{< link-card title="Téléchargez des fichiers d'entrée" href="/downloads/ndm-tutorial-inputs.tar.gz" icon="tabler-icons/outline/file-export" >}}

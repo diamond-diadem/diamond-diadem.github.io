@@ -29,17 +29,17 @@ Le moteur CAD de Gmsh prend en charge la création de géométries utilisant des
 
 En outre, Gmsh comprend un puissant langage de script qui permet aux utilisateurs d'automatiser les tâches répétitives, de personnaliser le processus de maillage et d'intégrer Gmsh dans des flux de travail plus larges. Le logiciel prend également en charge les géométries paramétrées, ce qui peut être crucial pour les études d'optimisation et les analyses paramétriques. Gmsh peut exporter des maillages dans de nombreux formats, ce qui le rend compatible avec divers solveurs d'analyse par éléments finis (FEA) et de dynamique des fluides computationnelle (CFD), tels qu'Abaqus, ANSYS et OpenFOAM. De plus, les fonctionnalités de post-traitement de Gmsh permettent la visualisation et l'analyse des résultats de simulation, offrant ainsi aux utilisateurs un outil complet pour l'ensemble du processus de maillage et d'analyse.
 
-<h3 class="mb-1">Tutoriel</h3>
+## Tutoriel
 
 {{< link-card title="Apprenez à utiliser cette image de conteneur" href="/documentation/by-container/gmsh" icon="tabler-icons/outline/package" class="mb-0" >}}
 
-<h3 class="mb-1 mt-3">Documentation Gmsh</h3>
+## Documentation Gmsh
 
 {{< card-grid >}}
 {{< link-card title="Site officiel" href="https://gmsh.info/" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
 {{< link-card title="Documentation officielle" href="https://gmsh.info/#Documentation" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
 {{< /card-grid >}}
 
-<h3 class="mb-1 mt-3">Exemples</h3>
+## Exemples
 
 {{< link-card title="Téléchargez des fichiers d'entrée" href="/downloads/gmsh-tutorial-inputs.tar.gz" icon="tabler-icons/outline/file-export" >}}

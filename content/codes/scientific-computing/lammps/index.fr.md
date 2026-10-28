@@ -37,19 +37,19 @@ LAMMPS est particulièrement adapté pour simuler des phénomènes physiques com
 
 Le logiciel prend en charge une large gamme de potentiels interatomiques et de champs de force, permettant aux chercheurs de capturer avec précision les interactions entre les particules dans différents matériaux. De plus, LAMMPS offre un cadre flexible et extensible, permettant aux utilisateurs d'implémenter des modèles et des algorithmes personnalisés adaptés à leurs besoins de recherche spécifiques.
 
-Le <a href="https://www.lammps.org/" target="_blank" rel="noopener noreferrer">site web de LAMMPS</a> offre une variété d'informations à propos du code. Cela inclut des liens vers une version en ligne de <a href="https://docs.lammps.org/Manual.html" target="_blank" rel="noopener noreferrer">son manuel</a>, un <a href="https://www.lammps.org/forum.html" target="_blank" rel="noopener noreferrer">forum en ligne</a>, où les utilisateurs peuvent poster des questions et échanger au sujet de LAMMPS, et un <a href="https://github.com/lammps/lammps" target="_blank" rel="noopener noreferrer">dépôt GitHub</a> où l'ensemble du développement de LAMMPS est coordonné.
+Le [site web de LAMMPS](https://www.lammps.org/) offre une variété d'informations à propos du code. Cela inclut des liens vers une version en ligne de [son manuel](https://docs.lammps.org/Manual.html), un [forum en ligne](https://www.lammps.org/forum.html), où les utilisateurs peuvent poster des questions et échanger au sujet de LAMMPS, et un [dépôt GitHub](https://github.com/lammps/lammps) où l'ensemble du développement de LAMMPS est coordonné.
 
-<h3 class="mb-1">Tutoriel</h3>
+## Tutoriel
 
 {{< link-card title="Apprenez à utiliser cette image de conteneur" href="/documentation/by-container/lammps" icon="tabler-icons/outline/package" class="mb-0" >}}
 
-<h3 class="mb-1 mt-3">Documentation LAMMPS</h3>
+## Documentation LAMMPS
 
 {{< card-grid >}}
 {{< link-card title="Site officiel" href="https://lammps.org" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
 {{< link-card title="Documentation officielle" href="https://docs.lammps.org" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
 {{< /card-grid >}}
 
-<h3 class="mb-1 mt-3">Exemples</h3>
+## Exemples
 
 {{< link-card title="Téléchargez des fichiers d'entrée" href="/downloads/lammps-tutorial-inputs.tar.gz" icon="tabler-icons/outline/file-export" class="mb-0" >}}

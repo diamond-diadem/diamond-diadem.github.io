@@ -20,11 +20,7 @@ La version actuelle propose deux modules complémentaires : **WF1**, consacré �
 
 Les calculs VASP sont suivis par **AiiDA**, tandis que certaines analyses structurales utilisent l'API Python gratuite d'**OVITO Basic**. Les paramètres sont regroupés dans des fichiers YAML afin de faciliter leur adaptation à un ordinateur local ou à un cluster HPC.
 
-<p align="center">
-<img alt="Alternative text for the image" src="/images/workflows/aiida-vasp/wf-aiida-vasp.png" />
-</p>
-<p align="center"><i>Schéma des workflows AIIDA-VASP disponibles.</i></p>
-
+![Schéma des workflows AiiDA-VASP disponibles](images/workflows/aiida-vasp/wf-aiida-vasp.png)
 
 ## Modules disponibles
 

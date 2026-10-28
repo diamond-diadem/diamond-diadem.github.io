@@ -42,14 +42,14 @@ Machine Learning Interatomic Potentials (MLIPs) have positioned themselves as a 
 
 #### Slides
 
-- **Jörg BEHLER** <a href="/downloads/cecam-workshop/slides-behler-2024-09-09-CECAM-workshop.pdf" target="_blank" rel="noopener noreferrer">The Cambrian Explosion of Machine Learning Potentials</a>
-- **Martin UHRIN** <a href="/downloads/cecam-workshop/slides-uhrin-2024-09-09-CECAM-workshop.pdf" target="_blank" rel="noopener noreferrer">Symmetry-aware models beyond energies and forces</a>
-- **Johannes SANDBERG** <a href="/downloads/cecam-workshop/slides-sandberg-2024-09-10-CECAM-workshop.pdf" target="_blank" rel="noopener noreferrer">Feature selection for neural network potentials with the adaptive group lasso</a>
-- **François-Xavier COUDERT** <a href="/downloads/cecam-workshop/slides-coudert-2024-09-10-CECAM-workshop.pdf" target="_blank" rel="noopener noreferrer">Data-based methods to accelerate discovery of novel materials and find new properties in old ones</a>
-- **Julia YANG** <a href="/downloads/cecam-workshop/slides-yang-2024-09-10-CECAM-workshop.pdf" target="_blank" rel="noopener noreferrer">Development of MLIP workflow for reactive, organic solvents</a>
-- **Gian-Marco RIGNANESE** <a href="/downloads/cecam-workshop/slides-rignanese-2024-09-11-CECAM-workshop.pdf" target="_blank" rel="noopener noreferrer">Systematic assessment of various universal machine-learning interatomic potentials</a>
-- **Thierry DEUTSCH** <a href="/downloads/cecam-workshop/slides-deutsch-2024-09-11-CECAM-workshop.pdf" target="_blank" rel="noopener noreferrer">Setting up data tools as part of the DIADEM program</a>
-- **Kristjan EIMRE** <a href="/downloads/cecam-workshop/slides-eimre-2024-09-11-CECAM-workshop.pdf" target="_blank" rel="noopener noreferrer">Generating and publishing datasets using AiiDA and Materials Cloud</a>
+- **Jörg BEHLER** [The Cambrian Explosion of Machine Learning Potentials](/downloads/cecam-workshop/slides-behler-2024-09-09-CECAM-workshop.pdf)
+- **Martin UHRIN** [Symmetry-aware models beyond energies and forces](/downloads/cecam-workshop/slides-uhrin-2024-09-09-CECAM-workshop.pdf)
+- **Johannes SANDBERG** [Feature selection for neural network potentials with the adaptive group lasso](/downloads/cecam-workshop/slides-sandberg-2024-09-10-CECAM-workshop.pdf)
+- **François-Xavier COUDERT** [Data-based methods to accelerate discovery of novel materials and find new properties in old ones](/downloads/cecam-workshop/slides-coudert-2024-09-10-CECAM-workshop.pdf)
+- **Julia YANG** [Development of MLIP workflow for reactive, organic solvents](/downloads/cecam-workshop/slides-yang-2024-09-10-CECAM-workshop.pdf)
+- **Gian-Marco RIGNANESE** [Systematic assessment of various universal machine-learning interatomic potentials](/downloads/cecam-workshop/slides-rignanese-2024-09-11-CECAM-workshop.pdf)
+- **Thierry DEUTSCH** [Setting up data tools as part of the DIADEM program](/downloads/cecam-workshop/slides-deutsch-2024-09-11-CECAM-workshop.pdf)
+- **Kristjan EIMRE** [Generating and publishing datasets using AiiDA and Materials Cloud](/downloads/cecam-workshop/slides-eimre-2024-09-11-CECAM-workshop.pdf)
 
 <h4 class="mb-n2"><a href="/downloads/cecam-workshop/cecam-workshop-photos.zip" class="d-flex">Download photos from the event{{< inline-svg src="tabler-icons/outline/camera-spark" class="svg-inline-end" >}}</a></h4>
 
@@ -57,7 +57,7 @@ Taken by Joao Paulo Almeida De Mendonca
 
 <br>
 
-<!-- **Location:** amphithéâtre Besson, campus Phelma, Batiment A, 1130 rue de la Piscine, 38400 Saint Martin d'Hères. Campus map <a href="https://dropsu.sorbonne-universite.fr/s/gdMJ2o5FZtKn48Z" target="_blank" rel="noopener noreferrer">here</a> (look for building A, Phelma campus):
+<!-- **Location:** amphithéâtre Besson, campus Phelma, Batiment A, 1130 rue de la Piscine, 38400 Saint Martin d'Hères. Campus map [here](https://dropsu.sorbonne-universite.fr/s/gdMJ2o5FZtKn48Z) (look for building A, Phelma campus):
 
 How to reach the event? The airport shuttle will drop you at the Grenoble train station. From there, take tram B (towards "Gières, Plaine des Sports"), and stop at "Bibliothèques Universitaires". Walk north and reach Building A on the map.
 

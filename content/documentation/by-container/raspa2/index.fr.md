@@ -100,11 +100,11 @@ Les fichiers `.pdb` du répertoire *Movies/System_0* peuvent être ouverts depui
 
 Une fois le fichier choisi chargé dans l'interface VMD, une représentation graphique simple peut être paramétrée depuis le menu *Graphics/Representations*, en sélectionnant *VDW* dans le champ *Drawing Method*, et *Name* dans le champ *Coloring Method*, comme indiqué ci-dessous.
 
-<img alt="Capture d'écran des paramètres de représentation graphique sur le GUI de VMD" src="{{< resource "vmd_representation_settings.png" >}}" />
+![Capture d'écran des paramètres de représentation graphique sur le GUI de VMD](vmd_representation_settings.png)
 
 Une fois ces paramètres appliqués, le bouton en forme de flèche noire dans le coin inférieur droit de l'interface principale de VMD permet de lancer l'animation. La capture d'écran ci-dessous montre un exemple d'image issue du film `Movie_Box_1.1.1_300.000000_0.000000_allcomponents.pdb`.
 
-<img alt="Capture d'écran d'une image de film" src="{{< resource "vmd_movie_frame.png" >}}" />
+![Capture d'écran d'une image de film](vmd_movie_frame.png)
 
 ### Analyse des résultats de la simulation
 

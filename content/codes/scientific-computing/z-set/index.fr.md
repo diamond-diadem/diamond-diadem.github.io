@@ -25,17 +25,17 @@ Les principales fonctionnalités de Z-Set incluent :
 
 Z-Set est largement utilisé dans la recherche académique et les applications industrielles pour sa robustesse et sa précision dans la prédiction des performances des matériaux sous diverses conditions environnementales et de charge.
 
-<h3 class="mb-1">Tutoriel</h3>
+## Tutoriel
 
 {{< link-card title="Contenu à venir" description="<i>Apprenez à utiliser cette image de conteneur</i>" href="#bottom" icon="tabler-icons/outline/package" disabled="true">}}
 
-<h3 class="mb-1 mt-3">Documentation Z-set</h3>
+## Documentation Z-set
 
 {{< card-grid >}}
 {{< link-card title="Site officiel" href="http://www.zset-software.com/" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
 {{< link-card title="Documentation officielle" href="http://www.zset-software.com/support/manuals/" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
 {{< /card-grid >}}
 
-<h3 class="mb-1 mt-3">Exemples</h3>
+## Exemples
 
 {{< link-card title="Contenu à venir" description="<i>Téléchargez des fichiers d'entrée</i>" href="#bottom" icon="tabler-icons/outline/file-export" disabled="true" class="mb-0" >}}

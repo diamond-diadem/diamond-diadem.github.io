@@ -101,6 +101,31 @@ u {
     }
 }
 
+@include color-mode(dark) {
+    .content-logo {
+        .logo-light {
+            display: none;
+        }
+
+        .logo-dark {
+            display: inline;
+        }
+    }
+}
+
+.content-logos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem 3rem;
+    margin: 2rem 0;
+
+    .content-logo {
+        margin: 0;
+    }
+}
+
 // // // Gitlab tutorial // // //
 
 .use-gitlab {

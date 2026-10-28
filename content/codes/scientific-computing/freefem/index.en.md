@@ -33,17 +33,17 @@ FreeFEM's versatility is further demonstrated by its compatibility with multiple
 
 With an active community and continuous development, FreeFEM remains at the forefront of FEM software, incorporating the latest advancements in numerical methods and computational technology. It is widely used in academia and industry for research, teaching, and practical applications, offering a powerful yet accessible tool for solving PDEs.
 
-<h3 class="mb-1">Tutorial</h3>
+## Tutorial
 
 {{< link-card title="Learn to use this container image" href="/en/documentation/by-container/freefem" icon="tabler-icons/outline/package" class="mb-0" >}}
 
-<h3 class="mb-1 mt-3">FreeFEM documentation</h3>
+## FreeFEM documentation
 
 {{< card-grid >}}
 {{< link-card title="Official website" href="https://freefem.org/" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
 {{< link-card title="Official documentation" href="https://doc.freefem.org/" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
 {{< /card-grid >}}
 
-<h3 class="mb-1 mt-3">Examples</h3>
+## Examples
 
 {{< link-card title="Download input files" href="/downloads/freefem-tutorial-inputs.tar.gz" icon="tabler-icons/outline/file-export" >}}

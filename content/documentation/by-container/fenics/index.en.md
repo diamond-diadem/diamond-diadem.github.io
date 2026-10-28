@@ -142,7 +142,7 @@ apptainer run paraview.sif out_poisson/poisson.xdmf
 ```
 then select *Xdmf3 Reader S*. The green *Apply* button on the left panel triggers the display of the equation solution computed by the software, as represented below.
 
-<img alt="Paraview visualization of the simple problem solution" src="{{< resource "simple_solution_paraview.png" >}}" />
+![Paraview visualization of the simple problem solution](simple_solution_paraview.png)
 
 This solution visually corresponds to the analytical solution computed above ($u(x) = -5x^2 + 10x$).
 
@@ -172,7 +172,7 @@ As described above, the output file can be opened with [Paraview]({{% ref "/code
 apptainer run paraview.sif out_poisson/poisson.xdmf
 ```
 
-<img alt="Paraview visualizationof the original problem solution" src="{{< resource "complex_solution_paraview.png" >}}" />
+![Paraview visualizationof the original problem solution](complex_solution_paraview.png)
 
 ### To go further
 

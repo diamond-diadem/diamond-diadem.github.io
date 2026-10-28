@@ -33,17 +33,17 @@ La polyvalence de FreeFEM est également démontrée par sa compatibilité avec 
 
 Avec une communauté active et un développement continu, FreeFEM reste à la pointe des logiciels de FEM, incorporant les dernières avancées en méthodes numériques et en technologie informatique. Il est largement utilisé dans le milieu académique et industriel pour la recherche, l'enseignement et les applications pratiques, offrant un outil puissant mais accessible pour la résolution des EDP.
 
-<h3 class="mb-1">Tutoriel</h3>
+## Tutoriel
 
 {{< link-card title="Apprenez à utiliser cette image de conteneur" href="/documentation/by-container/freefem" icon="tabler-icons/outline/package" class="mb-0" >}}
 
-<h3 class="mb-1 mt-3">Documentation FreeFEM</h3>
+## Documentation FreeFEM
 
 {{< card-grid >}}
 {{< link-card title="Site officiel" href="https://freefem.org/" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
 {{< link-card title="Documentation officielle" href="https://doc.freefem.org/" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
 {{< /card-grid >}}
 
-<h3 class="mb-1 mt-3">Exemples</h3>
+## Exemples
 
 {{< link-card title="Téléchargez des fichiers d'entrée" href="/downloads/freefem-tutorial-inputs.tar.gz" icon="tabler-icons/outline/file-export" >}}

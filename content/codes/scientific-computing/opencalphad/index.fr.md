@@ -33,17 +33,17 @@ L'interface utilisateur d'OpenCalphad, bien que principalement basée sur des li
 
 En résumé, OpenCalphad est un outil puissant et open-source pour la modélisation et la simulation thermodynamique, fournissant des capacités essentielles pour l'analyse et la prédiction du comportement des matériaux dans des systèmes multicomposants.
 
-<h3 class="mb-1">Tutoriel</h3>
+## Tutoriel
 
 {{< link-card title="Apprenez à utiliser cette image de conteneur" href="/documentation/by-container/opencalphad" icon="tabler-icons/outline/package" class="mb-0" >}}
 
-<h3 class="mb-1 mt-3">Documentation OpenCalphad</h3>
+## Documentation OpenCalphad
 
 {{< card-grid >}}
 {{< link-card title="Site officiel" href="https://www.opencalphad.com/" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
 {{< link-card title="Documentation officielle" href="https://github.com/sundmanbo/opencalphad/tree/v.6.0/documentation" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
 {{< /card-grid >}}
 
-<h3 class="mb-1 mt-3">Exemples</h3>
+## Exemples
 
 {{< link-card title="Téléchargez des fichiers d'entrée" href="/downloads/opencalphad-tutorial-inputs.tar.gz" icon="tabler-icons/outline/file-export" >}}

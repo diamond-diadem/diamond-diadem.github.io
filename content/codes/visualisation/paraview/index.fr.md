@@ -27,17 +27,17 @@ ParaView est un logiciel open-source dédié à la visualisation et à l'analyse
 
 Ce logiciel repose sur une architecture modulaire, ce qui permet aux utilisateurs de personnaliser leurs flux de travail en intégrant des modules et des extensions spécifiques à leurs besoins. ParaView offre des outils avancés de filtrage, de rendu et d'analyse, facilitant l'exploration approfondie des données complexes. Il est compatible avec plusieurs systèmes d'exploitation et peut être utilisé aussi bien pour des applications de recherche académique que pour des projets industriels nécessitant une visualisation scientifique sophistiquée.
 
-<h3 class="mb-1">Tutoriel</h3>
+## Tutoriel
 
 {{< link-card title="Apprenez à utiliser cette image de conteneur" href="/documentation/by-container/paraview" icon="tabler-icons/outline/package" class="mb-0" >}}
 
-<h3 class="mb-1 mt-3">Documentation ParaView</h3>
+## Documentation ParaView
 
 {{< card-grid >}}
 {{< link-card title="Site officiel" href="https://www.paraview.org/" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
 {{< link-card title="Documentation officielle" href="https://www.paraview.org/resources/" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
 {{< /card-grid >}}
 
-<h3 class="mb-1 mt-3">Exemples</h3>
+## Exemples
 
 {{< link-card title="Téléchargez des fichiers d'entrée" href="/downloads/paraview-tutorial-inputs.tar.gz" icon="tabler-icons/outline/file-export" class="mb-0" >}}

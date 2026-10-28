@@ -39,17 +39,17 @@ The software supports a wide range of interatomic potentials and force fields, e
 
 The [LAMMPS website](https://www.lammps.org/) provides a variety of information about the code. This includes links to an online version of [its manual](https://docs.lammps.org/Manual.html), an [online forum](https://www.lammps.org/forum.html) where users can post questions and engage in discussions about LAMMPS, and a [GitHub repository](https://github.com/lammps/lammps) where the entire development of LAMMPS is coordinated.
 
-<h3 class="mb-1">Tutorial</h3>
+## Tutorial
 
 {{< link-card title="Learn to use this container image" href="/en/documentation/by-container/lammps" icon="tabler-icons/outline/package" >}}
 
-<h3 class="mb-1">LAMMPS documentation</h3>
+## LAMMPS documentation
 
 {{< card-grid >}}
 {{< link-card title="Official website" href="https://lammps.org" target="_blank" icon="tabler-icons/outline/world-www" >}}
 {{< link-card title="Official documentation" href="https://docs.lammps.org" target="_blank" icon="tabler-icons/outline/book" >}}
 {{< /card-grid >}}
 
-<h3 class="mb-1">Examples</h3>
+## Examples
 
 {{< link-card title="Download input files" href="/downloads/lammps-tutorial-inputs.tar.gz" icon="tabler-icons/outline/file-export" >}}

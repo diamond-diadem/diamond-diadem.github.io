@@ -24,7 +24,7 @@ seo:
 
 <h3 align="center">
 
-2024 <a href="https://pepr-diadem.fr" target="_blank" rel="noopener noreferrer">PEPR DIADEM</a> General Assembly took place from November 13 to 15, 2024, at the Doua campus in Lyon.
+2024 [PEPR DIADEM](https://pepr-diadem.fr) General Assembly took place from November 13 to 15, 2024, at the Doua campus in Lyon.
 
 </h3>
 
@@ -36,22 +36,22 @@ seo:
 
 During these days, PEPR DIADEM has had the honor of presenting the program's progress and key highlights of its projects. On this occasion, the launch of 17 new projects funded under the 2023 Call for Projects has also been organized.
 
-<h4>The coordinators of the 3 work packages (WPs) presented the progress of the DIAMOND project to the participants</h4>
+## The coordinators of the 3 work packages (WPs) presented the progress of the DIAMOND project to the participants
 
-<h5>View or download their slides</h5>
+### View or download their slides
 
-- <a href="/downloads/ag-diadem-2024/Presentation-DIAMOND-WP1-14-11-AG-2024.pdf">WP1: Codes and Workflows</a>
+- [WP1: Codes and Workflows](/downloads/ag-diadem-2024/Presentation-DIAMOND-WP1-14-11-AG-2024.pdf)
 - WP2: Databases
 - WP3: Machine Learning Potential Demonstrator
 
-<h4>The engineers of the 3 work packages (WPs) participated in the poster sessions</h4>
+## The engineers of the 3 work packages (WPs) participated in the poster sessions
 
-<h5>View or download their posters</h5>
+### View or download their posters
 
-- <a href="/downloads/ag-diadem-2024/Poster-WP1-AG2024.pdf">WP1: Codes and Workflows</a>
-  - <a href="/downloads/ag-diadem-2024/Poster-MOFLearning-AG2024.pdf">Demonstrator: MOFLearning Workflow</a>
-- <a href="/downloads/ag-diadem-2024/Poster-WP2-AG2024.pdf">WP2: Databases</a>
-- <a href="/downloads/ag-diadem-2024/Poster-WP3-AG2024.pdf">WP3: Machine Learning Potential Demonstrator</a>
+- [WP1: Codes and Workflows](/downloads/ag-diadem-2024/Poster-WP1-AG2024.pdf)
+  - [Demonstrator: MOFLearning Workflow](/downloads/ag-diadem-2024/Poster-MOFLearning-AG2024.pdf)
+- [WP2: Databases](/downloads/ag-diadem-2024/Poster-WP2-AG2024.pdf)
+- [WP3: Machine Learning Potential Demonstrator](/downloads/ag-diadem-2024/Poster-WP3-AG2024.pdf)
 
 <br/>
 

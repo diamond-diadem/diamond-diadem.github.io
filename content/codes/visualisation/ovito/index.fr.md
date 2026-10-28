@@ -18,17 +18,17 @@ Ovito est un logiciel de visualisation et d'analyse de données scientifiques, p
 
 Ovito est développé, distribué, et pris en charge par OVITO GmbH, une start-up allemande. Ce logiciel a représenté un outil scientifique précieux dans plus de 10.000 études scientifiques jusqu'à aujourd'hui (~6 nouvelles publication par jour).
 
-<h3 class="mb-1">Tutoriel</h3>
+## Tutoriel
 
 {{< link-card title="Apprenez à utiliser cette image de conteneur" href="/documentation/by-container/ovito" icon="tabler-icons/outline/package" class="mb-0" >}}
 
-<h3 class="mb-1 mt-3">Documentation Ovito</h3>
+## Documentation Ovito
 
 {{< card-grid >}}
 {{< link-card title="Site officiel" href="https://www.ovito.org/" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
 {{< link-card title="Documentation officielle" href="https://www.ovito.org/docs/current" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
 {{< /card-grid >}}
 
-<h3 class="mb-1 mt-3">Exemples</h3>
+## Exemples
 
 {{< link-card title="Téléchargez des fichiers d'entrée" href="/downloads/ovito-tutorial-inputs.tar.gz" icon="tabler-icons/outline/file-export" class="mb-0" >}}

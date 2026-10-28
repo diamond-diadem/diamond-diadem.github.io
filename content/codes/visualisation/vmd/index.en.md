@@ -35,17 +35,17 @@ VMD's functionality can be extended through its support for Tcl, Python, and Per
 
 Overall, VMD is a powerful and flexible tool for molecular visualization and analysis, widely used by researchers in computational biology, chemistry, and related fields. Its combination of high-quality visualization, extensive analysis tools, and scripting extensibility makes it an essential resource for the study and understanding of biomolecular systems.
 
-<h3 class="mb-1">Tutorial</h3>
+## Tutorial
 
 {{< link-card title="Learn to use this container image" href="/en/documentation/by-container/vmd" icon="tabler-icons/outline/package" class="mb-0" >}}
 
-<h3 class="mb-1 mt-3">VMD documentation</h3>
+## VMD documentation
 
 {{< card-grid >}}
 {{< link-card title="Official website" href="https://www.ks.uiuc.edu/Research/vmd/" target="_blank" icon="tabler-icons/outline/world-www"  class="mb-0" >}}
 {{< link-card title="Official documentation" href="https://www.ks.uiuc.edu/Research/vmd/current/docs.html" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
 {{< /card-grid >}}
 
-<h3 class="mb-1 mt-3">Examples</h3>
+## Examples
 
 {{< link-card title="Download input files" href="/downloads/vmd-tutorial-inputs.tar.gz" icon="tabler-icons/outline/file-export" class="mb-0" >}}

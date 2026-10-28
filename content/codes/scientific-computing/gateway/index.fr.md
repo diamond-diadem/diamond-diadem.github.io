@@ -19,17 +19,17 @@ Grâce à l’algorithme d’isomorphisme, GaTewAY identifie automatiquement les
 
 Modulaire et extensible, GaTewAY est un outil général, flexible et transférable, capable de traiter des systèmes variés, allant de la phase gazeuse aux systèmes condensés complexes. L’utilisateur peut modifier les critères d’analyse utilisés (distances de liaisons, angles, types d’interactions). Son architecture modulaire permet à l’utilisateur également l’ajout de nouveaux types d’interactions ou d’analyses spécifiques. GaTewAY offre une analyse fine et efficace en identifiant et caractérisant les topologies structurales, il permet une dissémination topologique des 2D-MolGraph afin d'extraire des motifs et des modèles récurrents, particulièrement utiles pour caractériser les structures d'interface, les réseaux de liaisons hydrogène, et les sphères de solvatation.
 
-<h3 class="mb-1">Tutoriel</h3>
+## Tutoriel
 
 {{< link-card title="Contenu à venir" description="<i>Apprenez à utiliser cette image de conteneur</i>" href="#bottom" icon="tabler-icons/outline/package" disabled="true">}}
 
-<h3 class="mb-1 mt-3">Documentation GaTewAY</h3>
+## Documentation GaTewAY
 
 {{< card-grid >}}
 {{< link-card title="Contenu à venir" description="<i>Site officiel</i>" href="#bottom" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
 {{< link-card title="Contenu à venir" description="<i>Documentation officielle</i>" href="#bottom" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
 {{< /card-grid >}}
 
-<h3 class="mb-1 mt-3">Exemples</h3>
+## Exemples
 
 {{< link-card title="Téléchargez des fichiers d'entrée" href="/downloads/gateway-examples.tar.gz" icon="tabler-icons/outline/file-export" class="mb-0" >}}

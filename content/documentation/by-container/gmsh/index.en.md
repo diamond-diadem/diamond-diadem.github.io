@@ -65,7 +65,7 @@ The result mesh can then be visualized through Gmsh graphical interface with the
 apptainer exec gmsh.sif gmsh t1.msh
 ```
 
-<img alt="2D mesh on a rectangle surface" src="{{< resource "simple_mesh.png" >}}" />
+![2D mesh on a rectangle surface](simple_mesh.png)
 
 ### Using Gmsh graphical user interface to generate and visualize a mesh
 
@@ -77,7 +77,7 @@ apptainer exec gmsh.sif gmsh
 
 The `t1.geo` input file can then be imported with the *File->Open* button (or *Ctrl/Command+O*), which displays the imported geometry.
 
-<img alt="Imported geometry displayed by Gmsh GUI" src="{{< resource "imported_geo.png" >}}" />
+![Imported geometry displayed by Gmsh GUI](imported_geo.png)
 
 Alternatively, the script can be directly loaded when opening Gmsh GUI with the following command:
 
@@ -93,13 +93,13 @@ The *Mesh* module of the GUI features a comprehensive set of tools to customize 
 
 Starting with the mesh generated in the previous section, the *Refine by splitting* button refines the mesh by splitting it uniformly into a finer mesh.
 
-<img alt="Refined mesh" src="{{< resource "fine_mesh.png" >}}" />
+![Refined mesh](fine_mesh.png)
 
 This mesh can then be saved in the same way as presented earlier.
 
 The second tool is the *Partition* tool. It uses an external library called METIS to split the mesh into multiple smaller meshes. Those meshes are then ready to be used with domain decomposition methods. The following figure shows the previously generated mesh split in 5 parts.
 
-<img alt="Refined mesh partitionned in 5 sub-meshes" src="{{< resource "mesh_split.png" >}}" />
+![Refined mesh partitionned in 5 sub-meshes](mesh_split.png)
 
 ### To go further
 

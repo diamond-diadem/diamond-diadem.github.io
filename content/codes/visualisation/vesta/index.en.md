@@ -10,8 +10,7 @@ website: "https://jp-minerals.org/vesta/"
 
 <h4 align="center">"<b>V</b>isualization for <b>E</b>lectronic and <b>ST</b>ructural <b>A</b>nalysis"</h4>
 
-<hr>
-
+---
 ### Retrieve the container image
 
 {{< tabs "apptainer_docker" >}}
@@ -67,17 +66,17 @@ VESTA (Visualization for Electronic and Structural Analysis) is a 3D visualizati
 
 VESTA stands out for its ability to combine sophisticated visualization functions with robust analytical tools, making detailed study of atomic structures and electronic properties accessible to a wide range of professionals and students in the materials sciences.
 
-<h3 class="mb-1">Tutorial</h3>
+## Tutorial
 
 {{< link-card title="Content to be added" description="<i>Learn to use this container image</i>" href="#bottom" icon="tabler-icons/outline/package" disabled="true" class="mb-0" >}}
 
-<h3 class="mb-1 mt-3">VESTA documentation</h3>
+## VESTA documentation
 
 {{< card-grid >}}
 {{< link-card title="Official website" href="https://jp-minerals.org/vesta/" target="_blank" icon="tabler-icons/outline/world-www"  class="mb-0" >}}
 {{< link-card title="Official documentation" href="https://jp-minerals.org/vesta/en/doc.html" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
 {{< /card-grid >}}
 
-<h3 class="mb-1 mt-3">Examples</h3>
+## Examples
 
 {{< link-card title="Content to be added" description="<i>Download input files</i>" href="#bottom" icon="tabler-icons/outline/file-export" disabled="true" class="mb-0" >}}

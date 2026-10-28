@@ -33,17 +33,17 @@ The software is designed to run efficiently on high-performance computing platfo
 
 As an open-source project, Abinit benefits from an active community of developers and users. Contributions from this community have extended the software's capabilities and ensured its continual improvement. Abinit's comprehensive documentation, tutorials, and user forums provide ample support for both novice and experienced users, making it a valuable tool for researchers in the fields of materials science, chemistry, physics, and engineering.
 
-<h3 class="mb-1">Tutorial</h3>
+## Tutorial
 
 {{< link-card title="Learn to use this container image" href="/en/documentation/by-container/abinit" icon="tabler-icons/outline/package" class="mb-0" >}}
 
-<h3 class="mb-1 mt-3">Abinit documentation</h3>
+## Abinit documentation
 
 {{< card-grid >}}
 {{< link-card title="Official website" href="https://www.abinit.org/" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
 {{< link-card title="Official documentation" href="https://docs.abinit.org/" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
 {{< /card-grid >}}
 
-<h3 class="mb-1 mt-3">Examples</h3>
+## Examples
 
 {{< link-card title="Download input files" href="/downloads/abinit-tutorial-inputs.tar.gz" icon="tabler-icons/outline/file-export" >}}

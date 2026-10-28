@@ -33,17 +33,17 @@ Le logiciel est conçu pour fonctionner efficacement sur des plateformes de calc
 
 En tant que projet open-source, Abinit bénéficie d'une communauté active de développeurs et d'utilisateurs. Les contributions de cette communauté ont étendu les capacités du logiciel et assuré son amélioration continue. La documentation complète d'Abinit, ses tutoriels et ses forums utilisateurs offrent un support ample pour les utilisateurs novices et expérimentés, faisant de lui un outil précieux pour les chercheurs dans les domaines de la science des matériaux, de la chimie, de la physique et de l'ingénierie.
 
-<h3 class="mb-1">Tutoriel</h3>
+## Tutoriel
 
 {{< link-card title="Apprenez à utiliser cette image de conteneur" href="/documentation/by-container/abinit" icon="tabler-icons/outline/package" class="mb-0" >}}
 
-<h3 class="mb-1 mt-3">Documentation Abinit</h3>
+## Documentation Abinit
 
 {{< card-grid >}}
 {{< link-card title="Site officiel" href="https://www.abinit.org/" target="_blank" icon="tabler-icons/outline/world-www"  class="mb-0" >}}
 {{< link-card title="Documentation officielle" href="https://docs.abinit.org/" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
 {{< /card-grid >}}
 
-<h3 class="mb-1 mt-3">Exemples</h3>
+## Exemples
 
 {{< link-card title="Téléchargez des fichiers d'entrée" href="/downloads/abinit-tutorial-inputs.tar.gz" icon="tabler-icons/outline/file-export" >}}

@@ -35,17 +35,17 @@ La fonctionnalité de VMD peut être étendue grâce à son support pour les lan
 
 Dans l'ensemble, VMD est un outil puissant et flexible pour la visualisation et l'analyse moléculaires, largement utilisé par les chercheurs en biologie computationnelle, en chimie et dans des domaines connexes. Sa combinaison de visualisation de haute qualité, d'outils d'analyse étendus et d'extensibilité par script en fait une ressource essentielle pour l'étude et la compréhension des systèmes biomoléculaires.
 
-<h3 class="mb-1">Tutoriel</h3>
+## Tutoriel
 
 {{< link-card title="Contenu à venir" description="<i>Apprenez à utiliser cette image de conteneur</i>" href="#bottom" icon="tabler-icons/outline/package" disabled="true" class="mb-0" >}}
 
-<h3 class="mb-1 mt-3">Documentation VMD</h3>
+## Documentation VMD
 
 {{< card-grid >}}
 {{< link-card title="Site officiel" href="https://www.ks.uiuc.edu/Research/vmd/" target="_blank" icon="tabler-icons/outline/world-www"  class="mb-0" >}}
 {{< link-card title="Documentation officielle" href="https://www.ks.uiuc.edu/Research/vmd/current/docs.html" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
 {{< /card-grid >}}
 
-<h3 class="mb-1 mt-3">Exemples</h3>
+## Exemples
 
 {{< link-card title="Contenu à venir" description="<i>Téléchargez des fichiers d'entrée</i>" href="#bottom" icon="tabler-icons/outline/file-export" disabled="true" class="mb-0" >}}

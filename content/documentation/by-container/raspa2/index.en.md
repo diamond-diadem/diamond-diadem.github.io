@@ -100,11 +100,11 @@ The `.pdb` movies in the *Movies/System_0* directory can be opened from the GUI 
 
 Once the chosen file is loaded in VMD GUI, a simple representation can be created from the *Graphics/Representations* menu by selecting *VDW* for the *Drawing Method* and *Name* for the *Coloring Method*, as shown below.
 
-<img alt="Screenshot of the representation settings on VMD GUI" src="{{< resource "vmd_representation_settings.png" >}}" />
+![Screenshot of the representation settings on VMD GUI](vmd_representation_settings.png)
 
 Once applied, the movie can be run with the black arrow button in the lower-right corner of VMD main interface. As an example, the following screenshot shows a frame from the `Movie_Box_1.1.1_300.000000_0.000000_allcomponents.pdb` movie.
 
-<img alt="Screenshot of a movie frame" src="{{< resource "vmd_movie_frame.png" >}}" />
+![Screenshot of a movie frame](vmd_movie_frame.png)
 
 ### Analyzing simulation results
 

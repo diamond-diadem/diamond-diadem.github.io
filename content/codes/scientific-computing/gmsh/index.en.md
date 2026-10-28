@@ -29,17 +29,17 @@ Gmsh’s CAD engine supports the creation of geometries using basic shapes and a
 
 Moreover, Gmsh includes a powerful scripting language that allows users to automate repetitive tasks, customize the meshing process, and integrate Gmsh into larger workflows. The software also supports parameterized geometries, which can be crucial for optimization studies and parametric analyses. Gmsh can export meshes in numerous formats, making it compatible with various finite element analysis (FEA) and computational fluid dynamics (CFD) solvers, such as Abaqus, ANSYS, and OpenFOAM. Additionally, Gmsh’s post-processing features allow for the visualization and analysis of simulation results, providing users with a comprehensive tool for the entire meshing and analysis pipeline.
 
-<h3 class="mb-1">Tutorial</h3>
+## Tutorial
 
 {{< link-card title="Learn to use this container image" href="/en/documentation/by-container/gmsh" icon="tabler-icons/outline/package" class="mb-0" >}}
 
-<h3 class="mb-1 mt-3">Gmsh documentation</h3>
+## Gmsh documentation
 
 {{< card-grid >}}
 {{< link-card title="Official website" href="https://gmsh.info/" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
 {{< link-card title="Official documentation" href="https://gmsh.info/#Documentation" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
 {{< /card-grid >}}
 
-<h3 class="mb-1 mt-3">Examples</h3>
+## Examples
 
 {{< link-card title="Download input files" href="/downloads/gmsh-tutorial-inputs.tar.gz" icon="tabler-icons/outline/file-export" >}}

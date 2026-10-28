@@ -27,17 +27,17 @@ Quantum ESPRESSO est un logiciel de calcul de structure électronique basé sur 
 
 Le logiciel prend en charge une variété de méthodes de calcul, telles que la DFT sur ondes planes, la théorie de la perturbation de la fonctionnelle de la densité (DFPT), et la DFT dépendante du temps (TDDFT). Il permet aux chercheurs de modéliser et d'analyser les propriétés électroniques, les forces et les énergies associées aux systèmes étudiés. Quantum ESPRESSO est fréquemment utilisé dans la recherche en physique de la matière condensée, en chimie théorique et en science des matériaux pour comprendre et prédire le comportement des matériaux à l'échelle quantique. Il s'adresse principalement aux scientifiques et aux chercheurs travaillant dans le domaine de la simulation et de la modélisation quantique.
 
-<h3 class="mb-1">Tutoriel</h3>
+## Tutoriel
 
 {{< link-card title="Apprenez à utiliser cette image de conteneur" href="/documentation/by-container/quantum-espresso" icon="tabler-icons/outline/package" class="mb-0" >}}
 
-<h3 class="mb-1 mt-3">Documentation Quantum ESPRESSO</h3>
+## Documentation Quantum ESPRESSO
 
 {{< card-grid >}}
 {{< link-card title="Site officiel" href="https://www.quantum-espresso.org/" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
 {{< link-card title="Documentation officielle" href="https://www.quantum-espresso.org/documentation/" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
 {{< /card-grid >}}
 
-<h3 class="mb-1 mt-3">Exemples</h3>
+## Exemples
 
 {{< link-card title="Téléchargez des fichiers d'entrée" href="/downloads/qe-tutorial-inputs.tar.gz" icon="tabler-icons/outline/file-export" class="mb-0" >}}
