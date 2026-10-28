@@ -35,5 +35,9 @@ In summary, well-designed workflows not only save time but also reduce the risk 
 - ### MOFLearning-AIIDA-LAMMPS-workflow
   - [Description](/en/workflows/aiida-diffusion-wf/description)
   - [Installation](/en/workflows/aiida-diffusion-wf/installation)
+  
+- ### DIAMOND-AIIDA-VASP
+  - [Description](/en/workflows/aiida-vasp/description)
+  - [Installation](/en/workflows/aiida-vasp/installation)
 
 The Noise2Noise denoising pipeline for high-throughput Raman spectroscopy has moved to the [AI notebooks](/en/notebooks/home/) section, alongside the other AI resources.
