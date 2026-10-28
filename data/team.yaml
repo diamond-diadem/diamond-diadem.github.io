@@ -515,3 +515,86 @@ team:
       url: https://www.linkedin.com/in/gabriele-cassetta/
   orcid: 0009-0006-2277-0622
   github: merhametsize
+
+- name: Yiran Lu
+  first_name: Yiran
+  last_name: Lu
+  email: yiran.lu@grenoble-inp.fr
+  affiliation: GRICAD Grenoble
+  role: WP1 - Codes and Workflows
+  project: DIAMOND
+  personnel_type: Scientist
+  slug: yiran-lu
+  photo: /images/team/yl.jpg
+  bio_short: I work with scientific codes and workflows for materials science on HPC infrastructures.
+  bio_short_fr: Je travaille avec des codes scientifiques et des flux de travail pour la science des matériaux sur des infrastructures HPC.
+  bio_long: |-
+    I am research engineer at GRICAD. I work on delivering scientific codes and workflows for materials science on HPC infrastructures. I am also interested in the development of software tools for scientific computing and data analysis.
+  bio_long_fr: |-
+    Je suis ingénieur de recherche à GRICAD. Je travaille sur la livraison de codes scientifiques et de flux de travail pour la science des matériaux sur des infrastructures HPC. Je m'intéresse également au développement d'outils logiciels pour le calcul scientifique et l'analyse de données.
+  links:
+    - label: LinkedIn
+      url: https://www.linkedin.com/in/yiran-lu-66424012a
+  website: https://yiranlus.github.io/
+  github: yiranlus
+
+- name: May CHOUEIB
+  first_name: May
+  last_name: CHOUEIB
+  slug: may-choueib
+  email: may.choueib@univ-lyon1.fr
+  affiliation: ILM Lyon
+  role: WP1 - Codes and Workflows
+  project: DIAMOND
+  personnel_type: Scientist
+  photo: /images/team/mc.png
+  bio_short: My work focuses on developing AI tools to extract, analyze, and leverage multimodal data. I am currently working on extracting and structuring data from the scientific literature in materials science.
+  bio_short_fr: Mes travaux portent sur le développement d'outils IA pour extraire, analyser et valoriser des données multimodales. Je travaille actuellement sur l'extraction et la structuration de données issues de la littérature scientifique en science des matériaux
+  links:
+    - label: Google Scholar
+      url: https://scholar.google.com/citations?hl=fr&user=RKiZlncAAAAJ
+
+- name: Imade EL BAHRAOUI
+  first_name: Imade
+  last_name: EL BAHRAOUI
+  slug: imade-el-bahraoui
+  email: imade.el-bahraoui@univ-grenoble-alpes.fr
+  affiliation: GRICAD Grenoble
+  role: WP1 - Codes and Workflows
+  project: DIAMOND
+  personnel_type: Scientist
+  photo: /images/team/ieb.jpg
+  bio_short: I am a research engineer working on the containerization of scientific codes and their deployment in HPC environments.
+  bio_short_fr: Je suis ingénieur de recherche et je travaille sur la conteneurisation de travaux scientifiques et leur déploiement dans des environnements HPC
+  bio_long: |-
+    I am a research engineer working on the containerization of scientific codes and their deployment in HPC environments.
+      - Interests: HPC, Reproducibility, Performance optimization
+  bio_long_fr: |-
+    Je suis ingénieur de recherche et je travaille sur la conteneurisation de travaux scientifiques et leur déploiement dans des environnements HPC
+      - Intérêts : Calcul Haute Performance, Reproductibilité, Optimisation des performances
+  links:
+    - label: LinkedIn
+      url: https://www.linkedin.com/in/imade-el-bahraoui-488634202
+  github: imadeelb
+
+- name: Paul Bouton
+  first_name: Paul
+  last_name: Bouton
+  slug: paul-bouton
+  email: paul.bouton@univ-grenoble-alpes.fr
+  affiliation: GRICAD Grenoble
+  role: WP1 - Codes and Workflows
+  project: DIAMOND
+  personnel_type: Scientist
+  photo: /images/team/pb.jpeg
+  bio_short: I am a research engineer working on the containerization of scientific codes and their deployment in HPC environments.
+  bio_short_fr: Je suis ingénieur de recherche et je travaille sur la conteneurisation de travaux scientifiques et leur déploiement dans des environnements HPC
+  bio_long: |-
+    I am a research engineer working on the containerization of scientific codes and their deployment in HPC environments.
+      - Interests: HPC, Reproducibility, Performance optimization, sustainability
+  bio_long_fr: |-
+    Je suis ingénieur de recherche et je travaille sur la conteneurisation de travaux scientifiques et leur déploiement dans des environnements HPC
+      - Intérêts : Calcul Haute Performance, Reproductibilité, Optimisation des performances, sobriété numérique
+  links:
+    - label: LinkedIn
+      url: https://www.linkedin.com/in/paul-bouton-587a6b12a/

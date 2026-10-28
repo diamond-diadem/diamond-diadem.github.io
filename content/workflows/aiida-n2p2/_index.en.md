@@ -23,5 +23,10 @@ This release for n2p2-workflow uses nnp-scale and nnp-train from:
 - [N2P2](https://compphysvienna.github.io/n2p2/) for train mlip.
 - [lammps](https://www.lammps.org/#gsc.tab=0) for validation model.
 
-The workflow contains example for learn how use the workflow.
-Follow that [link]({{% ref "/workflows/aiida-n2p2/installation" %}}) to install it.
+The workflow contains example for learn how use the workflow.  
+The open source code is here [https://gricad-gitlab.univ-grenoble-alpes.fr/diamond/aiida/workflows/aiida-n2p2.git](https://gricad-gitlab.univ-grenoble-alpes.fr/diamond/aiida/workflows/aiida-n2p2.git).  
+  
+Authors
+
+- **v0.1.0–v0.2.0:** [Akshay Krishna Ammothum Kandy](https://github.com/aksam432) — initial rudimentary plugin (CalcJobs, basic WorkChains, first examples).
+- **v0.3.0–v0.4.0:** [Irina Piazza](https://github.com/irina-piazza) — structured inputs (`N2p2Dataset`, `N2p2Parameters`), training restart, HPC/OAR integration, tests, and documentation.

@@ -15,7 +15,7 @@ Another benchmarking investigation concerns the variation of the input dataset s
 
 The throughput as a function of the number of structures is plotted in Figure 1, and it is defined as the ratio between the total training time and the number of structures.
 
-$$ throughput=\frac{total_time(s)}{number_structures} $$
+$$ throughput=\frac{total\_time(s)}{number\_structures} $$
 
  <p align="center">
   <img alt="n2p2" class="n2p2_throughput_vs_structures">

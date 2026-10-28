@@ -5,7 +5,52 @@ toc: false
 description: "Installation guide for the AiiDA-n2p2 workflow for training machine learning interatomic potentials on the DIAMOND platform with AiiDA and Apptainer."
 ---
 
+## aiida-n2p2
+
+AiiDA plugin for the [n2p2](https://github.com/CompPhysVienna/n2p2) neural-network potential package.
+
+**Current version:** 0.4.0
+
+The current version is a **research prototype that can be installed from source**. It is not presented here as a standalone plugin published on PyPI. The repository hosting the workflow is currently private, but access can be requested through our [support form]({{% ref "contact" %}}).
+
+
+## Features
+
+- **CalcJobs:** `nnp-scaling`, `nnp-train`, `nnp-predict`
+- **WorkChains:** scaling, training (manual + automatic restart), LAMMPS validation, full pipeline (`MakeNNPWorkchain`)
+- **Data types:** `N2p2Dataset`, `N2p2Parameters` (structured `input.data` / `input.nn`)
+- **Training restart (v0.4.0):** automatic relaunch when walltime stops training before target `epochs`; merged learning curves across segments
+- **HPC / OAR:** parsers recover outputs from the remote folder when retrieve is premature (Dahu)
+
+## Prerequisites
+
+`pip install -e .` installs the plugin and its Python dependencies (`aiida-core`, `aiida-lammps`, `numpy`) into the environment that is already active. It does not create that environment, an AiiDA profile, or the external executables.
+
+Before the install commands:
+
+- Python 3.10 or newer. With `pip`, activate a virtual environment first (conda or venv). `poetry install` creates its own virtualenv.
+- PostgreSQL and RabbitMQ running.
+- An AiiDA profile, created with `verdi quicksetup` or `verdi setup`, so that `verdi` already works.
+- The n2p2 executables `nnp-scaling`, `nnp-train`, and `nnp-predict` installed on the computer where the calculations run.
+- LAMMPS, when the optional validation step is used.
+
 ## Installation
+
+```
+git clone <repo-url> aiida-n2p2
+cd aiida-n2p2
+pip install -e .          # or: poetry install
+verdi daemon restart
+```
+
+If entry points are missing after install, remove stale metadata in the repo:
+
+```
+rm -rf aiida_n2p2.egg-info
+pip install -e .
+```
+
+Register AiiDA codes (examples for localhost are in `oar-scheduler-main/*_localhost.yml` sibling repo).Installation
 
 ```shell
 pip install aiida-n2p2
@@ -29,46 +74,63 @@ You can have access to two examples both in local and super computer.
 ### Tree of n2p2 aiida plugin
 
 ```
-├── aiida_n2p2
-│   ├── calculations
-│   │   ├── predict.py
-│   │   ├── scaling.py
-│   │   └── train.py
-│   ├── cli.py
-│   ├── data
-│   │   └── __init__.py
-│   ├── helpers.py
-│   ├── __init__.py
-│   ├── parsers
-│   │   ├── predict.py
-│   │   ├── scaling.py
-│   │   └── train.py
-│   └── workflows
-│       └── make_potential.py
-├── CHANGELOG.md
-├── examples
-│   ├── 1.Al
-│   │   ├── 222_IN.data
-│   │   ├── AiidA-n2p2_demo.ipynb
-│   │   ├── in.lmp
-│   │   ├── input.data
-│   │   └── input.nn
-│   ├── 1.Boron
-│   │   ├── 222_IN.data
-│   │   ├── aiida-n2p2_demo.py
-│   │   ├── input.data
-│   │   ├── input.nn
-│   └── 2.HPC
-│       ├── 222_IN.data
-│       ├── in.lmp
-│       ├── input.data
-│       ├── input.nn
-│       └── wkchain_Al.py
-├── LICENSE
+aiida-n2p2/
 ├── pyproject.toml
-└── README.md
+├── poetry.lock
+├── README.md
+├── CHANGELOG.md
+├── LICENSE
+├── docs/
+│   └── n2p2_workflow_section.tex
+├── aiida_n2p2/
+│   ├── __init__.py
+│   ├── calculations/
+│   │   ├── scaling.py          # nnpScaling
+│   │   ├── train.py            # nnpTraining
+│   │   └── predict.py          # nnpPredict
+│   ├── parsers/
+│   │   ├── scaling.py          # nnpScaleParser
+│   │   ├── train.py            # nnpTrainParser
+│   │   └── predict.py          # nnpPredictParser
+│   ├── data/
+│   │   ├── dataset.py          # N2p2Dataset
+│   │   └── parameters.py       # N2p2Parameters
+│   ├── workflows/
+│   │   ├── common.py           # CalcJobMetadataWorkChainMixin
+│   │   ├── prepare_inputs.py   # N2p2PrepareInputsWorkChain
+│   │   ├── scale.py            # N2p2ScaleWorkChain
+│   │   ├── train.py            # N2p2TrainWorkChain
+│   │   ├── validate_lammps.py  # N2p2LammpsValidationWorkChain
+│   │   └── make_potential.py   # MakeNNPWorkchain
+│   └── utils/
+│       ├── input_nn.py
+│       ├── learning_curve.py
+│       ├── plot_learning_curve.py
+│       ├── remote_outputs.py
+│       └── training_state.py
+├── tests/
+│   ├── conftest.py
+│   ├── fixtures/al/
+│   ├── test_inputs.py
+│   ├── test_input_nn.py
+│   ├── test_parsers.py
+│   ├── test_train_parser_logic.py
+│   ├── test_learning_curve_utils.py
+│   ├── test_training_state.py
+│   ├── test_restart.py
+│   ├── test_workflow.py
+│   └── test_reference_manifest.py
+└── examples/
+    ├── README.md
+    ├── basic.ipynb
+    ├── 1.Al/
+    ├── 1.Boron/
+    ├── 2.HPC/          # wkchain_Al.py
+    └── 3.Restart/      # automatic and manual restart 
 
 ```
+
+
 
 ### Run in local
 
@@ -102,6 +164,8 @@ Registered entry points for aiida.schedulers:
 * core.torque
 * oarscheduler
 ```
+
+
 
 ## 2. Set up the Computer
 
@@ -140,6 +204,8 @@ Report: Note: before the computer can be used, it has to be configured with the 
 Report:   verdi -p presto computer configure core.ssh dahu
 ```
 
+
+
 ## 3. Configure the SSH Connection
 
 Next, configure the SSH transport for the computer you just created. You can provide the configuration non-interactively via another YAML file (`ssh.yml`).
@@ -171,6 +237,8 @@ Use login shell when executing command [Y/n]:
 Report: Configuring computer dahu for user aiida@localhost.
 Success: dahu successfully configured for aiida@localhost
 ```
+
+
 
 ## 4. Set up the Codes
 
@@ -212,6 +280,8 @@ Escape using double quotes [y/N]:
 Success: Created InstalledCode<1>
 ```
 
+
+
 ## 5. Run and Monitor a Calculation
 
 You can now submit a calculation from your local machine, and AiiDA will send it to run on `dahu`:
@@ -245,15 +315,14 @@ verdi data n2p2 list
 verdi data n2p2 export <PK>
 ```
 
+
+
 ## Development
 
-```shell
-git clone https://github.com/aksam432/aiida-n2p2 .
-cd aiida-n2p2
-pip install --upgrade pip
-pip install -e .[pre-commit,testing]  # install extra dependencies
-pre-commit install  # install pre-commit hooks
-pytest -v  # discover and run all tests
-```
+To contribute a change:
 
-<!-- See the [developer guide](http://aiida-n2p2.readthedocs.io/en/latest/developer_guide/index.html) for more information. -->
+1. Fork [aiida-n2p2](https://gricad-gitlab.univ-grenoble-alpes.fr/diamond/aiida/workflows/aiida-n2p2) on GitLab.
+2. Clone your fork, create a branch, and add your changes.
+3. Commit the changes and push the branch to your fork.
+4. Open a pull request on the original repository so the changes can be reviewed. On GitLab this request is called a merge request.
+
