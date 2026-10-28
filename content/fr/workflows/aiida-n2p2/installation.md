@@ -11,6 +11,9 @@ Plugin AiiDA pour le paquet de potentiels de réseaux de neurones [n2p2](https:/
 
 **Version actuelle :** 0.4.0
 
+La version actuelle est un **prototype de recherche installable depuis ses sources**. Elle n'est pas présentée ici comme un plugin autonome publié sur PyPI. Le repositoire dans lequel nous avons placé le workflow est actuellement fermé, mais une autorisation d'accès peut être demandée via notre [formulaire d'assistance](/contact).
+
+
 ## Fonctionnalités
 
 - **CalcJobs :** `nnp-scaling`, `nnp-train`, `nnp-predict`

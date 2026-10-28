@@ -11,6 +11,9 @@ AiiDA plugin for the [n2p2](https://github.com/CompPhysVienna/n2p2) neural-netwo
 
 **Current version:** 0.4.0
 
+The current version is a **research prototype that can be installed from source**. It is not presented here as a standalone plugin published on PyPI. The repository hosting the workflow is currently private, but access can be requested through our [support form](/contact).
+
+
 ## Features
 
 - **CalcJobs:** `nnp-scaling`, `nnp-train`, `nnp-predict`
