@@ -5,9 +5,9 @@ summary: "Training and validation of machine-learning interatomic potentials wit
 description: "Description of the AiiDA-n2p2 workflow for training machine learning interatomic potentials using the n2p2 code and validating them with LAMMPS."
 tablerIcon: tabler-icons/outline/brain
 toc: false
-draft: true
+draft: false
 cascade:
-  draft: true
+  draft: false
 aliases:
   - /workflows/aiida-n2p2/description/
 ---

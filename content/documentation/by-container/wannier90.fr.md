@@ -57,7 +57,7 @@ apptainer exec ../wannier90.sif wannier90.x lead
 
 ## Utilisation détaillée du conteneur Wannier90
 
-Cette section présente différentes façons d'utiliser l'image Wannier90. Pour plus de détails sur les commandes Apptainer, veuillez consulter [ce tutoriel](/documentation/use/apptainer-image/#apptainer--cours-accéléré).
+Cette section présente différentes façons d'utiliser l'image Wannier90. Pour plus de détails sur les commandes Apptainer, veuillez consulter [ce tutoriel]({{% ref "/documentation/use/apptainer-image/#apptainer--cours-accéléré" %}}).
 
 ### Introduction
 

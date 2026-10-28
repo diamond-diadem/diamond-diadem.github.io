@@ -48,7 +48,7 @@ apptainer exec ../dftbplus.sif modes | tee output_modes
 
 ## Utilisation détaillée du conteneur DFTB+
 
-Cette section explique comment utiliser l'image DFTB+. Pour plus de détails sur les commandes Apptainer, veuillez consulter [ce tutoriel](/documentation/use/apptainer-image/#apptainer--cours-accéléré).
+Cette section explique comment utiliser l'image DFTB+. Pour plus de détails sur les commandes Apptainer, veuillez consulter [ce tutoriel]({{% ref "/documentation/use/apptainer-image/#apptainer--cours-accéléré" %}}).
 
 ### Introduction
 

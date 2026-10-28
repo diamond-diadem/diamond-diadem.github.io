@@ -2,7 +2,7 @@
 title: "Installation des workflows Diamond AIIDA-VASP"
 linkTitle: "Installation"
 toc: true
-description: "Installer, configurer et tester WF1 et WF2 avec AiiDA, VASP et OVITO, puis lancer les premiers exemples."
+description: "Installer, configurer et tester les workflows WF1 et WF2 avec AiiDA, VASP et OVITO, puis lancer les premiers exemples."
 ---
 
 ## Avant de commencer
