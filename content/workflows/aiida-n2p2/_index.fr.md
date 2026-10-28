@@ -1,5 +1,5 @@
 ---
-title: "Workflow n2p2"
+title: "n2p2"
 weight: 3
 summary: "Entraînement et validation de potentiels interatomiques par apprentissage automatique avec n2p2 et LAMMPS"
 description: "Description du workflow AiiDA-n2p2 pour l'entraînement de potentiels interatomiques par apprentissage machine avec n2p2 et validation par LAMMPS."

@@ -1,5 +1,5 @@
 ---
-title: "Simple Adsorption Workflow"
+title: "Simple Adsorption"
 weight: 2
 summary: "Containerized program for the study of adsorption in porous materials"
 description: "Description of the simple-adsorption-workflow for grand canonical Monte Carlo simulation of gas adsorption in nanoporous materials on DIAMOND."

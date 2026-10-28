@@ -1,5 +1,5 @@
 ---
-title: "MOFLearning AiiDA+LAMMPS Workflow"
+title: "MOFLearning AiiDA+LAMMPS"
 weight: 4
 summary: "Molecular dynamics simulations of gas diffusion in MOFs with AiiDA and LAMMPS"
 description: "Description of the AiiDA diffusion workflow for simulating atomic diffusion via molecular dynamics to study defect mobility in materials on DIAMOND."

@@ -1,5 +1,5 @@
 ---
-title: "DIAMOND AiiDA-VASP Workflows"
+title: "AiiDA-VASP"
 weight: 5
 summary: "Automated ab initio molecular dynamics with VASP, AiiDA and OVITO"
 description: "Overview of the WF1 and WF2 ab initio molecular dynamics workflows using VASP, AiiDA and OVITO, with their inputs and outputs."
