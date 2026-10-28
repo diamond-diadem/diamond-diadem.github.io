@@ -15,7 +15,7 @@ Une autre investigation de performance concerne la variation de la taille du jeu
 
 Le throughput en fonction du nombre de structures est représenté dans la Figure 1 et est défini comme le rapport entre le temps total d’entraînement et le nombre de structures :
 
-$$ throughput=\frac{total_time(s)}{number_structures} $$
+$$ throughput=\frac{total\_time(s)}{number\_structures} $$
 
  <p align="center">
   <img alt="n2p2" class="n2p2_throughput_vs_structures">

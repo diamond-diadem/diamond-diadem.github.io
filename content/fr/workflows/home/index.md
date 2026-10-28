@@ -31,8 +31,7 @@ Pour résumer, des workflows bien conçus permettent non seulement de gagner du 
 - ### aiida-n2p2-workflow
   - [Description](/workflows/aiida-n2p2/description)
   - [Installation](/workflows/aiida-n2p2/installation)
-  <!-- - [Benchmark](/workflows/aiida-n2p2/benchmark_fr) -->
-  
+  - [Benchmark](/workflows/aiida-n2p2/benchmark)
 - ### MOFLearning-AIIDA-LAMMPS-workflow
   - [Description](/workflows/aiida-diffusion-wf/description)
   - [Installation](/workflows/aiida-diffusion-wf/installation)
