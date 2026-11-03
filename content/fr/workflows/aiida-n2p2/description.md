@@ -5,7 +5,7 @@ toc: false
 description: "Description du workflow AiiDA-n2p2 pour l'entraînement de potentiels interatomiques par apprentissage machine avec n2p2 et validation par LAMMPS."
 ---
 
-Ce workflow est une WorkChain destinée à entraîner un potentiel interatomique par apprentissage automatique et à le valider à l’aide du logiciel de dynamique moléculaire LAMMPS. Il s’appuie sur le dépôt `n2p2`, qui fournit un logiciel de potentiels de réseaux de neurones de haute dimension pour la physique et la chimie computationnelles. La méthodologie des potentiels de réseaux de neurones de Behler-Parrinello a été décrite pour la première fois ici :
+Ce workflow est une [Work Chain d'AiiDA](https://aiida-tutorials.readthedocs.io/en/latest/sections/writing_workflows/workchain.html) destinée à entraîner un potentiel interatomique par apprentissage automatique et à le valider à l’aide du logiciel de dynamique moléculaire LAMMPS. Il s’appuie sur le dépôt [n2p2](https://github.com/CompPhysVienna/n2p2), qui fournit un logiciel de potentiels de réseaux de neurones de haute dimension pour la physique et la chimie computationnelles. La méthodologie des potentiels de réseaux de neurones de Behler-Parrinello a été décrite pour la première fois ici :
 
 - [J. Behler and M. Parrinello, Phys. Rev. Lett. 98, 146401 (2007)](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.98.146401)
 
