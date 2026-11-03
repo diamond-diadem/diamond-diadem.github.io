@@ -50,7 +50,7 @@ database.
 <p align="center">
 <img alt="Database architecture" src="/images/data/DIAMOND_DM_Architecture.png" />
 </p>
-<p align="center"><i>Overview of the available AiiDA-VASP workflows.</i></p>
+<p align="center"><i>Database architecture</i></p>
 
 ---
 
@@ -225,10 +225,6 @@ computed from an uploaded file. These are described with the
 value: it is extracted or calculated automatically by the **ETL pipeline** 
 (Extract, Transform, Load) from the specified source 
 (see [4.6](#46-extraction-algorithm-etl)).
-- ~~If an attribute is derived directly from **another attribute** 
-(e.g. a mathematical transformation or an indicator computed from it), 
-also use **Extracted from** and indicate the source attribute. Tell us 
-the transformation rule when you send the Excel file.~~
 - This avoids users entering values that can be recomputed, and guarantees 
 data integrity and traceability.
 
@@ -320,12 +316,11 @@ step.
 
 Before our first meeting, it helps to have thought about:
 
-- [ ] What kind of data will be stored, and who will use the database?
-- [ ] Which collections and attributes are needed?
-- [ ] Which attributes are files, and which values could be extracted from 
-them?
-- [ ] A few typical example files.
-- [ ] If relevant, a script that reads those files and extracts properties.
+- What kind of data will be stored, and who will use the database?
+- Which collections and attributes are needed?
+- Which attributes are files, and which values could be extracted from them?
+- A few typical example files.
+- If relevant, a script that reads those files and extracts properties.
 
 ---
 

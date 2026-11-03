@@ -54,7 +54,7 @@ cas échéant, les visualiser.
 <p align="center">
 <img alt="Architecture de la base de données" src="/images/data/DIAMOND_DM_Architecture.png" />
 </p>
-<p align="center"><i>Aperçu des workflows AiiDA-VASP disponibles.</i></p>
+<p align="center"><i>Architecture de la base de données</i></p>
 
 ---
 
@@ -233,11 +233,6 @@ décrites par la colonne **Extracted from**.
 valeur : elle est extraite ou calculée automatiquement par le **pipeline ETL** 
 (Extract, Transform, Load) à partir de la source indiquée 
 (voir [4.6](#46-algorithme-dextraction-etl)).
-- ~~Si un attribut est dérivé directement d'**un autre attribut** 
-(p. ex. une transformation mathématique ou un indicateur calculé à partir de 
-celui-ci), utilisez également **Extracted from** et indiquez l'attribut source. 
-Indiquez-nous la règle de transformation lorsque vous nous envoyez le fichier 
-Excel.~~
 - Cela évite que les utilisateurs saisissent des valeurs qui peuvent être 
 recalculées, et garantit l'intégrité et la traçabilité des données.
 
@@ -335,13 +330,11 @@ n'avez pas besoin de cette étape.
 
 Avant notre première réunion, il est utile d'avoir réfléchi à :
 
-- [ ] Quel type de données sera stocké, et qui utilisera la base de données ?
-- [ ] Quelles collections et quels attributs sont nécessaires ?
-- [ ] Quels attributs sont des fichiers, et quelles valeurs pourraient en être 
-extraites ?
-- [ ] Quelques fichiers d'exemple typiques.
-- [ ] Le cas échéant, un script qui lit ces fichiers et en extrait des 
-propriétés.
+- Quel type de données sera stocké, et qui utilisera la base de données ?
+- Quelles collections et quels attributs sont nécessaires ?
+- Quels attributs sont des fichiers, et quelles valeurs pourraient en être extraites ?
+- Quelques fichiers d'exemple typiques.
+- Le cas échéant, un script qui lit ces fichiers et en extrait des propriétés.
 
 ---
 
