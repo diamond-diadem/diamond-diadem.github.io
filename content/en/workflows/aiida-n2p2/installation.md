@@ -5,15 +5,6 @@ toc: false
 description: "Installation guide for the AiiDA-n2p2 workflow for training machine learning interatomic potentials on the DIAMOND platform with AiiDA and Apptainer."
 ---
 
-## aiida-n2p2
-
-AiiDA plugin for the [n2p2](https://github.com/CompPhysVienna/n2p2) neural-network potential package.
-
-**Current version:** 0.4.0
-
-The current version is a **research prototype that can be installed from source**. It is not presented here as a standalone plugin published on PyPI. The repository hosting the workflow is currently private, but access can be requested through our [support form](/contact).
-
-
 ## Features
 
 - **CalcJobs:** `nnp-scaling`, `nnp-train`, `nnp-predict`
@@ -37,7 +28,7 @@ Before the install commands:
 ## Installation
 
 ```
-git clone <repo-url> aiida-n2p2
+git clone --depth 1 https://gricad-gitlab.univ-grenoble-alpes.fr/diamond/aiida/workflows/aiida-n2p2.git aiida-n2p2
 cd aiida-n2p2
 pip install -e .          # or: poetry install
 verdi daemon restart

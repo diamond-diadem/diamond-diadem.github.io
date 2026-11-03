@@ -5,7 +5,7 @@ toc: false
 description: "Description of the AiiDA-n2p2 workflow for training machine learning interatomic potentials using the n2p2 code and validating them with LAMMPS."
 ---
 
-This workflow is a workchain to train machine learning interatomical potential and validate it using lammps molecular dynamic software. It is based on The n2p2 repository which provides a software for high-dimensional neural network potentials in computational physics and chemistry. The methodology behind the Behler-Parinello neural network potentials was first described here:
+This workflow is an [AiiDA Work Chain](https://aiida-tutorials.readthedocs.io/en/latest/sections/writing_workflows/workchain.html) to train machine learning interatomical potential and validate it using lammps molecular dynamic software. It is based on the [n2p2](https://github.com/CompPhysVienna/n2p2) repository which provides a software for high-dimensional neural network potentials in computational physics and chemistry. The methodology behind the Behler-Parinello neural network potentials was first described here:
 
 - [J. Behler and M. Parrinello, Phys. Rev. Lett. 98, 146401 (2007)](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.98.146401)
 
