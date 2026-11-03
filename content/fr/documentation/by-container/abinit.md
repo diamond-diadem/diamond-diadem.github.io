@@ -16,6 +16,12 @@ description: "Tutoriel sur l'utilisation de l'image Apptainer Abinit de DIAMOND 
 Pour plus d'informations sur les conteneurs Apptainer, veuillez consulter la [page dédiée](/about/apptainer/) ou suivre [ce tutoriel](/documentation/use/apptainer-image/) pour s'approprier les principales commandes d'Apptainer.
 {{< /callout >}}
 
+{{< callout context="note" icon="tabler-icons/outline/help-circle" >}}
+
+Pas prêt pour essayer Apptainer? Voyez le version avec Docker [ici](/documentation/by-container/docker/abinit).
+
+{{< /callout >}}
+
 
 ## Fichiers d'entrée
 
