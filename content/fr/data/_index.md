@@ -142,9 +142,7 @@ propriétés,
 - les **relations** entre les collections,
 - les attributs qui sont **extraits automatiquement** des fichiers déposés.
 
-Vous pouvez télécharger ce modèle ici :
-**[Modèle de données (Excel)](data/DB_Model_by_Project.xlsx)**
-<!-- Adapt PATH!  -->
+Vous pouvez télécharger ce modèle ici : <a href="/downloads/DB_Model_by_Project.xlsx">Modèle de données (Excel)</a>.
  
 Ce fichier inclut également l'**exemple commenté** décrit ci-dessous, afin que 
 vous puissiez voir comment chaque colonne est utilisée.

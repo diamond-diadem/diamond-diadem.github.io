@@ -135,9 +135,8 @@ properties,
 - the **relationships** between collections,
 - which attributes are **extracted automatically** from uploaded files.
 
-You can download this template just here:
-**[Data Model Template (Excel)](data/DB_Model_by_Project.xlsx)**
-<!-- Adapt PATH!  -->
+You can download this template just here: <a href="/downloads/DB_Model_by_Project.xlsx">Data Model Template (Excel)</a>.
+
  
 This file also includes the **explained example** described below, so 
 you can see how each column is used.
