@@ -78,7 +78,8 @@ plateforme DIAMOND-DM.
 
 ### 4.1 Les bases
 
-Nos bases de données reposent sur **[MongoDB](https://www.mongodb.com/)**, une base de données **[NoSQL](https://fr.wikipedia.org/wiki/NoSQL)**. 
+Nos données reposent sur une base de données [NoSQL](https://fr.wikipedia.org/wiki/NoSQL). 
+
 Concrètement, cela signifie que :
 
 - Les données ne sont **pas stockées dans des tables rigides** (lignes et 
@@ -93,10 +94,10 @@ Cette flexibilité nous permet d'adapter la base de données à vos propres
 données (échantillons, machines, expériences, caractérisations, ...). Deux 
 notions clés sont utilisées tout au long du processus :
 
-| Terme          | Signification                                                                                                          | En savoir plus                                                                                                |
-|----------------|------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| **Collection** | Un groupe de documents apparentés. À peu près équivalent à une « table » en SQL (p. ex. `MACHINE`, `SPECIMEN`).        | [Manuel MongoDB : Collections](https://www.mongodb.com/docs/manual/core/databases-and-collections/)           |
-| **Attribut**   | Une propriété d'un document (un *champ* dans la terminologie MongoDB), p. ex. `Manufacturer` ou `Porosity Rate`.       | [Manuel MongoDB : Documents et champs](https://www.mongodb.com/docs/manual/core/document/)                    |
+| Terme      | Signification                                                                                                   | En savoir plus                                                                     |
+|------------|-----------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
+| Collection | Un groupe de documents apparentés. À peu près équivalent à une « table » en SQL (p. ex. `MACHINE`, `SPECIMEN`). | [Collections](https://www.mongodb.com/docs/manual/core/databases-and-collections/) |
+| Attribut   | Une propriété d'un document (un *champ*), p.ex. `Manufacturer` ou `Porosity Rate`.                              | [Documents and fields](https://www.mongodb.com/docs/manual/core/document/)         |
 
 > L'architecture générale est décrite dans la 
 > [Section 1](#1-architecture-de-la-plateforme-de-données). 

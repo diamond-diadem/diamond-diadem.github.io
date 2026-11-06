@@ -73,7 +73,8 @@ to get **your own database** hosted on the DIAMOND-DM platform.
 
 ### 4.1 The basics
 
-Our databases are built on **[MongoDB](https://www.mongodb.com/)**, a **[NoSQL](https://en.wikipedia.org/wiki/NoSQL)** database. 
+Our data is stored in a [NoSQL](https://fr.wikipedia.org/wiki/NoSQL) database.
+
 In practice, this means:
 
 - Data is **not stored in rigid tables** (rows and columns) as in SQL 
@@ -87,10 +88,10 @@ This flexibility is what lets us adapt the database to your own data (samples,
 machines, experiments, characterizations, ...). Two key notions are used 
 throughout the process:
 
-| Term           | Meaning                                                                                              | Learn more                                                                                         |
-|----------------|------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
-| **Collection** | A group of related documents. Roughly equivalent to a "table" in SQL (e.g. `MACHINE`, `SPECIMEN`).   | [MongoDB manual: Collections](https://www.mongodb.com/docs/manual/core/databases-and-collections/) |
-| **Attribute**  | A property of a document (a *field* in MongoDB terminology), e.g. `Manufacturer` or `Porosity Rate`. | [MongoDB manual: Documents and fields](https://www.mongodb.com/docs/manual/core/document/)         |
+| Term       | Meaning                                                                                            | Learn more                                                                         |
+|------------|----------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
+| Collection | A group of related documents. Roughly equivalent to a "table" in SQL (e.g. `MACHINE`, `SPECIMEN`). | [Collections](https://www.mongodb.com/docs/manual/core/databases-and-collections/) |
+| Attribute  | A property of a document (a field), e.g. `Manufacturer` or `Porosity Rate`.                        | [Documents and fields](https://www.mongodb.com/docs/manual/core/document/)         |
 
 > The overall architecture is described in 
 > [Section 1](#1-architecture-of-the-database). 
