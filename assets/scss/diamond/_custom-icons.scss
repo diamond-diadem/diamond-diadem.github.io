@@ -228,6 +228,11 @@
     @extend .custom-icon;
 }
 
+.icon-gromacs {
+    background-image: url(images/codes/gromacs/gromacs-icon.svg);
+    @extend .custom-icon;
+}
+
 @include color-mode(dark) {
     .icon-ndm {
         background-image: url(images/codes/ndm/ndm-icon-dark.png);
