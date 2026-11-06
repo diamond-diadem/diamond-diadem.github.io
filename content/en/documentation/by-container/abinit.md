@@ -17,6 +17,11 @@ For more information on Apptainer containers, please look at [this page](/en/abo
 
 {{< /callout >}}
 
+{{< callout context="note" icon="tabler-icons/outline/help-circle" >}}
+
+Not ready to try Apptainer yet? See the version with Docker [here](/en/documentation/by-container/docker/abinit).
+
+{{< /callout >}}
 
 ## Input files
 
