@@ -19,7 +19,7 @@ description: "GROMACS is a **versatile package to perform molecular dynamics, av
 ```bash
 apptainer pull gromacs.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/gromacs.sif:latest
 # or if you want CUDA acceleration
-#apptainer pull gromacs.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/gromacs-cuda.sif:latest
+#apptainer pull gromacs-cuda.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/gromacs-cuda.sif:latest
 ```
 {{< /tab >}}
 {{< tab "Docker" >}}

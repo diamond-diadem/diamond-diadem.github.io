@@ -19,7 +19,7 @@ description: "GROMACS est un logiciel polyvalent permettant de réaliser des sim
 ```bash
 apptainer pull gromacs.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/gromacs.sif:latest
 # ou si vous voulez accélération CUDA
-#apptainer pull gromacs.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/gromacs-cuda.sif:latest
+#apptainer pull gromacs-cuda.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/gromacs-cuda.sif:latest
 ```
 ```
 {{< /tab >}}
