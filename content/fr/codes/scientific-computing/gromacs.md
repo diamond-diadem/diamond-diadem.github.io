@@ -45,7 +45,7 @@ docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-s
 <h3 class="mb-1 mt-3">Documentation GROMACS</h3>
 
 {{< card-grid >}}
-{{< link-card title="Site officiel" href="https://gromacs.org/" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
+{{< link-card title="Site officiel" href="https://www.gromacs.org/" target="_blank" icon="tabler-icons/outline/world-www" class="mb-0" >}}
 {{< link-card title="Documentation officielle" href="https://manual.gromacs.org/current/index.html" target="_blank" icon="tabler-icons/outline/book" class="mb-0" >}}
 {{< /card-grid >}}
 
