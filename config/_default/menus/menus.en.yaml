@@ -29,7 +29,7 @@ footer:
     pageRef: /about/diamond
     weight: 11
     parent: footer-about-en
-  - name: DIADEM
+  - name: PEPR DIADEM
     pageRef: /about/diadem
     weight: 12
     parent: footer-about-en

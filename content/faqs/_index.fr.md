@@ -17,7 +17,7 @@ cascade:
 contact:
   title: Vous avez encore une question ?
   text: >-
-    Nos ingénieurs répondent à chaque demande des membres de DIADEM.
+    Nos ingénieurs répondent à chaque demande des membres du PEPR DIADEM.
     Écrivez-nous, ou ouvrez un ticket pour que la réponse profite à tous.
   actions:
     - label: Contacter l'équipe

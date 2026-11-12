@@ -17,7 +17,7 @@ cascade:
 contact:
   title: Still have a question?
   text: >-
-    Our engineers answer every request from DIADEM members. Write to us, or
+    Our engineers answer every request from PEPR DIADEM members. Write to us, or
     open an issue so the answer can help others too.
   actions:
     - label: Contact the team

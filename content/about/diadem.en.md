@@ -1,5 +1,5 @@
 ---
-title: About DIADEM
+title: About PEPR DIADEM
 linkTitle: DIADEM
 seo:
   description: Overview of PEPR DIADEM, the France 2030 materials program connecting AI,

@@ -48,7 +48,7 @@ codes:
   eyebrow: Containerised codes
   title: Reproducible software, ready to run anywhere
   text: >-
-    We package the codes the DIADEM community relies on as **Apptainer and
+    We package the codes the PEPR DIADEM community relies on as **Apptainer and
     Docker container images** and **Guix packages**. Each build is pinned and
     traceable, so a simulation runs the same way on a laptop, a lab server or
     a national HPC cluster, and anyone can reproduce it years later.
@@ -119,7 +119,7 @@ contact:
   title: Let us handle the technical side of your research
   text: >-
     Need a code containerised, a workflow automated or a hand getting started?
-    Our engineers answer every request from DIADEM members.
+    Our engineers answer every request from PEPR DIADEM members.
   actions:
     - label: Contact the team
       page: /contact

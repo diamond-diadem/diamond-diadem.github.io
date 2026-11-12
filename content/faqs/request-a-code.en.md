@@ -4,4 +4,4 @@ weight: 40
 ---
 
 Yes, tell us which one. The list of codes grows with the needs of the
-community, and requests from DIADEM members come first.
+community, and requests from PEPR DIADEM members come first.

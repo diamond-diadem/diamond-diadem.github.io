@@ -1,5 +1,5 @@
 ---
-title: À propos de DIADEM
+title: À propos du PEPR DIADEM
 linkTitle: DIADEM
 seo:
   description: Présentation du programme PEPR DIADEM de France 2030, ses plateformes

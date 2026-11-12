@@ -4,4 +4,4 @@ weight: 40
 ---
 
 Oui, dites-nous lequel. La liste des codes s'enrichit selon les besoins de la
-communauté, et les demandes des membres de DIADEM sont prioritaires.
+communauté, et les demandes des membres du PEPR DIADEM sont prioritaires.
