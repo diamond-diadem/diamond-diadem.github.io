@@ -1,6 +1,10 @@
 {{- /*
   Usage: `callout "type"`, where `type` is one of "note" (default), "info", "danger", or "warning"
   Based on: https://github.com/twbs/bootstrap/blob/283cbd902669732943885e94115a0e29a952baf6/site/layouts/shortcodes/callout.html
+
+  When the callout is nested in another shortcode (e.g. `tab`), its HTML is fed to the Markdown renderer
+  a second time by the parent. Blank lines would then end the raw HTML block and turn the indented lines
+  that follow into a code block, so they are removed in that case.
 */ -}}
 
 {{- $css_class := "" -}}
@@ -13,18 +17,22 @@
 {{- $icon := .Get "icon" -}}
 {{- $title := .Get "title" -}}
 
-<div class="callout callout-{{ $css_class }} d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3">
-  {{ with $icon -}}
-    {{ partial "inline-svg" (dict "src" $icon "class" "callout-icon me-2 mb-3") }}
-  {{- end }}
-  <div class="callout-content">
-    {{ with $title -}}
-      <div class="callout-title">
-        {{ . | $.Page.RenderString (dict "display" "block") }}
-      </div>
-    {{- end }}
-    <div class="callout-body">
-      {{ .Inner | $.Page.RenderString (dict "display" "block") }}
-    </div>
-  </div>
-</div>
+{{- $iconHTML := "" -}}
+{{- with $icon -}}
+  {{- $iconHTML = partial "inline-svg" (dict "src" $icon "class" "callout-icon me-2 mb-3") -}}
+{{- end -}}
+
+{{- $titleHTML := "" -}}
+{{- with $title -}}
+  {{- $titleHTML = printf "<div class=\"callout-title\">\n%s\n</div>\n" (. | $.Page.RenderString (dict "display" "block")) -}}
+{{- end -}}
+
+{{- $body := .Inner | $.Page.RenderString (dict "display" "block") -}}
+
+{{- $html := printf "<div class=\"callout callout-%s d-flex flex-row mt-4 mb-4 pt-4 pe-4 pb-2 ps-3\">\n%s\n<div class=\"callout-content\">\n%s<div class=\"callout-body\">\n%s\n</div>\n</div>\n</div>" $css_class $iconHTML $titleHTML $body -}}
+
+{{- if .Parent -}}
+  {{- $html = $html | replaceRE `(?:[ \t]*\r?\n){2,}` "\n" -}}
+{{- end -}}
+
+{{- $html | safeHTML -}}
