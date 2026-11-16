@@ -4,7 +4,7 @@ title_visible: false
 linkTitle: GROMACS
 icon: icon-gromacs
 toc: false
-weight: 16
+weight: 24
 description: "GROMACS est un logiciel polyvalent permettant de réaliser des simulations de dynamique moléculaire, disponible en conteneur sur DIAMOND."
 ---
 
@@ -20,7 +20,6 @@ description: "GROMACS est un logiciel polyvalent permettant de réaliser des sim
 apptainer pull gromacs.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/gromacs.sif:latest
 # ou si vous voulez accélération CUDA
 #apptainer pull gromacs-cuda.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/gromacs-cuda.sif:latest
-```
 ```
 {{< /tab >}}
 {{< tab "Docker" >}}

@@ -156,6 +156,10 @@ icon="tabler-icons/outline/settings-question" >}}
             <td class="table-cell-left"><a href="/codes/scientific-computing/ptyrad/"><i class="icon-ptyrad"></i>PtyRAD</a></td>
             <td></td>
         </tr>
+        <tr>
+            <td class="table-cell-left"><a href="/codes/scientific-computing/gromacs/"><i class="icon-gromacs"></i>GROMACS</a></td>
+            <td></td>
+        </tr>
     </tbody>
 </table>
 
@@ -192,6 +196,7 @@ icon="tabler-icons/outline/settings-question" >}}
                 <option value="option22A">NDM</option>
                 <option value="option23A">GPUMD</option>
                 <option value="option24A">PtyRAD</option>
+                <option value="option25A">GROMACS</option>
             </optgroup>
         </select>
     </div>
@@ -576,6 +581,27 @@ docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-s
 
 </div>
 
+<div id="content-option25A" class="hidden">
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull gromacs.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/gromacs.sif:latest
+# ou, pour l'accélération CUDA
+#apptainer pull gromacs-cuda.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/gromacs-cuda.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/gromacs
+# ou, pour l'accélération CUDA
+#docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/gromacs-cuda
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+</div>
+
 <div id="content-optionaA" class="hidden">
 
 ```bash
@@ -681,6 +707,7 @@ docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-s
             <option value="option22B">NDM</option>
             <option value="option23B">GPUMD</option>
             <option value="option24B">PtyRAD</option>
+            <option value="option25B">GROMACS</option>
         </optgroup>
     </select>
 </div>
@@ -1041,6 +1068,27 @@ apptainer pull ptyrad.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/
 {{< tab "Docker" >}}
 ```bash
 docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/ptyrad-cuda
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+</div>
+
+<div id="content-option25B" style="margin-top: -1rem;" class="hidden">
+
+{{< tabs "apptainer_docker" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull gromacs.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/gromacs.sif:latest
+# ou, pour l'accélération CUDA
+#apptainer pull gromacs-cuda.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/gromacs-cuda.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/gromacs
+# ou, pour l'accélération CUDA
+#docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/gromacs-cuda
 ```
 {{< /tab >}}
 {{< /tabs >}}
