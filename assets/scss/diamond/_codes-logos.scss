@@ -231,4 +231,13 @@
 
 // // END GPUMD logo END // //
 
+// // GROMACS logo // //
+
+.logo-gromacs {
+    width: 65%;
+    @include code-logo("images/codes/gromacs/gromacs-logo-light.svg", 265 / 155, "images/codes/gromacs/gromacs-logo-dark.svg");
+}
+
+// // END GROMACS logo END // //
+
 // // // END Codes pages top logos END // // //
