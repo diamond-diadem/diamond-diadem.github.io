@@ -2,7 +2,6 @@
 title: FEniCS
 linkTitle: FEniCS
 icon: icon-fenics
-toc: false
 weight: 15
 description: "FEniCS is an open-source finite element library for solving partial differential equations, available as a container on the DIAMOND platform."
 website: "https://fenicsproject.org/"

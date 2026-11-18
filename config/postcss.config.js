@@ -75,6 +75,10 @@ module.exports = {
             ],
             safelist: [
                 'active',
+                'basicLightbox', // basiclightbox.js
+                'basicLightbox--img', // basiclightbox.js
+                'basicLightbox--visible', // basiclightbox.js
+                'basicLightbox__placeholder', // basiclightbox.js
                 'btn-clipboard', // clipboards.js
                 'clipboard', // clipboards.js
                 'disabled',

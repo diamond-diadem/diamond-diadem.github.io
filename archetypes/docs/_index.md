@@ -5,6 +5,7 @@ summary: ""
 date: {{ .Date }}
 lastmod: {{ .Date }}
 draft: false
+toc: true # false hides the contents sidebar (it is also hidden on pages without headings)
 seo:
   title: "" # custom title (optional)
   description: "" # custom description (recommended)

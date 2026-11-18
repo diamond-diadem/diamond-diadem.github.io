@@ -37,7 +37,7 @@ Un dîner en centre-ville est également prévu le soir du 11 juin.
 Trams **T1** et **T4** depuis la gare Part-Dieu — arrêts : *Université Lyon 1* ou *La Doua – Gaston Berger*
 {{< /callout >}}
 
-<img src="map-campus.fr.png" alt="Plan du campus — Bât. Irène Joliot Curie (AG) et Bât. Lippmann (formation)" style="border-radius: 0.75rem; width: 100%;"/>
+{{< figure src="map-campus.fr.png" alt="Plan du campus — Bât. Irène Joliot Curie (AG) et Bât. Lippmann (formation)" >}}
 
 ## Programme
 
@@ -60,7 +60,7 @@ Trams **T1** et **T4** depuis la gare Part-Dieu — arrêts : *Université Lyon 
 **Dîner — 11 juin à partir de 19h30** — Brasserie NORD, 18 rue Neuve, 69002 Lyon
 {{< /callout >}}
 
-<img src="map-restaurant.fr.png" alt="Plan du dîner — Brasserie NORD, 18 rue Neuve, 69002 Lyon" style="border-radius: 0.75rem; width: 100%;"/>
+{{< figure src="map-restaurant.fr.png" alt="Plan du dîner — Brasserie NORD, 18 rue Neuve, 69002 Lyon" >}}
 
 ### Vendredi 12 juin
 

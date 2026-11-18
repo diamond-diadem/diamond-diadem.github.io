@@ -2,7 +2,6 @@
 title: Neper
 linkTitle: Neper
 icon: icon-neper
-toc: false
 weight: 7
 description: "Neper est un logiciel de génération et maillage de microstructures polycristallines pour la mécanique des matériaux, disponible en conteneur sur DIAMOND."
 website: "https://neper.info/"

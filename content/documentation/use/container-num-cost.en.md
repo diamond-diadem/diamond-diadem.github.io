@@ -1,6 +1,5 @@
 ---
 title: "Numerical cost of container use"
-toc: false
 weight: 5
 description: "Analysis of the numerical performance cost of using Apptainer containers and Guix packages for scientific simulations on the DIAMOND platform."
 ---
@@ -27,7 +26,4 @@ The version of the Nix channel used was `23.11`, that of Apptainer `1.2.2`. For 
 
 In addition, to account for possible performance variations due to CPU load, we replicate the computations 20 times in each case. Finally, the average times and standard deviations obtained for each environment are plotted in the graph below. In short, using Apptainer or Guix does not add any computational cost regardless of the number of processors used, demonstrating the equivalence of these software environments.
 
-<div class="text-center mt-4 mb-4">
-   <img alt="bench lammps dahu" class="bench-lammps-dahu">
-
-</div>
+{{< figure src="images/bench_lammps_dahu_light.png" alt="LAMMPS benchmark on the Dahu cluster" dark="images/bench_lammps_dahu_dark.png" >}}

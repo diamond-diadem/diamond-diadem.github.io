@@ -2,7 +2,6 @@
 title: Wannier90
 linkTitle: Wannier90
 icon: icon-wannier90
-toc: false
 weight: 13
 description: "Wannier90 calcule les fonctions de Wannier à localisation maximale pour les propriétés électroniques des matériaux, disponible sur DIAMOND."
 website: "https://wannier.org/"

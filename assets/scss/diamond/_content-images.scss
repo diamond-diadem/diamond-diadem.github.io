@@ -1,0 +1,63 @@
+// Pictures in content pages: the figure shortcode's two widths, and the
+// full-screen view Doks provides (basicLightbox, on img.lightbox).
+
+// figure shortcode. "text" fills the text column; "wide" reaches past it on
+// both sides, for diagrams and plots whose detail does not survive the
+// narrow column. It grows by what the page's column leaves free beside the
+// text, up to a cap of about one and a half times the measure. From xl the
+// text is no longer centered in its column (the contents rail takes the
+// right), so the room on its left sets the growth on both sides, and the rail
+// steps aside while the figure passes it (see article-layout). The column
+// (the space beside the documentation sidebar, or the whole container
+// elsewhere) is made a size container so the figure measures it, not the
+// viewport.
+$figure-wide-extra: 8rem; // added on each side
+$figure-wide-gutter: 1.5rem; // kept clear at the column's edge
+
+.article-column {
+    container-type: inline-size;
+}
+
+.content-figure {
+    margin: 2rem 0;
+
+    // Kept inline, not display: block, which would outrank themed-image and
+    // show both color-mode variants at once
+    img {
+        width: 100%;
+        height: auto;
+        vertical-align: top;
+    }
+
+    figcaption {
+        margin-top: 0.6rem;
+        color: var(--page-muted);
+        font-family: $font-family-ui;
+        font-size: 0.8125rem;
+        line-height: 1.45;
+    }
+}
+
+.content-figure--wide {
+    // How far the figure may grow past the text on each side: what the
+    // column leaves beside the text, less a gutter, up to the cap
+    --figure-extra: clamp(0rem, calc((100cqw - #{$content-measure}) / 2 - #{$figure-wide-gutter}), #{$figure-wide-extra});
+
+    // Drawn over the rail, which fades out of its way
+    position: relative;
+    z-index: 1;
+    width: calc(100% + 2 * var(--figure-extra));
+    margin-inline: calc(-1 * var(--figure-extra));
+}
+
+@include media-breakpoint-up(xl) {
+    .content-figure--wide {
+        --figure-extra: clamp(0rem, calc((100cqw - #{$article-width}) / 2 - #{$figure-wide-gutter}), #{$figure-wide-extra});
+    }
+}
+
+// Full-screen view (Doks' basicLightbox). Doks stacks it under the sticky
+// header, which then hides the view's top edge and its close button.
+.basicLightbox {
+    z-index: $zindex-fixed + 100;
+}

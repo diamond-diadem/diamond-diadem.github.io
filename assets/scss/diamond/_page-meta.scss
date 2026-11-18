@@ -2,28 +2,57 @@
 // date and, when translated versions exist, links to them. Sized and
 // colored down from body text so it reads as metadata, not content.
 
+// The items wrap as the width requires. Each one but the first on a row is
+// preceded by a bullet: every item carries its bullet in the space before
+// it, the row is pulled left by that space, and the line clips what falls
+// outside, so a bullet left at the start of a wrapped row is cut away
+// rather than dangling there.
+$page-meta-separator: 1.5rem;
+
 .page-meta {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    column-gap: 0.75rem;
-    row-gap: 0.5rem;
     margin: 0 0 2rem;
     font-size: 0.8125rem;
     color: var(--page-muted);
+    // Clip only the left edge: the language pills' focus ring may still
+    // spill over the other three
+    clip-path: inset(-0.5rem -0.5rem -0.5rem 0);
+}
+
+.page-meta__items {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    row-gap: 0.5rem;
+    margin-left: -$page-meta-separator;
 }
 
 .page-meta__updated,
 .page-meta__translations {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.35em;
+    position: relative;
+    margin-left: $page-meta-separator;
+
+    &::before {
+        content: "\2022";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: $page-meta-separator;
+    }
+}
+
+.page-meta__date {
+    white-space: nowrap;
 }
 
 .page-meta__icon {
     width: 0.9rem;
     height: 0.9rem;
-    flex-shrink: 0;
+    margin-right: 0.35em;
+    vertical-align: -0.15em;
     opacity: 0.75;
 }
 
@@ -38,11 +67,6 @@ h1:has(+ .page-meta) {
 // color to keep contrast, the same way .page-hero__text already does
 .page-hero .page-meta {
     color: var(--home-muted);
-}
-
-.page-meta__updated + .page-meta__translations::before {
-    content: "\2022";
-    margin-right: 0.75rem;
 }
 
 .page-meta__langs {

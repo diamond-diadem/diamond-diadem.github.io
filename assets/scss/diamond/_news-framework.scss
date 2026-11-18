@@ -14,13 +14,7 @@
     }
 }
 
-// Header and text share the reading width of documentation pages
-.news-article__header,
-.news-article__body {
-    max-width: $content-measure;
-    margin-inline: auto;
-}
-
+// Header and text sit on the article layout grid (see _article-layout.scss)
 .news-article__header {
     margin-bottom: 1.5rem;
 }

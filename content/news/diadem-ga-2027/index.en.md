@@ -40,7 +40,7 @@ seo:
 <br/>
 
 <div style="max-width: 600px; margin: 0 auto;">
-  <img src="{{< resource "save-the-date.jpg" >}}" alt="Save the date - PEPR DIADEM General Assembly 2027" style="max-width: 100%; height: auto; width: 100%;">
+  {{< figure src="save-the-date.jpg" alt="Save the date - PEPR DIADEM General Assembly 2027" >}}
 </div>
 
 </div>

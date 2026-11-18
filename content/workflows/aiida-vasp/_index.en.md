@@ -4,7 +4,6 @@ weight: 5
 summary: "Automated ab initio molecular dynamics with VASP, AiiDA and OVITO"
 description: "Overview of the WF1 and WF2 ab initio molecular dynamics workflows using VASP, AiiDA and OVITO, with their inputs and outputs."
 tablerIcon: tabler-icons/outline/atom
-toc: false
 draft: false
 cascade:
   draft: false

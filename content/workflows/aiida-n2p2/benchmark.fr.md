@@ -1,7 +1,6 @@
 ---
 title: Étude comparative des performances
 linkTitle: Benchmark
-toc: false
 description: "Étude des performances du workflow AiiDA-n2p2 : parallélisation MPI et OpenMP, taille du jeu de données et comparaison native/Apptainer."
 ---
 
@@ -17,10 +16,7 @@ Le throughput en fonction du nombre de structures est représenté dans la Figur
 
 $$ throughput=\frac{total\_time(s)}{number\_structures} $$
 
- <p align="center">
-  <img alt="n2p2" class="n2p2_throughput_vs_structures">
-</p>
-<p align="center"><i>Figure 1: Efficacité R en fonction du nombre de structures traitées. Axe des x en échelle log2  </i></p>
+{{< figure src="images/workflows/n2p2/n2p2_throughput_vs_structures.png" alt="Efficacité R en fonction du nombre de structures traitées. Axe des x en échelle log2" caption="Figure 1: Efficacité R en fonction du nombre de structures traitées. Axe des x en échelle log2" >}}
 
 Le fait que n2p2 ne soit pas implémenté avec du multi-threading suggère de mener une investigation plus détaillée en fixant nos calculs de test avec `NODES=1`, `CORES=32` et `THREADS=1`. Afin d’évaluer la tendance de l’efficacité en fonction du nombre de processus, le nombre d’époques a été fixé à 100 et le calcul d’entraînement a été exécuté avec la commande suivante :
 
@@ -32,10 +28,7 @@ où `num_process` est le nombre de processus demandés, et `num_process ∈ [1, 
 
 La Figure 2 montre l’efficacité (R) en fonction du nombre de processus. On peut observer que l’efficacité maximale est obtenue pour `mpirun -n 1`, puis diminue à mesure que le nombre de processus augmente. De plus, une comparaison entre l’installation native et l’installation Apptainer au sein d’un environnement Guix est présentée, montrant que la perte de performance liée à la version Apptainer est minime.
 
- <p align="center">
-  <img alt="n2p2" class="n2p2_benchmark_total_time_normal_installation_VS_apptainer_B">
-</p>
-<p align="center"><i>Figure 2: Efficacité R en fonction du nombre de processus demandés. Axe des x en échelle log2. </i></p>
+{{< figure src="images/workflows/n2p2/n2p2_benchmark_total_time_normal_installation_VS_apptainer_B.png" alt="Efficacité R en fonction du nombre de processus demandés. Axe des x en échelle log2." caption="Figure 2: Efficacité R en fonction du nombre de processus demandés. Axe des x en échelle log2." >}}
 
 À partir de cette étude, nous pouvons conclure que, pour les calculs n2p2, la configuration optimale est `NODES=1, CORES=8, THREADS=1`, avec 32 processus MPI. En effet, comme le montre la Figure 2, la tendance de mise à l’échelle linéaire est perdue au-delà de 8 processus ; par conséquent, le temps d’exécution total augmente de manière exponentielle. Une analyse complémentaire avec 64 processus sera réalisée pour compléter cette étude.
 

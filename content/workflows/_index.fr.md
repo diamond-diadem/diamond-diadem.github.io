@@ -4,7 +4,6 @@ linkTitle: Accueil
 aliases:
   - /workflows/home/
   - /workflows/start-here/home/
-toc: false
 sidebar_sort: title
 description: "Introduction aux gestionnaires de workflows pour la science des matériaux : automatisation, traçabilité des données et gestion des exécutions sur DIAMOND."
 ---

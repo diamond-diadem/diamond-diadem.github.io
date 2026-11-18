@@ -1,0 +1,254 @@
+// Content pages (articles, about, data, documentation, codes, workflows): the
+// page header, then the text at a readable measure with a contents rail to its
+// right, level with the first line of text rather than with the title.
+//
+// Measure: 66 characters a line is the usual optimum for running text, within
+// the 45-75 range that research and typographers agree on. In Source Serif 4
+// at 18px (about 0.48em per character on average) that is 36rem. Text stays at
+// 18px, a size that reads well on screens held at arm's length, and its
+// leading grows to 1.6, since the longer the line, the more the eye needs air
+// to find the start of the next one.
+//
+// The rail is shown from xl up, where there is room for it. The text keeps the
+// same place whether or not a page has a rail, so moving between pages does
+// not shift it.
+
+$article-rail-width: 13rem;
+$article-rail-gap: 5rem;
+$article-width: $content-measure + $article-rail-gap + $article-rail-width;
+$article-text-size: 1.125rem;
+$article-line-height: 1.6;
+$article-rail-receded: 0.3;
+
+// Reading text, wherever it sits
+.article-split__body,
+.docs-content {
+    font-size: $article-text-size;
+    line-height: $article-line-height;
+}
+
+// Only body copy takes the larger leading: headings keep their own rhythm
+.article-split__body > :is(h1, h2, h3, h4, h5, h6),
+.docs-content > :is(h1, h2, h3, h4, h5, h6) {
+    line-height: 1.25;
+}
+
+.article-layout,
+.docs-content {
+    width: 100%;
+    max-width: $content-measure;
+    margin-inline: auto;
+}
+
+.article-split {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+}
+
+.article-split__body {
+    min-width: 0;
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+@include media-breakpoint-up(xl) {
+    .article-layout,
+    .docs-content {
+        max-width: $article-width;
+    }
+
+    .article-split {
+        grid-template-columns: minmax(0, $content-measure) $article-rail-width;
+        column-gap: $article-rail-gap;
+    }
+
+    // The rail stays on the right even when the page has none, so the text
+    // does not stretch over the space it would take
+    .article-split__body {
+        grid-column: 1;
+    }
+
+    .article-rail {
+        grid-column: 2;
+    }
+}
+
+// Contents rail: follows the reader down the page
+.article-rail {
+    position: sticky;
+    top: 7rem;
+    align-self: start;
+    max-height: calc(100vh - 8rem);
+    overflow-y: auto;
+    padding-top: 0.5rem; // level with the first line of text
+    font-family: $font-family-ui;
+    scrollbar-width: thin;
+}
+
+// The theme boxes every <details> and gives it a chevron of its own
+details.toc {
+    @include plain-disclosure;
+}
+
+details.toc > .toc__toggle {
+    display: block;
+    padding: 0;
+    list-style: none;
+    cursor: pointer;
+    color: var(--page-muted);
+    transition: color 0.15s ease;
+
+    &::-webkit-details-marker {
+        display: none;
+    }
+
+    &:hover {
+        color: var(--bs-body-color);
+    }
+}
+
+.toc__label {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+
+.toc__chevron {
+    margin-left: 0.4rem;
+    vertical-align: middle;
+    transition: transform 0.18s ease;
+}
+
+.toc[open] .toc__chevron {
+    transform: rotate(180deg);
+}
+
+// Contents list: no lines; sections carry their number in the margin, the
+// way a printed contents page does, and sub-sections line up with the titles
+// above them, a step smaller. Rows are muted and darken on hover and while
+// their section is on screen (the scroll spy sets .active).
+$toc-number-width: 1.75rem;
+
+.toc__list {
+    margin-top: 0.9rem;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    li {
+        margin: 0;
+    }
+
+    a {
+        position: relative;
+        display: block;
+        padding: 0.3rem 0 0.3rem $toc-number-width;
+        color: var(--page-muted);
+        font-size: 0.8125rem;
+        line-height: 1.45;
+        text-decoration: none;
+        transition: color 0.15s ease;
+    }
+
+    a:hover,
+    a:focus-visible,
+    a.active {
+        color: var(--bs-body-color);
+    }
+
+    a.active {
+        font-weight: 600;
+    }
+
+    ul ul a {
+        font-size: 0.75rem;
+    }
+
+    // Sections are the first level of the list. A page may open with a
+    // sub-heading before its first section (code pages start with "### Retrieve
+    // the container image"), which Hugo nests in an item with no link of its
+    // own: that orphan list comes first in its item, unlike a real sub-list,
+    // which follows its section's link, so its rows read as sections too.
+    // The counter steps on the links, not the items, for the same reason.
+    #toc > ul {
+        counter-reset: toc-section;
+    }
+
+    #toc > ul > li > a,
+    #toc > ul > li > ul:first-child > li > a {
+        counter-increment: toc-section;
+        font-size: 0.8125rem;
+    }
+
+    #toc > ul > li > a::before,
+    #toc > ul > li > ul:first-child > li > a::before {
+        content: counter(toc-section, decimal-leading-zero);
+        position: absolute;
+        left: 0;
+        padding-top: 0.08rem;
+        color: var(--page-muted);
+        opacity: 0.55;
+        font-size: 0.6875rem;
+        font-variant-numeric: tabular-nums;
+        line-height: inherit;
+        transition: opacity 0.15s ease;
+    }
+
+    #toc > ul > li > a:hover::before,
+    #toc > ul > li > a.active::before,
+    #toc > ul > li > ul:first-child > li > a:hover::before,
+    #toc > ul > li > ul:first-child > li > a.active::before {
+        opacity: 1;
+    }
+}
+
+// Once the rail pins under the header it sits beside every paragraph for the
+// rest of the read, so it steps back (article-rail.js sets .is-stuck): faded
+// and grey, saying "still here" without pulling the eye off the text. Pointing
+// at it or tabbing into it brings it back. Fades out slowly, returns quickly.
+// Only where hovering exists: a touch screen has no gesture to undo the fade.
+@media (hover: hover) {
+    .article-rail {
+        transition:
+            opacity 0.2s ease,
+            filter 0.2s ease;
+    }
+
+    .article-rail.is-stuck:not(:hover, :focus-within) {
+        opacity: $article-rail-receded;
+        filter: grayscale(1);
+        transition-duration: 0.6s;
+    }
+}
+
+// A wide figure reaches across the rail's column (see content-images). While
+// one passes beside it, the rail steps fully aside (article-rail.js sets
+// .is-yielding) and returns once the figure has scrolled by. Outranks the
+// faded state above, which it replaces.
+.article-rail.is-yielding,
+.article-rail.is-yielding.is-stuck:not(:hover, :focus-within) {
+    opacity: 0;
+    visibility: hidden;
+    transition:
+        opacity 0.25s ease,
+        visibility 0s linear 0.25s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .article-rail,
+    .article-rail.is-yielding,
+    .article-rail.is-stuck:not(:hover, :focus-within),
+    .toc__toggle,
+    .toc__chevron,
+    .toc__list a,
+    .toc__list a::before {
+        transition: none;
+    }
+}

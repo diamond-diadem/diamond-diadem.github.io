@@ -1,12 +1,9 @@
 ---
 title: Codes conteneurisés
 linkTitle: Accueil
-toc: false
 aliases:
   - /codes/home/
   - /codes/start-here/home/
-cascade:
-  toc: false
 seo:
   description: Portail des codes scientifiques conteneurisés DIAMOND regroupant les images
     Apptainer, workflows HPC et logiciels de simulation de matériaux.
@@ -38,7 +35,7 @@ Il y a un petit temps d'apprentissage, et nous avons tout prévu : des tutoriels
 
 Pendant l'été 2023, nous avons demandé à la communauté des matériaux quels codes elle utilise réellement, aussi bien pour le calcul que pour la visualisation (cf. ci-dessous). Aujourd'hui, plus de $68\%$ d'entre eux sont conteneurisés et/ou packagés, couvrant l'ensemble des échelles physiques. Celui dont vous avez besoin n'y est pas ? [Dites-le-nous]({{% ref "contact" %}}) et nous étudierons son ajout.
 
-<img alt="Nuage de mots des codes cités par la communauté, classés par échelle physique de l'électronique au macroscopique, les plus cités (LAMMPS, VASP, Quantum ESPRESSO, ParaView, OVITO, VESTA) en plus grands caractères. 68,2 % de ces codes sont conteneurisés et/ou packagés." class="containerised-codes fr mt-4" style="width:100%">
+{{< figure src="images/containerised-codes/containerised-codes-light-fr-cropped-nobg.png" alt="Nuage de mots des codes cités par la communauté, classés par échelle physique de l'électronique au macroscopique, les plus cités (LAMMPS, VASP, Quantum ESPRESSO, ParaView, OVITO, VESTA) en plus grands caractères. 68,2 % de ces codes sont conteneurisés et/ou packagés." dark="images/containerised-codes/containerised-codes-dark-fr-cropped.png" width="wide" >}}
 
 ## Codes disponibles
 

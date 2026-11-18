@@ -17,11 +17,7 @@ This tutorial explains the various steps you need to take to report a bug, reque
 
 ## Preambule
 
-<div class="row-use-gitlab">
-  <div class="left-use-gitlab">
-    <img alt="use gitlab" class="use-gitlab">
-  </div>
-  <div class="right-use-gitlab">
+{{< figure src="images/ask-help/use_gitlab_dark_withborder.png" alt="use gitlab" dark="images/ask-help/use_gitlab_light_withborder.png" >}}
 
 If you encounter a problem when using the platform's tools, or if you have a specific request, you can contact the platform's engineers via this [link](https://gricad-gitlab.univ-grenoble-alpes.fr/diamond).
 
@@ -29,22 +25,19 @@ We have chosen this means of communication because user feedback and the resulti
 
 In practice, you can access the "Issues" and "Merge Requests" tabs from any repository in the project. We will only discuss the first tab here.
 
-  </div>
-</div>
-
 ## View existing issues
 
 Before submitting an issue, we recommend that you have a look at the _open_ and _resolved_ issues. Your problem or query may have already been solved or reported by another user.
 
 Simply go to the 'All' tab and use the search bar to enter keywords relating to your query.
 
-<img alt="issue tab" class="issue-tab" style="width:100%">
+{{< figure src="images/ask-help/issue_tab_dark_withborder.png" alt="issue tab" dark="images/ask-help/issue_tab_light_withborder.png" >}}
 
 ## Create an issue
 
 If you can't find what you're looking for in the open and closed issues, you can create one. The first step is to select the project to which your query relates. Clicking on "Create an issue" will take you to a page similar to the one below.
 
-<img alt="create issue" class="create-issue mb-3" style="width:100%">
+{{< figure src="images/ask-help/create_issue_dark_withborder.png" alt="create issue" dark="images/ask-help/create_issue_light_withborder.png" >}}
 
 We ask that you:
 
@@ -92,4 +85,3 @@ Next, we ask you to describe your request in as much detail as possible:
 Finally, you can provide feedback on the DIAMOND project documentation. This feedback may be positive or negative. You should use the `doc_feedback` template in the "Description" section.
 
 Then we ask you to be as specific as possible, giving examples and specifying the section of the documentation your feedback relates to.
-

@@ -4,7 +4,6 @@ weight: 4
 summary: "Molecular dynamics simulations of gas diffusion in MOFs with AiiDA and LAMMPS"
 description: "Description of the AiiDA diffusion workflow for simulating atomic diffusion via molecular dynamics to study defect mobility in materials on DIAMOND."
 tablerIcon: tabler-icons/outline/arrows-shuffle
-toc: false
 aliases:
   - /workflows/aiida-diffusion-wf/description/
 ---
@@ -22,7 +21,4 @@ The possible example cases are :
 
 2. MD of a **carbon dioxide** gas in a rigid MOF at infinite dilution. Only short-range interaction with Lennard-Jones potentials can be used in the current templates.
 
-<p align="center">
-<img alt="diffusion gif" class="diffusion-kr-in-cubtc" style="width:100%">
-</p>
-<p align="center"><i>Diffusion of a Krypton gas in CuBTC.</i></p>
+{{< figure src="images/movie_diffusion_krypton_DOTSOV_480p.gif" alt="Diffusion of a Krypton gas in CuBTC" caption="Diffusion of a Krypton gas in CuBTC." >}}

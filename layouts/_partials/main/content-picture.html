@@ -1,0 +1,68 @@
+{{- /*
+Renders a content image, adapting it to the color mode by file name alone.
+Shared by the Markdown image render hook and the figure shortcode. Every
+image opens full screen when clicked: the "lightbox" class opts it into Doks'
+basicLightbox.
+
+When a file named like the image plus a "-dark" suffix sits next to it
+(diagram.png and diagram-dark.png), both are rendered and the stylesheet
+shows the one matching the color mode, so writers reference only
+![...](diagram.png). The light file may also carry a "-light" suffix
+(diagram-light.png); either name then refers to the pair. A dark variant
+named otherwise is given explicitly with `dark`.
+
+Images are looked up in the page bundle, the current section, then the
+assets directory (see main/find-image.html). A remote or unresolved
+destination is passed through untouched; params.render_hooks.image.errorLevel
+("ignore", "warning" or "error") sets how an unresolved local one is
+reported.
+
+@param {page} page The page containing the image.
+@param {string} destination The image path or URL.
+@param {string} alt The image's text alternative.
+@param {string} [title] The image's advisory title.
+@param {string} [dark] The dark mode variant's path, when its file name does
+  not follow the "-dark" convention.
+@param {string} [position] Where the image is used, for error messages.
+*/ -}}
+
+
+{{- $url := urls.Parse .destination }}
+{{- $extension := path.Ext $url.Path }}
+{{- $stem := strings.TrimSuffix $extension $url.Path | strings.TrimSuffix "-light" }}
+
+{{- $light := "" }}
+{{- $dark := "" }}
+{{- if not $url.IsAbs }}
+  {{- $light = or
+    (partial "main/find-image.html" (dict "page" .page "path" $url.Path))
+    (partial "main/find-image.html" (dict "page" .page "path" (print $stem "-light" $extension)))
+  }}
+  {{- with .dark }}
+    {{- $dark = partial "main/find-image.html" (dict "page" $.page "path" .) }}
+    {{- if not $dark }}
+      {{- errorf "Unable to find the dark variant %q. See %s" . $.position }}
+    {{- end }}
+  {{- else }}
+    {{- $dark = partial "main/find-image.html" (dict "page" .page "path" (print $stem "-dark" $extension)) }}
+  {{- end }}
+{{- end }}
+
+{{- $image := dict "alt" .alt "title" .title }}
+{{- if and $light $dark }}
+  {{- partial "main/content-image.html" (merge $image (dict "resource" $light "class" "lightbox themed-image themed-image--light")) }}
+  {{- partial "main/content-image.html" (merge $image (dict "resource" $dark "class" "lightbox themed-image themed-image--dark")) }}
+{{- else if $light }}
+  {{- partial "main/content-image.html" (merge $image (dict "resource" $light "class" "lightbox")) }}
+{{- else }}
+  {{- if not $url.IsAbs }}
+    {{- $message := printf "Unable to find the image %q. See %s" .destination .position }}
+    {{- $errorLevel := site.Params.render_hooks.image.errorLevel | default "ignore" }}
+    {{- if eq $errorLevel "error" }}
+      {{- errorf $message }}
+    {{- else if eq $errorLevel "warning" }}
+      {{- warnf $message }}
+    {{- end }}
+  {{- end -}}
+  <img class="lightbox" src="{{ .destination }}" alt="{{ .alt }}"{{ with .title }} title="{{ . }}"{{ end }} loading="lazy" decoding="async">
+{{- end -}}

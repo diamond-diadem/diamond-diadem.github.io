@@ -21,20 +21,11 @@ apptainer run simple-adsorption-workflow.sif input
 
 Une fenêtre avec deux onglets s'ouvrent:
 
-<p align="center">
-  <img alt="saw input gui 1" class="saw-input-gui-1" style="width:50%">
-</p>
-<p align="center"><i>Cliquer sur les paramètres désirés ou les remplir manuellement</i></p>
+{{< figure src="images/workflows/saw/saw-input-gui-1.png" alt="Cliquer sur les paramètres désirés ou les remplir manuellement" caption="Cliquer sur les paramètres désirés ou les remplir manuellement" >}}
 
-<p align="center">
-  <img alt="saw input gui 3" class="saw-input-gui-3" style="width:50%">
-</p>
-<p align="center"><i>Modifier les paramètres avancés</i></p>
+{{< figure src="images/workflows/saw/saw-input-gui-3.png" alt="Modifier les paramètres avancés" caption="Modifier les paramètres avancés" >}}
 
-<p align="center">
-  <img alt="saw input gui 2" class="saw-input-gui-2" style="width:70%">
-</p>
-<p align="center"><i>Sauvegarder le fichier de paramètres</i></p>
+{{< figure src="images/workflows/saw/saw-input-gui-2.png" alt="Sauvegarder le fichier de paramètres" caption="Sauvegarder le fichier de paramètres" >}}
 
 Les **structures** proviennent de la base de données **MOFX-DB** basé sur un serveur d'accès pointant vers la base de données structurelle originale (**CoRE MOF 2019**). Ces structures sont nettoyées (sans solvant, sans désordre, etc ...) à partir de structures résolues par diffraction de rayons X provenant de la base de donnéess CSD (Crystallographic Structural Database) dont l'identifiant est une clé à 6 lettres.
 
@@ -93,17 +84,8 @@ On obtient alors deux nouveaux fichiers :
 apptainer run simple-adsorption-workflow.sif plot
 ```
 
-<p align="center">
-  <img alt="saw output gui 1" class="saw-output-gui-1" style="width:70%">
-</p>
-<p align="center"><i>Choisir le fichier avec les données des isothermes</i></p>
+{{< figure src="images/workflows/saw/saw-output-gui-1.png" alt="Choisir le fichier avec les données des isothermes" caption="Choisir le fichier avec les données des isothermes" >}}
 
-<p align="center">
- <img alt="saw output gui 2" class="saw-output-gui-2" style="width:70%">
-</p>
-<p align="center"><i></i></p>
+{{< figure src="images/workflows/saw/saw-output-gui-2.png" alt="Capture d'écran de l'interface du workflow Simple Adsorption" >}}
 
-<p align="center">
- <img alt="saw output gui 3" class="saw-output-gui-3" style="width:70%">
-</p>
-<p align="center"><i> Visualiser les isothermes en sélectionnant les paramètres désirés</i></p>
+{{< figure src="images/workflows/saw/saw-output-gui-3.png" alt="Visualiser les isothermes en sélectionnant les paramètres désirés" caption="Visualiser les isothermes en sélectionnant les paramètres désirés" >}}

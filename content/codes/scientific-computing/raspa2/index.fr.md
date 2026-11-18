@@ -2,7 +2,6 @@
 title: RASPA2
 linkTitle: RASPA2
 icon: icon-raspa2
-toc: false
 weight: 11
 description: "RASPA2 est un logiciel de simulation moléculaire pour les matériaux nanoporeux par Monte Carlo et dynamique moléculaire, disponible sur DIAMOND."
 website: "https://github.com/iRASPA/RASPA2"

@@ -3,7 +3,6 @@ title: PtyRAD
 linkTitle: PtyRAD
 description: "PtyRAD réalise des reconstructions ptychographiques par différentiation automatique avec PyTorch, disponible en conteneur sur DIAMOND."
 website: "https://github.com/chiahao3/ptyrad"
-toc: false
 weight: 23
 ---
 

@@ -114,16 +114,26 @@ The `target="_blank"` attribute ensures the link opens in a new tab. Always pair
 
 ### Images
 
-Place the image you want to add (e.g., `image.png`) either in the page bundle, next to the page's `index.*.md` files, or in the `static/images/` folder. The former is recommended for small images used by a single page, the latter for images shared across pages or large images/files.
+Place the image you want to add (e.g., `image.png`) either in the page bundle, next to the page's `index.[en|fr].md` files, or in the `static/images/` folder. The former is recommended for small images used by a single page, the latter for images shared across pages or large images/files.
 
-Embed it with the Markdown syntax, which is the same for both locations except for the path:
+To insert the image into the page, it's recommended to use the `figure` [shortcode](https://gohugo.io/content-management/shortcodes/). It can be used by placing something similar to the following in the content's `.md` file where the image must appear:
 
 ```markdown
-![Alternative text for the image](image.png)          <!-- in the page bundle -->
-![Alternative text for the image](/images/image.png)  <!-- in static/images/ -->
+{{< figure src="image.png"
+    alt="Graphical description of a workflow."
+    caption="Workflow for the ML potential."
+    width="text"
+    dark="image-dark.png" >}}
 ```
 
-The alternative text is required: describe what the image shows, so that screen reader users get the same information. Markdown images are converted to WebP, get their intrinsic `width` and `height` (so the page does not jump while they load), and are lazy-loaded. Prefer them over a raw HTML `<img>`, which gets none of this and does not adapt to the color mode.
+- `src` is the path to the image being included. If you followed the `leaf bundle` approach encouraged before, then the image will be a sibling of the `.md` file and just its name will suffice.
+- `alt` is the alternative text, and **it's required**. Describe what the image shows, so that screen reader users get the same information.
+- `caption` is the caption text to be shown below the image.
+- `width`'s default value is `text`, which sets the image width to fill the text column. `width`'s value set to `wide` makes the image extend past the text on both sides where there's room.
+- `dark` is the path/name of the image's dark-themed version.
+
+> [!Tip] Dark-themed images can be managed automatically (recommended use)
+> If Hugo finds an `image.png` file, and by it's side an `image-dark.png`, it will automatically understand the former is for the light theme, and the latter for the dark theme. Thus avoiding the use of the `dark` property of the `figure` shortcode. 
 
 ### Adapting Images for Light/Dark Themes
 

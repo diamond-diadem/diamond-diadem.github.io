@@ -1,7 +1,6 @@
 ---
 title: Installation du workflow MOFLearning AiiDA+LAMMPS
 linkTitle: Installation
-toc: false
 description: "Guide d'installation du workflow AiiDA-diffusion-wf pour les simulations de mobilité des défauts dans les matériaux, disponible sur la plateforme DIAMOND."
 ---
 
@@ -144,7 +143,4 @@ Un fichier XYZ étendu contenant la trajectoire de tous les atomes ainsi que les
 
 3. Visualisation avec Ovito
 
-<p align="center">
-<img alt="diffusion ovito gif" class="diffusion-kr-ovito" style="width:100%">
-</p>
-<p align="center"><i>Quelques étapes de la diffusion du krypton dans le MOF 0000[Ag][sra]3[ASR]1</i></p>
+{{< figure src="images/0000[Ag][sra]3[ASR]1_steps_30.gif" alt="Quelques étapes de la diffusion du krypton dans le MOF 0000[Ag][sra]3[ASR]1" caption="Quelques étapes de la diffusion du krypton dans le MOF 0000[Ag][sra]3[ASR]1" >}}

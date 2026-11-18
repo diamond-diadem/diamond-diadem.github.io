@@ -41,7 +41,7 @@ seo:
 
 <div align="center">
 
-<img src="/images/news/raman-denoising-article/denoiser-wide.png" alt="Noise2Noise denoising pipeline: noisy Raman spectrum → 1D convolutional autoencoder → denoised spectrum" class="img-denoiser-wide" style="max-width: 100%;">
+{{< figure src="images/news/raman-denoising-article/denoiser-wide.png" alt="Noise2Noise denoising pipeline: noisy Raman spectrum → 1D convolutional autoencoder → denoised spectrum" width="wide" >}}
 
 </div>
 

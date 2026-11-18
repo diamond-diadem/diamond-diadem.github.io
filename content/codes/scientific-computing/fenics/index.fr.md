@@ -2,7 +2,6 @@
 title: FEniCS
 linkTitle: FEniCS
 icon: icon-fenics
-toc: false
 weight: 15
 description: "FEniCS est une bibliothèque open-source d'éléments finis pour résoudre des équations aux dérivées partielles, disponible en conteneur sur DIAMOND."
 website: "https://fenicsproject.org/"

@@ -49,7 +49,7 @@ apptainer exec <image>.sif mpirun -np <nb_procs> <command>
 
 Ce mode consiste à utiliser **`mpirun`** (ou une commande de lancement similaire) **à l’extérieur du conteneur**, directement devant la commande `apptainer`. Cela fonctionne nativement avec Apptainer, qui a été conçu pour ça, contrairement à Docker qui nécessiterait la configuration de nombreuses options que nous ne détaillerons pas ici. En mode hybride, le lanceur MPI est fourni par le système hôte, tandis que l’application MPI s’exécute dans l’image Apptainer. Les bibliothèques MPI présentes dans le conteneur doivent rester compatibles avec l’implémentation MPI du système hôte afin de permettre la communication avec les interconnexions HPC. La différence entre ce mode hybride et le mode embarqué est illustrée dans le schéma ci-dessous :
 
-<img alt="OpenMPI Hybride" class="hybrid-ompi">
+{{< figure src="images/hybrid-ompi.png" alt="OpenMPI Hybride" >}}
 
 Avec cette approche hybride, nous recommandons d’utiliser, lorsque cela est possible, la **même version d’OpenMPI** sur le cluster que dans le conteneur. Il existe également une compatibilité entre les différentes versions mineures d’OpenMPI, mais l’utilisation de versions différentes peut entraîner des [baisses de performance](https://github.com/ckhroulev/apptainer-with-ompi/tree/main). Dans le PEPR DIADEM, les images de conteneurs sont construites sans connaissance préalable des machines sur lesquelles elles seront exécutées. Nous utilisons donc une configuration OpenMPI portable fournie par Guix, conçue pour [fonctionner sur différents environnements matériels](https://hpc.guix.info/blog/2019/12/optimized-and-portable-open-mpi-packaging/).
 

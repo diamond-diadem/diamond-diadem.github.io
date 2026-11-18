@@ -5,18 +5,21 @@ main:
   - name: Workflows
     url: en/workflows/
     weight: 20
+  - name: Data
+    url: en/data/
+    weight: 30
   - name: Documentation
     url: en/documentation/
-    weight: 30
+    weight: 50
   - name: ML notebooks
     url: en/notebooks/
     weight: 40
   - name: Contact
     url: en/contact/
-    weight: 50
+    weight: 60
   - name: About
     url: en/about/diamond/
-    weight: 60
+    weight: 70
     identifier: about-en
 
 # Footer columns: each top-level entry is a column heading, its children the links.
@@ -48,18 +51,18 @@ footer:
     pageRef: /workflows
     weight: 22
     parent: footer-products-en
-  - name: Documentation
-    pageRef: /documentation
-    weight: 23
-    parent: footer-products-en
   - name: Data
     pageRef: /data
-    weight: 24
+    weight: 23
     parent: footer-products-en
   - name: ML notebooks
     pageRef: /notebooks
-    weight: 25
+    weight: 24
     parent: footer-products-en
+  - name: Documentation
+    pageRef: /documentation
+    weight: 25
+    parent: footer-products-en    
   - name: Contact
     identifier: footer-contact-en
     weight: 30

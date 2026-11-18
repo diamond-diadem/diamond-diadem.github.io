@@ -20,9 +20,31 @@
         --code-header-link-size: 2.25rem;
     }
 
+    // Centered over the text, not over the text and the contents rail: the
+    // page column is that much wider from xl up, and the rail may be absent
+    @include media-breakpoint-up(xl) {
+        max-width: $content-measure;
+    }
+
     .page-meta {
-        justify-content: center;
         margin: 0;
+    }
+
+    // Centered rows have no edge to clip a leading bullet against, so the
+    // items go without one: their icons already set them apart
+    .page-meta__items {
+        justify-content: center;
+        column-gap: 1rem;
+        margin-left: 0;
+    }
+
+    .page-meta__updated,
+    .page-meta__translations {
+        margin-left: 0;
+
+        &::before {
+            content: none;
+        }
     }
 }
 

@@ -11,7 +11,7 @@ website: "" # official website, linked from the page header
 icon: "icon-{{ .File.ContentBaseName }}" # small icon in menus and the codes catalog
 weight: 1
 draft: true
-toc: false
+toc: true # false hides the contents sidebar (it is also hidden on pages without headings)
 ---
 
 ### Retrieve the container image

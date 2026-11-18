@@ -1,0 +1,27 @@
+{{- /*
+  The contents rail of a page, set to the right of the text on wide screens.
+  A <details>, so it folds without JavaScript. It recedes while the reader is
+  deep in the text (see js/diamond/article-rail.js) and returns when approached.
+
+  Shown on every page by default. Renders nothing when its front matter turns
+  it off with `toc: false`, or when the contents list would be empty: the list
+  is tested rather than the page's headings, since it keeps only the levels
+  set in markup.yaml (tableOfContents) and leaves out headings that shortcodes
+  such as tabs render.
+
+  @param {page} . The page being rendered.
+*/ -}}
+{{- $toc := .TableOfContents -}}
+{{- if and (ne .Params.toc false) (strings.Contains $toc "<a ") -}}
+<aside class="article-rail d-none d-xl-block" data-rail>
+  <details class="toc" open>
+    <summary class="toc__toggle">
+      <span class="toc__label">{{ i18n "contents" }}</span>
+      <svg class="toc__chevron" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+    </summary>
+    <nav class="toc__list" aria-label="{{ i18n "contents" }}">
+      {{ $toc | replaceRE "<nav id=\"TableOfContents\">" "<nav id=\"toc\">" | safeHTML }}
+    </nav>
+  </details>
+</aside>
+{{- end -}}

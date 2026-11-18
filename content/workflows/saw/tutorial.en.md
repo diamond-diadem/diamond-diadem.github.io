@@ -21,20 +21,11 @@ apptainer run simple-adsorption-workflow.sif input
 
 A window with two tabs opens:
 
-<p align="center">
-  <img alt="saw input gui 1" class="saw-input-gui-1" style="width:50%">
-</p>
-<p align="center"><i>Select the desired parameters or fill them in manually</i></p>
+{{< figure src="images/workflows/saw/saw-input-gui-1.png" alt="Select the desired parameters or fill them in manually" caption="Select the desired parameters or fill them in manually" >}}
 
-<p align="center">
-  <img alt="saw input gui 3" class="saw-input-gui-3" style="width:50%">
-</p>
-<p align="center"><i>Modify advanced parameters</i></p>
+{{< figure src="images/workflows/saw/saw-input-gui-3.png" alt="Modify advanced parameters" caption="Modify advanced parameters" >}}
 
-<p align="center">
-  <img alt="saw input gui 2" class="saw-input-gui-2" style="width:70%">
-</p>
-<p align="center"><i>Save the parameter file</i></p>
+{{< figure src="images/workflows/saw/saw-input-gui-2.png" alt="Save the parameter file" caption="Save the parameter file" >}}
 
 The **structures** come from the **MOFX-DB** database based on a server access pointing to the original structural database (**CoRE MOF 2019**). These structures are cleaned (no solvent, no disorder, etc.) from X-ray diffraction resolved structures from the CSD (Crystallographic Structural Database), where the identifier is a six-letter key.
 
@@ -93,16 +84,8 @@ This results in two new files:
 apptainer run simple-adsorption-workflow.sif plot
 ```
 
-<p align="center">
-  <img alt="saw output gui 1" class="saw-output-gui-1" style="width:70%">
-</p>
-<p align="center"><i>Select the file with the isotherm data</i></p>
+{{< figure src="images/workflows/saw/saw-output-gui-1.png" alt="Select the file with the isotherm data" caption="Select the file with the isotherm data" >}}
 
-<p align="center">
- <img alt="saw output gui 2" class="saw-output-gui-2" style="width:70%">
-</p>
+{{< figure src="images/workflows/saw/saw-output-gui-2.png" alt="Screenshot of the Simple Adsorption workflow interface" >}}
 
-<p align="center">
- <img alt="saw output gui 3" class="saw-output-gui-3" style="width:70%">
-</p>
-<p align="center"><i> Visualize the isotherms by selecting the desired parameters</i></p>
+{{< figure src="images/workflows/saw/saw-output-gui-3.png" alt="Visualize the isotherms by selecting the desired parameters" caption="Visualize the isotherms by selecting the desired parameters" >}}

@@ -1,7 +1,6 @@
 ---
 title: MOFLearning AiiDA+LAMMPS Workflow Installation
 linkTitle: Installation
-toc: false
 description: "Installation guide for the AiiDA-diffusion-wf workflow for simulating atomic diffusion and defect mobility in materials on the DIAMOND platform."
 ---
 
@@ -144,7 +143,4 @@ A extended XYZ file containing the trajectory of all atoms and the cell informat
 
 3. Visualization with Ovito
 
-<p align="center">
-<img alt="diffusion ovito gif" class="diffusion-kr-ovito" style="width:100%">
-</p>
-<p align="center"><i>A few steps of Krypton diffusion in 0000[Ag][sra]3[ASR]1 MOF</i></p>
+{{< figure src="images/0000[Ag][sra]3[ASR]1_steps_30.gif" alt="A few steps of Krypton diffusion in 0000[Ag][sra]3[ASR]1 MOF" caption="A few steps of Krypton diffusion in 0000[Ag][sra]3[ASR]1 MOF" >}}

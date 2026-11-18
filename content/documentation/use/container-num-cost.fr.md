@@ -1,6 +1,5 @@
 ---
 title: "Coût numérique de l'utilisation de conteneurs"
-toc: false
 weight: 5
 description: "Analyse du coût numérique de l'utilisation des conteneurs Apptainer et des paquets Guix pour les simulations scientifiques sur DIAMOND."
 ---
@@ -27,7 +26,4 @@ La version du canal Nix utilisé était la `23.11`, celle d'Apptainer la `1.2.2`
 
 Aussi, pour tenir compte des potentielles fluctuations de performance dues à la charge du CPU, on réplique 20 fois les calculs dans chacun des cas. Au final, les temps moyen et écarts-types obtenus pour chaque environnement sont tracés dans le graphique ci-dessous. Pour être bref, l'utilisation d'Apptainer ou Guix n'entraîne aucun surcoût calculatoire quel que soit le nombre de processeurs utilisé, montrant ainsi une équivalence entre ces environnements logiciels.
 
-<div class="text-center mt-4 mb-4">
-   <img alt="bench lammps dahu" class="bench-lammps-dahu">
-
-</div>
+{{< figure src="images/bench_lammps_dahu_light.png" alt="LAMMPS benchmark on the Dahu cluster" dark="images/bench_lammps_dahu_dark.png" >}}

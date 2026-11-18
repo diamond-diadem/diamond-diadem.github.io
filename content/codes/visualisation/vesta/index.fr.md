@@ -2,7 +2,6 @@
 title: VESTA
 linkTitle: VESTA
 icon: icon-vesta
-toc: false
 weight: 3
 description: "VESTA est un logiciel de visualisation 3D de structures cristallines et densités électroniques pour la science des matériaux, disponible sur DIAMOND."
 website: "https://jp-minerals.org/vesta/"

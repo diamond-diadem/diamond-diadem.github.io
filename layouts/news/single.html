@@ -1,8 +1,8 @@
 {{ define "main" }}
 <div class="news-page wrap container-{{ site.Params.doks.containerBreakpoint | default "lg" }} diamond-content" role="document">
-  <div class="content">
+  <div class="content article-column">
 {{ if and (eq site.Params.doks.containerBreakpoint "fluid") (or (not (in .Site.Params.mainSections .Type)) (.IsBranch)) }}<div class="container p-0">{{ end }}
-<article class="news-article">
+<article class="news-article article-layout">
   <header class="news-article__header">
     <h1>{{ .Title | safeHTML }}</h1>
     {{ partial "main/page-meta.html" . }}
@@ -23,7 +23,8 @@
       )}}
     {{ end -}}
   {{ end -}}
-  <div class="news-article__body">
+  <div class="news-article__body article-split">
+   <div class="article-split__body">
     {{ .Content }}
     {{ if .Params.tags -}}
     <div class="tag-list-single">
@@ -32,6 +33,8 @@
       {{ end -}}
     </div>
     {{ end -}}
+   </div>
+   {{ partial "main/article-rail.html" . }}
   </div>
 </article>
 {{ if and (eq site.Params.doks.containerBreakpoint "fluid") (or (not (in .Site.Params.mainSections .Type)) (.IsBranch)) }}</div>{{ end }}

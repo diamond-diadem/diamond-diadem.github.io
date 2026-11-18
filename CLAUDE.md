@@ -30,8 +30,13 @@ file covers what it does not, plus the main → dev content-porting procedure.
   `config/_default/module.yaml`). Bootstrap 5, SCSS in `assets/scss/`.
 - `npm run dev`: local server at http://localhost:1313.
 - Build check without touching `public/`:
-  `hugo --gc -d <scratch dir>`. A clean dev build prints **no WARN lines**;
-  keep it that way.
+  `PATH=$PWD/node_modules/.bin:$PATH hugo --gc -d <scratch dir>`. A clean dev
+  build prints **no WARN lines**; keep it that way.
+- The SCSS is compiled by Dart Sass (`transpiler: dartsass`), which Hugo runs
+  as a `sass` executable. It comes from the `sass-embedded` dev dependency in
+  `node_modules/.bin`: npm scripts put it on PATH, a bare `hugo` call does not
+  (add it as above). Without it Hugo silently reuses the last cached CSS, so
+  style changes seem to do nothing; add `--ignoreCache` when in doubt.
 - `npm run lint` (prettier) exists but is **not enforced**: many existing pages
   fail it. Do not reformat files with it.
 
@@ -73,6 +78,16 @@ HTML → Markdown conversion style.
   converts to WebP, sets width/height and picks a `-dark` sibling in dark mode.
   The old `<p align="center"><i>caption</i></p>` lines under images are
   dropped: the caption text goes into the alt text.
+  For a caption, or a diagram that needs more room than the text column, use
+  `{{< figure src="..." alt="..." caption="..." width="wide" >}}` (`width`
+  is `text` by default). Every content image opens full screen on click
+  (Doks' basicLightbox, through the `lightbox` class the hook adds).
+  `dark="..."` names the dark variant when its file does not follow the
+  `-dark` naming. Never an `<img>` whose picture comes from CSS
+  (`content: url(...)`, main's old way): it gets no lightbox, WebP or size.
+- **Contents sidebar**: every page with `##`–`####` headings shows it, unless
+  its front matter sets `toc: false` (only for a specific reason; the
+  archetypes write `toc: true`). Headings inside tabs are not listed.
 - Raw `<a>` links become Markdown links; emails become
   `[x@y.fr](mailto:x@y.fr)`.
 - YouTube: `{{< video-with-consent id="VIDEO_ID" >}}` with the bare ID (strip
@@ -98,8 +113,9 @@ HTML → Markdown conversion style.
   `logo-dark.<ext>`. The header (logo as h1 + official-website arrow) is built
   by `layouts/_partials/main/code-header.html` from those files and the
   `website:` front matter. **Do not put a logo or title in the Markdown.**
-- Front matter: `title`, `linkTitle`, `icon: icon-<slug>`, `toc: false`,
-  `weight`, `description`, `website`. No `title_visible`.
+- Front matter: `title`, `linkTitle`, `icon: icon-<slug>`, `weight`,
+  `description`, `website`. No `title_visible`. Main's code pages carry
+  `toc: false`: drop it when porting (see the contents sidebar below).
 - `icon-<slug>` is a class in `assets/scss/diamond/_custom-icons.scss`
   pointing to `static/images/codes/<slug>/...` (16–20 px catalog/menu icon).
 - Body structure: `### Retrieve the container image` (FR `### Récupérez

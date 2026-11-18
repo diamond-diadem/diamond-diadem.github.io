@@ -4,7 +4,6 @@ linkTitle: Home
 aliases:
   - /workflows/home/
   - /workflows/start-here/home/
-toc: false
 sidebar_sort: title
 description: "Introduction to workflow managers for materials science: automating calculations, ensuring data traceability and managing code execution on DIAMOND."
 ---

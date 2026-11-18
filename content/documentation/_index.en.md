@@ -1,6 +1,5 @@
 ---
 title: Documentation
-toc: false
 aliases:
   - /documentation/home/
 seo:

@@ -57,9 +57,6 @@ This image performs $M$ multiplications of square $N \times N$ random matrices. 
 
 To account for potential performance fluctuations due to CPU load, the calculations were replicated 10 times in each case. The final average times were $t^{Ubuntu} = 118.78$ s ($\sigma = 1.41$ s) and $t^{WSL2} = 124.15$ s ($\sigma = 0.79$ s).
 
-<div class="text-center mt-4 mb-4">
-   <img alt="WSL2 overhead" class="windows-overhead">
+{{< figure src="images/overhead-WSL2.png" alt="WSL2 overhead" >}}
 
 Given these average times and standard deviations, the additional costs associated with WSL2 appear to be significant. This can be verified by checking the compatibility of these samples, assuming identical mean times. We obtain (via the `ttest_rel` function in the Python `scipy.stats` module) a very small _p_-value ($2.5 \times 10^{-6}$), which strongly suggests that the measured times follow different distributions and that virtualisation with WSL2 therefore leads to a significant increase in execution time compared to a reference Linux distribution.
-
-</div>

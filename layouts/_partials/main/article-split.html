@@ -1,0 +1,16 @@
+{{- /*
+  The text of a page with its contents rail to the right, level with the
+  first line of text rather than with the title. Used by every content page,
+  so the text keeps the same place whether or not the page has a rail.
+
+  @param {page}          page           The page to render.
+  @param {template.HTML} [afterContent] Extra HTML rendered below the content.
+*/ -}}
+{{- $page := .page -}}
+<div class="article-split">
+  <div class="article-split__body">
+    {{ $page.Content }}
+    {{ .afterContent }}
+  </div>
+  {{ partial "main/article-rail.html" $page }}
+</div>

@@ -42,7 +42,7 @@ The database also contains links to files stored in the Data Lake.
 access, filter, and, where applicable, visualize the data available in the
 database.
 
-![Database architecture](images/data/DIAMOND_DM_Architecture.png)
+{{< figure src="images/data/DIAMOND_DM_Architecture.png" alt="Database architecture" width="wide" >}}
 
 ---
 
@@ -98,7 +98,7 @@ will be searched, which files are involved, etc.).
 3. **We build and deploy the database** from your inputs, then validate it
 with you.
 
-![User iteration](images/data/User_DB_iteration.jpeg)
+{{< figure src="images/data/User_DB_iteration.jpeg" alt="User iteration" width="wide" >}}
 
 ### 4.3 What you need to provide
 

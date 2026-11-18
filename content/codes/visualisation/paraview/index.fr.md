@@ -2,7 +2,6 @@
 title: ParaView
 linkTitle: ParaView
 icon: icon-paraview
-toc: false
 weight: 2
 description: "ParaView est un logiciel open-source de visualisation scientifique haute performance pour les données de simulation, disponible en conteneur sur DIAMOND."
 website: "https://www.paraview.org/"

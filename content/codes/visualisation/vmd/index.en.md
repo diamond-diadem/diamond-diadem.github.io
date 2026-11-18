@@ -2,7 +2,6 @@
 title: VMD
 linkTitle: VMD
 icon: icon-vmd
-toc: false
 weight: 4
 description: "VMD is a molecular dynamics visualization and analysis software for biological and materials systems, available as a container on DIAMOND."
 website: "https://www.ks.uiuc.edu/Research/vmd/"

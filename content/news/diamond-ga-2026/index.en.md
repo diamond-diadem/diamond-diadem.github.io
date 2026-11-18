@@ -37,7 +37,7 @@ A dinner in the city center is also planned for the evening of June 11.
 Trams **T1** and **T4** from Gare de Lyon Part-Dieu — stop: *Université Lyon 1* or *La Doua – Gaston Berger*
 {{< /callout >}}
 
-<img src="map-campus.en.png" alt="Campus map — Bât. Irène Joliot Curie (AG) and Bât. Lippmann (training)" style="border-radius: 0.75rem; width: 100%;"/>
+{{< figure src="map-campus.en.png" alt="Campus map — Bât. Irène Joliot Curie (AG) and Bât. Lippmann (training)" >}}
 
 ## Program
 
@@ -60,7 +60,7 @@ Trams **T1** and **T4** from Gare de Lyon Part-Dieu — stop: *Université Lyon 
 **Dinner — June 11 from 7:30 pm** — Brasserie NORD, 18 rue Neuve, 69002 Lyon
 {{< /callout >}}
 
-<img src="map-restaurant.en.png" alt="Dinner map — Brasserie NORD, 18 rue Neuve, 69002 Lyon" style="border-radius: 0.75rem; width: 100%;"/>
+{{< figure src="map-restaurant.en.png" alt="Dinner map — Brasserie NORD, 18 rue Neuve, 69002 Lyon" >}}
 
 ### Friday, June 12
 

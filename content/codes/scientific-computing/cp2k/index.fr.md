@@ -2,7 +2,6 @@
 title: CP2K
 linkTitle: CP2K
 icon: icon-cp2k
-# toc: false
 weight: 16
 description: "CP2K est un logiciel de chimie quantique et de dynamique moléculaire pour les systèmes moléculaires et périodiques, disponible en conteneur sur DIAMOND."
 website: "https://www.cp2k.org/"

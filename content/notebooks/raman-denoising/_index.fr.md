@@ -4,7 +4,6 @@ weight: 2
 summary: "Pipeline de débruitage Noise2Noise pour la spectroscopie Raman haut débit"
 description: "Description du pipeline de débruitage Noise2Noise pour la spectroscopie Raman haut débit, développé dans le cadre du projet DIAMOND."
 tablerIcon: tabler-icons/outline/wave-sine
-toc: false
 aliases:
   - /workflows/raman-denoising/
   - /workflows/raman-denoising/description/

@@ -3,7 +3,6 @@ title: ML notebooks
 linkTitle: Home
 aliases:
   - /notebooks/home/
-toc: false
 description: "DIAMOND notebooks and ML pipelines for materials science: a step-by-step training path and a Noise2Noise denoising pipeline for Raman spectroscopy."
 ---
 

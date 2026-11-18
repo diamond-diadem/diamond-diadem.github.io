@@ -2,7 +2,10 @@
 Renders an image resource placed in page content.
 
 Raster images are re-encoded to WebP with their intrinsic dimensions, so the
-browser reserves their space before they load. GIFs keep their format to
+browser reserves their space before they load. Wider than 2400px, they are
+scaled down to it: still sharp full screen in the lightbox on a high-density
+display, and a print-resolution chart (some are 8000px wide, too large for
+the WebP encoder) does not reach readers at several megabytes. GIFs keep their format to
 stay animated, and SVGs are served as is, since Hugo's image processing does
 not apply to them.
 
@@ -14,8 +17,13 @@ not apply to them.
 
 {{- $image := .resource }}
 {{- $subtype := $image.MediaType.SubType }}
+{{- $maxWidth := 2400 }}
 {{- if not (in (slice "gif" "svg") $subtype) }}
-  {{- $image = $image.Process "webp" }}
+  {{- if gt $image.Width $maxWidth }}
+    {{- $image = $image.Resize (printf "%dx webp" $maxWidth) }}
+  {{- else }}
+    {{- $image = $image.Process "webp" }}
+  {{- end }}
 {{- end -}}
 
 <img

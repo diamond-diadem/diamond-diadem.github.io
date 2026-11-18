@@ -46,7 +46,7 @@ dans le Data Lake.
 disposition pour accéder aux données de la base de données, les filtrer et, le
 cas échéant, les visualiser.
 
-![Architecture de la base de données](images/data/DIAMOND_DM_Architecture.png)
+{{< figure src="images/data/DIAMOND_DM_Architecture.png" alt="Architecture de la base de données" width="wide" >}}
 
 ---
 
@@ -105,7 +105,7 @@ concernés, etc.).
 3. **Nous construisons et déployons la base de données** à partir de vos
 éléments, puis nous la validons avec vous.
 
-![Itération avec l'utilisateur](images/data/User_DB_iteration.jpeg)
+{{< figure src="images/data/User_DB_iteration.jpeg" alt="Itération avec l'utilisateur" width="wide" >}}
 
 ### 4.3 Ce que vous devez fournir
 

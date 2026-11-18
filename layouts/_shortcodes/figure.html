@@ -1,0 +1,43 @@
+{{- /*
+Places a picture as a figure, at the width of the text or wider, with an
+optional caption. Like a Markdown image, it is converted to WebP, picks up a
+"-dark" variant, and opens full screen when clicked.
+
+Overrides Hugo's built-in figure shortcode.
+
+@param {string} src The image path: in the page bundle, or under images/.
+@param {string} alt The image's text alternative.
+@param {string} [dark] The dark mode variant, when its file name does not
+  follow the "-dark" convention (picture-dark.png next to picture.png).
+@param {string} [caption] Shown under the picture; Markdown allowed.
+@param {string} [width] "text" (default) to fill the text column, or "wide"
+  to reach past it, for diagrams whose detail needs room.
+
+@example {{< figure src="images/data/architecture.png" alt="The data platform's components" width="wide" >}}
+@example {{< figure src="diagram.png" alt="..." caption="The workflow, step by step." >}}
+*/ -}}
+{{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" -}}
+{{- $width := .Get "width" | default "text" -}}
+{{- if not $src -}}
+  {{- errorf "The figure shortcode needs a src. See %s" .Position -}}
+{{- end -}}
+{{- if not $alt -}}
+  {{- warnf "The figure shortcode needs an alt text describing the picture. See %s" .Position -}}
+{{- end -}}
+{{- if not (in (slice "text" "wide") $width) -}}
+  {{- errorf "The figure shortcode's width must be \"text\" or \"wide\", not %q. See %s" $width .Position -}}
+{{- end -}}
+<figure class="content-figure content-figure--{{ $width }}">
+  {{ partial "main/content-picture.html" (dict
+    "page" .Page
+    "destination" $src
+    "alt" $alt
+    "dark" (.Get "dark")
+    "position" .Position
+  ) }}
+  {{- with .Get "caption" }}
+  <figcaption>{{ . | $.Page.RenderString }}</figcaption>
+  {{- end }}
+</figure>
+{{- /**/ -}}

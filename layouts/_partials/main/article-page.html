@@ -1,16 +1,14 @@
 {{- /*
-  Renders a single-column reading page: the page header, then its content,
-  centered at a comfortable reading width.
+  Renders a reading page: the page header across the top, then the text at a
+  comfortable measure with the contents rail beside it.
 
   @param {page} . The page to render.
 */ -}}
 <main class="diamond-content">
-  <div class="container-fw mx-auto">
-    <div class="row justify-content-center">
-      <article class="col-lg-11 col-xl-9">
-        {{ partial "main/page-header.html" . }}
-        {{ .Content }}
-      </article>
-    </div>
+  <div class="container-fw article-column mx-auto">
+    <article class="article-layout">
+      {{ partial "main/page-header.html" . }}
+      {{ partial "main/article-split.html" (dict "page" .) }}
+    </article>
   </div>
 </main>

@@ -4,7 +4,6 @@ weight: 4
 summary: "Simulations de dynamique moléculaire de la diffusion de gaz dans les MOFs avec AiiDA et LAMMPS"
 description: "Description du workflow AiiDA de simulation de diffusion atomique par dynamique moléculaire pour l'étude de la mobilité des défauts dans les matériaux."
 tablerIcon: tabler-icons/outline/arrows-shuffle
-toc: false
 aliases:
   - /workflows/aiida-diffusion-wf/description/
 ---
@@ -22,7 +21,4 @@ Les cas d’exemple possibles sont :
 
 2. MD d’un gaz de **dioxyde de carbone** dans un MOF rigide à dilution infinie. La version actuelle du template inclut seulement les interactions à courte portée avec le potentiel de Lennard-Jones.
 
-<p align="center">
-<img alt="diffusion gif" class="diffusion-kr-in-cubtc" style="width:100%">
-</p>
-<p align="center"><i>Diffusion d’un gaz de krypton dans CuBTC.</i></p>
+{{< figure src="images/movie_diffusion_krypton_DOTSOV_480p.gif" alt="Diffusion d’un gaz de krypton dans CuBTC" caption="Diffusion d’un gaz de krypton dans CuBTC." >}}

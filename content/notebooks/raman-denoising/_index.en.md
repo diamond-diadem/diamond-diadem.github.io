@@ -4,7 +4,6 @@ weight: 2
 summary: "Noise2Noise denoising pipeline for high-throughput Raman spectroscopy"
 description: "Description of the Noise2Noise-based denoising pipeline for high-throughput Raman spectroscopy developed within the DIAMOND project."
 tablerIcon: tabler-icons/outline/wave-sine
-toc: false
 aliases:
   - /workflows/raman-denoising/
   - /workflows/raman-denoising/description/

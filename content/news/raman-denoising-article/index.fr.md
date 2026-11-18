@@ -41,7 +41,7 @@ seo:
 
 <div align="center">
 
-<img src="/images/news/raman-denoising-article/denoiser-wide.png" alt="Pipeline de débruitage Noise2Noise : spectre Raman bruité → auto-encodeur convolutif 1D → spectre débruité" class="img-denoiser-wide" style="max-width: 100%;">
+{{< figure src="images/news/raman-denoising-article/denoiser-wide.png" alt="Pipeline de débruitage Noise2Noise : spectre Raman bruité → auto-encodeur convolutif 1D → spectre débruité" width="wide" >}}
 
 </div>
 

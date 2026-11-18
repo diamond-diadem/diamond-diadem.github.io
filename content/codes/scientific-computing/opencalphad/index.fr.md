@@ -2,7 +2,6 @@
 title: OpenCalphad
 linkTitle: OpenCalphad
 icon: icon-opencalphad
-toc: false
 weight: 6
 description: "OpenCalphad est un logiciel de calcul thermodynamique basé sur la méthode CALPHAD pour les diagrammes de phase et équilibres de matériaux, sur DIAMOND."
 website: "https://www.opencalphad.com/"

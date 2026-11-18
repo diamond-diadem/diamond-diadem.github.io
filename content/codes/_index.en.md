@@ -1,12 +1,9 @@
 ---
 title: Containerised codes
 linkTitle: Home
-toc: false
 aliases:
   - /codes/home/
   - /codes/start-here/home/
-cascade:
-  toc: false
 seo:
   description: Hub for DIAMOND’s containerised scientific codes, Apptainer images, HPC
     workflow library, and materials simulation software catalog.
@@ -38,7 +35,7 @@ There is a small learning curve, and we have you covered: step-by-step tutorials
 
 In the summer of 2023, we asked the materials community which codes they actually use, for both computation and visualisation (see below). Today, over $68\%$ of them are containerised and/or packaged, covering all physical scales. Missing the one you need? [Tell us]({{% ref "contact" %}}) and we will look into adding it.
 
-<img alt="Word cloud of the codes cited by the community, arranged by physical scale from electronic to macroscopic, with the most cited ones (LAMMPS, VASP, Quantum ESPRESSO, ParaView, OVITO, VESTA) in larger type. 68.2% of these codes are containerised and/or packaged." class="containerised-codes en mt-4" style="width:100%">
+{{< figure src="images/containerised-codes/containerised-codes-light-en-cropped-nobg.png" alt="Word cloud of the codes cited by the community, arranged by physical scale from electronic to macroscopic, with the most cited ones (LAMMPS, VASP, Quantum ESPRESSO, ParaView, OVITO, VESTA) in larger type. 68.2% of these codes are containerised and/or packaged." dark="images/containerised-codes/containerised-codes-dark-en-cropped.png" width="wide" >}}
 
 ## Available codes
 

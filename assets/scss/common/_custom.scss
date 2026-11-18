@@ -14,12 +14,13 @@
 @import "diamond/site-menu";
 @import "diamond/nav-disclosure";
 @import "diamond/docs-layout";
+@import "diamond/article-layout";
+@import "diamond/content-images";
 @import "diamond/callouts";
 @import "diamond/custom-alerts";
 @import "diamond/svg-inline";
 @import "diamond/custom-cards";
 @import "diamond/cookies-consent";
-@import "diamond/responsive-use-gitlab";
 @import "diamond/search-results";
 @import "diamond/email-guard";
 @import "diamond/select-menu";
@@ -123,164 +124,6 @@ u {
 
     .content-logo {
         margin: 0;
-    }
-}
-
-// // // Gitlab tutorial // // //
-
-.use-gitlab {
-    content: url(images/ask-help/use_gitlab_dark_withborder.png);
-    width: 100%;
-}
-
-.create-issue {
-    content: url(images/ask-help/create_issue_dark_withborder.png);
-    width: 100%;
-}
-
-.issue-tab {
-    content: url(images/ask-help/issue_tab_dark_withborder.png);
-    width: 100%;
-}
-
-@include color-mode(dark) {
-    .use-gitlab {
-        content: url(images/ask-help/use_gitlab_light_withborder.png);
-    }
-    .create-issue {
-        content: url(images/ask-help/create_issue_light_withborder.png);
-    }
-    .issue-tab {
-        content: url(images/ask-help/issue_tab_light_withborder.png);
-    }
-}
-
-// // // Wordcloud and France cluster map pictures // // //
-
-.containerised-codes {
-    width: 100%;
-}
-
-.containerised-codes.fr {
-    content: url(images/containerised-codes/containerised-codes-light-fr-cropped-nobg.png);
-}
-.containerised-codes.en {
-    content: url(images/containerised-codes/containerised-codes-light-en-cropped-nobg.png);
-}
-
-.cluster-map.fr {
-    content: url(images/cluster-map/cluster-map-light-fr.png);
-}
-.cluster-map.en {
-    content: url(images/cluster-map/cluster-map-light-en.png);
-}
-
-@include color-mode(dark) {
-    .containerised-codes.fr {
-        content: url(images/containerised-codes/containerised-codes-dark-fr-cropped.png);
-    }
-    .containerised-codes.en {
-        content: url(images/containerised-codes/containerised-codes-dark-en-cropped.png);
-    }
-    .cluster-map.fr {
-        content: url(images/cluster-map/cluster-map-dark-fr.png);
-    }
-    .cluster-map.en {
-        content: url(images/cluster-map/cluster-map-dark-en.png);
-    }
-}
-
-@include media-breakpoint-up(xl) {
-    .left-about-containers {
-        width: 45%;
-        display: flex;
-    }
-
-    .cluster-map {
-        align-items: center;
-        justify-content: center;
-        object-fit: contain;
-    }
-
-    .right-about-containers {
-        width: 55%;
-        display: flex;
-        align-items: center;
-    }
-}
-
-@include media-breakpoint-only(lg) {
-    .left-about-containers {
-        width: 100%;
-        padding: 15px 0px;
-    }
-
-    .cluster-map {
-        display: block;
-        width: 65%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .right-about-containers {
-        width: 100%;
-    }
-}
-
-@include media-breakpoint-down(lg) {
-    .left-about-containers {
-        width: 100%;
-        padding: 15px 0px;
-    }
-
-    .cluster-map {
-        display: block;
-        width: 65%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .right-about-containers {
-        width: 100%;
-    }
-}
-
-@include media-breakpoint-down(md) {
-    .cluster-map {
-        width: 90%;
-    }
-}
-
-// // // Apptainer in parallel tuto picture // // //
-
-.hybrid-ompi {
-    content: url(images/hybrid-ompi-light.png);
-    width: 100%;
-}
-
-@include color-mode(dark) {
-    .hybrid-ompi {
-        content: url(images/hybrid-ompi-dark.png);
-    }
-}
-
-// // // Windows overhead plot in installation tuto picture // // //
-.windows-overhead {
-    content: url(images/overhead-WSL2-light.png);
-    width: 100%;
-}
-
-.bench-lammps-dahu {
-    content: url(images/bench_lammps_dahu_light.png);
-    width: 100%;
-}
-
-@include color-mode(dark) {
-    .windows-overhead {
-        content: url(images/overhead-WSL2-dark.png);
-    }
-    .bench-lammps-dahu {
-        content: url(images/bench_lammps_dahu_dark.png);
     }
 }
 
@@ -492,57 +335,6 @@ tr {
 
 // // // END modify _global.scss END // // //
 
-// // // Worflows >>> simple-adsorption-workflow images >>> // // //
-
-.saw-diagram-description {
-    content: url(images/workflows/saw/saw-diagram-light.png);
-    width: 100%;
-}
-
-@include color-mode(dark) {
-    .saw-diagram-description {
-        content: url(images/workflows/saw/saw-diagram-dark.png);
-    }
-}
-
-.saw-input-gui-1 {
-    content: url(images/workflows/saw/saw-input-gui-1-light.png);
-}
-
-.saw-input-gui-2 {
-    content: url(images/workflows/saw/saw-input-gui-2-light.png);
-}
-
-.saw-input-gui-3 {
-    content: url(images/workflows/saw/saw-input-gui-3-light.png);
-}
-
-.saw-output-gui-1 {
-    content: url(images/workflows/saw/saw-output-gui-1-light.png);
-}
-
-.saw-output-gui-2 {
-    content: url(images/workflows/saw/saw-output-gui-2-light.png);
-}
-
-.saw-output-gui-3 {
-    content: url(images/workflows/saw/saw-output-gui-3-light.png);
-}
-
-// // // <<< simple-adsorption-workflow images <<< // // //
-
-// // // >>> aiida-lammps diffusion images >>> // // //
-
-.diffusion-kr-in-cubtc {
-    content: url(/images/movie_diffusion_krypton_DOTSOV_480p.gif);
-}
-
-.diffusion-kr-ovito {
-    content: url(/images/0000[Ag][sra]3[ASR]1_steps_30.gif);
-}
-
-// // // <<< aiida-lammps diffusion images <<< // // //
-
 hr {
     border: 0;
     border-top: 1px solid var(--bs-border-color);
@@ -623,26 +415,6 @@ hr {
     font-family: inherit;
     font-weight: inherit;
     font-size: inherit;
-}
-
-.n2p2_benchmark_total_time_normal_installation_VS_apptainer_B {
-    content: url(/images/workflows/n2p2/n2p2_benchmark_total_time_normal_installation_VS_apptainer_B-light.png);
-    min-height: 300px;
-}
-@include color-mode(dark) {
-    .n2p2_benchmark_total_time_normal_installation_VS_apptainer_B {
-        content: url(/images/workflows/n2p2/n2p2_benchmark_total_time_normal_installation_VS_apptainer_B-dark.png);
-    }
-}
-
-.n2p2_throughput_vs_structures {
-    content: url(/images/workflows/n2p2/n2p2_throughput_vs_structures-light.png);
-    min-height: 300px;
-}
-@include color-mode(dark) {
-    .n2p2_throughput_vs_structures {
-        content: url(/images/workflows/n2p2/n2p2_throughput_vs_structures-dark.png);
-    }
 }
 
 .officials-banner {

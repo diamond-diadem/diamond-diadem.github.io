@@ -7,7 +7,6 @@ tablerIcon: tabler-icons/outline/brain
 draft: false
 cascade:
   draft: false
-toc: false
 aliases:
   - /workflows/aiida-n2p2/description/
 ---

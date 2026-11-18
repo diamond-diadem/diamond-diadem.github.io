@@ -4,13 +4,11 @@
 $docs-sidebar-min-width: 14rem;
 $docs-sidebar-max-width: 21rem;
 
-// Article: a comfortable line length whatever the screen width
+// Article: a comfortable line length whatever the screen width (the width
+// itself is set in _article-layout.scss)
 .docs-content {
     flex: 1 1 auto;
-    width: 100%;
     min-width: 0;
-    max-width: $content-measure;
-    margin-inline: auto;
 }
 
 @include media-breakpoint-up(lg) {

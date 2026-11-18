@@ -4,17 +4,13 @@ weight: 2
 summary: "Containerized program for the study of adsorption in porous materials"
 description: "Description of the simple-adsorption-workflow for grand canonical Monte Carlo simulation of gas adsorption in nanoporous materials on DIAMOND."
 tablerIcon: tabler-icons/outline/grain
-toc: false
 aliases:
   - /workflows/saw/description/
 ---
 
 This workflow measures adsorption properties in porous media.
 
-<p align="center">
-<img alt="saw diagram" class="saw-diagram-description" style="width:100%">
-</p>
-<p align="center"><i>Workflow diagram.</i></p>
+{{< figure src="images/workflows/saw/saw-diagram.png" alt="Diagram of the Simple Adsorption workflow" caption="Workflow diagram." width="wide" >}}
 
 It enables quick GCMC (Grand Canonical Monte Carlo) calculations to obtain the adsorbed quantity of a gas as a function of parameters like temperature or gas pressure. A post-processing step allows for the generation of adsorption isotherms. It also calculates porosity properties, such as the specific surface area of a porous material.
 

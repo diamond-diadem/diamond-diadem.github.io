@@ -13,6 +13,9 @@ import '@thulite/core/assets/js/core.js';
 // Import tabs.js
 import 'js/tabs.js';
 
+// Import basiclightbox.js: content images (img.lightbox) open full screen
+import 'js/basiclightbox.js';
+
 // Import custom.js
 import 'js/custom.js';
 
