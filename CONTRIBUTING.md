@@ -130,14 +130,11 @@ To insert the image into the page, it's recommended to use the `figure` [shortco
 - `alt` is the alternative text, and **it's required**. Describe what the image shows, so that screen reader users get the same information.
 - `caption` is the caption text to be shown below the image.
 - `width`'s default value is `text`, which sets the image width to fill the text column. `width`'s value set to `wide` makes the image extend past the text on both sides where there's room.
-- `dark` is the path/name of the image's dark-themed version.
+- `dark` is the path/name of the image's dark-themed version (see next section for more information).
 
-> [!Tip] Dark-themed images can be managed automatically (recommended use)
-> If Hugo finds an `image.png` file, and by it's side an `image-dark.png`, it will automatically understand the former is for the light theme, and the latter for the dark theme. Thus avoiding the use of the `dark` property of the `figure` shortcode. 
+#### Adapting Images for Light/Dark Themes
 
-### Adapting Images for Light/Dark Themes
-
-If an image is unreadable in one of the themes, add a dark-mode version next to it with the same name plus a `-dark` suffix, and the same extension:
+If an image colors were designed for a light theme, then they might be hard to see in a dark one. In these situations, it's better to have two versions of the same image: one for each theme. To specify this difference, add a dark-mode version of the image next to the original (assuming the original was made for light themes) with the same name plus a `-dark` suffix, and the same extension:
 
 ```text
 content/documentation/use/my-page/
@@ -147,13 +144,9 @@ content/documentation/use/my-page/
 └── diagram-dark.png   # shown in dark mode
 ```
 
-Nothing else changes: keep referencing the image once, by its light name, and the matching version is shown automatically when the reader switches themes:
+Nothing else changes: keep referencing the image once, by its light name, and the matching version is shown automatically when the reader switches themes.
 
-```markdown
-![Alternative text for the diagram](diagram.png)
-```
-
-The light version may also be named with a `-light` suffix (`diagram-light.png`); `![...](diagram.png)` still finds the pair. This works the same for images in `static/images/`. Only the version being displayed is downloaded.
+The light version may also be named with a `-light` suffix (`diagram-light.png`), if preferred. This works the same for images in `static/images/`. Only the version being displayed is downloaded.
 
 ### Quarantining Likely-Unused Static Files
 

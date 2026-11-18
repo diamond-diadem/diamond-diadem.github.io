@@ -17,17 +17,7 @@ sans nécessiter d'expertise en bases de données.
 Cette page explique comment utiliser cette plateforme pour déposer vos données
 et concevoir une base de données adaptée à votre projet DIADEM.
 
-## Ce que vous trouverez sur cette page
-
-1. [Architecture de la plateforme de données](#1-architecture-de-la-plateforme-de-données)
-2. [Injection de données dans la plateforme de données](#2-injection-de-données-dans-la-plateforme-de-données)
-3. [Consultation de la base de données](#3-consultation-de-la-base-de-données)
-4. [Création de votre base de données](#4-création-de-votre-base-de-données)
-5. [Contacts](#5-contacts)
-
----
-
-## 1. Architecture de la plateforme de données
+## Architecture de la plateforme de données
 
 Pour répondre aux besoins du **projet DIAMOND** et du **PEPR DIADEM**,
 une architecture logicielle commune a été proposée à l'ensemble des
@@ -48,27 +38,21 @@ cas échéant, les visualiser.
 
 {{< figure src="images/data/DIAMOND_DM_Architecture.png" alt="Architecture de la base de données" width="wide" >}}
 
----
+## Injection de données dans la plateforme de données
 
-## 2. Injection de données dans la plateforme de données
+(En construction)
 
-*(En construction)*
+## Consultation de la base de données
 
----
+(En construction)
 
-## 3. Consultation de la base de données
-
-*(En construction)*
-
----
-
-## 4. Création de votre base de données
+## Création de votre base de données
 
 Cette section explique ce que vous devez préparer, et comment nous travaillons
 ensemble, pour obtenir **votre propre base de données** hébergée sur la
 plateforme DIAMOND-DM.
 
-### 4.1 Les bases
+### Les bases
 
 Nos données reposent sur une base de données [NoSQL](https://fr.wikipedia.org/wiki/NoSQL).
 
@@ -92,9 +76,9 @@ notions clés sont utilisées tout au long du processus :
 | Attribut   | Une propriété d'un document (un *champ*), p.ex. `Manufacturer` ou `Porosity Rate`.                              | [Documents and fields](https://www.mongodb.com/docs/manual/core/document/)         |
 
 > L'architecture générale est décrite dans la
-> [Section 1](#1-architecture-de-la-plateforme-de-données).
+> [Architecture de la plateforme de données](#architecture-de-la-plateforme-de-données).
 
-### 4.2 Comment nous travaillons ensemble
+### Comment nous travaillons ensemble
 
 1. **Premier contact : une réunion en visioconférence.** Nous nous rencontrons
 en ligne pour comprendre votre projet, vos données et les besoins de votre
@@ -107,17 +91,15 @@ concernés, etc.).
 
 {{< figure src="images/data/User_DB_iteration.jpeg" alt="Itération avec l'utilisateur" width="wide" >}}
 
-### 4.3 Ce que vous devez fournir
+### Ce que vous devez fournir
 
 | # | Élément                                                              | Obligatoire ?                                        | Description                                                                                                                                  |
 |---|----------------------------------------------------------------------|------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| 1 | [**Modèle de données**](#44-le-modèle-de-données)                    | Oui                                                  | Un fichier Excel suivant un [modèle spécifique](/downloads/DB_Model_by_Project.xlsx) décrivant la « forme » de votre base de données. |
-| 2 | [**Fichiers d'exemple**](#45-fichiers-déposés-exemples-de-données)   | Oui                                                  | Un ensemble de fichiers typiques que les utilisateurs déposeront.                                                                            |
-| 3 | [**Algorithme d'extraction**](#46-algorithme-dextraction-etl)        | Uniquement si certains attributs sont extraits de fichiers | Un script montrant comment lire les fichiers déposés et calculer/extraire les données pertinentes.                                     |
+| 1 | [**Modèle de données**](#le-modèle-de-données)                    | Oui                                                  | Un fichier Excel suivant un [modèle spécifique](/downloads/DB_Model_by_Project.xlsx) décrivant la « forme » de votre base de données. |
+| 2 | [**Fichiers d'exemple**](#fichiers-déposés-exemples-de-données)   | Oui                                                  | Un ensemble de fichiers typiques que les utilisateurs déposeront.                                                                            |
+| 3 | [**Algorithme d'extraction**](#algorithme-dextraction-etl)        | Uniquement si certains attributs sont extraits de fichiers | Un script montrant comment lire les fichiers déposés et calculer/extraire les données pertinentes.                                     |
 
----
-
-### 4.4 Le modèle de données
+### Le modèle de données
 
 Le modèle de données définit **ce qui sera stocké** dans la base de données et
 la façon dont les éléments sont reliés entre eux. Il doit être rédigé dans un
@@ -148,7 +130,7 @@ Les collections de cet exemple (`BUILD`, `MACHINE`, `MATERIAL BATCH`,
 `SPECIFICATION`, `COMPUTER AIDED MANUFACTURING`, `COMPUTER AIDED DESIGN`,
 `PLATE`, `SPECIMEN`, `CHARACTERIZATION`) sont reliées entre elles comme suit :
 
-![Relations entre les collections de l'exemple](images/data/datamodel_diagram_example.png)
+{{< figure src="images/data/datamodel_diagram_example.png" alt="Relations entre les collections de l'exemple" width="wide" >}}
 
 #### Colonnes du fichier Excel
 
@@ -212,7 +194,7 @@ décrites par la colonne **Extracted from**.
 - Lorsque **Extracted from** est renseigné, l'utilisateur ne fournit **pas** la
 valeur : elle est extraite ou calculée automatiquement par le **pipeline ETL**
 (Extract, Transform, Load) à partir de la source indiquée
-(voir [4.6](#46-algorithme-dextraction-etl)).
+(voir [Algorithme d'extraction](#algorithme-dextraction-etl)).
 - Cela évite que les utilisateurs saisissent des valeurs qui peuvent être
 recalculées, et garantit l'intégrité et la traçabilité des données.
 
@@ -246,9 +228,7 @@ valeurs acceptées pour un attribut.
 > **Astuce :** pour une propriété vrai/faux, utilisez le type `boolean` sans
 > contrainte. N'utilisez pas les valeurs `0`/`1` avec un booléen.
 
----
-
-### 4.5 Fichiers déposés (exemples de données)
+### Fichiers déposés (exemples de données)
 
 Les utilisateurs qui injectent des données dans la base de données **déposeront
 des fichiers** (cahiers des charges, données machine, modèles 3D, images de
@@ -274,9 +254,7 @@ Exemples typiques (issus de l'exemple de fabrication additive) :
 | Model                      | `cube.stp`               |
 | X-ray CT-scan              | `tomography.raw`         |
 
----
-
-### 4.6 Algorithme d'extraction (ETL)
+### Algorithme d'extraction (ETL)
 
 Si certains attributs sont **extraits de fichiers déposés** (colonne
 *Extracted from*), nous avons besoin d'un **algorithme** montrant comment :
@@ -304,9 +282,7 @@ calculées à partir du contenu du fichier.
 Si votre modèle de données ne comporte aucun attribut `Extracted from`, vous
 n'avez pas besoin de cette étape.
 
----
-
-### 4.7 Liste de contrôle
+### Liste de contrôle
 
 Avant notre première réunion, il est utile d'avoir réfléchi à :
 
@@ -316,9 +292,7 @@ Avant notre première réunion, il est utile d'avoir réfléchi à :
 - Quelques fichiers d'exemple typiques.
 - Le cas échéant, un script qui lit ces fichiers et en extrait des propriétés.
 
----
-
-## 5. Contacts
+## Contacts
 
 Vous pouvez nous contacter via le formulaire général : **[Formulaire de contact]({{% ref "/contact" %}})**.
 

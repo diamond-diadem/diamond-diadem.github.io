@@ -13,7 +13,6 @@
 */}}
 
 
-{{ partial "footer/esbuild" (dict "src" "js/to-top.js" "load" "defer" "transpile" false) -}}
 {{ partial "footer/esbuild" (dict "src" "js/diamond/drawer.js" "load" "defer" "transpile" false) -}}
 {{ partial "footer/esbuild" (dict "src" "js/diamond/nav-disclosure.js" "load" "defer" "transpile" false) -}}
 {{ partial "footer/esbuild" (dict "src" "js/diamond/article-rail.js" "load" "defer" "transpile" false) -}}
@@ -36,8 +35,6 @@
 {{ end }}
 
 {{ partial "footer/esbuild" (dict "src" "js/diamond/cookies-consent.js" "transpile" false) -}}
-{{/* Track clipboard copy events in Google Analytics */}}
-{{ partial "footer/esbuild" (dict "src" "js/clipboard.js" "load" "async" "transpile" false) -}}
 
 {{ if and (eq .Type "team") (eq .Kind "section") }}
   {{ partial "footer/esbuild" (dict "src" "js/diamond/select-menu.js" "transpile" false) -}}

@@ -15,17 +15,7 @@ raw files, and manually entered data) without requiring database expertise.
 This page explains how to use this data platform to upload your data and
 design a database tailored to your DIADEM project.
 
-## What you will find on this page
-
-1. [Architecture of the data platform](#1-architecture-of-the-data-platform)
-2. [Injecting data in the data platform](#2-injecting-data-in-the-data-platform)
-3. [Consulting the database](#3-consulting-the-database)
-4. [Creating your database](#4-creating-your-database)
-5. [Contacts](#5-contacts)
-
----
-
-## 1. Architecture of the data platform
+## Architecture of the data platform
 
 To meet the requirements of the **DIAMOND Project** and the **PEPR DIADEM**,
 a common software architecture has been proposed for all partners. This
@@ -44,26 +34,20 @@ database.
 
 {{< figure src="images/data/DIAMOND_DM_Architecture.png" alt="Database architecture" width="wide" >}}
 
----
+## Injecting data in the data platform
 
-## 2. Injecting data in the data platform
+(Under construction)
 
-*(In construction)*
+## Consulting the database
 
----
+(Under construction)
 
-## 3. Consulting the database
-
-*(In construction)*
-
----
-
-## 4. Creating your database
+## Creating your database
 
 This section explains what you need to prepare, and how we work together,
 to get **your own database** hosted on the DIAMOND-DM platform.
 
-### 4.1 The basics
+### The basics
 
 Our data is stored in a [NoSQL](https://fr.wikipedia.org/wiki/NoSQL) database.
 
@@ -86,9 +70,9 @@ throughout the process:
 | Attribute  | A property of a document (a field), e.g. `Manufacturer` or `Porosity Rate`.                        | [Documents and fields](https://www.mongodb.com/docs/manual/core/document/)         |
 
 > The overall architecture is described in
-> [Section 1](#1-architecture-of-the-data-platform).
+> [Architecture of the data platform](#architecture-of-the-data-platform).
 
-### 4.2 How we work together
+### How we work together
 
 1. **First contact: a virtual meeting.** We meet online to understand your
 project, your data and the needs of your database (who will use it, what
@@ -100,17 +84,15 @@ with you.
 
 {{< figure src="images/data/User_DB_iteration.jpeg" alt="User iteration" width="wide" >}}
 
-### 4.3 What you need to provide
+### What you need to provide
 
 | # | Input                                                     | Mandatory?                                       | Description                                                                                                                            |
 |---|-----------------------------------------------------------|--------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|
-| 1 | [**Data model**](#44-the-data-model)                      | Yes                                              | An Excel file following a [specific template](/downloads/DB_Model_by_Project.xlsx) describing the "shape" of your database. |
-| 2 | [**Example data files**](#45-uploaded-files-example-data) | Yes                                              | A set of typical files that users will upload.                                                                                         |
-| 3 | [**Extraction algorithm**](#46-extraction-algorithm-etl)  | Only if some attributes are extracted from files | A script showing how to read uploaded files and compute/extract relevant data.                                                         |
+| 1 | [**Data model**](#the-data-model)                      | Yes                                              | An Excel file following a [specific template](/downloads/DB_Model_by_Project.xlsx) describing the "shape" of your database. |
+| 2 | [**Example data files**](#uploaded-files-example-data) | Yes                                              | A set of typical files that users will upload.                                                                                         |
+| 3 | [**Extraction algorithm**](#extraction-algorithm-etl)  | Only if some attributes are extracted from files | A script showing how to read uploaded files and compute/extract relevant data.                                                         |
 
----
-
-### 4.4 The data model
+### The data model
 
 The data model defines **what will be stored** in the database and how the
 pieces relate to each other. It has to be written in a specific
@@ -141,7 +123,7 @@ The collections of this example (`BUILD`, `MACHINE`, `MATERIAL BATCH`,
 `SPECIFICATION`, `COMPUTER AIDED MANUFACTURING`, `COMPUTER AIDED DESIGN`,
 `PLATE`, `SPECIMEN`, `CHARACTERIZATION`) are linked together as follows:
 
-![Relationships between the collections of the example](images/data/datamodel_diagram_example.png)
+{{< figure src="images/data/datamodel_diagram_example.png" alt="Relationships between the collections of the example" width="wide" >}}
 
 #### Columns of the Excel file
 
@@ -204,7 +186,7 @@ computed from an uploaded file. These are described with the
 - When **Extracted from** is filled in, the user does **not** provide the
 value: it is extracted or calculated automatically by the **ETL pipeline**
 (Extract, Transform, Load) from the specified source
-(see [4.6](#46-extraction-algorithm-etl)).
+(see [Extraction algorithm](#extraction-algorithm-etl)).
 - This avoids users entering values that can be recomputed, and guarantees
 data integrity and traceability.
 
@@ -236,9 +218,7 @@ accepted for an attribute.
 
 > **Tip:** for a true/false property, use the `boolean` type without constraint. Do not use `0`/`1` values with a boolean.
 
----
-
-### 4.5 Uploaded files (example data)
+### Uploaded files (example data)
 
 Users who inject data into the database will **upload files** (specifications,
 machine data, 3D models, tomography images, ...). These files are stored in
@@ -263,9 +243,7 @@ Typical examples (from the additive-manufacturing example):
 | Model                      | `cube.stp`               |
 | X-ray CT-scan              | `tomography.raw`         |
 
----
-
-### 4.6 Extraction algorithm (ETL)
+### Extraction algorithm (ETL)
 
 If some attributes are **extracted from uploaded files** (column
 *Extracted from*), we need an **algorithm** showing how to:
@@ -290,9 +268,7 @@ instrument settings, image dimensions) or computed from the file content.
 If your data model has no `Extracted from` attributes, you do not need this
 step.
 
----
-
-### 4.7 Checklist
+### Checklist
 
 Before our first meeting, it helps to have thought about:
 
@@ -302,9 +278,7 @@ Before our first meeting, it helps to have thought about:
 - A few typical example files.
 - If relevant, a script that reads those files and extracts properties.
 
----
-
-## 5. Contacts
+## Contacts
 
 You can contact us through the general form: **[Contact form]({{% ref "/contact" %}})**.
 
