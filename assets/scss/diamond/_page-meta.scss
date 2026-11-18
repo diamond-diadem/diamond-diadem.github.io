@@ -1,6 +1,7 @@
 // Page meta: a discreet line below a page title giving its last update
 // date and, when translated versions exist, links to them. Sized and
-// colored down from body text so it reads as metadata, not content.
+// colored down from body text so it reads as metadata, not content, and
+// set in the headings' typeface so it reads as part of the title block.
 
 // The items wrap as the width requires. Each one but the first on a row is
 // preceded by a bullet: every item carries its bullet in the space before
@@ -10,8 +11,12 @@
 $page-meta-separator: 1.5rem;
 
 .page-meta {
-    margin: 0 0 2rem;
-    font-size: 0.8125rem;
+    margin: 0.5rem 0 2rem;
+    font-family: $headings-font-family;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.4;
+    font-variant-numeric: tabular-nums;
     color: var(--page-muted);
     // Clip only the left edge: the language pills' focus ring may still
     // spill over the other three
@@ -26,9 +31,13 @@ $page-meta-separator: 1.5rem;
     margin-left: -$page-meta-separator;
 }
 
+// Each item is a flex row so its icon, text and pills share one center line
+// whatever the font metrics
 .page-meta__updated,
 .page-meta__translations {
     position: relative;
+    display: inline-flex;
+    align-items: center;
     margin-left: $page-meta-separator;
 
     &::before {
@@ -49,11 +58,24 @@ $page-meta-separator: 1.5rem;
 }
 
 .page-meta__icon {
-    width: 0.9rem;
-    height: 0.9rem;
-    margin-right: 0.35em;
-    vertical-align: -0.15em;
+    flex-shrink: 0;
+    width: 1em;
+    height: 1em;
+    margin-right: 0.4em;
     opacity: 0.75;
+}
+
+// Phones: the globe icon and the language pill say "other language" on
+// their own, so the label is kept for screen readers only and the whole
+// meta fits on a single line instead of wrapping into a ragged second row
+@include media-breakpoint-down(sm) {
+    .page-meta__label {
+        @include visually-hidden;
+    }
+}
+
+.page-meta__label {
+    margin-right: 0.4em;
 }
 
 // The title's own bottom margin would otherwise collapse with page-meta's
@@ -71,12 +93,13 @@ h1:has(+ .page-meta) {
 
 .page-meta__langs {
     display: inline-flex;
+    align-items: center;
     flex-wrap: wrap;
     gap: 0.35rem;
 }
 
 .page-meta__lang {
-    padding: 0.15rem 0.55rem;
+    padding: 0.1rem 0.6rem;
     border-radius: 50rem;
     background-color: rgba($body-color, 0.07);
     color: inherit;

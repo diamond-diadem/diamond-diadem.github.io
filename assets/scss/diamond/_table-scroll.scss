@@ -1,0 +1,20 @@
+// Markdown tables (layouts/_markup/render-table.html) sit in a box that
+// scrolls sideways when the table is wider than the text column, so a wide
+// table never widens the page itself. The box takes over the table's outer
+// spacing, which the theme sets on the table.
+
+.table-scroll {
+    max-width: 100%;
+    margin: 3rem 0;
+    overflow-x: auto;
+    scrollbar-width: thin;
+
+    > table {
+        margin: 0;
+    }
+
+    &:focus-visible {
+        outline: 2px solid var(--bs-link-color);
+        outline-offset: 2px;
+    }
+}

@@ -1,0 +1,87 @@
+// Heading permalinks (layouts/_markup/render-heading.html): each Markdown
+// heading of the running text gets its Markdown marks (#, ##, ###…) hanging in
+// the left margin, outside the text column, so the headings themselves stay
+// aligned with the text. The marks are pale, like the contents rail, darken
+// while the heading is pointed at and take the link color on the mark itself.
+//
+// Only headings of the running text hang their marks: inside a callout, a tab
+// or a card there is no margin to hang them in, so the link is left out.
+// Phones have no margin either (and no hover), so the marks show from md up.
+
+$heading-anchor-gap: 0.4em;
+
+.heading-anchor {
+    display: none;
+}
+
+@include media-breakpoint-up(md) {
+    .article-split__body > :is(h1, h2, h3, h4, h5, h6),
+    .page-content > :is(h1, h2, h3, h4, h5, h6),
+    .docs-content > :is(h1, h2, h3, h4, h5, h6) {
+        position: relative;
+
+        > .heading-anchor {
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 100%;
+            padding-right: $heading-anchor-gap;
+            color: var(--page-muted);
+            opacity: 0.10;
+            font-family: $font-family-ui;
+            font-weight: 400;
+            line-height: inherit;
+            white-space: nowrap;
+            text-decoration: none;
+            transition:
+                opacity 0.15s ease,
+                color 0.15s ease;
+        }
+
+        &:hover > .heading-anchor {
+            opacity: 0.7;
+        }
+
+        > .heading-anchor:hover,
+        > .heading-anchor:focus-visible {
+            opacity: 0.7;
+            color: var(--bs-link-color);
+        }
+
+        > .heading-anchor:focus-visible {
+            outline: 2px solid var(--bs-link-color);
+            outline-offset: 2px;
+            border-radius: 0.2rem;
+        }
+    }
+}
+
+.heading-anchor--h1::before {
+    content: "#";
+}
+
+.heading-anchor--h2::before {
+    content: "##";
+}
+
+.heading-anchor--h3::before {
+    content: "###";
+}
+
+.heading-anchor--h4::before {
+    content: "####";
+}
+
+.heading-anchor--h5::before {
+    content: "#####";
+}
+
+.heading-anchor--h6::before {
+    content: "######";
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .heading-anchor {
+        transition: none !important;
+    }
+}

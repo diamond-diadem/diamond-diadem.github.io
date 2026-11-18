@@ -1,0 +1,14 @@
+{{- /*
+  Markdown headings, each with a permalink to itself in the left margin: as
+  many "#" as the heading level (#, ##, ###…), the way Markdown writes it.
+  The marks are drawn by CSS (see diamond/_heading-anchors.scss), so they stay
+  out of the page text, the search index and copied text; the link carries an
+  accessible name instead.
+*/ -}}
+{{- $attrs := "" -}}
+{{- range $k, $v := .Attributes -}}
+  {{- if ne $k "id" -}}
+    {{- $attrs = printf `%s %s="%s"` $attrs $k (string $v | htmlEscape) -}}
+  {{- end -}}
+{{- end -}}
+<h{{ .Level }} id="{{ .Anchor }}"{{ $attrs | safeHTMLAttr }}><a class="heading-anchor heading-anchor--h{{ .Level }}" href="#{{ .Anchor }}" aria-label="{{ T "heading_link" }}"></a>{{ .Text }}</h{{ .Level }}>
