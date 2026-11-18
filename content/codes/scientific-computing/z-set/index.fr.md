@@ -1,9 +1,10 @@
 ---
 title: Z-set
 linkTitle: Z-set
-icon: icon-z-set
 weight: 4
 description: "Z-set est une suite logicielle d'éléments finis dédiée à la mécanique des matériaux et l'identification de lois de comportement, disponible sur DIAMOND."
+tagline: "Éléments finis pour la mécanique des matériaux"
+scale: macroscopic
 website: "http://www.zset-software.com/"
 ---
 

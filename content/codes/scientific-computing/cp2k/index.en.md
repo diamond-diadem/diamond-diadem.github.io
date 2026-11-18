@@ -1,9 +1,10 @@
 ---
 title: CP2K
 linkTitle: CP2K
-icon: icon-cp2k
 weight: 16
 description: "CP2K is a quantum chemistry and molecular dynamics software for molecular and periodic systems, available as an Apptainer container on DIAMOND."
+tagline: "Quantum chemistry and ab initio molecular dynamics"
+scale: electronic
 website: "https://www.cp2k.org/"
 ---
 

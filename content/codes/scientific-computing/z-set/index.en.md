@@ -1,9 +1,10 @@
 ---
 title: Z-set
 linkTitle: Z-set
-icon: icon-z-set
 weight: 4
 description: "Z-set is a finite element suite dedicated to materials mechanics and constitutive law identification, available as an Apptainer container on DIAMOND."
+tagline: "Finite elements for materials mechanics"
+scale: macroscopic
 website: "http://www.zset-software.com/"
 ---
 

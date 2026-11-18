@@ -1,9 +1,10 @@
 ---
 title: GROMACS
 linkTitle: GROMACS
-icon: icon-gromacs
 weight: 24
 description: "GROMACS est un logiciel polyvalent permettant de réaliser des simulations de dynamique moléculaire, disponible en conteneur sur DIAMOND."
+tagline: "Dynamique moléculaire polyvalente"
+scale: atomic
 website: "https://gromacs.org/"
 ---
 

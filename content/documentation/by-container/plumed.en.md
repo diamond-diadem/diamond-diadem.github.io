@@ -3,7 +3,7 @@ title: How to use PLUMED Apptainer image?
 linkTitle: PLUMED tutorial
 weight: 8
 category: scientific-computing
-icon: icon-plumed
+code: plumed
 description: "Tutorial on using the DIAMOND PLUMED Apptainer container: pulling the image, running calculations, and analyzing molecular dynamics trajectories."
 ---
 

@@ -1,9 +1,10 @@
 ---
 title: Zeo++
 linkTitle: Zeo++
-icon: icon-zeoplusplus
 weight: 10
 description: "Zeo++ is a software for analyzing pore structure in nanoporous materials for gas storage and adsorption applications, available on DIAMOND."
+tagline: "Pore analysis of nanoporous materials"
+scale: atomic
 website: "https://www.zeoplusplus.org/"
 ---
 

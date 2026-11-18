@@ -3,7 +3,7 @@ title: How to use Abinit container image?
 linkTitle: Abinit tutorial
 weight: 4
 category: scientific-computing
-icon: icon-abinit
+code: abinit
 description: "Tutorial on using the DIAMOND Abinit container image with Apptainer or Docker: pulling the image, running calculations, and usage examples for DFT computations."
 ---
 

@@ -1,9 +1,10 @@
 ---
 title: RASPA2
 linkTitle: RASPA2
-icon: icon-raspa2
 weight: 11
 description: "RASPA2 is a molecular simulation software for nanoporous materials using Monte Carlo and molecular dynamics, available as a container on DIAMOND."
+tagline: "Adsorption and diffusion in nanoporous materials"
+scale: atomic
 website: "https://github.com/iRASPA/RASPA2"
 ---
 

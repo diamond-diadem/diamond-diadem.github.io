@@ -5,14 +5,14 @@
 //   rather than against the CSS `top`: the two share a grid row, so the rail
 //   sits level with the text until sticky starts holding it back, and any gap
 //   means it is pinned. That keeps the offset in the stylesheet alone.
-// - .is-yielding while a wide figure, which reaches across the rail's column,
+// - .is-yielding while a wide figure or block, which reaches across the rail's column,
 //   passes beside it, so the rail steps aside instead of covering it.
 (function () {
   const rail = document.querySelector("[data-rail]");
   const body = rail && rail.parentElement.querySelector(".article-split__body");
   if (!body) return;
 
-  const wideFigures = body.querySelectorAll(".content-figure--wide");
+  const wideFigures = body.querySelectorAll(".content-figure--wide, .content-wide");
 
   // A figure only gets in the way if it actually reaches into the rail, which
   // it does not when the column leaves it little room to grow

@@ -29,7 +29,7 @@
       {{- range .featured }}
         {{- with site.GetPage . }}
       <li class="home-card home-card--cell home-code">
-        <span class="home-code__logo" aria-hidden="true"><span class="home-code__icon {{ .Params.icon }}"></span></span>
+        <span class="home-code__logo">{{ partial "main/code-icon.html" (dict "page" . "class" "home-code__icon") }}</span>
         <div class="home-code__body">
           <h3 class="home-card__title"><a class="home-card__link" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h3>
           <p class="home-code__category">{{ partial "home/code-category.html" . }}</p>

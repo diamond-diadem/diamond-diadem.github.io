@@ -1,9 +1,10 @@
 ---
 title: xTB
 linkTitle: xTB
-icon: icon-xtb
 weight: 19
 description: "xTB est un logiciel de chimie quantique semi-empirique basé sur la méthode GFN-xTB de liaisons serrées, disponible en conteneur Apptainer sur DIAMOND."
+tagline: "Chimie quantique en liaisons fortes étendues"
+scale: electronic
 website: "https://github.com/grimme-lab/xtb"
 ---
 

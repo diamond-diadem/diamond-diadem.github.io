@@ -1,9 +1,10 @@
 ---
 title: OpenDiS
 linkTitle: OpenDiS
-icon: icon-opendis
 weight: 12
 description: "OpenDiS is an open-source discrete dislocation simulation code for studying plasticity in materials, available as a container on DIAMOND."
+tagline: "Discrete dislocation dynamics"
+scale: mesoscopic
 website: "https://opendis.github.io/OpenDiS/"
 ---
 

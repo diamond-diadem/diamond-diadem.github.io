@@ -1,6 +1,8 @@
 ---
 title: n2p2
 description: "N2P2 is a machine learning software for generating neural network interatomic potentials (MLIPs), available as an Apptainer container on DIAMOND."
+tagline: "Neural network interatomic potentials"
+scale: atomic
 website: "https://github.com/CompPhysVienna/n2p2"
 ---
 

@@ -3,7 +3,7 @@ title: How to use NWChem Apptainer image
 linkTitle: NWChem tutorial
 weight: 1
 category: scientific-computing
-icon: icon-nwchem
+code: nwchem
 description: "Tutorial on using the DIAMOND NWChem Apptainer container: pulling the image and usage example for geometry optimization."
 ---
 

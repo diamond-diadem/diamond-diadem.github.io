@@ -1,9 +1,10 @@
 ---
 title: AMITEX_FFTP
 linkTitle: AMITEX_FFTP
-icon: icon-amitex-fftp
 weight: 21
 description: "AMITEX-FFTP est un code de mécanique des matériaux par FFT pour simuler les comportements mécaniques multi-échelles, disponible sur DIAMOND."
+tagline: "Mécanique des matériaux hétérogènes par FFT"
+scale: microstructure
 website: "https://amitexfftp.github.io/AMITEX/index.html"
 ---
 

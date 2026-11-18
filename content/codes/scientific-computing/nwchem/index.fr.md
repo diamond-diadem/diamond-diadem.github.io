@@ -1,9 +1,10 @@
 ---
 title: NWChem
 linkTitle: NWChem
-icon: icon-nwchem
 weight: 14
 description: "NWChem est une suite de chimie quantique haute performance pour le calcul des propriétés moléculaires et électroniques, disponible en conteneur sur DIAMOND."
+tagline: "Chimie quantique numérique"
+scale: electronic
 website: "https://www.nwchem-sw.org/"
 ---
 

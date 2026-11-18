@@ -1,9 +1,10 @@
 ---
 title: GaTewAY
 linkTitle: GaTewAY
-icon: icon-gateway
 weight: 20
 description: "GaTewAY est un outil d'analyse de trajectoires de dynamique moléculaire par théorie des graphes pour identifier des conformations, disponible sur DIAMOND."
+tagline: "Analyse par graphes de trajectoires de dynamique moléculaire"
+scale: atomic
 ---
 
 ### Récupérez l'image de conteneur

@@ -3,7 +3,7 @@ title: Comment utiliser l'image Apptainer de LAMMPS ?
 linkTitle: Tutoriel LAMMPS
 weight: 2
 category: scientific-computing
-icon: icon-lammps
+code: lammps
 description: "Tutoriel sur l'utilisation de l'image Apptainer LAMMPS de DIAMOND : récupération du conteneur, exécution et cas d'usage pour la dynamique moléculaire."
 ---
 

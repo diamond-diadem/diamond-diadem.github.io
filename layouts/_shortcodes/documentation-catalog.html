@@ -8,7 +8,8 @@
   used under codes/) instead of by child section. Each group is titled via
   the code_category_* i18n keys shared with the codes catalog. Adding a new
   tutorial under documentation/by-container therefore appears here
-  automatically, as long as it sets `category` (and `icon`, to show a logo).
+  automatically, as long as it sets `category` (and `code`, to show that
+  code's icon; see main/code-icon-files.html).
 */ -}}
 {{- $categories := slice "scientific-computing" "visualisation" -}}
 {{- range .Page.Sections }}
@@ -23,7 +24,7 @@
     <ul class="home-grid home-grid--table home-grid--codes" role="list">
         {{- range $group.ByTitle }}
       <li class="home-card home-card--cell home-code">
-        <span class="home-code__logo" aria-hidden="true"><span class="home-code__icon {{ .Params.icon }}"></span></span>
+        <span class="home-code__logo">{{ partial "main/code-icon.html" (dict "page" . "class" "home-code__icon") }}</span>
         <h4 class="home-card__title"><a class="home-card__link" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h4>
       </li>
         {{- end }}

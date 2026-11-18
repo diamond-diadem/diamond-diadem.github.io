@@ -5,10 +5,16 @@
 # Logo: drop the code's logo into this folder as logo.svg (or .png, .jpg,
 # .webp). Add logo-dark.<ext> too if the logo needs a dark-mode version.
 # Without a logo file, the title is shown in its place.
+#
+# Icon: the small, square version shown in menus and the codes catalog, as
+# icon.svg (or .png, .jpg, .webp) in this folder, plus icon-dark.<ext> if it
+# needs a dark-mode version. Tutorials of this code show it too, through
+# their `code: <this folder's name>` front matter.
 title: "{{ replace .File.ContentBaseName "-" " " | title }}"
 description: ""
+tagline: "" # a few words for the codes catalog card, such as "Plane-wave DFT suite"
+scale: "" # catalog group: electronic, atomic, mesoscopic, microstructure or macroscopic
 website: "" # official website, linked from the page header
-icon: "icon-{{ .File.ContentBaseName }}" # small icon in menus and the codes catalog
 weight: 1
 draft: true
 toc: true # false hides the contents sidebar (it is also hidden on pages without headings)

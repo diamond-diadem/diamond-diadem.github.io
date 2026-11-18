@@ -4,7 +4,6 @@
 @import "diamond/typography";
 @import "diamond/logo-diamond";
 @import "diamond/responsive-about";
-@import "diamond/custom-icons";
 @import "diamond/code-header";
 @import "diamond/themed-image";
 @import "diamond/static-video";
@@ -283,8 +282,13 @@ tr {
     }
 }
 
+// A code's icon before its name in the menu (main/code-icon.html)
 .sidebar-icon {
+    width: 1.25rem;
+    height: 1.25rem;
     margin-right: 6px;
+    object-fit: contain;
+    vertical-align: sub;
 }
 
 // // // modify _global.scss // // //

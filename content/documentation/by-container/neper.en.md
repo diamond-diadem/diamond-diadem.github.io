@@ -3,7 +3,7 @@ title: How to use Neper Apptainer image?
 linkTitle: Neper tutorial
 weight: 7
 category: scientific-computing
-icon: icon-neper
+code: neper
 description: "Tutorial on using the DIAMOND Neper Apptainer container: pulling the image and usage example on the generation and meshing of a simple tessellation."
 ---
 

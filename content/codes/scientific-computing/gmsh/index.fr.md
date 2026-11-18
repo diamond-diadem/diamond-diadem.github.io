@@ -1,9 +1,10 @@
 ---
 title: Gmsh
 linkTitle: Gmsh
-icon: icon-gmsh
 weight: 9
 description: "Gmsh est un générateur de maillage 3D open-source avec moteur CAO intégré pour les simulations par éléments finis, disponible en conteneur sur DIAMOND."
+tagline: "Mailleur 3D avec moteur de CAO"
+scale: macroscopic
 website: "https://gmsh.info/"
 ---
 

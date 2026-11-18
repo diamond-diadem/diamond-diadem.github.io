@@ -1,9 +1,10 @@
 ---
 title: PLUMED
 linkTitle: PLUMED
-icon: icon-plumed
 weight: 8
 description: "PLUMED is an open-source plugin for enhanced sampling methods in molecular dynamics simulations, available as an Apptainer container on DIAMOND."
+tagline: "Enhanced sampling for molecular dynamics"
+scale: atomic
 website: "https://www.plumed.org/"
 ---
 

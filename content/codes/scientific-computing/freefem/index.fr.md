@@ -1,9 +1,10 @@
 ---
 title: FreeFEM
 linkTitle: FreeFEM
-icon: icon-freefem
 weight: 5
 description: "FreeFEM est un logiciel d'éléments finis pour résoudre des systèmes d'équations aux dérivées partielles, disponible en conteneur sur DIAMOND."
+tagline: "Solveur d'EDP par éléments finis"
+scale: macroscopic
 website: "https://freefem.org/"
 ---
 

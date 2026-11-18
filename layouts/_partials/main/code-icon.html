@@ -1,0 +1,29 @@
+{{- /*
+  A code's small icon, for menus, catalogs and cards (see code-icon-files.html
+  for where it comes from). Renders nothing for a page without one.
+
+  Decorative: the code's name always stands next to it. Raster icons are
+  scaled down to 80 px high (twice the largest size shown) and converted to
+  WebP. A dark version is lazy-loaded, so browsers in light mode never
+  download it (see _themed-image.scss).
+
+  @param {page}   page  A code page, a tutorial, or any other page.
+  @param {string} class CSS class for each img.
+*/ -}}
+{{- $files := partialCached "main/code-icon-files.html" .page .page }}
+{{- with $files.light }}
+  {{- $images := slice (dict "resource" . "variant" (cond (isset $files "dark") "themed-image--light" "")) }}
+  {{- with $files.dark }}
+    {{- $images = $images | append (dict "resource" . "variant" "themed-image--dark") }}
+  {{- end }}
+  {{- range $images }}
+    {{- $img := .resource }}
+    {{- $raster := in (slice "png" "jpeg" "webp" "gif") $img.MediaType.SubType }}
+    {{- if and $raster (gt $img.Height 80) }}
+      {{- $img = $img.Resize "x80 webp" }}
+    {{- end -}}
+    <img class="{{ $.class }}{{ with .variant }} {{ . }}{{ end }}" src="{{ $img.RelPermalink }}" alt=""
+      {{- if $raster }} width="{{ $img.Width }}" height="{{ $img.Height }}"{{ end }}
+      {{- if eq .variant "themed-image--dark" }} loading="lazy"{{ end }}>
+  {{- end }}
+{{- end -}}

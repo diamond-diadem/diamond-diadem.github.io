@@ -83,12 +83,3 @@ $unicode-range-latin-ext: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD
     src: url("fonts/source-sans-3/source-sans-3-latin-ext-wght-italic.woff2") format("woff2-variations");
     unicode-range: $unicode-range-latin-ext;
 }
-
-/* Jost, kept for the .icon-gateway brand icon (its weight 600 renders with 700) */
-@font-face {
-    font-family: Jost;
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: url("fonts/vendor/jost/jost-v4-latin-700.woff2") format("woff2");
-}

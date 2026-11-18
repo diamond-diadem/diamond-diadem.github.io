@@ -4,6 +4,19 @@ Context for working on the DIAMOND website (PEPR DIADEM digital platform),
 published at https://diamond-diadem.github.io/. Read `CONTRIBUTING.md` too; this
 file covers what it does not, plus the main → dev content-porting procedure.
 
+## Conventions to strictly follow
+
+- Accessibility is part of "done": AA contrast (the palette comments record measured ratios — verify before adding colours), visible `:focus-visible`, skip link, `.visually-hidden` for screen-reader-only text, `prefers-reduced-motion` guards on transitions.
+- Comments explain *why*, not what. The existing code is densely commented in this style; match it.
+- No CSS-in-template `<style>` blocks and no inline `<script>` — everything goes in `site.css` / `site.js`.
+- The website MUST follow a progressive enhancement approach, providing basic features to users with basic browser CSS and JS support, and increasing features as the supported features increase in the browser used.
+- The website MUST be responsive under all circumstances. 
+- ALL MODIFICATIONS must be in agreement with the design of the website, unless specifically asked to design something on a new way.
+- Use `hugo` and `clean-code` skills.
+- Other than this "Conventions" section, which you should not touch, you must update the rest of this document as pertinent: to fix inconsistencies or legacy issues introduced all along the way with the modifications, update the website structure, record my preferences, etc.
+- On each run, optimize this file so the next time it's better at token consumption/efficiency.
+
+
 ## Branches: the most important thing to know
 
 - **`main`**: the old website. It is still in production (the GitHub Pages
@@ -31,7 +44,8 @@ file covers what it does not, plus the main → dev content-porting procedure.
 - `npm run dev`: local server at http://localhost:1313.
 - Build check without touching `public/`:
   `PATH=$PWD/node_modules/.bin:$PATH hugo --gc -d <scratch dir>`. A clean dev
-  build prints **no WARN lines**; keep it that way.
+  build prints **no WARN lines** except PtyRAD's missing icon (see Known
+  issues); keep it that way.
 - The SCSS is compiled by Dart Sass (`transpiler: dartsass`), which Hugo runs
   as a `sass` executable. It comes from the `sass-embedded` dev dependency in
   `node_modules/.bin`: npm scripts put it on PATH, a bare `hugo` call does not
@@ -109,28 +123,44 @@ HTML → Markdown conversion style.
 
 ### Codes (`content/codes/<category>/<slug>/`)
 
-- Leaf bundle: `index.en.md`, `index.fr.md`, `logo.<ext>` and optional
-  `logo-dark.<ext>`. The header (logo as h1 + official-website arrow) is built
-  by `layouts/_partials/main/code-header.html` from those files and the
-  `website:` front matter. **Do not put a logo or title in the Markdown.**
-- Front matter: `title`, `linkTitle`, `icon: icon-<slug>`, `weight`,
-  `description`, `website`. No `title_visible`. Main's code pages carry
-  `toc: false`: drop it when porting (see the contents sidebar below).
-- `icon-<slug>` is a class in `assets/scss/diamond/_custom-icons.scss`
-  pointing to `static/images/codes/<slug>/...` (16–20 px catalog/menu icon).
+- Leaf bundle: `index.en.md`, `index.fr.md`, `logo.<ext>` + optional
+  `logo-dark.<ext>` (page header, built by `main/code-header.html` with the
+  `website:` front matter), and `icon.<ext>` + optional `icon-dark.<ext>`
+  (small square icon for menus and catalogs, rendered by `main/code-icon.html`,
+  WebP-converted). Both are found by file name: no CSS, no front matter. The
+  build warns about a code without an icon. **Do not put a logo or title in
+  the Markdown.**
+- Front matter: `title`, `linkTitle`, `weight`,
+  `description`, `tagline`, `scale`, `website`. No `title_visible`.
+  `tagline` is the few words under the name in the catalog card (both
+  languages). `scale` is the catalog group, one of `electronic`, `atomic`,
+  `mesoscopic`, `microstructure`, `macroscopic` (not translated). The type
+  (computing/visualisation) is the section folder, not front matter. Main's
+  code pages carry `icon: icon-<slug>` and `toc: false`: drop both when
+  porting.
 - Body structure: `### Retrieve the container image` (FR `### Récupérez
   l'image de conteneur`) with Apptainer/Docker tabs, description paragraphs,
   then `## Tutorial` / `## <Code> documentation` / `## Examples` (FR
   `## Tutoriel` / `## Documentation <Code>` / `## Exemples`) with
   `link-card`s. Unavailable items stay as disabled cards
   (`title="Content to be added"`, `href="#bottom"`, `disabled="true"`).
-- The Codes landing page and home page list codes **automatically**
-  (`codes-catalog` shortcode, from the content tree). Nothing to wire up.
+- The Codes landing page lists codes **automatically** (`codes-catalog`
+  shortcode): one group per `scale`, alphabetical inside, opened by a scale
+  ruler; it warns at build time on a missing `tagline` or unknown `scale`.
+  Scale names and typical lengths are `code_scale_*` i18n keys. The home
+  page shows the codes listed in its `codes.featured` front matter.
+- Block-level width: `.content-wide` makes any block as wide as a
+  `width="wide"` figure (the catalog uses it; `article-rail.js` moves the
+  rail aside for it too).
+- Repeated decorative icons in templates: use `partial "home/icon.html"`,
+  not `inline-svg`, which gives every copy the same `id`.
 
 ### Tutorials (`content/documentation/by-container/`)
 
 - `<slug>.en.md`/`.fr.md` (or a bundle when it has images). Front matter adds
-  `category: scientific-computing|visualisation` and `icon: icon-<slug>`.
+  `category: scientific-computing|visualisation` and `code: <code folder>`
+  (e.g. `code: amitex-fftp`), which shows that code's icon. A tutorial about
+  something with no code page (AiiDA) is a bundle with its own `icon.<ext>`.
 - Starts with a `Prerequisites` / `Prérequis` note callout (no icon) listing
   Apptainer (our guide + official docs), the image, the input files; then a
   paragraph pointing to the Apptainer description/crash course.
@@ -173,7 +203,9 @@ HTML → Markdown conversion style.
 | `content/<lang>/codes/<cat>/<slug>.md` | `content/codes/<cat>/<slug>/index.<lang>.md` |
 | `static/images/codes/<slug>/<slug>-logo-light.svg` / `-dark.svg` | bundle `logo.svg` / `logo-dark.svg` |
 | `.logo-<slug>` in `_codes-logos.scss` | nothing (file does not exist on dev) |
-| `.icon-<slug>` in `_custom-icons.scss` + icon file | same, copy as is |
+| `.icon-<slug>` in `_custom-icons.scss` + its icon file(s) | bundle `icon.<ext>` / `icon-dark.<ext>` (no CSS; `_custom-icons.scss` is gone) |
+| tutorial `icon: icon-<slug>` | `code: <code folder>` |
+| new code page | also add `tagline` + `scale` (ask the user if unsure) |
 | `content/<lang>/codes/home/index.md` changes | nothing (catalog is automatic) |
 | `content/<lang>/documentation/faq/index.md` new `### Question` | new `content/faqs/<slug>.<lang>.md` |
 | `…/documentation/faq/#<heading-anchor>` links | `{{% ref "/faqs" %}}#<slug>` |
@@ -233,9 +265,10 @@ fast-forward merged into main.
 
 ## Known issues on dev (not fixed yet)
 
-- `.icon-gpumd` points to `images/codes/gpumd/gpumd-logo.png`, which does not
-  exist (`static/images/codes/gpumd/` is missing), so GPUMD has no catalog icon.
-- PtyRAD has no `icon` front matter or `.icon-ptyrad` class, and its FR page has
-  `## Tutorial` instead of `## Tutoriel`.
+- PtyRAD has no logo or icon (its GitHub repository has none either), so the
+  build warns for its code page and tutorial; its FR page has `## Tutorial`
+  instead of `## Tutoriel`.
+- GROMACS's icon is dark blue with no dark-mode version: barely visible in
+  dark mode. `static/images/codes/ndm/ndm-logo.png` is unused.
 - The Data page's EN text links to the French Wikipedia NoSQL article (as on
   main).

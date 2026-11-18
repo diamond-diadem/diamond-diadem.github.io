@@ -3,7 +3,7 @@ title: Comment utiliser l'image Apptainer de Quantum ESPRESSO ?
 linkTitle: Tutoriel Quantum ESPRESSO
 weight: 3
 category: scientific-computing
-icon: icon-quantum-espresso
+code: quantum-espresso
 description: "Tutoriel sur l'utilisation de l'image Apptainer Quantum ESPRESSO de DIAMOND : récupération du conteneur et exécution de calculs DFT."
 ---
 

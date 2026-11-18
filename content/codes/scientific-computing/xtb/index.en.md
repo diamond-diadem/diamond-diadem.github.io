@@ -1,9 +1,10 @@
 ---
 title: xTB
 linkTitle: xTB
-icon: icon-xtb
 weight: 19
 description: "xTB is a semi-empirical quantum chemistry code based on the extended tight-binding GFN-xTB method, available as an Apptainer container on DIAMOND."
+tagline: "Extended tight-binding quantum chemistry"
+scale: electronic
 website: "https://github.com/grimme-lab/xtb"
 ---
 

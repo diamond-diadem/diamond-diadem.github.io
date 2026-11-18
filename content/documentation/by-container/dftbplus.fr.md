@@ -3,7 +3,7 @@ title: Comment utiliser l'image Apptainer DFTB+
 linkTitle: Tutoriel DFTB+
 weight: 1
 category: scientific-computing
-icon: icon-dftbplus
+code: dftbplus
 description: "Tutoriel sur l’utilisation de l’image Apptainer DFTB+ de DIAMOND : récupération du conteneur et exemple d’optimisation de géométrie."
 ---
 

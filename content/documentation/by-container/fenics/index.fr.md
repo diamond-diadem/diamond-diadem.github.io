@@ -3,7 +3,7 @@ title: Comment utiliser l'image Apptainer FEniCS
 linkTitle: Tutoriel FEniCS
 weight: 1
 category: scientific-computing
-icon: icon-fenics
+code: fenics
 description: "Tutoriel sur l'utilisation de l'image Apptainer FEniCS de DIAMOND : récupération du conteneur et cas d'usage pour les simulations EF."
 ---
 

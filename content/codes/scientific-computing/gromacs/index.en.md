@@ -1,9 +1,10 @@
 ---
 title: GROMACS
 linkTitle: GROMACS
-icon: icon-gromacs
 weight: 24
 description: "GROMACS is a versatile package to perform molecular dynamics, available as a container on the DIAMOND platform."
+tagline: "Versatile molecular dynamics"
+scale: atomic
 website: "https://gromacs.org/"
 ---
 

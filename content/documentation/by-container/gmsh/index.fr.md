@@ -3,7 +3,7 @@ title: Comment utiliser l'image Apptainer Gmsh ?
 linkTitle: Tutoriel Gmsh
 weight: 9
 category: scientific-computing
-icon: icon-gmsh
+code: gmsh
 description: "Tutoriel sur l'utilisation de l'image Apptainer Gmsh de DIAMOND : récupération du conteneur et cas d'usage sur une géométrie simple avec CLI et GUI"
 ---
 

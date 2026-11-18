@@ -1,9 +1,10 @@
 ---
 title: Neper
 linkTitle: Neper
-icon: icon-neper
 weight: 7
 description: "Neper is a polycrystal generation and meshing software for materials mechanics simulations, available as an Apptainer container on DIAMOND."
+tagline: "Polycrystal generation and meshing"
+scale: microstructure
 website: "https://neper.info/"
 ---
 

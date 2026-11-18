@@ -1,9 +1,10 @@
 ---
 title: OpenDiS
 linkTitle: OpenDiS
-icon: icon-opendis
 weight: 12
 description: "OpenDiS est un logiciel open-source de simulation de dislocations discrètes pour l'étude de la plasticité des matériaux, disponible sur DIAMOND."
+tagline: "Dynamique des dislocations discrètes"
+scale: mesoscopic
 website: "https://opendis.github.io/OpenDiS/"
 ---
 

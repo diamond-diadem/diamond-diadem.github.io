@@ -10,7 +10,8 @@
 // steps aside while the figure passes it (see article-layout). The column
 // (the space beside the documentation sidebar, or the whole container
 // elsewhere) is made a size container so the figure measures it, not the
-// viewport.
+// viewport. Any other block that needs the room, such as the codes catalog,
+// takes the same width with the .content-wide class.
 $figure-wide-extra: 8rem; // added on each side
 $figure-wide-gutter: 1.5rem; // kept clear at the column's edge
 
@@ -38,7 +39,8 @@ $figure-wide-gutter: 1.5rem; // kept clear at the column's edge
     }
 }
 
-.content-figure--wide {
+.content-figure--wide,
+.content-wide {
     // How far the figure may grow past the text on each side: what the
     // column leaves beside the text, less a gutter, up to the cap
     --figure-extra: clamp(0rem, calc((100cqw - #{$content-measure}) / 2 - #{$figure-wide-gutter}), #{$figure-wide-extra});
@@ -51,7 +53,8 @@ $figure-wide-gutter: 1.5rem; // kept clear at the column's edge
 }
 
 @include media-breakpoint-up(xl) {
-    .content-figure--wide {
+    .content-figure--wide,
+    .content-wide {
         --figure-extra: clamp(0rem, calc((100cqw - #{$article-width}) / 2 - #{$figure-wide-gutter}), #{$figure-wide-extra});
     }
 }

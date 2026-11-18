@@ -3,7 +3,7 @@ title: How to use OpenCalphad Apptainer image?
 linkTitle: OpenCalphad tutorial
 weight: 6
 category: scientific-computing
-icon: icon-opencalphad
+code: opencalphad
 description: "Tutorial on using the DIAMOND OpenCalphad Apptainer container: pulling the image, running calculations, and usage examples for phase diagrams computation."
 ---
 

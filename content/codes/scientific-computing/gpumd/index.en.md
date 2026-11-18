@@ -1,9 +1,10 @@
 ---
 title: GPUMD
 linkTitle: GPUMD
-icon: icon-gpumd
 weight: 23
 description: "GPUMD is a generic molecular dynamics code fully implemented to run on graphics processing units (GPUs), available as a container on DIAMOND."
+tagline: "Molecular dynamics on GPUs"
+scale: atomic
 website: "https://gpumd.org/dev/"
 ---
 

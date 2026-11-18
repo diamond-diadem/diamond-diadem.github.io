@@ -1,9 +1,10 @@
 ---
 title: PLUMED
 linkTitle: PLUMED
-icon: icon-plumed
 weight: 8
 description: "PLUMED est un plugin open-source pour les méthodes d'échantillonnage amélioré en dynamique moléculaire, disponible en conteneur Apptainer sur DIAMOND."
+tagline: "Échantillonnage amélioré en dynamique moléculaire"
+scale: atomic
 website: "https://www.plumed.org/"
 ---
 

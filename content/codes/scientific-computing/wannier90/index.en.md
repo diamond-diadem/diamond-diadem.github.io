@@ -1,9 +1,10 @@
 ---
 title: Wannier90
 linkTitle: Wannier90
-icon: icon-wannier90
 weight: 13
 description: "Wannier90 computes maximally localized Wannier functions to analyze the electronic properties of materials, available as a container on DIAMOND."
+tagline: "Maximally localised Wannier functions"
+scale: electronic
 website: "https://wannier.org/"
 ---
 

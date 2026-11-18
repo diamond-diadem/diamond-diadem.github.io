@@ -35,7 +35,7 @@
   <li class="sidebar-nav__item">
     <a class="sidebar-nav__link sidebar-nav__link--{{ $level }}" href="{{ $page.Permalink }}"{{ if $active }} aria-current="page"{{ end }}>
       {{- with $page.Params.tablerIcon }}{{ partial "inline-svg" (dict "src" . "class" "svg-inline-sidebar") }}{{ end -}}
-      {{- with $page.Params.Icon }}<i class="sidebar-icon {{ . }}" aria-hidden="true"></i>{{ end -}}
+      {{- partial "main/code-icon.html" (dict "page" $page "class" "sidebar-icon") -}}
       {{ $label -}}
     </a>
   </li>

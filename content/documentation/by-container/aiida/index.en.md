@@ -2,7 +2,6 @@
 title: AiiDA tutorial
 weight: 1
 category: scientific-computing
-icon: icon-aiida
 description: "Tutorial on using AiiDA via the DIAMOND Apptainer container to automate materials calculation workflows with automated provenance tracking."
 ---
 

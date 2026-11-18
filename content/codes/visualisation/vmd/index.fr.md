@@ -1,9 +1,10 @@
 ---
 title: VMD
 linkTitle: VMD
-icon: icon-vmd
 weight: 4
 description: "VMD est un logiciel de visualisation et d'analyse de dynamique moléculaire pour les systèmes biologiques et matériaux, disponible en conteneur sur DIAMOND."
+tagline: "Visualisation et analyse moléculaires"
+scale: atomic
 website: "https://www.ks.uiuc.edu/Research/vmd/"
 ---
 

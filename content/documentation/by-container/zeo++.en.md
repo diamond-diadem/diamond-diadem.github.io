@@ -3,7 +3,7 @@ title: How to use Zeo++ Apptainer image?
 linkTitle: Zeo++ tutorial
 weight: 8
 category: scientific-computing
-icon: icon-zeoplusplus
+code: zeo++
 description: "Tutorial on using the DIAMOND Zeo++ Apptainer container: pulling the image and usage examples for pore diameters computation."
 ---
 

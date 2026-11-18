@@ -39,6 +39,23 @@ section_description: Description
 code_category_scientific-computing: Scientific computing
 code_category_visualisation: Visualisation
 
+### Codes catalog ###
+# Physical scales, smallest first, with the typical length each one models
+code_scales: Physical scales
+code_scale_electronic: Electronic
+code_scale_electronic_size: "≈ 0.1–1 nm"
+code_scale_atomic: Atomic
+code_scale_atomic_size: "≈ 1–100 nm"
+code_scale_mesoscopic: Mesoscopic
+code_scale_mesoscopic_size: "≈ 0.1–10 µm"
+code_scale_microstructure: Microstructure
+code_scale_microstructure_size: "≈ 10 µm–1 mm"
+code_scale_macroscopic: Macroscopic
+code_scale_macroscopic_size: "≥ 1 mm"
+codes_count:
+  one: "{{ .Count }} code"
+  other: "{{ .Count }} codes"
+
 ### FAQ page ###
 faq_questions: Questions
 faq_question_link: "Link to this question: {{ .Title }}"

@@ -1,0 +1,42 @@
+{{- /*
+  Finds a page's small icon, by file name in a page bundle like the header
+  logo (see code-header.html): icon.<ext>, plus icon-dark.<ext> when the
+  icon needs another version in dark mode.
+
+  A code page holds its own icon. A tutorial shows the icon of the code its
+  `code` front matter names (the code's folder name, such as "lammps"), or
+  its own when it is a bundle about something that has no code page, such
+  as AiiDA. Codes and tutorials without an icon are reported at build time.
+
+  Called through partialCached, once per page.
+
+  @param {page} . Any page; most have no icon and return an empty dict.
+  @returns {dict} "light" and, when there is one, "dark" image resources.
+*/ -}}
+{{- $source := . }}
+{{- with .Params.code }}
+  {{- $slug := . }}
+  {{- $source = false }}
+  {{- range where site.RegularPages "Section" "codes" }}
+    {{- if eq .File.ContentBaseName $slug }}{{ $source = . }}{{ end }}
+  {{- end }}
+  {{- if not $source }}
+    {{- warnf "%s: code %q not found, expected a folder content/codes/<category>/%s" $.File.Path $slug $slug }}
+  {{- end }}
+{{- end }}
+
+{{- $files := dict }}
+{{- with $source }}
+  {{- with .Resources.GetMatch "icon.*" }}{{ $files = merge $files (dict "light" .) }}{{ end }}
+  {{- with .Resources.GetMatch "icon-dark.*" }}{{ $files = merge $files (dict "dark" .) }}{{ end }}
+{{- end }}
+
+{{- $needsIcon := and .IsPage (or (eq .Section "codes") (eq .Params.category "scientific-computing" "visualisation")) }}
+{{- if and $needsIcon (not $files.light) }}
+  {{- warnf "%s has no icon: add icon.<ext> to its folder (or, for a tutorial, `code: <code folder>` to its front matter)" .File.Path }}
+{{- end }}
+{{- if and $files.dark (not $files.light) }}
+  {{- warnf "%s has an icon-dark file but no icon file for light mode" .File.Path }}
+{{- end }}
+
+{{- return $files }}

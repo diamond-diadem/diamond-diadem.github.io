@@ -3,7 +3,7 @@ title: How to use Gmsh Apptainer image?
 linkTitle: Gmsh tutorial
 weight: 9
 category: scientific-computing
-icon: icon-gmsh
+code: gmsh
 description: "Tutorial on using the DIAMOND Gmsh Apptainer container: pulling the image and usage example on a simple geometry with both CLI and GUI."
 ---
 

@@ -1,9 +1,10 @@
 ---
 title: NDM
 linkTitle: NDM
-icon: icon-ndm
 weight: 22
 description: "NDM (Notre Dynamique Moléculaire) est un code de dynamique moléculaire développé au CEA Saclay, disponible en conteneur Apptainer sur DIAMOND."
+tagline: "Dynamique moléculaire du CEA Saclay"
+scale: atomic
 website: "https://github.com/jpcroc/NDM"
 ---
 

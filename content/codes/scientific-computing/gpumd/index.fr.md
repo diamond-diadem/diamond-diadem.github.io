@@ -1,9 +1,10 @@
 ---
 title: GPUMD
 linkTitle: GPUMD
-icon: icon-gpumd
 weight: 23
 description: "GPUMD est un code de dynamique moléculaire générique entièrement implémenté pour les processeurs graphiques (GPU), disponible sur DIAMOND."
+tagline: "Dynamique moléculaire sur GPU"
+scale: atomic
 website: "https://gpumd.org/dev/"
 ---
 

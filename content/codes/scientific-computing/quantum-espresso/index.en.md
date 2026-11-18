@@ -1,9 +1,10 @@
 ---
 title: Quantum ESPRESSO
 linkTitle: Quantum ESPRESSO
-icon: icon-quantum-espresso
 weight: 2
 description: "Quantum ESPRESSO is an electronic structure calculation suite based on DFT and pseudopotentials, available as an Apptainer container on DIAMOND."
+tagline: "Plane-wave DFT suite"
+scale: electronic
 website: "https://www.quantum-espresso.org/"
 ---
 

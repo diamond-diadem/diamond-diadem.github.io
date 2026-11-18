@@ -3,7 +3,7 @@ title: Comment utiliser l'image Apptainer Wannier90 ?
 linkTitle: Tutoriel Wannier90
 weight: 1
 category: scientific-computing
-icon: icon-wannier90
+code: wannier90
 description: "Tutoriel sur l’utilisation de l’image Apptainer Wannier90 de DIAMOND : récupération du conteneur et calcul de fonctions de Wannier localisées."
 ---
 

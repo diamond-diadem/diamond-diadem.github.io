@@ -1,9 +1,10 @@
 ---
 title: VESTA
 linkTitle: VESTA
-icon: icon-vesta
 weight: 3
 description: "VESTA is a 3D visualization software for crystal structures and electronic densities in materials science, available as a container on DIAMOND."
+tagline: "Crystal structures and electron densities"
+scale: electronic
 website: "https://jp-minerals.org/vesta/"
 ---
 

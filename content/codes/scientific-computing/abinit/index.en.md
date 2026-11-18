@@ -1,9 +1,10 @@
 ---
 title: Abinit
 linkTitle: Abinit
-icon: icon-abinit
 weight: 3
 description: "Abinit is a DFT and TDDFT code for computing electronic structure properties of materials, available as an Apptainer container on DIAMOND."
+tagline: "DFT and TDDFT electronic structure"
+scale: electronic
 website: "https://www.abinit.org/"
 ---
 

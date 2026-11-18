@@ -3,7 +3,7 @@ title: How to use the Ovito Apptainer image ?
 linkTitle: Ovito tutorial
 weight: 15
 category: visualisation
-icon: icon-ovito
+code: ovito
 description: "Tutorial on using the DIAMOND OVITO Apptainer container for visualizing and analyzing atomistic simulation data, including container usage examples."
 ---
 

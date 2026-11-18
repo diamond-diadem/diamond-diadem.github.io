@@ -1,9 +1,10 @@
 ---
 title: n2p2
 linkTitle: n2p2
-icon: icon-n2p2
 weight: 17
 description: "N2P2 est un logiciel de génération de potentiels interatomiques par réseau de neurones (MLIP), disponible en conteneur Apptainer sur la plateforme DIAMOND."
+tagline: "Potentiels interatomiques par réseaux de neurones"
+scale: atomic
 website: "https://github.com/CompPhysVienna/n2p2"
 ---
 

@@ -3,6 +3,7 @@ title: Comment utiliser l'image Apptainer PtyRAD
 linkTitle: Tutoriel PtyRAD
 weight: 4
 category: scientific-computing
+code: ptyrad
 description: "Tutoriel du conteneur PtyRAD de DIAMOND : récupération de l'image, exécution et exemples de reconstructions ptychographiques."
 ---
 

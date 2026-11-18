@@ -1,9 +1,10 @@
 ---
 title: DFTB+
 linkTitle: DFTB+
-icon: icon-dftbplus
 weight: 18
 description: "DFTB+ is a semi-empirical quantum chemistry code based on the Density Functional Tight-Binding method, available as a container on DIAMOND."
+tagline: "Density functional tight binding"
+scale: electronic
 website: "https://www.dftbplus.org/"
 ---
 
