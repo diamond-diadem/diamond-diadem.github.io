@@ -1,46 +1,17 @@
 ---
 title: "2027 General Assembly - PEPR DIADEM"
-description: ""
+description: "PEPR DIADEM 2027 General Assembly, to be held at the Nancy Convention Center (Centre Prouvé) from January 26 to 28, 2027."
 summary: "Will take place at the Nancy Convention Center (Centre Prouvé)"
 eventDate: "January 26-28, 2027"
 backgroundImage: "images/diadem-background.jpg"
-backgroundOpacity: 0.18
-# location: ""
-# publishDate:
-# lastmod:
-# expiryDate:
-draft: false
 weight: 10
-categories: []
-tags: []
-contributors: []
-pinned: true
-homepage: true
-seo:
-  title: "" # custom title (optional)
-  description: "PEPR DIADEM 2027 General Assembly, to be held at the Nancy Convention Center (Centre Prouvé) from January 26 to 28, 2027." # custom description (recommended)
-  canonical: "" # custom canonical URL (optional)
-  noindex: false # false (default) or true
+toc: false
 ---
 
-<div align="center">
+## Will take place at the Nancy Convention Center (Centre Prouvé)
 
-<h2>Will take place at the Nancy Convention Center (Centre Prouvé)</h2>
+1 Place de la République, 54000 Nancy
 
-<span style="font-size: 1.5em;">1 Place de la République, 54000 Nancy</span>
+More details about the organization of these days will be shared soon.
 
-<br/>
-
-<hr/>
-
-<br/>
-
-<span style="font-size: 1.35em;">More details about the organization of these days will be shared soon.</span>
-
-<br/>
-
-<div style="max-width: 600px; margin: 0 auto;">
-  {{< figure src="save-the-date.jpg" alt="Save the date - PEPR DIADEM General Assembly 2027" >}}
-</div>
-
-</div>
+{{< figure src="save-the-date.jpg" alt="Save the date - PEPR DIADEM General Assembly 2027" >}}

@@ -1,33 +1,18 @@
 ---
 title: "Atelier phare du CECAM"
-description: ""
+description: "Atelier phare du CECAM sur les potentiels interatomiques par apprentissage automatique (MLIPs) et les bases de données accessibles, septembre 2024."
 summary: "Potentiels Interatomiques par Apprentissage Machine, et Bases de Données Accessibles"
 eventDate: "9-11 septembre 2024"
 backgroundImage: "background.jpg"
-backgroundOpacity: 0.18
-# location: "Paris"
-# publishDate: 2024-11-18
-# lastmod: 2024-02-06T09:24:27+01:00
-# expiryDate: 2024-09-12
-draft: false
 weight: 70
-categories: []
-tags: []
-contributors: []
-pinned: false
-homepage: false
-seo:
-  title: "" # custom title (optional)
-  description: "Atelier phare du CECAM sur les potentiels interatomiques par apprentissage automatique (MLIPs) et les bases de données accessibles, septembre 2024." # custom description (recommended)
-  canonical: "" # custom canonical URL (optional)
-  noindex: false # false (default) or true
+toc: false
 ---
 
 ## Potentiels Interatomiques par Apprentissage Machine, et Bases de Données Accessibles
 
 ![Photo de groupe des participants](group-photo.jpg)
 
-### <a href="https://www.cecam.org/workshop-details/machine-learning-interatomic-potentials-and-accessible-databases-1313" class="d-flex">Page CECAM de l'évènement</a>
+[Page CECAM de l'évènement](https://www.cecam.org/workshop-details/machine-learning-interatomic-potentials-and-accessible-databases-1313)
 
 ### Organisateurs
 
@@ -51,20 +36,6 @@ Les potentiels interatomiques par apprentissage automatique (MLIPs) se sont impo
 - **Thierry DEUTSCH** [Setting up data tools as part of the DIADEM program](/downloads/cecam-workshop/slides-deutsch-2024-09-11-CECAM-workshop.pdf)
 - **Kristjan EIMRE** [Generating and publishing datasets using AiiDA and Materials Cloud](/downloads/cecam-workshop/slides-eimre-2024-09-11-CECAM-workshop.pdf)
 
-<h4 class="mb-n2"><a href="/downloads/cecam-workshop/cecam-workshop-photos.zip" class="d-flex">Téléchargez les photos de l'évènement{{< inline-svg src="tabler-icons/outline/camera-spark" class="svg-inline-end" >}}</a></h4>
+[Téléchargez les photos de l'évènement {{< inline-svg src="tabler-icons/outline/camera-spark" class="svg-inline-end" >}}](/downloads/cecam-workshop/cecam-workshop-photos.zip)
 
 Prises par Joao Paulo Almeida De Mendonca
-
-<br>
-
-<!-- **Adresse :** amphithéâtre Besson, campus Phelma, Batiment A, 1130 rue de la Piscine, 38400 Saint Martin d'Hères. [Plan du campus](https://dropsu.sorbonne-universite.fr/s/gdMJ2o5FZtKn48Z) (cherchez le bâtiment A, campus Phelma):
-
-**Comment se rendre à l'événement ?** La navette de l'aéroport vous déposera à la gare de Grenoble. De là, prenez le tram B (direction "Gières, Plaine des Sports") et descendez à l'arrêt "Bibliothèques Universitaires". Marchez vers le nord et atteignez le Bâtiment A sur la carte.
-
-**Suivez les présentations à distance :**
-
-[https://grenoble-inp.zoom.us/j/92354659113](https://grenoble-inp.zoom.us/j/92354659113)
-
-ID réunion : 923 5465 9113
-
-Mot de Passe : 968905 -->

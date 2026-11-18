@@ -1,49 +1,15 @@
 ---
 title: "Article publié - DIAMOND-CW"
-description: ""
-summary: "<b>Reproducible container solutions for codes and workflows in materials science</b><br/><em>Advanced Engineering Materials</em>"
+description: "Article publié dans Advanced Engineering Materials sur les solutions de conteneurs reproductibles pour les codes et workflows en science des matériaux."
+summary: "Reproducible container solutions for codes and workflows in materials science · Advanced Engineering Materials"
 eventDate: "9 avril 2026"
 backgroundImage: "background.png"
-backgroundOpacity: 0.18
-# location: ""
-# publishDate:
-# lastmod:
-# expiryDate:
-draft: false
 weight: 30
-categories: []
-tags: []
-contributors: []
-pinned: true
-homepage: false
-seo:
-  title: "" # custom title (optional)
-  description: "Article publié dans Advanced Engineering Materials sur les solutions de conteneurs reproductibles pour les codes et workflows en science des matériaux." # custom description (recommended)
-  canonical: "" # custom canonical URL (optional)
-  noindex: false # false (default) or true
+toc: false
 ---
 
-<hr/>
-
-<br/>
-
-<div align="center">
-
-<h2>Reproducible container solutions for codes and workflows in materials science</h2>
-
-</div>
-
-<br/>
-
-<hr/>
-
-<br/>
-
-<big>
+## Reproducible container solutions for codes and workflows in materials science
 
 L'article a été publié dans un numéro spécial de la revue _Advanced Engineering Materials_ consacré au PEPR DIADEM. Il présente le travail effectué par le groupe "Codes & Workflows" du projet DIAMOND.
 
 Découvrez [ l'article](https://doi.org/10.1002/adem.202503185)
-
-</big>
-

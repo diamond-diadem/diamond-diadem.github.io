@@ -1,26 +1,11 @@
 ---
 title: "Assemblée générale DIAMOND 2026"
-description: ""
-summary: "Va avoir lieu à Lyon<br/><big><b>Programme disponible</b></big>"
+summary: "Va avoir lieu à Lyon · Programme disponible"
 eventDate: "11-12 juin 2026"
 backgroundImage: "background.png"
-backgroundOpacity: 0.18
-# location: ""
-# publishDate:
-# lastmod:
-# expiryDate:
 draft: true
 weight: 20
-categories: []
-tags: []
-contributors: []
-pinned: true
-homepage: true
-seo:
-  title: "" # custom title (optional)
-  description: "" # custom description (recommended)
-  canonical: "" # custom canonical URL (optional)
-  noindex: false # false (default) or true
+toc: false
 ---
 
 L'**Assemblée Générale 2026 du projet DIAMOND**, la plateforme numérique du PEPR DIADEM, se tiendra les **11 et 12 juin à Lyon**, sur le **campus de La Doua**.
@@ -66,24 +51,22 @@ Trams **T1** et **T4** depuis la gare Part-Dieu — arrêts : *Université Lyon 
 
 - **9h00 – 10h45** — Présentations flash des CDD *(16 × 5 min)*
 
-<ol style="columns: 2; column-gap: 3rem; margin-left: 2rem; margin-bottom: 1rem;">
-<li>Aadhityan Arivazhagan</li>
-<li>Akshay Ammothum Kandy</li>
-<li>May Choueib</li>
-<li>Cinthya Herrera-Contreras</li>
-<li>Étienne Polack</li>
-<li>Gabriele Cassetta</li>
-<li>Joao Paulo Almeida de Mendonca</li>
-<li>Karim Aït Ammar</li>
-<li>Nils Kasch</li>
-<li>Léo Orveillon</li>
-<li>Yaidel Toledo Gonzalez</li>
-<li>Irina Piazza</li>
-<li>Omar Benyaha</li>
-<li>Sonia Salomoni</li>
-<li>Yiran Lu</li>
-<li>Anruo Zhong <em>(visio)</em></li>
-</ol>
+  1. Aadhityan Arivazhagan
+  2. Akshay Ammothum Kandy
+  3. May Choueib
+  4. Cinthya Herrera-Contreras
+  5. Étienne Polack
+  6. Gabriele Cassetta
+  7. Joao Paulo Almeida de Mendonca
+  8. Karim Aït Ammar
+  9. Nils Kasch
+  10. Léo Orveillon
+  11. Yaidel Toledo Gonzalez
+  12. Irina Piazza
+  13. Omar Benyaha
+  14. Sonia Salomoni
+  15. Yiran Lu
+  16. Anruo Zhong *(visio)*
 
 - **10h45 – 11h15** — Pause
 - **11h15 – 12h15** — Présentations de cas d'usage

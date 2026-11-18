@@ -4,34 +4,11 @@ description: "Assemblée générale annuelle 2025 du PEPR DIADEM, présentant l'
 summary: "A eu lieu à l'ENS Saclay. 3 jours de présentations et d'échanges sur les avancées du projet DIADEM."
 eventDate: "24-26 novembre 2025"
 backgroundImage: "background.jpg"
-backgroundOpacity: 0.18
-# location: ""
-# publishDate:
-# lastmod:
-# expiryDate:
-draft: false
 weight: 40
-categories: []
-tags: []
-contributors: []
-pinned: true
-homepage: false
-seo:
-  title: "" # custom title (optional)
-  description: "" # custom description (recommended)
-  canonical: "" # custom canonical URL (optional)
-  noindex: false # false (default) or true
+toc: false
 ---
 
-<div align="center">
-<h2>A eu lieu à l'ENS Saclay</h2>
-</div>
-
-<br/>
-
-<hr/>
-
-<br/>
+## A eu lieu à l'ENS Saclay
 
 {{< logos >}}
 {{< logo src="images/france-2030/france-2030-couleurs-smaller.png" dark="images/france-2030/france-2030-blanc-smaller.png" alt="Logo France 2030" >}}
@@ -48,5 +25,3 @@ L'Assemblée Générale 2025 du PEPR DIADEM, programme de France 2030 piloté pa
   - des réunions de travail ont eu lieu autour des thématiques transversales (synthèse fluidique, couches minces, métallurgie, fabrication additive, caractérisation haut-débit, données et infrastructure numérique)
   - des présentations de faits marquants de projets ciblés et financés à l'AAP 2023 ont été réalisées
   - les projets financés à l'AAP 2024 ont également été présentés
-
-<!-- <img class="officials-banner" alt="PEPR DIADEM Officials" style="width:100%; height:auto; margin-top: 20px; margin-bottom: 20px;"/> -->

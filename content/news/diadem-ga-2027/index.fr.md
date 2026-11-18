@@ -1,46 +1,17 @@
 ---
 title: "Assemblée Générale 2027 - PEPR DIADEM"
-description: ""
+description: "Assemblée Générale 2027 du PEPR DIADEM, organisée au Palais des Congrès de Nancy (Centre Prouvé) du 26 au 28 janvier 2027."
 summary: "Aura lieu au Palais des Congrès de Nancy (Centre Prouvé)"
 eventDate: "26-28 janvier 2027"
 backgroundImage: "images/diadem-background.jpg"
-backgroundOpacity: 0.18
-# location: ""
-# publishDate:
-# lastmod:
-# expiryDate:
-draft: false
 weight: 10
-categories: []
-tags: []
-contributors: []
-pinned: true
-homepage: true
-seo:
-  title: "" # custom title (optional)
-  description: "Assemblée Générale 2027 du PEPR DIADEM, organisée au Palais des Congrès de Nancy (Centre Prouvé) du 26 au 28 janvier 2027." # custom description (recommended)
-  canonical: "" # custom canonical URL (optional)
-  noindex: false # false (default) or true
+toc: false
 ---
 
-<div align="center">
+## Aura lieu au Palais des Congrès de Nancy (Centre Prouvé)
 
-<h2>Aura lieu au Palais des Congrès de Nancy (Centre Prouvé)</h2>
+1 Place de la République, 54000 Nancy
 
-<span style="font-size: 1.5em;">1 Place de la République, 54000 Nancy</span>
+Plus de détails concernant l'organisation de ces journées seront communiqués prochainement.
 
-<br/>
-
-<hr/>
-
-<br/>
-
-<span style="font-size: 1.35em;">Plus de détails concernant l'organisation de ces journées seront communiqués prochainement.</span>
-
-<br/>
-
-<div style="max-width: 600px; margin: 0 auto;">
-  {{< figure src="save-the-date.jpg" alt="Save the date - AG PEPR DIADEM 2027" >}}
-</div>
-
-</div>
+{{< figure src="save-the-date.jpg" alt="Save the date - AG PEPR DIADEM 2027" >}}

@@ -1,38 +1,13 @@
 ---
 title: "Assemblée Générale 2024 du PEPR DIADEM"
-description: ""
 summary: "A eu lieu sur le campus de la Doua à Lyon. Récupérez les présentations et les posters des différents work packages du projet DIAMOND"
 eventDate: "13-15 Novembre 2024"
 backgroundImage: "images/diadem-background.jpg"
-backgroundOpacity: 0.25
-# publishDate: 2024-11-18
-# lastmod: 2024-02-06T09:24:27+01:00
-# expiryDate: 2024-03-06T09:24:27+01:00
-draft: false
 weight: 60
-categories: []
-tags: []
-contributors: []
-pinned: false
-homepage: false
-seo:
-  title: "" # custom title (optional)
-  description: "" # custom description (recommended)
-  canonical: "" # custom canonical URL (optional)
-  noindex: false # false (default) or true
+toc: false
 ---
 
-<h3 align="center">
-
 L'Assemblée Générale du [PEPR DIADEM](https://pepr-diadem.fr) a eu lieu du 13 au 15 novembre 2024 sur le campus de la Doua à Lyon.
-
-</h3>
-
-<br/>
-
-<hr>
-
-<br/>
 
 Lors de ces journées, le PEPR DIADEM a eu l’honneur de présenter les avancées du programme et les faits marquants de ses projets. A cette occasion sera également organisé le lancement des 17 nouveaux projets financés dans le cadre de l’Appel à Projets 2023.
 
@@ -52,7 +27,3 @@ Lors de ces journées, le PEPR DIADEM a eu l’honneur de présenter les avancé
   - [Démonstrateur : workflow MOFLearning](/downloads/ag-diadem-2024/Poster-MOFLearning-AG2024.pdf)
 - [WP2 : Bases de données](/downloads/ag-diadem-2024/Poster-WP2-AG2024.pdf)
 - [WP3 : Démonstrateur Potentiel Machine Learning](/downloads/ag-diadem-2024/Poster-WP3-AG2024.pdf)
-
-<br/>
-
-<br/>

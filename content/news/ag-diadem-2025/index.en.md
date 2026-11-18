@@ -4,34 +4,11 @@ description: "PEPR DIADEM 2025 Annual General Assembly, presenting the progress 
 summary: "Took place at ENS Saclay. 3 days of presentations and exchanges on the advances of the DIADEM project."
 eventDate: "November 24 to 26, 2025"
 backgroundImage: "background.jpg"
-backgroundOpacity: 0.18
-# location: ""
-# publishDate:
-# lastmod:
-# expiryDate:
-draft: false
 weight: 40
-categories: []
-tags: []
-contributors: []
-pinned: true
-homepage: false
-seo:
-  title: "" # custom title (optional)
-  description: "" # custom description (recommended)
-  canonical: "" # custom canonical URL (optional)
-  noindex: false # false (default) or true
+toc: false
 ---
 
-<div align="center">
-<h2>Took place at the ENS Saclay</h2>
-</div>
-
-<br/>
-
-<hr/>
-
-<br/>
+## Took place at the ENS Saclay
 
 {{< logos >}}
 {{< logo src="images/france-2030/france-2030-couleurs-smaller.png" dark="images/france-2030/france-2030-blanc-smaller.png" alt="Logo of France 2030" >}}
@@ -48,4 +25,3 @@ The program included:
   - Working meetings were held on cross-cutting topics (fluidic synthesis, thin films, metallurgy, additive manufacturing, high-throughput characterization, data and digital infrastructure)
   - Presentations highlighted key results from targeted projects funded by the 2023 call for projects
   - Projects funded by the 2024 call for projects were also presented
-

@@ -2,55 +2,27 @@
 title: "Quand l'IA et le HPC rencontrent la Science des Matériaux"
 aliases:
   - /news/diadem-ia-event
-description: ""
+description: "Journée inter-PEPR réunissant DIADEM, PEPR IA et NumPex sur les interfaces entre science des matériaux, IA et calcul haute performance."
 summary: "PEPR DIADEM (Diamond), PEPR IA (CAUSALI-T-AI, PDE IA), PEPR NumPex"
 eventDate: "18 Novembre 2024"
 backgroundImage: "background.png"
-backgroundOpacity: 0.18
-# publishDate: 2024-11-18
-# lastmod: 2024-02-06T09:24:27+01:00
-# expiryDate: 2024-03-06T09:24:27+01:00
-draft: false
 weight: 50
-categories: []
-tags: []
-contributors: []
-pinned: false
-homepage: false
-seo:
-  title: "" # custom title (optional)
-  description: "Journée inter-PEPR réunissant DIADEM, PEPR IA et NumPex sur les interfaces entre science des matériaux, IA et calcul haute performance." # custom description (recommended)
-  canonical: "" # custom canonical URL (optional)
-  noindex: false # false (default) or true
+toc: false
 ---
-
-<div align="center">
 
 ## PEPR DIADEM (Diamond), PEPR IA (CAUSALI-T-AI, PDE IA), PEPR NumPex
 
-</div>
+### Sorbonne Center for Artificial Intelligence SCAI, Espace Forum, 4 Pl. Jussieu, 75005 Paris
 
-#### Sorbonne Center for Artificial Intelligence SCAI, Espace Forum, 4 Pl. Jussieu, 75005 Paris
+## Organisateurs
 
-<div align="center">
-
-### ORGANISATEURS
-
-#### Marianne CLAUSEL et Noël JAKSE
-
-</div>
+Marianne CLAUSEL et Noël JAKSE
 
 **Appel à propositions** : La Journée Inter-PEPR, organisée conjointement par le PEPR DIADEM, le PEPR IA et le PEPR NumPex, vise à offrir un aperçu de certaines directions de recherche prometteuses à l'interface entre la Science des Matériaux, l'IA et le Calcul Haute Performance.
 
 La journée sera consacrée à plusieurs conférences données par des chercheurs et spécialistes renommés dans le domaine. Les jeunes chercheurs sont également invités à présenter leurs travaux sous forme de posters ou de courtes présentations et doivent soumettre un résumé à [inter-pepr-days@services.cnrs.fr](mailto:inter-pepr-days@services.cnrs.fr) avant le 15 octobre.
 
-<div align="center">
-
-#### Programme
-
-</div>
-
-<br/>
+## Programme
 
 - **8h30-9h00 :** Accueil et café
 
@@ -72,5 +44,3 @@ La journée sera consacrée à plusieurs conférences données par des chercheur
 - **16h00-16h40 :** Emmanuel FRANCK (UNISTRA) _Hybrid ML approaches in Material Science: the contribution of PINNs_
 - **16h40-17h20 :** Martin UHRIN (Université Grenoble Alpes) _When GenAI meets Material Science_
 - **17h20- :** Discussion et Conclusion
-
-<br/>

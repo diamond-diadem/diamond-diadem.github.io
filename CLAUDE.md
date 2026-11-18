@@ -172,6 +172,18 @@ HTML → Markdown conversion style.
   rewording. The first 5 by weight also appear on the home page.
 - Answers are hard-wrapped at ~78 columns like the existing ones.
 
+### News (`content/news/<slug>/`)
+
+- Leaf bundle `index.en.md`/`index.fr.md` + `background.<ext>`. Front matter is
+  only `title`, `summary` (plain text: the card turns ` · ` into line breaks),
+  `eventDate` (free text), `backgroundImage` (bundle file, or a shared
+  `images/...` asset), `weight` (order, lowest first), `description` (110–160
+  chars, also the SEO text: no `seo:` block), `draft: true` when hidden and
+  `aliases` when needed. Do not add empty `tags`/`categories`/`contributors`,
+  `pinned`, `homepage`, `backgroundOpacity` (unused) or commented-out keys.
+- No contents sidebar on news: `toc: false` is set in each page's front matter (not cascaded).
+- Body in plain Markdown, no centering/`<hr>`/`<br>`/`<big>`/inline styles.
+
 ### Workflows (`content/workflows/<slug>/`)
 
 - `_index.*.md` is the description (with `summary`, `tablerIcon`,
