@@ -156,36 +156,62 @@ When an asset in `static/` looks unused, move it to the matching path under `sta
 
 ### Add a new code page
 
-Each code is a folder (a Hugo _page bundle_) under `content/codes/<category>/`, where `<category>` is `scientific-computing` or `visualisation`. The folder holds the English and French pages together with the code's logo:
+Each code is a folder (a Hugo _page bundle_) under `content/codes/<category>/`. The folder **is the code's slug** (lowercase, hyphens: `amitex-fftp`) and holds both language pages together with the code's images:
 
 ```text
 content/codes/scientific-computing/abinit/
 ├── index.en.md
 ├── index.fr.md
-├── logo.svg        # the code's logo
-└── logo-dark.svg   # optional: replaces the logo in dark mode
+├── logo.svg        # page header (see below)
+├── logo-dark.svg   # optional: replaces the logo in dark mode
+├── icon.svg        # small square mark for menus and catalogs
+└── icon-dark.svg   # optional: replaces the icon in dark mode
 ```
 
-The Codes section landing page lists every code automatically via the `codes-catalog` shortcode, grouped by category and ordered by weight — there is nothing else to wire up.
+`<category>` is the **type** of the code: `scientific-computing` (simulation and computing codes) or `visualisation`. Nothing else wires the code in: the Codes landing page (`codes-catalog` shortcode), the menus and the home page pick it up from these files.
 
-1. Create the English page from the codes template (_archetype_), which fills in the front matter and the usual page structure for you:
+#### 1. Create the pages
 
-   ```bash
-   hugo new content codes/<category>/<slug>/index.en.md
-   ```
+```bash
+hugo new content codes/<category>/<slug>/index.en.md
+```
 
-   Then copy `index.en.md` to `index.fr.md` in the same folder and translate it.
+The `codes` archetype fills in the front matter and the usual page structure. Copy `index.en.md` to `index.fr.md` and translate it. **Always change both languages together.**
 
-2. In the front matter, fill in:
-   - `title` and `linkTitle`: the code's name.
-   - `description`: one sentence used by search engines and link previews.
-   - `website`: the code's official website.
-   - `weight`: the code's position in the menu (usually the highest existing weight in the category, plus one).
-   - `icon`: the small icon shown in menus and the codes catalog, an `icon-<slug>` class defined in `assets/scss/diamond/_custom-icons.scss`.
+#### 2. Fill in the front matter
 
-3. Add the logo: copy it into the folder as `logo.svg` (or `logo.png`, `logo.jpg`, `logo.webp`). SVG is preferred, since it stays sharp at any size. If the logo is unreadable on a dark background, add a dark-mode version as `logo-dark.<ext>`. No other setup is needed: the logo is sized automatically to match every other code page.
+| Key           | What to put                                                                                                                                |
+|---------------|--------------------------------------------------------------------------------------------------------------------------------------------|
+| `title`       | The code's name.                                                                                                                           |
+| `description` | One sentence for search engines and link previews, **110–160 characters** (the build warns otherwise).                                     |
+| `tagline`     | A few words shown under the name in the catalog card, such as "Plane-wave DFT suite". Set it in both languages.                            |
+| `scale`       | The catalog group: `electronic`, `atomic`, `mesoscopic`, `microstructure` or `macroscopic`. Not translated. Ask the maintainers if unsure. |
+| `website`     | The code's official website, linked from the page header.                                                                                  |
+| `weight`      | Position in the menu (usually the highest weight in the category, plus one).                                                               |
+| `draft`       | The archetype sets `true`: remove it when the page is ready to be published.                                                               |
 
-4. Fill in the retrieval commands (Apptainer/Docker), description, tutorial link, documentation links, and examples.
+The archetype's `toc: true` shows the contents sidebar (it is hidden automatically on pages without headings); set `toc: false` only for a specific reason. Do not add `title_visible` or `icon`: the title comes from the logo/header and the icon from the `icon.<ext>` file.
+
+#### 3. Add the logo and the icon
+
+A code has two images, each used in different places:
+
+- **Logo** (`logo.<ext>`, optional `logo-dark.<ext>`): the large branding image at the top of the code's own page. It may be wide, with a wordmark or tagline.
+- **Icon** (`icon.<ext>`, optional `icon-dark.<ext>`): a small **square** mark for the places where space is tight: the menus, the Codes catalog cards, and the tutorials of this code (through their `code:` front matter). A wide logo would be unreadable there, so the icon is a compact version of it, such as the initial or the symbol.
+
+Both are found **by file name**: no CSS and no front matter. Accepted formats are SVG (preferred: sharp at any size), PNG, JPG and WebP; icons are converted to WebP automatically. Add the `-dark` version when the image is unreadable on a dark background (a black mark, for example).
+
+If the code has no official logo, the icon alone is enough (see `n2p2`): the page header then shows the `title` as large text. If it has no icon either, a letter in a bold sans-serif font makes a fine placeholder, and the build warns about a code without an icon.
+
+#### 4. Write the content
+
+Follow the structure of the archetype and of the existing code pages:
+
+1. `### Retrieve the container image` (FR `### Récupérez l'image de conteneur`) with Apptainer/Docker `tabs`.
+2. One or more paragraphs describing what the code does and what it is used for.
+3. `## Tutorial` (FR `## Tutoriel`), `## <Code> documentation` (FR `## Documentation <Code>`) and `## Examples` (FR `## Exemples`), each with `link-card`s. Items that do not exist yet stay as disabled cards (`title="Content to be added"`, `href="#bottom"`, `disabled="true"`).
+
+If the code has a tutorial, create it in `content/documentation/by-container/` with `code: <slug>` in its front matter so it shows the code's icon.
 
 #### The page header
 
@@ -195,9 +221,13 @@ Every code page gets the same header, built by `layouts/_partials/main/code-head
 - When `website` is set, a round arrow button at the top-right corner of the logo links to it, in a new tab.
 - The last-update date and the link to the other language follow below.
 
-Do not add a logo or a title heading at the top of the Markdown content itself: the header already provides both.
+#### Checklist before opening a PR
 
-The `icon` class is still added by hand in `_custom-icons.scss`; in practice this is generally handled by the website administrator after your Markdown changes are done.
+- [ ] `index.en.md` and `index.fr.md` both exist and say the same.
+- [ ] `description` is 110–160 characters in both languages; `tagline` and `scale` are set.
+- [ ] `icon.<ext>` exists (plus `-dark` variants where needed) and `logo.<ext>` if the code has one.
+- [ ] `draft: true` is removed.
+- [ ] A local build (`npm run dev`) shows the code in the catalog, with no warnings in the terminal, in light and dark mode.
 
 ### Math Support
 
