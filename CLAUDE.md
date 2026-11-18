@@ -12,7 +12,7 @@ file covers what it does not, plus the main → dev content-porting procedure.
 - The website MUST follow a progressive enhancement approach, providing basic features to users with basic browser CSS and JS support, and increasing features as the supported features increase in the browser used.
 - The website MUST be responsive under all circumstances. 
 - ALL MODIFICATIONS must be in agreement with the design of the website, unless specifically asked to design something on a new way.
-- Use `hugo` and `clean-code` skills.
+- Always use `hugo` and `clean-code` skills, to make sure we are writing proper code.
 - Other than this "Conventions" section, which you should not touch, you must update the rest of this document as pertinent: to fix inconsistencies or legacy issues introduced all along the way with the modifications, update the website structure, record my preferences, etc.
 - On each run, optimize this file so the next time it's better at token consumption/efficiency.
 
@@ -44,8 +44,7 @@ file covers what it does not, plus the main → dev content-porting procedure.
 - `npm run dev`: local server at http://localhost:1313.
 - Build check without touching `public/`:
   `PATH=$PWD/node_modules/.bin:$PATH hugo --gc -d <scratch dir>`. A clean dev
-  build prints **no WARN lines** except PtyRAD's missing icon (see Known
-  issues); keep it that way.
+  build prints **no WARN lines**; keep it that way.
 - The SCSS is compiled by Dart Sass (`transpiler: dartsass`), which Hugo runs
   as a `sass` executable. It comes from the `sass-embedded` dev dependency in
   `node_modules/.bin`: npm scripts put it on PATH, a bare `hugo` call does not
@@ -265,9 +264,9 @@ fast-forward merged into main.
 
 ## Known issues on dev (not fixed yet)
 
-- PtyRAD has no logo or icon (its GitHub repository has none either), so the
-  build warns for its code page and tutorial; its FR page has `## Tutorial`
-  instead of `## Tutoriel`.
+- PtyRAD has no official logo: its `icon.png`/`icon-dark.png` are a bold "P"
+  (Nimbus Sans Bold, same style as n2p2's "n"), replace if upstream gets one.
+  Its FR page has `## Tutorial` instead of `## Tutoriel`.
 - GROMACS's icon is dark blue with no dark-mode version: barely visible in
   dark mode. `static/images/codes/ndm/ndm-logo.png` is unused.
 - The Data page's EN text links to the French Wikipedia NoSQL article (as on

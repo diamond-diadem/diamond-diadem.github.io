@@ -737,9 +737,9 @@ h3.codes-catalog__title {
 
 // ---------------------------------------------------------------------------
 // Codes catalog: one group per physical scale, opened by a ruler naming the
-// scales. Mobile first: the ruler runs down the page, its arrow pointing
-// down, and turns horizontal, like the word cloud's axis, once five labels
-// fit side by side.
+// scales. Mobile first: the ruler runs down the page, biggest scale first and
+// its arrow pointing up towards it, and turns horizontal (smallest first, like
+// the word cloud's axis) once five labels fit side by side.
 
 $scale-dot: 0.75rem;
 $scale-line: 2px;
@@ -747,7 +747,8 @@ $scale-line: 2px;
 .codes-catalog--scales {
     display: grid;
     gap: 2.75rem 1.5rem;
-    margin-block: 1.5rem 2rem;
+    // The top margin keeps the ruler clear of the text introducing the catalog
+    margin-block: 3.5rem 2rem;
 
     // Groups of one or two codes take half the width, so two of them share
     // a row instead of each leaving most of it empty
@@ -762,10 +763,14 @@ $scale-line: 2px;
 
 .scale-ruler__stops {
     position: relative;
-    display: grid;
+    // Reversed so the biggest scale comes first when stacked. Only the visual
+    // order flips: keyboard and screen-reader order stay small to big, which
+    // matches the horizontal ruler and the groups below
+    display: flex;
+    flex-direction: column-reverse;
     margin: 0;
-    // Room before the arrowhead, so the last stop does not run into it
-    padding: 0 0 1.75rem;
+    // Room before the arrowhead, so the first stop does not run into it
+    padding: 1.75rem 0 0;
     list-style: none;
     font-family: $font-family-ui;
 
@@ -773,8 +778,8 @@ $scale-line: 2px;
     &::before {
         content: "";
         position: absolute;
-        top: 0.5rem;
-        bottom: 0.25rem;
+        top: 0.25rem;
+        bottom: 0.5rem;
         left: calc(#{$scale-dot} / 2 - #{$scale-line} / 2);
         width: $scale-line;
         background-color: var(--home-border-strong);
@@ -783,13 +788,13 @@ $scale-line: 2px;
     &::after {
         content: "";
         position: absolute;
-        bottom: 0.2rem;
+        top: 0.2rem;
         left: calc(#{$scale-dot} / 2 - 0.3rem);
         width: 0.6rem;
         height: 0.6rem;
         border: solid var(--home-border-strong);
         border-width: 0 $scale-line $scale-line 0;
-        transform: rotate(45deg);
+        transform: rotate(-135deg);
     }
 }
 
@@ -858,6 +863,7 @@ a.scale-ruler__link {
 
 @media (min-width: $home-breakpoint-sm) {
     .scale-ruler__stops {
+        display: grid;
         grid-template-columns: repeat(5, minmax(0, 1fr));
         padding: 0 2.5rem 0 0;
 
@@ -1016,7 +1022,9 @@ h3.codes-scale__title {
     min-width: 0;
 }
 
-// The code's type, as an icon and a word so it does not rest on color alone
+// The code's type, as an icon and a word so it does not rest on color alone.
+// Both types share the muted color: they are equal categories, and the accent
+// on one of them would read as a selected or more important state
 .codes-card__kind {
     display: flex;
     gap: 0.35rem;
@@ -1027,10 +1035,6 @@ h3.codes-scale__title {
     font-size: 0.8125rem;
     font-weight: 600;
     color: var(--home-muted);
-}
-
-.codes-card__kind--visualisation {
-    color: var(--home-accent);
 }
 
 .codes-card__kind-icon {

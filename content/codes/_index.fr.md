@@ -1,5 +1,5 @@
 ---
-title: Codes conteneurisés
+title: Codes et logiciels
 linkTitle: Accueil
 aliases:
   - /codes/home/
@@ -9,34 +9,30 @@ seo:
     Apptainer, workflows HPC et logiciels de simulation de matériaux.
 ---
 
-Vous avez passé deux jours à essayer d'installer un code. Le compilateur réclame une bibliothèque introuvable, le cluster vous interdit de l'installer, et votre échéance, elle, ne recule pas.
+Vous trouverez dans cette rubrique un ensemble de codes au service de vos recherches.
 
-Imaginez maintenant ce même code opérationnel en quelques minutes : un téléchargement, une commande, et ça marche.
+## Quels codes ?
 
-C'est exactement ce que vous apporte un **conteneur**.
+Diamond vous met à disposition une trentaine de codes de modélisation et de visualisation, allant de l’échelle électronique à macroscopique. Ces codes ont été choisi en prenant avis d'une  communauté de chercheurs s'intéressant aux matériaux et à l'IA (GDR IAMAT), et a vocation à être complété pour répondre au mieux à vos besoins.  Celui dont vous avez besoin n'y est pas, [dites-le-nous]({{% ref "/contact" %}}) et nous étudierons son ajout.
 
-## Mais qu'est-ce qu'un conteneur ?
+## Sous quelle forme sont fournis les codes ?
 
-Voyez un conteneur comme une clé USB sur laquelle un programme est déjà installé : branchez-la sur n'importe quel ordinateur, et le programme fonctionne, tout simplement. Pas de compilation, pas de dépendances à traquer, pas de droits administrateur.
+Les codes sont mis à disposition sous forme conteneurisée. Pourquoi ? Pour pouvoir fonctionner de manière identique et fiable sur chacune de vos machines (Windows ou Linux, ordinateur de bureau ou supercalculateur). Le conteneur fonctionne comme une clé USB sur laquelle un programme est déjà installé.
 
-- **Des codes difficiles à installer, prêts à l'emploi** : quelqu'un a déjà fait la partie pénible à votre place.
-- **Fonctionne là où vous ne pouvez rien installer** : beaucoup de clusters HPC interdisent l'installation de logiciels, mais autorisent l'exécution de conteneurs.
-- **Les mêmes résultats, à chaque fois** : le code s'exécute dans exactement le même environnement sur votre portable, votre cluster et la machine de votre collègue. La reproductibilité est intégrée d'office.
+- Le code conteneurisé **fonctionne sur n'importe quel ordinateur**.
+- **Il embarque le code et tout ce dont il a besoin pour fonctionner** (sans donc nécessiter d'installation, de compilation, de dépendances, ni de droits administrateur). Il fonctionne notamment là où vous ne pouvez rien installer : beaucoup de clusters HPC interdisent l'installation de logiciels, mais autorisent l'exécution de conteneurs.
+- **Le code fournit les mêmes résultats, à chaque fois** : le code s'exécute dans exactement le même environnement sur votre portable, votre cluster et la machine de votre collègue. La **reproductibilité** est intégrée d’office.
 
-{{< callout context="note" title="" icon="tabler-icons/outline/info-circle" >}}
-Tous les conteneurs ci-dessous sont prêts à être téléchargés et utilisés immédiatement. Il vous suffit d'avoir Apptainer (conçu pour le HPC) ou Docker (plus répandu) sur votre ordinateur.
-{{< /callout >}}
+## Comment l'utiliser ?
 
-## Vous n'avez jamais utilisé de conteneur ?
+Tous les conteneurs ci-dessous sont prêts à être téléchargés et utilisés immédiatement. Un seul prérequis : avoir accès sur la machine au logiciel de conteneurisation du quel vous allez vous en servir. Nous vous proposons des conteneurs Apptainer (conçu pour le HPC) et Docker (plus répandu).
 
-Il y a un petit temps d'apprentissage, et nous avons tout prévu : des tutoriels pas à pas sur l'[installation d'Apptainer]({{% ref "documentation/install/install-apptainer" %}}) et l'[utilisation des images de conteneurs]({{% ref "documentation/use/apptainer-image" %}}), ainsi qu'un exemple concret pour chaque conteneur. Toujours bloqué ? Nous sommes toujours [là pour vous aider]({{% ref "contact" %}}).
+Vous n'avez jamais utilisé de conteneur ?
 
-## Choisis par la communauté
+Il y a un petit temps d’apprentissage, et nous avons tout prévu : des tutoriels pas à pas sur l'[installation d'Apptainer]({{% ref "documentation/install/install-apptainer" %}}) et l'[utilisation des codes conteneuriséss]({{% ref "documentation/use/apptainer-image" %}}), ainsi qu'un exemple concret pour chaque conteneur.
 
-Pendant l'été 2023, nous avons demandé à la communauté des matériaux quels codes elle utilise réellement, aussi bien pour le calcul que pour la visualisation (cf. ci-dessous). Aujourd'hui, plus de $68\%$ d'entre eux sont conteneurisés et/ou packagés, couvrant l'ensemble des échelles physiques. Celui dont vous avez besoin n'y est pas ? [Dites-le-nous]({{% ref "contact" %}}) et nous étudierons son ajout.
+Toujours bloqué ? Nous sommes toujours là pour [vous aider]({{% ref "/contact" %}}).
 
-{{< figure src="images/containerised-codes/containerised-codes-light-fr-cropped-nobg.png" alt="Nuage de mots des codes cités par la communauté, classés par échelle physique de l'électronique au macroscopique, les plus cités (LAMMPS, VASP, Quantum ESPRESSO, ParaView, OVITO, VESTA) en plus grands caractères. 68,2 % de ces codes sont conteneurisés et/ou packagés." dark="images/containerised-codes/containerised-codes-dark-fr-cropped.png" width="wide" >}}
-
-## Codes disponibles
+## List of containerised codes
 
 {{< codes-catalog >}}
