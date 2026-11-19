@@ -3,7 +3,7 @@ title: "Atelier phare du CECAM"
 description: "Atelier phare du CECAM sur les potentiels interatomiques par apprentissage automatique (MLIPs) et les bases de données accessibles, septembre 2024."
 summary: "Potentiels Interatomiques par Apprentissage Machine, et Bases de Données Accessibles"
 eventDate: "9-11 septembre 2024"
-backgroundImage: "background.jpg"
+cardImage: "card.jpg"
 weight: 70
 toc: false
 ---

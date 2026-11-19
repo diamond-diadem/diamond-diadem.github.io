@@ -3,7 +3,7 @@ title: "Article publié - DIAMOND-CW"
 description: "Article publié dans Advanced Engineering Materials sur les solutions de conteneurs reproductibles pour les codes et workflows en science des matériaux."
 summary: "Reproducible container solutions for codes and workflows in materials science · Advanced Engineering Materials"
 eventDate: "9 avril 2026"
-backgroundImage: "background.png"
+cardImage: "card.png"
 weight: 30
 toc: false
 ---

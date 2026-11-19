@@ -3,7 +3,7 @@ title: "When AI and HPC meet Materials Science"
 description: "Inter-PEPR day gathering DIADEM, PEPR IA and NumPex on research directions at the interface between materials science, AI and high-performance computing."
 summary: "PEPR DIADEM (Diamond), PEPR IA (CAUSALI-T-AI, PDE IA), PEPR NumPex"
 eventDate: "November 18, 2024"
-backgroundImage: "background.png"
+cardImage: "card.png"
 weight: 50
 toc: false
 aliases:

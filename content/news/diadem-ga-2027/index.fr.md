@@ -3,7 +3,7 @@ title: "Assemblée Générale 2027 - PEPR DIADEM"
 description: "Assemblée Générale 2027 du PEPR DIADEM, organisée au Palais des Congrès de Nancy (Centre Prouvé) du 26 au 28 janvier 2027."
 summary: "Aura lieu au Palais des Congrès de Nancy (Centre Prouvé)"
 eventDate: "26-28 janvier 2027"
-backgroundImage: "images/diadem-background.jpg"
+cardImage: "images/diadem-background.jpg"
 weight: 10
 toc: false
 ---

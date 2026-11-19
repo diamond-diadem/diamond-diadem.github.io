@@ -241,6 +241,23 @@ $$
 
 Math rendering is loaded only on pages that declare `math: true` in front matter. Add that flag when introducing a page with LaTeX content.
 
+## News section
+
+Create a news post with `hugo new content news/<slug>/index.en.md` (the `news` archetype), copy it to `index.fr.md` and translate it. Drop the card picture next to them as `card.<ext>`.
+
+| Key               | Meaning                                                                                                   |
+| ----------------- | --------------------------------------------------------------------------------------------------------- |
+| `title`           | Headline of the post.                                                                                     |
+| `description`     | 110–160 characters; also the SEO text, so there is no `seo:` block.                                       |
+| `summary`         | Plain text shown on the card; ` · ` becomes a line break.                                                 |
+| `eventDate`       | Free text, such as `November 24 to 26, 2025`.                                                             |
+| `cardImage` | The card picture: a file in the post's folder, or a shared `images/...` asset.                            |
+| `weight`          | Card order, lowest first.                                                                                 |
+| `draft`           | The archetype sets `true`: remove it to publish.                                                          |
+| `toc`             | Keep `false`: news pages have no contents sidebar.                                                        |
+
+Do not add `tags`, `categories`, `contributors`, `pinned`, `homepage` or `backgroundOpacity`: nothing reads them.
+
 ## YouTube Video Integration (Tutorials)
 
 To integrate a YouTube video, use the custom Diamond shortcode:

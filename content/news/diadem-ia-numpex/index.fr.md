@@ -5,7 +5,7 @@ aliases:
 description: "Journée inter-PEPR réunissant DIADEM, PEPR IA et NumPex sur les interfaces entre science des matériaux, IA et calcul haute performance."
 summary: "PEPR DIADEM (Diamond), PEPR IA (CAUSALI-T-AI, PDE IA), PEPR NumPex"
 eventDate: "18 Novembre 2024"
-backgroundImage: "background.png"
+cardImage: "card.png"
 weight: 50
 toc: false
 ---

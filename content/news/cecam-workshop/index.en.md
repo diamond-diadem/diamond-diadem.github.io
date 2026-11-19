@@ -3,7 +3,7 @@ title: "CECAM Flagship Workshop"
 description: "CECAM flagship workshop on Machine Learning Interatomic Potentials (MLIPs) and accessible databases, held in September 2024 in Grenoble, France."
 summary: "Machine Learning Interatomic Potentials and Accessible Databases"
 eventDate: "September 9 to 11, 2024"
-backgroundImage: "background.jpg"
+cardImage: "card.jpg"
 weight: 70
 toc: false
 ---

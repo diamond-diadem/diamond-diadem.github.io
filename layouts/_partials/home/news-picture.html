@@ -3,16 +3,16 @@
   widths. It only illustrates the card, whose title says what it is about,
   so its text alternative is empty.
 
-  @param {page}   page  A news page, whose backgroundImage names the picture.
+  @param {page}   page  A news page, whose cardImage names the picture.
   @param {string} sizes Width of the picture in the layout, for the browser to pick a file.
   @param {bool}   eager Whether the picture shows on arrival, so it loads first instead of lazily.
 
-  backgroundImage is looked up as a page resource first (an image living in
+  cardImage is looked up as a page resource first (an image living in
   the news article's own bundle), falling back to a site-wide asset for
   pictures shared by more than one article.
 */ -}}
 {{- $page := .page -}}
-{{- with .page.Params.backgroundImage -}}
+{{- with .page.Params.cardImage -}}
   {{- $image := $page.Resources.GetMatch . -}}
   {{- if not $image }}{{ $image = resources.Get . }}{{ end -}}
   {{- with $image -}}

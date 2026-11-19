@@ -2,7 +2,7 @@
 title: "Article Published - Noise2Noise Raman Denoising"
 summary: "A Practical Noise2Noise Denoising Pipeline for High-Throughput Raman Spectroscopy · Advanced Engineering Materials"
 eventDate: "July 23, 2026"
-backgroundImage: "background.png"
+cardImage: "card.png"
 weight: 25
 toc: false
 ---

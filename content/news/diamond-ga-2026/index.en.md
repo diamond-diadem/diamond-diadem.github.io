@@ -2,7 +2,7 @@
 title: "DIAMOND General Assembly 2026"
 summary: "Taking place in Lyon · Program available"
 eventDate: "June 11-12, 2026"
-backgroundImage: "background.png"
+cardImage: "card.png"
 draft: true
 weight: 20
 toc: false

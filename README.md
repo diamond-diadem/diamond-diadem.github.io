@@ -19,7 +19,7 @@ Before making any modification or contribution to the repository, please review 
 | Area                 | Purpose                                                                                                                                      |
 | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
 | `content/`           | Markdown sources for the bilingual (English/French) site. Sections such as `codes/`, `workflows/`, `documentation/`, and `news/` live here. Each code in `codes/` is a folder holding its English and French pages and its `logo.*` file. |
-| `archetypes/`        | Templates for new pages. `hugo new content codes/<category>/<slug>/index.en.md` starts a code page from `archetypes/codes.md`.                  |
+| `archetypes/`        | Templates for new pages. `hugo new content codes/<category>/<slug>/index.en.md` starts a code page from `archetypes/codes.md`; `news/` posts use `archetypes/news.md`. |
 | `config/`            | Hugo + Doks configuration split by environment. `_default/params.yaml` is the main place to adjust global settings.                          |
 | `assets/`            | SCSS, JS, SVG, and image sources processed by Hugo Pipes.                                                                                    |
 | `layouts/`           | Template overrides that extend the [Doks/Thulite](https://getdoks.org) theme.                                                                |

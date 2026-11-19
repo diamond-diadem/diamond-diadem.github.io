@@ -174,13 +174,16 @@ HTML → Markdown conversion style.
 
 ### News (`content/news/<slug>/`)
 
-- Leaf bundle `index.en.md`/`index.fr.md` + `background.<ext>`. Front matter is
+- Leaf bundle `index.en.md`/`index.fr.md` + `card.<ext>`. Front matter is
   only `title`, `summary` (plain text: the card turns ` · ` into line breaks),
-  `eventDate` (free text), `backgroundImage` (bundle file, or a shared
+  `eventDate` (free text), `cardImage` (bundle file, or a shared
   `images/...` asset), `weight` (order, lowest first), `description` (110–160
   chars, also the SEO text: no `seo:` block), `draft: true` when hidden and
   `aliases` when needed. Do not add empty `tags`/`categories`/`contributors`,
   `pinned`, `homepage`, `backgroundOpacity` (unused) or commented-out keys.
+- New post: `hugo new content news/<slug>/index.en.md` (`archetypes/news.md`; the
+  only archetype besides `codes`, `default` and `docs`). Keys are listed in
+  CONTRIBUTING's "News section".
 - No contents sidebar on news: `toc: false` is set in each page's front matter (not cascaded).
 - Body in plain Markdown, no centering/`<hr>`/`<br>`/`<big>`/inline styles.
 
