@@ -1,18 +1,22 @@
 {{- /*
   Section sidebar shown beside the content on large screens (small screens
-  get it in the header drawer instead). Its width follows its entries,
-  within limits set in _docs-layout.scss.
+  get it in the header drawer instead). Its column has the same width in every
+  section. A page whose section has no sidebar keeps that column empty, so its
+  text sits where the text of the other sections does.
+
+  The docs-sidebar and docs-links classes come from the Doks theme, which
+  styles them.
 
   @param {page} . The page being rendered.
 */ -}}
+<div class="section-sidebar d-none d-lg-block">
 {{- if in site.Params.doks.sectionNav .Section -}}
-{{- $sectionName := partial "sidebar/section-name.html" . -}}
-<div class="diamond-docs-sidebar-container d-none d-lg-block">
+{{- $sectionName := partial "sidebar/section-name.html" . }}
   <div class="docs-sidebar{{ if ne site.Params.doks.navbarSticky true }} docs-sidebar-top{{ end }}{{ if site.Params.doks.headerBar }} docs-sidebar-offset{{ end }}">
     <nav class="docs-links" aria-label="{{ $sectionName }}">
       <p class="sidebar-heading" aria-hidden="true">{{ $sectionName }}</p>
       {{ partial "sidebar/docs-menu.html" . }}
     </nav>
   </div>
+{{- end }}
 </div>
-{{- end -}}

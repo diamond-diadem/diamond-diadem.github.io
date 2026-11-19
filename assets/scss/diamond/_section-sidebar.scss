@@ -1,8 +1,28 @@
-// Documentation-like pages (codes, documentation, workflows): a section
-// sidebar sized to its entries, beside an article of readable width.
+// Content pages: a section sidebar beside an article of readable width.
+// The sidebar column has one width for every section, and sections without a
+// sidebar (Data, About) keep it empty: that way the title and the text stay
+// put when the reader moves from one section to another.
+//
+// That width depends on the screen only, never on the entries: the column
+// takes the room the centred article leaves on its left, minus a clear gap
+// before the text, so on a wide screen the entries sit on one line and wrap
+// only once the gap would shrink. The gap equals the one between the text and
+// its contents rail, so the text has the same air on both sides. Past the cap,
+// a wider column would only add empty space beside short entries.
+// (Percentages resolve against the row, which spans the page: see
+// Design_decisions.md for the arithmetic.)
 
-$docs-sidebar-min-width: 14rem;
-$docs-sidebar-max-width: 21rem;
+$section-sidebar-min-width: 14rem;
+$section-sidebar-max-width: 24rem;
+$section-sidebar-gap: $article-rail-gap;
+
+@function section-sidebar-width($article-block-width) {
+    @return clamp(
+        #{$section-sidebar-min-width},
+        calc(100% - #{$article-block-width + 2 * $section-sidebar-gap}),
+        #{$section-sidebar-max-width}
+    );
+}
 
 // Article: a comfortable line length whatever the screen width (the width
 // itself is set in _article-layout.scss)
@@ -12,16 +32,18 @@ $docs-sidebar-max-width: 21rem;
 }
 
 @include media-breakpoint-up(lg) {
-    // Sidebar: as wide as its longest entry, within bounds following the screen
-    .diamond-docs-sidebar-container {
-        flex: 0 0 auto;
-        width: auto;
-        min-width: $docs-sidebar-min-width;
-        max-width: clamp(#{$docs-sidebar-min-width}, 28vw, #{$docs-sidebar-max-width});
+    // As a flex item the column stretches to the article's height, which is
+    // all the sticky sidebar inside it needs: no minimum height, or a short
+    // page would push the footer down by a whole screen.
+    .section-sidebar {
+        $width: section-sidebar-width($content-measure);
+
+        flex: 0 0 $width;
+        width: $width;
     }
 
     // The theme gives the sidebar a fixed basis, which would set the width instead
-    .diamond-docs-sidebar-container .docs-sidebar {
+    .section-sidebar .docs-sidebar {
         flex: none;
         width: auto;
     }
@@ -43,6 +65,16 @@ $docs-sidebar-max-width: 21rem;
         scrollbar-width: thin;
         scrollbar-color: rgba($body-color, 0.25) transparent;
         scrollbar-gutter: stable;
+    }
+}
+
+// From xl the contents rail joins the text, so the article takes more room
+@include media-breakpoint-up(xl) {
+    .section-sidebar {
+        $width: section-sidebar-width($article-width);
+
+        flex-basis: $width;
+        width: $width;
     }
 }
 
@@ -209,9 +241,8 @@ details.sidebar-nav__group {
     }
 }
 
-// Where supported, closed branches stay laid out (hidden, with no height):
-// the sidebar width then accounts for every entry, so it does not jump when
-// a branch opens, and the opening can be animated.
+// Where supported, closed branches stay laid out (hidden, with no height),
+// so the opening can be animated.
 @supports selector(::details-content) {
     .sidebar-nav__group {
         interpolate-size: allow-keywords;

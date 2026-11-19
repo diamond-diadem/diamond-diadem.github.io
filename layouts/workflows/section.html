@@ -1,4 +1,0 @@
-{{ define "main" }}
-	{{ $workflowCards := partial "main/section-cards.html" (dict "sections" .Sections.ByTitle "heading" (T "available_workflows")) }}
-	{{ partial "main/docs-page.html" (dict "page" . "afterContent" $workflowCards) }}
-{{ end }}

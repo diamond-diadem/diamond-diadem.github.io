@@ -1,17 +1,15 @@
 {{- /*
-  Lists child sections as link cards, in the order given. Renders nothing when there are none.
-  Drafts are excluded by Hugo itself unless the site is built with --buildDrafts.
+  Lists the page's child sections as link cards, in the sidebar's order (see
+  sidebar/visible-pages.html), so both always agree. Renders nothing when
+  there are none.
 
   Each child section provides its card through front matter:
     title       Card title.
     summary     Short text shown under the title.
     tablerIcon  Card icon, e.g. "tabler-icons/outline/book".
-
-  @param {page.Pages} sections The child sections to list.
-  @param {string}     heading  Title rendered above the cards.
 */ -}}
-{{- with .sections }}
-<h2>{{ $.heading }}</h2>
+{{- $children := partial "sidebar/visible-pages.html" .Page -}}
+{{- with where $children "Kind" "section" }}
 <div class="card-nav d-flex flex-column">
   {{- range . }}
     {{- partial "main/link-card.html" (dict

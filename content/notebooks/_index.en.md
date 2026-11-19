@@ -13,3 +13,7 @@ Machine learning is part of DIAMOND's expertise for the PEPR DIADEM community. T
 They serve two different purposes. The training notebooks are there to be followed, modified and transposed: they walk through a complete workflow, from checking the quality of a dataset to building predictive models and exploring more advanced approaches. The Raman denoising pipeline is a production tool, published with its article and its data, that you can reuse on your own spectra.
 
 More resources will be added over time.
+
+## Available resources
+
+{{< section-cards >}}

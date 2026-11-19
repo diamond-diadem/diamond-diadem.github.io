@@ -116,3 +116,48 @@ applied to this content.
 [Uxcel: Law of common region](https://uxcel.com/blog/law-of-the-common-region-in-ux) ·
 [UX Planet: The Basics, Common Region](https://uxplanet.org/the-basics-common-region-bc235675a3e1) ·
 [Carbon: Cards usage](https://carbon-website-git-fork-vpicone-icon-lib-action-bar.carbon-design-system.vercel.app/experimental/cards/usage)
+
+## The title and the text keep the same place in every section
+
+**Decision.** Content pages of every section (including Data and About, which
+have no sidebar) go through `main/content-page.html`: same page header (title
+size, weight and spacing), same text size, same column. The sidebar column has the same width in every
+section, set by the screen width alone (never by the entries), and a section
+without a sidebar keeps it empty.
+
+**Why.** Moving from Workflows to Data used to shift the title and the text,
+because they used different layouts (a plain `h1` against the page header) and
+the sidebar was as wide as its longest entry, so even two sidebar sections
+differed. A reader who changes section reads that as the page jumping.
+
+**Cost.** Without a sidebar the text sits right of the centre by half the
+sidebar width. Codes pages keep their own centred header on purpose.
+
+## The sidebar takes the room the article leaves free
+
+**Decision.** From `lg` up, the sidebar column grows with the screen until the
+gap between it and the text would fall below `$article-rail-gap` (5rem, the
+gap between the text and its contents rail), between a floor of 14rem and a
+cap of 24rem. Its entries wrap only below that point.
+
+**Why.** A fixed `clamp(14rem, 20vw, 18rem)` wrapped entries such as
+"Utilisation des conteneurs sur les clusters HPC" onto two lines even on a
+1920px screen with some 600px of empty space beside them. Wrapped entries are
+taller and slower to scan, and the free space did nothing. Width still depends
+on the screen only, so the previous decision holds.
+
+**Arithmetic.** The row spans the page (its negative margins cancel the
+container padding) and the article column centres the article block of width
+*A* in what the sidebar *W* leaves. The gap before the text is then
+(100% − *W* − *A*) / 2, so a gap of at least *G* gives
+*W* = clamp(14rem, 100% − *A* − 2*G*, 24rem), with *A* = 36rem below `xl` and
+54rem (text, gap and rail) from `xl`. The sidebar thus starts growing at about
+1010px and reaches its cap at about 1170px; at `xl` the rail appears and the
+sidebar goes back to 14rem, growing again from about 1300px to its cap at
+about 1460px. Measured with the font file on the built site, the widest
+entry ("Comment interagir avec une image Apptainer ?", with its indent) needs
+about 19.3rem, so the 24rem cap keeps every entry on one line with room for
+longer future ones; past it, the column would only add empty space.
+
+**Where in the code.** `section-sidebar-width()` in
+`assets/scss/diamond/_section-sidebar.scss`.

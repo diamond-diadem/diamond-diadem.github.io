@@ -1,0 +1,26 @@
+{{- /*
+  Renders a content page: the section sidebar column, then the page header and
+  the text with its contents rail. Every content page goes through here, so the
+  title and the text keep the same place, size and weight from one section to
+  another.
+
+  @param {page} . The page to render.
+*/ -}}
+<div class="row flex-xl-nowrap">
+	{{ partial "main/section-sidebar.html" . }}
+	<div class="col container-fw article-column d-lg-flex flex-lg-row justify-content-center mx-auto">
+		<main class="docs-content diamond-content">
+			{{ partial "main/page-header.html" . }}
+			{{ partial "main/article-split.html" . }}
+			{{ if site.Params.doks.editPage -}}
+			<div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
+				{{ partial "main/edit-page.html" . }}
+			</div>
+			{{ end -}}
+		</main>
+	</div>
+</div>
+{{- /* The videos ask for consent before loading YouTube, through this dialog */ -}}
+{{ if and site.Params.diamond.cookiesConsent (.HasShortcode "video-with-consent") -}}
+{{ partial "main/consent-popup.html" . }}
+{{ end -}}

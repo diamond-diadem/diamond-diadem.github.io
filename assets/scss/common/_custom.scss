@@ -12,8 +12,9 @@
 @import "diamond/drawer";
 @import "diamond/site-menu";
 @import "diamond/nav-disclosure";
-@import "diamond/docs-layout";
+// The sidebar sizes itself from the article's width, so the article comes first
 @import "diamond/article-layout";
+@import "diamond/section-sidebar";
 @import "diamond/heading-anchors";
 @import "diamond/table-scroll";
 @import "diamond/content-images";
@@ -171,10 +172,6 @@ u {
     .nav-logo {
         height: 50px;
     }
-}
-
-.diamond-docs-sidebar-container {
-    min-height: 100vh;
 }
 
 @include media-breakpoint-down(md) {

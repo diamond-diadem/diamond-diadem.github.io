@@ -1,6 +1,0 @@
-{{ define "main" }}
-	{{ partial "main/docs-page.html" (dict "page" .) }}
-	{{ if site.Params.diamond.cookiesConsent }}
-	{{ partial "main/consent-popup.html" . }}
-	{{ end }}
-{{ end }}

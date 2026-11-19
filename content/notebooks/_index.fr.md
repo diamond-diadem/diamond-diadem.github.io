@@ -13,3 +13,7 @@ Le machine learning fait partie de l'expertise de DIAMOND au service de la commu
 Leurs vocations diffèrent. Les notebooks de formation sont faits pour être suivis, modifiés et transposés : ils parcourent un enchaînement complet, de la vérification de la qualité d'un jeu de données à la construction de modèles prédictifs, jusqu'à des approches plus avancées. Le pipeline de débruitage Raman est un outil de production, publié avec son article et ses données, que vous pouvez réutiliser sur vos propres spectres.
 
 D'autres ressources viendront s'ajouter au fil du temps.
+
+## Ressources disponibles
+
+{{< section-cards >}}

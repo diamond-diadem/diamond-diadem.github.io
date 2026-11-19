@@ -34,3 +34,5 @@ Les outils qui exécutent les workflows, appelés **workflow managers**, vont en
 ## Commencez en quelques minutes
 
 Les workflows ci-dessous sont déjà en place et prêts à être utilisés sur la plateforme. Choisissez celui qui correspond le mieux à vos recherches. Celui dont vous avez besoin n'y est pas ? [Dites-le-nous]({{% ref "contact" %}}) et nous étudierons son ajout.
+
+{{< section-cards >}}

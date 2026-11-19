@@ -1,3 +1,4 @@
+{{- /* Overrides the theme's about/single.html, which would win over page.html */ -}}
 {{ define "main" }}
-{{ partial "main/article-page.html" . }}
+	{{ partial "main/content-page.html" . }}
 {{ end }}

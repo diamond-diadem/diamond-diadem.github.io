@@ -1,6 +1,6 @@
 {{ define "main" }}
 	<div class="row flex-xl-nowrap">
-		{{ partial "main/docs-sidebar.html" . }}
+		{{ partial "main/section-sidebar.html" . }}
 		{{ if and (eq site.Params.doks.containerBreakpoint "fluid") (in .Site.Params.mainSections .Type) }}
 			<div class="col container-fw article-column d-lg-flex flex-lg-row justify-content-center mx-auto">
 		{{ end }}
@@ -33,7 +33,7 @@
 			</nav>
 			{{ end -}} -->
 
-			{{ partial "main/article-split.html" (dict "page" .) }}
+			{{ partial "main/article-split.html" . }}
 			{{/*  <div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
 				{{ if site.Params.doks.lastMod -}}
 					{{ partial "main/last-modified.html" . }}

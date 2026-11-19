@@ -34,3 +34,5 @@ The tools that run workflows, called **workflow managers**, go even further: the
 ## Start in minutes
 
 The workflows below are already set up and ready to use on the platform. Pick the one closest to your research. Missing the one you need? [Tell us]({{% ref "contact" %}}) and we will look into adding it.
+
+{{< section-cards >}}
