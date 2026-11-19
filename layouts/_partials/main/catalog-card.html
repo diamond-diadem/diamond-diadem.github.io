@@ -1,0 +1,26 @@
+{{- /*
+  One cell of a catalog grid (codes-catalog and documentation-catalog): the
+  page's icon, its name linked over the whole cell, a short line about it and,
+  at the foot, a label with its own icon. Cells share their borders like table
+  cells (see .home-grid--table in _home.scss).
+
+  @param {page}   page        The page the cell links to (its icon comes from it, see code-icon.html).
+  @param {string} text        The line under the name.
+  @param {string} [label]     The label at the foot of the cell.
+  @param {string} [labelIcon] Tabler outline icon name for the label, such as "cpu".
+*/ -}}
+<li class="home-card home-card--cell codes-card">
+  <span class="home-code__logo">{{ partial "main/code-icon.html" (dict "page" .page "class" "home-code__icon") }}</span>
+  <div class="codes-card__body">
+    <h4 class="home-card__title"><a class="home-card__link" href="{{ .page.RelPermalink }}">{{ .page.LinkTitle }}</a></h4>
+    {{- with .text }}
+    <p class="home-card__text">{{ . }}</p>
+    {{- end }}
+    {{- with .label }}
+    <p class="codes-card__kind">
+      {{- with $.labelIcon }}{{ partial "home/icon.html" (dict "name" (printf "tabler-icons/outline/%s" .) "class" "codes-card__kind-icon") }}{{ end -}}
+      {{ . }}
+    </p>
+    {{- end }}
+  </div>
+</li>

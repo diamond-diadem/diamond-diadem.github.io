@@ -1,0 +1,21 @@
+{{- /*
+  The code page a tutorial is about, named by its `code` front matter (the
+  code's folder name, such as "lammps"). A name that matches no code is
+  reported at build time.
+
+  Called through partialCached, once per page.
+
+  @param {page} . A tutorial, or any other page.
+  @returns {page} The code page, or false when the page names none.
+*/ -}}
+{{- $code := false }}
+{{- with .Params.code }}
+  {{- $slug := . }}
+  {{- range where site.RegularPages "Section" "codes" }}
+    {{- if eq .File.ContentBaseName $slug }}{{ $code = . }}{{ end }}
+  {{- end }}
+  {{- if not $code }}
+    {{- warnf "%s: code %q not found, expected a folder content/codes/<category>/%s" $.File.Path $slug $slug }}
+  {{- end }}
+{{- end }}
+{{- return $code }}

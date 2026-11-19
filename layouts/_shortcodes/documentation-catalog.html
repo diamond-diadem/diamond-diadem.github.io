@@ -1,37 +1,24 @@
 {{- /*
-  Catalog of by-container tutorials, as a grid of cards matching the codes
-  catalog (see codes-catalog.html and .home-grid--codes in _home.scss).
+  Catalog of the by-container tutorials, identical to the codes catalog (see
+  main/scale-catalog.html) but listing the tutorials that exist, so a code
+  whose tutorial is not written yet is simply absent.
 
-  Unlike the codes catalog, by-container is a flat section rather than one
-  subsection per category, so tutorials are grouped by their `category` front
-  matter value (scientific-computing or visualisation, the same categories
-  used under codes/) instead of by child section. Each group is titled via
-  the code_category_* i18n keys shared with the codes catalog. Adding a new
-  tutorial under documentation/by-container therefore appears here
-  automatically, as long as it sets `category` (and `code`, to show that
-  code's icon; see main/code-icon-files.html).
+  A tutorial takes its tagline and scale from the code its `code` front
+  matter names (see main/tutorial-code.html), and its type from its own
+  `category`. A tutorial about something with no code page, such as AiiDA,
+  sets `tagline` and `scale` itself.
 */ -}}
-{{- $categories := slice "scientific-computing" "visualisation" -}}
-{{- range .Page.Sections }}
-  {{- if eq .File.ContentBaseName "by-container" }}
-    {{- $pages := .Pages }}
-<div class="codes-catalog">
-    {{- range $categories }}
-      {{- $group := where $pages "Params.category" . }}
-      {{- if $group }}
-  <div class="codes-catalog__group">
-    <h3 class="codes-catalog__title">{{ i18n (printf "code_category_%s" .) }}</h3>
-    <ul class="home-grid home-grid--table home-grid--codes" role="list">
-        {{- range $group.ByTitle }}
-      <li class="home-card home-card--cell home-code">
-        <span class="home-code__logo">{{ partial "main/code-icon.html" (dict "page" . "class" "home-code__icon") }}</span>
-        <h4 class="home-card__title"><a class="home-card__link" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h4>
-      </li>
-        {{- end }}
-    </ul>
-  </div>
-      {{- end }}
-    {{- end }}
-</div>
-  {{- end }}
+{{- $items := slice -}}
+{{- with site.GetPage "/documentation/by-container" -}}
+  {{- range .RegularPages -}}
+    {{- $about := . -}}
+    {{- with partialCached "main/tutorial-code.html" . . }}{{ $about = . }}{{ end -}}
+    {{- $items = $items | append (dict
+      "page" .
+      "tagline" $about.Params.tagline
+      "scale" $about.Params.scale
+      "kind" .Params.category
+    ) -}}
+  {{- end -}}
 {{- end -}}
+{{- partial "main/scale-catalog.html" (dict "items" $items "countKey" "tutorials_count") -}}

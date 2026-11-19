@@ -1,6 +1,6 @@
 ---
 title: Notebooks ML
-linkTitle: Accueil
+sidebar_expanded: true
 aliases:
   - /notebooks/home/
 description: "Notebooks et pipelines ML de DIAMOND : un parcours de formation pas à pas et un pipeline de débruitage Noise2Noise pour la spectroscopie Raman."

@@ -722,43 +722,37 @@ h3.home-fair__title {
     color: var(--home-muted);
 }
 
-// The by-container tutorials catalog groups the same code cards by category,
-// each under its own heading rather than the home page's single mixed grid
-.codes-catalog__group + .codes-catalog__group {
-    margin-top: 2.5rem;
-}
-
-h3.codes-catalog__title {
-    margin-bottom: 1rem;
-    font-size: 1.0625rem;
-    font-weight: 600;
-    color: var(--home-text);
-}
-
 // ---------------------------------------------------------------------------
-// Codes catalog: one group per physical scale, opened by a ruler naming the
-// scales. Mobile first: the ruler runs down the page, biggest scale first and
-// its arrow pointing up towards it, and turns horizontal (smallest first, like
-// the word cloud's axis) once five labels fit side by side.
+// Catalogs (codes-catalog and documentation-catalog shortcodes): groups of
+// cells sharing their borders, each under a heading with its count.
+//
+// The codes catalog has one group per physical scale, opened by a ruler naming
+// the scales. Mobile first: the ruler runs down the page, biggest scale first
+// and its arrow pointing up towards it, and turns horizontal (smallest first,
+// like the word cloud's axis) once five labels fit side by side.
 
 $scale-dot: 0.75rem;
 $scale-line: 2px;
 
-.codes-catalog--scales {
+.catalog-groups {
     display: grid;
     gap: 2.75rem 1.5rem;
-    // The top margin keeps the ruler clear of the text introducing the catalog
-    margin-block: 3.5rem 2rem;
+    margin-block: 2rem;
 
-    // Groups of one or two codes take half the width, so two of them share
+    // Groups of one or two cells take half the width, so two of them share
     // a row instead of each leaving most of it empty
     @media (min-width: $home-breakpoint-md) {
         grid-template-columns: repeat(2, minmax(0, 1fr));
 
-        > :not(.codes-scale--small) {
+        > :not(.catalog-group--small) {
             grid-column: 1 / -1;
         }
     }
+}
+
+// Keeps the ruler clear of the text introducing the catalog
+.scale-ruler {
+    margin-top: 1.5rem;
 }
 
 .scale-ruler__stops {
@@ -907,26 +901,24 @@ a.scale-ruler__link {
     }
 }
 
-// A group's heading: its name with the ruler in miniature on the right,
-// its length and number of codes underneath
-.codes-scale__head {
+// A group's heading: its name (with, in the codes catalog, the ruler in
+// miniature on the right), its count underneath
+.catalog-group__head {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     gap: 0.125rem 1rem;
     align-items: center;
     margin-bottom: 1rem;
-    padding-bottom: 0.625rem;
-    border-bottom: 1px solid var(--home-border);
 }
 
-h3.codes-scale__title {
+h3.catalog-group__title {
     margin: 0;
     font-size: 1.25rem;
     font-weight: 700;
     color: var(--home-text);
 }
 
-.codes-scale__meta {
+.catalog-group__meta {
     grid-column: 1 / -1;
     margin: 0;
     font-family: $font-family-ui;
@@ -987,7 +979,6 @@ h3.codes-scale__title {
 
 .codes-grid {
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr));
-    gap: 0.75rem;
 }
 
 .codes-card {

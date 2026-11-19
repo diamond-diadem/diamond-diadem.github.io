@@ -1,6 +1,6 @@
 ---
 title: Workflows
-linkTitle: Accueil
+sidebar_expanded: true
 aliases:
   - /workflows/home/
   - /workflows/start-here/home/

@@ -1,0 +1,78 @@
+{{- /*
+  A catalog of codes grouped by the physical scale they model (electronic to
+  macroscopic, as in the community word cloud of the Codes page), sorted by
+  name inside each group. Shared by the codes catalog and the tutorials
+  catalog (codes-catalog.html, documentation-catalog.html), which only differ
+  in the pages they list.
+
+  A ruler opens the catalog: it names the scales with their typical length
+  and links to each group, and each group repeats it in miniature to show
+  where it sits along it. A scale with nothing listed stays on the ruler as a
+  hollow stop. Items with no tagline, or an unknown scale or type, are
+  reported at build time.
+
+  @param {slice}  items    One dict per cell: "page" (the page the cell
+                           links to, whose name and icon it shows), "tagline",
+                           "scale" (one of $scales) and "kind" (the code type,
+                           scientific-computing or visualisation).
+  @param {string} countKey i18n key counting the items of a group, such as "codes_count".
+*/ -}}
+{{- $scales := slice "electronic" "atomic" "mesoscopic" "microstructure" "macroscopic" -}}
+{{- $kindIcons := dict "scientific-computing" "cpu" "visualisation" "eye" -}}
+{{- $countKey := .countKey -}}
+{{- $items := slice -}}
+{{- range .items -}}
+  {{- $path := .page.File.Path -}}
+  {{- if not (in $scales .scale) -}}
+    {{- warnf "%s: scale %q, expected one of %s" $path .scale (delimit $scales ", ") -}}
+  {{- end -}}
+  {{- if not (index $kindIcons .kind) -}}
+    {{- warnf "%s: type %q, expected scientific-computing or visualisation" $path .kind -}}
+  {{- end -}}
+  {{- if not .tagline -}}
+    {{- warnf "%s has no tagline" $path -}}
+  {{- end -}}
+  {{- $items = $items | append (merge . (dict "name" .page.LinkTitle)) -}}
+{{- end -}}
+
+<div class="codes-catalog catalog-groups content-wide">
+  <nav class="scale-ruler" aria-label="{{ i18n "code_scales" }}">
+    <ol class="scale-ruler__stops" role="list">
+      {{- range $scales }}
+        {{- $label := printf `<span class="scale-ruler__name">%s</span> <span class="scale-ruler__size">%s</span>` (i18n (printf "code_scale_%s" .)) (i18n (printf "code_scale_%s_size" .)) }}
+      <li class="scale-ruler__stop">
+        {{- if where $items "scale" . }}
+        <a class="scale-ruler__link" href="#scale-{{ . }}">{{ $label | safeHTML }}</a>
+        {{- else }}
+        <span class="scale-ruler__link">{{ $label | safeHTML }}</span>
+        {{- end }}
+      </li>
+      {{- end }}
+    </ol>
+  </nav>
+
+  {{- range $index, $scale := $scales }}
+    {{- with where $items "scale" $scale }}
+  {{- /* One or two cells take half the width, so two short groups share a row */}}
+  <section class="catalog-group{{ if le (len .) 2 }} catalog-group--small{{ end }}" id="scale-{{ $scale }}" aria-labelledby="scale-{{ $scale }}-title">
+    <header class="catalog-group__head">
+      <h3 class="catalog-group__title" id="scale-{{ $scale }}-title">{{ i18n (printf "code_scale_%s" $scale) }}</h3>
+      <span class="scale-steps" aria-hidden="true">
+        {{- range $step, $_ := $scales }}<span class="scale-steps__dot{{ if eq $step $index }} is-current{{ end }}"></span>{{ end -}}
+      </span>
+      <p class="catalog-group__meta">{{ i18n (printf "code_scale_%s_size" $scale) }} · {{ i18n $countKey (len .) }}</p>
+    </header>
+    <ul class="home-grid home-grid--table codes-grid" role="list">
+      {{- range sort . "name" }}
+        {{- partial "main/catalog-card.html" (dict
+          "page" .page
+          "text" .tagline
+          "label" (i18n (printf "code_category_%s" .kind))
+          "labelIcon" (index $kindIcons .kind)
+        ) }}
+      {{- end }}
+    </ul>
+  </section>
+    {{- end }}
+  {{- end }}
+</div>

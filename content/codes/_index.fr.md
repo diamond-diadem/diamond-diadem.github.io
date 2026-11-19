@@ -1,6 +1,6 @@
 ---
 title: Codes et logiciels
-linkTitle: Accueil
+sidebar_expanded: true
 aliases:
   - /codes/home/
   - /codes/start-here/home/

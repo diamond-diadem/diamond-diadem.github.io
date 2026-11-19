@@ -282,15 +282,6 @@ tr {
     }
 }
 
-// A code's icon before its name in the menu (main/code-icon.html)
-.sidebar-icon {
-    width: 1.25rem;
-    height: 1.25rem;
-    margin-right: 6px;
-    object-fit: contain;
-    vertical-align: sub;
-}
-
 // // // modify _global.scss // // //
 
 @include media-breakpoint-up(lg) {

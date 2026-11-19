@@ -1,21 +1,22 @@
 # CLAUDE.md
 
 Context for working on the DIAMOND website (PEPR DIADEM digital platform),
-published at https://diamond-diadem.github.io/. Read `CONTRIBUTING.md` too; this
-file covers what it does not, plus the main → dev content-porting procedure.
+published at https://diamond-diadem.github.io/.
 
 ## Conventions to strictly follow
 
+- If this file grows past about 60 lines, tell me and suggest which lines to cut or move into a skill.
 - Accessibility is part of "done": AA contrast (the palette comments record measured ratios — verify before adding colours), visible `:focus-visible`, skip link, `.visually-hidden` for screen-reader-only text, `prefers-reduced-motion` guards on transitions.
-- Comments explain *why*, not what. The existing code is densely commented in this style; match it.
-- No CSS-in-template `<style>` blocks and no inline `<script>` — everything goes in `site.css` / `site.js`.
+- Comments explain *why*, not what.
 - The website MUST follow a progressive enhancement approach, providing basic features to users with basic browser CSS and JS support, and increasing features as the supported features increase in the browser used.
-- The website MUST be responsive under all circumstances. 
+- The website MUST be responsive under all circumstances.
 - ALL MODIFICATIONS must be in agreement with the design of the website, unless specifically asked to design something on a new way.
-- Always use `hugo` and `clean-code` skills, to make sure we are writing proper code.
+- Use `hugo` and `clean-code` skills when writing code.
 - Other than this "Conventions" section, which you should not touch, you must update the rest of this document as pertinent: to fix inconsistencies or legacy issues introduced all along the way with the modifications, update the website structure, record my preferences, etc.
-- On each run, optimize this file so the next time it's better at token consumption/efficiency.
 
+Design choices backed by an investigation (measure and font size, catalog
+cells vs cards) are recorded in `Design_decisions.md`: read it before
+changing them, and add a section for any new one.
 
 ## Branches: the most important thing to know
 
@@ -144,8 +145,12 @@ HTML → Markdown conversion style.
   `link-card`s. Unavailable items stay as disabled cards
   (`title="Content to be added"`, `href="#bottom"`, `disabled="true"`).
 - The Codes landing page lists codes **automatically** (`codes-catalog`
-  shortcode): one group per `scale`, alphabetical inside, opened by a scale
-  ruler; it warns at build time on a missing `tagline` or unknown `scale`.
+  shortcode), and the Documentation page lists the existing tutorials the
+  same way (`documentation-catalog`): both only gather items and render
+  `main/scale-catalog.html`: one group per `scale`, alphabetical inside,
+  opened by a scale ruler, cells (`main/catalog-card.html`) in a table grid
+  sharing borders (`home-grid--table`, a deliberate choice, keep it). It
+  warns at build time on a missing `tagline` or unknown `scale`/type.
   Scale names and typical lengths are `code_scale_*` i18n keys. The home
   page shows the codes listed in its `codes.featured` front matter.
 - Block-level width: `.content-wide` makes any block as wide as a
@@ -158,8 +163,10 @@ HTML → Markdown conversion style.
 
 - `<slug>.en.md`/`.fr.md` (or a bundle when it has images). Front matter adds
   `category: scientific-computing|visualisation` and `code: <code folder>`
-  (e.g. `code: amitex-fftp`), which shows that code's icon. A tutorial about
-  something with no code page (AiiDA) is a bundle with its own `icon.<ext>`.
+  (e.g. `code: amitex-fftp`, resolved by `main/tutorial-code.html`), which
+  gives the tutorial that code's icon, tagline and scale in the
+  Documentation catalog. A tutorial about something with no code page
+  (AiiDA) is a bundle with its own `icon.<ext>`, `tagline` and `scale`.
 - Starts with a `Prerequisites` / `Prérequis` note callout (no icon) listing
   Apptainer (our guide + official docs), the image, the input files; then a
   paragraph pointing to the Apptainer description/crash course.
@@ -276,6 +283,16 @@ fast-forward merged into main.
 5. **Check**: `git rev-parse main` unchanged, `git log dev..main` empty,
    `git merge-base --is-ancestor main dev` succeeds (dev → main will
    fast-forward). Do not push unless asked.
+
+## Section sidebar (codes, documentation, notebooks, workflows)
+
+- Built from the section tree (`sidebar/*.html`), shared by the desktop
+  sidebar (`main/docs-sidebar.html`) and the mobile drawer (`header.html`).
+  Styled after the contents rail: numbered chapters (`_docs-layout.scss`).
+- Section `_index` front matter: `sidebar_expanded` (default `true`; `false`
+  unfolds only the branch of the current page), `sidebar_sort: title`.
+- The section's display name is its main-menu name
+  (`sidebar/section-name.html`); section pages have no `linkTitle`.
 
 ## Known issues on dev (not fixed yet)
 

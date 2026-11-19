@@ -51,7 +51,7 @@
         <div class="header-bar"></div>
       {{ end -}}
       <div class="drawer-header">
-        <p class="drawer-title" id="offcanvasNavSectionLabel">{{ .Section | humanize }}</p>
+        <p class="drawer-title" id="offcanvasNavSectionLabel">{{ partial "sidebar/section-name.html" . }}</p>
         {{ partial "header/drawer-close.html" (dict "label" (i18n "section_menu_close")) }}
       </div>
       <div class="drawer-body">

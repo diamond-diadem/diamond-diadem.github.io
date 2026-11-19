@@ -1,0 +1,15 @@
+{{- /*
+  The name of a page's top section as the main menu shows it ("Codes",
+  "ML notebooks"). The section pages' own link titles do not fit: they
+  read "Home", for the old site's section menus.
+
+  @param {page} . Any page.
+  @returns {string} The menu entry's name, or the section title when the menu has none.
+*/ -}}
+{{- $section := .FirstSection -}}
+{{- $name := $section.Title -}}
+{{- $path := strings.Trim $section.RelPermalink "/" -}}
+{{- range site.Menus.main -}}
+  {{- if eq (strings.Trim .URL "/") $path -}}{{ $name = .Name }}{{- end -}}
+{{- end -}}
+{{- return $name -}}

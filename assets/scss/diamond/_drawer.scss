@@ -169,15 +169,15 @@ $drawer-header-height: 3.8125rem;
     }
 
     .drawer .sidebar-nav__link--top,
-    .drawer .sidebar-nav__toggle--top {
+    .drawer .sidebar-nav__group > .sidebar-nav__toggle--top {
         min-height: 2.75rem;
-        font-size: 1.25rem;
+        font-size: 1.0625rem;
     }
 
     .drawer .sidebar-nav__link--nested,
-    .drawer .sidebar-nav__toggle--nested {
+    .drawer .sidebar-nav__group > .sidebar-nav__toggle--nested {
         min-height: 2.5rem;
-        font-size: 1.125rem;
+        font-size: 1rem;
     }
 
     .drawer-footer {

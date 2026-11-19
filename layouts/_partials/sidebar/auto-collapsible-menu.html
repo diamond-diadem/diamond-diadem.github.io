@@ -1,7 +1,8 @@
 {{- /*
   Section menu built from the section tree. The section landing page is
-  not listed (the header already links to it). Branches start folded
-  unless they are on the path to the current page.
+  not listed (the header already links to it). Branches start unfolded,
+  unless the section's _index front matter sets `sidebar_expanded: false`:
+  then only the branch on the path to the current page is.
 
   @param {page} . The page being rendered.
 */ -}}
@@ -11,10 +12,15 @@
   {{- $currentDir = .Dir -}}
   {{- $currentPath = .Path -}}
 {{- end -}}
+{{- /* Not `default true`: it would also replace an explicit false */ -}}
+{{- $expanded := true -}}
+{{- with .FirstSection -}}
+  {{- if isset .Params "sidebar_expanded" }}{{ $expanded = .Params.sidebar_expanded }}{{ end -}}
+{{- end -}}
 <ul class="sidebar-nav">
   {{- range where site.Sections "Section" "in" .Section }}
     {{- range $page := partial "sidebar/visible-pages" . }}
-      {{ partial "sidebar/menu-item.html" (dict "page" $page "currentDir" $currentDir "currentPath" $currentPath "top" true) }}
+      {{ partial "sidebar/menu-item.html" (dict "page" $page "currentDir" $currentDir "currentPath" $currentPath "top" true "open" $expanded) }}
     {{- end }}
   {{- end }}
 </ul>

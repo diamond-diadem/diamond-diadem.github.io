@@ -10,7 +10,7 @@
   @param {string} currentDir  Directory of the page being rendered, for fuzzy active-state matching.
   @param {string} currentPath File path of the page being rendered, for exact active-state matching.
   @param {bool}   [top]       True for a top section's direct children, styled as the menu headings.
-  @param {bool}   [open]      True to unfold a branch even off the path to the current page.
+  @param {bool}   [open]      True to unfold the branch, and those below it, even off the path to the current page.
 */ -}}
 {{- $page := .page -}}
 {{- $currentDir := .currentDir -}}
@@ -25,7 +25,7 @@
       <ul class="sidebar-nav__children">
         {{ partial "sidebar/section-page-link.html" (dict "section" $page "label" (T "section_description") "currentPath" $currentPath) }}
         {{- range partial "sidebar/visible-pages" $page }}
-          {{ partial "sidebar/menu-item.html" (dict "page" . "currentDir" $currentDir "currentPath" $currentPath) }}
+          {{ partial "sidebar/menu-item.html" (dict "page" . "currentDir" $currentDir "currentPath" $currentPath "open" $.open) }}
         {{- end }}
       </ul>
     </details>

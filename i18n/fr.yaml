@@ -56,6 +56,9 @@ code_scale_macroscopic_size: "≥ 1 mm"
 codes_count:
   one: "{{ .Count }} code"
   other: "{{ .Count }} codes"
+tutorials_count:
+  one: "{{ .Count }} tutoriel"
+  other: "{{ .Count }} tutoriels"
 
 ### FAQ page ###
 faq_questions: Questions

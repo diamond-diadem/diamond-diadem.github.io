@@ -1,5 +1,6 @@
 ---
 title: Documentation
+sidebar_expanded: true
 aliases:
   - /documentation/home/
 seo:

@@ -46,13 +46,27 @@ $docs-sidebar-max-width: 21rem;
     }
 }
 
-// Sidebar tree (see sidebar/menu-item.html): the section entries read as
-// headings, and their children hang from a thin guide line. Branches are
-// native disclosures, so they fold without JS.
+// Sidebar tree (see sidebar/menu-item.html), in the grammar of the contents
+// rail on the right (see _article-layout.scss): interface font, small muted
+// rows that darken on hover and when current, no boxes. The rail numbers the
+// sections of a page; the sidebar numbers the chapters of the section the same
+// way, in the margin, and their pages line up with the chapter titles, a step
+// smaller. Branches are native disclosures, so they fold without JS.
 
-$sidebar-nav-radius: 0.375rem;
-$sidebar-nav-indent: 0.625rem;
-$sidebar-nav-duration: 0.2s;
+$sidebar-nav-number-width: 1.75rem;
+$sidebar-nav-duration: 0.15s;
+
+// The section name, as the rail's "Contents" label (desktop only: the drawer
+// has its own title)
+.sidebar-heading {
+    margin: 2.5rem 0 0.9rem;
+    font-family: $font-family-ui;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--page-muted);
+}
 
 .sidebar-nav,
 .sidebar-nav__children {
@@ -64,94 +78,94 @@ $sidebar-nav-duration: 0.2s;
 .sidebar-nav {
     display: flex;
     flex-direction: column;
-    gap: 0.125rem;
-    margin-block: 2rem;
+    margin-bottom: 2rem;
     font-family: $font-family-ui;
-    line-height: 1.3;
+    line-height: 1.45;
+    counter-reset: sidebar-chapter;
 }
 
 .sidebar-nav__children {
     display: flex;
     flex-direction: column;
-    gap: 1px;
-    margin: 0.125rem 0 0.5rem $sidebar-nav-indent;
-    padding-left: 0.375rem;
-    border-left: 1px solid rgba($body-color, 0.14);
+    margin-bottom: 0.5rem;
+    padding-left: $sidebar-nav-number-width;
 }
-
-// Rows: a whole-row target, tinted on hover
 
 .sidebar-nav__link,
 .sidebar-nav__group > .sidebar-nav__toggle {
+    position: relative;
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.375rem $sidebar-nav-indent;
-    border-radius: $sidebar-nav-radius;
-    color: $body-color;
+    padding: 0.25rem 0;
+    color: var(--page-muted);
+    font-size: 0.875rem;
     text-decoration: none;
-    transition:
-        background-color $sidebar-nav-duration ease,
-        color $sidebar-nav-duration ease;
+    transition: color $sidebar-nav-duration ease;
 }
 
 .sidebar-nav__link:hover,
-.sidebar-nav__group > .sidebar-nav__toggle:hover {
-    background-color: rgba($body-color, 0.06);
-    color: $body-color;
+.sidebar-nav__link:focus-visible,
+.sidebar-nav__group > .sidebar-nav__toggle:hover,
+.sidebar-nav__group > .sidebar-nav__toggle:focus-visible {
+    color: var(--bs-body-color);
     text-decoration: none;
 }
 
+// Drawn inside the row: the scrolling sidebar would clip it on the left edge
 .sidebar-nav__link:focus-visible,
 .sidebar-nav__group > .sidebar-nav__toggle:focus-visible {
-    outline: 2px solid $link-color;
+    outline: 2px solid var(--bs-link-color);
     outline-offset: -2px;
+    border-radius: 0.25rem;
 }
 
-.sidebar-nav__link--top,
-.sidebar-nav__toggle--top {
-    font-size: 1.125rem;
+.sidebar-nav__link[aria-current="page"] {
+    color: var(--bs-body-color);
     font-weight: 600;
+}
+
+// Chapters: the section's direct children, numbered in the margin. Toggles
+// are qualified like the rows above, to override them.
+.sidebar-nav__link--top,
+.sidebar-nav__group > .sidebar-nav__toggle--top {
+    padding-left: $sidebar-nav-number-width;
+    color: var(--bs-body-color);
+    font-weight: 600;
+    counter-increment: sidebar-chapter;
+
+    &::before {
+        content: counter(sidebar-chapter, decimal-leading-zero);
+        position: absolute;
+        left: 0;
+        color: var(--page-muted);
+        opacity: 0.55;
+        font-size: 0.6875rem;
+        font-weight: 400;
+        font-variant-numeric: tabular-nums;
+    }
 }
 
 .sidebar-nav__link--nested,
-.sidebar-nav__toggle--nested {
-    font-size: 1.0625rem;
-    font-weight: 400;
+.sidebar-nav__group > .sidebar-nav__toggle--nested {
+    font-size: 0.8125rem;
 }
 
-.sidebar-nav__link--nested {
-    position: relative;
-    padding-block: 0.3125rem;
-    color: $body-secondary-color;
+// A code's icon before its name (main/code-icon.html)
+.sidebar-icon {
+    flex: none;
+    width: 1rem;
+    height: 1rem;
+    object-fit: contain;
 }
 
-// Current page: accent color, and a bar laid over the guide line
-
-.sidebar-nav__link[aria-current="page"] {
-    background-color: rgba($link-color, 0.08);
-    color: $link-color;
-    font-weight: 600;
-}
-
-.sidebar-nav__link--nested[aria-current="page"]::before {
-    content: "";
-    position: absolute;
-    inset-block: 0.3125rem;
-    left: calc(-0.375rem - 1px);
-    width: 2px;
-    border-radius: 1px;
-    background-color: $link-color;
-}
-
-// Branch toggles: a small chevron at the row end, turning down when open
+// Branch toggles: a small chevron following the title, turning down when open
 
 details.sidebar-nav__group {
     @include plain-disclosure;
 }
 
 .sidebar-nav__group > .sidebar-nav__toggle {
-    justify-content: space-between;
     cursor: pointer;
     list-style: none;
 }
@@ -166,55 +180,32 @@ details.sidebar-nav__group {
     flex: none;
     width: 0.4em;
     height: 0.4em;
-    margin-right: 0.15em;
     border-right: 1.5px solid currentColor;
     border-bottom: 1.5px solid currentColor;
     opacity: 0.55;
     transform: rotate(-45deg);
-    transition: transform $sidebar-nav-duration ease;
+    transition: transform 0.2s ease;
 }
 
 .sidebar-nav__group[open] > .sidebar-nav__toggle::after {
     transform: translateY(-0.1em) rotate(45deg);
 }
 
+// The theme's dark link color outranks the rows' colors: restate them
 @include color-mode(dark) {
     .docs-sidebar:not(.docs-sidebar-top) .docs-links {
         scrollbar-color: rgba($body-color-dark, 0.25) transparent;
     }
 
-    .sidebar-nav__children {
-        border-left-color: rgba($body-color-dark, 0.16);
-    }
-
-    .sidebar-nav__link,
-    .sidebar-nav__group > .sidebar-nav__toggle,
-    .sidebar-nav__link:hover,
-    .sidebar-nav__group > .sidebar-nav__toggle:hover {
-        color: $body-color-dark;
+    .sidebar-nav__link {
+        color: var(--page-muted);
     }
 
     .sidebar-nav__link:hover,
-    .sidebar-nav__group > .sidebar-nav__toggle:hover {
-        background-color: rgba($white, 0.07);
-    }
-
-    .sidebar-nav__link--nested {
-        color: $body-secondary-color-dark;
-    }
-
-    .sidebar-nav__link[aria-current="page"] {
-        background-color: rgba($link-color-dark, 0.1);
-        color: $link-color-dark;
-    }
-
-    .sidebar-nav__link--nested[aria-current="page"]::before {
-        background-color: $link-color-dark;
-    }
-
     .sidebar-nav__link:focus-visible,
-    .sidebar-nav__group > .sidebar-nav__toggle:focus-visible {
-        outline-color: $link-color-dark;
+    .sidebar-nav__link[aria-current="page"],
+    .sidebar-nav__link--top {
+        color: var(--bs-body-color);
     }
 }
 

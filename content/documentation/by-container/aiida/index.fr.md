@@ -2,6 +2,8 @@
 title: Tutoriel AiiDA
 weight: 1
 category: scientific-computing
+tagline: Workflows avec traçabilité complète
+scale: atomic
 description: "Tutoriel sur l'utilisation d'AiiDA via le conteneur Apptainer de DIAMOND pour automatiser des workflows de calcul de matériaux avec traçabilité."
 ---
 

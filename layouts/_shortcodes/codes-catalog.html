@@ -1,76 +1,18 @@
 {{- /*
-  Catalog of containerised codes, all categories together, grouped by the
-  physical scale they model (electronic to macroscopic, as in the community
-  word cloud above it) and sorted alphabetically inside each group.
+  Catalog of containerised codes, all types together, grouped by scale (see
+  main/scale-catalog.html).
 
-  Everything comes from each code page: its icon file, and its front matter:
-  `scale` picks its
-  group, `tagline` is the line under its name, and its section
-  (scientific-computing or visualisation) gives the type shown on the card.
-  A new code therefore appears on its own; a missing or unknown scale or a
-  missing tagline is reported at build time.
-
-  A ruler opens the catalog: it names the scales with their typical length
-  and links to each group, and each group repeats it in miniature to show
-  where it sits along it.
+  Everything comes from each code page: its icon file, its `tagline` and
+  `scale` front matter, and its type from its section (scientific-computing
+  or visualisation). A new code therefore appears on its own.
 */ -}}
-{{- $scales := slice "electronic" "atomic" "mesoscopic" "microstructure" "macroscopic" -}}
-{{- $kindIcons := dict "scientific-computing" "cpu" "visualisation" "eye" -}}
-{{- $codes := .Page.RegularPagesRecursive -}}
-
-{{- range $codes -}}
-  {{- if not (in $scales .Params.scale) -}}
-    {{- warnf "codes-catalog: %s has scale %q, expected one of %s" .File.Path .Params.scale (delimit $scales ", ") -}}
-  {{- end -}}
-  {{- if not .Params.tagline -}}
-    {{- warnf "codes-catalog: %s has no tagline" .File.Path -}}
-  {{- end -}}
+{{- $items := slice -}}
+{{- range .Page.RegularPagesRecursive -}}
+  {{- $items = $items | append (dict
+    "page" .
+    "tagline" .Params.tagline
+    "scale" .Params.scale
+    "kind" .Parent.File.ContentBaseName
+  ) -}}
 {{- end -}}
-
-<div class="codes-catalog codes-catalog--scales content-wide">
-  <nav class="scale-ruler" aria-label="{{ i18n "code_scales" }}">
-    <ol class="scale-ruler__stops" role="list">
-      {{- range $scales }}
-        {{- $label := printf `<span class="scale-ruler__name">%s</span> <span class="scale-ruler__size">%s</span>` (i18n (printf "code_scale_%s" .)) (i18n (printf "code_scale_%s_size" .)) }}
-      <li class="scale-ruler__stop">
-        {{- if where $codes "Params.scale" . }}
-        <a class="scale-ruler__link" href="#scale-{{ . }}">{{ $label | safeHTML }}</a>
-        {{- else }}
-        <span class="scale-ruler__link">{{ $label | safeHTML }}</span>
-        {{- end }}
-      </li>
-      {{- end }}
-    </ol>
-  </nav>
-
-  {{- range $index, $scale := $scales }}
-    {{- with where $codes "Params.scale" $scale }}
-  {{- /* One or two codes take half the width, so two short groups share a row */}}
-  <section class="codes-scale{{ if le (len .) 2 }} codes-scale--small{{ end }}" id="scale-{{ $scale }}" aria-labelledby="scale-{{ $scale }}-title">
-    <header class="codes-scale__head">
-      <h3 class="codes-scale__title" id="scale-{{ $scale }}-title">{{ i18n (printf "code_scale_%s" $scale) }}</h3>
-      <span class="scale-steps" aria-hidden="true">
-        {{- range $step, $_ := $scales }}<span class="scale-steps__dot{{ if eq $step $index }} is-current{{ end }}"></span>{{ end -}}
-      </span>
-      <p class="codes-scale__meta">{{ i18n (printf "code_scale_%s_size" $scale) }} · {{ i18n "codes_count" (len .) }}</p>
-    </header>
-    <ul class="home-grid codes-grid" role="list">
-      {{- range .ByTitle }}
-        {{- $kind := .Parent.File.ContentBaseName }}
-      <li class="home-card codes-card">
-        <span class="home-code__logo">{{ partial "main/code-icon.html" (dict "page" . "class" "home-code__icon") }}</span>
-        <div class="codes-card__body">
-          <h4 class="home-card__title"><a class="home-card__link" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h4>
-          <p class="home-card__text">{{ .Params.tagline }}</p>
-          <p class="codes-card__kind codes-card__kind--{{ $kind }}">
-            {{- with index $kindIcons $kind }}{{ partial "home/icon.html" (dict "name" (printf "tabler-icons/outline/%s" .) "class" "codes-card__kind-icon") }}{{ end -}}
-            {{ partial "home/code-category.html" . }}
-          </p>
-        </div>
-      </li>
-      {{- end }}
-    </ul>
-  </section>
-    {{- end }}
-  {{- end }}
-</div>
+{{- partial "main/scale-catalog.html" (dict "items" $items "countKey" "codes_count") -}}

@@ -4,9 +4,8 @@
   icon needs another version in dark mode.
 
   A code page holds its own icon. A tutorial shows the icon of the code its
-  `code` front matter names (the code's folder name, such as "lammps"), or
-  its own when it is a bundle about something that has no code page, such
-  as AiiDA. Codes and tutorials without an icon are reported at build time.
+  `code` front matter names (see tutorial-code.html), or its own when it is
+  a bundle about something that has no code page, such as AiiDA. Codes and tutorials without an icon are reported at build time.
 
   Called through partialCached, once per page.
 
@@ -14,15 +13,8 @@
   @returns {dict} "light" and, when there is one, "dark" image resources.
 */ -}}
 {{- $source := . }}
-{{- with .Params.code }}
-  {{- $slug := . }}
-  {{- $source = false }}
-  {{- range where site.RegularPages "Section" "codes" }}
-    {{- if eq .File.ContentBaseName $slug }}{{ $source = . }}{{ end }}
-  {{- end }}
-  {{- if not $source }}
-    {{- warnf "%s: code %q not found, expected a folder content/codes/<category>/%s" $.File.Path $slug $slug }}
-  {{- end }}
+{{- if .Params.code }}
+  {{- $source = partialCached "main/tutorial-code.html" . . }}
 {{- end }}
 
 {{- $files := dict }}

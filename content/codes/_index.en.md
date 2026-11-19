@@ -1,6 +1,6 @@
 ---
 title: Codes and software
-linkTitle: Home
+sidebar_expanded: true
 aliases:
   - /codes/home/
   - /codes/start-here/home/
