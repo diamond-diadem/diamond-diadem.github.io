@@ -1,0 +1,178 @@
+// Tag filter of the catalogs (main/catalog-filter.html, catalog-filter.js):
+// one on/off switch per tag under the scale ruler, with the tag's icon, name
+// and count. On, the track takes the accent and the knob slides right; off,
+// the track turns grey and the label mutes, so the state never rests on
+// color alone. The switches wrap onto more lines as tags are added.
+// Colors come from the catalog's home tokens (_home.scss).
+
+$tag-switch-width: 2.25rem;
+$tag-switch-height: 1.3rem;
+$tag-switch-knob: 1rem;
+$tag-switch-inset: 0.15rem;
+$tag-switch-duration: 0.15s;
+
+.tag-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 0.75rem;
+    align-items: center;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: $font-family-ui;
+}
+
+.tag-filter__legend {
+    float: left; // keeps the legend on the switches' line, as a flex item would
+    width: auto;
+    margin: 0 0.25rem 0 0;
+    padding: 0;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--home-muted);
+}
+
+.tag-filter__options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.25rem;
+}
+
+.tag-filter__option {
+    position: relative;
+    display: inline-flex;
+    gap: 0.4rem;
+    align-items: center;
+    padding: 0.2rem 0.25rem;
+    border-radius: 0.375rem;
+    color: var(--home-muted);
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.4;
+    cursor: pointer;
+    user-select: none;
+    transition: color $tag-switch-duration ease;
+
+    &:hover,
+    &:has(:checked) {
+        color: var(--home-text);
+    }
+
+    &:has(:focus-visible) {
+        outline: 2px solid var(--home-accent);
+        outline-offset: 2px;
+    }
+}
+
+// The real checkbox stays in the page for keyboards and screen readers
+.tag-filter__input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+// The switch: a track and a knob sliding along it
+.tag-filter__control {
+    position: relative;
+    flex-shrink: 0;
+    width: $tag-switch-width;
+    height: $tag-switch-height;
+    border-radius: 999px;
+    background-color: var(--home-border-strong); // where color-mix() is unknown
+    // The off track: 3.6:1 against the page in light mode, 3.1:1 in dark
+    // (WCAG 1.4.11 asks 3:1 for the parts showing a control's state)
+    background-color: color-mix(in srgb, var(--home-muted) 65%, transparent);
+    transition: background-color $tag-switch-duration ease;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: $tag-switch-inset;
+        left: $tag-switch-inset;
+        width: $tag-switch-knob;
+        height: $tag-switch-knob;
+        border-radius: 50%;
+        background-color: #fff;
+        box-shadow: 0 1px 2px rgba($black, 0.3);
+        transition: transform $tag-switch-duration ease;
+    }
+
+    :checked + & {
+        background-color: var(--home-accent);
+    }
+
+    :checked + &::after {
+        transform: translateX($tag-switch-width - $tag-switch-knob - 2 * $tag-switch-inset);
+    }
+}
+
+.tag-filter__icon {
+    flex-shrink: 0;
+    width: 1rem;
+    height: 1rem;
+}
+
+.tag-filter__count {
+    font-size: 0.75rem;
+    font-weight: 400;
+    font-variant-numeric: tabular-nums;
+
+    &::before {
+        content: "(";
+    }
+
+    &::after {
+        content: ")";
+    }
+}
+
+.tag-filter__empty {
+    flex-basis: 100%;
+    margin: 0.25rem 0 0;
+    color: var(--home-muted);
+    font-size: 0.9375rem;
+}
+
+.tag-filter__reset {
+    padding: 0;
+    border: 0;
+    background: none;
+    color: var(--home-accent);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+    cursor: pointer;
+
+    &:focus-visible {
+        outline: 2px solid var(--home-accent);
+        outline-offset: 2px;
+        border-radius: 0.125rem;
+    }
+}
+
+// Cells and groups set their own display, which would win over [hidden]
+.codes-catalog [data-tag][hidden],
+.codes-catalog .catalog-group[hidden] {
+    display: none;
+}
+
+// A scale whose cells are all filtered out: a hollow stop, like a scale with
+// no code at all (span.scale-ruler__link in _home.scss), and no longer a link
+.scale-ruler__stop.is-empty .scale-ruler__link {
+    color: var(--home-muted);
+    pointer-events: none;
+
+    &::before {
+        border: $scale-line solid var(--home-border-strong);
+        background-color: var(--home-page);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .tag-filter__option,
+    .tag-filter__control,
+    .tag-filter__control::after {
+        transition: none;
+    }
+}

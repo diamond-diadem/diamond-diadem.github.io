@@ -1,0 +1,44 @@
+{{- /*
+  A main menu entry with children, as a native disclosure: it opens without
+  JS, and nav-disclosure.js closes it the way a dropdown is expected to on
+  large screens. There it floats as a panel of two columns, filled row by
+  row, where each child shows its icon (params.icon) and description
+  (params.description); in the small-screen drawer it expands in place and
+  only the names remain.
+
+  @param {menuEntry} entry   The parent entry.
+  @param {page}      current The page being rendered.
+  @param {bool}      active  Whether the header already marks the entry as current.
+*/ -}}
+{{- $current := .current -}}
+{{- $active := .active -}}
+{{- range .entry.Children }}
+  {{- with .Page }}{{ $active = or $active (partial "header/is-in-page.html" (dict "page" . "current" $current)) }}{{ end }}
+{{- end -}}
+<li class="nav-item dropdown section-dropdown">
+  <details class="nav-disclosure">
+    <summary class="nav-link site-menu-link dropdown-toggle">
+      <span{{ if $active }} class="active"{{ end }}>
+        {{ .entry.Name -}}
+        {{ partial "home/icon.html" (dict "name" "tabler-icons/outline/chevron-down" "class" "icon-tabler-chevron-down") }}
+      </span>
+    </summary>
+    <ul class="dropdown-menu nav-panel" role="list">
+      {{- range .entry.Children }}
+        {{- $here := false }}
+        {{- with .Page }}{{ $here = partial "header/is-in-page.html" (dict "page" . "current" $current) }}{{ end }}
+      <li>
+        <a class="dropdown-item nav-panel__item{{ if $here }} active{{ end }}" href="{{ .URL }}"{{ if $here }} aria-current="page"{{ end }}>
+          {{- with .Params.icon }}{{ partial "home/icon.html" (dict "name" . "class" "nav-panel__icon") }}{{ end }}
+          <span class="nav-panel__text">
+            <span class="nav-panel__name">{{ .Name }}</span>
+            {{- with .Params.description }}
+            <span class="nav-panel__description">{{ . }}</span>
+            {{- end }}
+          </span>
+        </a>
+      </li>
+      {{- end }}
+    </ul>
+  </details>
+</li>

@@ -36,6 +36,7 @@
 @import "diamond/language-toggle";
 @import "diamond/site-header";
 @import "diamond/home";
+@import "diamond/catalog-filter";
 @import "diamond/faqs";
 @import "diamond/news-list";
 
@@ -215,16 +216,6 @@ u {
         margin-left: 0.75rem;
     }
 
-    .dropdown-item {
-        font-size: 85%;
-    }
-
-    .nav-item.dropdown {
-        margin-right: 45px;
-    }
-    .section-dropdown .dropdown-toggle span {
-        margin-right: -50px;
-    }
 }
 // // // <<< Oct. 30 2024 update <<< // // //
 

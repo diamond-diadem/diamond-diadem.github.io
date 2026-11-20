@@ -1,26 +1,41 @@
 // Content pages: a section sidebar beside an article of readable width.
-// The sidebar column has one width for every section, and sections without a
-// sidebar (Data, About) keep it empty: that way the title and the text stay
-// put when the reader moves from one section to another.
 //
-// That width depends on the screen only, never on the entries: the column
-// takes the room the centred article leaves on its left, minus a clear gap
-// before the text, so on a wide screen the entries sit on one line and wrap
-// only once the gap would shrink. The gap equals the one between the text and
-// its contents rail, so the text has the same air on both sides. Past the cap,
-// a wider column would only add empty space beside short entries.
-// (Percentages resolve against the row, which spans the page: see
-// Design_decisions.md for the arithmetic.)
+// From lg up the article block (the text, plus its contents rail from xl) is
+// centred on the screen, and the sidebar flanks it: its column takes the
+// whole margin on the left, and the sidebar sits at the right end of that
+// column, $section-sidebar-gap from the text, the same gap the rail keeps on
+// the other side. Spare width thus goes to the outer margins, not between
+// the sidebar and the text it belongs to. On screens too narrow for that,
+// the sidebar keeps its full width and the text moves right instead, down
+// to a small outer margin; only then does the sidebar narrow and wrap.
+//
+// Sections without a sidebar (Data, About) keep the empty column, so the
+// title and the text stay put when the reader moves from one section to
+// another. (See Design_decisions.md for the reasoning.)
 
 $section-sidebar-min-width: 14rem;
-$section-sidebar-max-width: 24rem;
+// The widest entry ("Accessing and using DIAMOND Guix packages", with its
+// indent and the sidebar's padding) needs about 21rem; past that, the
+// sidebar would only add empty space beside short entries
+$section-sidebar-max-width: 22rem;
 $section-sidebar-gap: $article-rail-gap;
+// Kept on the right of the article block when the text leaves the centre
+$section-sidebar-outer-min: 2rem;
 
-@function section-sidebar-width($article-block-width) {
-    @return clamp(
-        #{$section-sidebar-min-width},
-        calc(100% - #{$article-block-width + 2 * $section-sidebar-gap}),
-        #{$section-sidebar-max-width}
+// The largest of: the margin that centres the article block; the room for
+// the widest sidebar, as far as the screen allows; the narrowest sidebar.
+// (The article column's own padding, half a gutter, is taken off so that it
+// is the text, not the column, that ends up centred.)
+@function section-sidebar-column($article-block-width) {
+    $padding: calc(var(--bs-gutter-x) * 0.5);
+
+    @return max(
+        #{$section-sidebar-min-width + $section-sidebar-gap},
+        calc((100% - #{$article-block-width}) / 2 - #{$padding}),
+        min(
+            #{$section-sidebar-max-width + $section-sidebar-gap},
+            calc(100% - #{$article-block-width + $section-sidebar-outer-min} - #{$padding})
+        )
     );
 }
 
@@ -33,19 +48,29 @@ $section-sidebar-gap: $article-rail-gap;
 
 @include media-breakpoint-up(lg) {
     // As a flex item the column stretches to the article's height, which is
-    // all the sticky sidebar inside it needs: no minimum height, or a short
-    // page would push the footer down by a whole screen.
+    // all a sidebar inside it would need to stick: no minimum height, or a
+    // short page would push the footer down by a whole screen.
     .section-sidebar {
-        $width: section-sidebar-width($content-measure);
+        $width: section-sidebar-column($content-measure);
 
         flex: 0 0 $width;
+        justify-content: flex-end;
         width: $width;
     }
 
-    // The theme gives the sidebar a fixed basis, which would set the width instead
+    // As wide as its longest entry, so it ends right at the gap; the theme
+    // gives it a fixed basis, which would set the width instead
     .section-sidebar .docs-sidebar {
         flex: none;
-        width: auto;
+        align-self: flex-start;
+        width: max-content;
+        max-width: min(#{$section-sidebar-max-width}, 100% - #{$section-sidebar-gap});
+        margin-right: $section-sidebar-gap;
+    }
+
+    // The article starts where the sidebar column ends, which centres it
+    .section-sidebar + .article-column .docs-content {
+        margin-inline-start: 0;
     }
 
     // The theme caps the list at the screen height with a permanent scroll bar.
@@ -68,13 +93,33 @@ $section-sidebar-gap: $article-rail-gap;
     }
 }
 
-// From xl the contents rail joins the text, so the article takes more room
+// From xl the contents rail joins the text, so the article block is wider
 @include media-breakpoint-up(xl) {
     .section-sidebar {
-        $width: section-sidebar-width($article-width);
+        $width: section-sidebar-column($article-width);
 
         flex-basis: $width;
         width: $width;
+    }
+}
+
+// Once the reader starts scrolling, the sidebar steps back like the contents
+// rail (sidebar-recede.js sets .is-receded): faded and grey, saying "still
+// here" without pulling the eye off the text. Pointing at it, tabbing into it
+// or scrolling back to the top brings it back. Fades out slowly, returns
+// quickly. Only where hovering exists: a touch screen has no gesture to undo
+// the fade.
+@media (hover: hover) {
+    .section-sidebar .docs-sidebar {
+        transition:
+            opacity 0.2s ease,
+            filter 0.2s ease;
+    }
+
+    .section-sidebar .docs-sidebar.is-receded:not(:hover, :focus-within) {
+        opacity: $article-rail-receded;
+        filter: grayscale(1);
+        transition-duration: 0.6s;
     }
 }
 
@@ -266,6 +311,7 @@ details.sidebar-nav__group {
 }
 
 @media (prefers-reduced-motion: reduce) {
+    .section-sidebar .docs-sidebar,
     .sidebar-nav__link,
     .sidebar-nav__group > .sidebar-nav__toggle,
     .sidebar-nav__group > .sidebar-nav__toggle::after,

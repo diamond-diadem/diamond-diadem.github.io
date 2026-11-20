@@ -193,6 +193,27 @@ $site-menu-max-items: 12;
         color: $link-color;
         font-weight: 600;
     }
+
+    // Header panel entries (_section-dropdown-navbar.scss): the drawer keeps
+    // their icon, in the accent color, and drops the description, as
+    // statamic.com does, so the list stays quick to scan
+    .navbar .site-menu .nav-panel__item {
+        display: flex;
+        gap: 0.75rem;
+        align-items: center;
+    }
+
+    .navbar .site-menu .nav-panel__icon {
+        flex-shrink: 0;
+        width: 1.25rem;
+        height: 1.25rem;
+        color: $link-color;
+        stroke-width: 1.5;
+    }
+
+    .navbar .site-menu .nav-panel__description {
+        display: none;
+    }
 }
 
 @include color-mode(dark) {
@@ -236,6 +257,10 @@ $site-menu-max-items: 12;
 
         .navbar .site-menu .dropdown-item.active {
             background-color: rgba($link-color-dark, 0.1);
+            color: $link-color-dark;
+        }
+
+        .navbar .site-menu .nav-panel__icon {
             color: $link-color-dark;
         }
     }

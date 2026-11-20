@@ -34,10 +34,6 @@ faq: Foire aux questions
 ### Sections ###
 section_description: Description
 
-### Home page ###
-code_category_scientific-computing: Calcul scientifique
-code_category_visualisation: Visualisation
-
 ### Codes catalog ###
 # Physical scales, smallest first, with the typical length each one models
 code_scales: Échelles physiques
@@ -51,6 +47,10 @@ code_scale_microstructure: Microstructure
 code_scale_microstructure_size: "≈ 10 µm–1 mm"
 code_scale_macroscopic: Macroscopique
 code_scale_macroscopic_size: "≥ 1 mm"
+# Filtre par étiquette des catalogues
+catalog_filter_legend: Afficher
+catalog_filter_empty: Rien à afficher quand toutes les étiquettes sont désactivées.
+catalog_filter_reset: Tout afficher
 codes_count:
   one: "{{ .Count }} code"
   other: "{{ .Count }} codes"

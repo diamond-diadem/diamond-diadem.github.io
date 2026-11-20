@@ -1,5 +1,5 @@
 // Home page: a hero continuing the header band, then sections presenting the
-// codes, the workflows, the news and the FAQ, closed by a call to contact.
+// codes, the workflows, the ML notebooks, the news and the FAQ, closed by a call to contact.
 // Mobile first: the base rules lay everything in one column, wider screens
 // add columns. Every color comes from the tokens below, drawn for each color
 // mode from the same palette as the header, so both modes share one design.
@@ -734,10 +734,24 @@ h3.home-fair__title {
 $scale-dot: 0.75rem;
 $scale-line: 2px;
 
+// The ruler and the filter stay close to each other and to the first group,
+// which they both act on; groups keep a wider gap between them, so each
+// reads as its own block. The top margin keeps the catalog clear of the text
+// introducing it.
+.codes-catalog {
+    display: grid;
+    gap: 1.75rem;
+    margin-block: 3.5rem 2rem;
+}
+
+.catalog-head {
+    display: grid;
+    gap: 1.25rem;
+}
+
 .catalog-groups {
     display: grid;
     gap: 2.75rem 1.5rem;
-    margin-block: 2rem;
 
     // Groups of one or two cells take half the width, so two of them share
     // a row instead of each leaving most of it empty
@@ -748,11 +762,6 @@ $scale-line: 2px;
             grid-column: 1 / -1;
         }
     }
-}
-
-// Keeps the ruler clear of the text introducing the catalog
-.scale-ruler {
-    margin-top: 1.5rem;
 }
 
 .scale-ruler__stops {
@@ -1035,9 +1044,9 @@ h3.catalog-group__title {
 }
 
 // ---------------------------------------------------------------------------
-// Workflows
+// Services (workflows, ML notebooks)
 
-.home-workflows__layout {
+.home-service__layout {
     display: grid;
     gap: 2.5rem;
 
@@ -1053,6 +1062,18 @@ h3.catalog-group__title {
 
     .home-more-link {
         margin-top: 2rem;
+    }
+}
+
+// Consecutive services swap sides, so the eye sees a new section starting.
+// Only the visual order changes: reading order keeps the introduction first.
+@media (min-width: $home-breakpoint-lg) {
+    .home-service--mirrored .home-service__layout {
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    }
+
+    .home-service--mirrored .home-service__list {
+        order: -1;
     }
 }
 
@@ -1081,7 +1102,7 @@ h3.catalog-group__title {
     stroke-width: 3;
 }
 
-.home-workflows__list {
+.home-service__list {
     display: grid;
     gap: 1rem;
     margin: 0;
@@ -1089,14 +1110,14 @@ h3.catalog-group__title {
     list-style: none;
 }
 
-.home-workflow {
+.home-service-item {
     display: flex;
     gap: 1.25rem;
     align-items: center;
     padding: 1.25rem 1.5rem;
 }
 
-.home-workflow__icon {
+.home-service-item__icon {
     flex-shrink: 0;
     width: 3rem;
     height: 3rem;
@@ -1106,7 +1127,7 @@ h3.catalog-group__title {
     color: var(--home-accent);
 }
 
-.home-workflow__body {
+.home-service-item__body {
     flex-grow: 1;
     min-width: 0;
 }

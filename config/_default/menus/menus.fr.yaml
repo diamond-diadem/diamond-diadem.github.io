@@ -1,19 +1,40 @@
 main:
-  - name: Codes
-    url: codes/
+  # Services : un menu déroulant sur deux colonnes ; chaque entrée montre son
+  # icône et sa description, et les nouvelles remplissent la grille par ligne.
+  - name: Services
+    identifier: services-fr
     weight: 10
+  - name: Codes
+    pageRef: /codes
+    parent: services-fr
+    weight: 11
+    params:
+      icon: tabler-icons/outline/box
+      description: Les codes que vous utilisez, en conteneurs prêts à l'emploi.
   - name: Workflows
-    url: workflows/
-    weight: 20
-  - name: Data
-    url: data/
-    weight: 30
+    pageRef: /workflows
+    parent: services-fr
+    weight: 12
+    params:
+      icon: tabler-icons/outline/route
+      description: Des chaînes de simulation automatisées et traçables.
+  - name: Données
+    pageRef: /data
+    parent: services-fr
+    weight: 13
+    params:
+      icon: tabler-icons/outline/database
+      description: Stocker, relier et partager vos données matériaux.
+  - name: Notebooks ML
+    pageRef: /notebooks
+    parent: services-fr
+    weight: 14
+    params:
+      icon: tabler-icons/outline/notebook
+      description: L'apprentissage automatique appliqué aux données matériaux.
   - name: Documentation
     url: documentation/
     weight: 50
-  - name: ML Notebooks
-    url: notebooks/
-    weight: 40
   - name: Contact
     url: contact/
     weight: 60
@@ -70,15 +91,19 @@ footer:
     pageRef: /contact
     weight: 31
     parent: footer-contact-fr
+  - name: FAQ
+    pageRef: /faqs
+    weight: 32
+    parent: footer-contact-fr
   - name: Équipe
     pageRef: /team
-    weight: 32
+    weight: 33
     parent: footer-contact-fr
     params:
       requires: team
   - name: Actualités
     pageRef: /news
-    weight: 33
+    weight: 34
     parent: footer-contact-fr
     params:
       requires: news

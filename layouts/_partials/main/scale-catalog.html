@@ -8,17 +8,25 @@
   A ruler opens the catalog: it names the scales with their typical length
   and links to each group, and each group repeats it in miniature to show
   where it sits along it. A scale with nothing listed stays on the ruler as a
-  hollow stop. Items with no tagline, or an unknown scale or type, are
-  reported at build time.
+  hollow stop. Each cell is labelled with its tag (see main/code-tags.html).
+  Items with no tagline, or an unknown scale or tag, are reported at build
+  time.
+
+  When the items carry two tags or more, a filter follows the ruler: one
+  toggle per tag, all on at first, that shows or hides its cells
+  (catalog-filter.js, which also hides the groups left empty and updates
+  their counts). It needs JS, so without it the filter is not shown.
 
   @param {slice}  items    One dict per cell: "page" (the page the cell
                            links to, whose name and icon it shows), "tagline",
-                           "scale" (one of $scales) and "kind" (the code type,
-                           scientific-computing or visualisation).
+                           "scale" (one of $scales) and "kind" (the id of its
+                           tag, such as scientific-computing).
   @param {string} countKey i18n key counting the items of a group, such as "codes_count".
 */ -}}
 {{- $scales := slice "electronic" "atomic" "mesoscopic" "microstructure" "macroscopic" -}}
-{{- $kindIcons := dict "scientific-computing" "cpu" "visualisation" "eye" -}}
+{{- $tags := partialCached "main/code-tags.html" site site.Language.Lang -}}
+{{- $tagIds := slice -}}
+{{- range $tags }}{{ $tagIds = $tagIds | append .id }}{{ end -}}
 {{- $countKey := .countKey -}}
 {{- $items := slice -}}
 {{- range .items -}}
@@ -26,8 +34,8 @@
   {{- if not (in $scales .scale) -}}
     {{- warnf "%s: scale %q, expected one of %s" $path .scale (delimit $scales ", ") -}}
   {{- end -}}
-  {{- if not (index $kindIcons .kind) -}}
-    {{- warnf "%s: type %q, expected scientific-computing or visualisation" $path .kind -}}
+  {{- if not (in $tagIds .kind) -}}
+    {{- warnf "%s: tag %q, expected one of %s (the folders of content/codes)" $path .kind (delimit $tagIds ", ") -}}
   {{- end -}}
   {{- if not .tagline -}}
     {{- warnf "%s has no tagline" $path -}}
@@ -35,7 +43,11 @@
   {{- $items = $items | append (merge . (dict "name" .page.LinkTitle)) -}}
 {{- end -}}
 
-<div class="codes-catalog catalog-groups content-wide">
+{{- $countOne := i18n $countKey 1 -}}
+{{- $countOther := i18n $countKey 2 -}}
+<div class="codes-catalog content-wide" data-catalog data-count-one="{{ $countOne }}" data-count-other="{{ $countOther }}">
+  {{- /* Ruler and filter both act on the groups below: kept as one block, close to them */}}
+  <div class="catalog-head">
   <nav class="scale-ruler" aria-label="{{ i18n "code_scales" }}">
     <ol class="scale-ruler__stops" role="list">
       {{- range $scales }}
@@ -51,6 +63,17 @@
     </ol>
   </nav>
 
+  {{- $usedTags := slice }}
+  {{- range $tag := $tags }}
+    {{- with where $items "kind" $tag.id }}{{ $usedTags = $usedTags | append (merge $tag (dict "count" (len .))) }}{{ end }}
+  {{- end }}
+  {{- if ge (len $usedTags) 2 }}
+  {{ partial "main/catalog-filter.html" (dict "tags" $usedTags) }}
+  {{- end }}
+  </div>
+
+  <div class="catalog-groups">
+
   {{- range $index, $scale := $scales }}
     {{- with where $items "scale" $scale }}
   {{- /* One or two cells take half the width, so two short groups share a row */}}
@@ -60,19 +83,22 @@
       <span class="scale-steps" aria-hidden="true">
         {{- range $step, $_ := $scales }}<span class="scale-steps__dot{{ if eq $step $index }} is-current{{ end }}"></span>{{ end -}}
       </span>
-      <p class="catalog-group__meta">{{ i18n (printf "code_scale_%s_size" $scale) }} · {{ i18n $countKey (len .) }}</p>
+      <p class="catalog-group__meta">{{ i18n (printf "code_scale_%s_size" $scale) }} · <span data-count>{{ i18n $countKey (len .) }}</span></p>
     </header>
     <ul class="home-grid home-grid--table codes-grid" role="list">
       {{- range sort . "name" }}
+        {{- $tag := index (where $tags "id" .kind) 0 | default dict }}
         {{- partial "main/catalog-card.html" (dict
           "page" .page
           "text" .tagline
-          "label" (i18n (printf "code_category_%s" .kind))
-          "labelIcon" (index $kindIcons .kind)
+          "tag" .kind
+          "label" $tag.name
+          "labelIcon" $tag.icon
         ) }}
       {{- end }}
     </ul>
   </section>
     {{- end }}
   {{- end }}
+  </div>
 </div>

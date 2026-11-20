@@ -1,19 +1,40 @@
 main:
-  - name: Codes
-    url: en/codes/
+  # Services: a dropdown of two columns; each child shows its icon and
+  # description, and new children fill the grid row by row.
+  - name: Services
+    identifier: services-en
     weight: 10
+  - name: Codes
+    pageRef: /codes
+    parent: services-en
+    weight: 11
+    params:
+      icon: tabler-icons/outline/box
+      description: Ready-to-run containers of the codes you use.
   - name: Workflows
-    url: en/workflows/
-    weight: 20
+    pageRef: /workflows
+    parent: services-en
+    weight: 12
+    params:
+      icon: tabler-icons/outline/route
+      description: Automated, traceable simulation pipelines.
   - name: Data
-    url: en/data/
-    weight: 30
+    pageRef: /data
+    parent: services-en
+    weight: 13
+    params:
+      icon: tabler-icons/outline/database
+      description: Store, link and share your materials data.
+  - name: ML notebooks
+    pageRef: /notebooks
+    parent: services-en
+    weight: 14
+    params:
+      icon: tabler-icons/outline/notebook
+      description: Machine learning applied to materials data.
   - name: Documentation
     url: en/documentation/
     weight: 50
-  - name: ML notebooks
-    url: en/notebooks/
-    weight: 40
   - name: Contact
     url: en/contact/
     weight: 60
@@ -70,15 +91,19 @@ footer:
     pageRef: /contact
     weight: 31
     parent: footer-contact-en
+  - name: FAQ
+    pageRef: /faqs
+    weight: 32
+    parent: footer-contact-en
   - name: Team
     pageRef: /team
-    weight: 32
+    weight: 33
     parent: footer-contact-en
     params:
       requires: team
   - name: News
     pageRef: /news
-    weight: 33
+    weight: 34
     parent: footer-contact-en
     params:
       requires: news

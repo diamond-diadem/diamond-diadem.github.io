@@ -4,9 +4,10 @@
   whose tutorial is not written yet is simply absent.
 
   A tutorial takes its tagline and scale from the code its `code` front
-  matter names (see main/tutorial-code.html), and its type from its own
-  `category`. A tutorial about something with no code page, such as AiiDA,
-  sets `tagline` and `scale` itself.
+  matter names (see main/tutorial-code.html), and its tag from its own
+  `category` (the name of a codes section, see main/code-tags.html). A
+  tutorial about something with no code page, such as AiiDA, sets `tagline`
+  and `scale` itself.
 */ -}}
 {{- $items := slice -}}
 {{- with site.GetPage "/documentation/by-container" -}}

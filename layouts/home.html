@@ -5,7 +5,8 @@
 <main class="diamond-content home-page">
   {{ partial "home/hero.html" . }}
   {{ partial "home/codes.html" . }}
-  {{ partial "home/workflows.html" . }}
+  {{ partial "home/service.html" (dict "content" .Params.workflows "id" "workflows" "defaultIcon" "tabler-icons/outline/route" "tinted" true) }}
+  {{ partial "home/service.html" (dict "content" .Params.notebooks "id" "notebooks" "defaultIcon" "tabler-icons/outline/notebook" "mirrored" true) }}
   {{ if site.Params.diamond.enableNews }}
     {{ partial "home/news.html" . }}
   {{ end }}

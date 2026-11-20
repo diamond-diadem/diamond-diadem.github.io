@@ -103,6 +103,25 @@ workflows:
     label: Explorer les workflows
     page: /workflows
 
+notebooks:
+  eyebrow: Notebooks ML
+  title: L'apprentissage automatique sur les données matériaux, prêt à l'emploi
+  text: >-
+    Nous mettons l'apprentissage automatique en pratique sur des données
+    matériaux : des notebooks Jupyter pédagogiques à suivre, modifier et
+    transposer à vos propres jeux de données, et des pipelines développés au
+    sein du PEPR DIADEM, publiés avec leur article et leurs données.
+  points:
+    - Un parcours complet, de la qualité des données à l'optimisation bayésienne
+    - Des notebooks qui s'exécutent tels quels et s'adaptent à vos données
+    - Des pipelines réutilisables sur vos propres mesures
+  featured:
+    - /notebooks/ml-training
+    - /notebooks/raman-denoising
+  link:
+    label: Explorer les notebooks ML
+    page: /notebooks
+
 news:
   eyebrow: Actualités
   title: Les dernières nouvelles de DIAMOND

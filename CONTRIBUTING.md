@@ -170,6 +170,8 @@ content/codes/scientific-computing/abinit/
 
 `<category>` is the **type** of the code: `scientific-computing` (simulation and computing codes) or `visualisation`. Nothing else wires the code in: the Codes landing page (`codes-catalog` shortcode), the menus and the home page pick it up from these files.
 
+Each `<category>` folder is a **tag** of the catalogs: its `_index.en.md` and `_index.fr.md` give the tag's short name in their `tag` front matter (such as `tag: Scientific computing`), and its `icon.svg` is the tag's icon. To add a tag, create a new folder under `content/codes/` with these three files (copy an existing one and change `title`, `weight` and `tag`): the catalogs label its codes with it and their filter offers it, with no template change.
+
 #### 1. Create the pages
 
 ```bash
@@ -207,7 +209,7 @@ If the code has no official logo, the icon alone is enough (see `n2p2`): the pag
 
 Follow the structure of the archetype and of the existing code pages:
 
-1. `### Retrieve the container image` (FR `### Récupérez l'image de conteneur`) with Apptainer/Docker `tabs`.
+1. `### Retrieve the container image` (FR `### Récupérez l'image de conteneur`) with Apptainer/Docker `tabs`, following the rules in [Tutorials with Apptainer and Docker](#tutorials-with-apptainer-and-docker).
 2. One or more paragraphs describing what the code does and what it is used for.
 3. `## Tutorial` (FR `## Tutoriel`), `## <Code> documentation` (FR `## Documentation <Code>`) and `## Examples` (FR `## Exemples`), each with `link-card`s. Items that do not exist yet stay as disabled cards (`title="Content to be added"`, `href="#bottom"`, `disabled="true"`).
 
@@ -240,6 +242,35 @@ $$
 ```
 
 Math rendering is loaded only on pages that declare `math: true` in front matter. Add that flag when introducing a page with LaTeX content.
+
+## Tutorials with Apptainer and Docker
+
+A tutorial in `content/documentation/by-container/` is **one page per code, with shared text and an `Apptainer`/`Docker` tab pair on every command that differs**. See `abinit.en.md` for the reference. The reasoning: text duplicated across two runtimes goes out of date as soon as someone edits only one copy.
+
+````markdown
+{{< tabs "abinit-parallel" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer exec abinit.sif mpirun -np <N> abinit input.abi
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker run --rm --entrypoint "" -u $(id -u):$(id -g) -v "$PWD":/work -w /work abinit mpirun -np <N> abinit input.abi
+```
+{{< /tab >}}
+{{< /tabs >}}
+````
+
+Rules:
+
+1. **Never wrap headings or a whole section in a tab.** Hugo does not list headings rendered inside a tab in the page's table of contents, so the page loses its contents rail. Headings and prose stay outside the tabs; only commands (and the notes tied to them) go inside.
+2. **Always include both tabs**, named exactly `Apptainer` and `Docker`. When a script finds a group with only one of them and the reader has chosen the other, it shows nothing. If a step has no Docker equivalent (hybrid MPI, SLURM jobs), keep the Docker tab with a short note explaining why, and a link to the [FAQ](https://diamond-diadem.github.io/faqs/#why-not-docker).
+3. **Tab names are the sync key**: clicking a tab switches every tab with the same name on the page, and the choice is remembered for the next tutorial. Use the same English names (`Apptainer`, `Docker`) on the French page. Give each `tabs` group a unique id.
+4. **Text outside the tabs must be true for both runtimes.** Explanations that only apply to one go inside its tab.
+5. Docker commands use the same prefix everywhere: `docker run --rm --entrypoint "" -u $(id -u):$(id -g) -v "$PWD":/work -w /work <image> <command>`. `-u` keeps output files yours (and lets `mpirun` start), the `/work` mount avoids exposing `/home`, and `--rm` leaves no stopped container behind. Give the image its short name once with `docker tag`, in the pull step.
+6. Split into separate pages only if the two workflows really diverge, for example cluster job scripts.
+7. Open the page with the "Apptainer or Docker?" tip callout from `abinit.en.md` (and its French counterpart).
 
 ## News section
 

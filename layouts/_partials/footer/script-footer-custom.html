@@ -16,7 +16,13 @@
 {{ partial "footer/esbuild" (dict "src" "js/diamond/drawer.js" "load" "defer" "transpile" false) -}}
 {{ partial "footer/esbuild" (dict "src" "js/diamond/nav-disclosure.js" "load" "defer" "transpile" false) -}}
 {{ partial "footer/esbuild" (dict "src" "js/diamond/article-rail.js" "load" "defer" "transpile" false) -}}
+{{ if partial "main/has-section-sidebar.html" . -}}
+  {{ partial "footer/esbuild" (dict "src" "js/diamond/sidebar-recede.js" "load" "defer" "transpile" false) -}}
+{{ end -}}
 {{ partial "footer/esbuild" (dict "src" "js/diamond/email-guard.js" "load" "defer" "transpile" false) -}}
+{{ if or (.HasShortcode "codes-catalog") (.HasShortcode "documentation-catalog") -}}
+  {{ partial "footer/esbuild" (dict "src" "js/diamond/catalog-filter.js" "load" "defer" "transpile" false) -}}
+{{ end -}}
 
 {{ if site.Params.analytics.enable }}
 <script>

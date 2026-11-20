@@ -1,0 +1,28 @@
+{{- /*
+  The tags of the codes: one per sub-section of /codes (scientific-computing,
+  visualisation...), in the sections' weight order. A section declares its
+  short name in its `tag` front matter and its icon as an `icon.svg` file in
+  its folder, so a new sub-section brings a new tag without template changes.
+  A section missing either is reported at build time.
+
+  Called through partialCached, once per language.
+
+  @param {site} . Any value; the tags come from the current language's /codes.
+  @returns {slice} One dict per tag: "id" (the folder name, which code pages
+                   and tutorials' `category` refer to), "name" and "icon"
+                   (the SVG resource, or nil).
+*/ -}}
+{{- $tags := slice -}}
+{{- with site.GetPage "/codes" -}}
+  {{- range .Sections.ByWeight -}}
+    {{- $icon := .Resources.GetMatch "icon.svg" -}}
+    {{- if not .Params.tag }}{{ warnf "%s: add a `tag` front matter, the tag's short name" .File.Path }}{{ end -}}
+    {{- if not $icon }}{{ warnf "%s: add an icon.svg file, the tag's icon" .File.Path }}{{ end -}}
+    {{- $tags = $tags | append (dict
+      "id" .File.ContentBaseName
+      "name" (.Params.tag | default .LinkTitle)
+      "icon" $icon
+    ) -}}
+  {{- end -}}
+{{- end -}}
+{{- return $tags -}}

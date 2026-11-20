@@ -1,0 +1,9 @@
+{{- /*
+  Whether the current page is a menu entry's page or lies below it, so that
+  a code page marks Services › Codes as current.
+
+  @param {page} page    The page a menu entry points to.
+  @param {page} current The page being rendered.
+  @returns {bool}
+*/ -}}
+{{- return or (eq .page .current) (.current.IsDescendant .page) -}}

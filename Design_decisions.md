@@ -121,43 +121,104 @@ applied to this content.
 
 **Decision.** Content pages of every section (including Data and About, which
 have no sidebar) go through `main/content-page.html`: same page header (title
-size, weight and spacing), same text size, same column. The sidebar column has the same width in every
-section, set by the screen width alone (never by the entries), and a section
-without a sidebar keeps it empty.
+size, weight and spacing), same text size, same column. The sidebar column
+has the same width in every section, set by the screen width alone (never by
+the entries), and a section without a sidebar keeps it empty.
 
 **Why.** Moving from Workflows to Data used to shift the title and the text,
 because they used different layouts (a plain `h1` against the page header) and
 the sidebar was as wide as its longest entry, so even two sidebar sections
 differed. A reader who changes section reads that as the page jumping.
 
-**Cost.** Without a sidebar the text sits right of the centre by half the
-sidebar width. Codes pages keep their own centred header on purpose.
+**Cost.** On screens too narrow for the sidebar to flank the text (see next
+section), the text sits right of the centre, in every section alike. Codes
+pages keep their own centred header on purpose.
 
-## The sidebar takes the room the article leaves free
+## The sidebar flanks the text and steps back while reading
 
-**Decision.** From `lg` up, the sidebar column grows with the screen until the
-gap between it and the text would fall below `$article-rail-gap` (5rem, the
-gap between the text and its contents rail), between a floor of 14rem and a
-cap of 24rem. Its entries wrap only below that point.
+**Decision.** From `lg` up, the article block (the text, plus its contents
+rail from `xl`) is centred on the screen. The sidebar column takes the whole
+margin on its left, and the sidebar, as wide as its longest entry up to
+22rem, sits at the right end of that column, `$article-rail-gap` (5rem) from
+the text: the same gap as the rail on the other side. Spare width goes to the
+outer margins. Where the screen is too narrow to centre the text with a full
+sidebar beside it (below about 1750px, and always before the rail appears at
+1220px), the sidebar keeps its 22rem and the text moves right, down to a 2rem
+outer margin; only below about 1340px (1050px without the rail) does the
+sidebar narrow, to 14rem at the least. The sidebar
+scrolls away with the page and, as soon as the reader scrolls, fades like the
+rail (30% opacity, greyscale); pointing at it, tabbing into it or returning
+to the top brings it back. Wide blocks (`.content-wide`, wide figures) beside
+it grow at most 3rem to the left, keeping 2rem clear of its longest entry, and
+take the rest of their extra width on the right, over the rail.
 
-**Why.** A fixed `clamp(14rem, 20vw, 18rem)` wrapped entries such as
-"Utilisation des conteneurs sur les clusters HPC" onto two lines even on a
-1920px screen with some 600px of empty space beside them. Wrapped entries are
-taller and slower to scan, and the free space did nothing. Width still depends
-on the screen only, so the previous decision holds.
+**Why.** The sidebar used to start at the page edge and the text was centred
+in what it left, so on a 1920px screen some 400px of empty paper separated
+them.
 
-**Arithmetic.** The row spans the page (its negative margins cancel the
-container padding) and the article column centres the article block of width
-*A* in what the sidebar *W* leaves. The gap before the text is then
-(100% − *W* − *A*) / 2, so a gap of at least *G* gives
-*W* = clamp(14rem, 100% − *A* − 2*G*, 24rem), with *A* = 36rem below `xl` and
-54rem (text, gap and rail) from `xl`. The sidebar thus starts growing at about
-1010px and reaches its cap at about 1170px; at `xl` the rail appears and the
-sidebar goes back to 14rem, growing again from about 1300px to its cap at
-about 1460px. Measured with the font file on the built site, the widest
-entry ("Comment interagir avec une image Apptainer ?", with its indent) needs
-about 19.3rem, so the 24rem cap keeps every entry on one line with room for
-longer future ones; past it, the column would only add empty space.
+- In NN/g's 2024 eye-tracking study on 1920×1080 screens, the leftmost 192px
+  received 6% of fixations and attention peaked about 600px from the left
+  edge: a sidebar pinned to the edge sits where readers rarely look.
+- The same study puts 80% of fixations on the left half and advises keeping
+  navigation on the left: the fix is to bring it closer, not to move it.
+- Proximity: a sidebar further from the text than the text's own rail reads
+  as page chrome, not as this section's contents.
+- Documentation themes keep sidebar and contents at fixed widths and give
+  spare width to the outer margins, never to the gap between them.
+- Fading follows the rail, so both sides of the text behave alike; it only
+  happens where hovering exists, as a touch screen has no gesture to undo it.
 
-**Where in the code.** `section-sidebar-width()` in
-`assets/scss/diamond/_section-sidebar.scss`.
+**Rejected.** The variants that also made the sidebar sticky, with or
+without the current page kept unfaded: a long sidebar would then need a
+scroll of its own.
+
+**Where in the code.** `section-sidebar-column()` in
+`assets/scss/diamond/_section-sidebar.scss`, `sidebar-recede.js`, and the
+`.article-column--beside-sidebar` rule in `_content-images.scss`.
+
+**Sources.**
+[NN/g: Horizontal attention leans left](https://www.nngroup.com/articles/horizontal-attention-leans-left/) ·
+[NN/g: Vertical navigation](https://www.nngroup.com/articles/vertical-nav/) ·
+[Furo: extra width on large screens](https://github.com/pradyunsg/furo/discussions/651)
+
+## The catalogs filter their tags with switches
+
+**Decision.** Under the scale ruler, one on/off switch per tag (icon, name,
+count), all on at first, chosen among chips, switches, a segmented bar and a
+dropdown checklist. Turning one off hides its cells, the groups left empty
+and their stops on the ruler, and updates the counts. The ruler, the filter
+and the first group sit close together (1.25rem and 1.75rem), as one block
+acting on the groups, which keep 2.75rem between them.
+
+**Why.** The user's own picture of the control was a toggle, and a switch
+says on/off without explanation. A segmented bar reads as a single choice;
+a dropdown hides the options while there are only two tags. Switches wrap
+onto a second line from about six tags; past about ten, a dropdown checklist
+would scale better.
+
+**Where in the code.** `main/catalog-filter.html`, `_catalog-filter.scss`,
+`catalog-filter.js`. Without JS the filter is not shown and everything is
+listed.
+
+## The Services menu opens a panel of two columns, after statamic.com
+
+**Decision.** Codes, Workflows, Data and ML notebooks sit under one header
+entry, Services, which opens a rounded panel whose entries (icon, name, a
+one-line description) fill two columns row by row, so a fifth service starts
+a third row. It copies statamic.com's menus: 1rem corners, 0.75rem padding,
+a soft shadow ringed by a faint border, entries 14rem wide with 0.375rem
+corners and a tinted background on hover, and a 150ms opening that fades in
+while growing from 85% of its size. It opens on click, as there, not on
+hover. In the small-screen drawer the entries keep their icon and drop their
+description, as statamic.com does.
+
+**Why.** Four of the seven header entries were services of the same kind;
+grouping them leaves a shorter header and room for more services. Names
+alone ("Data") say little to a first visitor, so the panel adds what each
+service is. Two columns keep the panel short; filling rows first keeps the
+reading order the same in the panel and in the drawer.
+
+**Where in the code.** `header/nav-dropdown.html`,
+`_section-dropdown-navbar.scss` and `nav-disclosure.js` (closing transition).
+The panel is a native `<details>`, so it works without JS; only the closing
+animation and the "close on outside click / Escape / focus out" need it.

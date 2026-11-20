@@ -44,7 +44,7 @@
     {{ end -}}  */}}
 
     <!-- Section navigation (small screens): a drawer sliding from the left -->
-    {{ if (in site.Params.doks.sectionNav .Section) -}}
+    {{ if partial "main/has-section-sidebar.html" . -}}
     {{ partial "header/drawer-toggle.html" (dict "target" "offcanvasNavSection" "label" (i18n "section_menu_open") "icon" "dots" "class" "d-lg-none") }}
     <div class="drawer drawer-start d-lg-none" tabindex="-1" id="offcanvasNavSection">
       {{ if site.Params.doks.headerBar -}}
@@ -98,26 +98,7 @@
                 {{- $active = or $active (in .Identifier $section) -}}
               {{ end }}
               {{ if .HasChildren -}}
-                {{/* Native disclosure: works without JS; nav-disclosure.js closes it as a dropdown on large screens */}}
-                <li class="nav-item dropdown section-dropdown">
-                  <details class="nav-disclosure">
-                    <summary class="nav-link site-menu-link dropdown-toggle">
-                      <span class="{{ if $active }}active{{ end }}">
-                        {{ .Name -}}
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                          <path d="M6 9l6 6l6 -6"></path>
-                        </svg>
-                      </span>
-                    </summary>
-                    <ul class="dropdown-menu shadow rounded border-0">
-                      {{ range .Children -}}
-                        {{- $childActive := eq .Name $current.LinkTitle -}}
-                        <li><a class="dropdown-item{{ if $childActive }} active{{ end }}" href="{{ .URL | absURL }}"{{ if $childActive }} aria-current="page"{{ end }}>{{ .Name }}</a></li>
-                      {{ end -}}
-                    </ul>
-                  </details>
-                </li>
+                {{ partial "header/nav-dropdown.html" (dict "entry" . "current" $current "active" $active) }}
               {{ else -}}
                 <li class="nav-item">
                   <a class="nav-link site-menu-link{{ if $active }} active{{ end }}" href="{{ .URL | absURL }}"{{ if $active }} aria-current="page"{{ end }}>{{ .Name }}</a>

@@ -1,0 +1,28 @@
+{{- /*
+  Tag filter of a catalog (see main/scale-catalog.html): one checkbox per
+  tag, all checked at first, driven by catalog-filter.js. Hidden without JS,
+  where it could not act.
+
+  @param {slice} tags The tags present in the catalog, each a dict with
+                      "id", "name", "icon" (see main/code-tags.html) and
+                      "count", the number of its items.
+*/ -}}
+<fieldset class="tag-filter requires-js" data-tag-filter>
+  <legend class="tag-filter__legend">{{ i18n "catalog_filter_legend" }}</legend>
+  <div class="tag-filter__options">
+    {{- range .tags }}
+    <label class="tag-filter__option">
+      <input class="tag-filter__input" type="checkbox" name="tag" value="{{ .id }}" checked>
+      <span class="tag-filter__control" aria-hidden="true"></span>
+      {{- with .icon }}{{ partial "home/icon.html" (dict "resource" . "class" "tag-filter__icon") }}{{ end }}
+      <span class="tag-filter__name">{{ .name }}</span>
+      <span class="tag-filter__count">{{ .count }}</span>
+    </label>
+    {{- end }}
+  </div>
+  <p class="tag-filter__empty" data-filter-empty hidden>
+    {{ i18n "catalog_filter_empty" }}
+    <button class="tag-filter__reset" type="button" data-filter-reset>{{ i18n "catalog_filter_reset" }}</button>
+  </p>
+  <p class="visually-hidden" data-filter-status aria-live="polite"></p>
+</fieldset>

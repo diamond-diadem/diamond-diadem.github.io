@@ -99,6 +99,25 @@ workflows:
     label: Explore the workflows
     page: /workflows
 
+notebooks:
+  eyebrow: ML notebooks
+  title: Machine learning on materials data, ready to run
+  text: >-
+    We put machine learning into practice on materials data: educational
+    Jupyter notebooks you can follow, modify and transpose to your own
+    datasets, and pipelines developed within PEPR DIADEM, published with
+    their article and their data.
+  points:
+    - A complete path, from data quality to Bayesian optimisation
+    - Notebooks that run as they are and adapt to your data
+    - Pipelines reusable on your own measurements
+  featured:
+    - /notebooks/ml-training
+    - /notebooks/raman-denoising
+  link:
+    label: Explore the ML notebooks
+    page: /notebooks
+
 news:
   eyebrow: News
   title: Latest from DIAMOND

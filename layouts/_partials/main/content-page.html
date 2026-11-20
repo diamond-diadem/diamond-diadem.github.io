@@ -8,7 +8,7 @@
 */ -}}
 <div class="row flex-xl-nowrap">
 	{{ partial "main/section-sidebar.html" . }}
-	<div class="col container-fw article-column d-lg-flex flex-lg-row justify-content-center mx-auto">
+	<div class="col container-fw article-column{{ if partial "main/has-section-sidebar.html" . }} article-column--beside-sidebar{{ end }} d-lg-flex flex-lg-row">
 		<main class="docs-content diamond-content">
 			{{ partial "main/page-header.html" . }}
 			{{ partial "main/article-split.html" . }}

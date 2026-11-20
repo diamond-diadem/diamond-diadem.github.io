@@ -20,7 +20,10 @@ details.nav-disclosure {
 }
 
 .navbar .nav-disclosure .icon-tabler-chevron-down {
-    transition: transform 0.25s ease;
+    stroke-width: 1.5;
+    transition:
+        transform 0.25s ease,
+        opacity 0.2s ease;
 }
 
 .navbar .nav-disclosure[open] .icon-tabler-chevron-down {
@@ -36,6 +39,29 @@ details.nav-disclosure {
         top: 100%;
         left: 0;
         margin-top: 0.25rem;
+    }
+
+    // In the header row the chevron is a hint, not a second label: a small,
+    // light caret centred on the word, which firms up when the menu is
+    // pointed at or open. Its heavier stroke keeps it crisp at that size.
+    .navbar .nav-disclosure > summary > span {
+        display: inline-flex;
+        gap: 0.3rem;
+        align-items: center;
+    }
+
+    .navbar .nav-disclosure .icon-tabler-chevron-down {
+        width: 0.75rem;
+        height: 0.75rem;
+        margin: 0.1em 0 0;
+        opacity: 0.45;
+        stroke-width: 2.25;
+    }
+
+    .navbar .nav-disclosure > summary:hover .icon-tabler-chevron-down,
+    .navbar .nav-disclosure > summary:focus-visible .icon-tabler-chevron-down,
+    .navbar .nav-disclosure[open] .icon-tabler-chevron-down {
+        opacity: 0.85;
     }
 }
 

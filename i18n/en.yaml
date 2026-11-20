@@ -33,10 +33,6 @@ faq: Frequently asked questions
 ### Sections ###
 section_description: Description
 
-### Home page ###
-code_category_scientific-computing: Scientific computing
-code_category_visualisation: Visualisation
-
 ### Codes catalog ###
 # Physical scales, smallest first, with the typical length each one models
 code_scales: Physical scales
@@ -50,6 +46,10 @@ code_scale_microstructure: Microstructure
 code_scale_microstructure_size: "≈ 10 µm–1 mm"
 code_scale_macroscopic: Macroscopic
 code_scale_macroscopic_size: "≥ 1 mm"
+# Tag filter of the catalogs
+catalog_filter_legend: Show
+catalog_filter_empty: Nothing to show with every tag turned off.
+catalog_filter_reset: Show all
 codes_count:
   one: "{{ .Count }} code"
   other: "{{ .Count }} codes"

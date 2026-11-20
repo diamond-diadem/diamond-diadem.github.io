@@ -23,7 +23,7 @@
   {{- with .Resources.GetMatch "icon-dark.*" }}{{ $files = merge $files (dict "dark" .) }}{{ end }}
 {{- end }}
 
-{{- $needsIcon := and .IsPage (or (eq .Section "codes") (eq .Params.category "scientific-computing" "visualisation")) }}
+{{- $needsIcon := and .IsPage (or (eq .Section "codes") .Params.category) }}
 {{- if and $needsIcon (not $files.light) }}
   {{- warnf "%s has no icon: add icon.<ext> to its folder (or, for a tutorial, `code: <code folder>` to its front matter)" .File.Path }}
 {{- end }}

@@ -62,33 +62,6 @@
     }
 }
 
-// Current page on large screens, where the menu sits inline on the band: the
-// accent color and a small diamond under the label. Keyed on aria-current,
-// which scripts leave alone, unlike .active.
-@include media-breakpoint-up(lg) {
-    .navbar.site-header .site-menu .site-menu-link[aria-current="page"],
-    .navbar.site-header .site-menu .site-menu-link > .active {
-        position: relative;
-    }
-
-    .navbar.site-header .site-menu .site-menu-link[aria-current="page"]::before,
-    .navbar.site-header .site-menu .site-menu-link > .active::before {
-        content: "";
-        position: absolute;
-        bottom: -0.1rem;
-        left: 50%;
-        width: 0.3125rem;
-        height: 0.3125rem;
-        background-color: currentColor;
-        transform: translateX(-50%) rotate(45deg);
-    }
-
-    // The dropdown label wraps its chevron, so its marker centers on it all
-    .navbar.site-header .site-menu .site-menu-link > .active::before {
-        bottom: -0.6rem;
-    }
-}
-
 // Menu placement on large screens: the links sit in the middle of the band,
 // between the brand on the left and the actions on the right. Browsers
 // without display: contents center them in the space the two leave free.

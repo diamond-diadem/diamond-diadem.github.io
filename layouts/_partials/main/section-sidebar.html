@@ -9,8 +9,8 @@
 
   @param {page} . The page being rendered.
 */ -}}
-<div class="section-sidebar d-none d-lg-block">
-{{- if in site.Params.doks.sectionNav .Section -}}
+<div class="section-sidebar d-none d-lg-flex">
+{{- if partial "main/has-section-sidebar.html" . -}}
 {{- $sectionName := partial "sidebar/section-name.html" . }}
   <div class="docs-sidebar{{ if ne site.Params.doks.navbarSticky true }} docs-sidebar-top{{ end }}{{ if site.Params.doks.headerBar }} docs-sidebar-offset{{ end }}">
     <nav class="docs-links" aria-label="{{ $sectionName }}">

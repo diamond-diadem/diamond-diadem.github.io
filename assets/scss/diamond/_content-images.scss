@@ -44,18 +44,35 @@ $figure-wide-gutter: 1.5rem; // kept clear at the column's edge
     // How far the figure may grow past the text on each side: what the
     // column leaves beside the text, less a gutter, up to the cap
     --figure-extra: clamp(0rem, calc((100cqw - #{$content-measure}) / 2 - #{$figure-wide-gutter}), #{$figure-wide-extra});
+    --figure-extra-start: var(--figure-extra);
 
     // Drawn over the rail, which fades out of its way
     position: relative;
     z-index: 1;
-    width: calc(100% + 2 * var(--figure-extra));
-    margin-inline: calc(-1 * var(--figure-extra));
+    width: calc(100% + var(--figure-extra-start) + var(--figure-extra));
+    margin-inline: calc(-1 * var(--figure-extra-start)) calc(-1 * var(--figure-extra));
 }
 
 @include media-breakpoint-up(xl) {
     .content-figure--wide,
     .content-wide {
         --figure-extra: clamp(0rem, calc((100cqw - #{$article-width}) / 2 - #{$figure-wide-gutter}), #{$figure-wide-extra});
+    }
+}
+
+// Beside the section sidebar the text starts at the left edge of its column,
+// and the room on its left is only the gap before the sidebar (see
+// _section-sidebar.scss), which, unlike the rail, does not step aside. There
+// a wide block grows left only as far as keeps it clear of the sidebar's
+// longest entry, and takes the rest of its usual extra width on the right,
+// over the rail, as far as the column allows.
+$figure-sidebar-clearance: 2rem;
+$figure-sidebar-start: $section-sidebar-gap - $figure-sidebar-clearance;
+
+@include media-breakpoint-up(lg) {
+    .article-column--beside-sidebar :is(.content-figure--wide, .content-wide) {
+        --figure-extra-start: #{$figure-sidebar-start};
+        --figure-extra: clamp(0rem, calc(100cqw - #{$content-measure} - #{$figure-wide-gutter}), #{2 * $figure-wide-extra - $figure-sidebar-start});
     }
 }
 

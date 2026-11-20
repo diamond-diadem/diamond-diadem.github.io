@@ -1,0 +1,52 @@
+{{- /*
+  A service presented by what it brings (a checklist), next to its featured
+  pages, whose names, icons and summaries come from the pages themselves.
+  Workflows and ML notebooks share it; successive services alternate the
+  side of the list and the band tint, so they read as distinct sections.
+
+  @param {map}    content     The service's home front matter: eyebrow,
+                              title, text, points, featured (content paths)
+                              and link.
+  @param {string} id          Short name of the service, used in ids and classes.
+  @param {string} defaultIcon Tabler icon for a featured page without a tablerIcon.
+  @param {bool}   [mirrored]  Puts the list before the introduction on wide screens.
+  @param {bool}   [tinted]    Lays the section on a full-bleed tinted band.
+*/ -}}
+{{- $titleId := printf "home-%s-title" .id -}}
+{{- with .content -}}
+<section class="home-section home-service home-{{ $.id }}{{ if $.tinted }} home-section--tinted{{ end }}{{ if $.mirrored }} home-service--mirrored{{ end }}" aria-labelledby="{{ $titleId }}">
+  <div class="home-container home-service__layout">
+    <div class="home-service__intro scroll-fade">
+      {{ partial "home/section-header.html" (dict "id" $titleId "content" .) }}
+      {{ with .points }}
+      <ul class="home-checklist" role="list">
+        {{- range . }}
+        <li class="home-checklist__item">
+          {{ partial "home/icon.html" (dict "name" "tabler-icons/outline/check" "class" "home-checklist__icon") }}
+          {{ . }}
+        </li>
+        {{- end }}
+      </ul>
+      {{ end }}
+      {{ with .link }}{{ partial "home/more-link.html" . }}{{ end }}
+    </div>
+
+    <ul class="home-service__list scroll-fade" role="list">
+      {{- range .featured }}
+        {{- with site.GetPage . }}
+      <li class="home-card home-service-item">
+        {{ partial "home/icon.html" (dict "name" (.Params.tablerIcon | default $.defaultIcon) "class" "home-service-item__icon") }}
+        <div class="home-service-item__body">
+          <h3 class="home-card__title"><a class="home-card__link" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h3>
+          {{ with .Params.summary }}<p class="home-card__text">{{ . }}</p>{{ end }}
+        </div>
+        {{ partial "home/icon.html" (dict "name" "tabler-icons/outline/arrow-right" "class" "home-card__arrow") }}
+      </li>
+        {{- else }}
+          {{- warnf "home: featured %s page %q not found" $.id . }}
+        {{- end }}
+      {{- end }}
+    </ul>
+  </div>
+</section>
+{{- end -}}

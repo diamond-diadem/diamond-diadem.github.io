@@ -1,3 +1,21 @@
+// Header dropdowns on large screens, after statamic.com's menus: a rounded
+// panel floating under its label, whose entries (icon, name, one-line
+// description) fill a grid of two columns row by row. It grows from slightly
+// smaller as it fades in (@starting-style), and nav-disclosure.js plays the
+// reverse before closing it. Browsers without @starting-style just show it.
+// In the small-screen drawer the entries stay a plain list (_site-menu.scss).
+
+// Statamic's own measures: 1rem corners, 0.75rem padding, entries 14rem wide
+$nav-panel-radius: 1rem;
+$nav-panel-entry-width: 14rem;
+$nav-panel-duration: 0.15s;
+$nav-panel-ease: cubic-bezier(0.4, 0, 0.2, 1);
+$nav-panel-start-scale: 0.85;
+
+// Secondary text of the entries: 6.2:1 on the light panel; the dark mode
+// secondary color gives 6.7:1 on the dark one
+$nav-panel-muted: mix($body-color, $surface-raised, 62%);
+
 .section-dropdown .dropdown-toggle span.active {
     color: $link-color;
 }
@@ -8,27 +26,138 @@
     }
 }
 
-.section-dropdown .dropdown-menu .dropdown-item.active {
-    background-color: $link-color;
-    color: $body-bg;
-}
-.section-dropdown .dropdown-menu .dropdown-item.active:hover {
-    background-color: $body-bg;
-    color: $link-color;
-}
-.section-dropdown .dropdown-menu .dropdown-item:hover {
-    background-color: $body-bg;
-}
-@include color-mode(dark) {
-    .section-dropdown .dropdown-menu .dropdown-item.active {
-        background-color: $link-color-dark;
-        color: $body-bg-dark;
+@include media-breakpoint-up(lg) {
+    .navbar .nav-disclosure[open] > .nav-panel {
+        display: grid;
     }
-    .section-dropdown .dropdown-menu .dropdown-item.active:hover {
-        background-color: $body-bg-dark;
-        color: $link-color-dark;
+
+    .navbar .nav-disclosure > .nav-panel {
+        grid-template-columns: repeat(2, auto);
+        gap: 0.25rem;
+        left: 50%;
+        width: max-content;
+        margin: 0.5rem 0 0;
+        padding: 0.75rem;
+        border: 0 !important;
+        border-radius: $nav-panel-radius !important;
+        background-color: $surface-raised;
+        box-shadow:
+            0 0 0 1px rgba($border-color, 0.6),
+            0 1rem 2.5rem -0.5rem rgba($black, 0.1) !important;
+        translate: -50% 0;
+        transition:
+            opacity $nav-panel-duration $nav-panel-ease,
+            scale $nav-panel-duration $nav-panel-ease;
+
+        @starting-style {
+            opacity: 0;
+            scale: $nav-panel-start-scale;
+        }
     }
-    .section-dropdown .dropdown-menu .dropdown-item:hover {
-        background-color: $body-bg-dark;
+
+    .navbar .nav-disclosure.is-closing > .nav-panel {
+        opacity: 0;
+        scale: $nav-panel-start-scale;
+    }
+
+    .navbar .nav-panel > li {
+        display: flex;
+    }
+
+    .navbar .nav-panel .nav-panel__item {
+        display: flex;
+        flex: 1 1 auto;
+        gap: 0.75rem;
+        align-items: flex-start;
+        padding: 0.5rem 0.75rem;
+        border-radius: 0.375rem;
+        color: $body-color;
+        font-size: 1rem;
+        white-space: normal;
+    }
+
+    .navbar .nav-panel .nav-panel__item:hover,
+    .navbar .nav-panel .nav-panel__item:focus-visible {
+        background-color: rgba($primary, 0.06);
+        color: $body-color;
+    }
+
+    .navbar .nav-panel .nav-panel__item:focus-visible {
+        outline: 2px solid $link-color;
+        outline-offset: -2px;
+    }
+
+    .navbar .nav-panel .nav-panel__item.active {
+        background-color: rgba($primary, 0.08);
+        color: $link-color;
+    }
+
+    .nav-panel__icon {
+        flex-shrink: 0;
+        width: 1.25rem;
+        height: 1.25rem;
+        margin-top: 0.125rem;
+        stroke-width: 1.5;
+    }
+
+    .nav-panel__text {
+        display: block;
+        width: $nav-panel-entry-width;
+    }
+
+    .nav-panel__name {
+        display: block;
+        font-weight: 500;
+        line-height: 1.5;
+    }
+
+    .nav-panel__description {
+        display: block;
+        color: $nav-panel-muted;
+        font-size: 0.8125rem;
+        line-height: 1.5;
+    }
+
+    .navbar .nav-panel .nav-panel__item.active .nav-panel__name {
+        font-weight: 600;
+    }
+
+    @include color-mode(dark) {
+        .navbar .nav-disclosure > .nav-panel {
+            background-color: $surface-raised-dark;
+            box-shadow:
+                0 0 0 1px $border-color-dark,
+                0 1rem 2.5rem -0.5rem rgba($black, 0.45) !important;
+        }
+
+        .navbar .nav-panel .nav-panel__item,
+        .navbar .nav-panel .nav-panel__item:hover,
+        .navbar .nav-panel .nav-panel__item:focus-visible {
+            color: $body-color-dark;
+        }
+
+        .navbar .nav-panel .nav-panel__item:hover,
+        .navbar .nav-panel .nav-panel__item:focus-visible {
+            background-color: rgba($white, 0.06);
+        }
+
+        .navbar .nav-panel .nav-panel__item:focus-visible {
+            outline-color: $link-color-dark;
+        }
+
+        .navbar .nav-panel .nav-panel__item.active {
+            background-color: rgba($link-color-dark, 0.1);
+            color: $link-color-dark;
+        }
+
+        .nav-panel__description {
+            color: $body-secondary-color-dark;
+        }
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .navbar .nav-disclosure > .nav-panel {
+        transition: none;
     }
 }

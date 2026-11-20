@@ -1,0 +1,8 @@
+{{- /*
+  Whether a page shows the section sidebar beside its text on large screens
+  (see main/section-sidebar.html).
+
+  @param {page} . The page being rendered.
+  @returns {bool}
+*/ -}}
+{{- return in site.Params.doks.sectionNav .Section -}}
