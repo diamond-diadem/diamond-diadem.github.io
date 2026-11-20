@@ -503,7 +503,7 @@ h1.home-hero__title {
 }
 
 // The four services, one strip of links under the hero
-.home-services {
+.home-shortcuts {
     display: grid;
     margin-top: clamp(2.5rem, 5vw, 4rem);
     padding: 0.5rem;
@@ -522,7 +522,7 @@ h1.home-hero__title {
     }
 }
 
-.home-service {
+.home-shortcut {
     position: relative;
     display: flex;
     gap: 0.875rem;
@@ -536,7 +536,7 @@ h1.home-hero__title {
     }
 }
 
-.home-service__icon {
+.home-shortcut__icon {
     flex-shrink: 0;
     width: 2.5rem;
     height: 2.5rem;
@@ -546,7 +546,7 @@ h1.home-hero__title {
     color: var(--home-accent);
 }
 
-a.home-service__link {
+a.home-shortcut__link {
     font-family: $font-family-ui;
     font-weight: 600;
     color: var(--home-text);
@@ -575,7 +575,7 @@ a.home-service__link {
     }
 }
 
-.home-service__text {
+.home-shortcut__text {
     margin: 0.125rem 0 0;
     font-size: 0.9375rem;
     line-height: 1.45;
@@ -1256,6 +1256,9 @@ h3.catalog-group__title {
 // ---------------------------------------------------------------------------
 // FAQ
 
+// Untinted sections follow one another, so each drops its top padding and
+// leaves a single gap (the preceding section's bottom padding) between them
+.home-news,
 .home-faq {
     padding-top: 0;
 }

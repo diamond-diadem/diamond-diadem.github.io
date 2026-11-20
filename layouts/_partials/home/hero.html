@@ -23,13 +23,13 @@
     {{ end }}
   </div>
   {{ with .services }}
-  <ul class="home-container home-services" role="list">
+  <ul class="home-container home-shortcuts" role="list">
     {{- range . }}
-    <li class="home-service">
-      {{ partial "home/icon.html" (dict "name" .icon "class" "home-service__icon") }}
+    <li class="home-shortcut">
+      {{ partial "home/icon.html" (dict "name" .icon "class" "home-shortcut__icon") }}
       <div>
-        <a class="home-service__link" href="{{ partial "home/page-url.html" .page }}">{{ .title }}</a>
-        <p class="home-service__text">{{ .text }}</p>
+        <a class="home-shortcut__link" href="{{ partial "home/page-url.html" .page }}">{{ .title }}</a>
+        <p class="home-shortcut__text">{{ .text }}</p>
       </div>
     </li>
     {{- end }}

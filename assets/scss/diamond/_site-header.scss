@@ -74,8 +74,10 @@
         flex-grow: 1;
     }
 
+    // The gap spreads the links without touching their hit area
     .navbar.site-header .site-menu .navbar-nav {
         justify-content: center;
+        column-gap: 0.75rem;
     }
 
     // Unwrapping the drawer puts brand, links and actions in one row; equal
