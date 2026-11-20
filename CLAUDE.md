@@ -47,9 +47,12 @@ Read `Design_decisions.md` before changing a design choice it records; add a sec
 - Root `page.html` and `section.html` render every content page through
   `main/content-page.html`, so title and text keep the same place, size and
   weight in all sections; lists generated from content go in the Markdown as
-  shortcodes (`codes-catalog`, `section-cards`), not in section layouts. The
-  sidebar column takes the margin left of the centred text, empty where a
-  section has none. Codes pages differ on purpose (`codes/single.html`).
+  shortcodes (`codes-catalog`, `section-cards`), not in section layouts.
+  Layout: `.content-grid`, statamic.dev's three columns (sidebar, text, rail)
+  under a breadcrumb row, kept empty where a section has no sidebar or a page
+  no trail. Codes pages differ on purpose (`codes/single.html`).
+- Breadcrumb trail: only on pages inside the sections listed under a parent
+  menu entry (Services), from `main/has-breadcrumb-trail.html`.
 - Section sidebar (codes, documentation, notebooks, workflows): built from the
   section tree (`sidebar/*.html`), shared by desktop and the mobile drawer.
   `_index` front matter: `sidebar_expanded`, `sidebar_sort: title`.

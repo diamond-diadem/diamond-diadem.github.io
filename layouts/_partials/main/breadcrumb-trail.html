@@ -1,0 +1,16 @@
+{{- /*
+  The breadcrumb trail over a page's text: from its section down to the page
+  itself. Only the pages inside the Services sections have one (see
+  main/has-breadcrumb-trail.html); on the others the content grid keeps its
+  row empty, so the title stays put.
+
+  @param {page} . The page being rendered.
+*/ -}}
+{{- if partial "main/has-breadcrumb-trail.html" . -}}
+<nav class="content-breadcrumb" aria-label="{{ i18n "breadcrumb" }}">
+  <ol class="breadcrumb">
+    {{ partial "main/breadcrumb.html" . -}}
+    <li class="breadcrumb-item active" aria-current="page">{{ .LinkTitle }}</li>
+  </ol>
+</nav>
+{{- end -}}

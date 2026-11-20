@@ -15,7 +15,7 @@ $heading-anchor-gap: 0.4em;
 }
 
 @include media-breakpoint-up(md) {
-    .article-split__body > :is(h1, h2, h3, h4, h5, h6),
+    .article-body > :is(h1, h2, h3, h4, h5, h6),
     .page-content > :is(h1, h2, h3, h4, h5, h6),
     .docs-content > :is(h1, h2, h3, h4, h5, h6) {
         position: relative;

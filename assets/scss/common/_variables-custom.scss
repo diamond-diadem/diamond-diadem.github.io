@@ -41,8 +41,10 @@ $card-border-color: var(--bs-border-color);
 $news-veil-light: rgba($body-bg, 0.9);
 $news-veil-dark: rgba($body-bg-dark, 0.88);
 
-// Reading width of article text: about 66 characters per line (see _article-layout.scss)
-$content-measure: 36rem;
+// Reading width of article text, taken from statamic.dev's documentation
+// (a 53rem box less 2.2rem of padding on each side): about 90 characters per
+// line in our font (see Design_decisions.md)
+$content-measure: 48.6rem;
 
 $grid-breakpoints: (
     xs: 0,

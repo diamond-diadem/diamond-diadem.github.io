@@ -1,76 +1,29 @@
-// Content pages: a section sidebar beside an article of readable width.
-//
-// From lg up the article block (the text, plus its contents rail from xl) is
-// centred on the screen, and the sidebar flanks it: its column takes the
-// whole margin on the left, and the sidebar sits at the right end of that
-// column, $section-sidebar-gap from the text, the same gap the rail keeps on
-// the other side. Spare width thus goes to the outer margins, not between
-// the sidebar and the text it belongs to. On screens too narrow for that,
-// the sidebar keeps its full width and the text moves right instead, down
-// to a small outer margin; only then does the sidebar narrow and wrap.
+// Section sidebar, in the left column of the content grid (see
+// _article-layout.scss), at the start of that column and at most
+// $content-side-panel-width wide, as on statamic.dev. Longer entries wrap.
 //
 // Sections without a sidebar (Data, About) keep the empty column, so the
 // title and the text stay put when the reader moves from one section to
 // another. (See Design_decisions.md for the reasoning.)
 
-$section-sidebar-min-width: 14rem;
-// The widest entry ("Accessing and using DIAMOND Guix packages", with its
-// indent and the sidebar's padding) needs about 21rem; past that, the
-// sidebar would only add empty space beside short entries
-$section-sidebar-max-width: 22rem;
-$section-sidebar-gap: $article-rail-gap;
-// Kept on the right of the article block when the text leaves the centre
-$section-sidebar-outer-min: 2rem;
-
-// The largest of: the margin that centres the article block; the room for
-// the widest sidebar, as far as the screen allows; the narrowest sidebar.
-// (The article column's own padding, half a gutter, is taken off so that it
-// is the text, not the column, that ends up centred.)
-@function section-sidebar-column($article-block-width) {
-    $padding: calc(var(--bs-gutter-x) * 0.5);
-
-    @return max(
-        #{$section-sidebar-min-width + $section-sidebar-gap},
-        calc((100% - #{$article-block-width}) / 2 - #{$padding}),
-        min(
-            #{$section-sidebar-max-width + $section-sidebar-gap},
-            calc(100% - #{$article-block-width + $section-sidebar-outer-min} - #{$padding})
-        )
-    );
-}
-
-// Article: a comfortable line length whatever the screen width (the width
-// itself is set in _article-layout.scss)
-.docs-content {
-    flex: 1 1 auto;
-    min-width: 0;
-}
-
 @include media-breakpoint-up(lg) {
-    // As a flex item the column stretches to the article's height, which is
+    // As a grid item the column stretches to the article's height, which is
     // all a sidebar inside it would need to stick: no minimum height, or a
-    // short page would push the footer down by a whole screen.
-    .section-sidebar {
-        $width: section-sidebar-column($content-measure);
-
-        flex: 0 0 $width;
-        justify-content: flex-end;
-        width: $width;
-    }
-
-    // As wide as its longest entry, so it ends right at the gap; the theme
-    // gives it a fixed basis, which would set the width instead
+    // short page would push the footer down by a whole screen. The theme
+    // gives the sidebar a fixed flex basis, which would set its width instead.
     .section-sidebar .docs-sidebar {
         flex: none;
         align-self: flex-start;
-        width: max-content;
-        max-width: min(#{$section-sidebar-max-width}, 100% - #{$section-sidebar-gap});
-        margin-right: $section-sidebar-gap;
+        width: 100%;
+        max-width: $content-side-panel-width;
     }
 
-    // The article starts where the sidebar column ends, which centres it
-    .section-sidebar + .article-column .docs-content {
-        margin-inline-start: 0;
+    // Its label lines up with the breadcrumb trail beside it
+    .section-sidebar .sidebar-heading {
+        display: flex;
+        align-items: center;
+        min-height: $content-grid-breadcrumb-row;
+        margin-top: 0;
     }
 
     // The theme caps the list at the screen height with a permanent scroll bar.
@@ -90,16 +43,6 @@ $section-sidebar-outer-min: 2rem;
         scrollbar-width: thin;
         scrollbar-color: rgba($body-color, 0.25) transparent;
         scrollbar-gutter: stable;
-    }
-}
-
-// From xl the contents rail joins the text, so the article block is wider
-@include media-breakpoint-up(xl) {
-    .section-sidebar {
-        $width: section-sidebar-column($article-width);
-
-        flex-basis: $width;
-        width: $width;
     }
 }
 

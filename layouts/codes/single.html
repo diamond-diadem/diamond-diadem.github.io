@@ -1,59 +1,21 @@
+{{- /*
+  A code page: the content grid of every content page (see
+  main/content-page.html), opened by the code's own centred header instead of
+  the page header.
+*/ -}}
 {{ define "main" }}
-	<div class="row flex-xl-nowrap">
+	<div class="content-grid">
 		{{ partial "main/section-sidebar.html" . }}
-		{{ if and (eq site.Params.doks.containerBreakpoint "fluid") (in .Site.Params.mainSections .Type) }}
-			<div class="col container-fw article-column{{ if partial "main/has-section-sidebar.html" . }} article-column--beside-sidebar{{ end }} d-lg-flex flex-lg-row">
-		{{ end }}
-		{{/*  {{ if ne .Params.toc false -}}
-		<nav class="docs-toc{{ if ne site.Params.doks.navbarSticky true }} docs-toc-top{{ end }}{{ if site.Params.doks.headerBar }} docs-toc-offset{{ end }} d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
-			{{ partial "sidebar/docs-toc-desktop.html" . }}
-		</nav>
-		{{ end -}}  */}}
-		{{/*  {{ if .Params.toc -}}
-		<main class="docs-content col-lg-12 col-xl-12 codes-content">
-		{{ else -}}  */}}
+		{{ partial "main/breadcrumb-trail.html" . }}
 		<main class="docs-content codes-content diamond-content">
-		{{/*  {{ end -}}  */}}
-			{{ if site.Params.doks.breadcrumbTrail -}}
-				<!-- https://discourse.gohugo.io/t/breadcrumb-navigation-for-highly-nested-content/27359/6 -->
-				<nav aria-label="breadcrumb">
-					<ol class="breadcrumb">
-						{{ partial "main/breadcrumb" . -}}
-						<li class="breadcrumb-item active" aria-current="page">{{ .Title }}</li>
-					</ol>
-				</nav>
-			{{ end }}
 			{{ partial "main/code-header.html" . }}
 			{{ with .Params.lead -}}
 			<p class="lead">{{ . | safeHTML }}</p>
 			{{ end -}}
-			<!-- {{ if ne .Params.toc false -}}
-			<nav class="toc-mobile d-xl-none" aria-label="Quaternary navigation">
-				{{ partial "sidebar/docs-toc-mobile.html" . }}
-			</nav>
-			{{ end -}} -->
-
-			{{ partial "main/article-split.html" . }}
-			{{/*  <div class="page-footer-meta d-flex flex-column flex-md-row justify-content-between">
-				{{ if site.Params.doks.lastMod -}}
-					{{ partial "main/last-modified.html" . }}
-				{{ end -}}
-				{{ if site.Params.doks.editPage -}}
-					{{ partial "main/edit-page.html" . }}
-				{{ end -}}
-			</div>  */}}
-			<!-- {{ partial "main/docs-navigation.html" . }} -->
-			<!--
-			{{ if not .Site.Params.options.collapsibleSidebar -}}
-				{{ partial "main/docs-navigation.html" . }}
-			{{ else -}}
-				<div class="my-n3"></div>
-			{{ end -}}
-			-->
-		</main>
-		{{ if and (eq site.Params.doks.containerBreakpoint "fluid") (in .Site.Params.mainSections .Type) }}
+			<div class="article-body">
+				{{ .Content }}
 			</div>
-		{{ end }}
+		</main>
+		{{ partial "main/article-rail.html" . }}
 	</div>
-
 {{ end }}

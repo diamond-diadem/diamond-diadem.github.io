@@ -1,0 +1,88 @@
+// Breadcrumb trail above the articles of the Services sections, placed and
+// spaced after statamic.dev: one line over the text, its steps parted by a
+// chevron. It speaks the grammar of the sidebar and rail labels (small
+// capitals in the interface font, muted links that darken on hover), and the
+// chevron is the one the sidebar's branches draw. The markup is Bootstrap's
+// breadcrumb, which Doks ships; only its look changes here.
+
+$breadcrumb-step-space: 0.75rem;
+$breadcrumb-step-space-lg: 1.75rem;
+
+.content-breadcrumb {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+
+    @include media-breakpoint-up(lg) {
+        margin-top: 0;
+    }
+}
+
+// Qualified to outweigh the theme's own .breadcrumb margins and size
+.content-breadcrumb .breadcrumb {
+    --bs-breadcrumb-item-padding-x: 0;
+    --bs-breadcrumb-item-active-color: var(--bs-body-color);
+
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    row-gap: 0.4rem;
+    font-family: $font-family-ui;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    line-height: 1.3;
+    text-transform: uppercase;
+}
+
+.content-breadcrumb .breadcrumb-item {
+    display: flex;
+    align-items: center;
+}
+
+.content-breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+    content: "";
+    float: none;
+    flex: none;
+    width: 0.45em;
+    height: 0.45em;
+    margin-inline: $breadcrumb-step-space;
+    padding: 0;
+    border-right: 1.5px solid var(--page-muted);
+    border-bottom: 1.5px solid var(--page-muted);
+    opacity: 0.55;
+    transform: rotate(-45deg);
+
+    @include media-breakpoint-up(lg) {
+        margin-inline: $breadcrumb-step-space-lg;
+    }
+}
+
+.content-breadcrumb a {
+    color: var(--page-muted);
+    text-decoration: none;
+    transition: color 0.15s ease;
+
+    &:hover,
+    &:focus-visible {
+        color: var(--bs-body-color);
+    }
+}
+
+// The theme's dark link color outranks the muted one: restate it
+@include color-mode(dark) {
+    .content-breadcrumb a {
+        color: var(--page-muted);
+    }
+
+    .content-breadcrumb a:hover,
+    .content-breadcrumb a:focus-visible {
+        color: var(--bs-body-color);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .content-breadcrumb a {
+        transition: none;
+    }
+}

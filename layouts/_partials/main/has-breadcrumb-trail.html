@@ -1,0 +1,19 @@
+{{- /*
+  Whether a page shows the breadcrumb trail (see main/breadcrumb-trail.html):
+  every page inside a section that the main menu lists under a parent entry
+  (Services), but not the section's own page, where the trail would only
+  repeat the title.
+
+  @param {page} . The page being rendered.
+  @returns {bool}
+*/ -}}
+{{- $section := .FirstSection -}}
+{{- $inMenuGroup := false -}}
+{{- range site.Menus.main -}}
+  {{- range .Children -}}
+    {{- if eq .Page $section -}}
+      {{- $inMenuGroup = true -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return and $inMenuGroup (ne $section $) -}}

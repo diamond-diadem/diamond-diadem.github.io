@@ -12,9 +12,11 @@
 @import "diamond/drawer";
 @import "diamond/site-menu";
 @import "diamond/nav-disclosure";
-// The sidebar sizes itself from the article's width, so the article comes first
+// The sidebar and the trail take their sizes from the content grid, so the
+// grid comes first
 @import "diamond/article-layout";
 @import "diamond/section-sidebar";
+@import "diamond/content-breadcrumb";
 @import "diamond/heading-anchors";
 @import "diamond/table-scroll";
 @import "diamond/content-images";

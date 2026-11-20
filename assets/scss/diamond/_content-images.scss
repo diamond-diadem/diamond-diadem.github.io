@@ -3,15 +3,12 @@
 
 // figure shortcode. "text" fills the text column; "wide" reaches past it on
 // both sides, for diagrams and plots whose detail does not survive the
-// narrow column. It grows by what the page's column leaves free beside the
-// text, up to a cap of about one and a half times the measure. From xl the
-// text is no longer centered in its column (the contents rail takes the
-// right), so the room on its left sets the growth on both sides, and the rail
-// steps aside while the figure passes it (see article-layout). The column
-// (the space beside the documentation sidebar, or the whole container
-// elsewhere) is made a size container so the figure measures it, not the
-// viewport. Any other block that needs the room, such as the codes catalog,
-// takes the same width with the .content-wide class.
+// column. It grows by what its grid cell leaves free beside the text (the
+// cell's padding included), less a gutter, up to $figure-wide-extra on each
+// side, and never into the sidebars. The text column (.docs-content, see
+// _article-layout.scss), or the news article column, is a size container so
+// the figure measures it, not the viewport. Any other block that needs the
+// room, such as the codes catalog, takes the same width with .content-wide.
 $figure-wide-extra: 8rem; // added on each side
 $figure-wide-gutter: 1.5rem; // kept clear at the column's edge
 
@@ -41,38 +38,24 @@ $figure-wide-gutter: 1.5rem; // kept clear at the column's edge
 
 .content-figure--wide,
 .content-wide {
-    // How far the figure may grow past the text on each side: what the
-    // column leaves beside the text, less a gutter, up to the cap
-    --figure-extra: clamp(0rem, calc((100cqw - #{$content-measure}) / 2 - #{$figure-wide-gutter}), #{$figure-wide-extra});
-    --figure-extra-start: var(--figure-extra);
+    --figure-extra: clamp(
+        0rem,
+        calc((100cqw - #{$content-measure}) / 2 + var(--content-text-inset, 0rem) - #{$figure-wide-gutter}),
+        #{$figure-wide-extra}
+    );
 
-    // Drawn over the rail, which fades out of its way
+    // Drawn over the news rail, which fades out of its way (see article-rail.js)
     position: relative;
     z-index: 1;
-    width: calc(100% + var(--figure-extra-start) + var(--figure-extra));
-    margin-inline: calc(-1 * var(--figure-extra-start)) calc(-1 * var(--figure-extra));
+    width: calc(100% + 2 * var(--figure-extra));
+    margin-inline: calc(-1 * var(--figure-extra));
 }
 
+// News articles: from xl the text is no longer centred in its column (the
+// rail takes the right), so the room on its left sets the growth on both sides
 @include media-breakpoint-up(xl) {
-    .content-figure--wide,
-    .content-wide {
+    .article-column :is(.content-figure--wide, .content-wide) {
         --figure-extra: clamp(0rem, calc((100cqw - #{$article-width}) / 2 - #{$figure-wide-gutter}), #{$figure-wide-extra});
-    }
-}
-
-// Beside the section sidebar the text starts at the left edge of its column,
-// and the room on its left is only the gap before the sidebar (see
-// _section-sidebar.scss), which, unlike the rail, does not step aside. There
-// a wide block grows left only as far as keeps it clear of the sidebar's
-// longest entry, and takes the rest of its usual extra width on the right,
-// over the rail, as far as the column allows.
-$figure-sidebar-clearance: 2rem;
-$figure-sidebar-start: $section-sidebar-gap - $figure-sidebar-clearance;
-
-@include media-breakpoint-up(lg) {
-    .article-column--beside-sidebar :is(.content-figure--wide, .content-wide) {
-        --figure-extra-start: #{$figure-sidebar-start};
-        --figure-extra: clamp(0rem, calc(100cqw - #{$content-measure} - #{$figure-wide-gutter}), #{2 * $figure-wide-extra - $figure-sidebar-start});
     }
 }
 

@@ -1,4 +1,14 @@
+{{- /*
+  The ancestors of a page as breadcrumb items, from its section down to its
+  parent. Overrides the Doks partial: the trail starts at the section, as on
+  statamic.dev, not at the home page, and every step takes its page's title,
+  so translated section names show as such.
+
+  @param {page} . The page whose ancestors are listed.
+*/ -}}
 {{ with .Parent -}}
+  {{- if not .IsHome -}}
   {{ partial "main/breadcrumb.html" . -}}
-  <li class="breadcrumb-item"><a href="{{ .RelPermalink }}">{{ if .IsHome }}{{ i18n "home" }}{{ else if eq .CurrentSection .FirstSection }}{{ .Section | humanize }}{{ else }}{{ .Title }}{{ end }}</a></li>
+  <li class="breadcrumb-item"><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+  {{ end -}}
 {{ end -}}

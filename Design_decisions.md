@@ -4,10 +4,18 @@ A record of the investigations behind the design decisions.
 
 **Decision.** Reading text (articles, documentation, code pages) is set in
 Source Serif 4 at 18px (`1.125rem`), with a line height of 1.6, in a column
-36rem wide (`$content-measure`), which gives about 66 characters per line.
-Headings and the interface use Source Sans 3. The contents rail sits to the
-right of the column from the `xl` breakpoint up, without changing the column's
-width or position.
+48.6rem wide (`$content-measure`), which gives about 90 characters per line.
+Headings and the interface use Source Sans 3. The width is statamic.dev's (see
+"Content pages take statamic.dev's grid" below), adopted on request in
+November 2026; it replaced a 36rem column of about 66 characters, which the
+research below supports. The font and its size did not change.
+
+**What the wider column costs.** Measured the same way as below, statamic.dev
+itself sets about 100 characters a line (Lexend 300 at 16px in 48.6rem); our
+serif at 18px gives about 90. Both are past the 45–75 range and past the 80
+characters of WCAG 1.4.8 (AAA, not part of the AA target). To return to the
+classic measure, set `$content-measure` back to 36rem: the grid keeps working,
+with more air around the text.
 
 **Line length.**
 
@@ -31,7 +39,7 @@ site, about 280,000 characters in English and 320,000 in French:
 | EN | 0.476 em/char | 67.2                        | 64 (57–68)                                        |
 | FR | 0.473 em/char | 67.6                        | 64 (58–68)                                        |
 
-So 36rem gives 64 characters on a typical wrapped line, and nine lines in ten
+So 36rem gave 64 characters on a typical wrapped line, and nine lines in ten
 fall between 57 and 68: inside both recommended ranges and close to the 66
 ideal. French text, despite its longer words, comes out the same. (The
 measurement uses the font's default weight; the site uses 450, which barely
@@ -121,65 +129,64 @@ applied to this content.
 
 **Decision.** Content pages of every section (including Data and About, which
 have no sidebar) go through `main/content-page.html`: same page header (title
-size, weight and spacing), same text size, same column. The sidebar column
-has the same width in every section, set by the screen width alone (never by
-the entries), and a section without a sidebar keeps it empty.
+size, weight and spacing), same text size, same column, same grid. The
+sidebar column and the breadcrumb row are there in every section, set by the
+screen width alone (never by the entries), and left empty where a section has
+no sidebar or a page no trail.
 
 **Why.** Moving from Workflows to Data used to shift the title and the text,
 because they used different layouts (a plain `h1` against the page header) and
 the sidebar was as wide as its longest entry, so even two sidebar sections
-differed. A reader who changes section reads that as the page jumping.
-
-**Cost.** On screens too narrow for the sidebar to flank the text (see next
-section), the text sits right of the centre, in every section alike. Codes
+differed. A reader who changes section reads that as the page jumping. Codes
 pages keep their own centred header on purpose.
 
-## The sidebar flanks the text and steps back while reading
+## Content pages take statamic.dev's grid
 
-**Decision.** From `lg` up, the article block (the text, plus its contents
-rail from `xl`) is centred on the screen. The sidebar column takes the whole
-margin on its left, and the sidebar, as wide as its longest entry up to
-22rem, sits at the right end of that column, `$article-rail-gap` (5rem) from
-the text: the same gap as the rail on the other side. Spare width goes to the
-outer margins. Where the screen is too narrow to centre the text with a full
-sidebar beside it (below about 1750px, and always before the rail appears at
-1220px), the sidebar keeps its 22rem and the text moves right, down to a 2rem
-outer margin; only below about 1340px (1050px without the rail) does the
-sidebar narrow, to 14rem at the least. The sidebar
-scrolls away with the page and, as soon as the reader scrolls, fades like the
-rail (30% opacity, greyscale); pointing at it, tabbing into it or returning
-to the top brings it back. Wide blocks (`.content-wide`, wide figures) beside
-it grow at most 3rem to the left, keeping 2rem clear of its longest entry, and
-take the rest of their extra width on the right, over the rail.
+**Decision.** From `lg` (1000px) up, content pages are a grid copied from
+statamic.dev's documentation (for example
+[Control Panel Translations](https://statamic.dev/control-panel/cp-translations)):
 
-**Why.** The sidebar used to start at the page edge and the text was centred
-in what it left, so on a 1920px screen some 400px of empty paper separated
-them.
+- At most 105rem wide, centred, 1.55rem from the page edges; columns
+  18fr / 64fr / 18fr (sidebar, text, contents rail) from `xl` (1220px), and
+  19fr / 73fr / 8fr between `lg` and `xl`, where the rail is hidden and its
+  column shrinks to a margin. Columns 1.55rem apart.
+- Two rows: 2.5rem for the breadcrumb trail, then the page, 1.9rem apart. The
+  sidebar and the rail span both, so their labels line up with the trail.
+- The text is padded 2.2rem inside its column and capped at 48.6rem (a 53rem
+  box), centred; the trail is aligned on it.
+- The sidebar sits at the start of its column, at most 15rem wide; longer
+  entries wrap. The rail starts 2rem into its column (3rem from `xxl`), at
+  most 15rem wide.
+- Below `lg` nothing changes: one column, the sidebar in the header drawer.
 
-- In NN/g's 2024 eye-tracking study on 1920×1080 screens, the leftmost 192px
-  received 6% of fixations and attention peaked about 600px from the left
-  edge: a sidebar pinned to the edge sits where readers rarely look.
-- The same study puts 80% of fixations on the left half and advises keeping
-  navigation on the left: the fix is to bring it closer, not to move it.
-- Proximity: a sidebar further from the text than the text's own rail reads
-  as page chrome, not as this section's contents.
-- Documentation themes keep sidebar and contents at fixed widths and give
-  spare width to the outer margins, never to the gap between them.
-- Fading follows the rail, so both sides of the text behave alike; it only
-  happens where hovering exists, as a touch screen has no gesture to undo it.
+statamic.dev switches at 1000, 1100 and 1250px; the site keeps its own
+breakpoints (1000 and 1220px) for the same steps. Only the geometry was
+taken: fonts, colours and behaviours stay the site's. The sidebar and the
+rail still scroll or stick as before, and still fade while reading (30%
+opacity, greyscale; pointing at them, tabbing into them or returning to the
+top brings them back), only where hovering exists, as a touch screen has no
+gesture to undo it. Wide figures and `.content-wide` blocks grow into what
+the text column leaves beside the text, never into the sidebars.
 
-**Rejected.** The variants that also made the sidebar sticky, with or
-without the current page kept unfaded: a long sidebar would then need a
-scroll of its own.
+**Breadcrumb trail.** Pages inside the Services sections (sections the main
+menu lists under a parent entry; not the sections' own pages, where the trail
+would repeat the title) open with the trail from their section to themselves,
+in the row above the title: small capitals in the interface font, steps
+parted by the chevron the sidebar's branches use. Other pages keep the row
+empty, so the title stays put.
 
-**Where in the code.** `section-sidebar-column()` in
-`assets/scss/diamond/_section-sidebar.scss`, `sidebar-recede.js`, and the
-`.article-column--beside-sidebar` rule in `_content-images.scss`.
+**Replaces** "The sidebar flanks the text and steps back while reading": the
+article block centred on the screen, a sidebar up to 22rem wide set 5rem from
+the text at the end of its column, and a 36rem text column. That layout was
+built on NN/g's finding that readers rarely look at the leftmost part of a
+wide screen; the new grid keeps the sidebar at the edge of a 105rem block
+rather than of the screen, which on a 1920px screen puts it about 140px from
+the left.
 
-**Sources.**
-[NN/g: Horizontal attention leans left](https://www.nngroup.com/articles/horizontal-attention-leans-left/) ·
-[NN/g: Vertical navigation](https://www.nngroup.com/articles/vertical-nav/) ·
-[Furo: extra width on large screens](https://github.com/pradyunsg/furo/discussions/651)
+**Where in the code.** `assets/scss/diamond/_article-layout.scss` (grid),
+`_section-sidebar.scss`, `_content-breadcrumb.scss`, `_content-images.scss`;
+`main/content-page.html`, `codes/single.html`, `main/breadcrumb-trail.html`,
+`main/has-breadcrumb-trail.html`, `main/breadcrumb.html`.
 
 ## The catalogs filter their tags with switches
 
