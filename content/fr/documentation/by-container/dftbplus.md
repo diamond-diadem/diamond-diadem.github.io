@@ -5,15 +5,42 @@ weight: 1
 description: "Tutoriel sur l'utilisation de l'image Apptainer DFTB+ de DIAMOND : exemple d'optimisation de géométrie"
 ---
 
-{{< callout context="note" title="Prérequis" >}}
+<div align="justify">
 
-- Apptainer (voir soit [notre guide d'installation]({{% ref "/documentation/install/install-apptainer" %}}), soit [la documentation officielle](https://apptainer.org/docs/user/latest/quick_start.html#installation))
-- L'image [`dftbplus.sif`]({{% ref "/codes/scientific-computing/dftbplus/" %}})
-- Les [fichiers d'entrée](/downloads/dftbplus-tutorial-inputs.tar.gz)
+{{< callout context="note" title="Prérequis" icon="tabler-icons/outline/info-circle" >}}
+
+- Avoir installé **Apptainer** [(guide d'installation)](/documentation/install/install-apptainer/) ou **Docker** [(guide d'installation)](https://docs.docker.com/engine/install/)
+- Avoir téléchargé les [fichiers d'entrée](/downloads/dftbplus-tutorial-inputs.tar.gz)
+
+Pour plus d'informations sur les conteneurs Apptainer, veuillez consulter la [page dédiée](/about/apptainer/) ou suivre [ce tutoriel](/documentation/use/apptainer-image/) pour s'approprier les principales commandes d'Apptainer.
 
 {{< /callout >}}
 
-Pour plus d'informations sur les conteneurs Apptainer et leur utilisation, nous mettons à votre disposition [une description d'Apptainer]({{% ref "/about/apptainer" %}}), un guide rapide sur [comment utiliser Apptainer]( {{% ref "/documentation/use/apptainer-image" %}}), sans oublier bien sûr la [documentation officielle d'Apptainer](https://apptainer.org/docs/user/latest/).
+{{< callout context="tip" title="Apptainer ou Docker ?" icon="tabler-icons/outline/help-circle" >}}
+
+Chaque commande de cette page est donnée pour Apptainer et pour Docker : choisissez votre outil dans n'importe quel onglet ci-dessous et toute la page suit votre choix. Docker convient pour essayer l'image sur votre propre ordinateur, mais sur les clusters il faut utiliser Apptainer ([pourquoi ?](/documentation/faq/#docker-est-également-une-solution-de-conteneurisation-pourquoi-ne-pas-simplement-utiliser-docker-)).
+
+{{< /callout >}}
+
+## Image de conteneur
+
+Récupérez l'image DFTB+ :
+
+{{< tabs "dftbplus-pull" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull dftbplus.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/dftbplus.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/dftbplus
+docker tag gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/dftbplus dftbplus
+```
+
+La seconde commande donne à l'image le nom court `dftbplus`, utilisé dans la suite de ce tutoriel.
+{{< /tab >}}
+{{< /tabs >}}
 
 ## Fichiers d'entrée
 
@@ -34,7 +61,11 @@ L'archive contient les fichiers et répertoires suivants :
 
 ## Guide de démarrage rapide
 
-Pour les plus impatients, voici comment exécuter l'ensemble du workflow sur \<N\> processus MPI et \<nt\> threads par tâche, en partant du principe que le répertoire courant contient l'image `dftbplus.sif` ainsi que les répertoires `initialstructre`, `slakos` et `vibrations` issus de l'archive d'entrée :
+Pour les plus impatients, voici comment exécuter l'ensemble du workflow sur `<N>` processus MPI et `<nt>` threads par tâche, en partant du principe que le répertoire courant contient les répertoires `initialstructre`, `slakos` et `vibrations` issus de l'archive d'entrée :
+
+{{< tabs "dftbplus-quickstart" >}}
+{{< tab "Apptainer" >}}
+L'image `dftbplus.sif` est supposée se trouver dans le répertoire courant.
 
 ```bash
 cd initialstructre
@@ -43,6 +74,17 @@ cd ../vibrations
 apptainer exec --env "OMP_NUM_THREADS=<nt>" ../dftbplus.sif mpirun -np <N> dftb+ | tee output
 apptainer exec ../dftbplus.sif modes | tee output_modes
 ```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker run --rm --entrypoint "" -u $(id -u):$(id -g) -v "$PWD":/work -w /work/initialstructre dftbplus mpirun -np 2 dftb+ | tee output
+docker run --rm --entrypoint "" -u $(id -u):$(id -g) -v "$PWD":/work -w /work/vibrations dftbplus mpirun -np 2 dftb+ | tee output
+docker run --rm --entrypoint "" -u $(id -u):$(id -g) -v "$PWD":/work -w /work/vibrations dftbplus modes | tee output_modes
+```
+
+Ici, `-v "$PWD":/work -w /work` rend le répertoire courant accessible dans le conteneur et y lance le calcul, `-u $(id -u):$(id -g)` garantit que les fichiers de sortie vous appartiennent (et non à `root`), et `--rm` supprime le conteneur une fois le calcul terminé. Sur les systèmes utilisant SELinux (Fedora, RHEL…), ajoutez `:z` au volume (`-v "$PWD":/work:z`) si vous obtenez des erreurs « Permission denied ».
+{{< /tab >}}
+{{< /tabs >}}
 
 ## Utilisation détaillée du conteneur DFTB+
 
@@ -56,11 +98,22 @@ L’exécutable principal contenu dans l’image est `dftb+`. Sa version et les 
 
 La licence du code est accessible depuis l'extérieur du conteneur comme suit :
 
+{{< tabs "dftbplus-introduction" >}}
+{{< tab "Apptainer" >}}
 ```bash
 dftb_path=$(apptainer exec dftbplus.sif ls /gnu/store | grep dftb)
 license_path=$(apptainer exec dftbplus.sif find /gnu/store/$dftb_path -name "LICENSE")
 apptainer exec dftbplus.sif cat $license_path
 ```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+dftb_path=$(docker run --rm --entrypoint "" -u $(id -u):$(id -g) -v "$PWD":/work -w /work dftbplus ls /gnu/store | grep dftb)
+license_path=$(docker run --rm --entrypoint "" -u $(id -u):$(id -g) -v "$PWD":/work -w /work dftbplus find /gnu/store/$dftb_path -name "LICENSE")
+docker run --rm --entrypoint "" -u $(id -u):$(id -g) -v "$PWD":/work -w /work dftbplus cat $license_path
+```
+{{< /tab >}}
+{{< /tabs >}}
 
 ### Description de l'exemple
 
@@ -76,25 +129,58 @@ Le workflow comprend trois simulations DFTB+ :
 
 L'optimisation géométrique est exécutée sur quatre cœurs à l'aide de MPI, avec deux threads OpenMP par rang. Elle doit être lancée depuis le répertoire `initialstructure`, car les fichiers Slater-Koster sont référencés via un chemin relatif :
 
+{{< tabs "dftbplus-simulation" >}}
+{{< tab "Apptainer" >}}
 ```bash
 cd initialstructre
 apptainer exec --env "OMP_NUM_THREADS=2" ../dftbplus.sif mpirun -np 4 dftb+ | tee output
 ```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker run --rm --entrypoint "" -u $(id -u):$(id -g) -v "$PWD":/work -w /work/initialstructre --env "OMP_NUM_THREADS=2" dftbplus mpirun -np 4 dftb+ | tee output
+```
+{{< /tab >}}
+{{< /tabs >}}
 
 Le calcul vibrationnel (dérivées secondes) s'effectue de la même manière, à partir du répertoire `vibrations`, qui fait également référence à la géométrie optimisée via un chemin relatif :
 
+{{< tabs "dftbplus-vibration" >}}
+{{< tab "Apptainer" >}}
 ```bash
 cd vibrations
 apptainer exec --env "OMP_NUM_THREADS=2" ../dftbplus.sif mpirun -np 4 dftb+ | tee output
 ```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker run --rm --entrypoint "" -u $(id -u):$(id -g) -v "$PWD":/work -w /work/vibrations --env "OMP_NUM_THREADS=2" dftbplus mpirun -np 4 dftb+ | tee output
+```
+{{< /tab >}}
+{{< /tabs >}}
 
 Une fois la matrice hessienne calculée, les modes normaux sont extraits à l'aide de l'outil `modes`, toujours à partir du répertoire `vibrations` :
 
+{{< tabs "dftbplus-modes" >}}
+{{< tab "Apptainer" >}}
 ```bash
 apptainer exec ../dftbplus.sif modes | tee output_modes
 ```
 
 Les commandes ci-dessus utilisent le mode parallèle « embarqué » d'Apptainer. Plus d'informations sur l'utilisation des conteneurs Apptainer en parallèle, y compris sur les clusters, sont disponibles sur [cette page]({{% ref "/documentation/use/apptainer-hpc" %}}).
+
+
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker run --rm --entrypoint "" -u $(id -u):$(id -g) -v "$PWD":/work -w /work/vibrations --env "OMP_NUM_THREADS=2" dftbplus modes | tee output_modes
+```
+
+{{< callout context="caution" icon="tabler-icons/outline/alert-triangle" >}}
+Avec Docker, les calculs parallèles sont limités aux cœurs d'une seule machine. Docker n'est pas intégré aux gestionnaires de tâches tels que SLURM ou OAR et ne peut donc pas être utilisé pour des calculs sur clusters : utilisez plutôt Apptainer ([pourquoi ?](/documentation/faq/#docker-est-également-une-solution-de-conteneurisation-pourquoi-ne-pas-simplement-utiliser-docker-)).
+{{< /callout >}}
+{{< /tab >}}
+{{< /tabs >}}
 
 ### Lecture des résultats
 
@@ -118,3 +204,5 @@ La trajectoire animée au format `.xyz` d'un mode peut être visualisée à l'ai
 ```bash
 apptainer exec ../vmd.sif vmd mode_114.xyz
 ```
+
+<div>
