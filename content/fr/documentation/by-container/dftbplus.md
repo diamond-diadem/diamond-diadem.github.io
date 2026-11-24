@@ -10,7 +10,7 @@ description: "Tutoriel sur l'utilisation de l'image de conteneur DFTB+ de DIAMON
 {{< callout context="note" title="Prérequis" icon="tabler-icons/outline/info-circle" >}}
 
 - Avoir installé **Apptainer** [(guide d'installation)](/documentation/install/install-apptainer/) ou **Docker** [(guide d'installation)](https://docs.docker.com/engine/install/)
-- Avoir téléchargé les [fichiers d'entrée](/downloads/dftbplus-tutorial-inputs.tar.gz)
+- Avoir téléchargé les **fichiers d'entrée** [disponible ici](/downloads/dftbplus-tutorial-inputs.tar.gz)
 
 Pour plus d'informations sur les conteneurs Apptainer, veuillez consulter la [page dédiée](/about/apptainer/) ou suivre [ce tutoriel](/documentation/use/apptainer-image/) pour s'approprier les principales commandes d'Apptainer.
 
