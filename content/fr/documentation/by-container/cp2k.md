@@ -5,15 +5,43 @@ weight: 1
 description: "Tutoriel sur l'utilisation de l'image Apptainer CP2K de DIAMOND : récupération du conteneur et cas d'usage pour les calculs DFT."
 ---
 
-{{< callout context="note" title="Prérequis" >}}
+<div align="justify">
 
-- Apptainer (voir soit [notre guide d'installation]({{% ref "/documentation/install/install-apptainer" %}}), soit [la documentation officielle](https://apptainer.org/docs/user/latest/quick_start.html#installation))
-- L'image [`cp2k.sif`]({{% ref "/codes/scientific-computing/cp2k/" %}})
-- Les [fichiers d'entrée](/downloads/cp2k-tutorial-inputs.tar.gz)
+{{< callout context="note" title="Prérequis" icon="tabler-icons/outline/info-circle" >}}
+
+- Avoir installé **Apptainer** [(guide d'installation)](/documentation/install/install-apptainer/) ou **Docker** [(guide d'installation)](https://docs.docker.com/engine/install/)
+- Avoir téléchargé les [fichiers d'entrée](/downloads/cp2k-tutorial-inputs.tar.gz)
+
+Pour plus d'informations sur les conteneurs Apptainer, veuillez consulter la [page dédiée](/about/apptainer/) ou suivre [ce tutoriel](/documentation/use/apptainer-image/) pour s'approprier les principales commandes d'Apptainer.
 
 {{< /callout >}}
 
-Pour plus d'informations sur les conteneurs Apptainer et leur utilisation, nous mettons à votre disposition [une description d'Apptainer]({{% ref "/about/apptainer" %}}), un guide rapide sur [comment utiliser Apptainer]( {{% ref "/documentation/use/apptainer-image" %}}), sans oublier bien sûr la [documentation officielle d'Apptainer](https://apptainer.org/docs/user/latest/).
+{{< callout context="tip" title="Apptainer ou Docker ?" icon="tabler-icons/outline/help-circle" >}}
+
+Chaque commande de cette page est donnée pour Apptainer et pour Docker : choisissez votre outil dans n'importe quel onglet ci-dessous et toute la page suit votre choix. Docker convient pour essayer l'image sur votre propre ordinateur, mais sur les clusters il faut utiliser Apptainer ([pourquoi ?](/documentation/faq/#docker-est-également-une-solution-de-conteneurisation-pourquoi-ne-pas-simplement-utiliser-docker-)).
+
+{{< /callout >}}
+
+## L'image de conteneur
+
+Récupérez l'image de CP2K :
+
+{{< tabs "cp2k-pull" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull cp2k.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/cp2k.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/cp2k
+docker tag gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/cp2k cp2k
+```
+
+La seconde commande donne à l’image le nom court `cp2k`, utilisé dans la suite de ce tutoriel.
+
+{{< /tab >}}
+{{< /tabs >}}
 
 ## Fichiers d'entrée
 
@@ -35,9 +63,24 @@ tar -xzf cp2k-tutorial-inputs.tar.gz
 
 Pour les plus impatients, voici comment lancer un calcul CP2K parallèle sur `N` cœurs avec Apptainer, dans le cas où le répertoire courant contient l'image `cp2k.sif` ainsi que tous les fichiers d'entrée nécessaires :
 
+{{< tabs "cp2k-quickstart" >}}
+{{< tab "Apptainer" >}}
+L'image `cp2k.sif` est supposée se trouver dans le répertoire courant.
+
 ```bash
 apptainer exec cp2k.sif mpirun -np <N> cp2k.psmp Si_bulk8.inp
 ```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker run --rm --entrypoint "" -u $(id -u):$(id -g) -v "$PWD":/work -w /work cp2k mpirun -np <N> cp2k.psmp Si_bulk8.inp
+
+```
+
+Ici, `-v "$PWD":/work -w /work` rend le répertoire courant accessible dans le conteneur et y lance le calcul, `-u $(id -u):$(id -g)` garantit que les fichiers de sortie vous appartiennent (et non à `root`), et `--rm` supprime le conteneur une fois le calcul terminé. Sur les systèmes utilisant SELinux (Fedora, RHEL…), ajoutez `:z` au volume (`-v "$PWD":/work:z`) si vous obtenez des erreurs « Permission denied ».
+
+{{< /tab >}}
+{{< /tabs >}}
 
 ## Utilisation détaillée du conteneur CP2K
 
@@ -49,7 +92,10 @@ CP2K est un logiciel open-source parallélisé conçu pour effectuer des simulat
 
 L'exécutable principal de l'image se nomme `cp2k.psmp`. La commande suivante affiche la version de cet exécutable :
 
-```shell
+{{< tabs "cp2k-license" >}}
+{{< tab "Apptainer" >}}
+
+```bash
 apptainer exec cp2k.sif cp2k.psmp --version
 ```
 
@@ -62,6 +108,21 @@ cp2k_license=$(apptainer exec cp2k.sif find $cp2k_bin/.. -name "LICENSE")
 apptainer exec cp2k.sif cat $cp2k_license
 ```
 
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker run --rm --entrypoint "" -u $(id -u):$(id -g) -v "$PWD":/work -w /work cp2k mpirun -np <N> cp2k.psmp Si_bulk8.inp
+```
+
+La licence du code peut être affichée depuis l'extérieur du conteneur avec la commande suivante :
+
+```bash
+docker run --rm --entrypoint "" -u $(id -u):$(id -g) -v "$PWD":/work -w /work -it cp2k bash -c 'cat $(find $(dirname $(readlink -f /bin/cp2k.psmp))/.. -name LICENSE)'
+```
+
+{{< /tab >}}
+{{< /tabs >}}
+
 ### Description de l'exemple
 
 Les fichiers d'entrée fournis dans ce tutoriel sont extraits d'un [exemple](https://www.cp2k.org/howto:static_calculation) de la documentation officielle de CP2K intitulé *Comment calculer l'énergie et les forces* (en anglais dans le texte original). Cet exemple implémente un calcul statique et auto-cohérent de l'énergie et des forces à l'aide de la théorie de la fonctionnelle de la densité (DFT) de Kohn-Sham pour un système de silicium massif à structure cubique à faces centrées comprenant 8 atomes dans une maille élémentaire cubique. Le fichier d'entrée principal, `Si_bulk8.inp`, définit les paramètres du système et de la tâche, notamment :
@@ -73,19 +134,46 @@ Les fichiers d'entrée fournis dans ce tutoriel sont extraits d'un [exemple](htt
 
 Les autres fichiers d’entrée, `BASIS_SET` et `GTH_POTENTIALS`, contiennent respectivement les paramètres des ensembles de bases et des pseudopotentiels. Notez que ces fichiers sont également présents dans le conteneur, dans le répertoire `/share/cp2k/data`. À titre d’exemple, la commande suivante copie le fichier `BASIS_SET` depuis le conteneur vers le répertoire courant :
 
-```shell
+{{< tabs "cp2k-basisset" >}}
+{{< tab "Apptainer" >}}
+
+```bash
 apptainer exec cp2k.sif cp /share/cp2k/data/BASIS_SET ./
 ```
+
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker run --rm --entrypoint "" -u $(id -u):$(id -g) -v "$PWD":/work -w /work cp2k cp /share/cp2k/data/BASIS_SET ./
+```
+
+{{< /tab >}}
+{{< /tabs >}}
 
 ### Exécution de la simulation
 
 La commande suivante lance la simulation CP2K sur deux cœurs à l’aide de la bibliothèque MPI. Le résultat de la simulation est enregistré dans le fichier `Si_bulk8.out`, comme spécifié par l’option `-o`. Notez que cette option ajoute les résultats des exécutions successives à la fin du fichier de sortie `Si_bulk8.out`. Ce fichier doit donc être supprimé avant de lancer un nouveau calcul.
 
-```shell
+{{< tabs "cp2k-basisset" >}}
+{{< tab "Apptainer" >}}
+
+```bash
 apptainer exec cp2k.sif mpirun -np 2 cp2k.psmp -o Si_bulk8.out Si_bulk8.inp
 ```
 
 La commande ci-dessus utilise le mode parallèle « embarqué » d'Apptainer. Plus d'informations sur l'utilisation des conteneurs Apptainer en parallèle, y compris sur les clusters, sont disponibles sur [cette page](/documentation/use/apptainer-hpc).
+
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker run --rm --entrypoint "" -u $(id -u):$(id -g) -v "$PWD":/work -w /work cp2k mpirun -np 2 cp2k.psmp -o Si_bulk8.out Si_bulk8.inp
+
+```
+{{< callout context="caution" icon="tabler-icons/outline/alert-triangle" >}}
+Avec Docker, les calculs parallèles sont limités aux cœurs d'une seule machine. Docker n'est pas intégré aux gestionnaires de tâches tels que SLURM ou OAR et ne peut donc pas être utilisé pour des calculs sur clusters : utilisez plutôt Apptainer ([pourquoi ?](/documentation/faq/#docker-est-également-une-solution-de-conteneurisation-pourquoi-ne-pas-simplement-utiliser-docker-)).
+{{< /callout >}}
+{{< /tab >}}
+{{< /tabs >}}
 
 ### Lecture des résultats
 
@@ -101,3 +189,4 @@ Le fichier de sortie (`Si_bulk8.out`) comprend plusieurs sections:
 
 L’énergie totale et les forces sont exprimées en unités atomiques (u.a.). Pour les systèmes métalliques ou ceux présentant de faibles bandes interdites, un lissage peut être ajouté afin de stabiliser le calcul, ce qui introduit un terme d’énergie entropique électronique dans les résultats. La [page de l'exemple](https://www.cp2k.org/howto:static_calculation) explique comment procéder pour la simulation en cours. Les commandes présentées dans ce tutoriel peuvent être facilement adaptées pour exécuter cette section supplémentaire.
 
+</div>
