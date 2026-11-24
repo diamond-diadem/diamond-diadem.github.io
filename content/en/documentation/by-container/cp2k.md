@@ -1,8 +1,8 @@
 ---
-title: How to use CP2K Apptainer image
+title: How to use CP2K container image
 linkTitle: CP2K tutorial
 weight: 1
-description: "Tutorial on using the DIAMOND CP2K Apptainer container: pulling the image and usage example for DFT computations."
+description: "Tutorial on using the DIAMOND CP2K container image with Apptainer or Docker: pulling the image and usage example for DFT computations."
 ---
 
 <div align="justify">
