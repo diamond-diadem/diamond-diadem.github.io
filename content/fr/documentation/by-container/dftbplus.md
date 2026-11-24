@@ -1,8 +1,8 @@
 ---
-title: Comment utiliser l'image Apptainer DFTB+
+title: Comment utiliser l'image de conteneur DFTB+
 linkTitle: Tutoriel DFTB+
 weight: 1
-description: "Tutoriel sur l'utilisation de l'image Apptainer DFTB+ de DIAMOND : exemple d'optimisation de géométrie"
+description: "Tutoriel sur l'utilisation de l'image de conteneur DFTB+ de DIAMOND avec Apptainer ou Docker : exemple d'optimisation de géométrie"
 ---
 
 <div align="justify">
