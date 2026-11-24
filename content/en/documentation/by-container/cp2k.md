@@ -10,7 +10,7 @@ description: "Tutorial on using the DIAMOND CP2K container image with Apptainer 
 {{< callout context="note" title="Prerequisites" icon="tabler-icons/outline/info-circle" >}}
 
 - Have **Apptainer** [(installation guide)](/en/documentation/install/install-apptainer/) or **Docker** [(installation guide)](https://docs.docker.com/engine/install/) installed
-- Have downloaded the [input files](/downloads/cp2k-tutorial-inputs.tar.gz)
+- Have downloaded the **input files** [available here](/downloads/cp2k-tutorial-inputs.tar.gz)
 
 For more information on Apptainer containers, please look at [this page](/en/about/apptainer/) or refer to [this tutorial](/en/documentation/use/apptainer-image/) to have a quick look at Apptainer's main commands.
 
