@@ -116,7 +116,10 @@ docker run --rm --entrypoint "" -u $(id -u):$(id -g) -v "$PWD":/work -w /work cp
 The code license can be accessed from outside the container as follows:
 
 ```bash
-docker run --rm --entrypoint "" -u $(id -u):$(id -g) -v "$PWD":/work -w /work -it cp2k bash -c 'cat $(find $(dirname $(readlink -f /bin/cp2k.psmp))/.. -name LICENSE)'
+cp2k_exe=$(docker run --rm --entrypoint "" -u $(id -u):$(id -g) -v "$PWD":/work -w /work cp2k readlink -f /bin/cp2k.psmp)
+cp2k_bin=$(docker run --rm --entrypoint "" -u $(id -u):$(id -g) -v "$PWD":/work -w /work cp2k dirname $cp2k_exe)
+cp2k_license=$(docker run --rm --entrypoint "" -u $(id -u):$(id -g) -v "$PWD":/work -w /work cp2k find $cp2k_bin/.. -name "LICENSE")
+docker run --rm --entrypoint "" -u $(id -u):$(id -g) -v "$PWD":/work -w /work cp2k cat $cp2k_license
 ```
 
 {{< /tab >}}
