@@ -1,19 +1,47 @@
 ---
-title: How to use FEniCS Apptainer image
+title: How to use FEniCS container image
 linkTitle: FEniCS tutorial
 weight: 1
-description: "Tutorial on using the DIAMOND FEniCS Apptainer container: pulling the image and usage example for FE computations."
+description: "Tutorial on using the DIAMOND FEniCS container image with Apptainer or Docker: pulling the image and usage example for FE computations."
 ---
 
-{{< callout context="note" title="Prerequisites" >}}
+<div align="justify">
 
-- Apptainer (see either [our installation guide]({{% ref "/documentation/install/install-apptainer" %}}) or [the official documentation](https://apptainer.org/docs/user/latest/quick_start.html#installation))
-- The [`fenics.sif` image]({{% ref "/codes/scientific-computing/fenics/" %}})
-- The [input files](/downloads/fenics-tutorial-inputs.tar.gz)
+{{< callout context="note" title="Prerequisites" icon="tabler-icons/outline/info-circle" >}}
+
+- Have **Apptainer** [(installation guide)](/en/documentation/install/install-apptainer/) or **Docker** [(installation guide)](https://docs.docker.com/engine/install/) installed
+- Have downloaded **input files** [available here](/downloads/fenics-tutorial-inputs.tar.gz)
+
+For more information on Apptainer containers, please look at [this page](/en/about/apptainer/) or refer to [this tutorial](/en/documentation/use/apptainer-image/) to have a quick look at Apptainer's main commands.
 
 {{< /callout >}}
 
-For more information on Apptainer containers and their use, we provide [a description of Apptainer]({{% ref "/about/apptainer" %}}), a crash course on [how to use Apptainer]({{% ref "/documentation/use/apptainer-image" %}}), and of course there's also the [official Apptainer's documentation](https://apptainer.org/docs/user/latest/).
+{{< callout context="tip" title="Apptainer or Docker?" icon="tabler-icons/outline/help-circle" >}}
+
+Every command on this page is given for both Apptainer and Docker: pick your tool in any of the tabs below and the whole page follows your choice. Docker is fine for trying the image on your own computer, but on clusters you should use Apptainer ([why?](/en/documentation/faq/#docker-is-also-a-containerization-solution-why-dont-we-just-use-docker)).
+
+{{< /callout >}}
+
+## Container image
+
+Retrieve the FEniCS image:
+
+{{< tabs "fenics-pull" >}}
+{{< tab "Apptainer" >}}
+```bash
+apptainer pull fenics.sif oras://gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/fenics.sif:latest
+```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/fenics
+docker tag gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/fenics fenics
+```
+
+The second command gives the image the short name `fenics`, which is used in the rest of this tutorial.
+{{< /tab >}}
+{{< /tabs >}}
+
 
 ## Input files
 
@@ -27,11 +55,24 @@ tar -xzf fenics-tutorial-inputs.tar.gz
 
 ## Quickstart
 
-For impatient folks, here is how to launch a FEniCS computation using the container image in the case where the current directory contains the `fenics.sif` container image and all necessary FEniCS input files:
+For impatient folks, here is how to launch a FEniCS computation using the container image in the case where the current directory contains all necessary FEniCS input files:
+
+{{< tabs "fenics-quickstart" >}}
+{{< tab "Apptainer" >}}
+The `fenics.sif` image is assumed to be in the current directory.
 
 ```bash
 apptainer exec fenics.sif python3 demo_poisson_2.py
 ```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker run --rm --entrypoint "" -v "$PWD":/work -w /work fenics python3 demo_poisson_2.py
+```
+
+Here, `-v "$PWD":/work -w /work` makes the current directory available inside the container and runs the computation from there, `-u $(id -u):$(id -g)` ensures output files belong to you rather than to `root`, and `--rm` deletes the container once the computation is over. On systems using SELinux (Fedora, RHEL…), append `:z` to the volume (`-v "$PWD":/work:z`) if you get "Permission denied" errors.
+{{< /tab >}}
+{{< /tabs >}}
 
 ## Detailed usage for the FEniCS container
 
@@ -129,15 +170,44 @@ The Python input file `demo_poisson_1.py` implements the FEniCS resolution for t
 
 The following command runs the simulation with the simplified set of boundary conditions:
 
-```shell
+{{< tabs "fenics-simulation-1" >}}
+{{< tab "Apptainer" >}}
+```bash
 apptainer exec fenics.sif python3 demo_poisson_1.py
 ```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker run --rm --entrypoint "" -u $(id -u):$(id -g) -v "$PWD":/work -w /work fenics python3 demo_poisson_1.py
+```
+{{< /tab >}}
+{{< /tabs >}}
 
-This creates a `out_poisson/poisson.xdmf` output file that can be opened using Paraview. To interact with this output file using the [Paraview container](/en/codes/visualisation/paraview/) hosted by the Diamond project:
+This creates a `out_poisson/poisson.xdmf` output file that can be opened using Paraview. To interact with this output file with Paraview:
 
 ```shell
+paraview out_poisson/poisson.xdmf
+```
+
+or with the [Paraview container](/en/codes/visualisation/paraview/) hosted by the Diamond project:
+
+{{< tabs "fenics-visualize-1" >}}
+{{< tab "Apptainer" >}}
+```bash
 apptainer run paraview.sif out_poisson/poisson.xdmf
 ```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+# pull the Docker image
+docker pull gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/paraview
+docker tag gricad-registry.univ-grenoble-alpes.fr/diamond/apptainer/apptainer-singularity-projects/paraview paraview
+
+docker run --rm -u $(id -u):$(id -g) -e DISPLAY -e XAUTHORITY -v /tmp/.X11-unix:/tmp/.X11-unix --mount type=bind,src=$XAUTHORITY,dst=$XAUTHORITY --device /dev/dri -v "$PWD":/work -w /work paraview out_poisson/poisson.xdmf
+```
+{{< /tab >}}
+{{< /tabs >}}
+
 then select *Xdmf3 Reader S*. The green *Apply* button on the left panel triggers the display of the equation solution computed by the software, as represented below.
 
 <img alt="Paraview visualization of the simple problem solution" src="/images/tutorials/fenics-tutorial/simple_solution_paraview.png" />
@@ -160,15 +230,39 @@ g = ufl.sin(5 * x[0])
 
 The following command runs the simulation with this second set of boundary conditions:
 
-```shell
+{{< tabs "fenics-simulation-2" >}}
+{{< tab "Apptainer" >}}
+```bash
 apptainer exec fenics.sif python3 demo_poisson_2.py
 ```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker run --rm --entrypoint "" -u $(id -u):$(id -g) -v "$PWD":/work -w /work fenics python3 demo_poisson_2.py
+```
+{{< /tab >}}
+{{< /tabs >}}
 
-As described above, the output file can be opened with [Paraview](/en/codes/visualisation/paraview/) as follows:
+As described above, the output file can be opened with Paraview:
 
 ```shell
+paraview out_poisson/poisson.xdmf
+```
+
+Or with the [Paraview](/en/codes/visualisation/paraview/) container:
+
+{{< tabs "fenics-visualize-2" >}}
+{{< tab "Apptainer" >}}
+```bash
 apptainer run paraview.sif out_poisson/poisson.xdmf
 ```
+{{< /tab >}}
+{{< tab "Docker" >}}
+```bash
+docker run --rm -u $(id -u):$(id -g) -e DISPLAY -e XAUTHORITY -v /tmp/.X11-unix:/tmp/.X11-unix --mount type=bind,src=$XAUTHORITY,dst=$XAUTHORITY --device /dev/dri -v "$PWD":/work -w /work paraview out_poisson/poisson.xdmf
+```
+{{< /tab >}}
+{{< /tabs >}}
 
 <img alt="Paraview visualizationof the original problem solution" src="/images/tutorials/fenics-tutorial/complex_solution_paraview.png" />
 
@@ -176,3 +270,4 @@ apptainer run paraview.sif out_poisson/poisson.xdmf
 
 The [official documentation](https://docs.fenicsproject.org/dolfinx/v0.10.0.post5/python/index.html) provides multiple examples exhibiting the features of the software. Those examples can be easily run with the FEniCS container image by extrapolating the commands presented in this tutorial.
 
+</div>
