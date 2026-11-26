@@ -11,12 +11,14 @@ seo:
 
 hero:
   eyebrow: The digital platform of PEPR DIADEM
-  title: You focus on the research. *We take care of the technical side.*
+  # title: You focus on the research. *We take care of the technical side.*
+  title: Digital tools to accelerate research in *materials science*
   text: >-
-    DIAMOND containerises scientific codes, builds reproducible workflows,
-    writes documentation and gives direct help to the members of
-    [PEPR DIADEM](https://pepr-diadem.fr), so you can spend your time on
-    materials science instead of software installation.
+    The DIAMOND digital platform provides you with digital tools and technical
+    support to assist with your research in materials science: ready-to-use codes
+    and software; reproducible workflows to automate and accelerate your computational
+    processes; an infrastructure to help you collect, store, and organize your data;
+    and related documentation.
   actions:
     - label: Browse the codes
       page: /codes
@@ -48,10 +50,11 @@ codes:
   eyebrow: Containerised codes
   title: Reproducible software, ready to run anywhere
   text: >-
-    We package the codes the PEPR DIADEM community relies on as **Apptainer and
-    Docker container images** and **Guix packages**. Each build is pinned and
-    traceable, so a simulation runs the same way on a laptop, a lab server or
-    a national HPC cluster, and anyone can reproduce it years later.
+    Software and codes covering a wide range of applications: numerical simulation
+    from the atomic to the macroscopic scale, associated visualization, experimental
+    data analysis, and, coming soon, process simulation. Ready-to-use codes that
+    operate identically and reliably across different environments (Windows or Linux,
+    desktop computer or supercomputer)
   principlesTitle: Built on the FAIR principles
   principles:
     - letter: F
@@ -83,11 +86,9 @@ workflows:
   eyebrow: Workflows
   title: From single runs to automated, traceable pipelines
   text: >-
-    Materials simulations chain many steps, produce large amounts of data and
-    often need restarting. We develop workflows, many of them with the
-    [AiiDA](https://www.aiida.net) workflow manager, that automate these
-    steps, run them on remote machines and record the full provenance of
-    every result.
+    Examples of workflows that automate and orchestrate calculation chains by combining different
+    code and simulation tools. This saves time and improves the reproducibility and traceability of
+    results.
   points:
     - Fewer repetitive tasks and human errors
     - Complete traceability of data and parameters

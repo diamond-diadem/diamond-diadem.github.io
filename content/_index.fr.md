@@ -12,13 +12,14 @@ seo:
 
 hero:
   eyebrow: La plateforme numérique du PEPR DIADEM
-  title: Concentrez-vous sur la recherche. *Nous nous occupons de la technique.*
+  # title: Concentrez-vous sur la recherche. *Nous nous occupons de la technique.*
+  title: Des outils numériques pour accélérer la recherche en *science des matériaux*
   text: >-
-    DIAMOND conteneurise des codes scientifiques, construit des workflows
-    reproductibles, rédige de la documentation et accompagne directement les
-    membres du [PEPR DIADEM](https://pepr-diadem.fr), pour que vous consacriez
-    votre temps à la science des matériaux plutôt qu'à l'installation de
-    logiciels.
+    La plateforme numérique DIAMOND met à votre disposition des outils numériques et un
+    soutien technique au service de vos recherches en science des matériaux : des codes
+    et logiciels prêts à l’emploi ; des workflows reproductibles pour automatiser et
+    accélérer l’enchaînement des calculs ; une infrastructure pour vous permettre de
+    collecter, stocker et structurer vos données ; de la documentation associée.
   actions:
     - label: Parcourir les codes
       page: /codes
@@ -50,12 +51,11 @@ codes:
   eyebrow: Codes conteneurisés
   title: Des logiciels reproductibles, prêts à tourner partout
   text: >-
-    Nous empaquetons les codes dont la communauté DIADEM a besoin sous forme
-    d'**images de conteneurs Apptainer et Docker** et de **paquets Guix**.
-    Chaque construction est figée et traçable : une simulation se déroule de
-    la même façon sur un portable, un serveur de laboratoire ou un
-    supercalculateur national, et chacun peut la reproduire des années plus
-    tard.
+    Des codes et logiciels couvrant un large spectre d'applications : simulation
+    numérique de l’échelle atomique à macroscopique, visualisation associée, analyse
+    de données expérimentales et prochainement simulation des procédés.Des codes
+    prêts à l’emploi fonctionnant de manière identique et fiable sur différents
+    environnements (Windows ou Linux, ordinateur de bureau ou supercalculateur).
   principlesTitle: Fondés sur les principes FAIR
   principles:
     - letter: F
@@ -87,11 +87,9 @@ workflows:
   eyebrow: Workflows
   title: Des calculs isolés aux chaînes automatisées et traçables
   text: >-
-    Les simulations de matériaux enchaînent de nombreuses étapes, produisent
-    beaucoup de données et doivent souvent être relancées. Nous développons
-    des workflows, souvent avec le gestionnaire [AiiDA](https://www.aiida.net),
-    qui automatisent ces étapes, les exécutent sur des machines distantes et
-    enregistrent la provenance complète de chaque résultat.
+    Des exemples de workflows permettant d’automatiser et d'orchestrer des chaînes de calcul,
+    en combinant différents codes et outils de simulation. Un gain de temps et de meilleures
+    reproductibilité et traçabilité des résultats.
   points:
     - Moins de tâches répétitives et d'erreurs humaines
     - Une traçabilité complète des données et des paramètres
