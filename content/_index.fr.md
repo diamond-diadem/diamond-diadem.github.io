@@ -49,11 +49,11 @@ hero:
 
 codes:
   eyebrow: Codes conteneurisés
-  title: Des logiciels reproductibles, prêts à tourner partout
+  title: Des logiciels containerisées, prêts à l'emploi et reproductibles
   text: >-
     Des codes et logiciels couvrant un large spectre d'applications : simulation
     numérique de l’échelle atomique à macroscopique, visualisation associée, analyse
-    de données expérimentales et prochainement simulation des procédés.Des codes
+    de données expérimentales et prochainement simulation des procédés. Des codes
     prêts à l’emploi fonctionnant de manière identique et fiable sur différents
     environnements (Windows ou Linux, ordinateur de bureau ou supercalculateur).
   principlesTitle: Fondés sur les principes FAIR

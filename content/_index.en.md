@@ -48,7 +48,7 @@ hero:
 
 codes:
   eyebrow: Containerised codes
-  title: Reproducible software, ready to run anywhere
+  title: Containerized, ready-to-use, and reproducible software
   text: >-
     Software and codes covering a wide range of applications: numerical simulation
     from the atomic to the macroscopic scale, associated visualization, experimental
