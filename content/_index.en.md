@@ -11,19 +11,18 @@ seo:
 
 hero:
   eyebrow: The digital platform of PEPR DIADEM
-  # title: You focus on the research. *We take care of the technical side.*
-  title: Digital tools to accelerate research in *materials science*
+  title: You focus on the research. *We take care of the technical side.*
+  # title: Digital tools to accelerate research in *materials science*
   text: >-
-    The DIAMOND digital platform provides you with digital tools and technical
-    support to assist with your research in materials science: ready-to-use codes
-    and software; reproducible workflows to automate and accelerate your computational
-    processes; an infrastructure to help you collect, store, and organize your data;
+    We provide digital tools and technical support to assist with your research
+    in materials science: the codes you need, ready-to-use; reproducible workflows;
+    an infrastructure to help you collect, store, and organize your data;
     and related documentation.
   actions:
-    - label: Browse the codes
-      page: /codes
     - label: Ask for help
       page: /contact
+    - label: Read the docs
+      page: /documentation
   image:
     alt: >-
       DIAMOND logo: a diamond linking accelerated design, databases and AI,
@@ -33,28 +32,27 @@ hero:
       title: Containerised codes
       text: Ready-to-run images of the codes you use.
       page: /codes
+    - icon: tabler-icons/outline/book
+      title: Databases
+      text: Store, link and share your material data.
+      page: /data
     - icon: tabler-icons/outline/route
       title: Workflows
       text: Automated, traceable simulation pipelines.
       page: /workflows
-    - icon: tabler-icons/outline/book
-      title: Documentation
-      text: Guides from installation to HPC runs.
-      page: /documentation
     - icon: tabler-icons/outline/lifebuoy
-      title: Direct help
-      text: Engineers ready to answer your questions.
-      page: /contact
+      title: Notebooks
+      text: Machine learning applied to materials data.
+      page: /notebooks
 
 codes:
   eyebrow: Containerised codes
   title: Containerized, ready-to-use, and reproducible software
   text: >-
-    Software and codes covering a wide range of applications: numerical simulation
-    from the atomic to the macroscopic scale, associated visualization, experimental
-    data analysis, and, coming soon, process simulation. Ready-to-use codes that
-    operate identically and reliably across different environments (Windows or Linux,
-    desktop computer or supercomputer)
+    Software covering numerical simulations from the atomic to the macroscopic scale,
+    associated visualization, experimental data analysis, and much more. They are provided
+    as ready-to-use containers, thus operating identically and reliably across
+    different environments (Windows or Linux, desktop or supercomputer)
   principlesTitle: Built on the FAIR principles
   principles:
     - letter: F
@@ -65,7 +63,7 @@ codes:
       text: Public images, pulled with a single command.
     - letter: I
       title: Interoperable
-      text: Standard SIF and OCI formats that run on any Linux system.
+      text: Provided as containers which run on any system.
     - letter: R
       title: Reusable
       text: Pinned versions and Guix recipes rebuild the same environment.

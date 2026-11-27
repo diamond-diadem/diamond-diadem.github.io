@@ -12,19 +12,18 @@ seo:
 
 hero:
   eyebrow: La plateforme numérique du PEPR DIADEM
-  # title: Concentrez-vous sur la recherche. *Nous nous occupons de la technique.*
-  title: Des outils numériques pour accélérer la recherche en *science des matériaux*
+  title: Concentrez-vous sur la recherche. *Nous nous occupons de la technique.*
+  # title: Des outils numériques pour accélérer la recherche en *science des matériaux*
   text: >-
-    La plateforme numérique DIAMOND met à votre disposition des outils numériques et un
-    soutien technique au service de vos recherches en science des matériaux : des codes
-    et logiciels prêts à l’emploi ; des workflows reproductibles pour automatiser et
-    accélérer l’enchaînement des calculs ; une infrastructure pour vous permettre de
-    collecter, stocker et structurer vos données ; de la documentation associée.
+    Nous mettons à votre disposition des outils numériques et un soutien technique au
+    service de vos recherches en science des matériaux : les codes dont vous avez besoin,
+    prêts à l'emploi ; des «workflows» reproductibles ; une infrastructure pour vous permettre de
+    collecter, stocker et structurer vos données ; ainsi que la documentation correspondante.
   actions:
-    - label: Parcourir les codes
-      page: /codes
     - label: Demander de l'aide
       page: /contact
+    - label: Documentation
+      page: /documentation
   image:
     alt: >-
       Logo de DIAMOND : un diamant reliant design accéléré, bases de
@@ -34,28 +33,28 @@ hero:
       title: Codes conteneurisés
       text: Des images prêtes à l'emploi des codes que vous utilisez.
       page: /codes
+    - icon: tabler-icons/outline/book
+      title: Databases
+      text: Stockez, associez et partagez vos données techniques.
+      page: /data
     - icon: tabler-icons/outline/route
       title: Workflows
       text: Des chaînes de simulation automatisées et traçables.
       page: /workflows
-    - icon: tabler-icons/outline/book
-      title: Documentation
-      text: Des guides, de l'installation au calcul sur HPC.
-      page: /documentation
     - icon: tabler-icons/outline/lifebuoy
-      title: Aide directe
-      text: Des ingénieurs pour répondre à vos questions.
-      page: /contact
+      title: Notebooks
+      text: L'apprentissage automatique appliqué aux données sur les matériaux.
+      page: /notebooks
 
 codes:
   eyebrow: Codes conteneurisés
-  title: Des logiciels containerisées, prêts à l'emploi et reproductibles
+  title: Des logiciels conteneurisés, prêts à l'emploi et reproductibles
   text: >-
-    Des codes et logiciels couvrant un large spectre d'applications : simulation
-    numérique de l’échelle atomique à macroscopique, visualisation associée, analyse
-    de données expérimentales et prochainement simulation des procédés. Des codes
-    prêts à l’emploi fonctionnant de manière identique et fiable sur différents
-    environnements (Windows ou Linux, ordinateur de bureau ou supercalculateur).
+    Logiciels couvrant les simulation numérique de l'échelle atomique à macroscopique,
+    visualisation associée, analyse de données expérimentales et bien plus encore. Ils
+    sont fournis sous forme de conteneurs prêts à l'emploi, ce qui leur permet de
+    fonctionner de manière identique et fiable dans différents environnements (Windows
+    ou Linux, ordinateur de bureau ou supercalculateur)
   principlesTitle: Fondés sur les principes FAIR
   principles:
     - letter: F
@@ -66,7 +65,7 @@ codes:
       text: Des images publiques, récupérées en une seule commande.
     - letter: I
       title: Interopérables
-      text: Des formats standards SIF et OCI, exécutables sur tout système Linux.
+      text: Fournis sous forme de conteneurs fonctionnant sur tous les systèmes.
     - letter: R
       title: Réutilisables
       text: Versions figées et recettes Guix reconstruisent le même environnement.
